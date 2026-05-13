@@ -1,0 +1,523 @@
+{
+  "ticker": "MCD",
+  "name": "McDonald's Corporation",
+  "latest_annual": {
+    "ticker": "MCD",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "U.S.",
+        "value": 10825000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "International Operated Markets",
+        "value": 13633000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "International Developmental Licensed Markets and Corporate",
+        "value": 2427000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 26885000000.0,
+    "gross_profit": null,
+    "operating_income": 12393000000.0,
+    "net_income": 8563000000.0,
+    "rd_expense": null,
+    "sga_expense": null,
+    "cogs": null,
+    "interest_expense": 1582000000.0,
+    "income_tax": 2334000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "MCD",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "U.S.",
+          "value": 10825000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Operated Markets",
+          "value": 13633000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Developmental Licensed Markets and Corporate",
+          "value": 2427000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 26885000000.0,
+      "gross_profit": null,
+      "operating_income": 12393000000.0,
+      "net_income": 8563000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": 1582000000.0,
+      "income_tax": 2334000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "MCD",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "U.S.",
+          "value": 10631000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Operated Markets",
+          "value": 12628000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Developmental Licensed Markets and Corporate",
+          "value": 2661000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 25920000000.0,
+      "gross_profit": null,
+      "operating_income": 11712000000.0,
+      "net_income": 8223000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": 1506000000.0,
+      "income_tax": 2121000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "MCD",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "U.S.",
+          "value": 10568400000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Operated Markets",
+          "value": 12382000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Developmental Licensed Markets and Corporate",
+          "value": 2543300000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 25493700000.0,
+      "gross_profit": null,
+      "operating_income": 11646700000.0,
+      "net_income": 8468800000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": 1360800000.0,
+      "income_tax": 2053400000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "MCD",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MCD",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MCD",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "U.S.",
+          "value": 2494000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Operated Markets",
+          "value": 2916000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Developmental Licensed Markets and Corporate",
+          "value": 546000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 5956000000.0,
+      "gross_profit": null,
+      "operating_income": 2648000000.0,
+      "net_income": 1868000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 620000000.0,
+      "interest_expense": 376000000.0,
+      "income_tax": 461000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "MCD",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MCD",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MCD",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "U.S.",
+          "value": 2560000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Operated Markets",
+          "value": 2987000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Developmental Licensed Markets and Corporate",
+          "value": 621000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6169000000.0,
+      "gross_profit": null,
+      "operating_income": 2736000000.0,
+      "net_income": 1929000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 627000000.0,
+      "interest_expense": 372000000.0,
+      "income_tax": 479000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6169000000) differs from Yahoo (25920000000) by 76.2%"
+      ]
+    },
+    {
+      "ticker": "MCD",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MCD",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MCD",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 5956000000.0,
+  "ttm_operating_income": 2648000000.0,
+  "ttm_net_income": 1868000000.0,
+  "segment_trend": {
+    "U.S.": [
+      {
+        "period": "2024Q1",
+        "value": 2560000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2494000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 10568400000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 10631000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 10825000000.0,
+        "is_annual": true
+      }
+    ],
+    "International Operated Markets": [
+      {
+        "period": "2024Q1",
+        "value": 2987000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2916000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 12382000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 12628000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 13633000000.0,
+        "is_annual": true
+      }
+    ],
+    "International Developmental Licensed Markets and Corporate": [
+      {
+        "period": "2024Q1",
+        "value": 621000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 546000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 2543300000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2661000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2427000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

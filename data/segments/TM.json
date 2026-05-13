@@ -1,0 +1,303 @@
+{
+  "ticker": "TM",
+  "name": "Toyota Motor Corporation",
+  "latest_annual": null,
+  "annual_periods": [],
+  "quarterly_periods": [
+    {
+      "ticker": "TM",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Financial Services",
+          "value": 101329000000.0,
+          "unit": "JPY",
+          "period": "2025Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 84856302641.71957,
+      "gross_profit": 15079736807.607115,
+      "operating_income": 7510404523.685575,
+      "net_income": 7929330767.802895,
+      "rd_expense": null,
+      "sga_expense": 7569332283.921539,
+      "cogs": 69776565834.11247,
+      "interest_expense": 238630629.27871943,
+      "income_tax": 2592934954.8965693,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "TM",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Automotive",
+          "value": 13456852000.0,
+          "unit": "JPY",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Financial Services",
+          "value": 101329000.0,
+          "unit": "JPY",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 84856302641.71957,
+      "gross_profit": 15079736807.607115,
+      "operating_income": 7510404523.685575,
+      "net_income": 7929330767.802895,
+      "rd_expense": null,
+      "sga_expense": 7569332283.921539,
+      "cogs": 69776565834.11247,
+      "interest_expense": 238630629.27871943,
+      "income_tax": 2592934954.8965693,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "TM",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Automotive",
+          "value": 13456852000.0,
+          "unit": "JPY",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Financial Services",
+          "value": 101329000.0,
+          "unit": "JPY",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 84856302641.71957,
+      "gross_profit": 15079736807.607115,
+      "operating_income": 7510404523.685575,
+      "net_income": 7929330767.802895,
+      "rd_expense": null,
+      "sga_expense": 7569332283.921539,
+      "cogs": 69776565834.11247,
+      "interest_expense": 238630629.27871943,
+      "income_tax": 2592934954.8965693,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "TM",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Automotive",
+          "value": 13456852000.0,
+          "unit": "JPY",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 84856302641.71957,
+      "gross_profit": 15079736807.607115,
+      "operating_income": 7510404523.685575,
+      "net_income": 7929330767.802895,
+      "rd_expense": null,
+      "sga_expense": 7569332283.921539,
+      "cogs": 69776565834.11247,
+      "interest_expense": 238630629.27871943,
+      "income_tax": 2592934954.8965693,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "TM",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Automotive",
+          "value": 13456852000.0,
+          "unit": "JPY",
+          "period": "2024Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Financial Services",
+          "value": 101329000.0,
+          "unit": "JPY",
+          "period": "2024Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 84856302641.71957,
+      "gross_profit": 15079736807.607115,
+      "operating_income": 7510404523.685575,
+      "net_income": 7929330767.802895,
+      "rd_expense": null,
+      "sga_expense": 7569332283.921539,
+      "cogs": 69776565834.11247,
+      "interest_expense": 238630629.27871943,
+      "income_tax": 2592934954.8965693,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "TM",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Automotive",
+          "value": 13456852000.0,
+          "unit": "JPY",
+          "period": "2024Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Financial Services",
+          "value": 101329000.0,
+          "unit": "JPY",
+          "period": "2024Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 84856302641.71957,
+      "gross_profit": 15079736807.607115,
+      "operating_income": 7510404523.685575,
+      "net_income": 7929330767.802895,
+      "rd_expense": null,
+      "sga_expense": 7569332283.921539,
+      "cogs": 69776565834.11247,
+      "interest_expense": 238630629.27871943,
+      "income_tax": 2592934954.8965693,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    }
+  ],
+  "ttm_revenue": 339425210566.8783,
+  "ttm_operating_income": 30041618094.7423,
+  "ttm_net_income": 31717323071.21158,
+  "segment_trend": {
+    "Automotive": [
+      {
+        "period": "2024Q3",
+        "value": 13456852000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 13456852000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 13456852000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 13456852000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 13456852000.0,
+        "is_annual": false
+      }
+    ],
+    "Financial Services": [
+      {
+        "period": "2024Q3",
+        "value": 101329000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 101329000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 101329000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 101329000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 101329000000.0,
+        "is_annual": false
+      }
+    ]
+  },
+  "annual_count": 0,
+  "quarterly_count": 6,
+  "has_partial_data": true,
+  "data_notes": [
+    "Partial data: 0/3 annual, 6/12 quarterly"
+  ]
+}

@@ -1,0 +1,601 @@
+{
+  "ticker": "RTX",
+  "name": "RTX Corporation",
+  "latest_annual": {
+    "ticker": "RTX",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Collins Aerospace Systems",
+        "value": 27585000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Pratt and Whitney",
+        "value": 32916000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Raytheon",
+        "value": 27892000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Other",
+        "value": 210000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 88603000000.0,
+    "gross_profit": null,
+    "operating_income": 9300000000.0,
+    "net_income": 7069000000.0,
+    "rd_expense": 2807000000.0,
+    "sga_expense": 6095000000.0,
+    "cogs": 70814000000.0,
+    "interest_expense": null,
+    "income_tax": 1664000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "RTX",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Collins Aerospace Systems",
+          "value": 27585000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pratt and Whitney",
+          "value": 32916000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Raytheon",
+          "value": 27892000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 210000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 88603000000.0,
+      "gross_profit": null,
+      "operating_income": 9300000000.0,
+      "net_income": 7069000000.0,
+      "rd_expense": 2807000000.0,
+      "sga_expense": 6095000000.0,
+      "cogs": 70814000000.0,
+      "interest_expense": null,
+      "income_tax": 1664000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "RTX",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Collins Aerospace Systems",
+          "value": 28284000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pratt and Whitney",
+          "value": 28066000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Raytheon",
+          "value": 26713000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 80738000000.0,
+      "gross_profit": null,
+      "operating_income": 6538000000.0,
+      "net_income": 4774000000.0,
+      "rd_expense": 2934000000.0,
+      "sga_expense": 5806000000.0,
+      "cogs": 65328000000.0,
+      "interest_expense": 1862000000.0,
+      "income_tax": 1181000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "RTX",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Collins Aerospace Systems",
+          "value": 26253000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pratt and Whitney",
+          "value": 18296000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Raytheon",
+          "value": 26350000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 68920000000.0,
+      "gross_profit": null,
+      "operating_income": 3561000000.0,
+      "net_income": 3195000000.0,
+      "rd_expense": 2805000000.0,
+      "sga_expense": 5809000000.0,
+      "cogs": 56831000000.0,
+      "interest_expense": 1505000000.0,
+      "income_tax": 456000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "RTX",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "RTX",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "RTX",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Collins Aerospace Systems",
+          "value": 6587000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pratt and Whitney",
+          "value": 7365000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Raytheon",
+          "value": 6300000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 54000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 20306000000.0,
+      "gross_profit": null,
+      "operating_income": 2035000000.0,
+      "net_income": 1625000000.0,
+      "rd_expense": 637000000.0,
+      "sga_expense": 1448000000.0,
+      "cogs": 16190000000.0,
+      "interest_expense": null,
+      "income_tax": 333000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "RTX",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "RTX",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Collins Aerospace Systems",
+          "value": 6999000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pratt and Whitney",
+          "value": 6802000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Raytheon",
+          "value": 6511000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 19721000000.0,
+      "gross_profit": null,
+      "operating_income": 529000000.0,
+      "net_income": 111000000.0,
+      "rd_expense": 706000000.0,
+      "sga_expense": 1449000000.0,
+      "cogs": 16141000000.0,
+      "interest_expense": 475000000.0,
+      "income_tax": 253000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (19721000000) differs from Yahoo (80738000000) by 75.6%"
+      ]
+    },
+    {
+      "ticker": "RTX",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Collins Aerospace Systems",
+          "value": 6673000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pratt and Whitney",
+          "value": 6456000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Raytheon",
+          "value": 6659000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 19305000000.0,
+      "gross_profit": null,
+      "operating_income": 1870000000.0,
+      "net_income": 1709000000.0,
+      "rd_expense": 669000000.0,
+      "sga_expense": 1394000000.0,
+      "cogs": 15744000000.0,
+      "interest_expense": 405000000.0,
+      "income_tax": 108000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (19305000000) differs from Yahoo (80738000000) by 76.1%"
+      ]
+    },
+    {
+      "ticker": "RTX",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "RTX",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "RTX",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 20306000000.0,
+  "ttm_operating_income": 2035000000.0,
+  "ttm_net_income": 1625000000.0,
+  "segment_trend": {
+    "Collins Aerospace Systems": [
+      {
+        "period": "2024Q1",
+        "value": 6673000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 6999000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 6587000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 26253000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 28284000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 27585000000.0,
+        "is_annual": true
+      }
+    ],
+    "Pratt and Whitney": [
+      {
+        "period": "2024Q1",
+        "value": 6456000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 6802000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 7365000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 18296000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 28066000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 32916000000.0,
+        "is_annual": true
+      }
+    ],
+    "Raytheon": [
+      {
+        "period": "2024Q1",
+        "value": 6659000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 6511000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 6300000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 26350000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 26713000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 27892000000.0,
+        "is_annual": true
+      }
+    ],
+    "Other": [
+      {
+        "period": "2025Q1",
+        "value": 54000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 210000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

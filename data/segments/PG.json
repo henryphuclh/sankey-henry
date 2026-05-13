@@ -1,0 +1,782 @@
+{
+  "ticker": "PG",
+  "name": "Procter & Gamble Co.",
+  "latest_annual": {
+    "ticker": "PG",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [],
+    "total_revenue": null,
+    "gross_profit": null,
+    "operating_income": null,
+    "net_income": null,
+    "rd_expense": null,
+    "sga_expense": null,
+    "cogs": null,
+    "interest_expense": null,
+    "income_tax": null,
+    "currency": "USD",
+    "extraction_method": "edgar",
+    "confidence": 0.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "PG",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PG",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Beauty",
+          "value": 15220000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Grooming",
+          "value": 6654000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Health Care",
+          "value": 11793000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fabric and Home Care",
+          "value": 29495000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baby, Feminine & Family Care",
+          "value": 20277000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CORPORATE",
+          "value": 601000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 84039000000.0,
+      "gross_profit": null,
+      "operating_income": 18545000000.0,
+      "net_income": 14974000000.0,
+      "rd_expense": null,
+      "sga_expense": 23305000000.0,
+      "cogs": 40848000000.0,
+      "interest_expense": null,
+      "income_tax": 3787000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PG",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "PG",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "Beauty",
+          "value": 4039000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Grooming",
+          "value": 1794000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Health Care",
+          "value": 3406000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fabric and Home Care",
+          "value": 7686000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baby, Feminine & Family Care",
+          "value": 5123000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 160000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 22208000000.0,
+      "gross_profit": null,
+      "operating_income": 5366000000.0,
+      "net_income": 4331000000.0,
+      "rd_expense": null,
+      "sga_expense": 6008000000.0,
+      "cogs": 10834000000.0,
+      "interest_expense": null,
+      "income_tax": 1090000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PG",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PG",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Beauty",
+          "value": 3490000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Grooming",
+          "value": 1505000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Health Care",
+          "value": 2880000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fabric and Home Care",
+          "value": 6948000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baby, Feminine & Family Care",
+          "value": 4755000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 198000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 19776000000.0,
+      "gross_profit": null,
+      "operating_income": 4558000000.0,
+      "net_income": 3793000000.0,
+      "rd_expense": null,
+      "sga_expense": 5524000000.0,
+      "cogs": 9694000000.0,
+      "interest_expense": null,
+      "income_tax": 868000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PG",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "Beauty",
+          "value": 3848000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Grooming",
+          "value": 1752000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Health Care",
+          "value": 3249000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fabric and Home Care",
+          "value": 7575000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baby, Feminine & Family Care",
+          "value": 5298000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 159000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 21882000000.0,
+      "gross_profit": null,
+      "operating_income": 5741000000.0,
+      "net_income": 4659000000.0,
+      "rd_expense": null,
+      "sga_expense": 5723000000.0,
+      "cogs": 10418000000.0,
+      "interest_expense": null,
+      "income_tax": 1187000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PG",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PG",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Beauty",
+          "value": 3550000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Grooming",
+          "value": 1539000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Health Care",
+          "value": 2873000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fabric and Home Care",
+          "value": 7169000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baby, Feminine & Family Care",
+          "value": 4936000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 128000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 20195000000.0,
+      "gross_profit": null,
+      "operating_income": 4460000000.0,
+      "net_income": 3781000000.0,
+      "rd_expense": null,
+      "sga_expense": 5880000000.0,
+      "cogs": 9855000000.0,
+      "interest_expense": -233000000.0,
+      "income_tax": 812000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (20195000000) differs from Yahoo (84039000000) by 76.0%"
+      ]
+    },
+    {
+      "ticker": "PG",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "Beauty",
+          "value": 3849000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Grooming",
+          "value": 1734000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Health Care",
+          "value": 3172000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fabric and Home Care",
+          "value": 7415000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baby, Feminine & Family Care",
+          "value": 5146000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 126000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 21441000000.0,
+      "gross_profit": null,
+      "operating_income": 4433000000.0,
+      "net_income": 3493000000.0,
+      "rd_expense": null,
+      "sga_expense": 5522000000.0,
+      "cogs": 10144000000.0,
+      "interest_expense": -248000000.0,
+      "income_tax": 1003000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (21441000000) differs from Yahoo (82006000000) by 73.9%"
+      ]
+    },
+    {
+      "ticker": "PG",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PG",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 63866000000.0,
+  "ttm_operating_income": 15665000000.0,
+  "ttm_net_income": 12783000000.0,
+  "segment_trend": {
+    "Beauty": [
+      {
+        "period": "2023Q4",
+        "value": 3849000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 3550000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 3848000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 3490000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 4039000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 15220000000.0,
+        "is_annual": true
+      }
+    ],
+    "Grooming": [
+      {
+        "period": "2023Q4",
+        "value": 1734000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 1539000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 1752000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1505000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 1794000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 6654000000.0,
+        "is_annual": true
+      }
+    ],
+    "Health Care": [
+      {
+        "period": "2023Q4",
+        "value": 3172000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 2873000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 3249000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2880000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 3406000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 11793000000.0,
+        "is_annual": true
+      }
+    ],
+    "Fabric and Home Care": [
+      {
+        "period": "2023Q4",
+        "value": 7415000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 7169000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 7575000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 6948000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 7686000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 29495000000.0,
+        "is_annual": true
+      }
+    ],
+    "Baby, Feminine & Family Care": [
+      {
+        "period": "2023Q4",
+        "value": 5146000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 4936000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 5298000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4755000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 5123000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 20277000000.0,
+        "is_annual": true
+      }
+    ],
+    "Corporate": [
+      {
+        "period": "2023Q4",
+        "value": 126000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 128000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 159000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 198000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 160000000.0,
+        "is_annual": false
+      }
+    ],
+    "CORPORATE": [
+      {
+        "period": "FY2024",
+        "value": 601000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

@@ -1,0 +1,574 @@
+{
+  "ticker": "QCOM",
+  "name": "Qualcomm Incorporated",
+  "latest_annual": {
+    "ticker": "QCOM",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [],
+    "total_revenue": null,
+    "gross_profit": null,
+    "operating_income": null,
+    "net_income": null,
+    "rd_expense": null,
+    "sga_expense": null,
+    "cogs": null,
+    "interest_expense": null,
+    "income_tax": null,
+    "currency": "USD",
+    "extraction_method": "edgar",
+    "confidence": 0.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "QCOM",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "QCOM",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "QCOM",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "QCOM",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "QCT",
+          "value": 10613000000.0,
+          "unit": "USD",
+          "period": "2025-12-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Reconciling Items",
+          "value": 82000000.0,
+          "unit": "USD",
+          "period": "2025-12-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12252000000.0,
+      "gross_profit": null,
+      "operating_income": 3366000000.0,
+      "net_income": 3004000000.0,
+      "rd_expense": 2453000000.0,
+      "sga_expense": 865000000.0,
+      "cogs": 5568000000.0,
+      "interest_expense": -169000000.0,
+      "income_tax": -543000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "QCOM",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "QCOM",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "QCT",
+          "value": 9469000000.0,
+          "unit": "USD",
+          "period": "2025-03-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QTL",
+          "value": 1319000000.0,
+          "unit": "USD",
+          "period": "2025-03-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Operating Segment",
+          "value": 48000000.0,
+          "unit": "USD",
+          "period": "2025-03-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10979000000.0,
+      "gross_profit": null,
+      "operating_income": 3120000000.0,
+      "net_income": 2812000000.0,
+      "rd_expense": 2216000000.0,
+      "sga_expense": 706000000.0,
+      "cogs": 4937000000.0,
+      "interest_expense": -163000000.0,
+      "income_tax": -293000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "QCOM",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "QCT",
+          "value": 10084000000.0,
+          "unit": "USD",
+          "period": "2024-12-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QTL",
+          "value": 1535000000.0,
+          "unit": "USD",
+          "period": "2024-12-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Operating Segment",
+          "value": 50000000.0,
+          "unit": "USD",
+          "period": "2024-12-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11669000000.0,
+      "gross_profit": null,
+      "operating_income": 3555000000.0,
+      "net_income": 3180000000.0,
+      "rd_expense": 2230000000.0,
+      "sga_expense": 723000000.0,
+      "cogs": 5161000000.0,
+      "interest_expense": -163000000.0,
+      "income_tax": -455000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "QCOM",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "QCT",
+          "value": 8069000000.0,
+          "unit": "USD",
+          "period": "2024-06-23 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QTL",
+          "value": 1273000000.0,
+          "unit": "USD",
+          "period": "2024-06-23 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QSI",
+          "value": 2000000.0,
+          "unit": "USD",
+          "period": "2024-06-23 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Segments",
+          "value": 49000000.0,
+          "unit": "USD",
+          "period": "2024-06-23 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 9393000000.0,
+      "gross_profit": null,
+      "operating_income": 2221000000.0,
+      "net_income": 2129000000.0,
+      "rd_expense": 2259000000.0,
+      "sga_expense": 664000000.0,
+      "cogs": 4174000000.0,
+      "interest_expense": -168000000.0,
+      "income_tax": -171000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (9393000000) differs from Yahoo (38962000000) by 75.9%"
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "QCT",
+          "value": 8026000000.0,
+          "unit": "USD",
+          "period": "2024-03-24 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QTL",
+          "value": 1318000000.0,
+          "unit": "USD",
+          "period": "2024-03-24 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QSI",
+          "value": 3000000.0,
+          "unit": "USD",
+          "period": "2024-03-24 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Segments",
+          "value": 42000000.0,
+          "unit": "USD",
+          "period": "2024-03-24 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 9389000000.0,
+      "gross_profit": null,
+      "operating_income": 2340000000.0,
+      "net_income": 2326000000.0,
+      "rd_expense": 2236000000.0,
+      "sga_expense": 707000000.0,
+      "cogs": 4106000000.0,
+      "interest_expense": -172000000.0,
+      "income_tax": -223000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (9389000000) differs from Yahoo (38962000000) by 75.9%"
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "QCT",
+          "value": 8423000000.0,
+          "unit": "USD",
+          "period": "2023-12-24 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QTL",
+          "value": 1460000000.0,
+          "unit": "USD",
+          "period": "2023-12-24 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QSI",
+          "value": 13000000.0,
+          "unit": "USD",
+          "period": "2023-12-24 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Segments",
+          "value": 39000000.0,
+          "unit": "USD",
+          "period": "2023-12-24 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 9935000000.0,
+      "gross_profit": null,
+      "operating_income": 2928000000.0,
+      "net_income": 2767000000.0,
+      "rd_expense": 2096000000.0,
+      "sga_expense": 627000000.0,
+      "cogs": 4312000000.0,
+      "interest_expense": -178000000.0,
+      "income_tax": -151000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (9935000000) differs from Yahoo (35820000000) by 72.3%"
+      ]
+    },
+    {
+      "ticker": "QCOM",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "QCOM",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 34900000000.0,
+  "ttm_operating_income": 10041000000.0,
+  "ttm_net_income": 8996000000.0,
+  "segment_trend": {
+    "QCT": [
+      {
+        "period": "2023Q4",
+        "value": 8423000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 8026000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 8069000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 10084000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 9469000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 10613000000.0,
+        "is_annual": false
+      }
+    ],
+    "QTL": [
+      {
+        "period": "2023Q4",
+        "value": 1460000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 1318000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1273000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 1535000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1319000000.0,
+        "is_annual": false
+      }
+    ],
+    "QSI": [
+      {
+        "period": "2023Q4",
+        "value": 13000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 3000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2000000.0,
+        "is_annual": false
+      }
+    ],
+    "Other Segments": [
+      {
+        "period": "2023Q4",
+        "value": 39000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 42000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 49000000.0,
+        "is_annual": false
+      }
+    ],
+    "Other Operating Segment": [
+      {
+        "period": "2024Q4",
+        "value": 50000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 48000000.0,
+        "is_annual": false
+      }
+    ],
+    "Reconciling Items": [
+      {
+        "period": "2025Q4",
+        "value": 82000000.0,
+        "is_annual": false
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

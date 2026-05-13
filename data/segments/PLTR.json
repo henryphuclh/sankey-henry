@@ -1,0 +1,479 @@
+{
+  "ticker": "PLTR",
+  "name": "Palantir Technologies",
+  "latest_annual": {
+    "ticker": "PLTR",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Government",
+        "value": 2402287000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Commercial",
+        "value": 2073159000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 4475446000.0,
+    "gross_profit": 3686269000.0,
+    "operating_income": 1414015000.0,
+    "net_income": 1634644000.0,
+    "rd_expense": 557677000.0,
+    "sga_expense": null,
+    "cogs": 789177000.0,
+    "interest_expense": null,
+    "income_tax": 22724000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "PLTR",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Government",
+          "value": 2402287000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial",
+          "value": 2073159000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 4475446000.0,
+      "gross_profit": 3686269000.0,
+      "operating_income": 1414015000.0,
+      "net_income": 1634644000.0,
+      "rd_expense": 557677000.0,
+      "sga_expense": null,
+      "cogs": 789177000.0,
+      "interest_expense": null,
+      "income_tax": 22724000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PLTR",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Government Operating Segment",
+          "value": 1569605000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial",
+          "value": 1295902000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2865507000.0,
+      "gross_profit": 2299517000.0,
+      "operating_income": 310403000.0,
+      "net_income": 467918000.0,
+      "rd_expense": 507878000.0,
+      "sga_expense": null,
+      "cogs": 565990000.0,
+      "interest_expense": null,
+      "income_tax": 21255000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PLTR",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Government",
+          "value": 1222215000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial",
+          "value": 1002797000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2225012000.0,
+      "gross_profit": 1793907000.0,
+      "operating_income": 119966000.0,
+      "net_income": 217375000.0,
+      "rd_expense": 404624000.0,
+      "sga_expense": null,
+      "cogs": 431105000.0,
+      "interest_expense": -3470000.0,
+      "income_tax": 19716000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "PLTR",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PLTR",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PLTR",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Government",
+          "value": 486963000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial",
+          "value": 396892000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 883855000.0,
+      "gross_profit": 710885000.0,
+      "operating_income": 176048000.0,
+      "net_income": 217717000.0,
+      "rd_expense": 134889000.0,
+      "sga_expense": null,
+      "cogs": 172970000.0,
+      "interest_expense": null,
+      "income_tax": 5599000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PLTR",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PLTR",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Government",
+          "value": 370767000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial",
+          "value": 307367000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 678134000.0,
+      "gross_profit": 549572000.0,
+      "operating_income": 105339000.0,
+      "net_income": 135570000.0,
+      "rd_expense": 108781000.0,
+      "sga_expense": null,
+      "cogs": 128562000.0,
+      "interest_expense": null,
+      "income_tax": 5189000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (678134000) differs from Yahoo (2865507000) by 76.3%"
+      ]
+    },
+    {
+      "ticker": "PLTR",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Government",
+          "value": 335373000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial",
+          "value": 298965000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 634338000.0,
+      "gross_profit": 518082000.0,
+      "operating_income": 80881000.0,
+      "net_income": 106071000.0,
+      "rd_expense": 110040000.0,
+      "sga_expense": null,
+      "cogs": 116256000.0,
+      "interest_expense": null,
+      "income_tax": 4655000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (634338000) differs from Yahoo (2865507000) by 77.9%"
+      ]
+    },
+    {
+      "ticker": "PLTR",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PLTR",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PLTR",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 883855000.0,
+  "ttm_operating_income": 176048000.0,
+  "ttm_net_income": 217717000.0,
+  "segment_trend": {
+    "Government": [
+      {
+        "period": "2024Q1",
+        "value": 335373000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 370767000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 486963000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1222215000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2402287000.0,
+        "is_annual": true
+      }
+    ],
+    "Commercial": [
+      {
+        "period": "2024Q1",
+        "value": 298965000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 307367000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 396892000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1002797000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1295902000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2073159000.0,
+        "is_annual": true
+      }
+    ],
+    "Government Operating Segment": [
+      {
+        "period": "FY2024",
+        "value": 1569605000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

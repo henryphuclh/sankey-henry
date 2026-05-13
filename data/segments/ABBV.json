@@ -1,0 +1,891 @@
+{
+  "ticker": "ABBV",
+  "name": "AbbVie Inc.",
+  "latest_annual": {
+    "ticker": "ABBV",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Immunology",
+        "value": 30866000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Neuroscience",
+        "value": 10380000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Oncology",
+        "value": 6352000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Aesthetics",
+        "value": 4860000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Eye Care",
+        "value": 2109000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Other Key Products",
+        "value": 2224000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "All other",
+        "value": 2627000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 61160000000.0,
+    "gross_profit": null,
+    "operating_income": 15075000000.0,
+    "net_income": 4233000000.0,
+    "rd_expense": null,
+    "sga_expense": 14010000000.0,
+    "cogs": 18204000000.0,
+    "interest_expense": null,
+    "income_tax": 2364000000.0,
+    "currency": "USD",
+    "extraction_method": "edgar+llm",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "ABBV",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Immunology",
+          "value": 30866000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 10380000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Oncology",
+          "value": 6352000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aesthetics",
+          "value": 4860000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Eye Care",
+          "value": 2109000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Key Products",
+          "value": 2224000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All other",
+          "value": 2627000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 61160000000.0,
+      "gross_profit": null,
+      "operating_income": 15075000000.0,
+      "net_income": 4233000000.0,
+      "rd_expense": null,
+      "sga_expense": 14010000000.0,
+      "cogs": 18204000000.0,
+      "interest_expense": null,
+      "income_tax": 2364000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ABBV",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Immunology",
+          "value": 30962000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Oncology",
+          "value": 10309000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aesthetics",
+          "value": 5176000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 10361000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Eye Care",
+          "value": 2018000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Key Products",
+          "value": 3315000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All other",
+          "value": 3032000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 56334000000.0,
+      "gross_profit": null,
+      "operating_income": 9137000000.0,
+      "net_income": 4286000000.0,
+      "rd_expense": null,
+      "sga_expense": 14752000000.0,
+      "cogs": 16904000000.0,
+      "interest_expense": null,
+      "income_tax": -570000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ABBV",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Immunology",
+          "value": 18594839623.53836,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Oncology",
+          "value": 7597239043.635326,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aesthetics",
+          "value": 5543338054.948189,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 13296782013.499382,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Eye Care",
+          "value": 3511383211.331876,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Key Products",
+          "value": 1856385683.0497196,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All other",
+          "value": 3918032369.997148,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 54318000000.0,
+      "gross_profit": null,
+      "operating_income": 12757000000.0,
+      "net_income": 4873000000.0,
+      "rd_expense": null,
+      "sga_expense": 12872000000.0,
+      "cogs": 20415000000.0,
+      "interest_expense": null,
+      "income_tax": 1377000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "ABBV",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ABBV",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ABBV",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Immunology",
+          "value": 3425000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 2650000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Oncology",
+          "value": 1793000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Aesthetics",
+          "value": 1102000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Eye Care",
+          "value": 606000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Other Key Products",
+          "value": 454000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "All other",
+          "value": 747000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 13343000000.0,
+      "gross_profit": null,
+      "operating_income": 3733000000.0,
+      "net_income": 1289000000.0,
+      "rd_expense": null,
+      "sga_expense": 3293000000.0,
+      "cogs": 4002000000.0,
+      "interest_expense": null,
+      "income_tax": 372000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ABBV",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ABBV",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Immunology",
+          "value": 5814000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Oncology",
+          "value": 1894000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Aesthetics",
+          "value": 2006000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 3090000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Eye Care",
+          "value": 1080000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Other Key Products",
+          "value": 1206000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 14462000000.0,
+      "gross_profit": null,
+      "operating_income": 3998000000.0,
+      "net_income": 1373000000.0,
+      "rd_expense": null,
+      "sga_expense": 3377000000.0,
+      "cogs": 4202000000.0,
+      "interest_expense": null,
+      "income_tax": 773000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (14462000000) differs from Yahoo (56334000000) by 74.3%"
+      ]
+    },
+    {
+      "ticker": "ABBV",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Immunology",
+          "value": 3337358175.086588,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Oncology",
+          "value": 2134733070.5840201,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Aesthetics",
+          "value": 1836282097.217246,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 3205040009.5545206,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Eye Care",
+          "value": 702756479.1592022,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Other Key Products",
+          "value": 1093830168.3984237,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 12310000000.0,
+      "gross_profit": null,
+      "operating_income": 2798000000.0,
+      "net_income": 1372000000.0,
+      "rd_expense": null,
+      "sga_expense": 3315000000.0,
+      "cogs": 4094000000.0,
+      "interest_expense": null,
+      "income_tax": 383000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (12310000000) differs from Yahoo (56334000000) by 78.1%"
+      ]
+    },
+    {
+      "ticker": "ABBV",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ABBV",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ABBV",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 13343000000.0,
+  "ttm_operating_income": 3733000000.0,
+  "ttm_net_income": 1289000000.0,
+  "segment_trend": {
+    "Immunology": [
+      {
+        "period": "2024Q1",
+        "value": 3337358175.086588,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 5814000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 3425000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 18594839623.53836,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 30962000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 30866000000.0,
+        "is_annual": true
+      }
+    ],
+    "Oncology": [
+      {
+        "period": "2024Q1",
+        "value": 2134733070.5840201,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1894000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1793000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 7597239043.635326,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 10309000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 6352000000.0,
+        "is_annual": true
+      }
+    ],
+    "Aesthetics": [
+      {
+        "period": "2024Q1",
+        "value": 1836282097.217246,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2006000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1102000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 5543338054.948189,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 5176000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4860000000.0,
+        "is_annual": true
+      }
+    ],
+    "Neuroscience": [
+      {
+        "period": "2024Q1",
+        "value": 3205040009.5545206,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3090000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2650000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 13296782013.499382,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 10361000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 10380000000.0,
+        "is_annual": true
+      }
+    ],
+    "Eye Care": [
+      {
+        "period": "2024Q1",
+        "value": 702756479.1592022,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1080000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 606000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 3511383211.331876,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2018000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2109000000.0,
+        "is_annual": true
+      }
+    ],
+    "Other Key Products": [
+      {
+        "period": "2024Q1",
+        "value": 1093830168.3984237,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1206000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 454000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1856385683.0497196,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 3315000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2224000000.0,
+        "is_annual": true
+      }
+    ],
+    "All other": [
+      {
+        "period": "2025Q1",
+        "value": 747000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 3918032369.997148,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 3032000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2627000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

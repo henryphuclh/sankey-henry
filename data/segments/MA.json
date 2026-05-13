@@ -1,0 +1,647 @@
+{
+  "ticker": "MA",
+  "name": "Mastercard Incorporated",
+  "latest_annual": {
+    "ticker": "MA",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Payment network",
+        "value": 19476000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Value-added services and solutions",
+        "value": 13315000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 32791000000.0,
+    "gross_profit": null,
+    "operating_income": 18897000000.0,
+    "net_income": 14968000000.0,
+    "rd_expense": null,
+    "sga_expense": 11318000000.0,
+    "cogs": null,
+    "interest_expense": null,
+    "income_tax": 3610000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "MA",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 19476000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 13315000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 32791000000.0,
+      "gross_profit": null,
+      "operating_income": 18897000000.0,
+      "net_income": 14968000000.0,
+      "rd_expense": null,
+      "sga_expense": 11318000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 3610000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "MA",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 17335000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 10832000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 28167000000.0,
+      "gross_profit": null,
+      "operating_income": 15582000000.0,
+      "net_income": 12874000000.0,
+      "rd_expense": null,
+      "sga_expense": 10193000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 2380000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "MA",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 15824000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 9274000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 25098000000.0,
+      "gross_profit": null,
+      "operating_income": 14008000000.0,
+      "net_income": 11195000000.0,
+      "rd_expense": null,
+      "sga_expense": 8927000000.0,
+      "cogs": null,
+      "interest_expense": -575000000.0,
+      "income_tax": 2444000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "MA",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 5179000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 3423000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8602000000.0,
+      "gross_profit": null,
+      "operating_income": 5061000000.0,
+      "net_income": 3927000000.0,
+      "rd_expense": null,
+      "sga_expense": 2923000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1072000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "MA",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 4945000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 3188000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8133000000.0,
+      "gross_profit": null,
+      "operating_income": 4777000000.0,
+      "net_income": 3701000000.0,
+      "rd_expense": null,
+      "sga_expense": 2766000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 971000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "MA",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 4432000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 2818000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7250000000.0,
+      "gross_profit": null,
+      "operating_income": 4149000000.0,
+      "net_income": 3280000000.0,
+      "rd_expense": null,
+      "sga_expense": 2523000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 751000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "MA",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 4629000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 2740000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7369000000.0,
+      "gross_profit": null,
+      "operating_income": 4004000000.0,
+      "net_income": 3263000000.0,
+      "rd_expense": null,
+      "sga_expense": 2744000000.0,
+      "cogs": null,
+      "interest_expense": -159000000.0,
+      "income_tax": 603000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (7369000000) differs from Yahoo (28167000000) by 73.8%"
+      ]
+    },
+    {
+      "ticker": "MA",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 4375000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 2586000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6961000000.0,
+      "gross_profit": null,
+      "operating_income": 4036000000.0,
+      "net_income": 3258000000.0,
+      "rd_expense": null,
+      "sga_expense": 2418000000.0,
+      "cogs": null,
+      "interest_expense": -153000000.0,
+      "income_tax": 681000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6961000000) differs from Yahoo (28167000000) by 75.3%"
+      ]
+    },
+    {
+      "ticker": "MA",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 3920000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 2428000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6348000000.0,
+      "gross_profit": null,
+      "operating_income": 3604000000.0,
+      "net_income": 3011000000.0,
+      "rd_expense": null,
+      "sga_expense": 2286000000.0,
+      "cogs": null,
+      "interest_expense": -150000000.0,
+      "income_tax": 547000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6348000000) differs from Yahoo (28167000000) by 77.5%"
+      ]
+    },
+    {
+      "ticker": "MA",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 4210000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 2323000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6533000000.0,
+      "gross_profit": null,
+      "operating_income": 3844000000.0,
+      "net_income": 3198000000.0,
+      "rd_expense": null,
+      "sga_expense": 2285000000.0,
+      "cogs": null,
+      "interest_expense": -151000000.0,
+      "income_tax": 563000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6533000000) differs from Yahoo (25098000000) by 74.0%"
+      ]
+    },
+    {
+      "ticker": "MA",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 4073000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 2196000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6269000000.0,
+      "gross_profit": null,
+      "operating_income": 3656000000.0,
+      "net_income": 2845000000.0,
+      "rd_expense": null,
+      "sga_expense": 2200000000.0,
+      "cogs": null,
+      "interest_expense": -144000000.0,
+      "income_tax": 859000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6269000000) differs from Yahoo (25098000000) by 75.0%"
+      ]
+    },
+    {
+      "ticker": "MA",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 3650000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 2098000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 5748000000.0,
+      "gross_profit": null,
+      "operating_income": 3136000000.0,
+      "net_income": 2361000000.0,
+      "rd_expense": null,
+      "sga_expense": 2043000000.0,
+      "cogs": null,
+      "interest_expense": -132000000.0,
+      "income_tax": 492000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (5748000000) differs from Yahoo (25098000000) by 77.1%"
+      ]
+    }
+  ],
+  "ttm_revenue": 31354000000.0,
+  "ttm_operating_income": 17991000000.0,
+  "ttm_net_income": 14171000000.0,
+  "segment_trend": {
+    "Payment network": [
+      {
+        "period": "2023Q1",
+        "value": 3650000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 4073000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 4210000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 3920000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4375000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 4629000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4432000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4945000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 5179000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 15824000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 17335000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 19476000000.0,
+        "is_annual": true
+      }
+    ],
+    "Value-added services and solutions": [
+      {
+        "period": "2023Q1",
+        "value": 2098000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 2196000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 2323000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 2428000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2586000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 2740000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2818000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 3188000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 3423000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 9274000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 10832000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 13315000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

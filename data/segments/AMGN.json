@@ -1,0 +1,1739 @@
+{
+  "ticker": "AMGN",
+  "name": "Amgen Inc.",
+  "latest_annual": {
+    "ticker": "AMGN",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Other products",
+        "value": 7263000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Prolia",
+        "value": 4414000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Repatha",
+        "value": 3016000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Otezla",
+        "value": 2265000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "ENBREL",
+        "value": 2226000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "EVENITY",
+        "value": 2100000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "XGEVA",
+        "value": 2084000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "TEPEZZA",
+        "value": 1903000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Other revenues",
+        "value": 1603000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "BLINCYTO",
+        "value": 1559000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Nplate",
+        "value": 1524000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "TEZSPIRE",
+        "value": 1478000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "KYPROLIS",
+        "value": 1412000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Aranesp",
+        "value": 1389000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "KRYSTEXXA",
+        "value": 1340000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Vectibix",
+        "value": 1175000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 36751000000.0,
+    "gross_profit": null,
+    "operating_income": 9080000000.0,
+    "net_income": 7711000000.0,
+    "rd_expense": null,
+    "sga_expense": 7050000000.0,
+    "cogs": 12037000000.0,
+    "interest_expense": null,
+    "income_tax": 1265000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "AMGN",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Other products",
+          "value": 7263000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Prolia",
+          "value": 4414000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Repatha",
+          "value": 3016000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Otezla",
+          "value": 2265000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ENBREL",
+          "value": 2226000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EVENITY",
+          "value": 2100000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "XGEVA",
+          "value": 2084000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TEPEZZA",
+          "value": 1903000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 1603000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BLINCYTO",
+          "value": 1559000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nplate",
+          "value": 1524000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TEZSPIRE",
+          "value": 1478000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KYPROLIS",
+          "value": 1412000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aranesp",
+          "value": 1389000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KRYSTEXXA",
+          "value": 1340000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Vectibix",
+          "value": 1175000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 36751000000.0,
+      "gross_profit": null,
+      "operating_income": 9080000000.0,
+      "net_income": 7711000000.0,
+      "rd_expense": null,
+      "sga_expense": 7050000000.0,
+      "cogs": 12037000000.0,
+      "interest_expense": null,
+      "income_tax": 1265000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMGN",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Other products",
+          "value": 5630000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Prolia",
+          "value": 4374000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ENBREL",
+          "value": 3316000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "XGEVA",
+          "value": 2225000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Repatha",
+          "value": 2222000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Otezla",
+          "value": 2126000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TEPEZZA",
+          "value": 1851000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EVENITY",
+          "value": 1563000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KYPROLIS",
+          "value": 1503000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nplate",
+          "value": 1456000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 1398000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aranesp",
+          "value": 1342000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BLINCYTO",
+          "value": 1216000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KRYSTEXXA",
+          "value": 1185000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Vectibix",
+          "value": 1045000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TEZSPIRE",
+          "value": 972000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 33424000000.0,
+      "gross_profit": null,
+      "operating_income": 7258000000.0,
+      "net_income": 4090000000.0,
+      "rd_expense": null,
+      "sga_expense": 7096000000.0,
+      "cogs": 12858000000.0,
+      "interest_expense": null,
+      "income_tax": 519000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMGN",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Other products",
+          "value": 5263000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Prolia",
+          "value": 4048000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ENBREL",
+          "value": 3697000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Otezla",
+          "value": 2188000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "XGEVA",
+          "value": 2112000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Repatha",
+          "value": 1635000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nplate",
+          "value": 1477000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KYPROLIS",
+          "value": 1403000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aranesp",
+          "value": 1362000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 1280000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EVENITY",
+          "value": 1160000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Vectibix",
+          "value": 984000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BLINCYTO",
+          "value": 861000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TEPEZZA",
+          "value": 448000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KRYSTEXXA",
+          "value": 272000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 28190000000.0,
+      "gross_profit": null,
+      "operating_income": 7897000000.0,
+      "net_income": 6717000000.0,
+      "rd_expense": null,
+      "sga_expense": 6179000000.0,
+      "cogs": 8451000000.0,
+      "interest_expense": null,
+      "income_tax": 1138000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "AMGN",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMGN",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMGN",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Product - Foreign currency forward contracts - Reclassification out of AOCI - Ca",
+          "value": 56000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Prolia",
+          "value": 1099000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Repatha",
+          "value": 656000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "XGEVA",
+          "value": 566000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ENBREL",
+          "value": 510000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EVENITY",
+          "value": 442000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Otezla",
+          "value": 437000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TEPEZZA",
+          "value": 381000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BLINCYTO",
+          "value": 370000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aranesp",
+          "value": 340000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KYPROLIS",
+          "value": 324000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nplate",
+          "value": 313000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TEZSPIRE",
+          "value": 285000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Vectibix",
+          "value": 267000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KRYSTEXXA",
+          "value": 236000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other products",
+          "value": 1647000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 276000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8149000000.0,
+      "gross_profit": null,
+      "operating_income": 1178000000.0,
+      "net_income": 1730000000.0,
+      "rd_expense": null,
+      "sga_expense": 1687000000.0,
+      "cogs": 2968000000.0,
+      "interest_expense": null,
+      "income_tax": 243000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMGN",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMGN",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Product sales",
+          "value": 55000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Prolia",
+          "value": 1165000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ENBREL",
+          "value": 909000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "XGEVA",
+          "value": 562000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Repatha",
+          "value": 532000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Otezla",
+          "value": 544000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TEPEZZA",
+          "value": 479000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KYPROLIS",
+          "value": 377000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EVENITY",
+          "value": 391000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aranesp",
+          "value": 348000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nplate",
+          "value": 346000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KRYSTEXXA",
+          "value": 294000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Vectibix",
+          "value": 270000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BLINCYTO",
+          "value": 264000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TEZSPIRE",
+          "value": 234000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other products",
+          "value": 1326000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 347000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8388000000.0,
+      "gross_profit": null,
+      "operating_income": 1909000000.0,
+      "net_income": 746000000.0,
+      "rd_expense": null,
+      "sga_expense": 1785000000.0,
+      "cogs": 3236000000.0,
+      "interest_expense": null,
+      "income_tax": 48000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8388000000) differs from Yahoo (33424000000) by 74.9%"
+      ]
+    },
+    {
+      "ticker": "AMGN",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Product sales",
+          "value": 51000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Prolia",
+          "value": 999000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ENBREL",
+          "value": 567000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "XGEVA",
+          "value": 561000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Repatha",
+          "value": 517000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TEPEZZA",
+          "value": 424000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Otezla",
+          "value": 394000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KYPROLIS",
+          "value": 376000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aranesp",
+          "value": 349000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EVENITY",
+          "value": 342000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nplate",
+          "value": 317000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Vectibix",
+          "value": 247000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BLINCYTO",
+          "value": 244000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "KRYSTEXXA",
+          "value": 235000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TEZSPIRE",
+          "value": 173000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other products",
+          "value": 1373000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 329000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7447000000.0,
+      "gross_profit": null,
+      "operating_income": 991000000.0,
+      "net_income": -113000000.0,
+      "rd_expense": null,
+      "sga_expense": 1808000000.0,
+      "cogs": 3200000000.0,
+      "interest_expense": null,
+      "income_tax": 45000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (7447000000) differs from Yahoo (33424000000) by 77.7%"
+      ]
+    },
+    {
+      "ticker": "AMGN",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMGN",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMGN",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 8149000000.0,
+  "ttm_operating_income": 1178000000.0,
+  "ttm_net_income": 1730000000.0,
+  "segment_trend": {
+    "Product sales": [
+      {
+        "period": "2024Q1",
+        "value": 51000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 55000000.0,
+        "is_annual": false
+      }
+    ],
+    "Prolia": [
+      {
+        "period": "2024Q1",
+        "value": 999000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1165000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1099000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 4048000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 4374000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4414000000.0,
+        "is_annual": true
+      }
+    ],
+    "ENBREL": [
+      {
+        "period": "2024Q1",
+        "value": 567000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 909000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 510000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 3697000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 3316000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2226000000.0,
+        "is_annual": true
+      }
+    ],
+    "XGEVA": [
+      {
+        "period": "2024Q1",
+        "value": 561000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 562000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 566000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 2112000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2225000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2084000000.0,
+        "is_annual": true
+      }
+    ],
+    "Repatha": [
+      {
+        "period": "2024Q1",
+        "value": 517000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 532000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 656000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1635000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2222000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 3016000000.0,
+        "is_annual": true
+      }
+    ],
+    "TEPEZZA": [
+      {
+        "period": "2024Q1",
+        "value": 424000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 479000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 381000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 448000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1851000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1903000000.0,
+        "is_annual": true
+      }
+    ],
+    "Otezla": [
+      {
+        "period": "2024Q1",
+        "value": 394000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 544000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 437000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 2188000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2126000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2265000000.0,
+        "is_annual": true
+      }
+    ],
+    "KYPROLIS": [
+      {
+        "period": "2024Q1",
+        "value": 376000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 377000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 324000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1403000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1503000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1412000000.0,
+        "is_annual": true
+      }
+    ],
+    "Aranesp": [
+      {
+        "period": "2024Q1",
+        "value": 349000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 348000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 340000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1362000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1342000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1389000000.0,
+        "is_annual": true
+      }
+    ],
+    "EVENITY": [
+      {
+        "period": "2024Q1",
+        "value": 342000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 391000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 442000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1160000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1563000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2100000000.0,
+        "is_annual": true
+      }
+    ],
+    "Nplate": [
+      {
+        "period": "2024Q1",
+        "value": 317000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 346000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 313000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1477000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1456000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1524000000.0,
+        "is_annual": true
+      }
+    ],
+    "Vectibix": [
+      {
+        "period": "2024Q1",
+        "value": 247000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 270000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 267000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 984000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1045000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1175000000.0,
+        "is_annual": true
+      }
+    ],
+    "BLINCYTO": [
+      {
+        "period": "2024Q1",
+        "value": 244000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 264000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 370000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 861000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1216000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1559000000.0,
+        "is_annual": true
+      }
+    ],
+    "KRYSTEXXA": [
+      {
+        "period": "2024Q1",
+        "value": 235000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 294000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 236000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 272000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1185000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1340000000.0,
+        "is_annual": true
+      }
+    ],
+    "TEZSPIRE": [
+      {
+        "period": "2024Q1",
+        "value": 173000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 234000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 285000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 972000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1478000000.0,
+        "is_annual": true
+      }
+    ],
+    "Other products": [
+      {
+        "period": "2024Q1",
+        "value": 1373000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1326000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1647000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 5263000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 5630000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 7263000000.0,
+        "is_annual": true
+      }
+    ],
+    "Other revenues": [
+      {
+        "period": "2024Q1",
+        "value": 329000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 347000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 276000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1280000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1398000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1603000000.0,
+        "is_annual": true
+      }
+    ],
+    "Product - Foreign currency forward contracts - Reclassification out of AOCI - Ca": [
+      {
+        "period": "2025Q1",
+        "value": 56000000.0,
+        "is_annual": false
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

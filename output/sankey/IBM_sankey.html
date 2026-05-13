@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>International Business Machines (IBM) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>International Business Machines (IBM) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>International Business Machines <span style="opacity:0.7">(IBM)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls">
+  <label for="period-select">Fiscal Year:</label>
+  <select id="period-select" onchange="switchPeriod(this.value)">
+    <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+  </select>
+  <span id="data-badge" style="margin-left:12px; font-size:12px; color:#666;"></span>
+</div>
+
+<div class="chart-container">
+  <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,127,14,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Software (44.4%)","Consulting (31.2%)","Infrastructure (23.3%)","Other: Financing","Gross Profit (58.2%)","COGS (41.8%)","R&D (12.3%)","SG&A (29.8%)","Interest & Other","Net Income (15.7%)"],"source":[1,2,3,4,0,0,5,5,5,5],"target":[0,0,0,0,5,6,7,8,9,10],"value":[29962000000.0,21055000000.0,15718000000.0,737000000.0,39297000000.0,28239000000.0,8316000000.0,20123000000.0,1935000000.0,10593000000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#2ca02c","#d62728","#ff7f0e","#ff7f0e","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$67.5B (100.0%)","Software\u003cbr\u003e$30.0B (44.4%)","Consulting\u003cbr\u003e$21.1B (31.2%)","Infrastructure\u003cbr\u003e$15.7B (23.3%)","Other\u003cbr\u003e$737M (1.1%)","Gross Profit\u003cbr\u003e$39.3B (58.2%)","Cost of Revenue\u003cbr\u003e$28.2B (41.8%)","R&D\u003cbr\u003e$8.3B (12.3%)","SG&A\u003cbr\u003e$20.1B (29.8%)","Interest & Other\u003cbr\u003e$1.9B (2.9%)","Net Income\u003cbr\u003e$10.6B (15.7%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":60},"paper_bgcolor":"#fafafa","title":{"font":{"size":16},"text":"International Business Machines (IBM) — Financial Flow FY2025"},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": true, "displayModeBar": true, "modeBarButtonsToAdd": ["zoom2d", "pan2d", "resetScale2d"]}                    )                };            </script>        </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$67.5B (100.0%)", "Software<br>$30.0B (44.4%)", "Consulting<br>$21.1B (31.2%)", "Infrastructure<br>$15.7B (23.3%)", "Other<br>$737M (1.1%)", "Gross Profit<br>$39.3B (58.2%)", "Cost of Revenue<br>$28.2B (41.8%)", "R&D<br>$8.3B (12.3%)", "SG&A<br>$20.1B (29.8%)", "Interest & Other<br>$1.9B (2.9%)", "Net Income<br>$10.6B (15.7%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.87, 1.0], "node_y": [0.5, 0.125, 0.375, 0.625, 0.875, 0.35, 0.75, 0.2, 0.4, 0.35, 0.5], "link_sources": [1, 2, 3, 4, 0, 0, 5, 5, 5, 5], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9, 10], "link_values": [29962000000.0, 21055000000.0, 15718000000.0, 737000000.0, 39297000000.0, 28239000000.0, 8316000000.0, 20123000000.0, 1935000000.0, 10593000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Software (44.4%)", "Consulting (31.2%)", "Infrastructure (23.3%)", "Other: Financing", "Gross Profit (58.2%)", "COGS (41.8%)", "R&D (12.3%)", "SG&A (29.8%)", "Interest & Other", "Net Income (15.7%)"], "title": "International Business Machines (IBM) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$62.8B (100.0%)", "Software<br>$27.1B (43.2%)", "Consulting<br>$20.7B (33.0%)", "Infrastructure<br>$14.0B (22.3%)", "Other<br>$713M (1.1%)", "Gross Profit<br>$35.6B (56.7%)", "Cost of Revenue<br>$27.2B (43.3%)", "R&D<br>$7.5B (11.9%)", "SG&A<br>$19.7B (31.4%)", "Interest & Other<br>$1.7B (2.7%)", "Net Income<br>$6.0B (9.6%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.87, 1.0], "node_y": [0.5, 0.125, 0.375, 0.625, 0.875, 0.35, 0.75, 0.2, 0.4, 0.35, 0.5], "link_sources": [1, 2, 3, 4, 0, 0, 5, 5, 5, 5], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9, 10], "link_values": [27085000000.0, 20692000000.0, 14020000000.0, 713000000.0, 35551000000.0, 27201000000.0, 7479000000.0, 19688000000.0, 1712000000.0, 6023000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Software (43.2%)", "Consulting (33.0%)", "Infrastructure (22.3%)", "Other: Financing", "Gross Profit (56.7%)", "COGS (43.3%)", "R&D (11.9%)", "SG&A (31.4%)", "Interest & Other", "Net Income (9.6%)"], "title": "International Business Machines (IBM) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$61.9B (100.0%)", "Software<br>$26.3B (42.5%)", "Consulting<br>$20.0B (32.3%)", "Infrastructure<br>$14.6B (23.6%)", "Other<br>$741M (1.2%)", "Gross Profit<br>$34.3B (55.4%)", "Cost of Revenue<br>$27.6B (44.6%)", "R&D<br>$6.8B (11.0%)", "SG&A<br>$19.0B (30.7%)", "Interest & Other<br>$1.6B (2.6%)", "Income Tax<br>$1.2B (1.9%)", "Net Income<br>$7.5B (12.1%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.87, 0.87, 1.0], "node_y": [0.5, 0.125, 0.375, 0.625, 0.875, 0.35, 0.75, 0.2, 0.4, 0.35, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 0, 0, 5, 5, 5, 5, 5], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9, 10, 11], "link_values": [26308000000.0, 19985000000.0, 14593000000.0, 741000000.0, 34300000000.0, 27560000000.0, 6775000000.0, 19003000000.0, 1607000000.0, 1176000000.0, 7502000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Software (42.5%)", "Consulting (32.3%)", "Infrastructure (23.6%)", "Other: Financing", "Gross Profit (55.4%)", "COGS (44.6%)", "R&D (11.0%)", "SG&A (30.7%)", "Interest & Other", "Income Tax", "Net Income (12.1%)"], "title": "International Business Machines (IBM) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  var layoutUpdate = {
+    "title.text": data.title,
+  };
+
+  Plotly.update("sankey-chart", update, layoutUpdate);
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+</script>
+</body>
+</html>
+
+
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>International Business Machines (IBM) Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>International Business Machines (IBM) operates through four primary business segments: Software, Consulting, Infrastructure, and Financing. In FY2025, IBM reported total revenue of $67.53 billion, with the Software segment being the largest contributor at $29.96 billion, accounting for approximately 44.3% of total revenue. The Consulting segment followed closely with $21.05 billion (31.2%), while Infrastructure generated $15.72 billion (23.3%). Financing contributed a modest $737 million (1.1%).</p>
+<p>Over the past three years, IBM's revenue mix has shown a notable shift. The Software segment has consistently increased its contribution, growing from $26.31 billion in FY2023 to $29.96 billion in FY2025, reflecting a compound annual growth rate (CAGR) of approximately 6.5%. The Consulting segment also experienced growth, rising from $19.98 billion in FY2023 to $21.05 billion in FY2025, a CAGR of about 2.7%. Conversely, the Infrastructure segment saw a slight decline in FY2024 but rebounded to $15.72 billion in FY2025, indicating a recovery in demand. Financing revenue has remained relatively stable, fluctuating between $713 million and $741 million over the same period.</p>
+<p>Key products driving growth include IBM's software solutions, particularly in cloud computing and AI, which have gained traction across various industries. Geographically, IBM has a strong presence in North America, which remains a significant market for its software and consulting services.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>IBM's gross margin has shown a positive trend, increasing from 55.4% in FY2023 to 58.2% in FY2025. This improvement can be attributed to the higher-margin Software segment, which has expanded its revenue base. The gross profit for FY2025 was $39.30 billion, up from $34.30 billion in FY2023, reflecting effective cost management and a favorable product mix.</p>
+<p>While operating income figures are not disclosed, the major cost drivers include Research and Development (R&amp;D) and Selling, General &amp; Administrative (SG&amp;A) expenses. R&amp;D expenses increased from $6.78 billion in FY2023 to $8.32 billion in FY2025, indicating IBM's commitment to innovation and product development. SG&amp;A expenses also rose from $19.00 billion to $20.12 billion over the same period, reflecting the costs associated with sales and marketing efforts to support revenue growth.</p>
+<p>The operating leverage appears to be improving, as the growth in revenue outpaces the increase in operating expenses. This trend suggests that IBM is effectively managing its cost structure while investing in growth initiatives.</p>
+<h2>Business Model Summary</h2>
+<p>IBM's business model is centered around converting revenue into earnings through a diversified portfolio of high-margin software and consulting services. The company leverages its expertise in technology and innovation to deliver solutions that meet the evolving needs of its clients, particularly in areas such as cloud computing and artificial intelligence.</p>
+<p>The competitive positioning of IBM is evident from its segment structure, with a strong emphasis on software and consulting, which are typically higher-margin businesses compared to infrastructure and financing. The shift in revenue mix towards software and consulting reflects a strategic focus on areas with greater growth potential and profitability.</p>
+<p>Notably, the increase in gross margin from 55.4% to 58.2% over the past three years indicates a positive shift in IBM's margin profile, driven by the growth of its software segment. This trend, combined with stable revenue from financing and a recovery in infrastructure, positions IBM favorably for future growth and profitability. Overall, IBM's ability to adapt its business model to changing market dynamics while maintaining a focus on high-margin segments is a key strength in its operational strategy.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$67.53B</td><td style="text-align:right">$62.75B</td><td style="text-align:right" class="yoy-pos">+7.6%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$28.24B</td><td style="text-align:right">$27.20B</td><td style="text-align:right" class="yoy-pos">+3.8%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$39.30B</td><td style="text-align:right">$35.55B</td><td style="text-align:right" class="yoy-pos">+10.5%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">58.2%</td><td style="text-align:right">56.7%</td><td style="text-align:right" class="yoy-pos">+2.7%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$8.32B</td><td style="text-align:right">$7.48B</td><td style="text-align:right" class="yoy-pos">+11.2%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$20.12B</td><td style="text-align:right">$19.69B</td><td style="text-align:right" class="yoy-pos">+2.2%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$10.59B</td><td style="text-align:right">$6.02B</td><td style="text-align:right" class="yoy-pos">+75.9%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">15.7%</td><td style="text-align:right">9.6%</td><td style="text-align:right" class="yoy-pos">+63.4%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2025 Q3</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q2</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q1</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2024 Q3</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$15.77B</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$6.82B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$8.95B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">56.8%</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$1.84B</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$4.94B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$1.83B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">11.6%</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$14.54B</td><td style="text-align:right">$14.46B</td><td style="text-align:right" class="yoy-pos">+0.5%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$6.51B</td><td style="text-align:right">$6.72B</td><td style="text-align:right" class="yoy-neg">-3.1%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$8.03B</td><td style="text-align:right">$7.74B</td><td style="text-align:right" class="yoy-pos">+3.7%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">55.2%</td><td style="text-align:right">53.5%</td><td style="text-align:right" class="yoy-pos">+3.2%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$1.95B</td><td style="text-align:right">$1.80B</td><td style="text-align:right" class="yoy-pos">+8.6%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$4.89B</td><td style="text-align:right">$4.97B</td><td style="text-align:right" class="yoy-neg">-1.8%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$1.05B</td><td style="text-align:right">$1.60B</td><td style="text-align:right" class="yoy-neg">-34.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">7.3%</td><td style="text-align:right">11.1%</td><td style="text-align:right" class="yoy-neg">-34.6%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>2023 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section">
+  <h3>Segment Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$67.53B</td><td>$10.59B</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$62.75B</td><td>$6.02B</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$61.86B</td><td>$7.50B</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$14.54B</td><td>$1.05B</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$15.77B</td><td>$1.83B</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$14.46B</td><td>$1.60B</td><td>4</td><td>99%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q1</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $67.53B revenue across 4 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Software</td><td style='text-align:right'>$29.96B</td><td style='text-align:right'>44.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:44.4%'></div>  </div></td></tr><tr><td>Consulting</td><td style='text-align:right'>$21.05B</td><td style='text-align:right'>31.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:31.2%'></div>  </div></td></tr><tr><td>Infrastructure</td><td style='text-align:right'>$15.72B</td><td style='text-align:right'>23.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.3%'></div>  </div></td></tr><tr><td>Financing</td><td style='text-align:right'>$737.0M</td><td style='text-align:right'>1.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.1%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $62.75B revenue across 4 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Software</td><td style='text-align:right'>$27.09B</td><td style='text-align:right'>43.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:43.2%'></div>  </div></td></tr><tr><td>Consulting</td><td style='text-align:right'>$20.69B</td><td style='text-align:right'>33.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:33.0%'></div>  </div></td></tr><tr><td>Infrastructure</td><td style='text-align:right'>$14.02B</td><td style='text-align:right'>22.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:22.3%'></div>  </div></td></tr><tr><td>Financing</td><td style='text-align:right'>$713.0M</td><td style='text-align:right'>1.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.1%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $61.86B revenue across 4 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Software</td><td style='text-align:right'>$26.31B</td><td style='text-align:right'>42.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:42.5%'></div>  </div></td></tr><tr><td>Consulting</td><td style='text-align:right'>$19.98B</td><td style='text-align:right'>32.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:32.3%'></div>  </div></td></tr><tr><td>Infrastructure</td><td style='text-align:right'>$14.59B</td><td style='text-align:right'>23.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.6%'></div>  </div></td></tr><tr><td>Financing</td><td style='text-align:right'>$741.0M</td><td style='text-align:right'>1.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.2%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Software</td><td style='text-align:right'>$29.96B</td><td style='text-align:right'>$27.09B</td><td style='text-align:right'>$26.31B</td><td style='text-align:right;color:#28a745;font-weight:600'>+10.6%</td></tr><tr><td>Consulting</td><td style='text-align:right'>$21.05B</td><td style='text-align:right'>$20.69B</td><td style='text-align:right'>$19.98B</td><td style='text-align:right;color:#28a745;font-weight:600'>+1.8%</td></tr><tr><td>Infrastructure</td><td style='text-align:right'>$15.72B</td><td style='text-align:right'>$14.02B</td><td style='text-align:right'>$14.59B</td><td style='text-align:right;color:#28a745;font-weight:600'>+12.1%</td></tr><tr><td>Financing</td><td style='text-align:right'>$737.0M</td><td style='text-align:right'>$713.0M</td><td style='text-align:right'>$741.0M</td><td style='text-align:right;color:#28a745;font-weight:600'>+3.4%</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 9 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 9 quarterly reports
+</div>
+</body>
+</html>

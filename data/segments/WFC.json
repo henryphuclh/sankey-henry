@@ -1,0 +1,1074 @@
+{
+  "ticker": "WFC",
+  "name": "Wells Fargo & Company",
+  "sector": "financial",
+  "latest_annual": {
+    "ticker": "WFC",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Corporate",
+        "value": 747000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Consumer Banking and Lending",
+        "value": 37362000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Commercial Banking",
+        "value": 11978000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Corporate and Investment Banking",
+        "value": 19232000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Wealth and Investment Management",
+        "value": 16328000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 83699000000.0,
+    "gross_profit": 80041000000.0,
+    "operating_income": 25199000000.0,
+    "net_income": 21338000000.0,
+    "rd_expense": null,
+    "sga_expense": 54842000000.0,
+    "cogs": null,
+    "interest_expense": 3658000000.0,
+    "income_tax": 3841000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": [
+      "EXPENSE_DETAIL:{\"Personnel\": 36281000000.0, \"Occupancy\": 3151000000.0, \"Professional Services\": 4540000000.0, \"Marketing\": 1094000000.0, \"Other Non-Interest Expense\": 4573000000.0}"
+    ]
+  },
+  "annual_periods": [
+    {
+      "ticker": "WFC",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Corporate",
+          "value": 747000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 37362000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 11978000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 19232000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 16328000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 83699000000.0,
+      "gross_profit": 80041000000.0,
+      "operating_income": 25199000000.0,
+      "net_income": 21338000000.0,
+      "rd_expense": null,
+      "sga_expense": 54842000000.0,
+      "cogs": null,
+      "interest_expense": 3658000000.0,
+      "income_tax": 3841000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 36281000000.0, \"Occupancy\": 3151000000.0, \"Professional Services\": 4540000000.0, \"Marketing\": 1094000000.0, \"Other Non-Interest Expense\": 4573000000.0}"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 36201000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 12778000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 19344000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 15436000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 82296000000.0,
+      "gross_profit": 77962000000.0,
+      "operating_income": 23364000000.0,
+      "net_income": 19722000000.0,
+      "rd_expense": null,
+      "sga_expense": 54598000000.0,
+      "cogs": null,
+      "interest_expense": 4334000000.0,
+      "income_tax": 3399000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 35729000000.0, \"Technology & Equipment\": 4583000000.0, \"Occupancy\": 3052000000.0, \"Professional Services\": 4607000000.0, \"Marketing\": 869000000.0, \"Other Non-Interest Expense\": 4001000000.0}"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 37919000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 13449000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 19191000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 14691000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 82597000000.0,
+      "gross_profit": 77198000000.0,
+      "operating_income": 21636000000.0,
+      "net_income": 19142000000.0,
+      "rd_expense": null,
+      "sga_expense": 55562000000.0,
+      "cogs": null,
+      "interest_expense": 5399000000.0,
+      "income_tax": 2607000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 35829000000.0, \"Technology & Equipment\": 3920000000.0, \"Occupancy\": 2884000000.0, \"Professional Services\": 5085000000.0, \"Marketing\": 812000000.0, \"Other Non-Interest Expense\": 5849000000.0}"
+      ]
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "WFC",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 9998000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 3120000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 5278000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 3875000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 21446000000.0,
+      "gross_profit": 20311000000.0,
+      "operating_income": 5981000000.0,
+      "net_income": 5253000000.0,
+      "rd_expense": null,
+      "sga_expense": 14330000000.0,
+      "cogs": null,
+      "interest_expense": 1135000000.0,
+      "income_tax": 691000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 9593000000.0, \"Occupancy\": 778000000.0, \"Professional Services\": 1066000000.0, \"Marketing\": 369000000.0, \"Other Non-Interest Expense\": 1127000000.0}"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Corporate",
+          "value": 176000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 9650000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 3041000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 4879000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 4196000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 21436000000.0,
+      "gross_profit": 20755000000.0,
+      "operating_income": 6909000000.0,
+      "net_income": 5589000000.0,
+      "rd_expense": null,
+      "sga_expense": 13846000000.0,
+      "cogs": null,
+      "interest_expense": 681000000.0,
+      "income_tax": 1300000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 9021000000.0, \"Occupancy\": 784000000.0, \"Professional Services\": 1177000000.0, \"Marketing\": 295000000.0, \"Other Non-Interest Expense\": 965000000.0}"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Corporate",
+          "value": 559000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 9228000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 2933000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 4673000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 3898000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 20822000000.0,
+      "gross_profit": 19817000000.0,
+      "operating_income": 6438000000.0,
+      "net_income": 5494000000.0,
+      "rd_expense": null,
+      "sga_expense": 13379000000.0,
+      "cogs": null,
+      "interest_expense": 1005000000.0,
+      "income_tax": 916000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 8709000000.0, \"Technology & Equipment\": 1287000000.0, \"Occupancy\": 766000000.0, \"Professional Services\": 1089000000.0, \"Marketing\": 266000000.0, \"Other Non-Interest Expense\": 951000000.0}"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 8913000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 2925000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 5064000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 3874000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 20149000000.0,
+      "gross_profit": 19217000000.0,
+      "operating_income": 5326000000.0,
+      "net_income": 4894000000.0,
+      "rd_expense": null,
+      "sga_expense": 13891000000.0,
+      "cogs": null,
+      "interest_expense": 932000000.0,
+      "income_tax": 522000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 9474000000.0, \"Technology & Equipment\": 1223000000.0, \"Occupancy\": 761000000.0, \"Professional Services\": 1038000000.0, \"Marketing\": 181000000.0, \"Other Non-Interest Expense\": 1071000000.0}"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 9124000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 3333000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 4911000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 3878000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 20366000000.0,
+      "gross_profit": 19301000000.0,
+      "operating_income": 6234000000.0,
+      "net_income": 5114000000.0,
+      "rd_expense": null,
+      "sga_expense": 13067000000.0,
+      "cogs": null,
+      "interest_expense": 1065000000.0,
+      "income_tax": 1064000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 8591000000.0, \"Technology & Equipment\": 1142000000.0, \"Occupancy\": 786000000.0, \"Professional Services\": 1130000000.0, \"Marketing\": 205000000.0, \"Other Non-Interest Expense\": 920000000.0}",
+        "Warning: total_revenue (20366000000) differs from Yahoo (82296000000) by 75.3%"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 9006000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 3122000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 4838000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 3858000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 248000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 20689000000.0,
+      "gross_profit": 19453000000.0,
+      "operating_income": 6160000000.0,
+      "net_income": 4910000000.0,
+      "rd_expense": null,
+      "sga_expense": 13293000000.0,
+      "cogs": null,
+      "interest_expense": 1236000000.0,
+      "income_tax": 1251000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 8575000000.0, \"Technology & Equipment\": 1106000000.0, \"Occupancy\": 763000000.0, \"Professional Services\": 1139000000.0, \"Marketing\": 224000000.0, \"Other Non-Interest Expense\": 993000000.0}",
+        "Warning: total_revenue (20689000000) differs from Yahoo (82296000000) by 74.9%"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Corporate",
+          "value": 323000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 9091000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 3152000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 4982000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 3742000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 20863000000.0,
+      "gross_profit": 19925000000.0,
+      "operating_income": 5587000000.0,
+      "net_income": 4619000000.0,
+      "rd_expense": null,
+      "sga_expense": 14338000000.0,
+      "cogs": null,
+      "interest_expense": 938000000.0,
+      "income_tax": 964000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 9492000000.0, \"Technology & Equipment\": 1053000000.0, \"Occupancy\": 714000000.0, \"Professional Services\": 1101000000.0, \"Marketing\": 197000000.0, \"Other Non-Interest Expense\": 1148000000.0}",
+        "Warning: total_revenue (20863000000) differs from Yahoo (82296000000) by 74.6%"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 9581000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 3405000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 4923000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 3702000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 20857000000.0,
+      "gross_profit": 19660000000.0,
+      "operating_income": 6547000000.0,
+      "net_income": 5767000000.0,
+      "rd_expense": null,
+      "sga_expense": 13113000000.0,
+      "cogs": null,
+      "interest_expense": 1197000000.0,
+      "income_tax": 811000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 8627000000.0, \"Technology & Equipment\": 975000000.0, \"Occupancy\": 724000000.0, \"Professional Services\": 1310000000.0, \"Marketing\": 215000000.0, \"Other Non-Interest Expense\": 933000000.0}",
+        "Warning: total_revenue (20857000000) differs from Yahoo (82597000000) by 74.7%"
+      ]
+    },
+    {
+      "ticker": "WFC",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Consumer Banking and Lending",
+          "value": 9455000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 3369000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate and Investment Banking",
+          "value": 4631000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth and Investment Management",
+          "value": 3648000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 20533000000.0,
+      "gross_profit": 18820000000.0,
+      "operating_income": 5833000000.0,
+      "net_income": 4938000000.0,
+      "rd_expense": null,
+      "sga_expense": 12987000000.0,
+      "cogs": null,
+      "interest_expense": 1713000000.0,
+      "income_tax": 930000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 8606000000.0, \"Technology & Equipment\": 947000000.0, \"Occupancy\": 707000000.0, \"Professional Services\": 1304000000.0, \"Marketing\": 184000000.0, \"Other Non-Interest Expense\": 1007000000.0}",
+        "Warning: total_revenue (20533000000) differs from Yahoo (82597000000) by 75.1%"
+      ]
+    }
+  ],
+  "ttm_revenue": 83853000000.0,
+  "ttm_operating_income": 24654000000.0,
+  "ttm_net_income": 21230000000.0,
+  "segment_trend": {
+    "Consumer Banking and Lending": [
+      {
+        "period": "2023Q2",
+        "value": 9455000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 9581000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 9091000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 9006000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 9124000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 8913000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 9228000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 9650000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 9998000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 37919000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 36201000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 37362000000.0,
+        "is_annual": true
+      }
+    ],
+    "Commercial Banking": [
+      {
+        "period": "2023Q2",
+        "value": 3369000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 3405000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 3152000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3122000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 3333000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2925000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 2933000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 3041000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 3120000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 13449000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 12778000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 11978000000.0,
+        "is_annual": true
+      }
+    ],
+    "Corporate and Investment Banking": [
+      {
+        "period": "2023Q2",
+        "value": 4631000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 4923000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 4982000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4838000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 4911000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 5064000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4673000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 4879000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 5278000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 19191000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 19344000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 19232000000.0,
+        "is_annual": true
+      }
+    ],
+    "Wealth and Investment Management": [
+      {
+        "period": "2023Q2",
+        "value": 3648000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 3702000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 3742000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3858000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 3878000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 3874000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 3898000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 4196000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 3875000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 14691000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 15436000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 16328000000.0,
+        "is_annual": true
+      }
+    ],
+    "Corporate": [
+      {
+        "period": "2024Q1",
+        "value": 323000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 248000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 559000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 176000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 747000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

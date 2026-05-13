@@ -1,0 +1,647 @@
+{
+  "ticker": "AVGO",
+  "name": "Broadcom Inc.",
+  "latest_annual": {
+    "ticker": "AVGO",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "infrastructure software",
+        "value": 42457813257.6037,
+        "unit": "USD",
+        "period": "2025-11-02 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Semiconductor Solutions and Infrastructure Software",
+        "value": 21429186742.3963,
+        "unit": "USD",
+        "period": "2025-11-02 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 63887000000.0,
+    "gross_profit": 43294000000.0,
+    "operating_income": 25484000000.0,
+    "net_income": 23126000000.0,
+    "rd_expense": 10977000000.0,
+    "sga_expense": 4211000000.0,
+    "cogs": 20593000000.0,
+    "interest_expense": null,
+    "income_tax": -397000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "AVGO",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "infrastructure software",
+          "value": 42457813257.6037,
+          "unit": "USD",
+          "period": "2025-11-02 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Semiconductor Solutions and Infrastructure Software",
+          "value": 21429186742.3963,
+          "unit": "USD",
+          "period": "2025-11-02 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 63887000000.0,
+      "gross_profit": 43294000000.0,
+      "operating_income": 25484000000.0,
+      "net_income": 23126000000.0,
+      "rd_expense": 10977000000.0,
+      "sga_expense": 4211000000.0,
+      "cogs": 20593000000.0,
+      "interest_expense": null,
+      "income_tax": -397000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AVGO",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "semiconductor solutions",
+          "value": 30096000000.0,
+          "unit": "USD",
+          "period": "2024-11-03 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "infrastructure software",
+          "value": 21478000000.0,
+          "unit": "USD",
+          "period": "2024-11-03 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 51574000000.0,
+      "gross_profit": 32509000000.0,
+      "operating_income": 13463000000.0,
+      "net_income": 5895000000.0,
+      "rd_expense": 9310000000.0,
+      "sga_expense": 4959000000.0,
+      "cogs": 19065000000.0,
+      "interest_expense": -3953000000.0,
+      "income_tax": 3748000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AVGO",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "semiconductor solutions",
+          "value": 28182000000.0,
+          "unit": "USD",
+          "period": "2023-10-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "infrastructure software",
+          "value": 7637000000.0,
+          "unit": "USD",
+          "period": "2023-10-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 35819000000.0,
+      "gross_profit": 24690000000.0,
+      "operating_income": 16207000000.0,
+      "net_income": 14082000000.0,
+      "rd_expense": 5253000000.0,
+      "sga_expense": 1592000000.0,
+      "cogs": 11129000000.0,
+      "interest_expense": -1622000000.0,
+      "income_tax": 1015000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "AVGO",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "semiconductor solutions",
+          "value": 12515000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "infrastructure software",
+          "value": 6796000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 19311000000.0,
+      "gross_profit": 13157000000.0,
+      "operating_income": 8563000000.0,
+      "net_income": 7349000000.0,
+      "rd_expense": 2965000000.0,
+      "sga_expense": 1019000000.0,
+      "cogs": 6154000000.0,
+      "interest_expense": -801000000.0,
+      "income_tax": 846000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AVGO",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "semiconductor solutions",
+          "value": 9166000000.0,
+          "unit": "USD",
+          "period": "2025-08-03 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "infrastructure software",
+          "value": 6786000000.0,
+          "unit": "USD",
+          "period": "2025-08-03 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15952000000.0,
+      "gross_profit": 10703000000.0,
+      "operating_income": 5887000000.0,
+      "net_income": 4140000000.0,
+      "rd_expense": 3050000000.0,
+      "sga_expense": 1072000000.0,
+      "cogs": 5249000000.0,
+      "interest_expense": -807000000.0,
+      "income_tax": 1145000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AVGO",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "semiconductor solutions",
+          "value": 8408000000.0,
+          "unit": "USD",
+          "period": "2025-05-04 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "infrastructure software",
+          "value": 6596000000.0,
+          "unit": "USD",
+          "period": "2025-05-04 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15004000000.0,
+      "gross_profit": 10197000000.0,
+      "operating_income": 5829000000.0,
+      "net_income": 4965000000.0,
+      "rd_expense": 2693000000.0,
+      "sga_expense": 1083000000.0,
+      "cogs": 4807000000.0,
+      "interest_expense": -769000000.0,
+      "income_tax": 120000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AVGO",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "semiconductor solutions",
+          "value": 8212000000.0,
+          "unit": "USD",
+          "period": "2025-02-02 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "infrastructure software",
+          "value": 6704000000.0,
+          "unit": "USD",
+          "period": "2025-02-02 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14916000000.0,
+      "gross_profit": 10145000000.0,
+      "operating_income": 6260000000.0,
+      "net_income": 5503000000.0,
+      "rd_expense": 2253000000.0,
+      "sga_expense": 949000000.0,
+      "cogs": 4771000000.0,
+      "interest_expense": -873000000.0,
+      "income_tax": -13000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AVGO",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "semiconductor solutions",
+          "value": 7274000000.0,
+          "unit": "USD",
+          "period": "2024-08-04 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "infrastructure software",
+          "value": 5798000000.0,
+          "unit": "USD",
+          "period": "2024-08-04 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 13072000000.0,
+      "gross_profit": 8356000000.0,
+      "operating_income": 3788000000.0,
+      "net_income": -1875000000.0,
+      "rd_expense": 2353000000.0,
+      "sga_expense": 1100000000.0,
+      "cogs": 4716000000.0,
+      "interest_expense": -1064000000.0,
+      "income_tax": 4238000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (13072000000) differs from Yahoo (51574000000) by 74.7%"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "semiconductor solutions",
+          "value": 7202000000.0,
+          "unit": "USD",
+          "period": "2024-05-05 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "infrastructure software",
+          "value": 5285000000.0,
+          "unit": "USD",
+          "period": "2024-05-05 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12487000000.0,
+      "gross_profit": 7776000000.0,
+      "operating_income": 2965000000.0,
+      "net_income": 2121000000.0,
+      "rd_expense": 2415000000.0,
+      "sga_expense": 1277000000.0,
+      "cogs": 4711000000.0,
+      "interest_expense": -1047000000.0,
+      "income_tax": -116000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (12487000000) differs from Yahoo (51574000000) by 75.8%"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "semiconductor solutions",
+          "value": 7390000000.0,
+          "unit": "USD",
+          "period": "2024-02-04 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "infrastructure software",
+          "value": 4571000000.0,
+          "unit": "USD",
+          "period": "2024-02-04 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11961000000.0,
+      "gross_profit": 7375000000.0,
+      "operating_income": 2083000000.0,
+      "net_income": 1325000000.0,
+      "rd_expense": 2308000000.0,
+      "sga_expense": 1572000000.0,
+      "cogs": 4586000000.0,
+      "interest_expense": -926000000.0,
+      "income_tax": 68000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (11961000000) differs from Yahoo (51574000000) by 76.8%"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "semiconductor solutions",
+          "value": 6941000000.0,
+          "unit": "USD",
+          "period": "2023-07-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "infrastructure software",
+          "value": 1935000000.0,
+          "unit": "USD",
+          "period": "2023-07-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8876000000.0,
+      "gross_profit": 6164000000.0,
+      "operating_income": 3856000000.0,
+      "net_income": 3303000000.0,
+      "rd_expense": 1358000000.0,
+      "sga_expense": 388000000.0,
+      "cogs": 2712000000.0,
+      "interest_expense": -406000000.0,
+      "income_tax": 271000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8876000000) differs from Yahoo (35819000000) by 75.2%"
+      ]
+    },
+    {
+      "ticker": "AVGO",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "semiconductor solutions",
+          "value": 6808000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "infrastructure software",
+          "value": 1925000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8733000000.0,
+      "gross_profit": 6115000000.0,
+      "operating_income": 4008000000.0,
+      "net_income": 3481000000.0,
+      "rd_expense": 1312000000.0,
+      "sga_expense": 438000000.0,
+      "cogs": 2618000000.0,
+      "interest_expense": -405000000.0,
+      "income_tax": 235000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8733000000) differs from Yahoo (35819000000) by 75.6%"
+      ]
+    }
+  ],
+  "ttm_revenue": 65183000000.0,
+  "ttm_operating_income": 26539000000.0,
+  "ttm_net_income": 21957000000.0,
+  "segment_trend": {
+    "semiconductor solutions": [
+      {
+        "period": "2023Q2",
+        "value": 6808000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 6941000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 7390000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 7202000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 7274000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 8212000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 8408000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 9166000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 12515000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 28182000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 30096000000.0,
+        "is_annual": true
+      }
+    ],
+    "infrastructure software": [
+      {
+        "period": "2023Q2",
+        "value": 1925000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1935000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 4571000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 5285000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 5798000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 6704000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 6596000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 6786000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 6796000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 7637000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 21478000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 42457813257.6037,
+        "is_annual": true
+      }
+    ],
+    "Semiconductor Solutions and Infrastructure Software": [
+      {
+        "period": "FY2025",
+        "value": 21429186742.3963,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

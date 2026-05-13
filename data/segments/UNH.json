@@ -1,0 +1,891 @@
+{
+  "ticker": "UNH",
+  "name": "UnitedHealth Group Inc.",
+  "latest_annual": {
+    "ticker": "UNH",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Optum Health",
+        "value": 101957000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Affiliated Customers - Optum Insight",
+        "value": 173436000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Unaffiliated Customers - Optum Rx",
+        "value": 57679000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Unaffiliated Customers - Products - Optum Health",
+        "value": 90067000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Optum Insight",
+        "value": 19417000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Unaffiliated Customers - Services - Optum Insight",
+        "value": 34249000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Unaffiliated Customers - Services - UnitedHealthcare",
+        "value": 10340000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 447567000000.0,
+    "gross_profit": null,
+    "operating_income": 18964000000.0,
+    "net_income": 12807000000.0,
+    "rd_expense": null,
+    "sga_expense": 59592000000.0,
+    "cogs": 50655000000.0,
+    "interest_expense": -4002000000.0,
+    "income_tax": -1890000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "UNH",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Optum Health",
+          "value": 101957000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Affiliated Customers - Optum Insight",
+          "value": 173436000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Optum Rx",
+          "value": 57679000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Products - Optum Health",
+          "value": 90067000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum Insight",
+          "value": 19417000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - Optum Insight",
+          "value": 34249000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - UnitedHealthcare",
+          "value": 10340000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 447567000000.0,
+      "gross_profit": null,
+      "operating_income": 18964000000.0,
+      "net_income": 12807000000.0,
+      "rd_expense": null,
+      "sga_expense": 59592000000.0,
+      "cogs": 50655000000.0,
+      "interest_expense": -4002000000.0,
+      "income_tax": -1890000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "UNH",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Affiliated Customers - Optum Insight",
+          "value": 155276000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Optum Rx",
+          "value": 53405000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Products - Optum Health",
+          "value": 89288000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum Insight",
+          "value": 18757000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - Optum Insight",
+          "value": 33063000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - UnitedHealthcare",
+          "value": 9791000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 400278000000.0,
+      "gross_profit": null,
+      "operating_income": 32287000000.0,
+      "net_income": 15242000000.0,
+      "rd_expense": null,
+      "sga_expense": 53013000000.0,
+      "cogs": 46694000000.0,
+      "interest_expense": -3906000000.0,
+      "income_tax": -4829000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "UNH",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Optum Health",
+          "value": 95319000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Affiliated Customers - Optum Insight",
+          "value": 140076000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Optum Rx",
+          "value": 44411000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Products - Optum Health",
+          "value": 78512000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum Insight",
+          "value": 18932000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - Optum Insight",
+          "value": 32150000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - UnitedHealthcare",
+          "value": 10057000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 371622000000.0,
+      "gross_profit": null,
+      "operating_income": 32358000000.0,
+      "net_income": 23144000000.0,
+      "rd_expense": null,
+      "sga_expense": 54628000000.0,
+      "cogs": 38770000000.0,
+      "interest_expense": -3246000000.0,
+      "income_tax": -5968000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "UNH",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "UNH",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "UNH",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Optum Health",
+          "value": 25309000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Affiliated Customers - Optum Insight",
+          "value": 40113000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Optum Rx",
+          "value": 13948000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Products - Optum Health",
+          "value": 21952000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum Insight",
+          "value": 4630000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - Optum Insight",
+          "value": 7985000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - UnitedHealthcare",
+          "value": 2576000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 109575000000.0,
+      "gross_profit": null,
+      "operating_income": 9119000000.0,
+      "net_income": 6474000000.0,
+      "rd_expense": null,
+      "sga_expense": 13594000000.0,
+      "cogs": 12390000000.0,
+      "interest_expense": -998000000.0,
+      "income_tax": -1632000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "UNH",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "UNH",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Affiliated Customers - Optum Insight",
+          "value": 39019000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Optum Rx",
+          "value": 12982000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Products - Optum Health",
+          "value": 22262000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum Insight",
+          "value": 4543000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - Optum Insight",
+          "value": 7849000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - UnitedHealthcare",
+          "value": 2388000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 98855000000.0,
+      "gross_profit": null,
+      "operating_income": 7875000000.0,
+      "net_income": 4421000000.0,
+      "rd_expense": null,
+      "sga_expense": 13162000000.0,
+      "cogs": 11340000000.0,
+      "interest_expense": -985000000.0,
+      "income_tax": -1244000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (98855000000) differs from Yahoo (400278000000) by 75.3%"
+      ]
+    },
+    {
+      "ticker": "UNH",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Optum Health",
+          "value": 26731000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Affiliated Customers - Optum Insight",
+          "value": 37629000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Optum Rx",
+          "value": 12496000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Products - Optum Health",
+          "value": 21592000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum Insight",
+          "value": 4502000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - Optum Insight",
+          "value": 8143000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Unaffiliated Customers - Services - UnitedHealthcare",
+          "value": 2529000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 99796000000.0,
+      "gross_profit": null,
+      "operating_income": 7931000000.0,
+      "net_income": -1409000000.0,
+      "rd_expense": null,
+      "sga_expense": 14077000000.0,
+      "cogs": 11056000000.0,
+      "interest_expense": -844000000.0,
+      "income_tax": -1222000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (99796000000) differs from Yahoo (400278000000) by 75.1%"
+      ]
+    },
+    {
+      "ticker": "UNH",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "UNH",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "UNH",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 109575000000.0,
+  "ttm_operating_income": 9119000000.0,
+  "ttm_net_income": 6474000000.0,
+  "segment_trend": {
+    "Optum Health": [
+      {
+        "period": "2024Q1",
+        "value": 26731000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 25309000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 95319000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 101957000000.0,
+        "is_annual": true
+      }
+    ],
+    "Affiliated Customers - Optum Insight": [
+      {
+        "period": "2024Q1",
+        "value": 37629000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 39019000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 40113000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 140076000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 155276000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 173436000000.0,
+        "is_annual": true
+      }
+    ],
+    "Unaffiliated Customers - Optum Rx": [
+      {
+        "period": "2024Q1",
+        "value": 12496000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 12982000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 13948000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 44411000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 53405000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 57679000000.0,
+        "is_annual": true
+      }
+    ],
+    "Unaffiliated Customers - Products - Optum Health": [
+      {
+        "period": "2024Q1",
+        "value": 21592000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 22262000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 21952000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 78512000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 89288000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 90067000000.0,
+        "is_annual": true
+      }
+    ],
+    "Optum Insight": [
+      {
+        "period": "2024Q1",
+        "value": 4502000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4543000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4630000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 18932000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 18757000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 19417000000.0,
+        "is_annual": true
+      }
+    ],
+    "Unaffiliated Customers - Services - Optum Insight": [
+      {
+        "period": "2024Q1",
+        "value": 8143000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 7849000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 7985000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 32150000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 33063000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 34249000000.0,
+        "is_annual": true
+      }
+    ],
+    "Unaffiliated Customers - Services - UnitedHealthcare": [
+      {
+        "period": "2024Q1",
+        "value": 2529000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2388000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2576000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 10057000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 9791000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 10340000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

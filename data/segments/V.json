@@ -1,0 +1,815 @@
+{
+  "ticker": "V",
+  "name": "Visa Inc.",
+  "latest_annual": {
+    "ticker": "V",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "International transaction revenues",
+        "value": 19459459459.45946,
+        "unit": "USD",
+        "period": "2025-09-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Value-Added Services",
+        "value": 14973041656.650297,
+        "unit": "USD",
+        "period": "2025-09-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Other revenues",
+        "value": 5567498883.890244,
+        "unit": "USD",
+        "period": "2025-09-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 40000000000.0,
+    "gross_profit": null,
+    "operating_income": 23994000000.0,
+    "net_income": 20058000000.0,
+    "rd_expense": null,
+    "sga_expense": 1926000000.0,
+    "cogs": null,
+    "interest_expense": null,
+    "income_tax": 4136000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "V",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "International transaction revenues",
+          "value": 19459459459.45946,
+          "unit": "USD",
+          "period": "2025-09-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-Added Services",
+          "value": 14973041656.650297,
+          "unit": "USD",
+          "period": "2025-09-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 5567498883.890244,
+          "unit": "USD",
+          "period": "2025-09-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 40000000000.0,
+      "gross_profit": null,
+      "operating_income": 23994000000.0,
+      "net_income": 20058000000.0,
+      "rd_expense": null,
+      "sga_expense": 1926000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 4136000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "V",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Service revenues",
+          "value": 16114000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International transaction revenues",
+          "value": 12665000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 3197000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 35926000000.0,
+      "gross_profit": null,
+      "operating_income": 23595000000.0,
+      "net_income": 19743000000.0,
+      "rd_expense": null,
+      "sga_expense": 1598000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 4173000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "V",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Service revenues",
+          "value": 14826000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International transaction revenues",
+          "value": 11638000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 2479000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 32653000000.0,
+      "gross_profit": null,
+      "operating_income": 21000000000.0,
+      "net_income": 17273000000.0,
+      "rd_expense": null,
+      "sga_expense": 1330000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 3764000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "V",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "International transaction revenues",
+          "value": 4935587899.826431,
+          "unit": "USD",
+          "period": "2025-12-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-Added Services",
+          "value": 4324721051.326555,
+          "unit": "USD",
+          "period": "2025-12-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 1640691048.847012,
+          "unit": "USD",
+          "period": "2025-12-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10901000000.0,
+      "gross_profit": null,
+      "operating_income": 6737000000.0,
+      "net_income": 5853000000.0,
+      "rd_expense": null,
+      "sga_expense": 515000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 873000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "V",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "International transaction revenues",
+          "value": 4953072778.447929,
+          "unit": "USD",
+          "period": "2025-06-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-Added Services",
+          "value": 3817397131.751776,
+          "unit": "USD",
+          "period": "2025-06-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 1401530089.8002949,
+          "unit": "USD",
+          "period": "2025-06-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10172000000.0,
+      "gross_profit": null,
+      "operating_income": 6177000000.0,
+      "net_income": 5272000000.0,
+      "rd_expense": null,
+      "sga_expense": 482000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1061000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "V",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "International transaction revenues",
+          "value": 4624173110.720562,
+          "unit": "USD",
+          "period": "2025-03-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-Added Services",
+          "value": 3653251318.1019335,
+          "unit": "USD",
+          "period": "2025-03-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 1316575571.1775043,
+          "unit": "USD",
+          "period": "2025-03-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 9594000000.0,
+      "gross_profit": null,
+      "operating_income": 5435000000.0,
+      "net_income": 4577000000.0,
+      "rd_expense": null,
+      "sga_expense": 419000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 861000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "V",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "International transaction revenues",
+          "value": 4846523541.604975,
+          "unit": "USD",
+          "period": "2024-12-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-Added Services",
+          "value": 3379330766.952917,
+          "unit": "USD",
+          "period": "2024-12-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 1284145691.4421084,
+          "unit": "USD",
+          "period": "2024-12-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 9510000000.0,
+      "gross_profit": null,
+      "operating_income": 6234000000.0,
+      "net_income": 5119000000.0,
+      "rd_expense": null,
+      "sga_expense": 481000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1081000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (9510000000) differs from Yahoo (35926000000) by 73.5%"
+      ]
+    },
+    {
+      "ticker": "V",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Service revenues",
+          "value": 3967000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International transaction revenues",
+          "value": 3194000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 780000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8900000000.0,
+      "gross_profit": null,
+      "operating_income": 5938000000.0,
+      "net_income": 4872000000.0,
+      "rd_expense": null,
+      "sga_expense": 382000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1117000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8900000000) differs from Yahoo (35926000000) by 75.2%"
+      ]
+    },
+    {
+      "ticker": "V",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Service revenues",
+          "value": 4033000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International transaction revenues",
+          "value": 2984000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 756000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8775000000.0,
+      "gross_profit": null,
+      "operating_income": 5354000000.0,
+      "net_income": 4663000000.0,
+      "rd_expense": null,
+      "sga_expense": 452000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 850000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8775000000) differs from Yahoo (35926000000) by 75.6%"
+      ]
+    },
+    {
+      "ticker": "V",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "Service revenues",
+          "value": 3915000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International transaction revenues",
+          "value": 3019000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 692000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8634000000.0,
+      "gross_profit": null,
+      "operating_income": 5954000000.0,
+      "net_income": 4890000000.0,
+      "rd_expense": null,
+      "sga_expense": 340000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1152000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8634000000) differs from Yahoo (32653000000) by 73.6%"
+      ]
+    },
+    {
+      "ticker": "V",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Service revenues",
+          "value": 3668000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International transaction revenues",
+          "value": 2920000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 597000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8123000000.0,
+      "gross_profit": null,
+      "operating_income": 5024000000.0,
+      "net_income": 4156000000.0,
+      "rd_expense": null,
+      "sga_expense": 314000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 990000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8123000000) differs from Yahoo (32653000000) by 75.1%"
+      ]
+    },
+    {
+      "ticker": "V",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Service revenues",
+          "value": 3771000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International transaction revenues",
+          "value": 2749000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other revenues",
+          "value": 551000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7985000000.0,
+      "gross_profit": null,
+      "operating_income": 5336000000.0,
+      "net_income": 4257000000.0,
+      "rd_expense": null,
+      "sga_expense": 282000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1021000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (7985000000) differs from Yahoo (32653000000) by 75.5%"
+      ]
+    }
+  ],
+  "ttm_revenue": 40177000000.0,
+  "ttm_operating_income": 24583000000.0,
+  "ttm_net_income": 20821000000.0,
+  "segment_trend": {
+    "Service revenues": [
+      {
+        "period": "2023Q1",
+        "value": 3771000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 3668000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 3915000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 4033000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3967000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 14826000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 16114000000.0,
+        "is_annual": true
+      }
+    ],
+    "International transaction revenues": [
+      {
+        "period": "2023Q1",
+        "value": 2749000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 2920000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 3019000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 2984000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3194000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 4846523541.604975,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4624173110.720562,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4953072778.447929,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 4935587899.826431,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 11638000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 12665000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 19459459459.45946,
+        "is_annual": true
+      }
+    ],
+    "Other revenues": [
+      {
+        "period": "2023Q1",
+        "value": 551000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 597000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 692000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 756000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 780000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 1284145691.4421084,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1316575571.1775043,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1401530089.8002949,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 1640691048.847012,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 2479000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 3197000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 5567498883.890244,
+        "is_annual": true
+      }
+    ],
+    "Value-Added Services": [
+      {
+        "period": "2024Q4",
+        "value": 3379330766.952917,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 3653251318.1019335,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 3817397131.751776,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 4324721051.326555,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 14973041656.650297,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

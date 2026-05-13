@@ -1,0 +1,563 @@
+{
+  "ticker": "DIS",
+  "name": "Walt Disney Company",
+  "latest_annual": {
+    "ticker": "DIS",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [],
+    "total_revenue": null,
+    "gross_profit": null,
+    "operating_income": null,
+    "net_income": null,
+    "rd_expense": null,
+    "sga_expense": null,
+    "cogs": null,
+    "interest_expense": null,
+    "income_tax": null,
+    "currency": "USD",
+    "extraction_method": "edgar",
+    "confidence": 0.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "DIS",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "DIS",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "DIS",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "DIS",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "DIS",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "Entertainment Segment",
+          "value": 11609000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sports Segment",
+          "value": 4909000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Experiences Segment",
+          "value": 10006000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 25981000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 2484000000.0,
+      "rd_expense": null,
+      "sga_expense": -4121000000.0,
+      "cogs": -16669000000.0,
+      "interest_expense": null,
+      "income_tax": -1209000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "DIS",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "DIS",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Entertainment Segment",
+          "value": 10682000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sports Segment",
+          "value": 4534000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Experiences Segment",
+          "value": 8889000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 23621000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 3401000000.0,
+      "rd_expense": null,
+      "sga_expense": -3981000000.0,
+      "cogs": -14810000000.0,
+      "interest_expense": null,
+      "income_tax": 314000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "DIS",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "Entertainment Segment",
+          "value": 10872000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sports Segment",
+          "value": 4850000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Experiences Segment",
+          "value": 9415000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 24690000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 2644000000.0,
+      "rd_expense": null,
+      "sga_expense": -3930000000.0,
+      "cogs": -15406000000.0,
+      "interest_expense": null,
+      "income_tax": -1016000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "DIS",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Entertainment Segment",
+          "value": 10580000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sports Segment",
+          "value": 4558000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Experiences Segment",
+          "value": 8386000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 23155000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 2842000000.0,
+      "rd_expense": null,
+      "sga_expense": -3872000000.0,
+      "cogs": -14709000000.0,
+      "interest_expense": null,
+      "income_tax": -251000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (23155000000) differs from Yahoo (91361000000) by 74.7%"
+      ]
+    },
+    {
+      "ticker": "DIS",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Entertainment Segment",
+          "value": 9796000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sports Segment",
+          "value": 4312000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Experiences Segment",
+          "value": 8393000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 22083000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 216000000.0,
+      "rd_expense": null,
+      "sga_expense": -3790000000.0,
+      "cogs": -14172000000.0,
+      "interest_expense": null,
+      "income_tax": -441000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (22083000000) differs from Yahoo (91361000000) by 75.8%"
+      ]
+    },
+    {
+      "ticker": "DIS",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "Entertainment Segment",
+          "value": 9981000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sports Segment",
+          "value": 4835000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Experiences Segment",
+          "value": 9132000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 23549000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 2151000000.0,
+      "rd_expense": null,
+      "sga_expense": -3783000000.0,
+      "cogs": -15587000000.0,
+      "interest_expense": null,
+      "income_tax": -720000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (23549000000) differs from Yahoo (88898000000) by 73.5%"
+      ]
+    },
+    {
+      "ticker": "DIS",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "DIS",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 74292000000.0,
+  "ttm_operating_income": null,
+  "ttm_net_income": 8529000000.0,
+  "segment_trend": {
+    "Entertainment Segment": [
+      {
+        "period": "2023Q4",
+        "value": 9981000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 9796000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 10580000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 10872000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 10682000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 11609000000.0,
+        "is_annual": false
+      }
+    ],
+    "Sports Segment": [
+      {
+        "period": "2023Q4",
+        "value": 4835000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 4312000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4558000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 4850000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4534000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 4909000000.0,
+        "is_annual": false
+      }
+    ],
+    "Experiences Segment": [
+      {
+        "period": "2023Q4",
+        "value": 9132000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 8393000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 8386000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 9415000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 8889000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 10006000000.0,
+        "is_annual": false
+      }
+    ]
+  },
+  "annual_count": 4,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

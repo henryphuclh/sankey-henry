@@ -1,0 +1,3500 @@
+{
+  "ticker": "LLY",
+  "name": "Eli Lilly and Company",
+  "latest_annual": {
+    "ticker": "LLY",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Total Revenue",
+        "value": 65179000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 65179000000.0,
+    "gross_profit": null,
+    "operating_income": null,
+    "net_income": 20640000000.0,
+    "rd_expense": null,
+    "sga_expense": 11094000000.0,
+    "cogs": 11052000000.0,
+    "interest_expense": null,
+    "income_tax": 5091000000.0,
+    "currency": "USD",
+    "extraction_method": "edgar+llm",
+    "confidence": 0.77,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "LLY",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Total Revenue",
+          "value": 65179000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 65179000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 20640000000.0,
+      "rd_expense": null,
+      "sga_expense": 11094000000.0,
+      "cogs": 11052000000.0,
+      "interest_expense": null,
+      "income_tax": 5091000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 0.77,
+      "notes": []
+    },
+    {
+      "ticker": "LLY",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Other cardiometabolic health",
+          "value": 11245083301.544233,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue",
+          "value": 6019166429.467094,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Oncology",
+          "value": 5208818560.062728,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mounjaro®",
+          "value": 3630167850.7976313,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Immunology",
+          "value": 2712324855.8600326,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": 2643230857.309989,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trulicity®",
+          "value": 2185921085.9736953,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": 1553003241.2434776,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Olumiant®",
+          "value": 1341797042.8359401,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humalog®",
+          "value": 1152314109.6926155,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other immunology",
+          "value": 1130730994.5268817,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 971940932.9504122,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Basaglar®",
+          "value": 948676016.6029329,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 913218041.6877989,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cyramza®",
+          "value": 744197022.9223776,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Tyvyt®",
+          "value": 737189517.998438,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Emgality®",
+          "value": 435446355.97360206,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jardiance",
+          "value": 420450295.4363715,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humulin®",
+          "value": 383590819.5364496,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other neuroscience",
+          "value": 376303014.4155525,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Zyprexa®",
+          "value": 160191562.56125754,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Erbitux®",
+          "value": 91518014.30665019,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baqsimi",
+          "value": 37420076.29383706,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 45042700000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 10590000000.0,
+      "rd_expense": null,
+      "sga_expense": 8593800000.0,
+      "cogs": 8418300000.0,
+      "interest_expense": null,
+      "income_tax": 2090400000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "LLY",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Net product revenue",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue associated with prior period transfers of intell",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Diabetes and Obesity",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trulicity®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mounjaro®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jardiance",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humalog®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humulin®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Basaglar®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baqsimi",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other diabetes and obesity",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Oncology",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cyramza®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Erbitux®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Tyvyt®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Alimta®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other immunology",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Immunology",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Olumiant®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Zyprexa®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Emgality®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other neuroscience",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Forteo®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cialis®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "COVID-19 antibodies",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trajenta",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 34124100000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 5240400000.0,
+      "rd_expense": null,
+      "sga_expense": 7403100000.0,
+      "cogs": 7082200000.0,
+      "interest_expense": null,
+      "income_tax": 1314200000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "LLY",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Net product revenue",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other cardiometabolic health",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mounjaro®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Zepbound®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trulicity®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jardiance",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Oncology",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other immunology",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Immunology",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17600800000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 5582500000.0,
+      "rd_expense": null,
+      "sga_expense": 2740700000.0,
+      "cogs": 3008300000.0,
+      "interest_expense": null,
+      "income_tax": 1649900000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "LLY",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Net product revenue",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other cardiometabolic health",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mounjaro®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Zepbound®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trulicity®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jardiance",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Oncology",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other immunology",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Immunology",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15557700000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 5660500000.0,
+      "rd_expense": null,
+      "sga_expense": 2753000000.0,
+      "cogs": 2447800000.0,
+      "interest_expense": null,
+      "income_tax": 1115900000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "LLY",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Zepbound®",
+          "value": 2311900000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Oncology",
+          "value": 1947500000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": 1158900000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue",
+          "value": 1127300000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trulicity®",
+          "value": 1095200000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Immunology",
+          "value": 1088000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other cardiometabolic health",
+          "value": 944800000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other immunology",
+          "value": 1114700000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": 761900000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jardiance",
+          "value": 370000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 272100000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 212900000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12728500000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 2759300000.0,
+      "rd_expense": null,
+      "sga_expense": 2468800000.0,
+      "cogs": 2224200000.0,
+      "interest_expense": null,
+      "income_tax": 696800000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "LLY",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Verzenio®",
+          "value": 1369300000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trulicity®",
+          "value": 1301400000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Zepbound®",
+          "value": 1257800000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Immunology",
+          "value": 1185700000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": 879600000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue",
+          "value": 867500000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jardiance",
+          "value": 686400000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humalog®",
+          "value": 534600000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 351800000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other immunology",
+          "value": 379600000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 262800000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Olumiant®",
+          "value": 250800000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cyramza®",
+          "value": 236000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humulin®",
+          "value": 207100000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Emgality®",
+          "value": 202900000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Basaglar®",
+          "value": 161600000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Erbitux®",
+          "value": 152000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Tyvyt®",
+          "value": 150200000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other cardiometabolic health",
+          "value": 132000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Forteo®",
+          "value": 118100000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other neuroscience",
+          "value": 117200000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trajenta",
+          "value": 91700000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cialis®",
+          "value": 91500000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Zyprexa®",
+          "value": 31700000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baqsimi",
+          "value": 13400000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11439100000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 970300000.0,
+      "rd_expense": null,
+      "sga_expense": 2099800000.0,
+      "cogs": 2170800000.0,
+      "interest_expense": null,
+      "income_tax": 618100000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (11439100000) differs from Yahoo (45043000000) by 74.6%"
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Oncology",
+          "value": 2158700000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": 1331900000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trulicity®",
+          "value": 1245600000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Zepbound®",
+          "value": 1243200000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Immunology",
+          "value": 1082400000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue",
+          "value": 947900000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": 824700000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jardiance",
+          "value": 769600000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humalog®",
+          "value": 631600000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 339500000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other immunology",
+          "value": 329100000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cyramza®",
+          "value": 248900000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Olumiant®",
+          "value": 227700000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humulin®",
+          "value": 223600000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 207600000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Emgality®",
+          "value": 192000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Basaglar®",
+          "value": 180800000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Erbitux®",
+          "value": 155800000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other neuroscience",
+          "value": 147500000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Tyvyt®",
+          "value": 123000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other cardiometabolic health",
+          "value": 117000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cialis®",
+          "value": 87700000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trajenta",
+          "value": 76600000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Forteo®",
+          "value": 69900000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baqsimi",
+          "value": 12400000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11302800000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 2967000000.0,
+      "rd_expense": null,
+      "sga_expense": 2117300000.0,
+      "cogs": 2170200000.0,
+      "interest_expense": null,
+      "income_tax": 550200000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (11302800000) differs from Yahoo (45043000000) by 74.9%"
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Trulicity®",
+          "value": 1456300000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": 1050300000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue",
+          "value": 971500000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Immunology",
+          "value": 834000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jardiance",
+          "value": 686500000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": 604100000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humalog®",
+          "value": 538700000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Zepbound®",
+          "value": 517400000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 389100000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other immunology",
+          "value": 281000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 241900000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cyramza®",
+          "value": 229900000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Emgality®",
+          "value": 225700000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Olumiant®",
+          "value": 217400000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humulin®",
+          "value": 206200000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other neuroscience",
+          "value": 163400000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Basaglar®",
+          "value": 157600000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Erbitux®",
+          "value": 144600000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cialis®",
+          "value": 139300000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other diabetes and obesity",
+          "value": 123800000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Tyvyt®",
+          "value": 116700000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trajenta",
+          "value": 88900000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Forteo®",
+          "value": 61300000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8768000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 2242900000.0,
+      "rd_expense": null,
+      "sga_expense": 1952200000.0,
+      "cogs": 1673500000.0,
+      "interest_expense": null,
+      "income_tax": 293200000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (8768000000) differs from Yahoo (45043000000) by 80.5%"
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Trulicity®",
+          "value": 1673600000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Zyprexa®",
+          "value": 1481400000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mounjaro®",
+          "value": 1409300000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": 1040200000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Immunology",
+          "value": 986900000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": 744200000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jardiance",
+          "value": 700800000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humalog®",
+          "value": 395400000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 276100000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other immunology",
+          "value": 286800000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Olumiant®",
+          "value": 231400000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cyramza®",
+          "value": 224100000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humulin®",
+          "value": 206700000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Basaglar®",
+          "value": 179600000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Emgality®",
+          "value": 168500000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Erbitux®",
+          "value": 153900000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Forteo®",
+          "value": 146400000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other diabetes",
+          "value": 141900000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other neuroscience",
+          "value": 118200000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trajenta",
+          "value": 95200000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cialis®",
+          "value": 86800000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Alimta®",
+          "value": 53500000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue associated with prior period transfers of intell",
+          "value": 31300000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baqsimi",
+          "value": 13100000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 9498600000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": -57400000.0,
+      "rd_expense": null,
+      "sga_expense": 1803900000.0,
+      "cogs": 1860100000.0,
+      "interest_expense": null,
+      "income_tax": 484600000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (9498600000) differs from Yahoo (34124000000) by 72.2%"
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Collaboration and other revenue",
+          "value": 1332300000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mounjaro®",
+          "value": 979700000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Immunology",
+          "value": 928500000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": 926800000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": 703900000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jardiance",
+          "value": 668300000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Baqsimi",
+          "value": 613900000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humalog®",
+          "value": 440400000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 387200000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 314600000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other immunology",
+          "value": 266200000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cyramza®",
+          "value": 260300000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Olumiant®",
+          "value": 218900000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other neuroscience",
+          "value": 217900000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humulin®",
+          "value": 205300000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Emgality®",
+          "value": 169300000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Erbitux®",
+          "value": 162500000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Basaglar®",
+          "value": 154200000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Forteo®",
+          "value": 148000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other diabetes",
+          "value": 136600000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cialis®",
+          "value": 115600000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trajenta",
+          "value": 103600000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Alimta®",
+          "value": 60900000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue associated with prior period transfers of intell",
+          "value": 30300000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8312100000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 1763200000.0,
+      "rd_expense": 2356500000.0,
+      "sga_expense": 1925400000.0,
+      "cogs": 1807400000.0,
+      "interest_expense": null,
+      "income_tax": 325700000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8312100000) differs from Yahoo (34124000000) by 75.6%"
+      ]
+    },
+    {
+      "ticker": "LLY",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Immunology",
+          "value": 777800000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": 750900000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue",
+          "value": 721800000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jardiance",
+          "value": 577500000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mounjaro®",
+          "value": 568500000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": 527000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humalog®",
+          "value": 460900000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 360500000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 275300000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Humulin®",
+          "value": 252000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cyramza®",
+          "value": 236800000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Olumiant®",
+          "value": 228900000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Basaglar®",
+          "value": 209300000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other neuroscience",
+          "value": 206200000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other immunology",
+          "value": 202200000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Emgality®",
+          "value": 154300000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other diabetes",
+          "value": 145100000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Erbitux®",
+          "value": 129900000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Forteo®",
+          "value": 122300000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cialis®",
+          "value": 100300000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trajenta",
+          "value": 85800000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Alimta®",
+          "value": 58200000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration and other revenue associated with prior period transfers of intell",
+          "value": 25100000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6960000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 1344900000.0,
+      "rd_expense": 1985100000.0,
+      "sga_expense": 1749200000.0,
+      "cogs": 1626700000.0,
+      "interest_expense": null,
+      "income_tax": 184800000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6960000000) differs from Yahoo (34124000000) by 79.6%"
+      ]
+    }
+  ],
+  "ttm_revenue": 57326100000.0,
+  "ttm_operating_income": null,
+  "ttm_net_income": 14972600000.0,
+  "segment_trend": {
+    "Immunology": [
+      {
+        "period": "2023Q1",
+        "value": 777800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 928500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 986900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 834000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1082400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1185700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1088000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2712324855.8600326,
+        "is_annual": true
+      }
+    ],
+    "Verzenio®": [
+      {
+        "period": "2023Q1",
+        "value": 750900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 926800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1040200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 1050300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1331900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1369300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1158900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2643230857.309989,
+        "is_annual": true
+      }
+    ],
+    "Collaboration and other revenue": [
+      {
+        "period": "2023Q1",
+        "value": 721800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 1332300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 971500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 947900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 867500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1127300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 6019166429.467094,
+        "is_annual": true
+      }
+    ],
+    "Jardiance": [
+      {
+        "period": "2023Q1",
+        "value": 577500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 668300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 700800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 686500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 769600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 686400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 370000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 420450295.4363715,
+        "is_annual": true
+      }
+    ],
+    "Mounjaro®": [
+      {
+        "period": "2023Q1",
+        "value": 568500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 979700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1409300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 3630167850.7976313,
+        "is_annual": true
+      }
+    ],
+    "Taltz®": [
+      {
+        "period": "2023Q1",
+        "value": 527000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 703900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 744200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 604100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 824700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 879600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 761900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1553003241.2434776,
+        "is_annual": true
+      }
+    ],
+    "Humalog®": [
+      {
+        "period": "2023Q1",
+        "value": 460900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 440400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 395400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 538700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 631600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 534600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1152314109.6926155,
+        "is_annual": true
+      }
+    ],
+    "Neuroscience": [
+      {
+        "period": "2023Q1",
+        "value": 360500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 387200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 389100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 339500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 351800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 272100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 971940932.9504122,
+        "is_annual": true
+      }
+    ],
+    "Other": [
+      {
+        "period": "2023Q1",
+        "value": 275300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 314600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 276100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 241900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 207600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 262800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 212900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 913218041.6877989,
+        "is_annual": true
+      }
+    ],
+    "Humulin®": [
+      {
+        "period": "2023Q1",
+        "value": 252000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 205300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 206700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 206200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 223600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 207100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 383590819.5364496,
+        "is_annual": true
+      }
+    ],
+    "Cyramza®": [
+      {
+        "period": "2023Q1",
+        "value": 236800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 260300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 224100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 229900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 248900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 236000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 744197022.9223776,
+        "is_annual": true
+      }
+    ],
+    "Olumiant®": [
+      {
+        "period": "2023Q1",
+        "value": 228900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 218900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 231400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 217400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 227700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 250800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1341797042.8359401,
+        "is_annual": true
+      }
+    ],
+    "Basaglar®": [
+      {
+        "period": "2023Q1",
+        "value": 209300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 154200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 179600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 157600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 180800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 161600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 948676016.6029329,
+        "is_annual": true
+      }
+    ],
+    "Other neuroscience": [
+      {
+        "period": "2023Q1",
+        "value": 206200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 217900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 118200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 163400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 147500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 117200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 376303014.4155525,
+        "is_annual": true
+      }
+    ],
+    "Other immunology": [
+      {
+        "period": "2023Q1",
+        "value": 202200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 266200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 286800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 281000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 329100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 379600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1114700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1130730994.5268817,
+        "is_annual": true
+      }
+    ],
+    "Emgality®": [
+      {
+        "period": "2023Q1",
+        "value": 154300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 169300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 168500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 225700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 192000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 202900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 435446355.97360206,
+        "is_annual": true
+      }
+    ],
+    "Other diabetes": [
+      {
+        "period": "2023Q1",
+        "value": 145100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 136600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 141900000.0,
+        "is_annual": false
+      }
+    ],
+    "Erbitux®": [
+      {
+        "period": "2023Q1",
+        "value": 129900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 162500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 153900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 144600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 155800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 152000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 91518014.30665019,
+        "is_annual": true
+      }
+    ],
+    "Forteo®": [
+      {
+        "period": "2023Q1",
+        "value": 122300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 148000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 146400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 61300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 69900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 118100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Cialis®": [
+      {
+        "period": "2023Q1",
+        "value": 100300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 115600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 86800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 139300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 87700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 91500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Trajenta": [
+      {
+        "period": "2023Q1",
+        "value": 85800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 103600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 95200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 88900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 76600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 91700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Alimta®": [
+      {
+        "period": "2023Q1",
+        "value": 58200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 60900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 53500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Collaboration and other revenue associated with prior period transfers of intell": [
+      {
+        "period": "2023Q1",
+        "value": 25100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 30300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 31300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Baqsimi": [
+      {
+        "period": "2023Q2",
+        "value": 613900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 13100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 12400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 13400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 37420076.29383706,
+        "is_annual": true
+      }
+    ],
+    "Trulicity®": [
+      {
+        "period": "2023Q3",
+        "value": 1673600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 1456300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1245600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1301400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1095200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2185921085.9736953,
+        "is_annual": true
+      }
+    ],
+    "Zyprexa®": [
+      {
+        "period": "2023Q3",
+        "value": 1481400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 31700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 160191562.56125754,
+        "is_annual": true
+      }
+    ],
+    "Zepbound®": [
+      {
+        "period": "2024Q1",
+        "value": 517400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1243200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1257800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2311900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      }
+    ],
+    "Other diabetes and obesity": [
+      {
+        "period": "2024Q1",
+        "value": 123800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Tyvyt®": [
+      {
+        "period": "2024Q1",
+        "value": 116700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 123000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 150200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 737189517.998438,
+        "is_annual": true
+      }
+    ],
+    "Oncology": [
+      {
+        "period": "2024Q2",
+        "value": 2158700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1947500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 5208818560.062728,
+        "is_annual": true
+      }
+    ],
+    "Other cardiometabolic health": [
+      {
+        "period": "2024Q2",
+        "value": 117000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 132000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 944800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 11245083301.544233,
+        "is_annual": true
+      }
+    ],
+    "Net product revenue": [
+      {
+        "period": "2025Q2",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": NaN,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Diabetes and Obesity": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "COVID-19 antibodies": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Total Revenue": [
+      {
+        "period": "FY2025",
+        "value": 65179000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

@@ -1,0 +1,289 @@
+{
+  "ticker": "NOVO-B.CO",
+  "name": "Novo Nordisk A/S",
+  "latest_annual": {
+    "ticker": "NOVO-B.CO",
+    "period": "FY2026",
+    "is_annual": true,
+    "fiscal_year": 2026,
+    "fiscal_quarter": null,
+    "segments": [],
+    "total_revenue": 48678394789.57653,
+    "gross_profit": 39419129805.98212,
+    "operating_income": 20106471546.500923,
+    "net_income": 16133625048.13075,
+    "rd_expense": 8196279691.115022,
+    "sga_expense": 11069127777.472137,
+    "cogs": 9259264983.594418,
+    "interest_expense": 662613590.9706354,
+    "income_tax": 4426769096.2255,
+    "currency": "USD",
+    "extraction_method": "yahoo+llm",
+    "confidence": 0.55,
+    "notes": [
+      "Source: Yahoo Finance (no SEC filing available)",
+      "⚠ Limited Segment Detail — aggregate data only"
+    ]
+  },
+  "annual_periods": [
+    {
+      "ticker": "NOVO-B.CO",
+      "period": "FY2026",
+      "is_annual": true,
+      "fiscal_year": 2026,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 48678394789.57653,
+      "gross_profit": 39419129805.98212,
+      "operating_income": 20106471546.500923,
+      "net_income": 16133625048.13075,
+      "rd_expense": 8196279691.115022,
+      "sga_expense": 11069127777.472137,
+      "cogs": 9259264983.594418,
+      "interest_expense": 662613590.9706354,
+      "income_tax": 4426769096.2255,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "NOVO-B.CO",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 48678394789.57653,
+      "gross_profit": 39419129805.98212,
+      "operating_income": 20106471546.500923,
+      "net_income": 16133625048.13075,
+      "rd_expense": 8196279691.115022,
+      "sga_expense": 11069127777.472137,
+      "cogs": 9259264983.594418,
+      "interest_expense": 662613590.9706354,
+      "income_tax": 4426769096.2255,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "NOVO-B.CO",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 48678394789.57653,
+      "gross_profit": 39419129805.98212,
+      "operating_income": 20106471546.500923,
+      "net_income": 16133625048.13075,
+      "rd_expense": 8196279691.115022,
+      "sga_expense": 11069127777.472137,
+      "cogs": 9259264983.594418,
+      "interest_expense": 662613590.9706354,
+      "income_tax": 4426769096.2255,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "NOVO-B.CO",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Obesity and Diabetes Care",
+          "value": 2449000000.0,
+          "unit": "DKK",
+          "period": "2025Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 12465388648.39077,
+      "gross_profit": 10079538713.514805,
+      "operating_income": 4998503666.043282,
+      "net_income": 4235403393.1046724,
+      "rd_expense": 2307098616.719246,
+      "sga_expense": 2746530972.033739,
+      "cogs": 2385849934.875965,
+      "interest_expense": -693956615.5970097,
+      "income_tax": 1148824229.2702198,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "NOVO-B.CO",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Obesity and Diabetes Care",
+          "value": 2449000000.0,
+          "unit": "DKK",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 12465388648.39077,
+      "gross_profit": 10079538713.514805,
+      "operating_income": 4998503666.043282,
+      "net_income": 4235403393.1046724,
+      "rd_expense": 2307098616.719246,
+      "sga_expense": 2746530972.033739,
+      "cogs": 2385849934.875965,
+      "interest_expense": -693956615.5970097,
+      "income_tax": 1148824229.2702198,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "NOVO-B.CO",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 12465388648.39077,
+      "gross_profit": 10079538713.514805,
+      "operating_income": 4998503666.043282,
+      "net_income": 4235403393.1046724,
+      "rd_expense": 2307098616.719246,
+      "sga_expense": 2746530972.033739,
+      "cogs": 2385849934.875965,
+      "interest_expense": -693956615.5970097,
+      "income_tax": 1148824229.2702198,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "NOVO-B.CO",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 12465388648.39077,
+      "gross_profit": 10079538713.514805,
+      "operating_income": 4998503666.043282,
+      "net_income": 4235403393.1046724,
+      "rd_expense": 2307098616.719246,
+      "sga_expense": 2746530972.033739,
+      "cogs": 2385849934.875965,
+      "interest_expense": -693956615.5970097,
+      "income_tax": 1148824229.2702198,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "NOVO-B.CO",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 12465388648.39077,
+      "gross_profit": 10079538713.514805,
+      "operating_income": 4998503666.043282,
+      "net_income": 4235403393.1046724,
+      "rd_expense": 2307098616.719246,
+      "sga_expense": 2746530972.033739,
+      "cogs": 2385849934.875965,
+      "interest_expense": -693956615.5970097,
+      "income_tax": 1148824229.2702198,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "NOVO-B.CO",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 12465388648.39077,
+      "gross_profit": 10079538713.514805,
+      "operating_income": 4998503666.043282,
+      "net_income": 4235403393.1046724,
+      "rd_expense": 2307098616.719246,
+      "sga_expense": 2746530972.033739,
+      "cogs": 2385849934.875965,
+      "interest_expense": -693956615.5970097,
+      "income_tax": 1148824229.2702198,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    }
+  ],
+  "ttm_revenue": 49861554593.56308,
+  "ttm_operating_income": 19994014664.173126,
+  "ttm_net_income": 16941613572.41869,
+  "segment_trend": {
+    "Obesity and Diabetes Care": [
+      {
+        "period": "2025Q3",
+        "value": 2449000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 2449000000.0,
+        "is_annual": false
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 6,
+  "has_partial_data": true,
+  "data_notes": [
+    "Partial data: 3/3 annual, 6/12 quarterly"
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "ticker": "NESN.SW",
+  "name": "Nestlé S.A.",
+  "latest_annual": {
+    "ticker": "NESN.SW",
+    "period": "FY2026",
+    "is_annual": true,
+    "fiscal_year": 2026,
+    "fiscal_quarter": null,
+    "segments": [],
+    "total_revenue": 115074902735.35251,
+    "gross_profit": 52734608873.2481,
+    "operating_income": 17899117930.054665,
+    "net_income": 11564461216.09211,
+    "rd_expense": 2065036636.9485855,
+    "sga_expense": 32248113978.98197,
+    "cogs": 62340293862.104416,
+    "interest_expense": 2333888275.9809494,
+    "income_tax": 3379849176.4068604,
+    "currency": "USD",
+    "extraction_method": "yahoo+llm",
+    "confidence": 0.55,
+    "notes": [
+      "Source: Yahoo Finance (no SEC filing available)",
+      "⚠ Limited Segment Detail — aggregate data only"
+    ]
+  },
+  "annual_periods": [
+    {
+      "ticker": "NESN.SW",
+      "period": "FY2026",
+      "is_annual": true,
+      "fiscal_year": 2026,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 115074902735.35251,
+      "gross_profit": 52734608873.2481,
+      "operating_income": 17899117930.054665,
+      "net_income": 11564461216.09211,
+      "rd_expense": 2065036636.9485855,
+      "sga_expense": 32248113978.98197,
+      "cogs": 62340293862.104416,
+      "interest_expense": 2333888275.9809494,
+      "income_tax": 3379849176.4068604,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "NESN.SW",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 115074902735.35251,
+      "gross_profit": 52734608873.2481,
+      "operating_income": 17899117930.054665,
+      "net_income": 11564461216.09211,
+      "rd_expense": 2065036636.9485855,
+      "sga_expense": 32248113978.98197,
+      "cogs": 62340293862.104416,
+      "interest_expense": 2333888275.9809494,
+      "income_tax": 3379849176.4068604,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "NESN.SW",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 115074902735.35251,
+      "gross_profit": 52734608873.2481,
+      "operating_income": 17899117930.054665,
+      "net_income": 11564461216.09211,
+      "rd_expense": 2065036636.9485855,
+      "sga_expense": 32248113978.98197,
+      "cogs": 62340293862.104416,
+      "interest_expense": 2333888275.9809494,
+      "income_tax": 3379849176.4068604,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    }
+  ],
+  "quarterly_periods": [],
+  "ttm_revenue": 115074902735.35251,
+  "ttm_operating_income": 17899117930.054665,
+  "ttm_net_income": 11564461216.09211,
+  "segment_trend": {},
+  "annual_count": 3,
+  "quarterly_count": 0,
+  "has_partial_data": true,
+  "data_notes": [
+    "Partial data: 3/3 annual, 0/12 quarterly"
+  ]
+}

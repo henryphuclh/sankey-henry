@@ -1,0 +1,863 @@
+{
+  "ticker": "PM",
+  "name": "Philip Morris International",
+  "latest_annual": {
+    "ticker": "PM",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Europe",
+        "value": 17111000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "SSEA, CIS & MEA",
+        "value": 12051000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "EA, AU & PMI GTR",
+        "value": 6632000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Americas",
+        "value": 4854000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 40648000000.0,
+    "gross_profit": 27282000000.0,
+    "operating_income": 14892000000.0,
+    "net_income": 11848000000.0,
+    "rd_expense": null,
+    "sga_expense": null,
+    "cogs": 13366000000.0,
+    "interest_expense": null,
+    "income_tax": 2737000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "PM",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Europe",
+          "value": 17111000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "SSEA, CIS & MEA",
+          "value": 12051000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EA, AU & PMI GTR",
+          "value": 6632000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Americas",
+          "value": 4854000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 40648000000.0,
+      "gross_profit": 27282000000.0,
+      "operating_income": 14892000000.0,
+      "net_income": 11848000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 13366000000.0,
+      "interest_expense": null,
+      "income_tax": 2737000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PM",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Europe",
+          "value": 15357000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "SSEA, CIS & MEA",
+          "value": 11261000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EA, AU & PMI DF",
+          "value": 6393000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Americas",
+          "value": 4534000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wellness and Healthcare",
+          "value": 333000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 37878000000.0,
+      "gross_profit": 24549000000.0,
+      "operating_income": 13402000000.0,
+      "net_income": 7503000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 13329000000.0,
+      "interest_expense": null,
+      "income_tax": 3017000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PM",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Combustible Tobacco Products - SSEA, CIS & MEA",
+          "value": 7108624140.846903,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Combustible Tobacco Products - Europe",
+          "value": 6129386570.109061,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EA, AU & PMI DF",
+          "value": 4729168361.483923,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Smoke-Free Products - Europe",
+          "value": 4241074868.28126,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Smoke-Free Products - EA, AU & PMI DF",
+          "value": 2688327443.03029,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Combustible Tobacco Products - EA, AU & PMI DF",
+          "value": 2040840918.4536328,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Swedish Match",
+          "value": 1903564623.490384,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Smoke-Free Products - Swedish Match",
+          "value": 1574864161.661716,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Americas",
+          "value": 1482583985.6030877,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Combustible Tobacco Products - Americas",
+          "value": 1425385529.3684006,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Smoke-Free Products - SSEA, CIS & MEA",
+          "value": 997541076.7329416,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Combustible Tobacco Products - Swedish Match",
+          "value": 328700461.82866806,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wellness and Healthcare",
+          "value": 233369701.43752304,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Smoke-Free Products - Wellness and Healthcare",
+          "value": 233369701.43752304,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Smoke-Free Products - Americas",
+          "value": 57198456.23468702,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 35174000000.0,
+      "gross_profit": 22281000000.0,
+      "operating_income": 11556000000.0,
+      "net_income": 8268000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 12893000000.0,
+      "interest_expense": null,
+      "income_tax": 2339000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "PM",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PM",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PM",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Europe",
+          "value": 3560000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "SSEA, CIS & MEA",
+          "value": 2743000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EA, AU & PMI GTR",
+          "value": 1731000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Americas",
+          "value": 1267000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 9301000000.0,
+      "gross_profit": 6261000000.0,
+      "operating_income": 3544000000.0,
+      "net_income": 2837000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 3040000000.0,
+      "interest_expense": null,
+      "income_tax": 659000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PM",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PM",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Europe",
+          "value": 3815000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "SSEA, CIS & MEA",
+          "value": 2771000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EA, AU & PMI DF",
+          "value": 1673000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Americas",
+          "value": 1129000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wellness and Healthcare",
+          "value": 80000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 9468000000.0,
+      "gross_profit": 6123000000.0,
+      "operating_income": 3444000000.0,
+      "net_income": 2528000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 3345000000.0,
+      "interest_expense": null,
+      "income_tax": 734000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (9468000000) differs from Yahoo (37878000000) by 75.0%"
+      ]
+    },
+    {
+      "ticker": "PM",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Europe",
+          "value": 3365000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "SSEA, CIS & MEA",
+          "value": 2658000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EA, AU & PMI DF",
+          "value": 1684000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Americas",
+          "value": 996000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wellness and Healthcare",
+          "value": 90000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8793000000.0,
+      "gross_profit": 5598000000.0,
+      "operating_income": 3045000000.0,
+      "net_income": 2246000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 3195000000.0,
+      "interest_expense": null,
+      "income_tax": 676000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8793000000) differs from Yahoo (37878000000) by 76.8%"
+      ]
+    },
+    {
+      "ticker": "PM",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PM",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PM",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 9301000000.0,
+  "ttm_operating_income": 3544000000.0,
+  "ttm_net_income": 2837000000.0,
+  "segment_trend": {
+    "Europe": [
+      {
+        "period": "2024Q1",
+        "value": 3365000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3815000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 3560000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 15357000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 17111000000.0,
+        "is_annual": true
+      }
+    ],
+    "SSEA, CIS & MEA": [
+      {
+        "period": "2024Q1",
+        "value": 2658000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2771000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2743000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 11261000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 12051000000.0,
+        "is_annual": true
+      }
+    ],
+    "EA, AU & PMI DF": [
+      {
+        "period": "2024Q1",
+        "value": 1684000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1673000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 4729168361.483923,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 6393000000.0,
+        "is_annual": true
+      }
+    ],
+    "Americas": [
+      {
+        "period": "2024Q1",
+        "value": 996000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1129000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1267000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1482583985.6030877,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 4534000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4854000000.0,
+        "is_annual": true
+      }
+    ],
+    "Wellness and Healthcare": [
+      {
+        "period": "2024Q1",
+        "value": 90000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 80000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 233369701.43752304,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 333000000.0,
+        "is_annual": true
+      }
+    ],
+    "EA, AU & PMI GTR": [
+      {
+        "period": "2025Q1",
+        "value": 1731000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 6632000000.0,
+        "is_annual": true
+      }
+    ],
+    "Combustible Tobacco Products - SSEA, CIS & MEA": [
+      {
+        "period": "FY2023",
+        "value": 7108624140.846903,
+        "is_annual": true
+      }
+    ],
+    "Combustible Tobacco Products - Europe": [
+      {
+        "period": "FY2023",
+        "value": 6129386570.109061,
+        "is_annual": true
+      }
+    ],
+    "Smoke-Free Products - Europe": [
+      {
+        "period": "FY2023",
+        "value": 4241074868.28126,
+        "is_annual": true
+      }
+    ],
+    "Smoke-Free Products - EA, AU & PMI DF": [
+      {
+        "period": "FY2023",
+        "value": 2688327443.03029,
+        "is_annual": true
+      }
+    ],
+    "Combustible Tobacco Products - EA, AU & PMI DF": [
+      {
+        "period": "FY2023",
+        "value": 2040840918.4536328,
+        "is_annual": true
+      }
+    ],
+    "Swedish Match": [
+      {
+        "period": "FY2023",
+        "value": 1903564623.490384,
+        "is_annual": true
+      }
+    ],
+    "Smoke-Free Products - Swedish Match": [
+      {
+        "period": "FY2023",
+        "value": 1574864161.661716,
+        "is_annual": true
+      }
+    ],
+    "Combustible Tobacco Products - Americas": [
+      {
+        "period": "FY2023",
+        "value": 1425385529.3684006,
+        "is_annual": true
+      }
+    ],
+    "Smoke-Free Products - SSEA, CIS & MEA": [
+      {
+        "period": "FY2023",
+        "value": 997541076.7329416,
+        "is_annual": true
+      }
+    ],
+    "Combustible Tobacco Products - Swedish Match": [
+      {
+        "period": "FY2023",
+        "value": 328700461.82866806,
+        "is_annual": true
+      }
+    ],
+    "Smoke-Free Products - Wellness and Healthcare": [
+      {
+        "period": "FY2023",
+        "value": 233369701.43752304,
+        "is_annual": true
+      }
+    ],
+    "Smoke-Free Products - Americas": [
+      {
+        "period": "FY2023",
+        "value": 57198456.23468702,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

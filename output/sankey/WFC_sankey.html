@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Wells Fargo & Company (WFC) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wells Fargo & Company (WFC) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Wells Fargo & Company <span style="opacity:0.7">(WFC)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls">
+  <label for="period-select">Fiscal Year:</label>
+  <select id="period-select" onchange="switchPeriod(this.value)">
+    <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+  </select>
+  <span id="data-badge" style="margin-left:12px; font-size:12px; color:#666;"></span>
+</div>
+
+<div class="chart-container">
+  <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(198,219,239,0.4)","rgba(214,39,40,0.4)","rgba(44,160,44,0.4)","rgba(230,85,13,0.4)","rgba(253,141,60,0.4)","rgba(253,174,107,0.4)","rgba(253,208,162,0.4)","rgba(132,60,57,0.4)","rgba(253,141,60,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Consumer Banking and Lending (44.6%)","Corporate and Investment Banking (23.0%)","Wealth and Investment Management (19.5%)","Commercial Banking (14.3%)","Other: Corporate","Provision (4.4%)","After Provision (95.6%)","Personnel (43.3%)","Other Non-Interest Expense (5.5%)","Professional Services (5.4%)","Occupancy (3.8%)","Marketing (1.3%)","Other Non-Interest Expenses","Pre-tax Income (30.1%)","Income Tax","Net Income (25.5%)"],"source":[1,2,3,4,5,0,0,7,7,7,7,7,7,7,14,14],"target":[0,0,0,0,0,6,7,8,9,10,11,12,13,14,15,16],"value":[37362000000.0,19232000000.0,16328000000.0,11978000000.0,836990000.0,3658000000.0,80041000000.0,36281000000.0,4573000000.0,4540000000.0,3151000000.0,1094000000.0,5203000000.0,25199000000.0,3841000000.0,21338000000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#c6dbef","#d62728","#2ca02c","#e6550d","#fd8d3c","#fdae6b","#fdd0a2","#843c39","#fd8d3c","#2ca02c","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Net Revenue\u003cbr\u003e$83.7B (100.0%)","Consumer Banking and Lending\u003cbr\u003e$37.4B (44.6%)","Corporate and Investment Banking\u003cbr\u003e$19.2B (23.0%)","Wealth and Investment Management\u003cbr\u003e$16.3B (19.5%)","Commercial Banking\u003cbr\u003e$12.0B (14.3%)","Other\u003cbr\u003e$747M (0.9%)","Provision for Credit Losses\u003cbr\u003e$3.7B (4.4%)","Revenue after Provision\u003cbr\u003e$80.0B (95.6%)","Personnel\u003cbr\u003e$36.3B (43.3%)","Other Non-Interest Expense\u003cbr\u003e$4.6B (5.5%)","Professional Services\u003cbr\u003e$4.5B (5.4%)","Occupancy\u003cbr\u003e$3.2B (3.8%)","Marketing\u003cbr\u003e$1.1B (1.3%)","Other NIE\u003cbr\u003e$5.2B (6.2%)","Pre-tax Income\u003cbr\u003e$25.2B (30.1%)","Income Tax\u003cbr\u003e$3.8B (4.6%)","Net Income\u003cbr\u003e$21.3B (25.5%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":60},"paper_bgcolor":"#fafafa","title":{"font":{"size":16},"text":"Wells Fargo & Company (WFC) — Financial Flow FY2025"},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": true, "displayModeBar": true, "modeBarButtonsToAdd": ["zoom2d", "pan2d", "resetScale2d"]}                    )                };            </script>        </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Net Revenue<br>$83.7B (100.0%)", "Consumer Banking and Lending<br>$37.4B (44.6%)", "Corporate and Investment Banking<br>$19.2B (23.0%)", "Wealth and Investment Management<br>$16.3B (19.5%)", "Commercial Banking<br>$12.0B (14.3%)", "Other<br>$747M (0.9%)", "Provision for Credit Losses<br>$3.7B (4.4%)", "Revenue after Provision<br>$80.0B (95.6%)", "Personnel<br>$36.3B (43.3%)", "Other Non-Interest Expense<br>$4.6B (5.5%)", "Professional Services<br>$4.5B (5.4%)", "Occupancy<br>$3.2B (3.8%)", "Marketing<br>$1.1B (1.3%)", "Other NIE<br>$5.2B (6.2%)", "Pre-tax Income<br>$25.2B (30.1%)", "Income Tax<br>$3.8B (4.6%)", "Net Income<br>$21.3B (25.5%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#d62728", "#2ca02c", "#e6550d", "#fd8d3c", "#fdae6b", "#fdd0a2", "#843c39", "#fd8d3c", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.35, 0.35, 0.62, 0.62, 0.62, 0.62, 0.62, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.85, 0.35, 0.04, 0.184, 0.32799999999999996, 0.4719999999999999, 0.616, 0.9, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 7, 7, 7, 7, 7, 7, 7, 14, 14], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], "link_values": [37362000000.0, 19232000000.0, 16328000000.0, 11978000000.0, 836990000.0, 3658000000.0, 80041000000.0, 36281000000.0, 4573000000.0, 4540000000.0, 3151000000.0, 1094000000.0, 5203000000.0, 25199000000.0, 3841000000.0, 21338000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(214,39,40,0.4)", "rgba(44,160,44,0.4)", "rgba(230,85,13,0.4)", "rgba(253,141,60,0.4)", "rgba(253,174,107,0.4)", "rgba(253,208,162,0.4)", "rgba(132,60,57,0.4)", "rgba(253,141,60,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Consumer Banking and Lending (44.6%)", "Corporate and Investment Banking (23.0%)", "Wealth and Investment Management (19.5%)", "Commercial Banking (14.3%)", "Other: Corporate", "Provision (4.4%)", "After Provision (95.6%)", "Personnel (43.3%)", "Other Non-Interest Expense (5.5%)", "Professional Services (5.4%)", "Occupancy (3.8%)", "Marketing (1.3%)", "Other Non-Interest Expenses", "Pre-tax Income (30.1%)", "Income Tax", "Net Income (25.5%)"], "title": "Wells Fargo & Company (WFC) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Net Revenue<br>$82.3B (100.0%)", "Consumer Banking and Lending<br>$36.2B (44.0%)", "Corporate and Investment Banking<br>$19.3B (23.5%)", "Wealth and Investment Management<br>$15.4B (18.8%)", "Commercial Banking<br>$12.8B (15.5%)", "Provision for Credit Losses<br>$4.3B (5.3%)", "Revenue after Provision<br>$78.0B (94.7%)", "Personnel<br>$35.7B (43.4%)", "Professional Services<br>$4.6B (5.6%)", "Technology & Equipment<br>$4.6B (5.6%)", "Other Non-Interest Expense<br>$4.0B (4.9%)", "Occupancy<br>$3.1B (3.7%)", "Marketing<br>$869M (1.1%)", "Other NIE<br>$1.8B (2.1%)", "Pre-tax Income<br>$23.4B (28.4%)", "Income Tax<br>$3.4B (4.1%)", "Net Income<br>$19.7B (24.0%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#d62728", "#2ca02c", "#e6550d", "#fd8d3c", "#fdae6b", "#fdd0a2", "#843c39", "#ad494a", "#fd8d3c", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.0, 0.35, 0.35, 0.62, 0.62, 0.62, 0.62, 0.62, 0.62, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.125, 0.375, 0.625, 0.875, 0.85, 0.35, 0.04, 0.16, 0.27999999999999997, 0.39999999999999997, 0.52, 0.64, 0.9, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 0, 0, 6, 6, 6, 6, 6, 6, 6, 6, 14, 14], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], "link_values": [36201000000.0, 19344000000.0, 15436000000.0, 12778000000.0, 4334000000.0, 77962000000.0, 35729000000.0, 4607000000.0, 4583000000.0, 4001000000.0, 3052000000.0, 869000000.0, 1757000000.0, 23364000000.0, 3399000000.0, 19722000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(214,39,40,0.4)", "rgba(44,160,44,0.4)", "rgba(230,85,13,0.4)", "rgba(253,141,60,0.4)", "rgba(253,174,107,0.4)", "rgba(253,208,162,0.4)", "rgba(132,60,57,0.4)", "rgba(173,73,74,0.4)", "rgba(253,141,60,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Consumer Banking and Lending (44.0%)", "Corporate and Investment Banking (23.5%)", "Wealth and Investment Management (18.8%)", "Commercial Banking (15.5%)", "Provision (5.3%)", "After Provision (94.7%)", "Personnel (43.4%)", "Professional Services (5.6%)", "Technology & Equipment (5.6%)", "Other Non-Interest Expense (4.9%)", "Occupancy (3.7%)", "Marketing (1.1%)", "Other Non-Interest Expenses", "Pre-tax Income (28.4%)", "Income Tax", "Net Income (24.0%)"], "title": "Wells Fargo & Company (WFC) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Net Revenue<br>$82.6B (100.0%)", "Consumer Banking and Lending<br>$37.9B (45.9%)", "Corporate and Investment Banking<br>$19.2B (23.2%)", "Wealth and Investment Management<br>$14.7B (17.8%)", "Commercial Banking<br>$13.4B (16.3%)", "Provision for Credit Losses<br>$5.4B (6.5%)", "Revenue after Provision<br>$77.2B (93.5%)", "Personnel<br>$35.8B (43.4%)", "Other Non-Interest Expense<br>$5.8B (7.1%)", "Professional Services<br>$5.1B (6.2%)", "Technology & Equipment<br>$3.9B (4.7%)", "Occupancy<br>$2.9B (3.5%)", "Marketing<br>$812M (1.0%)", "Other NIE<br>$1.2B (1.4%)", "Pre-tax Income<br>$21.6B (26.2%)", "Income Tax<br>$2.6B (3.2%)", "Net Income<br>$19.1B (23.2%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#d62728", "#2ca02c", "#e6550d", "#fd8d3c", "#fdae6b", "#fdd0a2", "#843c39", "#ad494a", "#fd8d3c", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.0, 0.35, 0.35, 0.62, 0.62, 0.62, 0.62, 0.62, 0.62, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.125, 0.375, 0.625, 0.875, 0.85, 0.35, 0.04, 0.16, 0.27999999999999997, 0.39999999999999997, 0.52, 0.64, 0.9, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 0, 0, 6, 6, 6, 6, 6, 6, 6, 6, 14, 14], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16], "link_values": [37919000000.0, 19191000000.0, 14691000000.0, 13449000000.0, 5399000000.0, 77198000000.0, 35829000000.0, 5849000000.0, 5085000000.0, 3920000000.0, 2884000000.0, 825970000.0, 1183000000.0, 21636000000.0, 2607000000.0, 19142000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(214,39,40,0.4)", "rgba(44,160,44,0.4)", "rgba(230,85,13,0.4)", "rgba(253,141,60,0.4)", "rgba(253,174,107,0.4)", "rgba(253,208,162,0.4)", "rgba(132,60,57,0.4)", "rgba(173,73,74,0.4)", "rgba(253,141,60,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Consumer Banking and Lending (45.9%)", "Corporate and Investment Banking (23.2%)", "Wealth and Investment Management (17.8%)", "Commercial Banking (16.3%)", "Provision (6.5%)", "After Provision (93.5%)", "Personnel (43.4%)", "Other Non-Interest Expense (7.1%)", "Professional Services (6.2%)", "Technology & Equipment (4.7%)", "Occupancy (3.5%)", "Marketing (1.0%)", "Other Non-Interest Expenses", "Pre-tax Income (26.2%)", "Income Tax", "Net Income (23.2%)"], "title": "Wells Fargo & Company (WFC) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  var layoutUpdate = {
+    "title.text": data.title,
+  };
+
+  Plotly.update("sankey-chart", update, layoutUpdate);
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+</script>
+</body>
+</html>
+
+
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Wells Fargo &amp; Company (WFC)</h1>
+<p><em>Analysis generation error (openai): Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-YOUR_</em>**<em>HERE. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}</em></p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$83.70B</td><td style="text-align:right">$82.30B</td><td style="text-align:right" class="yoy-pos">+1.7%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$80.04B</td><td style="text-align:right">$77.96B</td><td style="text-align:right" class="yoy-pos">+2.7%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">95.6%</td><td style="text-align:right">94.7%</td><td style="text-align:right" class="yoy-pos">+0.9%</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$54.84B</td><td style="text-align:right">$54.60B</td><td style="text-align:right" class="yoy-pos">+0.4%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$25.20B</td><td style="text-align:right">$23.36B</td><td style="text-align:right" class="yoy-pos">+7.9%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">30.1%</td><td style="text-align:right">28.4%</td><td style="text-align:right" class="yoy-pos">+6.0%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$21.34B</td><td style="text-align:right">$19.72B</td><td style="text-align:right" class="yoy-pos">+8.2%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">25.5%</td><td style="text-align:right">24.0%</td><td style="text-align:right" class="yoy-pos">+6.4%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q3</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q2</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2025 Q1</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$21.45B</td><td style="text-align:right">$20.15B</td><td style="text-align:right" class="yoy-pos">+6.4%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$20.31B</td><td style="text-align:right">$19.22B</td><td style="text-align:right" class="yoy-pos">+5.7%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">94.7%</td><td style="text-align:right">95.4%</td><td style="text-align:right" class="yoy-neg">-0.7%</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$14.33B</td><td style="text-align:right">$13.89B</td><td style="text-align:right" class="yoy-pos">+3.2%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$5.98B</td><td style="text-align:right">$5.33B</td><td style="text-align:right" class="yoy-pos">+12.3%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">27.9%</td><td style="text-align:right">26.4%</td><td style="text-align:right" class="yoy-pos">+5.5%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$5.25B</td><td style="text-align:right">$4.89B</td><td style="text-align:right" class="yoy-pos">+7.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">24.5%</td><td style="text-align:right">24.3%</td><td style="text-align:right" class="yoy-pos">+0.8%</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$21.44B</td><td style="text-align:right">$20.37B</td><td style="text-align:right" class="yoy-pos">+5.3%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$20.75B</td><td style="text-align:right">$19.30B</td><td style="text-align:right" class="yoy-pos">+7.5%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">96.8%</td><td style="text-align:right">94.8%</td><td style="text-align:right" class="yoy-pos">+2.2%</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$13.85B</td><td style="text-align:right">$13.07B</td><td style="text-align:right" class="yoy-pos">+6.0%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$6.91B</td><td style="text-align:right">$6.23B</td><td style="text-align:right" class="yoy-pos">+10.8%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">32.2%</td><td style="text-align:right">30.6%</td><td style="text-align:right" class="yoy-pos">+5.3%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$5.59B</td><td style="text-align:right">$5.11B</td><td style="text-align:right" class="yoy-pos">+9.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">26.1%</td><td style="text-align:right">25.1%</td><td style="text-align:right" class="yoy-pos">+3.8%</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$20.82B</td><td style="text-align:right">$20.69B</td><td style="text-align:right" class="yoy-pos">+0.6%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$19.82B</td><td style="text-align:right">$19.45B</td><td style="text-align:right" class="yoy-pos">+1.9%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">95.2%</td><td style="text-align:right">94.0%</td><td style="text-align:right" class="yoy-pos">+1.2%</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$13.38B</td><td style="text-align:right">$13.29B</td><td style="text-align:right" class="yoy-pos">+0.6%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$6.44B</td><td style="text-align:right">$6.16B</td><td style="text-align:right" class="yoy-pos">+4.5%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">30.9%</td><td style="text-align:right">29.8%</td><td style="text-align:right" class="yoy-pos">+3.8%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$5.49B</td><td style="text-align:right">$4.91B</td><td style="text-align:right" class="yoy-pos">+11.9%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">26.4%</td><td style="text-align:right">23.7%</td><td style="text-align:right" class="yoy-pos">+11.2%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$20.15B</td><td style="text-align:right">$20.86B</td><td style="text-align:right" class="yoy-neg">-3.4%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$19.22B</td><td style="text-align:right">$19.93B</td><td style="text-align:right" class="yoy-neg">-3.6%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">95.4%</td><td style="text-align:right">95.5%</td><td style="text-align:right" class="yoy-neg">-0.1%</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$13.89B</td><td style="text-align:right">$14.34B</td><td style="text-align:right" class="yoy-neg">-3.1%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$5.33B</td><td style="text-align:right">$5.59B</td><td style="text-align:right" class="yoy-neg">-4.7%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">26.4%</td><td style="text-align:right">26.8%</td><td style="text-align:right" class="yoy-neg">-1.3%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$4.89B</td><td style="text-align:right">$4.62B</td><td style="text-align:right" class="yoy-pos">+6.0%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">24.3%</td><td style="text-align:right">22.1%</td><td style="text-align:right" class="yoy-pos">+9.7%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section">
+  <h3>Segment Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$83.70B</td><td>$21.34B</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$82.30B</td><td>$19.72B</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$82.60B</td><td>$19.14B</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$21.45B</td><td>$5.25B</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$21.44B</td><td>$5.59B</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$20.82B</td><td>$5.49B</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$20.15B</td><td>$4.89B</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$20.37B</td><td>$5.11B</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$20.69B</td><td>$4.91B</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$20.86B</td><td>$4.62B</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$20.86B</td><td>$5.77B</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$20.53B</td><td>$4.94B</td><td>4</td><td>100%</td><td>100%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $83.70B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Consumer Banking and Lending</td><td style='text-align:right'>$37.36B</td><td style='text-align:right'>44.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:44.6%'></div>  </div></td></tr><tr><td>Corporate and Investment Banking</td><td style='text-align:right'>$19.23B</td><td style='text-align:right'>23.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.0%'></div>  </div></td></tr><tr><td>Wealth and Investment Management</td><td style='text-align:right'>$16.33B</td><td style='text-align:right'>19.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:19.5%'></div>  </div></td></tr><tr><td>Commercial Banking</td><td style='text-align:right'>$11.98B</td><td style='text-align:right'>14.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:14.3%'></div>  </div></td></tr><tr><td>Corporate</td><td style='text-align:right'>$747.0M</td><td style='text-align:right'>0.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $82.30B revenue across 4 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Consumer Banking and Lending</td><td style='text-align:right'>$36.20B</td><td style='text-align:right'>44.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:44.0%'></div>  </div></td></tr><tr><td>Corporate and Investment Banking</td><td style='text-align:right'>$19.34B</td><td style='text-align:right'>23.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.5%'></div>  </div></td></tr><tr><td>Wealth and Investment Management</td><td style='text-align:right'>$15.44B</td><td style='text-align:right'>18.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:18.8%'></div>  </div></td></tr><tr><td>Commercial Banking</td><td style='text-align:right'>$12.78B</td><td style='text-align:right'>15.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:15.5%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $82.60B revenue across 4 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Consumer Banking and Lending</td><td style='text-align:right'>$37.92B</td><td style='text-align:right'>45.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:45.9%'></div>  </div></td></tr><tr><td>Corporate and Investment Banking</td><td style='text-align:right'>$19.19B</td><td style='text-align:right'>23.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.2%'></div>  </div></td></tr><tr><td>Wealth and Investment Management</td><td style='text-align:right'>$14.69B</td><td style='text-align:right'>17.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:17.8%'></div>  </div></td></tr><tr><td>Commercial Banking</td><td style='text-align:right'>$13.45B</td><td style='text-align:right'>16.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:16.3%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Consumer Banking and Lending</td><td style='text-align:right'>$37.36B</td><td style='text-align:right'>$36.20B</td><td style='text-align:right'>$37.92B</td><td style='text-align:right;color:#28a745;font-weight:600'>+3.2%</td></tr><tr><td>Corporate and Investment Banking</td><td style='text-align:right'>$19.23B</td><td style='text-align:right'>$19.34B</td><td style='text-align:right'>$19.19B</td><td style='text-align:right;color:#dc3545;font-weight:600'>-0.6%</td></tr><tr><td>Wealth and Investment Management</td><td style='text-align:right'>$16.33B</td><td style='text-align:right'>$15.44B</td><td style='text-align:right'>$14.69B</td><td style='text-align:right;color:#28a745;font-weight:600'>+5.8%</td></tr><tr><td>Commercial Banking</td><td style='text-align:right'>$11.98B</td><td style='text-align:right'>$12.78B</td><td style='text-align:right'>$13.45B</td><td style='text-align:right;color:#dc3545;font-weight:600'>-6.3%</td></tr><tr><td>Corporate</td><td style='text-align:right'>$747.0M</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 9 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 9 quarterly reports
+</div>
+</body>
+</html>

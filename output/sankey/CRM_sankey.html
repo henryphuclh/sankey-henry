@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Salesforce Inc. (CRM) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salesforce Inc. (CRM) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Salesforce Inc. <span style="opacity:0.7">(CRM)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls">
+  <label for="period-select">Fiscal Year:</label>
+  <select id="period-select" onchange="switchPeriod(this.value)">
+    <option value="FY2026" selected>FY2026</option>
+<option value="FY2025">FY2025</option>
+<option value="FY2024">FY2024</option>
+  </select>
+  <span id="data-badge" style="margin-left:12px; font-size:12px; color:#666;"></span>
+</div>
+
+<div class="chart-container">
+  <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(198,219,239,0.4)","rgba(33,113,181,0.4)","rgba(8,69,148,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,187,120,0.4)","rgba(44,160,44,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Agentforce Service (23.6%)","Agentforce Sales (21.7%)","Agentforce 360 Platform, Slack and Other (21.4%)","Agentforce Integration and Agentforce Analytics (15.0%)","Agentforce Marketing and Agentforce Commerce (13.1%)","Professional services and other (5.1%)","Other: Subscription and support","Gross Profit (77.7%)","COGS (22.3%)","R&D (14.4%)","Other Operating Expenses","Operating Income (20.1%)","Net Income (18.0%)"],"source":[1,2,3,4,5,6,7,0,0,8,8,8,12],"target":[0,0,0,0,0,0,0,8,9,10,11,12,13],"value":[9818000000.0,9028000000.0,8882000000.0,6232000000.0,5428000000.0,2137000000.0,415250000.0,32255000000.0,9270000000.0,5993000000.0,17931000000.0,8331000000.0,7457000000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#c6dbef","#2171b5","#084594","#2ca02c","#d62728","#ff7f0e","#ffbb78","#2ca02c","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$41.5B (100.0%)","Agentforce Service\u003cbr\u003e$9.8B (23.6%)","Agentforce Sales\u003cbr\u003e$9.0B (21.7%)","Agentforce 360 Platform, Slack and Other\u003cbr\u003e$8.9B (21.4%)","Agentforce Integration and Agentforce Analytics\u003cbr\u003e$6.2B (15.0%)","Agentforce Marketing and Agentforce Commerce\u003cbr\u003e$5.4B (13.1%)","Professional services and other\u003cbr\u003e$2.1B (5.1%)","Other\u003cbr\u003e$388M (0.9%)","Gross Profit\u003cbr\u003e$32.3B (77.7%)","Cost of Revenue\u003cbr\u003e$9.3B (22.3%)","R&D\u003cbr\u003e$6.0B (14.4%)","Other OpEx\u003cbr\u003e$17.9B (43.2%)","Operating Income\u003cbr\u003e$8.3B (20.1%)","Net Income\u003cbr\u003e$7.5B (18.0%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":60},"paper_bgcolor":"#fafafa","title":{"font":{"size":16},"text":"Salesforce Inc. (CRM) — Financial Flow FY2026"},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": true, "displayModeBar": true, "modeBarButtonsToAdd": ["zoom2d", "pan2d", "resetScale2d"]}                    )                };            </script>        </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2026": {"node_labels": ["Total Revenue<br>$41.5B (100.0%)", "Agentforce Service<br>$9.8B (23.6%)", "Agentforce Sales<br>$9.0B (21.7%)", "Agentforce 360 Platform, Slack and Other<br>$8.9B (21.4%)", "Agentforce Integration and Agentforce Analytics<br>$6.2B (15.0%)", "Agentforce Marketing and Agentforce Commerce<br>$5.4B (13.1%)", "Professional services and other<br>$2.1B (5.1%)", "Other<br>$388M (0.9%)", "Gross Profit<br>$32.3B (77.7%)", "Cost of Revenue<br>$9.3B (22.3%)", "R&D<br>$6.0B (14.4%)", "Other OpEx<br>$17.9B (43.2%)", "Operating Income<br>$8.3B (20.1%)", "Net Income<br>$7.5B (18.0%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#084594", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 1.0], "node_y": [0.5, 0.07142857142857142, 0.21428571428571427, 0.35714285714285715, 0.5, 0.6428571428571429, 0.7857142857142857, 0.9285714285714286, 0.35, 0.75, 0.2, 0.6, 0.5, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 7, 0, 0, 8, 8, 8, 12], "link_targets": [0, 0, 0, 0, 0, 0, 0, 8, 9, 10, 11, 12, 13], "link_values": [9818000000.0, 9028000000.0, 8882000000.0, 6232000000.0, 5428000000.0, 2137000000.0, 415250000.0, 32255000000.0, 9270000000.0, 5993000000.0, 17931000000.0, 8331000000.0, 7457000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(8,69,148,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Agentforce Service (23.6%)", "Agentforce Sales (21.7%)", "Agentforce 360 Platform, Slack and Other (21.4%)", "Agentforce Integration and Agentforce Analytics (15.0%)", "Agentforce Marketing and Agentforce Commerce (13.1%)", "Professional services and other (5.1%)", "Other: Subscription and support", "Gross Profit (77.7%)", "COGS (22.3%)", "R&D (14.4%)", "Other Operating Expenses", "Operating Income (20.1%)", "Net Income (18.0%)"], "title": "Salesforce Inc. (CRM) — Financial Flow FY2026", "currency": "USD", "has_partial": false, "coverage_note": "FY2026"}, "FY2025": {"node_labels": ["Total Revenue<br>$37.9B (100.0%)", "Service<br>$9.1B (23.9%)", "Sales<br>$8.3B (22.0%)", "Platform and Other<br>$7.2B (19.1%)", "Integration and Analytics<br>$5.8B (15.2%)", "Marketing and Commerce<br>$5.3B (13.9%)", "Professional services and other<br>$2.2B (5.8%)", "Gross Profit<br>$29.3B (77.2%)", "Cost of Revenue<br>$8.6B (22.8%)", "R&D<br>$5.5B (14.5%)", "Other OpEx<br>$16.6B (43.7%)", "Operating Income<br>$7.2B (19.0%)", "Net Income<br>$6.2B (16.4%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 1.0], "node_y": [0.5, 0.08333333333333333, 0.25, 0.4166666666666667, 0.5833333333333334, 0.75, 0.9166666666666666, 0.35, 0.75, 0.2, 0.6, 0.5, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 0, 0, 7, 7, 7, 11], "link_targets": [0, 0, 0, 0, 0, 0, 7, 8, 9, 10, 11, 12], "link_values": [9054000000.0, 8322000000.0, 7247000000.0, 5775000000.0, 5281000000.0, 2216000000.0, 29252000000.0, 8643000000.0, 5493000000.0, 16554000000.0, 7205000000.0, 6197000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Service (23.9%)", "Sales (22.0%)", "Platform and Other (19.1%)", "Integration and Analytics (15.2%)", "Marketing and Commerce (13.9%)", "Professional services and other (5.8%)", "Gross Profit (77.2%)", "COGS (22.8%)", "R&D (14.5%)", "Other Operating Expenses", "Operating Income (19.0%)", "Net Income (16.4%)"], "title": "Salesforce Inc. (CRM) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$34.9B (100.0%)", "Service<br>$8.2B (23.7%)", "Sales<br>$7.6B (21.7%)", "Platform and Other<br>$6.6B (19.0%)", "Integration and Analytics<br>$5.2B (14.9%)", "Marketing and Commerce<br>$4.9B (14.1%)", "Professional services and other<br>$2.3B (6.7%)", "Gross Profit<br>$26.3B (75.5%)", "Cost of Revenue<br>$8.5B (24.5%)", "R&D<br>$4.9B (14.1%)", "Other OpEx<br>$16.4B (47.0%)", "Operating Income<br>$5.0B (14.4%)", "Net Income<br>$4.1B (11.9%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 1.0], "node_y": [0.5, 0.08333333333333333, 0.25, 0.4166666666666667, 0.5833333333333334, 0.75, 0.9166666666666666, 0.35, 0.75, 0.2, 0.6, 0.5, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 0, 0, 7, 7, 7, 11], "link_targets": [0, 0, 0, 0, 0, 0, 7, 8, 9, 10, 11, 12], "link_values": [8245000000.0, 7580000000.0, 6611000000.0, 5189000000.0, 4912000000.0, 2320000000.0, 26316000000.0, 8541000000.0, 4906000000.0, 16399000000.0, 5011000000.0, 4136000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Service (23.7%)", "Sales (21.7%)", "Platform and Other (19.0%)", "Integration and Analytics (14.9%)", "Marketing and Commerce (14.1%)", "Professional services and other (6.7%)", "Gross Profit (75.5%)", "COGS (24.5%)", "R&D (14.1%)", "Other Operating Expenses", "Operating Income (14.4%)", "Net Income (11.9%)"], "title": "Salesforce Inc. (CRM) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  var layoutUpdate = {
+    "title.text": data.title,
+  };
+
+  Plotly.update("sankey-chart", update, layoutUpdate);
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+</script>
+</body>
+</html>
+
+
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Salesforce Inc. (CRM) Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Salesforce Inc. operates primarily through several key business segments, which have shown significant growth over the past three years. The total revenue for FY2026 reached <strong>$41.52 billion</strong>, a notable increase from <strong>$34.86 billion</strong> in FY2024 and <strong>$37.90 billion</strong> in FY2025. </p>
+<p>The primary segments contributing to this revenue include:</p>
+<ul>
+<li><strong>Agentforce Sales</strong>: $9.03 billion</li>
+<li><strong>Agentforce Service</strong>: $9.82 billion</li>
+<li><strong>Agentforce 360 Platform, Slack and Other</strong>: $8.88 billion</li>
+<li><strong>Agentforce Marketing and Agentforce Commerce</strong>: $5.43 billion</li>
+<li><strong>Agentforce Integration and Agentforce Analytics</strong>: $6.23 billion</li>
+<li><strong>Professional Services and Other</strong>: $2.14 billion</li>
+<li><strong>Subscription and Support</strong>: $388 million</li>
+</ul>
+<p>The revenue mix has evolved significantly, with the Agentforce segments (Sales, Service, and Platform) becoming increasingly dominant, reflecting Salesforce's focus on integrated solutions and cloud-based services. For instance, the combined revenue from Agentforce Sales and Service alone accounts for approximately <strong>45%</strong> of total revenue in FY2026, indicating a strong reliance on these core offerings.</p>
+<p>Key products driving growth include the Salesforce Customer Relationship Management (CRM) platform, which integrates various functionalities such as sales, service, and marketing automation. The addition of Slack to its portfolio has also enhanced collaboration capabilities, further solidifying its market position.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Salesforce has maintained robust profitability metrics, with a gross margin of <strong>77.7%</strong> in FY2026, slightly improving from <strong>75.5%</strong> in FY2024 and <strong>77.2%</strong> in FY2025. The operating margin has also shown a positive trend, increasing to <strong>20.1%</strong> in FY2026 from <strong>14.4%</strong> in FY2024 and <strong>19.0%</strong> in FY2025. </p>
+<p>The major cost drivers for Salesforce include:</p>
+<ul>
+<li><strong>Research and Development (R&amp;D)</strong>: $5.99 billion in FY2026, reflecting the company's commitment to innovation and product development.</li>
+<li><strong>Selling, General and Administrative (SG&amp;A)</strong>: Specific figures are not provided, but this typically encompasses a significant portion of operating expenses.</li>
+<li><strong>Cost of Goods Sold (COGS)</strong>: While not explicitly detailed, the high gross margin suggests effective management of direct costs associated with service delivery.</li>
+</ul>
+<p>Salesforce's operating leverage is evident as revenue growth outpaces the increase in R&amp;D expenses, leading to improved profitability. The operating income rose to <strong>$8.33 billion</strong> in FY2026, up from <strong>$5.01 billion</strong> in FY2024, showcasing the company's ability to convert revenue into earnings effectively.</p>
+<h2>Business Model Summary</h2>
+<p>Salesforce's business model is centered around converting its substantial revenue into earnings through a combination of high-margin services and strategic investments in technology. The company leverages its cloud-based platform to deliver integrated solutions that enhance customer engagement and operational efficiency.</p>
+<p>The competitive positioning is reinforced by its diverse segment structure, which allows Salesforce to cater to various customer needs across industries. The significant contributions from Agentforce segments highlight a strategic focus on comprehensive service offerings that integrate sales, service, and marketing functionalities.</p>
+<p>Notable shifts in the segment mix are evident, particularly with the increasing revenue from Agentforce Sales and Service, which underscores the company's strategic pivot towards more integrated and holistic customer solutions. The improvement in margin profiles, particularly the operating margin, indicates effective cost management and operational efficiency, positioning Salesforce favorably in the competitive landscape of cloud-based CRM solutions. </p>
+<p>Overall, Salesforce's business model demonstrates a strong capacity for growth and profitability, driven by its innovative product offerings and strategic market positioning.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2026</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$41.52B</td><td style="text-align:right">$37.90B</td><td style="text-align:right" class="yoy-pos">+9.6%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$9.27B</td><td style="text-align:right">$8.64B</td><td style="text-align:right" class="yoy-pos">+7.3%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$32.26B</td><td style="text-align:right">$29.25B</td><td style="text-align:right" class="yoy-pos">+10.3%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">77.7%</td><td style="text-align:right">77.2%</td><td style="text-align:right" class="yoy-pos">+0.6%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$5.99B</td><td style="text-align:right">$5.49B</td><td style="text-align:right" class="yoy-pos">+9.1%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$8.33B</td><td style="text-align:right">$7.21B</td><td style="text-align:right" class="yoy-pos">+15.6%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">20.1%</td><td style="text-align:right">19.0%</td><td style="text-align:right" class="yoy-pos">+5.5%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$7.46B</td><td style="text-align:right">$6.20B</td><td style="text-align:right" class="yoy-pos">+20.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">18.0%</td><td style="text-align:right">16.4%</td><td style="text-align:right" class="yoy-pos">+9.8%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2025 Q4</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q3</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q2</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2024 Q4</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q4</th><th style='text-align:right'>2024 Q4</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$9.32B</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$2.16B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$7.17B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">76.8%</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$1.35B</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$1.78B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">19.1%</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$1.43B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">15.3%</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$9.83B</td><td style="text-align:right">$9.13B</td><td style="text-align:right" class="yoy-pos">+7.6%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$2.27B</td><td style="text-align:right">$2.16B</td><td style="text-align:right" class="yoy-pos">+4.8%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$7.56B</td><td style="text-align:right">$6.97B</td><td style="text-align:right" class="yoy-pos">+8.5%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">77.0%</td><td style="text-align:right">76.3%</td><td style="text-align:right" class="yoy-pos">+0.8%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$1.46B</td><td style="text-align:right">$1.37B</td><td style="text-align:right" class="yoy-pos">+6.7%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$1.94B</td><td style="text-align:right">$1.71B</td><td style="text-align:right" class="yoy-pos">+13.6%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">19.8%</td><td style="text-align:right">18.7%</td><td style="text-align:right" class="yoy-pos">+5.6%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$1.54B</td><td style="text-align:right">$1.53B</td><td style="text-align:right" class="yoy-pos">+0.5%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">15.7%</td><td style="text-align:right">16.8%</td><td style="text-align:right" class="yoy-neg">-6.6%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2024 Q4</th><th style='text-align:right'>2023 Q4</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section">
+  <h3>Segment Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2026</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$41.52B</td><td>$7.46B</td><td>7</td><td>101%</td><td>100%</td></tr><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$37.90B</td><td>$6.20B</td><td>6</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$34.86B</td><td>$4.14B</td><td>6</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$9.83B</td><td>$1.54B</td><td>6</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$9.32B</td><td>$1.43B</td><td>6</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$9.13B</td><td>$1.53B</td><td>6</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2026 — $41.52B revenue across 7 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Agentforce Service</td><td style='text-align:right'>$9.82B</td><td style='text-align:right'>23.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.6%'></div>  </div></td></tr><tr><td>Agentforce Sales</td><td style='text-align:right'>$9.03B</td><td style='text-align:right'>21.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:21.7%'></div>  </div></td></tr><tr><td>Agentforce 360 Platform, Slack and Other</td><td style='text-align:right'>$8.88B</td><td style='text-align:right'>21.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:21.4%'></div>  </div></td></tr><tr><td>Agentforce Integration and Agentforce Analytics</td><td style='text-align:right'>$6.23B</td><td style='text-align:right'>15.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:15.0%'></div>  </div></td></tr><tr><td>Agentforce Marketing and Agentforce Commerce</td><td style='text-align:right'>$5.43B</td><td style='text-align:right'>13.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:13.1%'></div>  </div></td></tr><tr><td>Professional services and other</td><td style='text-align:right'>$2.14B</td><td style='text-align:right'>5.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:5.1%'></div>  </div></td></tr><tr><td>Subscription and support</td><td style='text-align:right'>$388.0M</td><td style='text-align:right'>0.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $37.90B revenue across 6 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Service</td><td style='text-align:right'>$9.05B</td><td style='text-align:right'>23.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.9%'></div>  </div></td></tr><tr><td>Sales</td><td style='text-align:right'>$8.32B</td><td style='text-align:right'>22.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:22.0%'></div>  </div></td></tr><tr><td>Platform and Other</td><td style='text-align:right'>$7.25B</td><td style='text-align:right'>19.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:19.1%'></div>  </div></td></tr><tr><td>Integration and Analytics</td><td style='text-align:right'>$5.78B</td><td style='text-align:right'>15.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:15.2%'></div>  </div></td></tr><tr><td>Marketing and Commerce</td><td style='text-align:right'>$5.28B</td><td style='text-align:right'>13.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:13.9%'></div>  </div></td></tr><tr><td>Professional services and other</td><td style='text-align:right'>$2.22B</td><td style='text-align:right'>5.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:5.8%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $34.86B revenue across 6 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Service</td><td style='text-align:right'>$8.24B</td><td style='text-align:right'>23.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.7%'></div>  </div></td></tr><tr><td>Sales</td><td style='text-align:right'>$7.58B</td><td style='text-align:right'>21.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:21.7%'></div>  </div></td></tr><tr><td>Platform and Other</td><td style='text-align:right'>$6.61B</td><td style='text-align:right'>19.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:19.0%'></div>  </div></td></tr><tr><td>Integration and Analytics</td><td style='text-align:right'>$5.19B</td><td style='text-align:right'>14.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:14.9%'></div>  </div></td></tr><tr><td>Marketing and Commerce</td><td style='text-align:right'>$4.91B</td><td style='text-align:right'>14.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:14.1%'></div>  </div></td></tr><tr><td>Professional services and other</td><td style='text-align:right'>$2.32B</td><td style='text-align:right'>6.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:6.7%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2026</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Service</td><td style='text-align:right'>—</td><td style='text-align:right'>$9.05B</td><td style='text-align:right'>$8.24B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Sales</td><td style='text-align:right'>—</td><td style='text-align:right'>$8.32B</td><td style='text-align:right'>$7.58B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Platform and Other</td><td style='text-align:right'>—</td><td style='text-align:right'>$7.25B</td><td style='text-align:right'>$6.61B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Integration and Analytics</td><td style='text-align:right'>—</td><td style='text-align:right'>$5.78B</td><td style='text-align:right'>$5.19B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Marketing and Commerce</td><td style='text-align:right'>—</td><td style='text-align:right'>$5.28B</td><td style='text-align:right'>$4.91B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Agentforce Service</td><td style='text-align:right'>$9.82B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Agentforce Sales</td><td style='text-align:right'>$9.03B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Agentforce 360 Platform, Slack and Other</td><td style='text-align:right'>$8.88B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Professional services and other</td><td style='text-align:right'>$2.14B</td><td style='text-align:right'>$2.22B</td><td style='text-align:right'>$2.32B</td><td style='text-align:right;color:#dc3545;font-weight:600'>-3.6%</td></tr><tr><td>Agentforce Integration and Agentforce Analytics</td><td style='text-align:right'>$6.23B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Agentforce Marketing and Agentforce Commerce</td><td style='text-align:right'>$5.43B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Subscription and support</td><td style='text-align:right'>$388.0M</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 9 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 9 quarterly reports
+</div>
+</body>
+</html>

@@ -1,0 +1,1485 @@
+{
+  "ticker": "BRK-B",
+  "name": "Berkshire Hathaway Inc.",
+  "latest_annual": {
+    "ticker": "BRK-B",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "BNSF",
+        "value": 23441000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+        "value": 26282000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Manufacturing",
+        "value": 78390000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Service and Retailing",
+        "value": 42560000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "PTC",
+        "value": 42166000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "McLane",
+        "value": 50215000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Insurance, Corporate and Other",
+        "value": 108390000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 371444000000.0,
+    "gross_profit": null,
+    "operating_income": null,
+    "net_income": 67260000000.0,
+    "rd_expense": null,
+    "sga_expense": 29735000000.0,
+    "cogs": 160062000000.0,
+    "interest_expense": 5069000000.0,
+    "income_tax": 15199000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "BRK-B",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "BNSF",
+          "value": 23441000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 26282000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Manufacturing",
+          "value": 78390000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 42560000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PTC",
+          "value": 42166000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 50215000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 108390000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 371444000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 67260000000.0,
+      "rd_expense": null,
+      "sga_expense": 29735000000.0,
+      "cogs": 160062000000.0,
+      "interest_expense": 5069000000.0,
+      "income_tax": 15199000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "BRK-B",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "BNSF",
+          "value": 23490000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 26300000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Manufacturing",
+          "value": 77148000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 39783000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PTC",
+          "value": 46856000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 51086000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 106770000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 371433000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 89561000000.0,
+      "rd_expense": null,
+      "sga_expense": 25642000000.0,
+      "cogs": 163642000000.0,
+      "interest_expense": 5200000000.0,
+      "income_tax": 20815000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "BRK-B",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Manufacturing Businesses",
+          "value": 75283000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 51814000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 39879000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BNSF",
+          "value": 23791000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 25960000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PTC",
+          "value": 51664000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 96091000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 364482000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 97147000000.0,
+      "rd_expense": null,
+      "sga_expense": 22605000000.0,
+      "cogs": 122569000000.0,
+      "interest_expense": 5003000000.0,
+      "income_tax": 23019000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (364482000000) differs from Yahoo (439337000000) by 17.0%"
+      ]
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "BRK-B",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "BNSF",
+          "value": 6013000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 7293000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Manufacturing",
+          "value": 20015000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 10568000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pilot",
+          "value": 10879000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 12960000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 27244000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 94972000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 30864000000.0,
+      "rd_expense": null,
+      "sga_expense": 6285000000.0,
+      "cogs": 40875000000.0,
+      "interest_expense": 1261000000.0,
+      "income_tax": 7241000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (94972000000) differs from Yahoo (410522000000) by 76.9%"
+      ]
+    },
+    {
+      "ticker": "BRK-B",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "BNSF",
+          "value": 5746000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 6405000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Manufacturing",
+          "value": 19940000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 10671000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pilot",
+          "value": 10095000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 12399000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 27259000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 92515000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 12457000000.0,
+      "rd_expense": null,
+      "sga_expense": 7931000000.0,
+      "cogs": 39616000000.0,
+      "interest_expense": 1253000000.0,
+      "income_tax": 2293000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "BRK-B",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "BNSF",
+          "value": 5699000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 6344000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Manufacturing",
+          "value": 18752000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 10112000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pilot",
+          "value": 10422000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 12016000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 26380000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 89725000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 4672000000.0,
+      "rd_expense": null,
+      "sga_expense": 7681000000.0,
+      "cogs": 38551000000.0,
+      "interest_expense": 1257000000.0,
+      "income_tax": 476000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "BRK-B",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Manufacturing Businesses",
+          "value": 19670000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 12527000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 9828000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BNSF",
+          "value": 5920000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 7323000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pilot",
+          "value": 10623000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 27104000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 92995000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 26480000000.0,
+      "rd_expense": null,
+      "sga_expense": 7324000000.0,
+      "cogs": 30323000000.0,
+      "interest_expense": 1214000000.0,
+      "income_tax": 6028000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (92995000000) differs from Yahoo (424232000000) by 78.1%"
+      ]
+    },
+    {
+      "ticker": "BRK-B",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Manufacturing Businesses",
+          "value": 19807000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 12271000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 9922000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BNSF",
+          "value": 5787000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 6480000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pilot",
+          "value": 12984000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 26402000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 93653000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 30498000000.0,
+      "rd_expense": null,
+      "sga_expense": 5195000000.0,
+      "cogs": 30391000000.0,
+      "interest_expense": 1230000000.0,
+      "income_tax": 7639000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (93653000000) differs from Yahoo (424232000000) by 77.9%"
+      ]
+    },
+    {
+      "ticker": "BRK-B",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Manufacturing Businesses",
+          "value": 18511000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 12300000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 9672000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BNSF",
+          "value": 5637000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 6265000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pilot",
+          "value": 12494000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 24990000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 89869000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 12832000000.0,
+      "rd_expense": null,
+      "sga_expense": 4773000000.0,
+      "cogs": 29395000000.0,
+      "interest_expense": 1316000000.0,
+      "income_tax": 2874000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (89869000000) differs from Yahoo (424232000000) by 78.8%"
+      ]
+    },
+    {
+      "ticker": "BRK-B",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Manufacturing Businesses",
+          "value": 19168000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 13279000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 9921000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BNSF",
+          "value": 5829000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 7269000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PTC",
+          "value": 13145000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 24599000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 93210000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": -12767000000.0,
+      "rd_expense": null,
+      "sga_expense": 5120000000.0,
+      "cogs": 31049000000.0,
+      "interest_expense": 1260000000.0,
+      "income_tax": -4392000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (93210000000) differs from Yahoo (439337000000) by 78.8%"
+      ]
+    },
+    {
+      "ticker": "BRK-B",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Manufacturing Businesses",
+          "value": 19074000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 12697000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 10109000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BNSF",
+          "value": 5808000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 6350000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pilot",
+          "value": 14733000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 23732000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 92503000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 36199000000.0,
+      "rd_expense": null,
+      "sga_expense": 5005000000.0,
+      "cogs": 30621000000.0,
+      "interest_expense": 1249000000.0,
+      "income_tax": 9236000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (92503000000) differs from Yahoo (439337000000) by 78.9%"
+      ]
+    },
+    {
+      "ticker": "BRK-B",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Manufacturing Businesses",
+          "value": 18265000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "McLane",
+          "value": 12881000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service and Retailing",
+          "value": 9902000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "BNSF",
+          "value": 6001000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Berkshire Hathaway Energy (\"BHE\")",
+          "value": 6439000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pilot",
+          "value": 9496000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance, Corporate and Other",
+          "value": 22409000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 85393000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 35757000000.0,
+      "rd_expense": null,
+      "sga_expense": 5602000000.0,
+      "cogs": 30319000000.0,
+      "interest_expense": 1218000000.0,
+      "income_tax": 8995000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (85393000000) differs from Yahoo (439337000000) by 80.6%"
+      ]
+    }
+  ],
+  "ttm_revenue": 370207000000.0,
+  "ttm_operating_income": null,
+  "ttm_net_income": 74473000000.0,
+  "segment_trend": {
+    "Manufacturing Businesses": [
+      {
+        "period": "2023Q1",
+        "value": 18265000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 19074000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 19168000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 18511000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 19807000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 19670000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 75283000000.0,
+        "is_annual": true
+      }
+    ],
+    "McLane": [
+      {
+        "period": "2023Q1",
+        "value": 12881000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 12697000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 13279000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 12300000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 12271000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 12527000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 12016000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 12399000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 12960000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 51814000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 51086000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 50215000000.0,
+        "is_annual": true
+      }
+    ],
+    "Service and Retailing": [
+      {
+        "period": "2023Q1",
+        "value": 9902000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 10109000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 9921000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 9672000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 9922000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 9828000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 10112000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 10671000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 10568000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 39879000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 39783000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 42560000000.0,
+        "is_annual": true
+      }
+    ],
+    "BNSF": [
+      {
+        "period": "2023Q1",
+        "value": 6001000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 5808000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 5829000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 5637000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 5787000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 5920000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 5699000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 5746000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 6013000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 23791000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 23490000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 23441000000.0,
+        "is_annual": true
+      }
+    ],
+    "Berkshire Hathaway Energy (\"BHE\")": [
+      {
+        "period": "2023Q1",
+        "value": 6439000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 6350000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 7269000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 6265000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 6480000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 7323000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 6344000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 6405000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 7293000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 25960000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 26300000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 26282000000.0,
+        "is_annual": true
+      }
+    ],
+    "Pilot": [
+      {
+        "period": "2023Q1",
+        "value": 9496000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 14733000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 12494000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 12984000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 10623000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 10422000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 10095000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 10879000000.0,
+        "is_annual": false
+      }
+    ],
+    "Insurance, Corporate and Other": [
+      {
+        "period": "2023Q1",
+        "value": 22409000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 23732000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 24599000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 24990000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 26402000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 27104000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 26380000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 27259000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 27244000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 96091000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 106770000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 108390000000.0,
+        "is_annual": true
+      }
+    ],
+    "PTC": [
+      {
+        "period": "2023Q3",
+        "value": 13145000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 51664000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 46856000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 42166000000.0,
+        "is_annual": true
+      }
+    ],
+    "Manufacturing": [
+      {
+        "period": "2025Q1",
+        "value": 18752000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 19940000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 20015000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 77148000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 78390000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

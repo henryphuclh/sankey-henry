@@ -1,0 +1,496 @@
+{
+  "ticker": "APP",
+  "name": "AppLovin Corp.",
+  "latest_annual": {
+    "ticker": "APP",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Advertising Solutions",
+        "value": 5481000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 5480717000.0,
+    "gross_profit": null,
+    "operating_income": 4151914000.0,
+    "net_income": 3333751000.0,
+    "rd_expense": 226510000.0,
+    "sga_expense": null,
+    "cogs": 665140000.0,
+    "interest_expense": null,
+    "income_tax": 519715000.0,
+    "currency": "USD",
+    "extraction_method": "edgar+llm",
+    "confidence": 0.92,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "APP",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Advertising Solutions",
+          "value": 5481000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 5480717000.0,
+      "gross_profit": null,
+      "operating_income": 4151914000.0,
+      "net_income": 3333751000.0,
+      "rd_expense": 226510000.0,
+      "sga_expense": null,
+      "cogs": 665140000.0,
+      "interest_expense": null,
+      "income_tax": 519715000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 0.92,
+      "notes": []
+    },
+    {
+      "ticker": "APP",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Advertising",
+          "value": 3224058000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Apps",
+          "value": 1485190000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 4709248000.0,
+      "gross_profit": null,
+      "operating_income": 1873459000.0,
+      "net_income": 1579776000.0,
+      "rd_expense": 638689000.0,
+      "sga_expense": null,
+      "cogs": 1166806000.0,
+      "interest_expense": null,
+      "income_tax": -3771000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (4709248000) differs from Yahoo (3224058000) by 46.1%"
+      ]
+    },
+    {
+      "ticker": "APP",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "In-App Purchases Revenue",
+          "value": 989007000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "In-App Advertising Revenue",
+          "value": 452318000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Apps",
+          "value": 1441325000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3283087000.0,
+      "gross_profit": null,
+      "operating_income": 648207000.0,
+      "net_income": 356711000.0,
+      "rd_expense": 592386000.0,
+      "sga_expense": null,
+      "cogs": 1059191000.0,
+      "interest_expense": null,
+      "income_tax": 23859000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (3283087000) differs from Yahoo (1841762000) by 78.3%"
+      ]
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "APP",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "APP",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "APP",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Advertising",
+          "value": 1159000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Apps",
+          "value": 325000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 1484021000.0,
+      "gross_profit": null,
+      "operating_income": 663471000.0,
+      "net_income": 576419000.0,
+      "rd_expense": 122918000.0,
+      "sga_expense": null,
+      "cogs": 271232000.0,
+      "interest_expense": null,
+      "income_tax": 41975000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "APP",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "APP",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Software Platform",
+          "value": 711015000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Apps",
+          "value": 369104000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 1080119000.0,
+      "gross_profit": null,
+      "operating_income": 390986000.0,
+      "net_income": 309969000.0,
+      "rd_expense": 163896000.0,
+      "sga_expense": null,
+      "cogs": 282547000.0,
+      "interest_expense": null,
+      "income_tax": 15298000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (1080119000) differs from Yahoo (3224058000) by 66.5%"
+      ]
+    },
+    {
+      "ticker": "APP",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Total Apps Revenue",
+          "value": 529057500.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "In-App Purchases Revenue",
+          "value": 361109659.82435584,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "In-App Advertising Revenue",
+          "value": 167947840.1756442,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 1058115000.0,
+      "gross_profit": null,
+      "operating_income": 339559000.0,
+      "net_income": 236183000.0,
+      "rd_expense": 155323000.0,
+      "sga_expense": null,
+      "cogs": 294148000.0,
+      "interest_expense": null,
+      "income_tax": 31762000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (1058115000) differs from Yahoo (3224058000) by 67.2%"
+      ]
+    },
+    {
+      "ticker": "APP",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "APP",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "APP",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 1484021000.0,
+  "ttm_operating_income": 663471000.0,
+  "ttm_net_income": 576419000.0,
+  "segment_trend": {
+    "Total Apps Revenue": [
+      {
+        "period": "2024Q1",
+        "value": 529057500.0,
+        "is_annual": false
+      }
+    ],
+    "In-App Purchases Revenue": [
+      {
+        "period": "2024Q1",
+        "value": 361109659.82435584,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 989007000.0,
+        "is_annual": true
+      }
+    ],
+    "In-App Advertising Revenue": [
+      {
+        "period": "2024Q1",
+        "value": 167947840.1756442,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 452318000.0,
+        "is_annual": true
+      }
+    ],
+    "Software Platform": [
+      {
+        "period": "2024Q2",
+        "value": 711015000.0,
+        "is_annual": false
+      }
+    ],
+    "Apps": [
+      {
+        "period": "2024Q2",
+        "value": 369104000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 325000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1441325000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1485190000.0,
+        "is_annual": true
+      }
+    ],
+    "Advertising": [
+      {
+        "period": "2025Q1",
+        "value": 1159000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 3224058000.0,
+        "is_annual": true
+      }
+    ],
+    "Advertising Solutions": [
+      {
+        "period": "FY2025",
+        "value": 5481000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

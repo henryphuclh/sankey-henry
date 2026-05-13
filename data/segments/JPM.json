@@ -1,0 +1,1055 @@
+{
+  "ticker": "JPM",
+  "name": "JPMorgan Chase & Co.",
+  "sector": "financial",
+  "latest_annual": {
+    "ticker": "JPM",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "CCB",
+        "value": 76029000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "CIB",
+        "value": 78454000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Asset & Wealth Management",
+        "value": 24073000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Corporate",
+        "value": 7025000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 182447000000.0,
+    "gross_profit": 168235000000.0,
+    "operating_income": 72595000000.0,
+    "net_income": 57048000000.0,
+    "rd_expense": null,
+    "sga_expense": 95640000000.0,
+    "cogs": null,
+    "interest_expense": 14212000000.0,
+    "income_tax": 15547000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": [
+      "EXPENSE_DETAIL:{\"Personnel\": 54487000000.0, \"Technology & Equipment\": 11029000000.0, \"Occupancy\": 5461000000.0, \"Professional Services\": 12356000000.0, \"Marketing\": 5531000000.0, \"Other Non-Interest Expense\": 6776000000.0}"
+    ]
+  },
+  "annual_periods": [
+    {
+      "ticker": "JPM",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "CCB",
+          "value": 76029000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 78454000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 24073000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 7025000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 182447000000.0,
+      "gross_profit": 168235000000.0,
+      "operating_income": 72595000000.0,
+      "net_income": 57048000000.0,
+      "rd_expense": null,
+      "sga_expense": 95640000000.0,
+      "cogs": null,
+      "interest_expense": 14212000000.0,
+      "income_tax": 15547000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 54487000000.0, \"Technology & Equipment\": 11029000000.0, \"Occupancy\": 5461000000.0, \"Professional Services\": 12356000000.0, \"Marketing\": 5531000000.0, \"Other Non-Interest Expense\": 6776000000.0}"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "CCB",
+          "value": 71507000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 70114000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 21578000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 17394000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 177556000000.0,
+      "gross_profit": 166878000000.0,
+      "operating_income": 75081000000.0,
+      "net_income": 58471000000.0,
+      "rd_expense": null,
+      "sga_expense": 91797000000.0,
+      "cogs": null,
+      "interest_expense": 10678000000.0,
+      "income_tax": 16610000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 51357000000.0, \"Technology & Equipment\": 9831000000.0, \"Occupancy\": 5026000000.0, \"Professional Services\": 11057000000.0, \"Marketing\": 4974000000.0, \"Other Non-Interest Expense\": 9552000000.0}"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Consumer & Community Banking",
+          "value": 70148000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 48807000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 15546000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 19827000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 8038000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 158104000000.0,
+      "gross_profit": 148784000000.0,
+      "operating_income": 61612000000.0,
+      "net_income": 49552000000.0,
+      "rd_expense": null,
+      "sga_expense": 87172000000.0,
+      "cogs": null,
+      "interest_expense": 9320000000.0,
+      "income_tax": 12060000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 46465000000.0, \"Technology & Equipment\": 9246000000.0, \"Occupancy\": 4590000000.0, \"Professional Services\": 10235000000.0, \"Marketing\": 4591000000.0, \"Other Non-Interest Expense\": 12045000000.0}"
+      ]
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "JPM",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "CCB",
+          "value": 19568000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 23379000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 6374000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 1215000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 49836000000.0,
+      "gross_profit": 47329000000.0,
+      "operating_income": 20479000000.0,
+      "net_income": 16494000000.0,
+      "rd_expense": null,
+      "sga_expense": 26850000000.0,
+      "cogs": null,
+      "interest_expense": 2507000000.0,
+      "income_tax": 3985000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 15339000000.0, \"Technology & Equipment\": 3021000000.0, \"Occupancy\": 1447000000.0, \"Professional Services\": 3483000000.0, \"Marketing\": 1604000000.0, \"Other Non-Interest Expense\": 1956000000.0}"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "CCB",
+          "value": 19473000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 19878000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 6066000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 1703000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 46427000000.0,
+      "gross_profit": 43024000000.0,
+      "operating_income": 18743000000.0,
+      "net_income": 14393000000.0,
+      "rd_expense": null,
+      "sga_expense": 24281000000.0,
+      "cogs": null,
+      "interest_expense": 3403000000.0,
+      "income_tax": 4350000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 13566000000.0, \"Technology & Equipment\": 2839000000.0, \"Occupancy\": 1420000000.0, \"Professional Services\": 3173000000.0, \"Marketing\": 1480000000.0, \"Other Non-Interest Expense\": 1803000000.0}"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "CCB",
+          "value": 18847000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 19535000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 5760000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 1538000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 44912000000.0,
+      "gross_profit": 42063000000.0,
+      "operating_income": 18284000000.0,
+      "net_income": 14987000000.0,
+      "rd_expense": null,
+      "sga_expense": 23779000000.0,
+      "cogs": null,
+      "interest_expense": 2849000000.0,
+      "income_tax": 3297000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 13710000000.0, \"Technology & Equipment\": 2704000000.0, \"Occupancy\": 1264000000.0, \"Professional Services\": 3006000000.0, \"Marketing\": 1279000000.0, \"Other Non-Interest Expense\": 1816000000.0}"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "CCB",
+          "value": 18313000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 19666000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 5731000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 2304000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 45310000000.0,
+      "gross_profit": 42005000000.0,
+      "operating_income": 18408000000.0,
+      "net_income": 14643000000.0,
+      "rd_expense": null,
+      "sga_expense": 23597000000.0,
+      "cogs": null,
+      "interest_expense": 3305000000.0,
+      "income_tax": 3765000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 14093000000.0, \"Technology & Equipment\": 2578000000.0, \"Occupancy\": 1302000000.0, \"Professional Services\": 2839000000.0, \"Marketing\": 1304000000.0, \"Other Non-Interest Expense\": 1481000000.0}"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Consumer & Community Banking",
+          "value": 17791000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 17015000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 5439000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 3070000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 42654000000.0,
+      "gross_profit": 39543000000.0,
+      "operating_income": 16978000000.0,
+      "net_income": 12898000000.0,
+      "rd_expense": null,
+      "sga_expense": 22565000000.0,
+      "cogs": null,
+      "interest_expense": 3111000000.0,
+      "income_tax": 4080000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 12817000000.0, \"Technology & Equipment\": 2447000000.0, \"Occupancy\": 1258000000.0, \"Professional Services\": 2780000000.0, \"Marketing\": 1258000000.0, \"Other Non-Interest Expense\": 2005000000.0}",
+        "Warning: total_revenue (42654000000) differs from Yahoo (169439000000) by 74.8%"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Consumer & Community Banking",
+          "value": 17701000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 17917000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 5252000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 10122000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 50200000000.0,
+      "gross_profit": 47148000000.0,
+      "operating_income": 23435000000.0,
+      "net_income": 18149000000.0,
+      "rd_expense": null,
+      "sga_expense": 23713000000.0,
+      "cogs": null,
+      "interest_expense": 3052000000.0,
+      "income_tax": 5286000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 12953000000.0, \"Technology & Equipment\": 2447000000.0, \"Occupancy\": 1248000000.0, \"Professional Services\": 2722000000.0, \"Marketing\": 1221000000.0, \"Other Non-Interest Expense\": 3122000000.0}",
+        "Warning: total_revenue (50200000000) differs from Yahoo (169439000000) by 70.4%"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Consumer & Community Banking",
+          "value": 17653000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 13633000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 3951000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 5109000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 2202000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 41934000000.0,
+      "gross_profit": 40050000000.0,
+      "operating_income": 17293000000.0,
+      "net_income": 13419000000.0,
+      "rd_expense": null,
+      "sga_expense": 22757000000.0,
+      "cogs": null,
+      "interest_expense": 1884000000.0,
+      "income_tax": 3874000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 13118000000.0, \"Technology & Equipment\": 2421000000.0, \"Occupancy\": 1211000000.0, \"Professional Services\": 2548000000.0, \"Marketing\": 1160000000.0, \"Other Non-Interest Expense\": 2299000000.0}",
+        "Warning: total_revenue (41934000000) differs from Yahoo (169439000000) by 75.3%"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Consumer & Community Banking",
+          "value": 18362000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 11730000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 4031000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 5005000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 1558000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 39874000000.0,
+      "gross_profit": 38490000000.0,
+      "operating_income": 16733000000.0,
+      "net_income": 13151000000.0,
+      "rd_expense": null,
+      "sga_expense": 21757000000.0,
+      "cogs": null,
+      "interest_expense": 1384000000.0,
+      "income_tax": 3582000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 11726000000.0, \"Technology & Equipment\": 2386000000.0, \"Occupancy\": 1197000000.0, \"Professional Services\": 2620000000.0, \"Marketing\": 1126000000.0, \"Other Non-Interest Expense\": 2702000000.0}",
+        "Warning: total_revenue (39874000000) differs from Yahoo (154952000000) by 74.3%"
+      ]
+    },
+    {
+      "ticker": "JPM",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Consumer & Community Banking",
+          "value": 17233000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 12519000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking",
+          "value": 3988000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 4943000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 3718000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 41307000000.0,
+      "gross_profit": 38408000000.0,
+      "operating_income": 17586000000.0,
+      "net_income": 14472000000.0,
+      "rd_expense": null,
+      "sga_expense": 20822000000.0,
+      "cogs": null,
+      "interest_expense": 2899000000.0,
+      "income_tax": 3114000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 11216000000.0, \"Technology & Equipment\": 2267000000.0, \"Occupancy\": 1070000000.0, \"Professional Services\": 2561000000.0, \"Marketing\": 1122000000.0, \"Other Non-Interest Expense\": 2586000000.0}",
+        "Warning: total_revenue (41307000000) differs from Yahoo (154952000000) by 73.3%"
+      ]
+    }
+  ],
+  "ttm_revenue": 186485000000.0,
+  "ttm_operating_income": 75914000000.0,
+  "ttm_net_income": 60517000000.0,
+  "segment_trend": {
+    "Consumer & Community Banking": [
+      {
+        "period": "2023Q2",
+        "value": 17233000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 18362000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 17653000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 17701000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 17791000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 70148000000.0,
+        "is_annual": true
+      }
+    ],
+    "CIB": [
+      {
+        "period": "2023Q2",
+        "value": 12519000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 11730000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 13633000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 17917000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 17015000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 19666000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 19535000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 19878000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 23379000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 48807000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 70114000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 78454000000.0,
+        "is_annual": true
+      }
+    ],
+    "Commercial Banking": [
+      {
+        "period": "2023Q2",
+        "value": 3988000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 4031000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 3951000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 15546000000.0,
+        "is_annual": true
+      }
+    ],
+    "Asset & Wealth Management": [
+      {
+        "period": "2023Q2",
+        "value": 4943000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 5005000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 5109000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 5252000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 5439000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 5731000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 5760000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 6066000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 6374000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 19827000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 21578000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 24073000000.0,
+        "is_annual": true
+      }
+    ],
+    "Corporate": [
+      {
+        "period": "2023Q2",
+        "value": 3718000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1558000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 2202000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 10122000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 3070000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2304000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1538000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1703000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1215000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 8038000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 17394000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 7025000000.0,
+        "is_annual": true
+      }
+    ],
+    "CCB": [
+      {
+        "period": "2025Q1",
+        "value": 18313000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 18847000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 19473000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 19568000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 71507000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 76029000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

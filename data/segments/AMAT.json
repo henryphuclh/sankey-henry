@@ -1,0 +1,816 @@
+{
+  "ticker": "AMAT",
+  "name": "Applied Materials Inc.",
+  "latest_annual": {
+    "ticker": "AMAT",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [],
+    "total_revenue": null,
+    "gross_profit": null,
+    "operating_income": null,
+    "net_income": null,
+    "rd_expense": null,
+    "sga_expense": null,
+    "cogs": null,
+    "interest_expense": null,
+    "income_tax": null,
+    "currency": "USD",
+    "extraction_method": "edgar",
+    "confidence": 0.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "AMAT",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMAT",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMAT",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "AMAT",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Semiconductor Systems",
+          "value": 5141000000.0,
+          "unit": "USD",
+          "period": "2026-01-25 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Applied Global Services",
+          "value": 1559000000.0,
+          "unit": "USD",
+          "period": "2026-01-25 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 312000000.0,
+          "unit": "USD",
+          "period": "2026-01-25 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7012000000.0,
+      "gross_profit": 3435000000.0,
+      "operating_income": 1831000000.0,
+      "net_income": 2026000000.0,
+      "rd_expense": 928000000.0,
+      "sga_expense": null,
+      "cogs": 3577000000.0,
+      "interest_expense": null,
+      "income_tax": 302000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMAT",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMAT",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Taiwan",
+          "value": 1997000000.0,
+          "unit": "USD",
+          "period": "2025-04-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "China",
+          "value": 1774000000.0,
+          "unit": "USD",
+          "period": "2025-04-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Korea",
+          "value": 1562000000.0,
+          "unit": "USD",
+          "period": "2025-04-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "United States",
+          "value": 808000000.0,
+          "unit": "USD",
+          "period": "2025-04-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Japan",
+          "value": 572000000.0,
+          "unit": "USD",
+          "period": "2025-04-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 252000000.0,
+          "unit": "USD",
+          "period": "2025-04-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Southeast Asia",
+          "value": 135000000.0,
+          "unit": "USD",
+          "period": "2025-04-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7100000000.0,
+      "gross_profit": 3485000000.0,
+      "operating_income": 2169000000.0,
+      "net_income": 2137000000.0,
+      "rd_expense": 893000000.0,
+      "sga_expense": null,
+      "cogs": 3615000000.0,
+      "interest_expense": null,
+      "income_tax": 185000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMAT",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "China",
+          "value": 2243000000.0,
+          "unit": "USD",
+          "period": "2025-01-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Korea",
+          "value": 1667000000.0,
+          "unit": "USD",
+          "period": "2025-01-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taiwan",
+          "value": 1183000000.0,
+          "unit": "USD",
+          "period": "2025-01-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "United States",
+          "value": 917000000.0,
+          "unit": "USD",
+          "period": "2025-01-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Japan",
+          "value": 540000000.0,
+          "unit": "USD",
+          "period": "2025-01-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 330000000.0,
+          "unit": "USD",
+          "period": "2025-01-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Southeast Asia",
+          "value": 286000000.0,
+          "unit": "USD",
+          "period": "2025-01-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7166000000.0,
+      "gross_profit": 3496000000.0,
+      "operating_income": 2175000000.0,
+      "net_income": 1185000000.0,
+      "rd_expense": 859000000.0,
+      "sga_expense": null,
+      "cogs": 3670000000.0,
+      "interest_expense": null,
+      "income_tax": 934000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMAT",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "China",
+          "value": 2153000000.0,
+          "unit": "USD",
+          "period": "2024-07-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taiwan",
+          "value": 1148000000.0,
+          "unit": "USD",
+          "period": "2024-07-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Korea",
+          "value": 1102000000.0,
+          "unit": "USD",
+          "period": "2024-07-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "United States",
+          "value": 1053000000.0,
+          "unit": "USD",
+          "period": "2024-07-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Japan",
+          "value": 555000000.0,
+          "unit": "USD",
+          "period": "2024-07-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Southeast Asia",
+          "value": 428000000.0,
+          "unit": "USD",
+          "period": "2024-07-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 339000000.0,
+          "unit": "USD",
+          "period": "2024-07-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6778000000.0,
+      "gross_profit": 3205000000.0,
+      "operating_income": 1942000000.0,
+      "net_income": 1705000000.0,
+      "rd_expense": 836000000.0,
+      "sga_expense": null,
+      "cogs": 3573000000.0,
+      "interest_expense": null,
+      "income_tax": 255000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6778000000) differs from Yahoo (27176000000) by 75.1%"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "China",
+          "value": 2831000000.0,
+          "unit": "USD",
+          "period": "2024-04-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taiwan",
+          "value": 1019000000.0,
+          "unit": "USD",
+          "period": "2024-04-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Korea",
+          "value": 988000000.0,
+          "unit": "USD",
+          "period": "2024-04-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "United States",
+          "value": 853000000.0,
+          "unit": "USD",
+          "period": "2024-04-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Japan",
+          "value": 453000000.0,
+          "unit": "USD",
+          "period": "2024-04-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 289000000.0,
+          "unit": "USD",
+          "period": "2024-04-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Southeast Asia",
+          "value": 213000000.0,
+          "unit": "USD",
+          "period": "2024-04-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6646000000.0,
+      "gross_profit": 3153000000.0,
+      "operating_income": 1912000000.0,
+      "net_income": 1722000000.0,
+      "rd_expense": 785000000.0,
+      "sga_expense": null,
+      "cogs": 3493000000.0,
+      "interest_expense": 59000000.0,
+      "income_tax": 272000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6646000000) differs from Yahoo (27176000000) by 75.5%"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "China",
+          "value": 2997000000.0,
+          "unit": "USD",
+          "period": "2024-01-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Korea",
+          "value": 1231000000.0,
+          "unit": "USD",
+          "period": "2024-01-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "United States",
+          "value": 759000000.0,
+          "unit": "USD",
+          "period": "2024-01-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Japan",
+          "value": 565000000.0,
+          "unit": "USD",
+          "period": "2024-01-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taiwan",
+          "value": 559000000.0,
+          "unit": "USD",
+          "period": "2024-01-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 410000000.0,
+          "unit": "USD",
+          "period": "2024-01-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Southeast Asia",
+          "value": 186000000.0,
+          "unit": "USD",
+          "period": "2024-01-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6707000000.0,
+      "gross_profit": 3204000000.0,
+      "operating_income": 1967000000.0,
+      "net_income": 2019000000.0,
+      "rd_expense": 754000000.0,
+      "sga_expense": null,
+      "cogs": 3503000000.0,
+      "interest_expense": 59000000.0,
+      "income_tax": 284000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6707000000) differs from Yahoo (27176000000) by 75.3%"
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMAT",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 21278000000.0,
+  "ttm_operating_income": 6175000000.0,
+  "ttm_net_income": 5348000000.0,
+  "segment_trend": {
+    "China": [
+      {
+        "period": "2024Q1",
+        "value": 2997000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2831000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 2153000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2243000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1774000000.0,
+        "is_annual": false
+      }
+    ],
+    "Korea": [
+      {
+        "period": "2024Q1",
+        "value": 1231000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 988000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1102000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1667000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1562000000.0,
+        "is_annual": false
+      }
+    ],
+    "United States": [
+      {
+        "period": "2024Q1",
+        "value": 759000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 853000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1053000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 917000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 808000000.0,
+        "is_annual": false
+      }
+    ],
+    "Japan": [
+      {
+        "period": "2024Q1",
+        "value": 565000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 453000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 555000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 540000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 572000000.0,
+        "is_annual": false
+      }
+    ],
+    "Taiwan": [
+      {
+        "period": "2024Q1",
+        "value": 559000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1019000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1148000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1183000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1997000000.0,
+        "is_annual": false
+      }
+    ],
+    "Europe": [
+      {
+        "period": "2024Q1",
+        "value": 410000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 289000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 339000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 330000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 252000000.0,
+        "is_annual": false
+      }
+    ],
+    "Southeast Asia": [
+      {
+        "period": "2024Q1",
+        "value": 186000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 213000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 428000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 286000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 135000000.0,
+        "is_annual": false
+      }
+    ],
+    "Semiconductor Systems": [
+      {
+        "period": "2026Q1",
+        "value": 5141000000.0,
+        "is_annual": false
+      }
+    ],
+    "Applied Global Services": [
+      {
+        "period": "2026Q1",
+        "value": 1559000000.0,
+        "is_annual": false
+      }
+    ],
+    "Other": [
+      {
+        "period": "2026Q1",
+        "value": 312000000.0,
+        "is_annual": false
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

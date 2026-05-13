@@ -1,0 +1,812 @@
+{
+  "ticker": "GS",
+  "name": "Goldman Sachs Group Inc.",
+  "sector": "financial",
+  "latest_annual": {
+    "ticker": "GS",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Global Banking & Markets",
+        "value": 41453000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Asset & Wealth Management",
+        "value": 16679000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 58283000000.0,
+    "gross_profit": 57170000000.0,
+    "operating_income": 21852000000.0,
+    "net_income": 17176000000.0,
+    "rd_expense": null,
+    "sga_expense": 37544000000.0,
+    "cogs": null,
+    "interest_expense": 1113000000.0,
+    "income_tax": 4676000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": [
+      "EXPENSE_DETAIL:{\"Personnel\": 18906000000.0, \"Technology & Equipment\": 2170000000.0, \"Occupancy\": 958000000.0, \"Professional Services\": 1770000000.0, \"Other Non-Interest Expense\": 2851000000.0}"
+    ]
+  },
+  "annual_periods": [
+    {
+      "ticker": "GS",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 41453000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 16679000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 58283000000.0,
+      "gross_profit": 57170000000.0,
+      "operating_income": 21852000000.0,
+      "net_income": 17176000000.0,
+      "rd_expense": null,
+      "sga_expense": 37544000000.0,
+      "cogs": null,
+      "interest_expense": 1113000000.0,
+      "income_tax": 4676000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 18906000000.0, \"Technology & Equipment\": 2170000000.0, \"Occupancy\": 958000000.0, \"Professional Services\": 1770000000.0, \"Other Non-Interest Expense\": 2851000000.0}"
+      ]
+    },
+    {
+      "ticker": "GS",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 34943000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 16142000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 2427000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 53512000000.0,
+      "gross_profit": 52164000000.0,
+      "operating_income": 18397000000.0,
+      "net_income": 14276000000.0,
+      "rd_expense": null,
+      "sga_expense": 33767000000.0,
+      "cogs": null,
+      "interest_expense": 1348000000.0,
+      "income_tax": 4121000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 16706000000.0, \"Technology & Equipment\": 1991000000.0, \"Occupancy\": 973000000.0, \"Professional Services\": 1652000000.0, \"Other Non-Interest Expense\": 2683000000.0}"
+      ]
+    },
+    {
+      "ticker": "GS",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 29996000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 13880000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 2378000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 46254000000.0,
+      "gross_profit": 45226000000.0,
+      "operating_income": 10739000000.0,
+      "net_income": 8516000000.0,
+      "rd_expense": null,
+      "sga_expense": 34487000000.0,
+      "cogs": null,
+      "interest_expense": 1028000000.0,
+      "income_tax": 2223000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 15499000000.0, \"Technology & Equipment\": 1919000000.0, \"Occupancy\": 1053000000.0, \"Professional Services\": 1623000000.0, \"Other Non-Interest Expense\": 3210000000.0}"
+      ]
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "GS",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 12738000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 4078000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 411000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17227000000.0,
+      "gross_profit": 16912000000.0,
+      "operating_income": 6486000000.0,
+      "net_income": 5630000000.0,
+      "rd_expense": null,
+      "sga_expense": 10426000000.0,
+      "cogs": null,
+      "interest_expense": 315000000.0,
+      "income_tax": 856000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 5412000000.0, \"Technology & Equipment\": 583000000.0, \"Occupancy\": 254000000.0, \"Professional Services\": 379000000.0, \"Other Non-Interest Expense\": 602000000.0}"
+      ]
+    },
+    {
+      "ticker": "GS",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 10115000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 4399000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 670000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15184000000.0,
+      "gross_profit": 14845000000.0,
+      "operating_income": 5392000000.0,
+      "net_income": 4098000000.0,
+      "rd_expense": null,
+      "sga_expense": 9453000000.0,
+      "cogs": null,
+      "interest_expense": 339000000.0,
+      "income_tax": 1294000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 4680000000.0, \"Technology & Equipment\": 545000000.0, \"Occupancy\": 242000000.0, \"Professional Services\": 432000000.0, \"Other Non-Interest Expense\": 884000000.0}"
+      ]
+    },
+    {
+      "ticker": "GS",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 10120000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 3778000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 685000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14583000000.0,
+      "gross_profit": 14199000000.0,
+      "operating_income": 4958000000.0,
+      "net_income": 3723000000.0,
+      "rd_expense": null,
+      "sga_expense": 9241000000.0,
+      "cogs": null,
+      "interest_expense": 384000000.0,
+      "income_tax": 1235000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 4685000000.0, \"Technology & Equipment\": 530000000.0, \"Occupancy\": 234000000.0, \"Professional Services\": 440000000.0, \"Other Non-Interest Expense\": 612000000.0}"
+      ]
+    },
+    {
+      "ticker": "GS",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 10707000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 3679000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 676000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15062000000.0,
+      "gross_profit": 14775000000.0,
+      "operating_income": 5647000000.0,
+      "net_income": 4738000000.0,
+      "rd_expense": null,
+      "sga_expense": 9128000000.0,
+      "cogs": null,
+      "interest_expense": 287000000.0,
+      "income_tax": 909000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 4876000000.0, \"Technology & Equipment\": 506000000.0, \"Occupancy\": 233000000.0, \"Professional Services\": 424000000.0, \"Other Non-Interest Expense\": 577000000.0}"
+      ]
+    },
+    {
+      "ticker": "GS",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 8554000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 3754000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 391000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12699000000.0,
+      "gross_profit": 12302000000.0,
+      "operating_income": 3987000000.0,
+      "net_income": 2990000000.0,
+      "rd_expense": null,
+      "sga_expense": 8315000000.0,
+      "cogs": null,
+      "interest_expense": 397000000.0,
+      "income_tax": 997000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 4122000000.0, \"Technology & Equipment\": 498000000.0, \"Occupancy\": 242000000.0, \"Professional Services\": 400000000.0, \"Other Non-Interest Expense\": 572000000.0}",
+        "Warning: total_revenue (12699000000) differs from Yahoo (53512000000) by 76.3%"
+      ]
+    },
+    {
+      "ticker": "GS",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 8184000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 3878000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 669000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12731000000.0,
+      "gross_profit": 12449000000.0,
+      "operating_income": 3916000000.0,
+      "net_income": 3043000000.0,
+      "rd_expense": null,
+      "sga_expense": 8533000000.0,
+      "cogs": null,
+      "interest_expense": 282000000.0,
+      "income_tax": 873000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 4240000000.0, \"Technology & Equipment\": 500000000.0, \"Occupancy\": 244000000.0, \"Professional Services\": 393000000.0, \"Other Non-Interest Expense\": 703000000.0}",
+        "Warning: total_revenue (12731000000) differs from Yahoo (53512000000) by 76.2%"
+      ]
+    },
+    {
+      "ticker": "GS",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 9726000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 3789000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 698000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14213000000.0,
+      "gross_profit": 13895000000.0,
+      "operating_income": 5237000000.0,
+      "net_income": 4132000000.0,
+      "rd_expense": null,
+      "sga_expense": 8658000000.0,
+      "cogs": null,
+      "interest_expense": 318000000.0,
+      "income_tax": 1105000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 4585000000.0, \"Technology & Equipment\": 470000000.0, \"Occupancy\": 247000000.0, \"Professional Services\": 384000000.0, \"Other Non-Interest Expense\": 695000000.0}",
+        "Warning: total_revenue (14213000000) differs from Yahoo (53512000000) by 73.4%"
+      ]
+    },
+    {
+      "ticker": "GS",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 8009000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 3230000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 578000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11817000000.0,
+      "gross_profit": 11810000000.0,
+      "operating_income": 2756000000.0,
+      "net_income": 2058000000.0,
+      "rd_expense": null,
+      "sga_expense": 9054000000.0,
+      "cogs": null,
+      "interest_expense": 7000000.0,
+      "income_tax": 698000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 4188000000.0, \"Technology & Equipment\": 468000000.0, \"Occupancy\": 267000000.0, \"Professional Services\": 377000000.0, \"Other Non-Interest Expense\": 654000000.0}",
+        "Warning: total_revenue (11817000000) differs from Yahoo (46254000000) by 74.5%"
+      ]
+    },
+    {
+      "ticker": "GS",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Global Banking & Markets",
+          "value": 7189000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset & Wealth Management",
+          "value": 3047000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 659000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10895000000.0,
+      "gross_profit": 10280000000.0,
+      "operating_income": 1736000000.0,
+      "net_income": 1216000000.0,
+      "rd_expense": null,
+      "sga_expense": 8544000000.0,
+      "cogs": null,
+      "interest_expense": 615000000.0,
+      "income_tax": 520000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 3619000000.0, \"Technology & Equipment\": 482000000.0, \"Occupancy\": 253000000.0, \"Professional Services\": 392000000.0, \"Other Non-Interest Expense\": 673000000.0}",
+        "Warning: total_revenue (10895000000) differs from Yahoo (46254000000) by 76.4%"
+      ]
+    }
+  ],
+  "ttm_revenue": 62056000000.0,
+  "ttm_operating_income": 22483000000.0,
+  "ttm_net_income": 18189000000.0,
+  "segment_trend": {
+    "Global Banking & Markets": [
+      {
+        "period": "2023Q2",
+        "value": 7189000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 8009000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 9726000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 8184000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 8554000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 10707000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 10120000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 10115000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 12738000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 29996000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 34943000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 41453000000.0,
+        "is_annual": true
+      }
+    ],
+    "Asset & Wealth Management": [
+      {
+        "period": "2023Q2",
+        "value": 3047000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 3230000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 3789000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3878000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 3754000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 3679000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 3778000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 4399000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 4078000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 13880000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 16142000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 16679000000.0,
+        "is_annual": true
+      }
+    ],
+    "Platform Solutions": [
+      {
+        "period": "2023Q2",
+        "value": 659000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 578000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 698000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 669000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 391000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 676000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 685000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 670000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 411000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 2378000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2427000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

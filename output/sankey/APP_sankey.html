@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AppLovin Corp. (APP) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AppLovin Corp. (APP) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>AppLovin Corp. <span style="opacity:0.7">(APP)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls">
+  <label for="period-select">Fiscal Year:</label>
+  <select id="period-select" onchange="switchPeriod(this.value)">
+    <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+  </select>
+  <span id="data-badge" style="margin-left:12px; font-size:12px; color:#666;"></span>
+</div>
+
+<div class="chart-container">
+  <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,187,120,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Advertising Solutions (100.0%)","Gross Profit (87.9%)","COGS (12.1%)","R&D (4.1%)","Other Operating Expenses","Operating Income (75.8%)","Income Tax","Net Income (60.8%)"],"source":[1,0,0,2,2,2,6,6],"target":[0,2,3,4,5,6,7,8],"value":[5481000000.0,4815577000.0,665140000.0,226510000.0,437153000.0,4151914000.0,519715000.0,3333751000.0]},"node":{"color":["#2ca02c","#1f77b4","#2ca02c","#d62728","#ff7f0e","#ffbb78","#2ca02c","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$5.5B (100.0%)","Advertising Solutions\u003cbr\u003e$5.5B (100.0%)","Gross Profit\u003cbr\u003e$4.8B (87.9%)","Cost of Revenue\u003cbr\u003e$665M (12.1%)","R&D\u003cbr\u003e$227M (4.1%)","Other OpEx\u003cbr\u003e$437M (8.0%)","Operating Income\u003cbr\u003e$4.2B (75.8%)","Income Tax\u003cbr\u003e$520M (9.5%)","Net Income\u003cbr\u003e$3.3B (60.8%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":60},"paper_bgcolor":"#fafafa","title":{"font":{"size":16},"text":"AppLovin Corp. (APP) — Financial Flow FY2025"},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": true, "displayModeBar": true, "modeBarButtonsToAdd": ["zoom2d", "pan2d", "resetScale2d"]}                    )                };            </script>        </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$5.5B (100.0%)", "Advertising Solutions<br>$5.5B (100.0%)", "Gross Profit<br>$4.8B (87.9%)", "Cost of Revenue<br>$665M (12.1%)", "R&D<br>$227M (4.1%)", "Other OpEx<br>$437M (8.0%)", "Operating Income<br>$4.2B (75.8%)", "Income Tax<br>$520M (9.5%)", "Net Income<br>$3.3B (60.8%)"], "node_colors": ["#2ca02c", "#1f77b4", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.5, 0.35, 0.75, 0.2, 0.6, 0.5, 0.65, 0.5], "link_sources": [1, 0, 0, 2, 2, 2, 6, 6], "link_targets": [0, 2, 3, 4, 5, 6, 7, 8], "link_values": [5481000000.0, 4815577000.0, 665140000.0, 226510000.0, 437153000.0, 4151914000.0, 519715000.0, 3333751000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Advertising Solutions (100.0%)", "Gross Profit (87.9%)", "COGS (12.1%)", "R&D (4.1%)", "Other Operating Expenses", "Operating Income (75.8%)", "Income Tax", "Net Income (60.8%)"], "title": "AppLovin Corp. (APP) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$4.7B (100.0%)", "Advertising<br>$3.2B (68.5%)", "Apps<br>$1.5B (31.5%)", "Gross Profit<br>$3.5B (75.2%)", "Cost of Revenue<br>$1.2B (24.8%)", "R&D<br>$639M (13.6%)", "Other OpEx<br>$1.0B (21.9%)", "Operating Income<br>$1.9B (39.8%)", "Net Income<br>$1.6B (33.5%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.2, 0.6, 0.5, 0.5], "link_sources": [1, 2, 0, 0, 3, 3, 3, 7], "link_targets": [0, 0, 3, 4, 5, 6, 7, 8], "link_values": [3224058000.0, 1485190000.0, 3542442000.0, 1166806000.0, 638689000.0, 1030294000.0, 1873459000.0, 1579776000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Advertising (68.5%)", "Apps (31.5%)", "Gross Profit (75.2%)", "COGS (24.8%)", "R&D (13.6%)", "Other Operating Expenses", "Operating Income (39.8%)", "Net Income (33.5%)"], "title": "AppLovin Corp. (APP) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$3.3B (100.0%)", "Apps<br>$1.4B (43.9%)", "In-App Purchases Revenue<br>$989M (30.1%)", "In-App Advertising Revenue<br>$452M (13.8%)", "Unallocated<br>$400M (12.2%)", "Gross Profit<br>$2.2B (67.7%)", "Cost of Revenue<br>$1.1B (32.3%)", "R&D<br>$592M (18.0%)", "Other OpEx<br>$983M (30.0%)", "Operating Income<br>$648M (19.7%)", "Income Tax<br>$24M (0.7%)", "Net Income<br>$357M (10.9%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.16666666666666666, 0.5, 0.8333333333333334, 0.98, 0.35, 0.75, 0.2, 0.6, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 0, 0, 5, 5, 5, 9, 9], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9, 10, 11], "link_values": [1441325000.0, 989007000.0, 452318000.0, 400437000.0, 2223896000.0, 1059191000.0, 592386000.0, 983303000.0, 648207000.0, 32830870.0, 356711000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Apps (43.9%)", "In-App Purchases Revenue (30.1%)", "In-App Advertising Revenue (13.8%)", "", "Gross Profit (67.7%)", "COGS (32.3%)", "R&D (18.0%)", "Other Operating Expenses", "Operating Income (19.7%)", "Income Tax", "Net Income (10.9%)"], "title": "AppLovin Corp. (APP) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  var layoutUpdate = {
+    "title.text": data.title,
+  };
+
+  Plotly.update("sankey-chart", update, layoutUpdate);
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+</script>
+</body>
+</html>
+
+
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>AppLovin Corp. (APP) Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>AppLovin Corp. operates primarily in the advertising solutions and app development sectors, with a significant focus on mobile advertising. Over the past three years, the company has demonstrated substantial revenue growth, with total revenue increasing from $3.28 billion in FY2023 to $5.48 billion in FY2025, reflecting a compound annual growth rate (CAGR) of approximately 36.5%.</p>
+<h3>Primary Business Segments</h3>
+<ol>
+<li>
+<p><strong>Advertising Solutions</strong>: This segment has become the cornerstone of AppLovin's revenue model, contributing $5.48 billion in FY2025, which represents a significant increase from $3.22 billion in FY2024. The growth in this segment is indicative of the company's strategic focus on enhancing its advertising technology and expanding its client base.</p>
+</li>
+<li>
+<p><strong>Apps</strong>: The Apps segment has also shown consistent growth, with revenues rising from $1.44 billion in FY2023 to $1.49 billion in FY2024. However, it is overshadowed by the rapid expansion of the Advertising Solutions segment.</p>
+</li>
+<li>
+<p><strong>In-App Purchases and In-App Advertising</strong>: These revenue streams contributed $989 million and $452 million, respectively, in FY2023. The first quarter of FY2024 saw a continuation of this trend, with in-app purchases generating $361 million and in-app advertising $168 million.</p>
+</li>
+</ol>
+<h3>Revenue Mix Evolution</h3>
+<p>The revenue mix has evolved significantly, with a clear shift towards advertising solutions. In FY2023, the combined revenue from in-app purchases and advertising was approximately $1.44 billion, while in FY2024, the advertising segment alone accounted for $3.22 billion. This shift indicates a strategic pivot towards higher-margin advertising services, which are likely to drive future growth.</p>
+<h2>Earnings &amp; Profitability</h2>
+<h3>Margin Analysis</h3>
+<p>AppLovin's operating margin has shown a remarkable improvement, increasing from 19.7% in FY2023 to 75.8% in FY2025. This increase is primarily driven by the high-margin nature of the Advertising Solutions segment, which has a significantly higher operating margin compared to the Apps segment.</p>
+<ul>
+<li><strong>FY2023</strong>: Operating income was $648 million, with an operating margin of 19.7%.</li>
+<li><strong>FY2024</strong>: Operating income rose to $1.87 billion, with an operating margin of 39.8%.</li>
+<li><strong>FY2025</strong>: Operating income surged to $4.15 billion, with an operating margin of 75.8%.</li>
+</ul>
+<h3>Cost Drivers</h3>
+<p>The major cost drivers for AppLovin include research and development (R&amp;D) expenses, which amounted to $227 million in FY2025, and $639 million in FY2024. The increase in R&amp;D spending reflects the company's commitment to enhancing its technology and product offerings. However, specific SG&amp;A expenses are not disclosed, making it challenging to assess the full cost structure.</p>
+<h3>Operating Leverage</h3>
+<p>The significant increase in operating income relative to revenue growth indicates strong operating leverage. As AppLovin scales its advertising solutions, the fixed costs associated with technology and infrastructure are spread over a larger revenue base, enhancing profitability.</p>
+<h2>Business Model Summary</h2>
+<p>AppLovin Corp. effectively converts revenue into earnings through its focus on high-margin advertising solutions. The company's business model leverages its technology platform to provide targeted advertising services, which are increasingly becoming the primary revenue driver. The competitive positioning is strengthened by the robust growth in the advertising segment, which has outpaced traditional app revenue streams.</p>
+<h3>Competitive Positioning</h3>
+<p>The segment structure reveals a clear competitive advantage in the advertising space, with AppLovin capitalizing on the growing demand for mobile advertising. The transition from a diversified revenue model to a concentrated focus on advertising solutions positions the company favorably in a rapidly evolving market.</p>
+<h3>Notable Shifts</h3>
+<p>The notable shift in revenue mix towards advertising solutions, coupled with the substantial improvement in operating margins, underscores AppLovin's strategic focus on high-growth, high-margin business areas. This evolution not only enhances profitability but also positions the company for sustained growth in the competitive landscape of mobile advertising.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$5.48B</td><td style="text-align:right">$4.71B</td><td style="text-align:right" class="yoy-pos">+16.4%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$665.1M</td><td style="text-align:right">$1.17B</td><td style="text-align:right" class="yoy-neg">-43.0%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$226.5M</td><td style="text-align:right">$638.7M</td><td style="text-align:right" class="yoy-neg">-64.5%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$4.15B</td><td style="text-align:right">$1.87B</td><td style="text-align:right" class="yoy-pos">+121.6%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">75.8%</td><td style="text-align:right">39.8%</td><td style="text-align:right" class="yoy-pos">+90.4%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$3.33B</td><td style="text-align:right">$1.58B</td><td style="text-align:right" class="yoy-pos">+111.0%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">60.8%</td><td style="text-align:right">33.5%</td><td style="text-align:right" class="yoy-pos">+81.3%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2025 Q3</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q2</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q1</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2024 Q3</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$1.08B</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$282.5M</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$163.9M</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$391.0M</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">36.2%</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$310.0M</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">28.7%</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$1.48B</td><td style="text-align:right">$1.06B</td><td style="text-align:right" class="yoy-pos">+40.3%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$271.2M</td><td style="text-align:right">$294.1M</td><td style="text-align:right" class="yoy-neg">-7.8%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$122.9M</td><td style="text-align:right">$155.3M</td><td style="text-align:right" class="yoy-neg">-20.9%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$663.5M</td><td style="text-align:right">$339.6M</td><td style="text-align:right" class="yoy-pos">+95.4%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">44.7%</td><td style="text-align:right">32.1%</td><td style="text-align:right" class="yoy-pos">+39.3%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$576.4M</td><td style="text-align:right">$236.2M</td><td style="text-align:right" class="yoy-pos">+144.1%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">38.8%</td><td style="text-align:right">22.3%</td><td style="text-align:right" class="yoy-pos">+74.0%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>2023 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section">
+  <h3>Segment Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td><td>$5.48B</td><td>$3.33B</td><td>1</td><td>100%</td><td>92%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$4.71B</td><td>$1.58B</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$3.28B</td><td>$356.7M</td><td>3</td><td>88%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td><td>$1.48B</td><td>$576.4M</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td><td>$1.08B</td><td>$310.0M</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$1.06B</td><td>$236.2M</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q1</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $5.48B revenue across 1 segments
+    &nbsp;<span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Advertising Solutions</td><td style='text-align:right'>$5.48B</td><td style='text-align:right'>100.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:100.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $4.71B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Advertising</td><td style='text-align:right'>$3.22B</td><td style='text-align:right'>68.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:68.5%'></div>  </div></td></tr><tr><td>Apps</td><td style='text-align:right'>$1.49B</td><td style='text-align:right'>31.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:31.5%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $3.28B revenue across 3 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Apps</td><td style='text-align:right'>$1.44B</td><td style='text-align:right'>43.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:43.9%'></div>  </div></td></tr><tr><td>In-App Purchases Revenue</td><td style='text-align:right'>$989.0M</td><td style='text-align:right'>30.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:30.1%'></div>  </div></td></tr><tr><td>In-App Advertising Revenue</td><td style='text-align:right'>$452.3M</td><td style='text-align:right'>13.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:13.8%'></div>  </div></td></tr><tr style='color:#888'><td><em>Other / Unallocated</em></td><td style='text-align:right'>$400.4M</td><td style='text-align:right'>12.2%</td><td></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Advertising Solutions</td><td style='text-align:right'>$5.48B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Advertising</td><td style='text-align:right'>—</td><td style='text-align:right'>$3.22B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Apps</td><td style='text-align:right'>—</td><td style='text-align:right'>$1.49B</td><td style='text-align:right'>$1.44B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>In-App Purchases Revenue</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$989.0M</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>In-App Advertising Revenue</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$452.3M</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Total Apps Revenue</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Software Platform</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 9 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 9 quarterly reports
+</div>
+</body>
+</html>

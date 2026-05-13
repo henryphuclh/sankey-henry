@@ -1,0 +1,620 @@
+{
+  "ticker": "TMO",
+  "name": "Thermo Fisher Scientific",
+  "latest_annual": {
+    "ticker": "TMO",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Life Sciences Solutions",
+        "value": 8781000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Analytical Instruments",
+        "value": 7353000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Specialty Diagnostics",
+        "value": 4604000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Laboratory Products and Biopharma Services",
+        "value": 23818000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 44556000000.0,
+    "gross_profit": null,
+    "operating_income": 7746000000.0,
+    "net_income": 6721000000.0,
+    "rd_expense": 1397000000.0,
+    "sga_expense": 8732000000.0,
+    "cogs": 26318000000.0,
+    "interest_expense": null,
+    "income_tax": -547000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "TMO",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Life Sciences Solutions",
+          "value": 8781000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Analytical Instruments",
+          "value": 7353000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Specialty Diagnostics",
+          "value": 4604000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Laboratory Products and Biopharma Services",
+          "value": 23818000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 44556000000.0,
+      "gross_profit": null,
+      "operating_income": 7746000000.0,
+      "net_income": 6721000000.0,
+      "rd_expense": 1397000000.0,
+      "sga_expense": 8732000000.0,
+      "cogs": 26318000000.0,
+      "interest_expense": null,
+      "income_tax": -547000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "TMO",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Life Sciences Solutions",
+          "value": 8160000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Analytical Instruments",
+          "value": 7267000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Specialty Diagnostics",
+          "value": 4449000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Laboratory Products and Biopharma Services",
+          "value": 23002000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 42879000000.0,
+      "gross_profit": null,
+      "operating_income": 7337000000.0,
+      "net_income": 6338000000.0,
+      "rd_expense": 1390000000.0,
+      "sga_expense": 8595000000.0,
+      "cogs": 25177000000.0,
+      "interest_expense": null,
+      "income_tax": -657000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "TMO",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Service revenues",
+          "value": 17614000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consumables",
+          "value": 17597000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Instruments",
+          "value": 7646000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 42857000000.0,
+      "gross_profit": null,
+      "operating_income": 6859000000.0,
+      "net_income": 5955000000.0,
+      "rd_expense": 1337000000.0,
+      "sga_expense": 8445000000.0,
+      "cogs": 25757000000.0,
+      "interest_expense": -1375000000.0,
+      "income_tax": -284000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "TMO",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TMO",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TMO",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Life Sciences Solutions",
+          "value": 1954000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Analytical Instruments",
+          "value": 1677000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Specialty Diagnostics",
+          "value": 1130000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Laboratory Products and Biopharma Services",
+          "value": 5603000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10364000000.0,
+      "gross_profit": null,
+      "operating_income": 1716000000.0,
+      "net_income": 1511000000.0,
+      "rd_expense": 342000000.0,
+      "sga_expense": 2078000000.0,
+      "cogs": 6129000000.0,
+      "interest_expense": null,
+      "income_tax": -95000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "TMO",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TMO",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Service revenues",
+          "value": 4378000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consumables",
+          "value": 4363000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Instruments",
+          "value": 1800000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10541000000.0,
+      "gross_profit": null,
+      "operating_income": 1820000000.0,
+      "net_income": 1553000000.0,
+      "rd_expense": 339000000.0,
+      "sga_expense": 2111000000.0,
+      "cogs": 6194000000.0,
+      "interest_expense": null,
+      "income_tax": -128000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (10541000000) differs from Yahoo (42879000000) by 75.4%"
+      ]
+    },
+    {
+      "ticker": "TMO",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Service revenues",
+          "value": 4390000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consumables",
+          "value": 4328000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Instruments",
+          "value": 1627000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10345000000.0,
+      "gross_profit": null,
+      "operating_income": 1663000000.0,
+      "net_income": 1331000000.0,
+      "rd_expense": 331000000.0,
+      "sga_expense": 2183000000.0,
+      "cogs": 6140000000.0,
+      "interest_expense": -363000000.0,
+      "income_tax": -281000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (10345000000) differs from Yahoo (42879000000) by 75.9%"
+      ]
+    },
+    {
+      "ticker": "TMO",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TMO",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TMO",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 10364000000.0,
+  "ttm_operating_income": 1716000000.0,
+  "ttm_net_income": 1511000000.0,
+  "segment_trend": {
+    "Service revenues": [
+      {
+        "period": "2024Q1",
+        "value": 4390000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4378000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 17614000000.0,
+        "is_annual": true
+      }
+    ],
+    "Consumables": [
+      {
+        "period": "2024Q1",
+        "value": 4328000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4363000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 17597000000.0,
+        "is_annual": true
+      }
+    ],
+    "Instruments": [
+      {
+        "period": "2024Q1",
+        "value": 1627000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1800000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 7646000000.0,
+        "is_annual": true
+      }
+    ],
+    "Life Sciences Solutions": [
+      {
+        "period": "2025Q1",
+        "value": 1954000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 8160000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 8781000000.0,
+        "is_annual": true
+      }
+    ],
+    "Analytical Instruments": [
+      {
+        "period": "2025Q1",
+        "value": 1677000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 7267000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 7353000000.0,
+        "is_annual": true
+      }
+    ],
+    "Specialty Diagnostics": [
+      {
+        "period": "2025Q1",
+        "value": 1130000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 4449000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4604000000.0,
+        "is_annual": true
+      }
+    ],
+    "Laboratory Products and Biopharma Services": [
+      {
+        "period": "2025Q1",
+        "value": 5603000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 23002000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 23818000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

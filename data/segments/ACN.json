@@ -1,0 +1,504 @@
+{
+  "ticker": "ACN",
+  "name": "Accenture plc",
+  "latest_annual": {
+    "ticker": "ACN",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [],
+    "total_revenue": null,
+    "gross_profit": null,
+    "operating_income": null,
+    "net_income": null,
+    "rd_expense": null,
+    "sga_expense": null,
+    "cogs": null,
+    "interest_expense": null,
+    "income_tax": null,
+    "currency": "USD",
+    "extraction_method": "edgar",
+    "confidence": 0.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "ACN",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ACN",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ACN",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "ACN",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Americas",
+          "value": 8896402000.0,
+          "unit": "USD",
+          "period": "2026-02-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 6569391000.0,
+          "unit": "USD",
+          "period": "2026-02-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific",
+          "value": 2578273000.0,
+          "unit": "USD",
+          "period": "2026-02-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 18044066000.0,
+      "gross_profit": null,
+      "operating_income": 2493547000.0,
+      "net_income": 1825239000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 12584705000.0,
+      "interest_expense": -63566000.0,
+      "income_tax": 597266000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ACN",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ACN",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Americas",
+          "value": 8966131000.0,
+          "unit": "USD",
+          "period": "2025-05-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 6231849000.0,
+          "unit": "USD",
+          "period": "2025-05-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific",
+          "value": 2529891000.0,
+          "unit": "USD",
+          "period": "2025-05-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17727871000.0,
+      "gross_profit": null,
+      "operating_income": 2982782000.0,
+      "net_income": 2197501000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 11901221000.0,
+      "interest_expense": -67601000.0,
+      "income_tax": 707176000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ACN",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Americas",
+          "value": 8553098000.0,
+          "unit": "USD",
+          "period": "2025-02-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 5803875000.0,
+          "unit": "USD",
+          "period": "2025-02-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific",
+          "value": 2302328000.0,
+          "unit": "USD",
+          "period": "2025-02-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16659301000.0,
+      "gross_profit": null,
+      "operating_income": 2244714000.0,
+      "net_income": 1788075000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 11684313000.0,
+      "interest_expense": -64669000.0,
+      "income_tax": 466333000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ACN",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ACN",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "North America",
+          "value": 7834206000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 5776624000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Growth Markets",
+          "value": 2855998000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 16466828000.0,
+      "gross_profit": null,
+      "operating_income": 2630865000.0,
+      "net_income": 1932183000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 10968377000.0,
+      "interest_expense": -11334000.0,
+      "income_tax": 673022000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (16466828000) differs from Yahoo (64896464000) by 74.6%"
+      ]
+    },
+    {
+      "ticker": "ACN",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "North America",
+          "value": 7376812000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 5598850000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Growth Markets",
+          "value": 2823852000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 15799514000.0,
+      "gross_profit": null,
+      "operating_income": 2046427000.0,
+      "net_income": 1674859000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 10921045000.0,
+      "interest_expense": -10305000.0,
+      "income_tax": 386537000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (15799514000) differs from Yahoo (64896464000) by 75.7%"
+      ]
+    },
+    {
+      "ticker": "ACN",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ACN",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 52431238000.0,
+  "ttm_operating_income": 7721043000.0,
+  "ttm_net_income": 5810815000.0,
+  "segment_trend": {
+    "North America": [
+      {
+        "period": "2024Q1",
+        "value": 7376812000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 7834206000.0,
+        "is_annual": false
+      }
+    ],
+    "EMEA": [
+      {
+        "period": "2024Q1",
+        "value": 5598850000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 5776624000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 5803875000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 6231849000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 6569391000.0,
+        "is_annual": false
+      }
+    ],
+    "Growth Markets": [
+      {
+        "period": "2024Q1",
+        "value": 2823852000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2855998000.0,
+        "is_annual": false
+      }
+    ],
+    "Americas": [
+      {
+        "period": "2025Q1",
+        "value": 8553098000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 8966131000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 8896402000.0,
+        "is_annual": false
+      }
+    ],
+    "Asia Pacific": [
+      {
+        "period": "2025Q1",
+        "value": 2302328000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 2529891000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 2578273000.0,
+        "is_annual": false
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

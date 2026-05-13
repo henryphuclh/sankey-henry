@@ -1,0 +1,428 @@
+{
+  "ticker": "NFLX",
+  "name": "Netflix Inc.",
+  "latest_annual": {
+    "ticker": "NFLX",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Single Operating Segment",
+        "value": 45183000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 45183036000.0,
+    "gross_profit": null,
+    "operating_income": 13326603000.0,
+    "net_income": 10981201000.0,
+    "rd_expense": 3391390000.0,
+    "sga_expense": null,
+    "cogs": 23275329000.0,
+    "interest_expense": null,
+    "income_tax": -1741351000.0,
+    "currency": "USD",
+    "extraction_method": "edgar+llm",
+    "confidence": 0.92,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "NFLX",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Single Operating Segment",
+          "value": 45183000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 45183036000.0,
+      "gross_profit": null,
+      "operating_income": 13326603000.0,
+      "net_income": 10981201000.0,
+      "rd_expense": 3391390000.0,
+      "sga_expense": null,
+      "cogs": 23275329000.0,
+      "interest_expense": null,
+      "income_tax": -1741351000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 0.92,
+      "notes": []
+    },
+    {
+      "ticker": "NFLX",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Single Operating Segment",
+          "value": 39000966000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 39000966000.0,
+      "gross_profit": null,
+      "operating_income": 10417614000.0,
+      "net_income": 8711631000.0,
+      "rd_expense": 2925295000.0,
+      "sga_expense": null,
+      "cogs": 21038464000.0,
+      "interest_expense": null,
+      "income_tax": -1254026000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 0.92,
+      "notes": []
+    },
+    {
+      "ticker": "NFLX",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "United States",
+          "value": 33723297000.0,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 33723297000.0,
+      "gross_profit": null,
+      "operating_income": 6954003000.0,
+      "net_income": 5407990000.0,
+      "rd_expense": 2675758000.0,
+      "sga_expense": null,
+      "cogs": 19715368000.0,
+      "interest_expense": -699826000.0,
+      "income_tax": -797415000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 0.96,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "NFLX",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Single Operating Segment",
+          "value": 12249757000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 12249757000.0,
+      "gross_profit": null,
+      "operating_income": 3956997000.0,
+      "net_income": 5282791000.0,
+      "rd_expense": 959696000.0,
+      "sga_expense": null,
+      "cogs": 5888238000.0,
+      "interest_expense": null,
+      "income_tax": -1264295000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 0.92,
+      "notes": []
+    },
+    {
+      "ticker": "NFLX",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "NFLX",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "NFLX",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Single Operating Segment",
+          "value": 10542801000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 10542801000.0,
+      "gross_profit": null,
+      "operating_income": 3346999000.0,
+      "net_income": 2890351000.0,
+      "rd_expense": 822823000.0,
+      "sga_expense": null,
+      "cogs": 5263147000.0,
+      "interest_expense": null,
+      "income_tax": -323375000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 0.92,
+      "notes": []
+    },
+    {
+      "ticker": "NFLX",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "NFLX",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "United States",
+          "value": 9559310000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 9559310000.0,
+      "gross_profit": null,
+      "operating_income": 2602837000.0,
+      "net_income": 2147306000.0,
+      "rd_expense": 711254000.0,
+      "sga_expense": null,
+      "cogs": 5174143000.0,
+      "interest_expense": -167986000.0,
+      "income_tax": -366550000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 0.96,
+      "notes": [
+        "Warning: total_revenue (9559310000) differs from Yahoo (39000966000) by 75.5%"
+      ]
+    },
+    {
+      "ticker": "NFLX",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "U.S.",
+          "value": 9370440000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 9370440000.0,
+      "gross_profit": null,
+      "operating_income": 2632534000.0,
+      "net_income": 2332209000.0,
+      "rd_expense": 702473000.0,
+      "sga_expense": null,
+      "cogs": 4977073000.0,
+      "interest_expense": -173314000.0,
+      "income_tax": -282370000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 0.96,
+      "notes": [
+        "Warning: total_revenue (9370440000) differs from Yahoo (39000966000) by 76.0%"
+      ]
+    },
+    {
+      "ticker": "NFLX",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "NFLX",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "NFLX",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 22792558000.0,
+  "ttm_operating_income": 7303996000.0,
+  "ttm_net_income": 8173142000.0,
+  "segment_trend": {
+    "U.S.": [
+      {
+        "period": "2024Q1",
+        "value": 9370440000.0,
+        "is_annual": false
+      }
+    ],
+    "United States": [
+      {
+        "period": "2024Q2",
+        "value": 9559310000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 33723297000.0,
+        "is_annual": true
+      }
+    ],
+    "Single Operating Segment": [
+      {
+        "period": "2025Q1",
+        "value": 10542801000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 12249757000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 39000966000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 45183000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 10,
+  "has_partial_data": false,
+  "data_notes": []
+}

@@ -1,0 +1,572 @@
+{
+  "ticker": "MU",
+  "name": "Micron Technology",
+  "latest_annual": {
+    "ticker": "MU",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [],
+    "total_revenue": null,
+    "gross_profit": null,
+    "operating_income": null,
+    "net_income": null,
+    "rd_expense": null,
+    "sga_expense": null,
+    "cogs": null,
+    "interest_expense": null,
+    "income_tax": null,
+    "currency": "USD",
+    "extraction_method": "edgar",
+    "confidence": 0.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "MU",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MU",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MU",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "MU",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "CMBU",
+          "value": 7749000000.0,
+          "unit": "USD",
+          "period": "2026-02-26 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CDBU",
+          "value": 5687000000.0,
+          "unit": "USD",
+          "period": "2026-02-26 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "MCBU",
+          "value": 7711000000.0,
+          "unit": "USD",
+          "period": "2026-02-26 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "AEBU",
+          "value": 2708000000.0,
+          "unit": "USD",
+          "period": "2026-02-26 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All other",
+          "value": 5000000.0,
+          "unit": "USD",
+          "period": "2026-02-26 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 23860000000.0,
+      "gross_profit": 17755000000.0,
+      "operating_income": 16135000000.0,
+      "net_income": 13785000000.0,
+      "rd_expense": 1250000000.0,
+      "sga_expense": 344000000.0,
+      "cogs": 6105000000.0,
+      "interest_expense": null,
+      "income_tax": -2371000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "MU",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MU",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MU",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "CNBU",
+          "value": 4564000000.0,
+          "unit": "USD",
+          "period": "2025-02-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "SBU",
+          "value": 1392000000.0,
+          "unit": "USD",
+          "period": "2025-02-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CMBU",
+          "value": 1068000000.0,
+          "unit": "USD",
+          "period": "2025-02-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "AEBU",
+          "value": 1025000000.0,
+          "unit": "USD",
+          "period": "2025-02-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All other",
+          "value": 4000000.0,
+          "unit": "USD",
+          "period": "2025-02-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8053000000.0,
+      "gross_profit": 2963000000.0,
+      "operating_income": 1773000000.0,
+      "net_income": 1583000000.0,
+      "rd_expense": 898000000.0,
+      "sga_expense": 285000000.0,
+      "cogs": 5090000000.0,
+      "interest_expense": null,
+      "income_tax": -177000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "MU",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MU",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "CNBU",
+          "value": 2573000000.0,
+          "unit": "USD",
+          "period": "2024-05-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CMBU",
+          "value": 1588000000.0,
+          "unit": "USD",
+          "period": "2024-05-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "AEBU",
+          "value": 1294000000.0,
+          "unit": "USD",
+          "period": "2024-05-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "SBU",
+          "value": 1353000000.0,
+          "unit": "USD",
+          "period": "2024-05-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All other",
+          "value": 3000000.0,
+          "unit": "USD",
+          "period": "2024-05-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6811000000.0,
+      "gross_profit": 1832000000.0,
+      "operating_income": 719000000.0,
+      "net_income": 332000000.0,
+      "rd_expense": 850000000.0,
+      "sga_expense": 291000000.0,
+      "cogs": 4979000000.0,
+      "interest_expense": -150000000.0,
+      "income_tax": -377000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6811000000) differs from Yahoo (25111000000) by 72.9%"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "CNBU",
+          "value": 2185000000.0,
+          "unit": "USD",
+          "period": "2024-02-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CMBU",
+          "value": 1598000000.0,
+          "unit": "USD",
+          "period": "2024-02-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "AEBU",
+          "value": 1111000000.0,
+          "unit": "USD",
+          "period": "2024-02-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "SBU",
+          "value": 905000000.0,
+          "unit": "USD",
+          "period": "2024-02-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All other",
+          "value": 25000000.0,
+          "unit": "USD",
+          "period": "2024-02-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 5824000000.0,
+      "gross_profit": 1079000000.0,
+      "operating_income": 191000000.0,
+      "net_income": 793000000.0,
+      "rd_expense": 832000000.0,
+      "sga_expense": 280000000.0,
+      "cogs": 4745000000.0,
+      "interest_expense": -144000000.0,
+      "income_tax": 622000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (5824000000) differs from Yahoo (25111000000) by 76.8%"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "MU",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 31913000000.0,
+  "ttm_operating_income": 17908000000.0,
+  "ttm_net_income": 15368000000.0,
+  "segment_trend": {
+    "CNBU": [
+      {
+        "period": "2024Q1",
+        "value": 2185000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2573000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4564000000.0,
+        "is_annual": false
+      }
+    ],
+    "CMBU": [
+      {
+        "period": "2024Q1",
+        "value": 1598000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1588000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1068000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 7749000000.0,
+        "is_annual": false
+      }
+    ],
+    "AEBU": [
+      {
+        "period": "2024Q1",
+        "value": 1111000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1294000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1025000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 2708000000.0,
+        "is_annual": false
+      }
+    ],
+    "SBU": [
+      {
+        "period": "2024Q1",
+        "value": 905000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1353000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1392000000.0,
+        "is_annual": false
+      }
+    ],
+    "All other": [
+      {
+        "period": "2024Q1",
+        "value": 25000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 5000000.0,
+        "is_annual": false
+      }
+    ],
+    "CDBU": [
+      {
+        "period": "2026Q1",
+        "value": 5687000000.0,
+        "is_annual": false
+      }
+    ],
+    "MCBU": [
+      {
+        "period": "2026Q1",
+        "value": 7711000000.0,
+        "is_annual": false
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

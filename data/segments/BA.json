@@ -1,0 +1,606 @@
+{
+  "ticker": "BA",
+  "name": "Boeing Company",
+  "latest_annual": {
+    "ticker": "BA",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Commercial Airplanes",
+        "value": 41494000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Defense, Space & Security",
+        "value": 27234000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Global Services",
+        "value": 20923000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 89463000000.0,
+    "gross_profit": 4289000000.0,
+    "operating_income": 4281000000.0,
+    "net_income": 2238000000.0,
+    "rd_expense": -3615000000.0,
+    "sga_expense": null,
+    "cogs": -85174000000.0,
+    "interest_expense": null,
+    "income_tax": -397000000.0,
+    "currency": "USD",
+    "extraction_method": "edgar+llm",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "BA",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Commercial Airplanes",
+          "value": 41494000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Defense, Space & Security",
+          "value": 27234000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Services",
+          "value": 20923000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 89463000000.0,
+      "gross_profit": 4289000000.0,
+      "operating_income": 4281000000.0,
+      "net_income": 2238000000.0,
+      "rd_expense": -3615000000.0,
+      "sga_expense": null,
+      "cogs": -85174000000.0,
+      "interest_expense": null,
+      "income_tax": -397000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "BA",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Commercial Airplanes",
+          "value": 22861000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Defense, Space & Security",
+          "value": 23918000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Services",
+          "value": 19954000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 66517000000.0,
+      "gross_profit": -1991000000.0,
+      "operating_income": -10707000000.0,
+      "net_income": -11829000000.0,
+      "rd_expense": -3812000000.0,
+      "sga_expense": null,
+      "cogs": -68508000000.0,
+      "interest_expense": null,
+      "income_tax": 381000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "BA",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Commercial Airplanes",
+          "value": 33901000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Defense, Space & Security",
+          "value": 24933000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Services",
+          "value": 19127000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 77794000000.0,
+      "gross_profit": 7724000000.0,
+      "operating_income": -773000000.0,
+      "net_income": -2242000000.0,
+      "rd_expense": -3377000000.0,
+      "sga_expense": null,
+      "cogs": -70070000000.0,
+      "interest_expense": null,
+      "income_tax": -237000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "BA",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "BA",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "BA",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Commercial Airplanes",
+          "value": 8147000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Defense, Space & Security",
+          "value": 6298000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Services",
+          "value": 5063000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Intersegment revenues eliminated on consolidation",
+          "value": 96000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 19496000000.0,
+      "gross_profit": 2417000000.0,
+      "operating_income": 461000000.0,
+      "net_income": -37000000.0,
+      "rd_expense": -844000000.0,
+      "sga_expense": null,
+      "cogs": -17079000000.0,
+      "interest_expense": null,
+      "income_tax": -107000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "BA",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "BA",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Intersegment revenues eliminated on consolidation",
+          "value": 94000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Airplanes",
+          "value": 6003000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Defense, Space & Security",
+          "value": 6021000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Services",
+          "value": 4889000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16866000000.0,
+      "gross_profit": 1229000000.0,
+      "operating_income": -1090000000.0,
+      "net_income": -1439000000.0,
+      "rd_expense": -954000000.0,
+      "sga_expense": null,
+      "cogs": -15637000000.0,
+      "interest_expense": null,
+      "income_tax": 76000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (16866000000) differs from Yahoo (66517000000) by 74.6%"
+      ]
+    },
+    {
+      "ticker": "BA",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Intersegment revenues eliminated on consolidation",
+          "value": 111000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Airplanes",
+          "value": 4653000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Defense, Space & Security",
+          "value": 6950000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Services",
+          "value": 5045000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16569000000.0,
+      "gross_profit": 1876000000.0,
+      "operating_income": -86000000.0,
+      "net_income": -355000000.0,
+      "rd_expense": -868000000.0,
+      "sga_expense": null,
+      "cogs": -14693000000.0,
+      "interest_expense": null,
+      "income_tax": 23000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (16569000000) differs from Yahoo (66517000000) by 75.1%"
+      ]
+    },
+    {
+      "ticker": "BA",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "BA",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "BA",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 19496000000.0,
+  "ttm_operating_income": 461000000.0,
+  "ttm_net_income": -37000000.0,
+  "segment_trend": {
+    "Intersegment revenues eliminated on consolidation": [
+      {
+        "period": "2024Q1",
+        "value": 111000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 94000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 96000000.0,
+        "is_annual": false
+      }
+    ],
+    "Commercial Airplanes": [
+      {
+        "period": "2024Q1",
+        "value": 4653000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 6003000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 8147000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 33901000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 22861000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 41494000000.0,
+        "is_annual": true
+      }
+    ],
+    "Defense, Space & Security": [
+      {
+        "period": "2024Q1",
+        "value": 6950000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 6021000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 6298000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 24933000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 23918000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 27234000000.0,
+        "is_annual": true
+      }
+    ],
+    "Global Services": [
+      {
+        "period": "2024Q1",
+        "value": 5045000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4889000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 5063000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 19127000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 19954000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 20923000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

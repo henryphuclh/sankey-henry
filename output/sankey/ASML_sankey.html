@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ASML Holding NV (ASML) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASML Holding NV (ASML) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>ASML Holding NV <span style="opacity:0.7">(ASML)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls">
+  <label for="period-select">Fiscal Year:</label>
+  <select id="period-select" onchange="switchPeriod(this.value)">
+    <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+  </select>
+  <span id="data-badge" style="margin-left:12px; font-size:12px; color:#666;"></span>
+</div>
+
+<div class="chart-container">
+  <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(198,219,239,0.4)","rgba(33,113,181,0.4)","rgba(8,69,148,0.4)","rgba(44,127,184,0.4)","rgba(44,160,44,0.4)","rgba(255,187,120,0.4)","rgba(44,160,44,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["NXE (32.0%)","ArF immersion (31.6%)","Net service and field option sales (25.1%)","EXE (3.5%)","KrF (3.1%)","Metrology & Inspection (2.5%)","Net system sales (1.8%)","Other: ArF dry, I-line","Gross Profit (52.8%)","Other Operating Expenses","Operating Income (34.6%)","Net Income (29.4%)"],"source":[1,2,3,4,5,6,7,8,0,9,9,11],"target":[0,0,0,0,0,0,0,0,9,10,11,12],"value":[10445800000.0,10311400000.0,8193000000.0,1156900000.0,1001300000.0,824600000.0,575700000.0,734300000.0,17258000000.0,11913200000.0,11301400000.0,9609400000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#c6dbef","#2171b5","#084594","#2c7fb8","#2ca02c","#ffbb78","#2ca02c","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$32.7B (100.0%)","NXE\u003cbr\u003e$10.4B (32.0%)","ArF immersion\u003cbr\u003e$10.3B (31.6%)","Net service and field option sales\u003cbr\u003e$8.2B (25.1%)","EXE\u003cbr\u003e$1.2B (3.5%)","KrF\u003cbr\u003e$1.0B (3.1%)","Metrology & Inspection\u003cbr\u003e$825M (2.5%)","Net system sales\u003cbr\u003e$576M (1.8%)","Other\u003cbr\u003e$734M (2.2%)","Gross Profit\u003cbr\u003e$17.3B (52.8%)","Other OpEx\u003cbr\u003e$11.9B (36.5%)","Operating Income\u003cbr\u003e$11.3B (34.6%)","Net Income\u003cbr\u003e$9.6B (29.4%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":60},"paper_bgcolor":"#fafafa","title":{"font":{"size":16},"text":"ASML Holding NV (ASML) — Financial Flow FY2025"},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": true, "displayModeBar": true, "modeBarButtonsToAdd": ["zoom2d", "pan2d", "resetScale2d"]}                    )                };            </script>        </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$32.7B (100.0%)", "NXE<br>$10.4B (32.0%)", "ArF immersion<br>$10.3B (31.6%)", "Net service and field option sales<br>$8.2B (25.1%)", "EXE<br>$1.2B (3.5%)", "KrF<br>$1.0B (3.1%)", "Metrology & Inspection<br>$825M (2.5%)", "Net system sales<br>$576M (1.8%)", "Other<br>$734M (2.2%)", "Gross Profit<br>$17.3B (52.8%)", "Other OpEx<br>$11.9B (36.5%)", "Operating Income<br>$11.3B (34.6%)", "Net Income<br>$9.6B (29.4%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#084594", "#2c7fb8", "#2ca02c", "#ffbb78", "#2ca02c", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.6, 0.75, 1.0], "node_y": [0.5, 0.0625, 0.1875, 0.3125, 0.4375, 0.5625, 0.6875, 0.8125, 0.9375, 0.35, 0.6, 0.5, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 7, 8, 0, 9, 9, 11], "link_targets": [0, 0, 0, 0, 0, 0, 0, 0, 9, 10, 11, 12], "link_values": [10445800000.0, 10311400000.0, 8193000000.0, 1156900000.0, 1001300000.0, 824600000.0, 575700000.0, 734300000.0, 17258000000.0, 11913200000.0, 11301400000.0, 9609400000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(8,69,148,0.4)", "rgba(44,127,184,0.4)", "rgba(44,160,44,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["NXE (32.0%)", "ArF immersion (31.6%)", "Net service and field option sales (25.1%)", "EXE (3.5%)", "KrF (3.1%)", "Metrology & Inspection (2.5%)", "Net system sales (1.8%)", "Other: ArF dry, I-line", "Gross Profit (52.8%)", "Other Operating Expenses", "Operating Income (34.6%)", "Net Income (29.4%)"], "title": "ASML Holding NV (ASML) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$28.3B (100.0%)", "ArF immersion<br>$9.7B (34.2%)", "NXE<br>$7.9B (27.8%)", "Net service and field option sales<br>$6.5B (23.0%)", "KrF<br>$2.0B (7.0%)", "ArF dry<br>$774M (2.7%)", "Metrology & Inspection<br>$646M (2.3%)", "Net system sales<br>$629M (2.2%)", "EXE<br>$465M (1.6%)", "Other<br>$369M (1.3%)", "Gross Profit<br>$14.5B (51.3%)", "Other OpEx<br>$10.9B (38.7%)", "Operating Income<br>$9.0B (31.9%)", "Net Income<br>$7.6B (26.8%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#084594", "#2c7fb8", "#41b6c4", "#2ca02c", "#ffbb78", "#2ca02c", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.6, 0.75, 1.0], "node_y": [0.5, 0.05555555555555555, 0.16666666666666666, 0.2777777777777778, 0.3888888888888889, 0.5, 0.6111111111111112, 0.7222222222222222, 0.8333333333333334, 0.9444444444444444, 0.35, 0.6, 0.5, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 10, 12], "link_targets": [0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 11, 12, 13], "link_values": [9667000000.0, 7856400000.0, 6494200000.0, 1991200000.0, 774400000.0, 645500000.0, 629000000.0, 465000000.0, 369200000.0, 14492000000.0, 10938800000.0, 9022600000.0, 7571600000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(8,69,148,0.4)", "rgba(44,127,184,0.4)", "rgba(65,182,196,0.4)", "rgba(44,160,44,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["ArF immersion (34.2%)", "NXE (27.8%)", "Net service and field option sales (23.0%)", "KrF (7.0%)", "ArF dry (2.7%)", "Metrology & Inspection (2.3%)", "Net system sales (2.2%)", "EXE (1.6%)", "Other: I-line", "Gross Profit (51.3%)", "Other Operating Expenses", "Operating Income (31.9%)", "Net Income (26.8%)"], "title": "ASML Holding NV (ASML) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  var layoutUpdate = {
+    "title.text": data.title,
+  };
+
+  Plotly.update("sankey-chart", update, layoutUpdate);
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+</script>
+</body>
+</html>
+
+
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>ASML Holding NV Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>ASML Holding NV operates primarily in the semiconductor equipment industry, with its revenue generated from several key segments. For FY2025, the total revenue reached <strong>$32.67 billion</strong>, with the following segments contributing significantly:</p>
+<ul>
+<li><strong>Net service and field option sales</strong>: <strong>$8.19 billion</strong> (25.1%)</li>
+<li><strong>NXE</strong>: <strong>$10.45 billion</strong> (32.0%)</li>
+<li><strong>ArF immersion</strong>: <strong>$10.31 billion</strong> (31.6%)</li>
+<li><strong>EXE</strong>: <strong>$1.16 billion</strong> (3.5%)</li>
+<li><strong>KrF</strong>: <strong>$1.00 billion</strong> (3.1%)</li>
+<li><strong>Metrology &amp; Inspection</strong>: <strong>$825 million</strong> (2.5%)</li>
+<li><strong>Net system sales</strong>: <strong>$576 million</strong> (1.8%)</li>
+<li><strong>ArF dry</strong>: <strong>$427 million</strong> (1.3%)</li>
+<li><strong>I-line</strong>: <strong>$307 million</strong> (0.9%)</li>
+</ul>
+<p>The revenue mix has evolved notably from FY2024 to FY2025. The <strong>NXE</strong> segment saw a substantial increase from <strong>$7.86 billion</strong> to <strong>$10.45 billion</strong>, indicating strong demand for advanced lithography systems. Similarly, <strong>Net service and field option sales</strong> grew from <strong>$6.49 billion</strong> to <strong>$8.19 billion</strong>, reflecting ASML's focus on providing ongoing support and services to its customers. However, segments like <strong>ArF dry</strong> and <strong>Net system sales</strong> experienced declines, suggesting a shift in customer preferences towards more advanced technologies.</p>
+<p>Geographically, ASML's growth is driven by increasing semiconductor demand, particularly in regions such as Asia, where major semiconductor manufacturers are ramping up production capabilities.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>ASML's profitability is robust, with a gross profit of <strong>$17.26 billion</strong> and a gross margin of <strong>52.8%</strong> for FY2025. The operating income stood at <strong>$11.30 billion</strong>, yielding an operating margin of <strong>34.6%</strong>. This indicates a strong ability to convert revenue into profit, driven by high-margin products like the <strong>NXE</strong> and <strong>ArF immersion</strong> systems.</p>
+<p>The major cost drivers include:</p>
+<ul>
+<li><strong>R&amp;D Expense</strong>: <strong>$4.70 billion</strong> in FY2025, reflecting ASML's commitment to innovation and maintaining its technological edge.</li>
+<li><strong>SG&amp;A Expense</strong>: <strong>$1.26 billion</strong>, which supports sales and administrative functions.</li>
+</ul>
+<p>The operating leverage is evident as ASML continues to scale its operations while maintaining a high level of profitability. The increase in revenue from key segments has outpaced the growth in expenses, leading to improved margins.</p>
+<h2>Business Model Summary</h2>
+<p>ASML effectively converts revenue into earnings through its high-margin product offerings and a strong service component. The company's business model is centered around providing advanced lithography equipment and related services, which are critical for semiconductor manufacturing. The significant contribution from the <strong>NXE</strong> and <strong>ArF immersion</strong> segments underscores ASML's competitive positioning in the market.</p>
+<p>The segment structure reveals a notable shift towards higher-value products, as evidenced by the growth in the <strong>NXE</strong> segment and the decline in lower-margin segments like <strong>ArF dry</strong> and <strong>Net system sales</strong>. This shift not only enhances the overall margin profile but also positions ASML favorably against competitors in the semiconductor equipment space.</p>
+<p>In summary, ASML's business model is characterized by a strong focus on innovation, high-margin products, and a growing service component, which collectively drive its revenue and profitability. The company's ability to adapt to market demands and invest in R&amp;D ensures its competitive edge in the rapidly evolving semiconductor industry.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$32.67B</td><td style="text-align:right">$28.26B</td><td style="text-align:right" class="yoy-pos">+15.6%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">-$15.41B</td><td style="text-align:right">-$13.77B</td><td style="text-align:right" class="yoy-neg">-11.9%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$17.26B</td><td style="text-align:right">$14.49B</td><td style="text-align:right" class="yoy-pos">+19.1%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">52.8%</td><td style="text-align:right">51.3%</td><td style="text-align:right" class="yoy-pos">+3.0%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">-$4.70B</td><td style="text-align:right">-$4.30B</td><td style="text-align:right" class="yoy-neg">-9.2%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">-$1.26B</td><td style="text-align:right">-$1.17B</td><td style="text-align:right" class="yoy-neg">-7.9%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$11.30B</td><td style="text-align:right">$9.02B</td><td style="text-align:right" class="yoy-pos">+25.3%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">34.6%</td><td style="text-align:right">31.9%</td><td style="text-align:right" class="yoy-pos">+8.4%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$9.61B</td><td style="text-align:right">$7.57B</td><td style="text-align:right" class="yoy-pos">+26.9%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">29.4%</td><td style="text-align:right">26.8%</td><td style="text-align:right" class="yoy-pos">+9.8%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q4</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q3</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2025 Q2</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q4</th><th style='text-align:right'>2024 Q4</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section">
+  <h3>Segment Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$32.67B</td><td>$9.61B</td><td>9</td><td>102%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$28.26B</td><td>$7.57B</td><td>9</td><td>102%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q4</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $32.67B revenue across 9 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>NXE</td><td style='text-align:right'>$10.45B</td><td style='text-align:right'>32.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:32.0%'></div>  </div></td></tr><tr><td>ArF immersion</td><td style='text-align:right'>$10.31B</td><td style='text-align:right'>31.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:31.6%'></div>  </div></td></tr><tr><td>Net service and field option sales</td><td style='text-align:right'>$8.19B</td><td style='text-align:right'>25.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:25.1%'></div>  </div></td></tr><tr><td>EXE</td><td style='text-align:right'>$1.16B</td><td style='text-align:right'>3.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:3.5%'></div>  </div></td></tr><tr><td>KrF</td><td style='text-align:right'>$1.00B</td><td style='text-align:right'>3.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:3.1%'></div>  </div></td></tr><tr><td>Metrology & Inspection</td><td style='text-align:right'>$824.6M</td><td style='text-align:right'>2.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.5%'></div>  </div></td></tr><tr><td>Net system sales</td><td style='text-align:right'>$575.7M</td><td style='text-align:right'>1.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.8%'></div>  </div></td></tr><tr><td>ArF dry</td><td style='text-align:right'>$427.0M</td><td style='text-align:right'>1.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.3%'></div>  </div></td></tr><tr><td>I-line</td><td style='text-align:right'>$307.3M</td><td style='text-align:right'>0.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $28.26B revenue across 9 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>ArF immersion</td><td style='text-align:right'>$9.67B</td><td style='text-align:right'>34.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:34.2%'></div>  </div></td></tr><tr><td>NXE</td><td style='text-align:right'>$7.86B</td><td style='text-align:right'>27.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:27.8%'></div>  </div></td></tr><tr><td>Net service and field option sales</td><td style='text-align:right'>$6.49B</td><td style='text-align:right'>23.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.0%'></div>  </div></td></tr><tr><td>KrF</td><td style='text-align:right'>$1.99B</td><td style='text-align:right'>7.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.0%'></div>  </div></td></tr><tr><td>ArF dry</td><td style='text-align:right'>$774.4M</td><td style='text-align:right'>2.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.7%'></div>  </div></td></tr><tr><td>Metrology & Inspection</td><td style='text-align:right'>$645.5M</td><td style='text-align:right'>2.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.3%'></div>  </div></td></tr><tr><td>Net system sales</td><td style='text-align:right'>$629.0M</td><td style='text-align:right'>2.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.2%'></div>  </div></td></tr><tr><td>EXE</td><td style='text-align:right'>$465.0M</td><td style='text-align:right'>1.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.6%'></div>  </div></td></tr><tr><td>I-line</td><td style='text-align:right'>$369.2M</td><td style='text-align:right'>1.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.3%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>ArF immersion</td><td style='text-align:right'>$10.31B</td><td style='text-align:right'>$9.67B</td><td style='text-align:right;color:#28a745;font-weight:600'>+6.7%</td></tr><tr><td>NXE</td><td style='text-align:right'>$10.45B</td><td style='text-align:right'>$7.86B</td><td style='text-align:right;color:#28a745;font-weight:600'>+33.0%</td></tr><tr><td>Net service and field option sales</td><td style='text-align:right'>$8.19B</td><td style='text-align:right'>$6.49B</td><td style='text-align:right;color:#28a745;font-weight:600'>+26.2%</td></tr><tr><td>KrF</td><td style='text-align:right'>$1.00B</td><td style='text-align:right'>$1.99B</td><td style='text-align:right;color:#dc3545;font-weight:600'>-49.7%</td></tr><tr><td>EXE</td><td style='text-align:right'>$1.16B</td><td style='text-align:right'>$465.0M</td><td style='text-align:right;color:#28a745;font-weight:600'>+148.8%</td></tr><tr><td>Metrology & Inspection</td><td style='text-align:right'>$824.6M</td><td style='text-align:right'>$645.5M</td><td style='text-align:right;color:#28a745;font-weight:600'>+27.7%</td></tr><tr><td>Net system sales</td><td style='text-align:right'>$575.7M</td><td style='text-align:right'>$629.0M</td><td style='text-align:right;color:#dc3545;font-weight:600'>-8.5%</td></tr><tr><td>ArF dry</td><td style='text-align:right'>$427.0M</td><td style='text-align:right'>$774.4M</td><td style='text-align:right;color:#dc3545;font-weight:600'>-44.9%</td></tr><tr><td>I-line</td><td style='text-align:right'>$307.3M</td><td style='text-align:right'>$369.2M</td><td style='text-align:right;color:#dc3545;font-weight:600'>-16.8%</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 20 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 20 quarterly reports
+</div>
+</body>
+</html>

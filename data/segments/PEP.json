@@ -1,0 +1,1005 @@
+{
+  "ticker": "PEP",
+  "name": "PepsiCo Inc.",
+  "latest_annual": {
+    "ticker": "PEP",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "PepsiCo Foods North America",
+        "value": 27528000000.0,
+        "unit": "USD",
+        "period": "2025-12-27 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "PepsiCo Beverages North America",
+        "value": 28197000000.0,
+        "unit": "USD",
+        "period": "2025-12-27 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "International Beverage Franchise",
+        "value": 4997000000.0,
+        "unit": "USD",
+        "period": "2025-12-27 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Europe, Middle East & Africa (Segment)",
+        "value": 18025000000.0,
+        "unit": "USD",
+        "period": "2025-12-27 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Latin America Foods (Segment)",
+        "value": 10549000000.0,
+        "unit": "USD",
+        "period": "2025-12-27 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Asia Pacific Foods (Segment)",
+        "value": 4629000000.0,
+        "unit": "USD",
+        "period": "2025-12-27 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 93925000000.0,
+    "gross_profit": 50859000000.0,
+    "operating_income": 11498000000.0,
+    "net_income": 8295000000.0,
+    "rd_expense": null,
+    "sga_expense": 37368000000.0,
+    "cogs": 43066000000.0,
+    "interest_expense": -1121000000.0,
+    "income_tax": 1949000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "PEP",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "PepsiCo Foods North America",
+          "value": 27528000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PepsiCo Beverages North America",
+          "value": 28197000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Beverage Franchise",
+          "value": 4997000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe, Middle East & Africa (Segment)",
+          "value": 18025000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America Foods (Segment)",
+          "value": 10549000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific Foods (Segment)",
+          "value": 4629000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 93925000000.0,
+      "gross_profit": 50859000000.0,
+      "operating_income": 11498000000.0,
+      "net_income": 8295000000.0,
+      "rd_expense": null,
+      "sga_expense": 37368000000.0,
+      "cogs": 43066000000.0,
+      "interest_expense": -1121000000.0,
+      "income_tax": 1949000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PEP",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Frito Lay North America",
+          "value": 24755000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Quaker Foods North America",
+          "value": 2676000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PepsiCo Beverages North America",
+          "value": 27769000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 11718000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 13874000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Africa, Middle East and South Asia",
+          "value": 6217000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific, Australia and New Zealand, and China Region",
+          "value": 4845000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 91854000000.0,
+      "gross_profit": 50110000000.0,
+      "operating_income": 12887000000.0,
+      "net_income": 9626000000.0,
+      "rd_expense": null,
+      "sga_expense": 37190000000.0,
+      "cogs": 41744000000.0,
+      "interest_expense": -919000000.0,
+      "income_tax": 2320000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PEP",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Frito Lay North America",
+          "value": 24914000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Quaker Foods North America",
+          "value": 3101000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PepsiCo Beverages North America",
+          "value": 27626000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 11654000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 13234000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Africa, Middle East and South Asia",
+          "value": 6139000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific, Australia and New Zealand, and China Region",
+          "value": 4803000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 91471000000.0,
+      "gross_profit": 49590000000.0,
+      "operating_income": 11986000000.0,
+      "net_income": 9155000000.0,
+      "rd_expense": null,
+      "sga_expense": 36677000000.0,
+      "cogs": 41881000000.0,
+      "interest_expense": -819000000.0,
+      "income_tax": 2262000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "PEP",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "PepsiCo Foods North America",
+          "value": 6332000000.0,
+          "unit": "USD",
+          "period": "2026-03-21 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PepsiCo Beverages North America",
+          "value": 6391000000.0,
+          "unit": "USD",
+          "period": "2026-03-21 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Beverage Franchise",
+          "value": 824000000.0,
+          "unit": "USD",
+          "period": "2026-03-21 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe, Middle East & Africa (Segment)",
+          "value": 2823000000.0,
+          "unit": "USD",
+          "period": "2026-03-21 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America Foods (Segment)",
+          "value": 1934000000.0,
+          "unit": "USD",
+          "period": "2026-03-21 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific Foods (Segment)",
+          "value": 1139000000.0,
+          "unit": "USD",
+          "period": "2026-03-21 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 19443000000.0,
+      "gross_profit": 10731000000.0,
+      "operating_income": 3213000000.0,
+      "net_income": 2338000000.0,
+      "rd_expense": null,
+      "sga_expense": 7518000000.0,
+      "cogs": 8712000000.0,
+      "interest_expense": -301000000.0,
+      "income_tax": 632000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PEP",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PEP",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PEP",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "PepsiCo Foods North America",
+          "value": 6213000000.0,
+          "unit": "USD",
+          "period": "2025-03-22 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PepsiCo Beverages North America",
+          "value": 5876000000.0,
+          "unit": "USD",
+          "period": "2025-03-22 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Beverage Franchise",
+          "value": 759000000.0,
+          "unit": "USD",
+          "period": "2025-03-22 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe, Middle East & Africa (Segment)",
+          "value": 2388000000.0,
+          "unit": "USD",
+          "period": "2025-03-22 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America Foods (Segment)",
+          "value": 1661000000.0,
+          "unit": "USD",
+          "period": "2025-03-22 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific Foods (Segment)",
+          "value": 1022000000.0,
+          "unit": "USD",
+          "period": "2025-03-22 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17919000000.0,
+      "gross_profit": 9993000000.0,
+      "operating_income": 2583000000.0,
+      "net_income": 1843000000.0,
+      "rd_expense": null,
+      "sga_expense": 7410000000.0,
+      "cogs": 7926000000.0,
+      "interest_expense": -264000000.0,
+      "income_tax": 499000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PEP",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PEP",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "FLNA",
+          "value": 5874000000.0,
+          "unit": "USD",
+          "period": "2024-06-15 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QFNA",
+          "value": 561000000.0,
+          "unit": "USD",
+          "period": "2024-06-15 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PBNA",
+          "value": 6811000000.0,
+          "unit": "USD",
+          "period": "2024-06-15 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LatAm",
+          "value": 3045000000.0,
+          "unit": "USD",
+          "period": "2024-06-15 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 3515000000.0,
+          "unit": "USD",
+          "period": "2024-06-15 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "AMESA",
+          "value": 1592000000.0,
+          "unit": "USD",
+          "period": "2024-06-15 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "APAC",
+          "value": 1103000000.0,
+          "unit": "USD",
+          "period": "2024-06-15 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 22501000000.0,
+      "gross_profit": 12582000000.0,
+      "operating_income": 4048000000.0,
+      "net_income": 3094000000.0,
+      "rd_expense": null,
+      "sga_expense": 8534000000.0,
+      "cogs": 9919000000.0,
+      "interest_expense": -234000000.0,
+      "income_tax": 776000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (22501000000) differs from Yahoo (91854000000) by 75.5%"
+      ]
+    },
+    {
+      "ticker": "PEP",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "FLNA",
+          "value": 5676000000.0,
+          "unit": "USD",
+          "period": "2024-03-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QFNA",
+          "value": 593000000.0,
+          "unit": "USD",
+          "period": "2024-03-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PBNA",
+          "value": 5874000000.0,
+          "unit": "USD",
+          "period": "2024-03-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LatAm",
+          "value": 2067000000.0,
+          "unit": "USD",
+          "period": "2024-03-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 1936000000.0,
+          "unit": "USD",
+          "period": "2024-03-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "AMESA",
+          "value": 1040000000.0,
+          "unit": "USD",
+          "period": "2024-03-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "APAC",
+          "value": 1064000000.0,
+          "unit": "USD",
+          "period": "2024-03-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 18250000000.0,
+      "gross_profit": 10002000000.0,
+      "operating_income": 2717000000.0,
+      "net_income": 2053000000.0,
+      "rd_expense": null,
+      "sga_expense": 7285000000.0,
+      "cogs": 8248000000.0,
+      "interest_expense": -202000000.0,
+      "income_tax": 520000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (18250000000) differs from Yahoo (91854000000) by 80.1%"
+      ]
+    },
+    {
+      "ticker": "PEP",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PEP",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "PEP",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 37362000000.0,
+  "ttm_operating_income": 5796000000.0,
+  "ttm_net_income": 4181000000.0,
+  "segment_trend": {
+    "FLNA": [
+      {
+        "period": "2024Q1",
+        "value": 5676000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 5874000000.0,
+        "is_annual": false
+      }
+    ],
+    "QFNA": [
+      {
+        "period": "2024Q1",
+        "value": 593000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 561000000.0,
+        "is_annual": false
+      }
+    ],
+    "PBNA": [
+      {
+        "period": "2024Q1",
+        "value": 5874000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 6811000000.0,
+        "is_annual": false
+      }
+    ],
+    "LatAm": [
+      {
+        "period": "2024Q1",
+        "value": 2067000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3045000000.0,
+        "is_annual": false
+      }
+    ],
+    "Europe": [
+      {
+        "period": "2024Q1",
+        "value": 1936000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3515000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 13234000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 13874000000.0,
+        "is_annual": true
+      }
+    ],
+    "AMESA": [
+      {
+        "period": "2024Q1",
+        "value": 1040000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1592000000.0,
+        "is_annual": false
+      }
+    ],
+    "APAC": [
+      {
+        "period": "2024Q1",
+        "value": 1064000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1103000000.0,
+        "is_annual": false
+      }
+    ],
+    "PepsiCo Foods North America": [
+      {
+        "period": "2025Q1",
+        "value": 6213000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 6332000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 27528000000.0,
+        "is_annual": true
+      }
+    ],
+    "PepsiCo Beverages North America": [
+      {
+        "period": "2025Q1",
+        "value": 5876000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 6391000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 27626000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 27769000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 28197000000.0,
+        "is_annual": true
+      }
+    ],
+    "International Beverage Franchise": [
+      {
+        "period": "2025Q1",
+        "value": 759000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 824000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 4997000000.0,
+        "is_annual": true
+      }
+    ],
+    "Europe, Middle East & Africa (Segment)": [
+      {
+        "period": "2025Q1",
+        "value": 2388000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 2823000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 18025000000.0,
+        "is_annual": true
+      }
+    ],
+    "Latin America Foods (Segment)": [
+      {
+        "period": "2025Q1",
+        "value": 1661000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1934000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 10549000000.0,
+        "is_annual": true
+      }
+    ],
+    "Asia Pacific Foods (Segment)": [
+      {
+        "period": "2025Q1",
+        "value": 1022000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1139000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 4629000000.0,
+        "is_annual": true
+      }
+    ],
+    "Frito Lay North America": [
+      {
+        "period": "FY2023",
+        "value": 24914000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 24755000000.0,
+        "is_annual": true
+      }
+    ],
+    "Quaker Foods North America": [
+      {
+        "period": "FY2023",
+        "value": 3101000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2676000000.0,
+        "is_annual": true
+      }
+    ],
+    "Latin America": [
+      {
+        "period": "FY2023",
+        "value": 11654000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 11718000000.0,
+        "is_annual": true
+      }
+    ],
+    "Africa, Middle East and South Asia": [
+      {
+        "period": "FY2023",
+        "value": 6139000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 6217000000.0,
+        "is_annual": true
+      }
+    ],
+    "Asia Pacific, Australia and New Zealand, and China Region": [
+      {
+        "period": "FY2023",
+        "value": 4803000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 4845000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 10,
+  "has_partial_data": false,
+  "data_notes": []
+}

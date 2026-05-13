@@ -1,0 +1,888 @@
+{
+  "ticker": "XOM",
+  "name": "Exxon Mobil Corporation",
+  "latest_annual": {
+    "ticker": "XOM",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Sales and other operating revenue",
+        "value": 323820000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Income from equity affiliates",
+        "value": 5330000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Other income",
+        "value": 2054000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Segment Reporting, Reconciling Item, Corporate Nonsegment",
+        "value": 1212000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 332238000000.0,
+    "gross_profit": null,
+    "operating_income": null,
+    "net_income": 29764000000.0,
+    "rd_expense": null,
+    "sga_expense": 11128000000.0,
+    "cogs": null,
+    "interest_expense": 603000000.0,
+    "income_tax": 11504000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 0.97,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "XOM",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 323820000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 5330000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 2054000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Segment Reporting, Reconciling Item, Corporate Nonsegment",
+          "value": 1212000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 332238000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 29764000000.0,
+      "rd_expense": null,
+      "sga_expense": 11128000000.0,
+      "cogs": null,
+      "interest_expense": 603000000.0,
+      "income_tax": 11504000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "XOM",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 339136000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 6399000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 2197000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Segment Reporting, Reconciling Item, Corporate Nonsegment",
+          "value": 1853000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 349585000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 35063000000.0,
+      "rd_expense": null,
+      "sga_expense": 9976000000.0,
+      "cogs": null,
+      "interest_expense": 996000000.0,
+      "income_tax": 13810000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "XOM",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 6385000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 3500000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 334697000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 344582000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 37354000000.0,
+      "rd_expense": null,
+      "sga_expense": 9919000000.0,
+      "cogs": null,
+      "interest_expense": 849000000.0,
+      "income_tax": 15429000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "XOM",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 83311000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 1337000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 452000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Segment Reporting, Reconciling Item, Corporate Nonsegment",
+          "value": 281000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 85294000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 7768000000.0,
+      "rd_expense": null,
+      "sga_expense": 3032000000.0,
+      "cogs": null,
+      "interest_expense": 90000000.0,
+      "income_tax": 3164000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "XOM",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 79456000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 1529000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 232000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Segment Reporting, Reconciling Item, Corporate Nonsegment",
+          "value": 312000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 81506000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 7354000000.0,
+      "rd_expense": null,
+      "sga_expense": 2528000000.0,
+      "cogs": null,
+      "interest_expense": 145000000.0,
+      "income_tax": 3351000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "XOM",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 81039000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 1429000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 346000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Segment Reporting, Reconciling Item, Corporate Nonsegment",
+          "value": 363000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 83130000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 8033000000.0,
+      "rd_expense": null,
+      "sga_expense": 2540000000.0,
+      "cogs": null,
+      "interest_expense": 205000000.0,
+      "income_tax": 3567000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "XOM",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 1481000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 743000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 87792000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 90016000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 8971000000.0,
+      "rd_expense": null,
+      "sga_expense": 2296000000.0,
+      "cogs": null,
+      "interest_expense": 207000000.0,
+      "income_tax": 4055000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (90016000000) differs from Yahoo (339247000000) by 73.5%"
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 1744000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 1330000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 89986000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 93060000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 9571000000.0,
+      "rd_expense": null,
+      "sga_expense": 2568000000.0,
+      "cogs": null,
+      "interest_expense": 271000000.0,
+      "income_tax": 4094000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (93060000000) differs from Yahoo (339247000000) by 72.6%"
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 1842000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 830000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 80411000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 83083000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 8566000000.0,
+      "rd_expense": null,
+      "sga_expense": 2495000000.0,
+      "cogs": null,
+      "interest_expense": 221000000.0,
+      "income_tax": 3803000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (83083000000) differs from Yahoo (339247000000) by 75.5%"
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 1457000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 733000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 88570000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 90760000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 9346000000.0,
+      "rd_expense": null,
+      "sga_expense": 2489000000.0,
+      "cogs": null,
+      "interest_expense": 169000000.0,
+      "income_tax": 4353000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (90760000000) differs from Yahoo (334697000000) by 72.9%"
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 1382000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 737000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 80795000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 82914000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 8153000000.0,
+      "rd_expense": null,
+      "sga_expense": 2449000000.0,
+      "cogs": null,
+      "interest_expense": 249000000.0,
+      "income_tax": 3503000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (82914000000) differs from Yahoo (334697000000) by 75.2%"
+      ]
+    },
+    {
+      "ticker": "XOM",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Income from equity affiliates",
+          "value": 2381000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other income",
+          "value": 539000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sales and other operating revenue",
+          "value": 83644000000.0,
+          "unit": "USD",
+          "period": "2023-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 86564000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 11843000000.0,
+      "rd_expense": null,
+      "sga_expense": 2390000000.0,
+      "cogs": null,
+      "interest_expense": 159000000.0,
+      "income_tax": 4960000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": [
+        "Warning: total_revenue (86564000000) differs from Yahoo (334697000000) by 74.1%"
+      ]
+    }
+  ],
+  "ttm_revenue": 339946000000.0,
+  "ttm_operating_income": null,
+  "ttm_net_income": 32126000000.0,
+  "segment_trend": {
+    "Income from equity affiliates": [
+      {
+        "period": "2023Q1",
+        "value": 2381000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 1382000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1457000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 1842000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1744000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1481000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1429000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1529000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1337000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 6385000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 6399000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 5330000000.0,
+        "is_annual": true
+      }
+    ],
+    "Other income": [
+      {
+        "period": "2023Q1",
+        "value": 539000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 737000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 733000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 830000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1330000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 743000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 346000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 232000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 452000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 3500000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2197000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2054000000.0,
+        "is_annual": true
+      }
+    ],
+    "Sales and other operating revenue": [
+      {
+        "period": "2023Q1",
+        "value": 83644000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q2",
+        "value": 80795000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 88570000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 80411000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 89986000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 87792000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 81039000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 79456000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 83311000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 334697000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 339136000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 323820000000.0,
+        "is_annual": true
+      }
+    ],
+    "Segment Reporting, Reconciling Item, Corporate Nonsegment": [
+      {
+        "period": "2025Q1",
+        "value": 363000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 312000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 281000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 1853000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1212000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

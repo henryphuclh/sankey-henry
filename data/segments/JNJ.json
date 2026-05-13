@@ -1,0 +1,450 @@
+{
+  "ticker": "JNJ",
+  "name": "Johnson & Johnson",
+  "latest_annual": {
+    "ticker": "JNJ",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Innovative Medicine",
+        "value": 60401000000.0,
+        "unit": "USD",
+        "period": "2025-12-28 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "MedTech",
+        "value": 33792000000.0,
+        "unit": "USD",
+        "period": "2025-12-28 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 94193000000.0,
+    "gross_profit": 63937000000.0,
+    "operating_income": null,
+    "net_income": 26804000000.0,
+    "rd_expense": null,
+    "sga_expense": 23676000000.0,
+    "cogs": 30256000000.0,
+    "interest_expense": null,
+    "income_tax": 5777000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "JNJ",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Innovative Medicine",
+          "value": 60401000000.0,
+          "unit": "USD",
+          "period": "2025-12-28 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "MedTech",
+          "value": 33792000000.0,
+          "unit": "USD",
+          "period": "2025-12-28 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 94193000000.0,
+      "gross_profit": 63937000000.0,
+      "operating_income": null,
+      "net_income": 26804000000.0,
+      "rd_expense": null,
+      "sga_expense": 23676000000.0,
+      "cogs": 30256000000.0,
+      "interest_expense": null,
+      "income_tax": 5777000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "JNJ",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Innovative Medicine",
+          "value": 56964000000.0,
+          "unit": "USD",
+          "period": "2024-12-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "MedTech",
+          "value": 31857000000.0,
+          "unit": "USD",
+          "period": "2024-12-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 88821000000.0,
+      "gross_profit": 61350000000.0,
+      "operating_income": null,
+      "net_income": 14066000000.0,
+      "rd_expense": null,
+      "sga_expense": 22869000000.0,
+      "cogs": 27471000000.0,
+      "interest_expense": null,
+      "income_tax": 2621000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "JNJ",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Innovative Medicine",
+          "value": 54759000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "MedTech",
+          "value": 30400000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 85159000000.0,
+      "gross_profit": 58606000000.0,
+      "operating_income": null,
+      "net_income": 35153000000.0,
+      "rd_expense": null,
+      "sga_expense": 21512000000.0,
+      "cogs": 26553000000.0,
+      "interest_expense": 772000000.0,
+      "income_tax": 1736000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "JNJ",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "JNJ",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "JNJ",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "JNJ",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "JNJ",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Innovative Medicine",
+          "value": 14490000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "MedTech",
+          "value": 7957000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 22447000000.0,
+      "gross_profit": 15578000000.0,
+      "operating_income": null,
+      "net_income": 4686000000.0,
+      "rd_expense": null,
+      "sga_expense": 5681000000.0,
+      "cogs": 6869000000.0,
+      "interest_expense": null,
+      "income_tax": 1062000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (22447000000) differs from Yahoo (88821000000) by 74.7%"
+      ]
+    },
+    {
+      "ticker": "JNJ",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Innovative Medicine",
+          "value": 13562000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "MedTech",
+          "value": 7821000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 21383000000.0,
+      "gross_profit": 14872000000.0,
+      "operating_income": null,
+      "net_income": 3255000000.0,
+      "rd_expense": null,
+      "sga_expense": 5257000000.0,
+      "cogs": 6511000000.0,
+      "interest_expense": 155000000.0,
+      "income_tax": 459000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (21383000000) differs from Yahoo (88821000000) by 75.9%"
+      ]
+    },
+    {
+      "ticker": "JNJ",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "JNJ",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "JNJ",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": null,
+  "ttm_operating_income": null,
+  "ttm_net_income": null,
+  "segment_trend": {
+    "Innovative Medicine": [
+      {
+        "period": "2024Q1",
+        "value": 13562000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 14490000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 54759000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 56964000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 60401000000.0,
+        "is_annual": true
+      }
+    ],
+    "MedTech": [
+      {
+        "period": "2024Q1",
+        "value": 7821000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 7957000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 30400000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 31857000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 33792000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

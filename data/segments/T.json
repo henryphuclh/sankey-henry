@@ -1,0 +1,689 @@
+{
+  "ticker": "T",
+  "name": "AT&T Inc.",
+  "latest_annual": {
+    "ticker": "T",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Communications",
+        "value": 120896000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Latin America",
+        "value": 4379000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 125648000000.0,
+    "gross_profit": null,
+    "operating_income": 24162000000.0,
+    "net_income": 23386000000.0,
+    "rd_expense": null,
+    "sga_expense": 28942000000.0,
+    "cogs": 25396000000.0,
+    "interest_expense": null,
+    "income_tax": 3621000000.0,
+    "currency": "USD",
+    "extraction_method": "edgar+llm",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "T",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Communications",
+          "value": 120896000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 4379000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 125648000000.0,
+      "gross_profit": null,
+      "operating_income": 24162000000.0,
+      "net_income": 23386000000.0,
+      "rd_expense": null,
+      "sga_expense": 28942000000.0,
+      "cogs": 25396000000.0,
+      "interest_expense": null,
+      "income_tax": 3621000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "T",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Communications",
+          "value": 117652000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 4232000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 122336000000.0,
+      "gross_profit": null,
+      "operating_income": 19049000000.0,
+      "net_income": 12253000000.0,
+      "rd_expense": null,
+      "sga_expense": 28411000000.0,
+      "cogs": 22249000000.0,
+      "interest_expense": null,
+      "income_tax": 4445000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "T",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Communications",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Securitization Fees",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value Portfolio",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wireless Service - Communications - Mobility",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wireless Service - Latin America Business Segment",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Business Service - Communications - Business Wireline",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "IP Broadband - Communications - Consumer Wireline",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Legacy Voice and Data - Communications - Consumer Wireline",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Service - Communications - Consumer Wireline",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Capitalized Property Plant and Equipment - Communications - Business Wirel",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Capitalized Property Plant and Equipment - Latin America Business Segment",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Communications - Mobility",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Communications - Business Wireline",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America Business Segment",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consolidation, Eliminations",
+          "value": NaN,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 122428000000.0,
+      "gross_profit": null,
+      "operating_income": 23461000000.0,
+      "net_income": 15623000000.0,
+      "rd_expense": null,
+      "sga_expense": 28874000000.0,
+      "cogs": 23136000000.0,
+      "interest_expense": -6704000000.0,
+      "income_tax": 4225000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "T",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "T",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "T",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Communications",
+          "value": 29560000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 971000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 30626000000.0,
+      "gross_profit": null,
+      "operating_income": 5754000000.0,
+      "net_income": 4692000000.0,
+      "rd_expense": null,
+      "sga_expense": 7145000000.0,
+      "cogs": 5694000000.0,
+      "interest_expense": null,
+      "income_tax": 1299000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "T",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "T",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Communications",
+          "value": 29685000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 1112000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 29797000000.0,
+      "gross_profit": null,
+      "operating_income": 5760000000.0,
+      "net_income": 3949000000.0,
+      "rd_expense": null,
+      "sga_expense": 7043000000.0,
+      "cogs": 4815000000.0,
+      "interest_expense": -1699000000.0,
+      "income_tax": 1142000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (29797000000) differs from Yahoo (122336000000) by 75.6%"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Communications",
+          "value": 28920000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 1108000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 30028000000.0,
+      "gross_profit": null,
+      "operating_income": 5847000000.0,
+      "net_income": 3751000000.0,
+      "rd_expense": null,
+      "sga_expense": 7021000000.0,
+      "cogs": 5143000000.0,
+      "interest_expense": -1724000000.0,
+      "income_tax": 1118000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (30028000000) differs from Yahoo (122336000000) by 75.5%"
+      ]
+    },
+    {
+      "ticker": "T",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "T",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "T",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 30626000000.0,
+  "ttm_operating_income": 5754000000.0,
+  "ttm_net_income": 4692000000.0,
+  "segment_trend": {
+    "Communications": [
+      {
+        "period": "2024Q1",
+        "value": 28920000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 29685000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 29560000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 117652000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 120896000000.0,
+        "is_annual": true
+      }
+    ],
+    "Latin America": [
+      {
+        "period": "2024Q1",
+        "value": 1108000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1112000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 971000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 4232000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4379000000.0,
+        "is_annual": true
+      }
+    ],
+    "Securitization Fees": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Value Portfolio": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Wireless Service - Communications - Mobility": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Wireless Service - Latin America Business Segment": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Business Service - Communications - Business Wireline": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "IP Broadband - Communications - Consumer Wireline": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Legacy Voice and Data - Communications - Consumer Wireline": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Corporate": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Other Service - Communications - Consumer Wireline": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Other Capitalized Property Plant and Equipment - Communications - Business Wirel": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Other Capitalized Property Plant and Equipment - Latin America Business Segment": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Communications - Mobility": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Communications - Business Wireline": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Latin America Business Segment": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ],
+    "Consolidation, Eliminations": [
+      {
+        "period": "FY2023",
+        "value": NaN,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

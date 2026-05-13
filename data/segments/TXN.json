@@ -1,0 +1,565 @@
+{
+  "ticker": "TXN",
+  "name": "Texas Instruments Inc.",
+  "latest_annual": {
+    "ticker": "TXN",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Analog",
+        "value": 14006000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Embedded Processing",
+        "value": 2697000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Other",
+        "value": 979000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 17682000000.0,
+    "gross_profit": 10083000000.0,
+    "operating_income": 6023000000.0,
+    "net_income": 5001000000.0,
+    "rd_expense": 2083000000.0,
+    "sga_expense": 1860000000.0,
+    "cogs": 7599000000.0,
+    "interest_expense": null,
+    "income_tax": 709000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "TXN",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Analog",
+          "value": 14006000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Embedded Processing",
+          "value": 2697000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 979000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17682000000.0,
+      "gross_profit": 10083000000.0,
+      "operating_income": 6023000000.0,
+      "net_income": 5001000000.0,
+      "rd_expense": 2083000000.0,
+      "sga_expense": 1860000000.0,
+      "cogs": 7599000000.0,
+      "interest_expense": null,
+      "income_tax": 709000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "TXN",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Analog",
+          "value": 12161000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Embedded Processing",
+          "value": 2533000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 947000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15641000000.0,
+      "gross_profit": 9094000000.0,
+      "operating_income": 5465000000.0,
+      "net_income": 4799000000.0,
+      "rd_expense": 1959000000.0,
+      "sga_expense": 1794000000.0,
+      "cogs": 6547000000.0,
+      "interest_expense": null,
+      "income_tax": 654000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "TXN",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Analog",
+          "value": 13040000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Embedded Processing",
+          "value": 3368000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 1111000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17519000000.0,
+      "gross_profit": 11019000000.0,
+      "operating_income": 7331000000.0,
+      "net_income": 6510000000.0,
+      "rd_expense": 1863000000.0,
+      "sga_expense": 1825000000.0,
+      "cogs": 6500000000.0,
+      "interest_expense": null,
+      "income_tax": 908000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "TXN",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TXN",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TXN",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Analog",
+          "value": 3210000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Embedded Processing",
+          "value": 647000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 212000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 4069000000.0,
+      "gross_profit": 2313000000.0,
+      "operating_income": 1324000000.0,
+      "net_income": 1179000000.0,
+      "rd_expense": 517000000.0,
+      "sga_expense": 472000000.0,
+      "cogs": 1756000000.0,
+      "interest_expense": null,
+      "income_tax": 97000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "TXN",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TXN",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Analog",
+          "value": 2928000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Embedded Processing",
+          "value": 615000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 279000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3822000000.0,
+      "gross_profit": 2211000000.0,
+      "operating_income": 1248000000.0,
+      "net_income": 1127000000.0,
+      "rd_expense": 498000000.0,
+      "sga_expense": 465000000.0,
+      "cogs": 1611000000.0,
+      "interest_expense": null,
+      "income_tax": 120000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (3822000000) differs from Yahoo (15641000000) by 75.6%"
+      ]
+    },
+    {
+      "ticker": "TXN",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Analog",
+          "value": 2836000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Embedded Processing",
+          "value": 652000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 173000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3661000000.0,
+      "gross_profit": 2095000000.0,
+      "operating_income": 1286000000.0,
+      "net_income": 1105000000.0,
+      "rd_expense": 478000000.0,
+      "sga_expense": 455000000.0,
+      "cogs": 1566000000.0,
+      "interest_expense": null,
+      "income_tax": 188000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (3661000000) differs from Yahoo (15641000000) by 76.6%"
+      ]
+    },
+    {
+      "ticker": "TXN",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TXN",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TXN",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 4069000000.0,
+  "ttm_operating_income": 1324000000.0,
+  "ttm_net_income": 1179000000.0,
+  "segment_trend": {
+    "Analog": [
+      {
+        "period": "2024Q1",
+        "value": 2836000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2928000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 3210000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 13040000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 12161000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 14006000000.0,
+        "is_annual": true
+      }
+    ],
+    "Embedded Processing": [
+      {
+        "period": "2024Q1",
+        "value": 652000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 615000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 647000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 3368000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2533000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2697000000.0,
+        "is_annual": true
+      }
+    ],
+    "Other": [
+      {
+        "period": "2024Q1",
+        "value": 173000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 279000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 212000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1111000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 947000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 979000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Verizon Communications (VZ) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verizon Communications (VZ) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Verizon Communications <span style="opacity:0.7">(VZ)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls">
+  <label for="period-select">Fiscal Year:</label>
+  <select id="period-select" onchange="switchPeriod(this.value)">
+    <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+  </select>
+  <span id="data-badge" style="margin-left:12px; font-size:12px; color:#666;"></span>
+</div>
+
+<div class="chart-container">
+  <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(198,219,239,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,187,120,0.4)","rgba(44,160,44,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Operating Segments Excluding Intersegment Elimination (58.3%)","Business (21.0%)","Service revenues and other - Business (18.4%)","Wireless equipment - Business (2.7%)","Other: Intersegment Eliminations","Gross Profit (58.9%)","COGS (41.1%)","SG&A (24.5%)","Other Operating Expenses","Operating Income (21.2%)","Net Income (12.7%)"],"source":[1,2,3,4,5,0,0,6,6,6,10],"target":[0,0,0,0,0,6,7,8,9,10,11],"value":[80617000000.0,29069000000.0,25400000000.0,3700000000.0,1381910000.0,81426000000.0,56765000000.0,33818000000.0,18349000000.0,29259000000.0,17608000000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#c6dbef","#2ca02c","#d62728","#ff7f0e","#ffbb78","#2ca02c","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$138.2B (100.0%)","Operating Segments Excluding Intersegment Elimination\u003cbr\u003e$80.6B (58.3%)","Business\u003cbr\u003e$29.1B (21.0%)","Service revenues and other - Business\u003cbr\u003e$25.4B (18.4%)","Wireless equipment - Business\u003cbr\u003e$3.7B (2.7%)","Other\u003cbr\u003e$324M (0.2%)","Gross Profit\u003cbr\u003e$81.4B (58.9%)","Cost of Revenue\u003cbr\u003e$56.8B (41.1%)","SG&A\u003cbr\u003e$33.8B (24.5%)","Other OpEx\u003cbr\u003e$18.3B (13.3%)","Operating Income\u003cbr\u003e$29.3B (21.2%)","Net Income\u003cbr\u003e$17.6B (12.7%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":60},"paper_bgcolor":"#fafafa","title":{"font":{"size":16},"text":"Verizon Communications (VZ) — Financial Flow FY2025"},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": true, "displayModeBar": true, "modeBarButtonsToAdd": ["zoom2d", "pan2d", "resetScale2d"]}                    )                };            </script>        </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$138.2B (100.0%)", "Operating Segments Excluding Intersegment Elimination<br>$80.6B (58.3%)", "Business<br>$29.1B (21.0%)", "Service revenues and other - Business<br>$25.4B (18.4%)", "Wireless equipment - Business<br>$3.7B (2.7%)", "Other<br>$324M (0.2%)", "Gross Profit<br>$81.4B (58.9%)", "Cost of Revenue<br>$56.8B (41.1%)", "SG&A<br>$33.8B (24.5%)", "Other OpEx<br>$18.3B (13.3%)", "Operating Income<br>$29.3B (21.2%)", "Net Income<br>$17.6B (12.7%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.4, 0.6, 0.5, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11], "link_values": [80617000000.0, 29069000000.0, 25400000000.0, 3700000000.0, 1381910000.0, 81426000000.0, 56765000000.0, 33818000000.0, 18349000000.0, 29259000000.0, 17608000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Operating Segments Excluding Intersegment Elimination (58.3%)", "Business (21.0%)", "Service revenues and other - Business (18.4%)", "Wireless equipment - Business (2.7%)", "Other: Intersegment Eliminations", "Gross Profit (58.9%)", "COGS (41.1%)", "SG&A (24.5%)", "Other Operating Expenses", "Operating Income (21.2%)", "Net Income (12.7%)"], "title": "Verizon Communications (VZ) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$134.8B (100.0%)", "Operating Segments Excluding Intersegment Elimination<br>$76.9B (57.0%)", "Business<br>$29.5B (21.9%)", "Service revenues and other - Business<br>$25.9B (19.2%)", "Wireless equipment - Business<br>$3.6B (2.7%)", "Other<br>$249M (0.2%)", "Gross Profit<br>$80.7B (59.9%)", "Cost of Revenue<br>$54.1B (40.1%)", "SG&A<br>$34.1B (25.3%)", "Other OpEx<br>$17.9B (13.3%)", "Operating Income<br>$28.7B (21.3%)", "Net Income<br>$17.9B (13.3%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.4, 0.6, 0.5, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11], "link_values": [76880000000.0, 29531000000.0, 25900000000.0, 3600000000.0, 1347880000.0, 80691000000.0, 54097000000.0, 34113000000.0, 17892000000.0, 28686000000.0, 17949000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Operating Segments Excluding Intersegment Elimination (57.0%)", "Business (21.9%)", "Service revenues and other - Business (19.2%)", "Wireless equipment - Business (2.7%)", "Other: Intersegment Eliminations", "Gross Profit (59.9%)", "COGS (40.1%)", "SG&A (25.3%)", "Other Operating Expenses", "Operating Income (21.3%)", "Net Income (13.3%)"], "title": "Verizon Communications (VZ) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$134.0B (100.0%)", "Operating Segments Excluding Intersegment Elimination<br>$74.9B (55.9%)", "Business<br>$30.1B (22.5%)", "Service revenues and other - Business<br>$26.4B (19.7%)", "Wireless equipment - Business<br>$3.7B (2.8%)", "Other<br>$245M (0.2%)", "Gross Profit<br>$79.1B (59.0%)", "Cost of Revenue<br>$54.9B (41.0%)", "SG&A<br>$32.7B (24.4%)", "Other OpEx<br>$23.5B (17.5%)", "Operating Income<br>$22.9B (17.1%)", "Net Income<br>$12.1B (9.0%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.4, 0.6, 0.5, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11], "link_values": [74874000000.0, 30122000000.0, 26400000000.0, 3700000000.0, 1339740000.0, 79087000000.0, 54887000000.0, 32745000000.0, 23465000000.0, 22877000000.0, 12095000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Operating Segments Excluding Intersegment Elimination (55.9%)", "Business (22.5%)", "Service revenues and other - Business (19.7%)", "Wireless equipment - Business (2.8%)", "Other: Intersegment Eliminations", "Gross Profit (59.0%)", "COGS (41.0%)", "SG&A (24.4%)", "Other Operating Expenses", "Operating Income (17.1%)", "Net Income (9.0%)"], "title": "Verizon Communications (VZ) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  var layoutUpdate = {
+    "title.text": data.title,
+  };
+
+  Plotly.update("sankey-chart", update, layoutUpdate);
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+</script>
+</body>
+</html>
+
+
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Verizon Communications (VZ) Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Verizon Communications operates primarily through two business segments: <strong>Consumer</strong> and <strong>Business</strong>. In FY2025, the total revenue reached <strong>$138.19 billion</strong>, with the <strong>Operating Segments Excluding Intersegment Elimination</strong> contributing <strong>$80.62 billion</strong>. The <strong>Business</strong> segment generated <strong>$29.07 billion</strong>, which includes <strong>$25.40 billion</strong> from service revenues and other business activities, and <strong>$3.70 billion</strong> from wireless equipment sales.</p>
+<p>Over the past three years, Verizon's revenue mix has shown a slight shift. In FY2023, the <strong>Business</strong> segment accounted for <strong>30.12 billion</strong>, which decreased to <strong>$29.53 billion</strong> in FY2024 and further to <strong>$29.07 billion</strong> in FY2025. This decline in the Business segment's revenue is notable, especially as the overall revenue increased from <strong>$133.97 billion</strong> in FY2023 to <strong>$138.19 billion</strong> in FY2025. The <strong>Consumer</strong> segment, while not explicitly detailed in the annual reports, can be inferred to have remained a significant contributor, with quarterly revenues in 2024 averaging around <strong>$25 billion</strong>.</p>
+<p>Key products driving growth include wireless services and equipment, which remain essential in both consumer and business markets. The company’s focus on expanding its 5G network and enhancing service offerings has likely contributed to maintaining a robust customer base.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Verizon's operating income has shown a positive trend, increasing from <strong>$22.88 billion</strong> in FY2023 to <strong>$29.26 billion</strong> in FY2025, reflecting an operating margin improvement from <strong>17.1%</strong> to <strong>21.2%</strong>. The <strong>Business</strong> segment's operating margin is not explicitly provided, but the overall operating margin indicates effective cost management and operational efficiency.</p>
+<p>The major cost drivers for Verizon include <strong>Selling, General and Administrative (SG&amp;A)</strong> expenses, which totaled <strong>$33.82 billion</strong> in FY2025, up from <strong>$32.74 billion</strong> in FY2023. The increase in SG&amp;A expenses, despite rising revenues, suggests that the company is investing in customer acquisition and retention strategies. Notably, R&amp;D expenses are not disclosed, but the focus on technological advancements, particularly in 5G, implies ongoing investment in innovation.</p>
+<p>Operating leverage appears to be improving, as evidenced by the rising operating income relative to revenue growth. The operating margin has increased slightly over the years, indicating that Verizon is effectively converting a larger portion of its revenue into profit.</p>
+<h2>Business Model Summary</h2>
+<p>Verizon Communications converts revenue into earnings primarily through its extensive telecommunications infrastructure and service offerings. The company’s ability to maintain a high operating margin, which reached <strong>21.2%</strong> in FY2025, demonstrates its efficiency in managing costs relative to revenue generation.</p>
+<p>The competitive positioning of Verizon is evident from its segment structure. The dual focus on <strong>Consumer</strong> and <strong>Business</strong> segments allows for diversified revenue streams, reducing reliance on any single market. The Business segment, while experiencing a slight decline in revenue, remains a critical part of the overall strategy, particularly in providing enterprise solutions and services.</p>
+<p>Notable shifts in the segment mix include the increasing contribution of the <strong>Operating Segments Excluding Intersegment Elimination</strong>, which rose from <strong>$74.87 billion</strong> in FY2023 to <strong>$80.62 billion</strong> in FY2025. This growth reflects Verizon's strategic emphasis on enhancing its core telecommunications services while managing intersegment eliminations effectively.</p>
+<p>In summary, Verizon's business model is characterized by a strong focus on operational efficiency, a diversified revenue base, and a commitment to technological advancement, positioning the company well for future growth in the competitive telecommunications landscape.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$138.19B</td><td style="text-align:right">$134.79B</td><td style="text-align:right" class="yoy-pos">+2.5%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$56.77B</td><td style="text-align:right">$54.10B</td><td style="text-align:right" class="yoy-pos">+4.9%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$33.82B</td><td style="text-align:right">$34.11B</td><td style="text-align:right" class="yoy-neg">-0.9%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$29.26B</td><td style="text-align:right">$28.69B</td><td style="text-align:right" class="yoy-pos">+2.0%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">21.2%</td><td style="text-align:right">21.3%</td><td style="text-align:right" class="yoy-neg">-0.5%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$17.61B</td><td style="text-align:right">$17.95B</td><td style="text-align:right" class="yoy-neg">-1.9%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">12.7%</td><td style="text-align:right">13.3%</td><td style="text-align:right" class="yoy-neg">-4.3%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2025 Q3</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q2</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q1</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2024 Q3</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$32.80B</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$12.47B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$8.02B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$7.82B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">23.8%</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$4.70B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">14.3%</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$33.48B</td><td style="text-align:right">$32.98B</td><td style="text-align:right" class="yoy-pos">+1.5%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$13.06B</td><td style="text-align:right">$12.87B</td><td style="text-align:right" class="yoy-pos">+1.4%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$7.87B</td><td style="text-align:right">$8.14B</td><td style="text-align:right" class="yoy-neg">-3.3%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$7.98B</td><td style="text-align:right">$7.52B</td><td style="text-align:right" class="yoy-pos">+6.1%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">23.8%</td><td style="text-align:right">22.8%</td><td style="text-align:right" class="yoy-pos">+4.5%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$4.98B</td><td style="text-align:right">$4.72B</td><td style="text-align:right" class="yoy-pos">+5.5%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">14.9%</td><td style="text-align:right">14.3%</td><td style="text-align:right" class="yoy-pos">+3.9%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>2023 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section">
+  <h3>Segment Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$138.19B</td><td>$17.61B</td><td>5</td><td>101%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$134.79B</td><td>$17.95B</td><td>5</td><td>101%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$133.97B</td><td>$12.10B</td><td>5</td><td>101%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$33.48B</td><td>$4.98B</td><td>5</td><td>103%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$32.80B</td><td>$4.70B</td><td>3</td><td>98%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$32.98B</td><td>$4.72B</td><td>3</td><td>99%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q1</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $138.19B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Operating Segments Excluding Intersegment Elimination</td><td style='text-align:right'>$80.62B</td><td style='text-align:right'>58.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:58.3%'></div>  </div></td></tr><tr><td>Business</td><td style='text-align:right'>$29.07B</td><td style='text-align:right'>21.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:21.0%'></div>  </div></td></tr><tr><td>Service revenues and other - Business</td><td style='text-align:right'>$25.40B</td><td style='text-align:right'>18.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:18.4%'></div>  </div></td></tr><tr><td>Wireless equipment - Business</td><td style='text-align:right'>$3.70B</td><td style='text-align:right'>2.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.7%'></div>  </div></td></tr><tr><td>Intersegment Eliminations</td><td style='text-align:right'>$324.0M</td><td style='text-align:right'>0.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $134.79B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Operating Segments Excluding Intersegment Elimination</td><td style='text-align:right'>$76.88B</td><td style='text-align:right'>57.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:57.0%'></div>  </div></td></tr><tr><td>Business</td><td style='text-align:right'>$29.53B</td><td style='text-align:right'>21.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:21.9%'></div>  </div></td></tr><tr><td>Service revenues and other - Business</td><td style='text-align:right'>$25.90B</td><td style='text-align:right'>19.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:19.2%'></div>  </div></td></tr><tr><td>Wireless equipment - Business</td><td style='text-align:right'>$3.60B</td><td style='text-align:right'>2.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.7%'></div>  </div></td></tr><tr><td>Intersegment Eliminations</td><td style='text-align:right'>$249.0M</td><td style='text-align:right'>0.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $133.97B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Operating Segments Excluding Intersegment Elimination</td><td style='text-align:right'>$74.87B</td><td style='text-align:right'>55.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:55.9%'></div>  </div></td></tr><tr><td>Business</td><td style='text-align:right'>$30.12B</td><td style='text-align:right'>22.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:22.5%'></div>  </div></td></tr><tr><td>Service revenues and other - Business</td><td style='text-align:right'>$26.40B</td><td style='text-align:right'>19.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:19.7%'></div>  </div></td></tr><tr><td>Wireless equipment - Business</td><td style='text-align:right'>$3.70B</td><td style='text-align:right'>2.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.8%'></div>  </div></td></tr><tr><td>Intersegment Eliminations</td><td style='text-align:right'>$245.0M</td><td style='text-align:right'>0.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Operating Segments Excluding Intersegment Elimination</td><td style='text-align:right'>$80.62B</td><td style='text-align:right'>$76.88B</td><td style='text-align:right'>$74.87B</td><td style='text-align:right;color:#28a745;font-weight:600'>+4.9%</td></tr><tr><td>Business</td><td style='text-align:right'>$29.07B</td><td style='text-align:right'>$29.53B</td><td style='text-align:right'>$30.12B</td><td style='text-align:right;color:#dc3545;font-weight:600'>-1.6%</td></tr><tr><td>Service revenues and other - Business</td><td style='text-align:right'>$25.40B</td><td style='text-align:right'>$25.90B</td><td style='text-align:right'>$26.40B</td><td style='text-align:right;color:#dc3545;font-weight:600'>-1.9%</td></tr><tr><td>Wireless equipment - Business</td><td style='text-align:right'>$3.70B</td><td style='text-align:right'>$3.60B</td><td style='text-align:right'>$3.70B</td><td style='text-align:right;color:#28a745;font-weight:600'>+2.8%</td></tr><tr><td>Intersegment Eliminations</td><td style='text-align:right'>$324.0M</td><td style='text-align:right'>$249.0M</td><td style='text-align:right'>$245.0M</td><td style='text-align:right;color:#28a745;font-weight:600'>+30.1%</td></tr><tr><td>Consumer</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 9 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 9 quarterly reports
+</div>
+</body>
+</html>

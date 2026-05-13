@@ -1,0 +1,307 @@
+{
+  "ticker": "8306.T",
+  "name": "Mitsubishi UFJ Financial",
+  "latest_annual": {
+    "ticker": "8306.T",
+    "period": "FY2026",
+    "is_annual": true,
+    "fiscal_year": 2026,
+    "fiscal_quarter": null,
+    "segments": [],
+    "total_revenue": 43121871993.60877,
+    "gross_profit": null,
+    "operating_income": null,
+    "net_income": 11747376695.618034,
+    "rd_expense": null,
+    "sga_expense": 19964403571.82175,
+    "cogs": null,
+    "interest_expense": 35257409055.61298,
+    "income_tax": 3841219766.110182,
+    "currency": "USD",
+    "extraction_method": "yahoo+llm",
+    "confidence": 0.55,
+    "notes": [
+      "Source: Yahoo Finance (no SEC filing available)",
+      "⚠ Limited Segment Detail — aggregate data only"
+    ]
+  },
+  "annual_periods": [
+    {
+      "ticker": "8306.T",
+      "period": "FY2026",
+      "is_annual": true,
+      "fiscal_year": 2026,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 43121871993.60877,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 11747376695.618034,
+      "rd_expense": null,
+      "sga_expense": 19964403571.82175,
+      "cogs": null,
+      "interest_expense": 35257409055.61298,
+      "income_tax": 3841219766.110182,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "8306.T",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 43121871993.60877,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 11747376695.618034,
+      "rd_expense": null,
+      "sga_expense": 19964403571.82175,
+      "cogs": null,
+      "interest_expense": 35257409055.61298,
+      "income_tax": 3841219766.110182,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "8306.T",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Retail & Commercial Banking",
+          "value": 2876456000000.0,
+          "unit": "JPY",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 43121871993.60877,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 11747376695.618034,
+      "rd_expense": null,
+      "sga_expense": 19964403571.82175,
+      "cogs": null,
+      "interest_expense": 35257409055.61298,
+      "income_tax": 3841219766.110182,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.77,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "8306.T",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 11976227019.265293,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 3282506407.0746303,
+      "rd_expense": null,
+      "sga_expense": 5642088692.598045,
+      "cogs": null,
+      "interest_expense": 9475476647.235453,
+      "income_tax": 1091459407.567978,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Retail & Commercial Banking",
+          "value": 753266000000.0,
+          "unit": "JPY",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 11976227019.265293,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 3282506407.0746303,
+      "rd_expense": null,
+      "sga_expense": 5642088692.598045,
+      "cogs": null,
+      "interest_expense": 9475476647.235453,
+      "income_tax": 1091459407.567978,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.77,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Retail & Commercial Banking",
+          "value": 753266000000.0,
+          "unit": "JPY",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 11976227019.265293,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 3282506407.0746303,
+      "rd_expense": null,
+      "sga_expense": 5642088692.598045,
+      "cogs": null,
+      "interest_expense": 9475476647.235453,
+      "income_tax": 1091459407.567978,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.77,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Retail & Commercial Banking",
+          "value": 753266000000.0,
+          "unit": "JPY",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 11976227019.265293,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 3282506407.0746303,
+      "rd_expense": null,
+      "sga_expense": 5642088692.598045,
+      "cogs": null,
+      "interest_expense": 9475476647.235453,
+      "income_tax": 1091459407.567978,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.77,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Retail & Commercial Banking",
+          "value": 753266000000.0,
+          "unit": "JPY",
+          "period": "2024Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 11976227019.265293,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 3282506407.0746303,
+      "rd_expense": null,
+      "sga_expense": 5642088692.598045,
+      "cogs": null,
+      "interest_expense": 9475476647.235453,
+      "income_tax": 1091459407.567978,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.77,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    }
+  ],
+  "ttm_revenue": 47904908077.06117,
+  "ttm_operating_income": null,
+  "ttm_net_income": 13130025628.298521,
+  "segment_trend": {
+    "Retail & Commercial Banking": [
+      {
+        "period": "2024Q4",
+        "value": 753266000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 753266000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 753266000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 753266000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 2876456000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 5,
+  "has_partial_data": true,
+  "data_notes": [
+    "Partial data: 3/3 annual, 5/12 quarterly"
+  ]
+}

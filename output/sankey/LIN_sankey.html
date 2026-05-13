@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Linde plc (LIN) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linde plc (LIN) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Linde plc <span style="opacity:0.7">(LIN)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls">
+  <label for="period-select">Fiscal Year:</label>
+  <select id="period-select" onchange="switchPeriod(this.value)">
+    <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+  </select>
+  <span id="data-badge" style="margin-left:12px; font-size:12px; color:#666;"></span>
+</div>
+
+<div class="chart-container">
+  <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(198,219,239,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,127,14,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Americas (44.7%)","EMEA (25.2%)","APAC (19.6%)","Engineering (6.6%)","Other (3.9%)","Gross Profit (36.8%)","COGS (63.2%)","R&D (0.4%)","SG&A (10.1%)","Operating Income (26.3%)","Income Tax","Net Income (20.3%)"],"source":[1,2,3,4,5,0,0,6,6,6,10,10],"target":[0,0,0,0,0,6,7,8,9,10,11,12],"value":[15208000000.0,8549000000.0,6661000000.0,2250000000.0,1318000000.0,12503000000.0,21483000000.0,339860000.0,3433000000.0,8923000000.0,1989000000.0,6898000000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#c6dbef","#2ca02c","#d62728","#ff7f0e","#ff7f0e","#2ca02c","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$34.0B (100.0%)","Americas\u003cbr\u003e$15.2B (44.7%)","EMEA\u003cbr\u003e$8.5B (25.2%)","APAC\u003cbr\u003e$6.7B (19.6%)","Engineering\u003cbr\u003e$2.2B (6.6%)","Other\u003cbr\u003e$1.3B (3.9%)","Gross Profit\u003cbr\u003e$12.5B (36.8%)","Cost of Revenue\u003cbr\u003e$21.5B (63.2%)","R&D\u003cbr\u003e$147M (0.4%)","SG&A\u003cbr\u003e$3.4B (10.1%)","Operating Income\u003cbr\u003e$8.9B (26.3%)","Income Tax\u003cbr\u003e$2.0B (5.9%)","Net Income\u003cbr\u003e$6.9B (20.3%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":60},"paper_bgcolor":"#fafafa","title":{"font":{"size":16},"text":"Linde plc (LIN) — Financial Flow FY2025"},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": true, "displayModeBar": true, "modeBarButtonsToAdd": ["zoom2d", "pan2d", "resetScale2d"]}                    )                };            </script>        </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$34.0B (100.0%)", "Americas<br>$15.2B (44.7%)", "EMEA<br>$8.5B (25.2%)", "APAC<br>$6.7B (19.6%)", "Engineering<br>$2.2B (6.6%)", "Other<br>$1.3B (3.9%)", "Gross Profit<br>$12.5B (36.8%)", "Cost of Revenue<br>$21.5B (63.2%)", "R&D<br>$147M (0.4%)", "SG&A<br>$3.4B (10.1%)", "Operating Income<br>$8.9B (26.3%)", "Income Tax<br>$2.0B (5.9%)", "Net Income<br>$6.9B (20.3%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 10, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12], "link_values": [15208000000.0, 8549000000.0, 6661000000.0, 2250000000.0, 1318000000.0, 12503000000.0, 21483000000.0, 339860000.0, 3433000000.0, 8923000000.0, 1989000000.0, 6898000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Americas (44.7%)", "EMEA (25.2%)", "APAC (19.6%)", "Engineering (6.6%)", "Other (3.9%)", "Gross Profit (36.8%)", "COGS (63.2%)", "R&D (0.4%)", "SG&A (10.1%)", "Operating Income (26.3%)", "Income Tax", "Net Income (20.3%)"], "title": "Linde plc (LIN) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$33.0B (100.0%)", "Americas<br>$14.4B (43.8%)", "EMEA<br>$8.4B (25.3%)", "APAC<br>$6.6B (20.1%)", "Engineering<br>$2.3B (7.0%)", "Other<br>$1.3B (3.8%)", "Gross Profit<br>$12.1B (36.7%)", "Cost of Revenue<br>$20.9B (63.3%)", "R&D<br>$150M (0.5%)", "SG&A<br>$3.3B (10.1%)", "Operating Income<br>$8.6B (26.2%)", "Income Tax<br>$2.0B (6.1%)", "Net Income<br>$6.6B (19.9%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 10, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12], "link_values": [14442000000.0, 8352000000.0, 6632000000.0, 2322000000.0, 1257000000.0, 12122000000.0, 20883000000.0, 330050000.0, 3337000000.0, 8635000000.0, 2002000000.0, 6565000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Americas (43.8%)", "EMEA (25.3%)", "APAC (20.1%)", "Engineering (7.0%)", "Other (3.8%)", "Gross Profit (36.7%)", "COGS (63.3%)", "R&D (0.5%)", "SG&A (10.1%)", "Operating Income (26.2%)", "Income Tax", "Net Income (19.9%)"], "title": "Linde plc (LIN) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$32.9B (100.0%)", "Americas<br>$14.3B (43.5%)", "EMEA<br>$8.5B (26.0%)", "APAC<br>$6.6B (20.0%)", "Engineering<br>$2.2B (6.6%)", "Other<br>$1.3B (3.9%)", "Gross Profit<br>$11.5B (34.9%)", "Cost of Revenue<br>$21.4B (65.1%)", "R&D<br>$146M (0.4%)", "SG&A<br>$3.3B (10.0%)", "Operating Income<br>$8.0B (24.4%)", "Income Tax<br>$1.8B (5.5%)", "Net Income<br>$6.2B (18.9%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 10, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12], "link_values": [14304000000.0, 8542000000.0, 6559000000.0, 2160000000.0, 1289000000.0, 11465000000.0, 21389000000.0, 328540000.0, 3295000000.0, 8024000000.0, 1814000000.0, 6199000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Americas (43.5%)", "EMEA (26.0%)", "APAC (20.0%)", "Engineering (6.6%)", "Other (3.9%)", "Gross Profit (34.9%)", "COGS (65.1%)", "R&D (0.4%)", "SG&A (10.0%)", "Operating Income (24.4%)", "Income Tax", "Net Income (18.9%)"], "title": "Linde plc (LIN) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  var layoutUpdate = {
+    "title.text": data.title,
+  };
+
+  Plotly.update("sankey-chart", update, layoutUpdate);
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+</script>
+</body>
+</html>
+
+
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Linde plc Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Linde plc operates primarily in the industrial gases sector, with its revenue generated from five key segments: Americas, EMEA (Europe, Middle East, and Africa), APAC (Asia-Pacific), Engineering, and Other. For FY2025, total revenue reached $33.99 billion, with the Americas segment contributing the largest share at $15.21 billion, representing approximately 44.8% of total revenue. The EMEA segment followed with $8.55 billion (25.2%), APAC with $6.66 billion (19.6%), Engineering at $2.25 billion (6.6%), and Other at $1.32 billion (3.9%).</p>
+<p>Over the past three years, Linde has demonstrated a consistent upward trend in total revenue, increasing from $32.85 billion in FY2023 to $33.99 billion in FY2025. The Americas segment has shown the most significant growth, rising from $14.30 billion in FY2023 to $15.21 billion in FY2025. The EMEA segment also experienced growth, albeit at a slower pace, while APAC maintained stable revenue levels. The Engineering segment saw a slight decline in FY2025 compared to FY2024, indicating potential challenges in that area. The revenue mix has evolved, with the Americas segment becoming increasingly dominant, reflecting Linde's strategic focus on this region.</p>
+<p>Key products and services driving growth include industrial gases used in various applications such as healthcare, manufacturing, and energy. The geographical diversification of Linde's operations allows it to capitalize on growth opportunities in emerging markets, particularly in the Americas and APAC regions.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Linde's operating income for FY2025 was $8.92 billion, resulting in an operating margin of 26.3%, a slight increase from 26.2% in FY2024 and 24.4% in FY2023. This upward trend in operating margin indicates improved efficiency and cost management across the business. While gross profit figures are not disclosed, the operating income suggests that Linde effectively converts a significant portion of its revenue into earnings.</p>
+<p>Major cost drivers for Linde include Selling, General and Administrative (SG&amp;A) expenses and Research and Development (R&amp;D) expenses. In FY2025, SG&amp;A expenses amounted to $3.43 billion, while R&amp;D expenses were $147 million. The relatively low R&amp;D expenditure indicates a focus on operational efficiency rather than extensive product development, which is typical in the industrial gases sector. The operating leverage is evident as Linde has managed to increase its operating income while maintaining a stable cost structure, contributing to improved profitability trends.</p>
+<h2>Business Model Summary</h2>
+<p>Linde plc's business model is centered around converting revenue from its diverse industrial gases portfolio into earnings through efficient operations and strategic market positioning. The company leverages its extensive global footprint to serve a wide range of industries, ensuring a steady demand for its products and services.</p>
+<p>The competitive positioning of Linde is reinforced by its strong presence in the Americas, which has become the largest revenue contributor. This segment's growth reflects Linde's ability to capitalize on market opportunities and its established customer base. The segment structure also highlights Linde's focus on high-margin areas, particularly in the Americas and EMEA, while managing costs effectively.</p>
+<p>Notable shifts in the segment mix include the increasing dominance of the Americas, which has grown from $14.30 billion in FY2023 to $15.21 billion in FY2025. This shift indicates a strategic emphasis on regions with higher growth potential. Additionally, the slight decline in the Engineering segment's revenue suggests a need for Linde to reassess its strategies in this area to maintain overall growth and profitability.</p>
+<p>In summary, Linde plc's business model is characterized by a strong revenue-generating capability across its segments, effective cost management, and a strategic focus on high-growth regions, positioning the company well for future growth.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$33.99B</td><td style="text-align:right">$33.01B</td><td style="text-align:right" class="yoy-pos">+3.0%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$147.0M</td><td style="text-align:right">$150.0M</td><td style="text-align:right" class="yoy-neg">-2.0%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$3.43B</td><td style="text-align:right">$3.34B</td><td style="text-align:right" class="yoy-pos">+2.9%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$8.92B</td><td style="text-align:right">$8.63B</td><td style="text-align:right" class="yoy-pos">+3.3%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">26.3%</td><td style="text-align:right">26.2%</td><td style="text-align:right" class="yoy-pos">+0.4%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$6.90B</td><td style="text-align:right">$6.57B</td><td style="text-align:right" class="yoy-pos">+5.1%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">20.3%</td><td style="text-align:right">19.9%</td><td style="text-align:right" class="yoy-pos">+2.0%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2025 Q3</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q2</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q1</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2024 Q3</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$8.27B</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$36.0M</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$840.0M</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$2.18B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">26.4%</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$1.70B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">20.6%</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$8.11B</td><td style="text-align:right">$8.10B</td><td style="text-align:right" class="yoy-pos">+0.1%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$38.0M</td><td style="text-align:right">$38.0M</td><td style="text-align:right" class="yoy-pos">+0.0%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$786.0M</td><td style="text-align:right">$860.0M</td><td style="text-align:right" class="yoy-neg">-8.6%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$2.18B</td><td style="text-align:right">$2.10B</td><td style="text-align:right" class="yoy-pos">+4.2%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">26.9%</td><td style="text-align:right">25.9%</td><td style="text-align:right" class="yoy-pos">+4.1%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$1.71B</td><td style="text-align:right">$1.63B</td><td style="text-align:right" class="yoy-pos">+4.9%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">21.0%</td><td style="text-align:right">20.1%</td><td style="text-align:right" class="yoy-pos">+4.8%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>2023 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section">
+  <h3>Segment Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$33.99B</td><td>$6.90B</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$33.01B</td><td>$6.57B</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$32.85B</td><td>$6.20B</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$8.11B</td><td>$1.71B</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$8.27B</td><td>$1.70B</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$8.10B</td><td>$1.63B</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q1</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $33.99B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Americas</td><td style='text-align:right'>$15.21B</td><td style='text-align:right'>44.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:44.7%'></div>  </div></td></tr><tr><td>EMEA</td><td style='text-align:right'>$8.55B</td><td style='text-align:right'>25.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:25.2%'></div>  </div></td></tr><tr><td>APAC</td><td style='text-align:right'>$6.66B</td><td style='text-align:right'>19.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:19.6%'></div>  </div></td></tr><tr><td>Engineering</td><td style='text-align:right'>$2.25B</td><td style='text-align:right'>6.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:6.6%'></div>  </div></td></tr><tr><td>Other</td><td style='text-align:right'>$1.32B</td><td style='text-align:right'>3.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:3.9%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $33.01B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Americas</td><td style='text-align:right'>$14.44B</td><td style='text-align:right'>43.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:43.8%'></div>  </div></td></tr><tr><td>EMEA</td><td style='text-align:right'>$8.35B</td><td style='text-align:right'>25.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:25.3%'></div>  </div></td></tr><tr><td>APAC</td><td style='text-align:right'>$6.63B</td><td style='text-align:right'>20.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:20.1%'></div>  </div></td></tr><tr><td>Engineering</td><td style='text-align:right'>$2.32B</td><td style='text-align:right'>7.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.0%'></div>  </div></td></tr><tr><td>Other</td><td style='text-align:right'>$1.26B</td><td style='text-align:right'>3.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:3.8%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $32.85B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Americas</td><td style='text-align:right'>$14.30B</td><td style='text-align:right'>43.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:43.5%'></div>  </div></td></tr><tr><td>EMEA</td><td style='text-align:right'>$8.54B</td><td style='text-align:right'>26.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:26.0%'></div>  </div></td></tr><tr><td>APAC</td><td style='text-align:right'>$6.56B</td><td style='text-align:right'>20.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:20.0%'></div>  </div></td></tr><tr><td>Engineering</td><td style='text-align:right'>$2.16B</td><td style='text-align:right'>6.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:6.6%'></div>  </div></td></tr><tr><td>Other</td><td style='text-align:right'>$1.29B</td><td style='text-align:right'>3.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:3.9%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Americas</td><td style='text-align:right'>$15.21B</td><td style='text-align:right'>$14.44B</td><td style='text-align:right'>$14.30B</td><td style='text-align:right;color:#28a745;font-weight:600'>+5.3%</td></tr><tr><td>EMEA</td><td style='text-align:right'>$8.55B</td><td style='text-align:right'>$8.35B</td><td style='text-align:right'>$8.54B</td><td style='text-align:right;color:#28a745;font-weight:600'>+2.4%</td></tr><tr><td>APAC</td><td style='text-align:right'>$6.66B</td><td style='text-align:right'>$6.63B</td><td style='text-align:right'>$6.56B</td><td style='text-align:right;color:#28a745;font-weight:600'>+0.4%</td></tr><tr><td>Engineering</td><td style='text-align:right'>$2.25B</td><td style='text-align:right'>$2.32B</td><td style='text-align:right'>$2.16B</td><td style='text-align:right;color:#dc3545;font-weight:600'>-3.1%</td></tr><tr><td>Other</td><td style='text-align:right'>$1.32B</td><td style='text-align:right'>$1.26B</td><td style='text-align:right'>$1.29B</td><td style='text-align:right;color:#28a745;font-weight:600'>+4.9%</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 9 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 9 quarterly reports
+</div>
+</body>
+</html>

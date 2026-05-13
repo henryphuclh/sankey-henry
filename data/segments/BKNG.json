@@ -1,0 +1,565 @@
+{
+  "ticker": "BKNG",
+  "name": "Booking Holdings Inc.",
+  "latest_annual": {
+    "ticker": "BKNG",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Merchant revenues",
+        "value": 17755000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Agency revenues",
+        "value": 7968000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Advertising and other revenues",
+        "value": 1194000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 26917000000.0,
+    "gross_profit": null,
+    "operating_income": 8825000000.0,
+    "net_income": null,
+    "rd_expense": null,
+    "sga_expense": null,
+    "cogs": null,
+    "interest_expense": null,
+    "income_tax": 1428000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 0.89,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "BKNG",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Merchant revenues",
+          "value": 17755000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Agency revenues",
+          "value": 7968000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising and other revenues",
+          "value": 1194000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 26917000000.0,
+      "gross_profit": null,
+      "operating_income": 8825000000.0,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1428000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.89,
+      "notes": []
+    },
+    {
+      "ticker": "BKNG",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Merchant revenues",
+          "value": 14142000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Agency revenues",
+          "value": 8524000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising and other revenues",
+          "value": 1073000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 23739000000.0,
+      "gross_profit": null,
+      "operating_income": 7555000000.0,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1410000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.89,
+      "notes": []
+    },
+    {
+      "ticker": "BKNG",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Merchant revenues",
+          "value": 10936000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Agency revenues",
+          "value": 9414000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising and other revenues",
+          "value": 1015000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 21365000000.0,
+      "gross_profit": null,
+      "operating_income": 5835000000.0,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": -897000000.0,
+      "income_tax": 1192000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.93,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "BKNG",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "BKNG",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "BKNG",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Merchant revenues",
+          "value": 2918000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Agency revenues",
+          "value": 1564000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising and other revenues",
+          "value": 280000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 4762000000.0,
+      "gross_profit": null,
+      "operating_income": 1062000000.0,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 63000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.89,
+      "notes": []
+    },
+    {
+      "ticker": "BKNG",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "BKNG",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Merchant revenues",
+          "value": 3446000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Agency revenues",
+          "value": 2144000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising and other revenues",
+          "value": 269000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 5859000000.0,
+      "gross_profit": null,
+      "operating_income": 1856000000.0,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 401000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.89,
+      "notes": [
+        "Warning: total_revenue (5859000000) differs from Yahoo (23739000000) by 75.3%"
+      ]
+    },
+    {
+      "ticker": "BKNG",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Merchant revenues",
+          "value": 2388000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Agency revenues",
+          "value": 1763000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising and other revenues",
+          "value": 264000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 4415000000.0,
+      "gross_profit": null,
+      "operating_income": 791000000.0,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": -219000000.0,
+      "income_tax": 161000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.93,
+      "notes": [
+        "Warning: total_revenue (4415000000) differs from Yahoo (23739000000) by 81.4%"
+      ]
+    },
+    {
+      "ticker": "BKNG",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "BKNG",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "BKNG",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 4762000000.0,
+  "ttm_operating_income": 1062000000.0,
+  "ttm_net_income": null,
+  "segment_trend": {
+    "Merchant revenues": [
+      {
+        "period": "2024Q1",
+        "value": 2388000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3446000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2918000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 10936000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 14142000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 17755000000.0,
+        "is_annual": true
+      }
+    ],
+    "Agency revenues": [
+      {
+        "period": "2024Q1",
+        "value": 1763000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2144000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1564000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 9414000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 8524000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 7968000000.0,
+        "is_annual": true
+      }
+    ],
+    "Advertising and other revenues": [
+      {
+        "period": "2024Q1",
+        "value": 264000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 269000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 280000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1015000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1073000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1194000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

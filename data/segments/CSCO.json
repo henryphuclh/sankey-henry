@@ -1,0 +1,1308 @@
+{
+  "ticker": "CSCO",
+  "name": "Cisco Systems Inc.",
+  "latest_annual": {
+    "ticker": "CSCO",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Subscription Revenue, Product",
+        "value": 17783000000.0,
+        "unit": "USD",
+        "period": "2025-07-26 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Services",
+        "value": 15046000000.0,
+        "unit": "USD",
+        "period": "2025-07-26 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Subscription Revenue, Service",
+        "value": 13743000000.0,
+        "unit": "USD",
+        "period": "2025-07-26 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Security",
+        "value": 8094000000.0,
+        "unit": "USD",
+        "period": "2025-07-26 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Collaboration",
+        "value": 4154000000.0,
+        "unit": "USD",
+        "period": "2025-07-26 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Observability",
+        "value": 1055000000.0,
+        "unit": "USD",
+        "period": "2025-07-26 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 56654000000.0,
+    "gross_profit": 36790000000.0,
+    "operating_income": 11760000000.0,
+    "net_income": 10180000000.0,
+    "rd_expense": 9300000000.0,
+    "sga_expense": 10966000000.0,
+    "cogs": 19864000000.0,
+    "interest_expense": null,
+    "income_tax": 920000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "CSCO",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Subscription Revenue, Product",
+          "value": 17783000000.0,
+          "unit": "USD",
+          "period": "2025-07-26 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 15046000000.0,
+          "unit": "USD",
+          "period": "2025-07-26 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription Revenue, Service",
+          "value": 13743000000.0,
+          "unit": "USD",
+          "period": "2025-07-26 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Security",
+          "value": 8094000000.0,
+          "unit": "USD",
+          "period": "2025-07-26 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 4154000000.0,
+          "unit": "USD",
+          "period": "2025-07-26 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Observability",
+          "value": 1055000000.0,
+          "unit": "USD",
+          "period": "2025-07-26 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 56654000000.0,
+      "gross_profit": 36790000000.0,
+      "operating_income": 11760000000.0,
+      "net_income": 10180000000.0,
+      "rd_expense": 9300000000.0,
+      "sga_expense": 10966000000.0,
+      "cogs": 19864000000.0,
+      "interest_expense": null,
+      "income_tax": 920000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "CSCO",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Services",
+          "value": 14550000000.0,
+          "unit": "USD",
+          "period": "2024-07-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription Revenue, Product",
+          "value": 14078000000.0,
+          "unit": "USD",
+          "period": "2024-07-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription Revenue, Service",
+          "value": 13302000000.0,
+          "unit": "USD",
+          "period": "2024-07-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Security",
+          "value": 5075000000.0,
+          "unit": "USD",
+          "period": "2024-07-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 4113000000.0,
+          "unit": "USD",
+          "period": "2024-07-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Observability",
+          "value": 837000000.0,
+          "unit": "USD",
+          "period": "2024-07-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 53803000000.0,
+      "gross_profit": 34828000000.0,
+      "operating_income": 12181000000.0,
+      "net_income": 10320000000.0,
+      "rd_expense": 7983000000.0,
+      "sga_expense": 10364000000.0,
+      "cogs": 18975000000.0,
+      "interest_expense": null,
+      "income_tax": 1914000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "CSCO",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Secure, Agile Networks",
+          "value": 29105000000.0,
+          "unit": "USD",
+          "period": "2023-07-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Internet for the Future",
+          "value": 5306000000.0,
+          "unit": "USD",
+          "period": "2023-07-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 4052000000.0,
+          "unit": "USD",
+          "period": "2023-07-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "End-to-End Security",
+          "value": 3859000000.0,
+          "unit": "USD",
+          "period": "2023-07-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optimized Application Experiences",
+          "value": 811000000.0,
+          "unit": "USD",
+          "period": "2023-07-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Products",
+          "value": 9000000.0,
+          "unit": "USD",
+          "period": "2023-07-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 13856000000.0,
+          "unit": "USD",
+          "period": "2023-07-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 56998000000.0,
+      "gross_profit": 35753000000.0,
+      "operating_income": 15031000000.0,
+      "net_income": 12613000000.0,
+      "rd_expense": 7551000000.0,
+      "sga_expense": 9880000000.0,
+      "cogs": 21245000000.0,
+      "interest_expense": -427000000.0,
+      "income_tax": 2705000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "CSCO",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Subscription Revenue, Product",
+          "value": 4474000000.0,
+          "unit": "USD",
+          "period": "2026-01-24 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 3707000000.0,
+          "unit": "USD",
+          "period": "2026-01-24 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription Revenue, Service",
+          "value": 3362000000.0,
+          "unit": "USD",
+          "period": "2026-01-24 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Security",
+          "value": 2018000000.0,
+          "unit": "USD",
+          "period": "2026-01-24 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 1054000000.0,
+          "unit": "USD",
+          "period": "2026-01-24 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Observability",
+          "value": 277000000.0,
+          "unit": "USD",
+          "period": "2026-01-24 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15349000000.0,
+      "gross_profit": 9972000000.0,
+      "operating_income": 3781000000.0,
+      "net_income": 3175000000.0,
+      "rd_expense": 2355000000.0,
+      "sga_expense": 2881000000.0,
+      "cogs": 5377000000.0,
+      "interest_expense": null,
+      "income_tax": 471000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "CSCO",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "Subscription Revenue, Product",
+          "value": 4500000000.0,
+          "unit": "USD",
+          "period": "2025-10-25 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 3806000000.0,
+          "unit": "USD",
+          "period": "2025-10-25 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription Revenue, Service",
+          "value": 3500000000.0,
+          "unit": "USD",
+          "period": "2025-10-25 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Security",
+          "value": 1980000000.0,
+          "unit": "USD",
+          "period": "2025-10-25 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 1055000000.0,
+          "unit": "USD",
+          "period": "2025-10-25 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Observability",
+          "value": 274000000.0,
+          "unit": "USD",
+          "period": "2025-10-25 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14883000000.0,
+      "gross_profit": 9745000000.0,
+      "operating_income": 3363000000.0,
+      "net_income": 2860000000.0,
+      "rd_expense": 2400000000.0,
+      "sga_expense": 2871000000.0,
+      "cogs": 5138000000.0,
+      "interest_expense": null,
+      "income_tax": 531000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "CSCO",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Subscription Revenue, Product",
+          "value": 4483000000.0,
+          "unit": "USD",
+          "period": "2025-04-26 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 3775000000.0,
+          "unit": "USD",
+          "period": "2025-04-26 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription Revenue, Service",
+          "value": 3433000000.0,
+          "unit": "USD",
+          "period": "2025-04-26 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Security",
+          "value": 2013000000.0,
+          "unit": "USD",
+          "period": "2025-04-26 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 1031000000.0,
+          "unit": "USD",
+          "period": "2025-04-26 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Observability",
+          "value": 261000000.0,
+          "unit": "USD",
+          "period": "2025-04-26 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14149000000.0,
+      "gross_profit": 9278000000.0,
+      "operating_income": 3202000000.0,
+      "net_income": 2491000000.0,
+      "rd_expense": 2335000000.0,
+      "sga_expense": 2724000000.0,
+      "cogs": 4871000000.0,
+      "interest_expense": null,
+      "income_tax": 456000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "CSCO",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Subscription Revenue, Product",
+          "value": 4432000000.0,
+          "unit": "USD",
+          "period": "2025-01-25 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 3757000000.0,
+          "unit": "USD",
+          "period": "2025-01-25 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription Revenue, Service",
+          "value": 3430000000.0,
+          "unit": "USD",
+          "period": "2025-01-25 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Security",
+          "value": 2111000000.0,
+          "unit": "USD",
+          "period": "2025-01-25 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 996000000.0,
+          "unit": "USD",
+          "period": "2025-01-25 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Observability",
+          "value": 277000000.0,
+          "unit": "USD",
+          "period": "2025-01-25 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 13991000000.0,
+      "gross_profit": 9111000000.0,
+      "operating_income": 3113000000.0,
+      "net_income": 2428000000.0,
+      "rd_expense": 2299000000.0,
+      "sga_expense": 2672000000.0,
+      "cogs": 4880000000.0,
+      "interest_expense": null,
+      "income_tax": 459000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "CSCO",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "Subscription Revenue, Product",
+          "value": 4419000000.0,
+          "unit": "USD",
+          "period": "2024-10-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 3727000000.0,
+          "unit": "USD",
+          "period": "2024-10-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription Revenue, Service",
+          "value": 3425000000.0,
+          "unit": "USD",
+          "period": "2024-10-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Security",
+          "value": 2017000000.0,
+          "unit": "USD",
+          "period": "2024-10-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 1085000000.0,
+          "unit": "USD",
+          "period": "2024-10-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Observability",
+          "value": 258000000.0,
+          "unit": "USD",
+          "period": "2024-10-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 13841000000.0,
+      "gross_profit": 9121000000.0,
+      "operating_income": 2358000000.0,
+      "net_income": 2711000000.0,
+      "rd_expense": 2286000000.0,
+      "sga_expense": 2752000000.0,
+      "cogs": 4720000000.0,
+      "interest_expense": null,
+      "income_tax": -444000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (13841000000) differs from Yahoo (53803000000) by 74.3%"
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Networking",
+          "value": 6522000000.0,
+          "unit": "USD",
+          "period": "2024-04-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 3678000000.0,
+          "unit": "USD",
+          "period": "2024-04-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Security",
+          "value": 1304000000.0,
+          "unit": "USD",
+          "period": "2024-04-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 987000000.0,
+          "unit": "USD",
+          "period": "2024-04-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Observability",
+          "value": 211000000.0,
+          "unit": "USD",
+          "period": "2024-04-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12702000000.0,
+      "gross_profit": 8273000000.0,
+      "operating_income": 2191000000.0,
+      "net_income": 1886000000.0,
+      "rd_expense": 1948000000.0,
+      "sga_expense": 2559000000.0,
+      "cogs": 4429000000.0,
+      "interest_expense": -357000000.0,
+      "income_tax": 349000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (12702000000) differs from Yahoo (53803000000) by 76.4%"
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Networking",
+          "value": 7081000000.0,
+          "unit": "USD",
+          "period": "2024-01-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 3559000000.0,
+          "unit": "USD",
+          "period": "2024-01-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 989000000.0,
+          "unit": "USD",
+          "period": "2024-01-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Security",
+          "value": 973000000.0,
+          "unit": "USD",
+          "period": "2024-01-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Observability",
+          "value": 188000000.0,
+          "unit": "USD",
+          "period": "2024-01-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12791000000.0,
+      "gross_profit": 8217000000.0,
+      "operating_income": 3096000000.0,
+      "net_income": 2634000000.0,
+      "rd_expense": 1943000000.0,
+      "sga_expense": 2458000000.0,
+      "cogs": 4574000000.0,
+      "interest_expense": -120000000.0,
+      "income_tax": 527000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (12791000000) differs from Yahoo (53803000000) by 76.2%"
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [
+        {
+          "segment_name": "Networking",
+          "value": 8822000000.0,
+          "unit": "USD",
+          "period": "2023-10-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 3529000000.0,
+          "unit": "USD",
+          "period": "2023-10-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 1117000000.0,
+          "unit": "USD",
+          "period": "2023-10-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Security",
+          "value": 1010000000.0,
+          "unit": "USD",
+          "period": "2023-10-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Observability",
+          "value": 190000000.0,
+          "unit": "USD",
+          "period": "2023-10-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14668000000.0,
+      "gross_profit": 9557000000.0,
+      "operating_income": 4276000000.0,
+      "net_income": 3638000000.0,
+      "rd_expense": 1913000000.0,
+      "sga_expense": 2506000000.0,
+      "cogs": 5111000000.0,
+      "interest_expense": -111000000.0,
+      "income_tax": 804000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (14668000000) differs from Yahoo (56998000000) by 74.3%"
+      ]
+    },
+    {
+      "ticker": "CSCO",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Secure, Agile Networks",
+          "value": 7550000000.0,
+          "unit": "USD",
+          "period": "2023-04-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 3479000000.0,
+          "unit": "USD",
+          "period": "2023-04-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Internet for the Future",
+          "value": 1392000000.0,
+          "unit": "USD",
+          "period": "2023-04-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Collaboration",
+          "value": 985000000.0,
+          "unit": "USD",
+          "period": "2023-04-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "End-to-End Security",
+          "value": 958000000.0,
+          "unit": "USD",
+          "period": "2023-04-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optimized Application Experiences",
+          "value": 204000000.0,
+          "unit": "USD",
+          "period": "2023-04-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other Products",
+          "value": 3000000.0,
+          "unit": "USD",
+          "period": "2023-04-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14571000000.0,
+      "gross_profit": 9232000000.0,
+      "operating_income": 3946000000.0,
+      "net_income": 3212000000.0,
+      "rd_expense": 1962000000.0,
+      "sga_expense": 2526000000.0,
+      "cogs": 5339000000.0,
+      "interest_expense": -109000000.0,
+      "income_tax": 745000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (14571000000) differs from Yahoo (56998000000) by 74.4%"
+      ]
+    }
+  ],
+  "ttm_revenue": 58372000000.0,
+  "ttm_operating_income": 13459000000.0,
+  "ttm_net_income": 10954000000.0,
+  "segment_trend": {
+    "Secure, Agile Networks": [
+      {
+        "period": "2023Q2",
+        "value": 7550000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 29105000000.0,
+        "is_annual": true
+      }
+    ],
+    "Services": [
+      {
+        "period": "2023Q2",
+        "value": 3479000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 3529000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 3559000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3678000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 3727000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 3757000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 3775000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 3806000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 3707000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 13856000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 14550000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 15046000000.0,
+        "is_annual": true
+      }
+    ],
+    "Internet for the Future": [
+      {
+        "period": "2023Q2",
+        "value": 1392000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 5306000000.0,
+        "is_annual": true
+      }
+    ],
+    "Collaboration": [
+      {
+        "period": "2023Q2",
+        "value": 985000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 1117000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 989000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 987000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 1085000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 996000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1031000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 1055000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1054000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 4052000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 4113000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4154000000.0,
+        "is_annual": true
+      }
+    ],
+    "End-to-End Security": [
+      {
+        "period": "2023Q2",
+        "value": 958000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 3859000000.0,
+        "is_annual": true
+      }
+    ],
+    "Optimized Application Experiences": [
+      {
+        "period": "2023Q2",
+        "value": 204000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 811000000.0,
+        "is_annual": true
+      }
+    ],
+    "Other Products": [
+      {
+        "period": "2023Q2",
+        "value": 3000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 9000000.0,
+        "is_annual": true
+      }
+    ],
+    "Networking": [
+      {
+        "period": "2023Q4",
+        "value": 8822000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 7081000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 6522000000.0,
+        "is_annual": false
+      }
+    ],
+    "Security": [
+      {
+        "period": "2023Q4",
+        "value": 1010000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 973000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1304000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 2017000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2111000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 2013000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 1980000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 2018000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 5075000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 8094000000.0,
+        "is_annual": true
+      }
+    ],
+    "Observability": [
+      {
+        "period": "2023Q4",
+        "value": 190000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 188000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 211000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 258000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 277000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 261000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 274000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 277000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 837000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1055000000.0,
+        "is_annual": true
+      }
+    ],
+    "Subscription Revenue, Product": [
+      {
+        "period": "2024Q4",
+        "value": 4419000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4432000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4483000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 4500000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 4474000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 14078000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 17783000000.0,
+        "is_annual": true
+      }
+    ],
+    "Subscription Revenue, Service": [
+      {
+        "period": "2024Q4",
+        "value": 3425000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 3430000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 3433000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 3500000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 3362000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 13302000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 13743000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

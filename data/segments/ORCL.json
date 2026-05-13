@@ -1,0 +1,573 @@
+{
+  "ticker": "ORCL",
+  "name": "Oracle Corporation",
+  "latest_annual": {
+    "ticker": "ORCL",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Cloud Services",
+        "value": 24506000000.0,
+        "unit": "USD",
+        "period": "2025-05-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "License Support",
+        "value": 19523000000.0,
+        "unit": "USD",
+        "period": "2025-05-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Applications Cloud Services and License Support",
+        "value": 19383000000.0,
+        "unit": "USD",
+        "period": "2025-05-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 57399000000.0,
+    "gross_profit": null,
+    "operating_income": 17678000000.0,
+    "net_income": 12443000000.0,
+    "rd_expense": 9860000000.0,
+    "sga_expense": null,
+    "cogs": null,
+    "interest_expense": -3578000000.0,
+    "income_tax": 1717000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "ORCL",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Cloud Services",
+          "value": 24506000000.0,
+          "unit": "USD",
+          "period": "2025-05-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "License Support",
+          "value": 19523000000.0,
+          "unit": "USD",
+          "period": "2025-05-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Applications Cloud Services and License Support",
+          "value": 19383000000.0,
+          "unit": "USD",
+          "period": "2025-05-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 57399000000.0,
+      "gross_profit": null,
+      "operating_income": 17678000000.0,
+      "net_income": 12443000000.0,
+      "rd_expense": 9860000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": -3578000000.0,
+      "income_tax": 1717000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ORCL",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Cloud Services",
+          "value": 19774000000.0,
+          "unit": "USD",
+          "period": "2024-05-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "License Support",
+          "value": 19609000000.0,
+          "unit": "USD",
+          "period": "2024-05-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Applications Cloud Services and License Support",
+          "value": 18172000000.0,
+          "unit": "USD",
+          "period": "2024-05-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 52961000000.0,
+      "gross_profit": null,
+      "operating_income": 15353000000.0,
+      "net_income": 10467000000.0,
+      "rd_expense": 8915000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": -3514000000.0,
+      "income_tax": 1274000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ORCL",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "ORCL",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Cloud and Software",
+          "value": 15033000000.0,
+          "unit": "USD",
+          "period": "2026-02-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Hardware",
+          "value": 714000000.0,
+          "unit": "USD",
+          "period": "2026-02-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 1443000000.0,
+          "unit": "USD",
+          "period": "2026-02-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17190000000.0,
+      "gross_profit": null,
+      "operating_income": 5464000000.0,
+      "net_income": 3721000000.0,
+      "rd_expense": 2607000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": -1180000000.0,
+      "income_tax": 695000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ORCL",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ORCL",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ORCL",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Cloud and License",
+          "value": 12136000000.0,
+          "unit": "USD",
+          "period": "2025-02-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Hardware",
+          "value": 703000000.0,
+          "unit": "USD",
+          "period": "2025-02-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 1291000000.0,
+          "unit": "USD",
+          "period": "2025-02-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14130000000.0,
+      "gross_profit": null,
+      "operating_income": 4358000000.0,
+      "net_income": 2936000000.0,
+      "rd_expense": 2429000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": -892000000.0,
+      "income_tax": 512000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ORCL",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ORCL",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Cloud and License",
+          "value": 11389000000.0,
+          "unit": "USD",
+          "period": "2024-08-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Hardware",
+          "value": 655000000.0,
+          "unit": "USD",
+          "period": "2024-08-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 1263000000.0,
+          "unit": "USD",
+          "period": "2024-08-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 13307000000.0,
+      "gross_profit": null,
+      "operating_income": 3991000000.0,
+      "net_income": 2929000000.0,
+      "rd_expense": 2306000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": -842000000.0,
+      "income_tax": -240000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (13307000000) differs from Yahoo (52961000000) by 74.9%"
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Cloud and License",
+          "value": 11219000000.0,
+          "unit": "USD",
+          "period": "2024-02-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Hardware",
+          "value": 754000000.0,
+          "unit": "USD",
+          "period": "2024-02-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 1307000000.0,
+          "unit": "USD",
+          "period": "2024-02-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 13280000000.0,
+      "gross_profit": null,
+      "operating_income": 3750000000.0,
+      "net_income": 2401000000.0,
+      "rd_expense": 2248000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": -876000000.0,
+      "income_tax": 464000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (13280000000) differs from Yahoo (52961000000) by 74.9%"
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "ORCL",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 31320000000.0,
+  "ttm_operating_income": 9822000000.0,
+  "ttm_net_income": 6657000000.0,
+  "segment_trend": {
+    "Cloud and License": [
+      {
+        "period": "2024Q1",
+        "value": 11219000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 11389000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 12136000000.0,
+        "is_annual": false
+      }
+    ],
+    "Hardware": [
+      {
+        "period": "2024Q1",
+        "value": 754000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 655000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 703000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 714000000.0,
+        "is_annual": false
+      }
+    ],
+    "Services": [
+      {
+        "period": "2024Q1",
+        "value": 1307000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1263000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1291000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1443000000.0,
+        "is_annual": false
+      }
+    ],
+    "Cloud and Software": [
+      {
+        "period": "2026Q1",
+        "value": 15033000000.0,
+        "is_annual": false
+      }
+    ],
+    "Cloud Services": [
+      {
+        "period": "FY2024",
+        "value": 19774000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 24506000000.0,
+        "is_annual": true
+      }
+    ],
+    "License Support": [
+      {
+        "period": "FY2024",
+        "value": 19609000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 19523000000.0,
+        "is_annual": true
+      }
+    ],
+    "Applications Cloud Services and License Support": [
+      {
+        "period": "FY2024",
+        "value": 18172000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 19383000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

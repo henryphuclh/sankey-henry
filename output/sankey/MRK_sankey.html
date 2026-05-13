@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Merck & Co. Inc. (MRK) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merck & Co. Inc. (MRK) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Merck & Co. Inc. <span style="opacity:0.7">(MRK)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls">
+  <label for="period-select">Fiscal Year:</label>
+  <select id="period-select" onchange="switchPeriod(this.value)">
+    <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+  </select>
+  <span id="data-badge" style="margin-left:12px; font-size:12px; color:#666;"></span>
+</div>
+
+<div class="chart-container">
+  <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,127,14,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total segment profits (99.2%)","Other: Other profits","Gross Profit (74.8%)","COGS (25.2%)","R&D (24.3%)","SG&A (16.5%)","Income Tax","Net Income (28.1%)"],"source":[1,2,0,0,3,3,3,3],"target":[0,0,3,4,5,6,7,8],"value":[64496000000.0,650110000.0,48629000000.0,16382000000.0,15789000000.0,10733000000.0,2804000000.0,18263000000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#2ca02c","#d62728","#ff7f0e","#ff7f0e","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$65.0B (100.0%)","Total segment profits\u003cbr\u003e$64.5B (99.2%)","Other\u003cbr\u003e$515M (0.8%)","Gross Profit\u003cbr\u003e$48.6B (74.8%)","Cost of Revenue\u003cbr\u003e$16.4B (25.2%)","R&D\u003cbr\u003e$15.8B (24.3%)","SG&A\u003cbr\u003e$10.7B (16.5%)","Income Tax\u003cbr\u003e$2.8B (4.3%)","Net Income\u003cbr\u003e$18.3B (28.1%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":60},"paper_bgcolor":"#fafafa","title":{"font":{"size":16},"text":"Merck & Co. Inc. (MRK) — Financial Flow FY2025"},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": true, "displayModeBar": true, "modeBarButtonsToAdd": ["zoom2d", "pan2d", "resetScale2d"]}                    )                };            </script>        </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$65.0B (100.0%)", "Total segment profits<br>$64.5B (99.2%)", "Other<br>$515M (0.8%)", "Gross Profit<br>$48.6B (74.8%)", "Cost of Revenue<br>$16.4B (25.2%)", "R&D<br>$15.8B (24.3%)", "SG&A<br>$10.7B (16.5%)", "Income Tax<br>$2.8B (4.3%)", "Net Income<br>$18.3B (28.1%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.87, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.2, 0.4, 0.65, 0.5], "link_sources": [1, 2, 0, 0, 3, 3, 3, 3], "link_targets": [0, 0, 3, 4, 5, 6, 7, 8], "link_values": [64496000000.0, 650110000.0, 48629000000.0, 16382000000.0, 15789000000.0, 10733000000.0, 2804000000.0, 18263000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Total segment profits (99.2%)", "Other: Other profits", "Gross Profit (74.8%)", "COGS (25.2%)", "R&D (24.3%)", "SG&A (16.5%)", "Income Tax", "Net Income (28.1%)"], "title": "Merck & Co. Inc. (MRK) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$64.2B (100.0%)", "Total segment profits<br>$63.3B (98.6%)", "Other<br>$891M (1.4%)", "Gross Profit<br>$49.0B (76.3%)", "Cost of Revenue<br>$15.2B (23.7%)", "R&D<br>$17.9B (28.0%)", "SG&A<br>$10.8B (16.9%)", "Income Tax<br>$2.8B (4.4%)", "Net Income<br>$17.1B (26.7%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.87, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.2, 0.4, 0.65, 0.5], "link_sources": [1, 2, 0, 0, 3, 3, 3, 3], "link_targets": [0, 0, 3, 4, 5, 6, 7, 8], "link_values": [63277000000.0, 891000000.0, 48975000000.0, 15193000000.0, 17938000000.0, 10816000000.0, 2803000000.0, 17133000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Total segment profits (98.6%)", "Other: Other profits", "Gross Profit (76.3%)", "COGS (23.7%)", "R&D (28.0%)", "SG&A (16.9%)", "Income Tax", "Net Income (26.7%)"], "title": "Merck & Co. Inc. (MRK) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$60.1B (100.0%)", "Total segment profits<br>$59.2B (98.5%)", "Other profits<br>$907M (1.5%)", "Gross Profit<br>$44.0B (73.2%)", "Cost of Revenue<br>$16.1B (26.8%)", "R&D<br>$30.5B (50.8%)", "SG&A<br>$10.5B (17.5%)", "Income Tax<br>$1.5B (2.5%)", "Net Income<br>$365M (0.6%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.87, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.2, 0.4, 0.65, 0.5], "link_sources": [1, 2, 0, 0, 3, 3, 3, 3], "link_targets": [0, 0, 3, 4, 5, 6, 7, 8], "link_values": [59208000000.0, 907000000.0, 43989000000.0, 16126000000.0, 30531000000.0, 10504000000.0, 1512000000.0, 601150000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Total segment profits (98.5%)", "Other profits (1.5%)", "Gross Profit (73.2%)", "COGS (26.8%)", "R&D (50.8%)", "SG&A (17.5%)", "Income Tax", "Net Income (0.6%)"], "title": "Merck & Co. Inc. (MRK) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  var layoutUpdate = {
+    "title.text": data.title,
+  };
+
+  Plotly.update("sankey-chart", update, layoutUpdate);
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+</script>
+</body>
+</html>
+
+
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Merck &amp; Co. Inc. (MRK) Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Merck &amp; Co. Inc. operates primarily in the pharmaceutical and animal health sectors, with significant contributions from its key products. Over the past three years, the company has demonstrated robust revenue growth, with total revenues reaching $65.01 billion in FY2025, up from $64.17 billion in FY2024. The revenue mix has evolved, with the pharmaceutical segment accounting for the majority of total revenue, specifically $64.50 billion in FY2025, while the animal health segment contributed $515 million in the same period.</p>
+<p>Key products driving growth include Vaxneuvance, Gardasil/Gardasil 9, and Keytruda. For instance, in Q1 2024, Gardasil/Gardasil 9 generated $4.23 billion, while Vaxneuvance contributed $3.31 billion. The international sales of Keytruda also showed promise, with $1.65 billion in Q1 2024. The animal health segment, particularly the Non-US and Companion Animal categories, also contributed significantly, with revenues of $1.17 billion and $608 million, respectively, in Q1 2024.</p>
+<p>The revenue mix indicates a strong reliance on the pharmaceutical segment, which has consistently outperformed the animal health segment. This trend highlights Merck's focus on innovative pharmaceutical solutions, particularly in vaccines and oncology.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>While gross profit and operating income figures are not disclosed, net income has shown a positive trajectory, increasing from $17.13 billion in FY2024 to $18.26 billion in FY2025. The major cost drivers for Merck include research and development (R&amp;D) and selling, general, and administrative (SG&amp;A) expenses. R&amp;D expenses were $15.79 billion in FY2025, reflecting the company's commitment to innovation and product development. SG&amp;A expenses were $10.73 billion in the same period, indicating a significant investment in marketing and sales efforts.</p>
+<p>The operating leverage appears favorable, as the increase in net income outpaces the growth in expenses. This suggests that Merck is effectively managing its cost structure while driving revenue growth. The company's focus on high-margin products, particularly in the pharmaceutical segment, is likely contributing to improved profitability trends.</p>
+<h2>Business Model Summary</h2>
+<p>Merck &amp; Co. Inc. effectively converts revenue into earnings through a combination of innovative product offerings and strategic cost management. The company's business model is centered around high-value pharmaceutical products, which command premium pricing and contribute significantly to overall profitability. The segment structure reveals a competitive positioning that emphasizes the importance of R&amp;D in driving future growth, particularly in oncology and vaccines.</p>
+<p>Notable shifts in the segment mix are evident, with a clear focus on expanding the pharmaceutical segment's contribution to total revenue. The strong performance of key products like Gardasil and Keytruda underscores Merck's competitive advantage in the market. Additionally, the animal health segment, while smaller, provides diversification and growth opportunities, particularly in international markets.</p>
+<p>Overall, Merck's business model is characterized by a strong emphasis on innovation, effective cost management, and a focus on high-margin products, positioning the company well for sustained growth in the pharmaceutical industry.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$65.01B</td><td style="text-align:right">$64.17B</td><td style="text-align:right" class="yoy-pos">+1.3%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$16.38B</td><td style="text-align:right">$15.19B</td><td style="text-align:right" class="yoy-pos">+7.8%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$15.79B</td><td style="text-align:right">$17.94B</td><td style="text-align:right" class="yoy-neg">-12.0%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$10.73B</td><td style="text-align:right">$10.82B</td><td style="text-align:right" class="yoy-neg">-0.8%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$18.26B</td><td style="text-align:right">$17.13B</td><td style="text-align:right" class="yoy-pos">+6.6%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">28.1%</td><td style="text-align:right">26.7%</td><td style="text-align:right" class="yoy-pos">+5.2%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2025 Q3</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q2</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q1</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2024 Q3</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$16.11B</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$3.75B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$3.50B</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$2.74B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$5.46B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">33.9%</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$15.53B</td><td style="text-align:right">$15.78B</td><td style="text-align:right" class="yoy-neg">-1.6%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$3.42B</td><td style="text-align:right">$3.54B</td><td style="text-align:right" class="yoy-neg">-3.4%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$3.62B</td><td style="text-align:right">$3.99B</td><td style="text-align:right" class="yoy-neg">-9.3%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$2.55B</td><td style="text-align:right">$2.48B</td><td style="text-align:right" class="yoy-pos">+2.8%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$5.08B</td><td style="text-align:right">$4.77B</td><td style="text-align:right" class="yoy-pos">+6.7%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">32.7%</td><td style="text-align:right">30.2%</td><td style="text-align:right" class="yoy-pos">+8.4%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>2023 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section">
+  <h3>Segment Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$65.01B</td><td>$18.26B</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$64.17B</td><td>$17.13B</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$60.12B</td><td>$365.0M</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$15.53B</td><td>$5.08B</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$16.11B</td><td>$5.46B</td><td>22</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$15.78B</td><td>$4.77B</td><td>23</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr><tr><td><strong>2023Q1</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>—</td><td>—</td><td>0</td><td>—</td><td>0%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $65.01B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Total segment profits</td><td style='text-align:right'>$64.50B</td><td style='text-align:right'>99.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:99.2%'></div>  </div></td></tr><tr><td>Other profits</td><td style='text-align:right'>$515.0M</td><td style='text-align:right'>0.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $64.17B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Total segment profits</td><td style='text-align:right'>$63.28B</td><td style='text-align:right'>98.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:98.6%'></div>  </div></td></tr><tr><td>Other profits</td><td style='text-align:right'>$891.0M</td><td style='text-align:right'>1.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.4%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $60.12B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Total segment profits</td><td style='text-align:right'>$59.21B</td><td style='text-align:right'>98.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:98.5%'></div>  </div></td></tr><tr><td>Other profits</td><td style='text-align:right'>$907.0M</td><td style='text-align:right'>1.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.5%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Total segment profits</td><td style='text-align:right'>$64.50B</td><td style='text-align:right'>$63.28B</td><td style='text-align:right'>$59.21B</td><td style='text-align:right;color:#28a745;font-weight:600'>+1.9%</td></tr><tr><td>Other profits</td><td style='text-align:right'>$515.0M</td><td style='text-align:right'>$891.0M</td><td style='text-align:right'>$907.0M</td><td style='text-align:right;color:#dc3545;font-weight:600'>-42.2%</td></tr><tr><td>Vaxneuvance - United States - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Gardasil/Gardasil 9 - United States - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Keytruda - Int’l - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Non-US - Animal Health segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Livestock - Int’l - Animal Health segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Companion Animal - United States - Animal Health segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Other pharmaceutical - United States - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>ProQuad/M-M-R II/Varivax - United States - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Livestock - United States - Animal Health segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Lagevrio - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Alliance revenue - Lynparza - Non-US - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Corporate, Non-Segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Vaxneuvance - Int’l - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>RotaTeq - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Winrevair - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Alliance revenue - Adempas/Verquvo - United States - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Pneumovax 23 - United States - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Belsomra - Int’l - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Isentress/Isentress HD - United States - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Alliance Revenue - Reblozyl - United States - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Pneumovax 23 - Non-US - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Noxafil - Non-US - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Delstrigo - Non-US - Pharmaceutical segment</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 4 annual periods, 9 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  4 annual reports, 9 quarterly reports
+</div>
+</body>
+</html>

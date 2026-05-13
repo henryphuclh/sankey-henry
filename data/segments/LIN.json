@@ -1,0 +1,741 @@
+{
+  "ticker": "LIN",
+  "name": "Linde plc",
+  "latest_annual": {
+    "ticker": "LIN",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Americas",
+        "value": 15208000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "EMEA",
+        "value": 8549000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "APAC",
+        "value": 6661000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Engineering",
+        "value": 2250000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Other",
+        "value": 1318000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 33986000000.0,
+    "gross_profit": null,
+    "operating_income": 8923000000.0,
+    "net_income": 6898000000.0,
+    "rd_expense": 147000000.0,
+    "sga_expense": 3433000000.0,
+    "cogs": null,
+    "interest_expense": null,
+    "income_tax": 1989000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "LIN",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Americas",
+          "value": 15208000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 8549000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "APAC",
+          "value": 6661000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Engineering",
+          "value": 2250000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 1318000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 33986000000.0,
+      "gross_profit": null,
+      "operating_income": 8923000000.0,
+      "net_income": 6898000000.0,
+      "rd_expense": 147000000.0,
+      "sga_expense": 3433000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1989000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "LIN",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Americas",
+          "value": 14442000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 8352000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "APAC",
+          "value": 6632000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Engineering",
+          "value": 2322000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 1257000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 33005000000.0,
+      "gross_profit": null,
+      "operating_income": 8635000000.0,
+      "net_income": 6565000000.0,
+      "rd_expense": 150000000.0,
+      "sga_expense": 3337000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 2002000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "LIN",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Americas",
+          "value": 14304000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 8542000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "APAC",
+          "value": 6559000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Engineering",
+          "value": 2160000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 1289000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 32854000000.0,
+      "gross_profit": null,
+      "operating_income": 8024000000.0,
+      "net_income": 6199000000.0,
+      "rd_expense": 146000000.0,
+      "sga_expense": 3295000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1814000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "LIN",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "LIN",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "LIN",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Americas",
+          "value": 3666000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 2031000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "APAC",
+          "value": 1539000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Engineering",
+          "value": 565000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 311000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8112000000.0,
+      "gross_profit": null,
+      "operating_income": 2184000000.0,
+      "net_income": 1707000000.0,
+      "rd_expense": 38000000.0,
+      "sga_expense": 786000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 511000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "LIN",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "LIN",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Americas",
+          "value": 3655000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 2091000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "APAC",
+          "value": 1657000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Engineering",
+          "value": 544000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 320000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8267000000.0,
+      "gross_profit": null,
+      "operating_income": 2184000000.0,
+      "net_income": 1700000000.0,
+      "rd_expense": 36000000.0,
+      "sga_expense": 840000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 508000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8267000000) differs from Yahoo (33005000000) by 75.0%"
+      ]
+    },
+    {
+      "ticker": "LIN",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Americas",
+          "value": 3560000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 2091000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "APAC",
+          "value": 1591000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Engineering",
+          "value": 539000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 319000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8100000000.0,
+      "gross_profit": null,
+      "operating_income": 2095000000.0,
+      "net_income": 1627000000.0,
+      "rd_expense": 38000000.0,
+      "sga_expense": 860000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 463000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8100000000) differs from Yahoo (33005000000) by 75.5%"
+      ]
+    },
+    {
+      "ticker": "LIN",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "LIN",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "LIN",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 8112000000.0,
+  "ttm_operating_income": 2184000000.0,
+  "ttm_net_income": 1707000000.0,
+  "segment_trend": {
+    "Americas": [
+      {
+        "period": "2024Q1",
+        "value": 3560000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3655000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 3666000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 14304000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 14442000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 15208000000.0,
+        "is_annual": true
+      }
+    ],
+    "EMEA": [
+      {
+        "period": "2024Q1",
+        "value": 2091000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2091000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2031000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 8542000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 8352000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 8549000000.0,
+        "is_annual": true
+      }
+    ],
+    "APAC": [
+      {
+        "period": "2024Q1",
+        "value": 1591000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1657000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1539000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 6559000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 6632000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 6661000000.0,
+        "is_annual": true
+      }
+    ],
+    "Engineering": [
+      {
+        "period": "2024Q1",
+        "value": 539000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 544000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 565000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 2160000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2322000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2250000000.0,
+        "is_annual": true
+      }
+    ],
+    "Other": [
+      {
+        "period": "2024Q1",
+        "value": 319000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 320000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 311000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1289000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1257000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1318000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

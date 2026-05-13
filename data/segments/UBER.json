@@ -1,0 +1,586 @@
+{
+  "ticker": "UBER",
+  "name": "Uber Technologies Inc.",
+  "latest_annual": {
+    "ticker": "UBER",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "Mobility",
+        "value": 29670000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Delivery",
+        "value": 17248000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Freight",
+        "value": 5099000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 52017000000.0,
+    "gross_profit": null,
+    "operating_income": 5565000000.0,
+    "net_income": 10093000000.0,
+    "rd_expense": 3402000000.0,
+    "sga_expense": null,
+    "cogs": null,
+    "interest_expense": null,
+    "income_tax": -4346000000.0,
+    "currency": "USD",
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "UBER",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Mobility",
+          "value": 29670000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Delivery",
+          "value": 17248000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Freight",
+          "value": 5099000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 52017000000.0,
+      "gross_profit": null,
+      "operating_income": 5565000000.0,
+      "net_income": 10093000000.0,
+      "rd_expense": 3402000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": -4346000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "UBER",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Mobility",
+          "value": 25087000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Delivery",
+          "value": 13750000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Freight",
+          "value": 5141000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 43978000000.0,
+      "gross_profit": null,
+      "operating_income": 2799000000.0,
+      "net_income": 9856000000.0,
+      "rd_expense": 3109000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": -5758000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "UBER",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Mobility",
+          "value": 19832000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Delivery",
+          "value": 12204000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Freight",
+          "value": 5245000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 37281000000.0,
+      "gross_profit": null,
+      "operating_income": 1110000000.0,
+      "net_income": 2156000000.0,
+      "rd_expense": 3164000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": -633000000.0,
+      "income_tax": 213000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "UBER",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "UBER",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "UBER",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "United States and Canada (\"US&CAN\")",
+          "value": 6219000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America (\"LatAm\")",
+          "value": 717000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe, Middle East and Africa (\"EMEA\")",
+          "value": 3321000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific (\"APAC\")",
+          "value": 1276000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11533000000.0,
+      "gross_profit": null,
+      "operating_income": 1228000000.0,
+      "net_income": 1776000000.0,
+      "rd_expense": 815000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": -402000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "UBER",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "UBER",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Mobility",
+          "value": 6134000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Delivery",
+          "value": 3293000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Freight",
+          "value": 1273000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10700000000.0,
+      "gross_profit": null,
+      "operating_income": 796000000.0,
+      "net_income": 1015000000.0,
+      "rd_expense": 760000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 57000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (10700000000) differs from Yahoo (43978000000) by 75.7%"
+      ]
+    },
+    {
+      "ticker": "UBER",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Mobility",
+          "value": 5633000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Delivery",
+          "value": 3214000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Freight",
+          "value": 1284000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10131000000.0,
+      "gross_profit": null,
+      "operating_income": 172000000.0,
+      "net_income": -663000000.0,
+      "rd_expense": 790000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": -124000000.0,
+      "income_tax": 29000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (10131000000) differs from Yahoo (43978000000) by 77.0%"
+      ]
+    },
+    {
+      "ticker": "UBER",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "UBER",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "UBER",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    }
+  ],
+  "ttm_revenue": 11533000000.0,
+  "ttm_operating_income": 1228000000.0,
+  "ttm_net_income": 1776000000.0,
+  "segment_trend": {
+    "Mobility": [
+      {
+        "period": "2024Q1",
+        "value": 5633000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 6134000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 19832000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 25087000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 29670000000.0,
+        "is_annual": true
+      }
+    ],
+    "Delivery": [
+      {
+        "period": "2024Q1",
+        "value": 3214000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3293000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 12204000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 13750000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 17248000000.0,
+        "is_annual": true
+      }
+    ],
+    "Freight": [
+      {
+        "period": "2024Q1",
+        "value": 1284000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1273000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 5245000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 5141000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 5099000000.0,
+        "is_annual": true
+      }
+    ],
+    "United States and Canada (\"US&CAN\")": [
+      {
+        "period": "2025Q1",
+        "value": 6219000000.0,
+        "is_annual": false
+      }
+    ],
+    "Latin America (\"LatAm\")": [
+      {
+        "period": "2025Q1",
+        "value": 717000000.0,
+        "is_annual": false
+      }
+    ],
+    "Europe, Middle East and Africa (\"EMEA\")": [
+      {
+        "period": "2025Q1",
+        "value": 3321000000.0,
+        "is_annual": false
+      }
+    ],
+    "Asia Pacific (\"APAC\")": [
+      {
+        "period": "2025Q1",
+        "value": 1276000000.0,
+        "is_annual": false
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

@@ -1,0 +1,549 @@
+{
+  "ticker": "AAPL",
+  "name": "Apple Inc.",
+  "latest_annual": {
+    "ticker": "AAPL",
+    "period": "FY2025",
+    "is_annual": true,
+    "fiscal_year": 2025,
+    "fiscal_quarter": null,
+    "segments": [
+      {
+        "segment_name": "iPhone",
+        "value": 209586000000.0,
+        "unit": "USD",
+        "period": "FY2025",
+        "concept": "mda_table",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Mac",
+        "value": 33708000000.0,
+        "unit": "USD",
+        "period": "FY2025",
+        "concept": "mda_table",
+        "is_annual": true
+      },
+      {
+        "segment_name": "iPad",
+        "value": 28023000000.0,
+        "unit": "USD",
+        "period": "FY2025",
+        "concept": "mda_table",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Wearables, Home and Accessories",
+        "value": 35686000000.0,
+        "unit": "USD",
+        "period": "FY2025",
+        "concept": "mda_table",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Services",
+        "value": 109158000000.0,
+        "unit": "USD",
+        "period": "FY2025",
+        "concept": "mda_table",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 416161000000.0,
+    "gross_profit": 195201000000.0,
+    "operating_income": 133050000000.0,
+    "net_income": 112010000000.0,
+    "rd_expense": 34550000000.0,
+    "sga_expense": 27601000000.0,
+    "cogs": 220960000000.0,
+    "interest_expense": null,
+    "income_tax": 20719000000.0,
+    "currency": "USD",
+    "extraction_method": "mda_table",
+    "confidence": 1.0,
+    "notes": []
+  },
+  "annual_periods": [
+    {
+      "ticker": "AAPL",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 209586000000.0,
+          "unit": "USD",
+          "period": "FY2025",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 33708000000.0,
+          "unit": "USD",
+          "period": "FY2025",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 28023000000.0,
+          "unit": "USD",
+          "period": "FY2025",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 35686000000.0,
+          "unit": "USD",
+          "period": "FY2025",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 109158000000.0,
+          "unit": "USD",
+          "period": "FY2025",
+          "concept": "mda_table",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 416161000000.0,
+      "gross_profit": 195201000000.0,
+      "operating_income": 133050000000.0,
+      "net_income": 112010000000.0,
+      "rd_expense": 34550000000.0,
+      "sga_expense": 27601000000.0,
+      "cogs": 220960000000.0,
+      "interest_expense": null,
+      "income_tax": 20719000000.0,
+      "currency": "USD",
+      "extraction_method": "mda_table",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AAPL",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 201183000000.0,
+          "unit": "USD",
+          "period": "FY2024",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 29984000000.0,
+          "unit": "USD",
+          "period": "FY2024",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 26694000000.0,
+          "unit": "USD",
+          "period": "FY2024",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 37005000000.0,
+          "unit": "USD",
+          "period": "FY2024",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 96169000000.0,
+          "unit": "USD",
+          "period": "FY2024",
+          "concept": "mda_table",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 391035000000.0,
+      "gross_profit": 180683000000.0,
+      "operating_income": 123216000000.0,
+      "net_income": 93736000000.0,
+      "rd_expense": 31370000000.0,
+      "sga_expense": 26097000000.0,
+      "cogs": 210352000000.0,
+      "interest_expense": null,
+      "income_tax": 29749000000.0,
+      "currency": "USD",
+      "extraction_method": "mda_table",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AAPL",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 200583000000.0,
+          "unit": "USD",
+          "period": "FY2023",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 29357000000.0,
+          "unit": "USD",
+          "period": "FY2023",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 28300000000.0,
+          "unit": "USD",
+          "period": "FY2023",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 39845000000.0,
+          "unit": "USD",
+          "period": "FY2023",
+          "concept": "mda_table",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 85200000000.0,
+          "unit": "USD",
+          "period": "FY2023",
+          "concept": "mda_table",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 383285000000.0,
+      "gross_profit": 169148000000.0,
+      "operating_income": 114301000000.0,
+      "net_income": 96995000000.0,
+      "rd_expense": 29915000000.0,
+      "sga_expense": 24932000000.0,
+      "cogs": 214137000000.0,
+      "interest_expense": null,
+      "income_tax": 16741000000.0,
+      "currency": "USD",
+      "extraction_method": "mda_table",
+      "confidence": 1.0,
+      "notes": []
+    }
+  ],
+  "quarterly_periods": [
+    {
+      "ticker": "AAPL",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": 111184000000.0,
+      "gross_profit": 54781000000.0,
+      "operating_income": 35885000000.0,
+      "net_income": 29578000000.0,
+      "rd_expense": 11419000000.0,
+      "sga_expense": 7477000000.0,
+      "cogs": 56403000000.0,
+      "interest_expense": null,
+      "income_tax": 6255000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "AAPL",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 143756000000.0,
+      "gross_profit": 69231000000.0,
+      "operating_income": 50852000000.0,
+      "net_income": 42097000000.0,
+      "rd_expense": 10887000000.0,
+      "sga_expense": 7492000000.0,
+      "cogs": 74525000000.0,
+      "interest_expense": null,
+      "income_tax": 8905000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "AAPL",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": 94036000000.0,
+      "gross_profit": 43718000000.0,
+      "operating_income": 28202000000.0,
+      "net_income": 23434000000.0,
+      "rd_expense": 8866000000.0,
+      "sga_expense": 6650000000.0,
+      "cogs": 50318000000.0,
+      "interest_expense": null,
+      "income_tax": 4597000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "AAPL",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": 95359000000.0,
+      "gross_profit": 44867000000.0,
+      "operating_income": 29589000000.0,
+      "net_income": 24780000000.0,
+      "rd_expense": 8550000000.0,
+      "sga_expense": 6728000000.0,
+      "cogs": 50492000000.0,
+      "interest_expense": null,
+      "income_tax": 4530000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "AAPL",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 124300000000.0,
+      "gross_profit": 58275000000.0,
+      "operating_income": 42832000000.0,
+      "net_income": 36330000000.0,
+      "rd_expense": 8268000000.0,
+      "sga_expense": 7175000000.0,
+      "cogs": 66025000000.0,
+      "interest_expense": null,
+      "income_tax": 6254000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.55,
+      "notes": [
+        "Warning: total_revenue (124300000000) differs from Yahoo (391035000000) by 68.2%"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": 85777000000.0,
+      "gross_profit": 39678000000.0,
+      "operating_income": 25352000000.0,
+      "net_income": 21448000000.0,
+      "rd_expense": 8006000000.0,
+      "sga_expense": 6320000000.0,
+      "cogs": 46099000000.0,
+      "interest_expense": null,
+      "income_tax": 4046000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.55,
+      "notes": [
+        "Warning: total_revenue (85777000000) differs from Yahoo (391035000000) by 78.1%"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": 90753000000.0,
+      "gross_profit": 42271000000.0,
+      "operating_income": 27900000000.0,
+      "net_income": 23636000000.0,
+      "rd_expense": 7903000000.0,
+      "sga_expense": 6468000000.0,
+      "cogs": 48482000000.0,
+      "interest_expense": null,
+      "income_tax": 4422000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.55,
+      "notes": [
+        "Warning: total_revenue (90753000000) differs from Yahoo (391035000000) by 76.8%"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 119575000000.0,
+      "gross_profit": 54855000000.0,
+      "operating_income": 40373000000.0,
+      "net_income": 33916000000.0,
+      "rd_expense": 7696000000.0,
+      "sga_expense": 6786000000.0,
+      "cogs": 64720000000.0,
+      "interest_expense": null,
+      "income_tax": 6407000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.55,
+      "notes": [
+        "Warning: total_revenue (119575000000) differs from Yahoo (383285000000) by 68.8%"
+      ]
+    },
+    {
+      "ticker": "AAPL",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": 81797000000.0,
+      "gross_profit": 36413000000.0,
+      "operating_income": 22998000000.0,
+      "net_income": 19881000000.0,
+      "rd_expense": 7442000000.0,
+      "sga_expense": 5973000000.0,
+      "cogs": 45384000000.0,
+      "interest_expense": null,
+      "income_tax": 2852000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.55,
+      "notes": [
+        "Warning: total_revenue (81797000000) differs from Yahoo (383285000000) by 78.7%"
+      ]
+    }
+  ],
+  "ttm_revenue": 444335000000.0,
+  "ttm_operating_income": 144528000000.0,
+  "ttm_net_income": 119889000000.0,
+  "segment_trend": {
+    "iPhone": [
+      {
+        "period": "FY2023",
+        "value": 200583000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 201183000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 209586000000.0,
+        "is_annual": true
+      }
+    ],
+    "Mac": [
+      {
+        "period": "FY2023",
+        "value": 29357000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 29984000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 33708000000.0,
+        "is_annual": true
+      }
+    ],
+    "iPad": [
+      {
+        "period": "FY2023",
+        "value": 28300000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 26694000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 28023000000.0,
+        "is_annual": true
+      }
+    ],
+    "Wearables, Home and Accessories": [
+      {
+        "period": "FY2023",
+        "value": 39845000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 37005000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 35686000000.0,
+        "is_annual": true
+      }
+    ],
+    "Services": [
+      {
+        "period": "FY2023",
+        "value": 85200000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 96169000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 109158000000.0,
+        "is_annual": true
+      }
+    ]
+  },
+  "annual_count": 3,
+  "quarterly_count": 9,
+  "has_partial_data": false,
+  "data_notes": []
+}

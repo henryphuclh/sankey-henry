@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Alphabet Inc. (Class A) (GOOGL) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alphabet Inc. (Class A) (GOOGL) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Alphabet Inc. (Class A) <span style="opacity:0.7">(GOOGL)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls">
+  <label for="period-select">Fiscal Year:</label>
+  <select id="period-select" onchange="switchPeriod(this.value)">
+    <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+  </select>
+  <span id="data-badge" style="margin-left:12px; font-size:12px; color:#666;"></span>
+</div>
+
+<div class="chart-container">
+  <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,187,120,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Google Services (85.1%)","Google Cloud (14.6%)","Other: Other Bets","Gross Profit (59.7%)","COGS (40.3%)","R&D (15.2%)","Other Operating Expenses","Operating Income (32.0%)","Income Tax","Net Income (32.8%)"],"source":[1,2,3,0,0,4,4,4,8,8],"target":[0,0,0,4,5,6,7,8,9,10],"value":[342721000000.0,58705000000.0,4028360000.0,240301000000.0,162535000000.0,61087000000.0,50175000000.0,129039000000.0,26656000000.0,132170000000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#2ca02c","#d62728","#ff7f0e","#ffbb78","#2ca02c","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$402.8B (100.0%)","Google Services\u003cbr\u003e$342.7B (85.1%)","Google Cloud\u003cbr\u003e$58.7B (14.6%)","Other\u003cbr\u003e$1.5B (0.4%)","Gross Profit\u003cbr\u003e$240.3B (59.7%)","Cost of Revenue\u003cbr\u003e$162.5B (40.3%)","R&D\u003cbr\u003e$61.1B (15.2%)","Other OpEx\u003cbr\u003e$50.2B (12.5%)","Operating Income\u003cbr\u003e$129.0B (32.0%)","Income Tax\u003cbr\u003e$26.7B (6.6%)","Net Income\u003cbr\u003e$132.2B (32.8%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":60},"paper_bgcolor":"#fafafa","title":{"font":{"size":16},"text":"Alphabet Inc. (Class A) (GOOGL) — Financial Flow FY2025"},"template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": true, "displayModeBar": true, "modeBarButtonsToAdd": ["zoom2d", "pan2d", "resetScale2d"]}                    )                };            </script>        </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$402.8B (100.0%)", "Google Services<br>$342.7B (85.1%)", "Google Cloud<br>$58.7B (14.6%)", "Other<br>$1.5B (0.4%)", "Gross Profit<br>$240.3B (59.7%)", "Cost of Revenue<br>$162.5B (40.3%)", "R&D<br>$61.1B (15.2%)", "Other OpEx<br>$50.2B (12.5%)", "Operating Income<br>$129.0B (32.0%)", "Income Tax<br>$26.7B (6.6%)", "Net Income<br>$132.2B (32.8%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.16666666666666666, 0.5, 0.8333333333333334, 0.35, 0.75, 0.2, 0.6, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 0, 0, 4, 4, 4, 8, 8], "link_targets": [0, 0, 0, 4, 5, 6, 7, 8, 9, 10], "link_values": [342721000000.0, 58705000000.0, 4028360000.0, 240301000000.0, 162535000000.0, 61087000000.0, 50175000000.0, 129039000000.0, 26656000000.0, 132170000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Google Services (85.1%)", "Google Cloud (14.6%)", "Other: Other Bets", "Gross Profit (59.7%)", "COGS (40.3%)", "R&D (15.2%)", "Other Operating Expenses", "Operating Income (32.0%)", "Income Tax", "Net Income (32.8%)"], "title": "Alphabet Inc. (Class A) (GOOGL) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$350.0B (100.0%)", "Google Services<br>$304.9B (87.1%)", "Google Cloud<br>$43.2B (12.4%)", "Other<br>$1.6B (0.5%)", "Gross Profit<br>$203.7B (58.2%)", "Cost of Revenue<br>$146.3B (41.8%)", "R&D<br>$49.3B (14.1%)", "Other OpEx<br>$42.0B (12.0%)", "Operating Income<br>$112.4B (32.1%)", "Income Tax<br>$19.7B (5.6%)", "Net Income<br>$100.1B (28.6%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.16666666666666666, 0.5, 0.8333333333333334, 0.35, 0.75, 0.2, 0.6, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 0, 0, 4, 4, 4, 8, 8], "link_targets": [0, 0, 0, 4, 5, 6, 7, 8, 9, 10], "link_values": [304930000000.0, 43229000000.0, 3500180000.0, 203712000000.0, 146306000000.0, 49326000000.0, 41996000000.0, 112390000000.0, 19697000000.0, 100118000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Google Services (87.1%)", "Google Cloud (12.4%)", "Other: Other Bets", "Gross Profit (58.2%)", "COGS (41.8%)", "R&D (14.1%)", "Other Operating Expenses", "Operating Income (32.1%)", "Income Tax", "Net Income (28.6%)"], "title": "Alphabet Inc. (Class A) (GOOGL) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$307.4B (100.0%)", "Google Services<br>$272.5B (88.7%)", "Google Cloud<br>$33.1B (10.8%)", "Other<br>$1.5B (0.5%)", "Gross Profit<br>$174.1B (56.6%)", "Cost of Revenue<br>$133.3B (43.4%)", "R&D<br>$45.4B (14.8%)", "Other OpEx<br>$44.3B (14.4%)", "Operating Income<br>$84.3B (27.4%)", "Income Tax<br>$11.9B (3.9%)", "Net Income<br>$73.8B (24.0%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.16666666666666666, 0.5, 0.8333333333333334, 0.35, 0.75, 0.2, 0.6, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 0, 0, 4, 4, 4, 8, 8], "link_targets": [0, 0, 0, 4, 5, 6, 7, 8, 9, 10], "link_values": [272543000000.0, 33088000000.0, 3073940000.0, 174062000000.0, 133332000000.0, 45427000000.0, 44342000000.0, 84293000000.0, 11922000000.0, 73795000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Google Services (88.7%)", "Google Cloud (10.8%)", "Other: Other Bets", "Gross Profit (56.6%)", "COGS (43.4%)", "R&D (14.8%)", "Other Operating Expenses", "Operating Income (27.4%)", "Income Tax", "Net Income (24.0%)"], "title": "Alphabet Inc. (Class A) (GOOGL) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  var layoutUpdate = {
+    "title.text": data.title,
+  };
+
+  Plotly.update("sankey-chart", update, layoutUpdate);
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+</script>
+</body>
+</html>
+
+
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Alphabet Inc. (Class A) (GOOGL)</h1>
+<p><em>Analysis generation error (openai): Error code: 401 - {'error': {'message': 'Incorrect API key provided: sk-YOUR_</em>**<em>HERE. You can find your API key at https://platform.openai.com/account/api-keys.', 'type': 'invalid_request_error', 'code': 'invalid_api_key', 'param': None}, 'status': 401}</em></p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$402.84B</td><td style="text-align:right">$350.02B</td><td style="text-align:right" class="yoy-pos">+15.1%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$162.53B</td><td style="text-align:right">$146.31B</td><td style="text-align:right" class="yoy-pos">+11.1%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$61.09B</td><td style="text-align:right">$49.33B</td><td style="text-align:right" class="yoy-pos">+23.8%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$129.04B</td><td style="text-align:right">$112.39B</td><td style="text-align:right" class="yoy-pos">+14.8%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">32.0%</td><td style="text-align:right">32.1%</td><td style="text-align:right" class="yoy-neg">-0.2%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$132.17B</td><td style="text-align:right">$100.12B</td><td style="text-align:right" class="yoy-pos">+32.0%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">32.8%</td><td style="text-align:right">28.6%</td><td style="text-align:right" class="yoy-pos">+14.7%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2025 Q3</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q2</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q1</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2024 Q3</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$102.35B</td><td style="text-align:right">$88.27B</td><td style="text-align:right" class="yoy-pos">+15.9%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$41.37B</td><td style="text-align:right">$36.47B</td><td style="text-align:right" class="yoy-pos">+13.4%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$15.15B</td><td style="text-align:right">$12.45B</td><td style="text-align:right" class="yoy-pos">+21.7%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$31.23B</td><td style="text-align:right">$28.52B</td><td style="text-align:right" class="yoy-pos">+9.5%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">30.5%</td><td style="text-align:right">32.3%</td><td style="text-align:right" class="yoy-neg">-5.6%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$34.98B</td><td style="text-align:right">$26.30B</td><td style="text-align:right" class="yoy-pos">+33.0%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">34.2%</td><td style="text-align:right">29.8%</td><td style="text-align:right" class="yoy-pos">+14.7%</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$96.43B</td><td style="text-align:right">$84.74B</td><td style="text-align:right" class="yoy-pos">+13.8%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$39.04B</td><td style="text-align:right">$35.51B</td><td style="text-align:right" class="yoy-pos">+9.9%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$13.81B</td><td style="text-align:right">$11.86B</td><td style="text-align:right" class="yoy-pos">+16.4%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$31.27B</td><td style="text-align:right">$27.43B</td><td style="text-align:right" class="yoy-pos">+14.0%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">32.4%</td><td style="text-align:right">32.4%</td><td style="text-align:right" class="yoy-pos">+0.2%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$28.20B</td><td style="text-align:right">$23.62B</td><td style="text-align:right" class="yoy-pos">+19.4%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">29.2%</td><td style="text-align:right">27.9%</td><td style="text-align:right" class="yoy-pos">+4.9%</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$90.23B</td><td style="text-align:right">$80.54B</td><td style="text-align:right" class="yoy-pos">+12.0%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$36.36B</td><td style="text-align:right">$33.71B</td><td style="text-align:right" class="yoy-pos">+7.9%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$13.56B</td><td style="text-align:right">$11.90B</td><td style="text-align:right" class="yoy-pos">+13.9%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$30.61B</td><td style="text-align:right">$25.47B</td><td style="text-align:right" class="yoy-pos">+20.2%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">33.9%</td><td style="text-align:right">31.6%</td><td style="text-align:right" class="yoy-pos">+7.2%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$34.54B</td><td style="text-align:right">$23.66B</td><td style="text-align:right" class="yoy-pos">+46.0%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">38.3%</td><td style="text-align:right">29.4%</td><td style="text-align:right" class="yoy-pos">+30.3%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>2023 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$88.27B</td><td style="text-align:right">$76.69B</td><td style="text-align:right" class="yoy-pos">+15.1%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$36.47B</td><td style="text-align:right">$33.23B</td><td style="text-align:right" class="yoy-pos">+9.8%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$12.45B</td><td style="text-align:right">$11.26B</td><td style="text-align:right" class="yoy-pos">+10.6%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$28.52B</td><td style="text-align:right">$21.34B</td><td style="text-align:right" class="yoy-pos">+33.6%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">32.3%</td><td style="text-align:right">27.8%</td><td style="text-align:right" class="yoy-pos">+16.1%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$26.30B</td><td style="text-align:right">$19.69B</td><td style="text-align:right" class="yoy-pos">+33.6%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">29.8%</td><td style="text-align:right">25.7%</td><td style="text-align:right" class="yoy-pos">+16.1%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section">
+  <h3>Segment Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td><td>$402.84B</td><td>$132.17B</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$350.02B</td><td>$100.12B</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$307.39B</td><td>$73.80B</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>$102.35B</td><td>$34.98B</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#17a2b8;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR</span></td><td>$96.43B</td><td>$28.20B</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$90.23B</td><td>$34.54B</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$88.27B</td><td>$26.30B</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$84.74B</td><td>$23.62B</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$80.54B</td><td>$23.66B</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$76.69B</td><td>$19.69B</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$74.60B</td><td>$18.37B</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$69.79B</td><td>$15.05B</td><td>3</td><td>100%</td><td>100%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $402.84B revenue across 3 segments
+    &nbsp;<span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Google Services</td><td style='text-align:right'>$342.72B</td><td style='text-align:right'>85.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:85.1%'></div>  </div></td></tr><tr><td>Google Cloud</td><td style='text-align:right'>$58.70B</td><td style='text-align:right'>14.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:14.6%'></div>  </div></td></tr><tr><td>Other Bets</td><td style='text-align:right'>$1.54B</td><td style='text-align:right'>0.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $350.02B revenue across 3 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Google Services</td><td style='text-align:right'>$304.93B</td><td style='text-align:right'>87.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:87.1%'></div>  </div></td></tr><tr><td>Google Cloud</td><td style='text-align:right'>$43.23B</td><td style='text-align:right'>12.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:12.4%'></div>  </div></td></tr><tr><td>Other Bets</td><td style='text-align:right'>$1.65B</td><td style='text-align:right'>0.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $307.39B revenue across 3 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Google Services</td><td style='text-align:right'>$272.54B</td><td style='text-align:right'>88.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:88.7%'></div>  </div></td></tr><tr><td>Google Cloud</td><td style='text-align:right'>$33.09B</td><td style='text-align:right'>10.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:10.8%'></div>  </div></td></tr><tr><td>Other Bets</td><td style='text-align:right'>$1.53B</td><td style='text-align:right'>0.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Google Services</td><td style='text-align:right'>$342.72B</td><td style='text-align:right'>$304.93B</td><td style='text-align:right'>$272.54B</td><td style='text-align:right;color:#28a745;font-weight:600'>+12.4%</td></tr><tr><td>Google Cloud</td><td style='text-align:right'>$58.70B</td><td style='text-align:right'>$43.23B</td><td style='text-align:right'>$33.09B</td><td style='text-align:right;color:#28a745;font-weight:600'>+35.8%</td></tr><tr><td>Other Bets</td><td style='text-align:right'>$1.54B</td><td style='text-align:right'>$1.65B</td><td style='text-align:right'>$1.53B</td><td style='text-align:right;color:#dc3545;font-weight:600'>-6.7%</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 9 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 9 quarterly reports
+</div>
+</body>
+</html>

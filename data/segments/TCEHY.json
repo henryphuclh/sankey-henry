@@ -1,0 +1,113 @@
+{
+  "ticker": "TCEHY",
+  "name": "Tencent Holdings Ltd.",
+  "latest_annual": {
+    "ticker": "TCEHY",
+    "period": "FY2026",
+    "is_annual": true,
+    "fiscal_year": 2026,
+    "fiscal_quarter": null,
+    "segments": [],
+    "total_revenue": 110287832227.28967,
+    "gross_profit": 61996506738.03687,
+    "operating_income": 36495363131.195305,
+    "net_income": 32985445968.091488,
+    "rd_expense": null,
+    "sga_expense": 26092071353.256702,
+    "cogs": 48291325489.25281,
+    "interest_expense": 1974062501.4305115,
+    "income_tax": 6960858915.567398,
+    "currency": "USD",
+    "extraction_method": "yahoo+llm",
+    "confidence": 0.55,
+    "notes": [
+      "Source: Yahoo Finance (no SEC filing available)",
+      "⚠ Limited Segment Detail — aggregate data only"
+    ]
+  },
+  "annual_periods": [
+    {
+      "ticker": "TCEHY",
+      "period": "FY2026",
+      "is_annual": true,
+      "fiscal_year": 2026,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 110287832227.28967,
+      "gross_profit": 61996506738.03687,
+      "operating_income": 36495363131.195305,
+      "net_income": 32985445968.091488,
+      "rd_expense": null,
+      "sga_expense": 26092071353.256702,
+      "cogs": 48291325489.25281,
+      "interest_expense": 1974062501.4305115,
+      "income_tax": 6960858915.567398,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "TCEHY",
+      "period": "FY2025",
+      "is_annual": true,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 110287832227.28967,
+      "gross_profit": 61996506738.03687,
+      "operating_income": 36495363131.195305,
+      "net_income": 32985445968.091488,
+      "rd_expense": null,
+      "sga_expense": 26092071353.256702,
+      "cogs": 48291325489.25281,
+      "interest_expense": 1974062501.4305115,
+      "income_tax": 6960858915.567398,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    },
+    {
+      "ticker": "TCEHY",
+      "period": "FY2024",
+      "is_annual": true,
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 110287832227.28967,
+      "gross_profit": 61996506738.03687,
+      "operating_income": 36495363131.195305,
+      "net_income": 32985445968.091488,
+      "rd_expense": null,
+      "sga_expense": 26092071353.256702,
+      "cogs": 48291325489.25281,
+      "interest_expense": 1974062501.4305115,
+      "income_tax": 6960858915.567398,
+      "currency": "USD",
+      "extraction_method": "yahoo+llm",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    }
+  ],
+  "quarterly_periods": [],
+  "ttm_revenue": 110287832227.28967,
+  "ttm_operating_income": 36495363131.195305,
+  "ttm_net_income": 32985445968.091488,
+  "segment_trend": {},
+  "annual_count": 3,
+  "quarterly_count": 0,
+  "has_partial_data": true,
+  "data_notes": [
+    "Partial data: 3/3 annual, 0/12 quarterly"
+  ]
+}
