@@ -17,7 +17,7 @@ from pathlib import Path
 from unittest.mock import MagicMock, patch
 
 # ── Add project root to path ──────────────────────────────────────────────────
-_ROOT = Path(__file__).resolve().parent
+_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(_ROOT))
 
 # ── Import using actual src/ layout ──────────────────────────────────────────
@@ -32,7 +32,7 @@ from src.ingestion.data_source_checker import (
 from src.cache.cache_manager import cache
 import src.ingestion.data_source_checker as dsc   # alias used by patch() calls below
 
-EXCEL_PATH = _ROOT.parent / "Valuation_Top100_2026-04-18.xlsx"
+EXCEL_PATH = _ROOT / "Valuation_Top100_2026-04-18.xlsx"
 
 
 # ---------------------------------------------------------------------------

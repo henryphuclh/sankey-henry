@@ -1,6 +1,7 @@
 {
   "ticker": "ISRG",
   "name": "Intuitive Surgical Inc.",
+  "sector": "pharma",
   "latest_annual": {
     "ticker": "ISRG",
     "period": "FY2025",
@@ -190,23 +191,94 @@
   "quarterly_periods": [
     {
       "ticker": "ISRG",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Instruments and accessories",
+          "value": 1686400000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Systems",
+          "value": 650700000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 433700000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2770800000.0,
+      "gross_profit": 1830500000.0,
+      "operating_income": 855300000.0,
+      "net_income": 826000000.0,
+      "rd_expense": 361900000.0,
+      "sga_expense": 613300000.0,
+      "cogs": 940300000.0,
+      "interest_expense": null,
+      "income_tax": 114400000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ISRG",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Services",
+          "value": 395900000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Instruments and accessories",
+          "value": 1518800000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Systems",
+          "value": 590400000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2505100000.0,
+      "gross_profit": 1662400000.0,
+      "operating_income": 759700000.0,
+      "net_income": 709200000.0,
+      "rd_expense": 329400000.0,
+      "sga_expense": 573300000.0,
+      "cogs": 842700000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 146000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -215,19 +287,44 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Services",
+          "value": 391200000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Instruments and accessories",
+          "value": 1474100000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Systems",
+          "value": 574700000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2440000000.0,
+      "gross_profit": 1617900000.0,
+      "operating_income": 743400000.0,
+      "net_income": 664200000.0,
+      "rd_expense": 313300000.0,
+      "sga_expense": 561200000.0,
+      "cogs": 822100000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 167900000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -282,20 +379,47 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Services",
+          "value": 328900000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Instruments and accessories",
+          "value": 1264200000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Systems",
+          "value": 445000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2038100000.0,
+      "gross_profit": 1373900000.0,
+      "operating_income": 577300000.0,
+      "net_income": 570600000.0,
+      "rd_expense": 286000000.0,
+      "sga_expense": 510600000.0,
+      "cogs": 664200000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 100400000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (2038100000) differs from Yahoo (8352100000) by 75.6%"
+      ]
     },
     {
       "ticker": "ISRG",
@@ -305,16 +429,24 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Systems",
-          "value": 831951588.4743259,
+          "segment_name": "Services",
+          "value": 317300000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Services",
-          "value": 1177948411.525674,
+          "segment_name": "Instruments and accessories",
+          "value": 1244400000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Systems",
+          "value": 448200000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -345,16 +477,24 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Systems",
-          "value": 756457060.8495982,
+          "segment_name": "Services",
+          "value": 313500000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Services",
-          "value": 1134142939.1504018,
+          "segment_name": "Instruments and accessories",
+          "value": 1158900000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Systems",
+          "value": 418200000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -383,20 +523,47 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Services",
+          "value": 292900000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Instruments and accessories",
+          "value": 1071400000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Systems",
+          "value": 379400000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 1743700000.0,
+      "gross_profit": 1167200000.0,
+      "operating_income": 465800000.0,
+      "net_income": 419800000.0,
+      "rd_expense": 249400000.0,
+      "sga_expense": 452000000.0,
+      "cogs": 576500000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 102200000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (1743700000) differs from Yahoo (7124100000) by 75.5%"
+      ]
     },
     {
       "ticker": "ISRG",
@@ -404,93 +571,97 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Services",
+          "value": 287300000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Instruments and accessories",
+          "value": 1075900000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Systems",
+          "value": 392700000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 1755900000.0,
+      "gross_profit": 1171900000.0,
+      "operating_income": 463200000.0,
+      "net_income": 426000000.0,
+      "rd_expense": 244400000.0,
+      "sga_expense": 464300000.0,
+      "cogs": 584000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 73200000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "ISRG",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (1755900000) differs from Yahoo (7124100000) by 75.4%"
+      ]
     }
   ],
-  "ttm_revenue": 2253400000.0,
-  "ttm_operating_income": 578100000.0,
-  "ttm_net_income": 703700000.0,
+  "ttm_revenue": 9969300000.0,
+  "ttm_operating_income": 2936500000.0,
+  "ttm_net_income": 2903100000.0,
   "segment_trend": {
-    "Systems": [
-      {
-        "period": "2024Q1",
-        "value": 756457060.8495982,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 831951588.4743259,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 522700000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1679700000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1966000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 2473700000.0,
-        "is_annual": true
-      }
-    ],
     "Services": [
       {
+        "period": "2023Q2",
+        "value": 287300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 292900000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
-        "value": 1134142939.1504018,
+        "value": 313500000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 1177948411.525674,
+        "value": 317300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 328900000.0,
         "is_annual": false
       },
       {
         "period": "2025Q1",
         "value": 363000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 391200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 395900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 433700000.0,
         "is_annual": false
       },
       {
@@ -511,8 +682,48 @@
     ],
     "Instruments and accessories": [
       {
+        "period": "2023Q2",
+        "value": 1075900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1071400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 1158900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1244400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1264200000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 1367700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1474100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1518800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1686400000.0,
         "is_annual": false
       },
       {
@@ -528,6 +739,68 @@
       {
         "period": "FY2025",
         "value": 6018900000.0,
+        "is_annual": true
+      }
+    ],
+    "Systems": [
+      {
+        "period": "2023Q2",
+        "value": 392700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 379400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 418200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 448200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 445000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 522700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 574700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 590400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 650700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1679700000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1966000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2473700000.0,
         "is_annual": true
       }
     ]

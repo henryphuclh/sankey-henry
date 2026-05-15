@@ -1,78 +1,131 @@
 {
   "ticker": "SHEL.L",
   "name": "Shell plc",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "SHEL.L",
-    "period": "FY2026",
+    "period": "FY2025",
     "is_annual": true,
-    "fiscal_year": 2026,
+    "fiscal_year": 2025,
     "fiscal_quarter": null,
-    "segments": [],
+    "segments": [
+      {
+        "segment_name": "Integrated Gas",
+        "value": 38457000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Upstream",
+        "value": 5105000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Marketing",
+        "value": 111855000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Chemicals and Products",
+        "value": 77071000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Renewables and Energy Solutions",
+        "value": 34359000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
     "total_revenue": 266886000000.0,
-    "gross_profit": 42495000000.0,
-    "operating_income": 27582000000.0,
-    "net_income": 17837000000.0,
+    "gross_profit": null,
+    "operating_income": null,
+    "net_income": 18119000000.0,
     "rd_expense": 1170000000.0,
     "sga_expense": 12607000000.0,
-    "cogs": 224391000000.0,
-    "interest_expense": 4741000000.0,
-    "income_tax": 11637000000.0,
+    "cogs": null,
+    "interest_expense": 4671000000.0,
+    "income_tax": null,
     "currency": "USD",
-    "extraction_method": "yahoo+llm",
-    "confidence": 0.55,
-    "notes": [
-      "Source: Yahoo Finance (no SEC filing available)",
-      "⚠ Limited Segment Detail — aggregate data only"
-    ]
+    "extraction_method": "xbrl",
+    "confidence": 0.97,
+    "notes": []
   },
   "annual_periods": [
-    {
-      "ticker": "SHEL.L",
-      "period": "FY2026",
-      "is_annual": true,
-      "fiscal_year": 2026,
-      "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 266886000000.0,
-      "gross_profit": 42495000000.0,
-      "operating_income": 27582000000.0,
-      "net_income": 17837000000.0,
-      "rd_expense": 1170000000.0,
-      "sga_expense": 12607000000.0,
-      "cogs": 224391000000.0,
-      "interest_expense": 4741000000.0,
-      "income_tax": 11637000000.0,
-      "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
-    },
     {
       "ticker": "SHEL.L",
       "period": "FY2025",
       "is_annual": true,
       "fiscal_year": 2025,
       "fiscal_quarter": null,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "Integrated Gas",
+          "value": 38457000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Upstream",
+          "value": 5105000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Marketing",
+          "value": 111855000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Chemicals and Products",
+          "value": 77071000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Renewables and Energy Solutions",
+          "value": 34359000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 266886000000.0,
-      "gross_profit": 42495000000.0,
-      "operating_income": 27582000000.0,
-      "net_income": 17837000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 18119000000.0,
       "rd_expense": 1170000000.0,
       "sga_expense": 12607000000.0,
-      "cogs": 224391000000.0,
-      "interest_expense": 4741000000.0,
-      "income_tax": 11637000000.0,
+      "cogs": null,
+      "interest_expense": 4671000000.0,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
     },
     {
       "ticker": "SHEL.L",
@@ -80,179 +133,492 @@
       "is_annual": true,
       "fiscal_year": 2024,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 266886000000.0,
-      "gross_profit": 42495000000.0,
-      "operating_income": 27582000000.0,
-      "net_income": 17837000000.0,
-      "rd_expense": 1170000000.0,
-      "sga_expense": 12607000000.0,
-      "cogs": 224391000000.0,
-      "interest_expense": 4741000000.0,
-      "income_tax": 11637000000.0,
+      "segments": [
+        {
+          "segment_name": "Integrated Gas",
+          "value": 37290000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Upstream",
+          "value": 6606000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Marketing",
+          "value": 120089000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Chemicals and Products",
+          "value": 90918000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Renewables and Energy Solutions",
+          "value": 29366000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 284312000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 16521000000.0,
+      "rd_expense": 1099000000.0,
+      "sga_expense": 12439000000.0,
+      "cogs": null,
+      "interest_expense": 4787000000.0,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
+    },
+    {
+      "ticker": "SHEL.L",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Integrated Gas",
+          "value": 37645000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Upstream",
+          "value": 6475000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Marketing",
+          "value": 108858000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Chemicals and Products",
+          "value": 118781000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Renewables and Energy Solutions",
+          "value": 44819000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 316620000000.0,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 19636000000.0,
+      "rd_expense": 1287000000.0,
+      "sga_expense": 13433000000.0,
+      "cogs": null,
+      "interest_expense": 4673000000.0,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.97,
+      "notes": []
     }
   ],
   "quarterly_periods": [
     {
       "ticker": "SHEL.L",
+      "period": "2026Q2",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SHEL.L",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SHEL.L",
       "period": "2025Q4",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 4,
       "segments": [],
-      "total_revenue": 64093000000.0,
-      "gross_profit": 7280000000.0,
-      "operating_income": 3159000000.0,
-      "net_income": 4134000000.0,
-      "rd_expense": 298000000.0,
-      "sga_expense": 3432000000.0,
-      "cogs": 56813000000.0,
-      "interest_expense": 1263000000.0,
-      "income_tax": 2719000000.0,
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "SHEL.L",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 3,
       "segments": [],
-      "total_revenue": 64093000000.0,
-      "gross_profit": 7280000000.0,
-      "operating_income": 3159000000.0,
-      "net_income": 4134000000.0,
-      "rd_expense": 298000000.0,
-      "sga_expense": 3432000000.0,
-      "cogs": 56813000000.0,
-      "interest_expense": 1263000000.0,
-      "income_tax": 2719000000.0,
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "SHEL.L",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 2,
       "segments": [],
-      "total_revenue": 64093000000.0,
-      "gross_profit": 7280000000.0,
-      "operating_income": 3159000000.0,
-      "net_income": 4134000000.0,
-      "rd_expense": 298000000.0,
-      "sga_expense": 3432000000.0,
-      "cogs": 56813000000.0,
-      "interest_expense": 1263000000.0,
-      "income_tax": 2719000000.0,
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "SHEL.L",
       "period": "2025Q1",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 1,
       "segments": [],
-      "total_revenue": 64093000000.0,
-      "gross_profit": 7280000000.0,
-      "operating_income": 3159000000.0,
-      "net_income": 4134000000.0,
-      "rd_expense": 298000000.0,
-      "sga_expense": 3432000000.0,
-      "cogs": 56813000000.0,
-      "interest_expense": 1263000000.0,
-      "income_tax": 2719000000.0,
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "SHEL.L",
       "period": "2024Q4",
       "is_annual": false,
       "fiscal_year": 2024,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 4,
       "segments": [],
-      "total_revenue": 64093000000.0,
-      "gross_profit": 7280000000.0,
-      "operating_income": 3159000000.0,
-      "net_income": 4134000000.0,
-      "rd_expense": 298000000.0,
-      "sga_expense": 3432000000.0,
-      "cogs": 56813000000.0,
-      "interest_expense": 1263000000.0,
-      "income_tax": 2719000000.0,
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "SHEL.L",
       "period": "2024Q3",
       "is_annual": false,
       "fiscal_year": 2024,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 3,
       "segments": [],
-      "total_revenue": 64093000000.0,
-      "gross_profit": 7280000000.0,
-      "operating_income": 3159000000.0,
-      "net_income": 4134000000.0,
-      "rd_expense": 298000000.0,
-      "sga_expense": 3432000000.0,
-      "cogs": 56813000000.0,
-      "interest_expense": 1263000000.0,
-      "income_tax": 2719000000.0,
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SHEL.L",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SHEL.L",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SHEL.L",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SHEL.L",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SHEL.L",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     }
   ],
-  "ttm_revenue": 256372000000.0,
-  "ttm_operating_income": 12636000000.0,
-  "ttm_net_income": 16536000000.0,
-  "segment_trend": {},
+  "ttm_revenue": null,
+  "ttm_operating_income": null,
+  "ttm_net_income": null,
+  "segment_trend": {
+    "Integrated Gas": [
+      {
+        "period": "FY2023",
+        "value": 37645000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 37290000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 38457000000.0,
+        "is_annual": true
+      }
+    ],
+    "Upstream": [
+      {
+        "period": "FY2023",
+        "value": 6475000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 6606000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 5105000000.0,
+        "is_annual": true
+      }
+    ],
+    "Marketing": [
+      {
+        "period": "FY2023",
+        "value": 108858000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 120089000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 111855000000.0,
+        "is_annual": true
+      }
+    ],
+    "Chemicals and Products": [
+      {
+        "period": "FY2023",
+        "value": 118781000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 90918000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 77071000000.0,
+        "is_annual": true
+      }
+    ],
+    "Renewables and Energy Solutions": [
+      {
+        "period": "FY2023",
+        "value": 44819000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 29366000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 34359000000.0,
+        "is_annual": true
+      }
+    ]
+  },
   "annual_count": 3,
-  "quarterly_count": 6,
-  "has_partial_data": true,
-  "data_notes": [
-    "Partial data: 3/3 annual, 6/12 quarterly"
-  ]
+  "quarterly_count": 13,
+  "has_partial_data": false,
+  "data_notes": []
 }

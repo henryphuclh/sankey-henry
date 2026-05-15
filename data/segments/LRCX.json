@@ -1,25 +1,43 @@
 {
   "ticker": "LRCX",
   "name": "Lam Research Corp.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "LRCX",
     "period": "FY2025",
     "is_annual": true,
     "fiscal_year": 2025,
     "fiscal_quarter": null,
-    "segments": [],
-    "total_revenue": null,
-    "gross_profit": null,
-    "operating_income": null,
-    "net_income": null,
-    "rd_expense": null,
-    "sga_expense": null,
-    "cogs": null,
+    "segments": [
+      {
+        "segment_name": "Systems Revenue",
+        "value": 11491280000.0,
+        "unit": "USD",
+        "period": "2025-06-29 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Customer support-related revenue and other",
+        "value": 6944311000.0,
+        "unit": "USD",
+        "period": "2025-06-29 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 18435591000.0,
+    "gross_profit": 8979059000.0,
+    "operating_income": 5900968000.0,
+    "net_income": 5358217000.0,
+    "rd_expense": 2096387000.0,
+    "sga_expense": 981704000.0,
+    "cogs": 9456532000.0,
     "interest_expense": null,
-    "income_tax": null,
+    "income_tax": -599912000.0,
     "currency": "USD",
-    "extraction_method": "edgar",
-    "confidence": 0.0,
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
     "notes": []
   },
   "annual_periods": [
@@ -29,19 +47,36 @@
       "is_annual": true,
       "fiscal_year": 2025,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Systems Revenue",
+          "value": 11491280000.0,
+          "unit": "USD",
+          "period": "2025-06-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Customer support-related revenue and other",
+          "value": 6944311000.0,
+          "unit": "USD",
+          "period": "2025-06-29 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 18435591000.0,
+      "gross_profit": 8979059000.0,
+      "operating_income": 5900968000.0,
+      "net_income": 5358217000.0,
+      "rd_expense": 2096387000.0,
+      "sga_expense": 981704000.0,
+      "cogs": 9456532000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -599912000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -88,23 +123,78 @@
       "is_annual": true,
       "fiscal_year": 2023,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Systems Revenue",
+          "value": 10695897000.0,
+          "unit": "USD",
+          "period": "2023-06-25 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Customer support-related revenue and other",
+          "value": 6732619000.0,
+          "unit": "USD",
+          "period": "2023-06-25 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17428516000.0,
+      "gross_profit": 7776925000.0,
+      "operating_income": 5174860000.0,
+      "net_income": 4510931000.0,
+      "rd_expense": 1727162000.0,
+      "sga_expense": 832753000.0,
+      "cogs": 9651591000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -598279000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     }
   ],
   "quarterly_periods": [
+    {
+      "ticker": "LRCX",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Systems revenue",
+          "value": 3730582000.0,
+          "unit": "USD",
+          "period": "2026-03-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Customer support-related revenue and other",
+          "value": 2110906000.0,
+          "unit": "USD",
+          "period": "2026-03-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 5841488000.0,
+      "gross_profit": 2910527000.0,
+      "operating_income": 2047016000.0,
+      "net_income": 1825460000.0,
+      "rd_expense": 583200000.0,
+      "sga_expense": 280311000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": -186096000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
     {
       "ticker": "LRCX",
       "period": "2025Q4",
@@ -149,19 +239,36 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
+      "segments": [
+        {
+          "segment_name": "Systems revenue",
+          "value": 3547565000.0,
+          "unit": "USD",
+          "period": "2025-09-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Customer support-related revenue and other",
+          "value": 1776608000.0,
+          "unit": "USD",
+          "period": "2025-09-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 5324173000.0,
+      "gross_profit": 2684879000.0,
+      "operating_income": 1829088000.0,
+      "net_income": 1568660000.0,
+      "rd_expense": 576446000.0,
+      "sga_expense": 279345000.0,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -290502000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -238,7 +345,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "Warning: total_revenue (4376047000) differs from Yahoo (14905386000) by 70.6%"
+      ]
     },
     {
       "ticker": "LRCX",
@@ -246,20 +355,39 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Systems revenue",
+          "value": 2392730000.0,
+          "unit": "USD",
+          "period": "2024-09-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Customer support-related revenue and other",
+          "value": 1775246000.0,
+          "unit": "USD",
+          "period": "2024-09-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 4167976000.0,
+      "gross_profit": 2002683000.0,
+      "operating_income": 1264197000.0,
+      "net_income": 1116444000.0,
+      "rd_expense": 495358000.0,
+      "sga_expense": 243128000.0,
+      "cogs": 2165293000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -177834000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (4167976000) differs from Yahoo (14905386000) by 72.0%"
+      ]
     },
     {
       "ticker": "LRCX",
@@ -347,48 +475,51 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Systems revenue",
+          "value": 2056655000.0,
+          "unit": "USD",
+          "period": "2023-09-24 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Customer support-related revenue and other",
+          "value": 1425407000.0,
+          "unit": "USD",
+          "period": "2023-09-24 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3482062000.0,
+      "gross_profit": 1654702000.0,
+      "operating_income": 1023029000.0,
+      "net_income": 887398000.0,
+      "rd_expense": 422629000.0,
+      "sga_expense": 207023000.0,
+      "cogs": 1827360000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -138232000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "LRCX",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (3482062000) differs from Yahoo (17428516000) by 80.0%"
+      ]
     }
   ],
-  "ttm_revenue": 14441013000.0,
-  "ttm_operating_income": 4705846000.0,
-  "ttm_net_income": 4115679000.0,
+  "ttm_revenue": 21230627000.0,
+  "ttm_operating_income": 7248066000.0,
+  "ttm_net_income": 6318781000.0,
   "segment_trend": {
     "Systems revenue": [
+      {
+        "period": "2023Q3",
+        "value": 2056655000.0,
+        "is_annual": false
+      },
       {
         "period": "2023Q4",
         "value": 2299286000.0,
@@ -397,6 +528,11 @@
       {
         "period": "2024Q1",
         "value": 2395817000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 2392730000.0,
         "is_annual": false
       },
       {
@@ -410,12 +546,27 @@
         "is_annual": false
       },
       {
+        "period": "2025Q3",
+        "value": 3547565000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q4",
         "value": 3357493000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 3730582000.0,
         "is_annual": false
       }
     ],
     "Customer support-related revenue and other": [
+      {
+        "period": "2023Q3",
+        "value": 1425407000.0,
+        "is_annual": false
+      },
       {
         "period": "2023Q4",
         "value": 1458973000.0,
@@ -424,6 +575,11 @@
       {
         "period": "2024Q1",
         "value": 1397741000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1775246000.0,
         "is_annual": false
       },
       {
@@ -437,20 +593,50 @@
         "is_annual": false
       },
       {
+        "period": "2025Q3",
+        "value": 1776608000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q4",
         "value": 1987298000.0,
         "is_annual": false
       },
       {
+        "period": "2026Q1",
+        "value": 2110906000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 6732619000.0,
+        "is_annual": true
+      },
+      {
         "period": "FY2024",
         "value": 5983743000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 6944311000.0,
         "is_annual": true
       }
     ],
     "Systems Revenue": [
       {
+        "period": "FY2023",
+        "value": 10695897000.0,
+        "is_annual": true
+      },
+      {
         "period": "FY2024",
         "value": 8921643000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 11491280000.0,
         "is_annual": true
       }
     ]

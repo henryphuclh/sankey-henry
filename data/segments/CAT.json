@@ -1,6 +1,7 @@
 {
   "ticker": "CAT",
   "name": "Caterpillar Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "CAT",
     "period": "FY2025",
@@ -42,13 +43,13 @@
       }
     ],
     "total_revenue": 67589000000.0,
-    "gross_profit": null,
+    "gross_profit": 22837000000.0,
     "operating_income": 11151000000.0,
-    "net_income": 8882000000.0,
+    "net_income": 8884000000.0,
     "rd_expense": 2148000000.0,
     "sga_expense": 6985000000.0,
     "cogs": 44752000000.0,
-    "interest_expense": null,
+    "interest_expense": 502000000.0,
     "income_tax": 2768000000.0,
     "currency": "USD",
     "extraction_method": "edgar+llm",
@@ -97,13 +98,13 @@
         }
       ],
       "total_revenue": 67589000000.0,
-      "gross_profit": null,
+      "gross_profit": 22837000000.0,
       "operating_income": 11151000000.0,
-      "net_income": 8882000000.0,
+      "net_income": 8884000000.0,
       "rd_expense": 2148000000.0,
       "sga_expense": 6985000000.0,
       "cogs": 44752000000.0,
-      "interest_expense": null,
+      "interest_expense": 502000000.0,
       "income_tax": 2768000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -151,13 +152,13 @@
         }
       ],
       "total_revenue": 64809000000.0,
-      "gross_profit": null,
+      "gross_profit": 24610000000.0,
       "operating_income": 13072000000.0,
-      "net_income": 10788000000.0,
+      "net_income": 10792000000.0,
       "rd_expense": 2107000000.0,
       "sga_expense": 6667000000.0,
       "cogs": 40199000000.0,
-      "interest_expense": null,
+      "interest_expense": 512000000.0,
       "income_tax": 2629000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -172,8 +173,16 @@
       "fiscal_quarter": null,
       "segments": [
         {
+          "segment_name": "Energy & Transportation",
+          "value": 28001000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
           "segment_name": "Construction Industries",
-          "value": 36521751946.607346,
+          "value": 27418000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -181,15 +190,7 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 18093039488.32036,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Intersegment Sales and Revenues",
-          "value": 6805369855.394883,
+          "value": 13583000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -197,7 +198,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 5041754727.474973,
+          "value": 3785000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -205,7 +206,7 @@
         },
         {
           "segment_name": "All Other Segment",
-          "value": 598083982.2024472,
+          "value": 449000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -213,9 +214,9 @@
         }
       ],
       "total_revenue": 67060000000.0,
-      "gross_profit": null,
+      "gross_profit": 24293000000.0,
       "operating_income": 12966000000.0,
-      "net_income": 10332000000.0,
+      "net_income": 10335000000.0,
       "rd_expense": 2108000000.0,
       "sga_expense": 6371000000.0,
       "cogs": 42767000000.0,
@@ -230,23 +231,118 @@
   "quarterly_periods": [
     {
       "ticker": "CAT",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Power & Energy",
+          "value": 5874373554.356206,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Construction Industries",
+          "value": 7203660370.084811,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Resource Industries",
+          "value": 3081528527.370856,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Financial Products Segment",
+          "value": 1243688801.079414,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "All Other Segment",
+          "value": 11748747.108712412,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 17415000000.0,
+      "gross_profit": 6109000000.0,
+      "operating_income": 3085000000.0,
+      "net_income": 2549000000.0,
+      "rd_expense": 537000000.0,
+      "sga_expense": 1816000000.0,
+      "cogs": 11306000000.0,
+      "interest_expense": 134000000.0,
+      "income_tax": 670000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "CAT",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 8397000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Construction Industries",
+          "value": 6760000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Resource Industries",
+          "value": 3110000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financial Products Segment",
+          "value": 1076000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17638000000.0,
+      "gross_profit": 5965000000.0,
+      "operating_income": 3052000000.0,
+      "net_income": 2300000000.0,
+      "rd_expense": 555000000.0,
+      "sga_expense": 1822000000.0,
+      "cogs": 11673000000.0,
+      "interest_expense": 133000000.0,
+      "income_tax": 836000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -255,19 +351,60 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 7836000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Construction Industries",
+          "value": 6190000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Resource Industries",
+          "value": 3087000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financial Products Segment",
+          "value": 1042000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All Other Segment",
+          "value": 104000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16569000000.0,
+      "gross_profit": 5762000000.0,
+      "operating_income": 2860000000.0,
+      "net_income": 2179000000.0,
+      "rd_expense": 551000000.0,
+      "sga_expense": 1694000000.0,
+      "cogs": 10807000000.0,
+      "interest_expense": 126000000.0,
+      "income_tax": 646000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -319,13 +456,13 @@
         }
       ],
       "total_revenue": 14249000000.0,
-      "gross_profit": null,
+      "gross_profit": 5284000000.0,
       "operating_income": 2579000000.0,
       "net_income": 2003000000.0,
       "rd_expense": 480000000.0,
       "sga_expense": 1593000000.0,
       "cogs": 8965000000.0,
-      "interest_expense": null,
+      "interest_expense": 116000000.0,
       "income_tax": 574000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -338,20 +475,63 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 7187000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Construction Industries",
+          "value": 6345000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Resource Industries",
+          "value": 3028000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financial Products Segment",
+          "value": 1034000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All Other Segment",
+          "value": 92000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16106000000.0,
+      "gross_profit": 6040000000.0,
+      "operating_income": 3147000000.0,
+      "net_income": 2464000000.0,
+      "rd_expense": 533000000.0,
+      "sga_expense": 1669000000.0,
+      "cogs": 10066000000.0,
+      "interest_expense": 125000000.0,
+      "income_tax": 642000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (16106000000) differs from Yahoo (64809000000) by 75.1%"
+      ]
     },
     {
       "ticker": "CAT",
@@ -402,13 +582,13 @@
         }
       ],
       "total_revenue": 16689000000.0,
-      "gross_profit": null,
+      "gross_profit": 6539000000.0,
       "operating_income": 3482000000.0,
       "net_income": 2681000000.0,
       "rd_expense": 535000000.0,
       "sga_expense": 1652000000.0,
       "cogs": 10150000000.0,
-      "interest_expense": null,
+      "interest_expense": 137000000.0,
       "income_tax": 836000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -466,9 +646,9 @@
         }
       ],
       "total_revenue": 15799000000.0,
-      "gross_profit": null,
+      "gross_profit": 6137000000.0,
       "operating_income": 3519000000.0,
-      "net_income": 2854000000.0,
+      "net_income": 2856000000.0,
       "rd_expense": 520000000.0,
       "sga_expense": 1577000000.0,
       "cogs": 9662000000.0,
@@ -487,20 +667,63 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Construction Industries",
+          "value": 6999000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 6859000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Resource Industries",
+          "value": 3351000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financial Products Segment",
+          "value": 979000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All Other Segment",
+          "value": 106000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16810000000.0,
+      "gross_profit": 6227000000.0,
+      "operating_income": 3449000000.0,
+      "net_income": 2794000000.0,
+      "rd_expense": 554000000.0,
+      "sga_expense": 1624000000.0,
+      "cogs": 10583000000.0,
+      "interest_expense": 129000000.0,
+      "income_tax": 734000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (16810000000) differs from Yahoo (67060000000) by 74.9%"
+      ]
     },
     {
       "ticker": "CAT",
@@ -508,48 +731,80 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 7219000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Construction Industries",
+          "value": 7154000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Resource Industries",
+          "value": 3563000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financial Products Segment",
+          "value": 923000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All Other Segment",
+          "value": 116000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17318000000.0,
+      "gross_profit": 6253000000.0,
+      "operating_income": 3652000000.0,
+      "net_income": 2924000000.0,
+      "rd_expense": 528000000.0,
+      "sga_expense": 1528000000.0,
+      "cogs": 11065000000.0,
+      "interest_expense": 127000000.0,
+      "income_tax": 752000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "CAT",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (17318000000) differs from Yahoo (67060000000) by 74.2%"
+      ]
     }
   ],
-  "ttm_revenue": 14249000000.0,
-  "ttm_operating_income": 2579000000.0,
-  "ttm_net_income": 2003000000.0,
+  "ttm_revenue": 65871000000.0,
+  "ttm_operating_income": 11576000000.0,
+  "ttm_net_income": 9031000000.0,
   "segment_trend": {
     "Energy & Transportation": [
+      {
+        "period": "2023Q2",
+        "value": 7219000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 6859000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 6681000000.0,
@@ -561,9 +816,29 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 7187000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 6568000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 7836000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 8397000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 28001000000.0,
+        "is_annual": true
       },
       {
         "period": "FY2024",
@@ -572,6 +847,16 @@
       }
     ],
     "Construction Industries": [
+      {
+        "period": "2023Q2",
+        "value": 7154000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 6999000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 6424000000.0,
@@ -583,13 +868,33 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 6345000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 5184000000.0,
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 6190000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 6760000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 7203660370.084811,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
-        "value": 36521751946.607346,
+        "value": 27418000000.0,
         "is_annual": true
       },
       {
@@ -605,6 +910,16 @@
     ],
     "Resource Industries": [
       {
+        "period": "2023Q2",
+        "value": 3563000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 3351000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 3193000000.0,
         "is_annual": false
@@ -615,13 +930,33 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 3028000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 2884000000.0,
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 3087000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 3110000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 3081528527.370856,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
-        "value": 18093039488.32036,
+        "value": 13583000000.0,
         "is_annual": true
       },
       {
@@ -637,6 +972,16 @@
     ],
     "Financial Products Segment": [
       {
+        "period": "2023Q2",
+        "value": 923000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 979000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 991000000.0,
         "is_annual": false
@@ -647,13 +992,33 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 1034000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 1007000000.0,
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 1042000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1076000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1243688801.079414,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
-        "value": 5041754727.474973,
+        "value": 3785000000.0,
         "is_annual": true
       },
       {
@@ -669,6 +1034,16 @@
     ],
     "All Other Segment": [
       {
+        "period": "2023Q2",
+        "value": 116000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 106000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 109000000.0,
         "is_annual": false
@@ -679,24 +1054,37 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 92000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 91000000.0,
         "is_annual": false
       },
       {
-        "period": "FY2023",
-        "value": 598083982.2024472,
-        "is_annual": true
-      }
-    ],
-    "Intersegment Sales and Revenues": [
+        "period": "2025Q2",
+        "value": 104000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 11748747.108712412,
+        "is_annual": false
+      },
       {
         "period": "FY2023",
-        "value": 6805369855.394883,
+        "value": 449000000.0,
         "is_annual": true
       }
     ],
     "Power & Energy": [
+      {
+        "period": "2026Q1",
+        "value": 5874373554.356206,
+        "is_annual": false
+      },
       {
         "period": "FY2025",
         "value": 32101000000.0,

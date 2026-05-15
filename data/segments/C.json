@@ -51,7 +51,15 @@
       },
       {
         "segment_name": "All Other",
-        "value": 4430000000.0,
+        "value": 8693000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Reconciling Items",
+        "value": 877000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -124,7 +132,15 @@
         },
         {
           "segment_name": "All Other",
-          "value": 4430000000.0,
+          "value": 8693000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Reconciling Items",
+          "value": 877000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -187,16 +203,16 @@
           "is_annual": true
         },
         {
-          "segment_name": "USPB",
-          "value": 20374000000.0,
+          "segment_name": "All Other",
+          "value": 9068000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "All Other",
-          "value": 7541000000.0,
+          "segment_name": "USPB",
+          "value": 20374000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -251,14 +267,6 @@
           "is_annual": true
         },
         {
-          "segment_name": "USPB",
-          "value": 19187000000.0,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Wealth",
           "value": 7091000000.0,
           "unit": "USD",
@@ -277,6 +285,14 @@
         {
           "segment_name": "Reconciling Items",
           "value": 1346000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "USPB",
+          "value": 19187000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -341,16 +357,16 @@
           "is_annual": true
         },
         {
-          "segment_name": "USCC",
-          "value": 4757000000.0,
+          "segment_name": "All Other",
+          "value": 2144000000.0,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "All Other",
-          "value": 1682000000.0,
+          "segment_name": "USCC",
+          "value": 4757000000.0,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -413,16 +429,24 @@
           "is_annual": true
         },
         {
-          "segment_name": "USPB",
-          "value": 5331000000.0,
+          "segment_name": "All Other",
+          "value": 2168000000.0,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "All Other",
-          "value": 1535000000.0,
+          "segment_name": "Reconciling Items",
+          "value": 766000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "USPB",
+          "value": 5331000000.0,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -485,16 +509,16 @@
           "is_annual": true
         },
         {
-          "segment_name": "USPB",
-          "value": 5119000000.0,
+          "segment_name": "All Other",
+          "value": 2276000000.0,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "All Other",
-          "value": 1698000000.0,
+          "segment_name": "USPB",
+          "value": 5119000000.0,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -557,16 +581,16 @@
           "is_annual": true
         },
         {
-          "segment_name": "USPB",
-          "value": 5228000000.0,
+          "segment_name": "All Other",
+          "value": 2224000000.0,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "All Other",
-          "value": 1445000000.0,
+          "segment_name": "USPB",
+          "value": 5228000000.0,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -621,14 +645,6 @@
           "is_annual": true
         },
         {
-          "segment_name": "USPB",
-          "value": 5045000000.0,
-          "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Wealth",
           "value": 2002000000.0,
           "unit": "USD",
@@ -639,6 +655,14 @@
         {
           "segment_name": "All Other",
           "value": 1825000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "USPB",
+          "value": 5045000000.0,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -694,14 +718,6 @@
           "is_annual": true
         },
         {
-          "segment_name": "USPB",
-          "value": 4919000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Wealth",
           "value": 1814000000.0,
           "unit": "USD",
@@ -712,6 +728,14 @@
         {
           "segment_name": "All Other",
           "value": 1980000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "USPB",
+          "value": 4919000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -767,14 +791,6 @@
           "is_annual": true
         },
         {
-          "segment_name": "USPB",
-          "value": 5178000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Wealth",
           "value": 1695000000.0,
           "unit": "USD",
@@ -785,6 +801,22 @@
         {
           "segment_name": "All Other",
           "value": 2385000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "USPB",
+          "value": 5178000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Reconciling Items",
+          "value": 110000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -1131,53 +1163,6 @@
         "is_annual": true
       }
     ],
-    "USPB": [
-      {
-        "period": "2024Q1",
-        "value": 5178000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 4919000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 5045000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 5228000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 5119000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 5331000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 19187000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 20374000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 20971000000.0,
-        "is_annual": true
-      }
-    ],
     "Wealth": [
       {
         "period": "2024Q1",
@@ -1248,22 +1233,22 @@
       },
       {
         "period": "2025Q1",
-        "value": 1445000000.0,
+        "value": 2224000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 1698000000.0,
+        "value": 2276000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 1535000000.0,
+        "value": 2168000000.0,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 1682000000.0,
+        "value": 2144000000.0,
         "is_annual": false
       },
       {
@@ -1273,12 +1258,81 @@
       },
       {
         "period": "FY2024",
-        "value": 7541000000.0,
+        "value": 9068000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 4430000000.0,
+        "value": 8693000000.0,
+        "is_annual": true
+      }
+    ],
+    "USPB": [
+      {
+        "period": "2024Q1",
+        "value": 5178000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4919000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 5045000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 5228000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 5119000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 5331000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 19187000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 20374000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 20971000000.0,
+        "is_annual": true
+      }
+    ],
+    "Reconciling Items": [
+      {
+        "period": "2024Q1",
+        "value": 110000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 766000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1346000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 877000000.0,
         "is_annual": true
       }
     ],
@@ -1287,13 +1341,6 @@
         "period": "2026Q1",
         "value": 4757000000.0,
         "is_annual": false
-      }
-    ],
-    "Reconciling Items": [
-      {
-        "period": "FY2023",
-        "value": 1346000000.0,
-        "is_annual": true
       }
     ]
   },

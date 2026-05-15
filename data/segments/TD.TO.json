@@ -1,78 +1,115 @@
 {
   "ticker": "TD.TO",
   "name": "Toronto Dominion Bank",
+  "sector": "financial",
   "latest_annual": {
     "ticker": "TD.TO",
-    "period": "FY2026",
+    "period": "FY2025",
     "is_annual": true,
-    "fiscal_year": 2026,
+    "fiscal_year": 2025,
     "fiscal_quarter": null,
-    "segments": [],
-    "total_revenue": 44753522172.153,
+    "segments": [
+      {
+        "segment_name": "Wealth Management And Insurance",
+        "value": 14562000000.0,
+        "unit": "USD",
+        "period": "2025-10-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "US Retail",
+        "value": 12368000000.0,
+        "unit": "USD",
+        "period": "2025-10-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Corporate",
+        "value": 11832000000.0,
+        "unit": "USD",
+        "period": "2025-10-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Wholesale Banking",
+        "value": 8410000000.0,
+        "unit": "USD",
+        "period": "2025-10-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": null,
     "gross_profit": null,
     "operating_income": null,
-    "net_income": 14998904038.310051,
+    "net_income": 20538000000.0,
     "rd_expense": null,
-    "sga_expense": 18957861034.691334,
+    "sga_expense": null,
     "cogs": null,
-    "interest_expense": 39844444708.64534,
-    "income_tax": 2490323438.0483627,
+    "interest_expense": null,
+    "income_tax": null,
     "currency": "USD",
-    "extraction_method": "yahoo+llm",
-    "confidence": 0.55,
-    "notes": [
-      "Source: Yahoo Finance (no SEC filing available)",
-      "⚠ Limited Segment Detail — aggregate data only"
-    ]
+    "extraction_method": "xbrl",
+    "confidence": 0.45,
+    "notes": []
   },
   "annual_periods": [
-    {
-      "ticker": "TD.TO",
-      "period": "FY2026",
-      "is_annual": true,
-      "fiscal_year": 2026,
-      "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 44753522172.153,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": 14998904038.310051,
-      "rd_expense": null,
-      "sga_expense": 18957861034.691334,
-      "cogs": null,
-      "interest_expense": 39844444708.64534,
-      "income_tax": 2490323438.0483627,
-      "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
-    },
     {
       "ticker": "TD.TO",
       "period": "FY2025",
       "is_annual": true,
       "fiscal_year": 2025,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 44753522172.153,
+      "segments": [
+        {
+          "segment_name": "Wealth Management And Insurance",
+          "value": 14562000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "US Retail",
+          "value": 12368000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 11832000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wholesale Banking",
+          "value": 8410000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 14998904038.310051,
+      "net_income": 20538000000.0,
       "rd_expense": null,
-      "sga_expense": 18957861034.691334,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 39844444708.64534,
-      "income_tax": 2490323438.0483627,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "xbrl",
+      "confidence": 0.45,
+      "notes": []
     },
     {
       "ticker": "TD.TO",
@@ -80,203 +117,463 @@
       "is_annual": true,
       "fiscal_year": 2024,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 44753522172.153,
+      "segments": [
+        {
+          "segment_name": "U.S. Retail",
+          "value": 13713000000.0,
+          "unit": "USD",
+          "period": "2024-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth Management and Insurance",
+          "value": 13535000000.0,
+          "unit": "USD",
+          "period": "2024-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wholesale Banking",
+          "value": 7286000000.0,
+          "unit": "USD",
+          "period": "2024-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 5007000000.0,
+          "unit": "USD",
+          "period": "2024-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 14998904038.310051,
+      "net_income": 8842000000.0,
       "rd_expense": null,
-      "sga_expense": 18957861034.691334,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 39844444708.64534,
-      "income_tax": 2490323438.0483627,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "xbrl",
+      "confidence": 0.45,
+      "notes": []
+    },
+    {
+      "ticker": "TD.TO",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "U.S. Retail",
+          "value": 14442000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth Management and Insurance",
+          "value": 11280000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wholesale Banking",
+          "value": 5818000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 5408000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": 10782000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.45,
+      "notes": []
     }
   ],
   "quarterly_periods": [
     {
       "ticker": "TD.TO",
+      "period": "2026Q2",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TD.TO",
       "period": "2026Q1",
       "is_annual": false,
       "fiscal_year": 2026,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 1,
       "segments": [],
-      "total_revenue": 12050682419.717312,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 2952603419.3634987,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5063901090.741158,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 8695683629.572392,
-      "income_tax": 823778544.9028015,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "TD.TO",
       "period": "2025Q4",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 4,
       "segments": [],
-      "total_revenue": 12050682419.717312,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 2952603419.3634987,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5063901090.741158,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 8695683629.572392,
-      "income_tax": 823778544.9028015,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "TD.TO",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 3,
       "segments": [],
-      "total_revenue": 12050682419.717312,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 2952603419.3634987,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5063901090.741158,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 8695683629.572392,
-      "income_tax": 823778544.9028015,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "TD.TO",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 2,
       "segments": [],
-      "total_revenue": 12050682419.717312,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 2952603419.3634987,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5063901090.741158,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 8695683629.572392,
-      "income_tax": 823778544.9028015,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "TD.TO",
       "period": "2025Q1",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 1,
       "segments": [],
-      "total_revenue": 12050682419.717312,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 2952603419.3634987,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5063901090.741158,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 8695683629.572392,
-      "income_tax": 823778544.9028015,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "TD.TO",
       "period": "2024Q4",
       "is_annual": false,
       "fiscal_year": 2024,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 4,
       "segments": [],
-      "total_revenue": 12050682419.717312,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 2952603419.3634987,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5063901090.741158,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 8695683629.572392,
-      "income_tax": 823778544.9028015,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "TD.TO",
       "period": "2024Q3",
       "is_annual": false,
       "fiscal_year": 2024,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 3,
       "segments": [],
-      "total_revenue": 12050682419.717312,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 2952603419.3634987,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5063901090.741158,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 8695683629.572392,
-      "income_tax": 823778544.9028015,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TD.TO",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TD.TO",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TD.TO",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TD.TO",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "TD.TO",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     }
   ],
-  "ttm_revenue": 48202729678.86925,
+  "ttm_revenue": null,
   "ttm_operating_income": null,
-  "ttm_net_income": 11810413677.453995,
-  "segment_trend": {},
+  "ttm_net_income": null,
+  "segment_trend": {
+    "U.S. Retail": [
+      {
+        "period": "FY2023",
+        "value": 14442000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 13713000000.0,
+        "is_annual": true
+      }
+    ],
+    "Wealth Management and Insurance": [
+      {
+        "period": "FY2023",
+        "value": 11280000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 13535000000.0,
+        "is_annual": true
+      }
+    ],
+    "Wholesale Banking": [
+      {
+        "period": "FY2023",
+        "value": 5818000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 7286000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 8410000000.0,
+        "is_annual": true
+      }
+    ],
+    "Corporate": [
+      {
+        "period": "FY2023",
+        "value": 5408000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 5007000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 11832000000.0,
+        "is_annual": true
+      }
+    ],
+    "Wealth Management And Insurance": [
+      {
+        "period": "FY2025",
+        "value": 14562000000.0,
+        "is_annual": true
+      }
+    ],
+    "US Retail": [
+      {
+        "period": "FY2025",
+        "value": 12368000000.0,
+        "is_annual": true
+      }
+    ]
+  },
   "annual_count": 3,
-  "quarterly_count": 7,
-  "has_partial_data": true,
-  "data_notes": [
-    "Partial data: 3/3 annual, 7/12 quarterly"
-  ]
+  "quarterly_count": 13,
+  "has_partial_data": false,
+  "data_notes": []
 }

@@ -1,6 +1,7 @@
 {
   "ticker": "MRK",
   "name": "Merck & Co. Inc.",
+  "sector": "pharma",
   "latest_annual": {
     "ticker": "MRK",
     "period": "FY2025",
@@ -9,16 +10,16 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Total segment profits",
-        "value": 64496000000.0,
+        "segment_name": "Pharmaceutical",
+        "value": 58142000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "Other profits",
-        "value": 515000000.0,
+        "segment_name": "Animal Health",
+        "value": 6354000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -26,8 +27,8 @@
       }
     ],
     "total_revenue": 65011000000.0,
-    "gross_profit": null,
-    "operating_income": null,
+    "gross_profit": 48629000000.0,
+    "operating_income": 22107000000.0,
     "net_income": 18263000000.0,
     "rd_expense": 15789000000.0,
     "sga_expense": 10733000000.0,
@@ -48,16 +49,16 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Total segment profits",
-          "value": 64496000000.0,
+          "segment_name": "Pharmaceutical",
+          "value": 58142000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Other profits",
-          "value": 515000000.0,
+          "segment_name": "Animal Health",
+          "value": 6354000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -65,8 +66,8 @@
         }
       ],
       "total_revenue": 65011000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 48629000000.0,
+      "operating_income": 22107000000.0,
       "net_income": 18263000000.0,
       "rd_expense": 15789000000.0,
       "sga_expense": 10733000000.0,
@@ -84,27 +85,10 @@
       "is_annual": true,
       "fiscal_year": 2024,
       "fiscal_quarter": null,
-      "segments": [
-        {
-          "segment_name": "Total segment profits",
-          "value": 63277000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Other profits",
-          "value": 891000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        }
-      ],
+      "segments": [],
       "total_revenue": 64168000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 48975000000.0,
+      "operating_income": 20221000000.0,
       "net_income": 17133000000.0,
       "rd_expense": 17938000000.0,
       "sga_expense": 10816000000.0,
@@ -113,28 +97,7 @@
       "income_tax": 2803000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 1.0,
-      "notes": []
-    },
-    {
-      "ticker": "MRK",
-      "period": "FY2023",
-      "is_annual": true,
-      "fiscal_year": 2023,
-      "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "confidence": 0.55,
       "notes": []
     },
     {
@@ -145,25 +108,25 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Total segment profits",
-          "value": 59208000000.0,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Pharmaceutical",
+          "value": 57544161311.766014,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Other profits",
-          "value": 907000000.0,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Animal Health",
+          "value": 2570838688.2339907,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
       "total_revenue": 60115000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 43989000000.0,
+      "operating_income": 2954000000.0,
       "net_income": 365000000.0,
       "rd_expense": 30531000000.0,
       "sga_expense": 10504000000.0,
@@ -171,7 +134,7 @@
       "interest_expense": null,
       "income_tax": 1512000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": []
     }
@@ -179,23 +142,78 @@
   "quarterly_periods": [
     {
       "ticker": "MRK",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Pharma- ceutical",
+          "value": 14349000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Animal Health",
+          "value": 1791000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16286000000.0,
+      "gross_profit": 12091000000.0,
+      "operating_income": -3201000000.0,
+      "net_income": -4243000000.0,
+      "rd_expense": 12592000000.0,
+      "sga_expense": 2700000000.0,
+      "cogs": 4195000000.0,
+      "interest_expense": null,
+      "income_tax": 709000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "MRK",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Pharma- ceutical",
+          "value": 15611000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Animal Health",
+          "value": 1615000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17276000000.0,
+      "gross_profit": 13421000000.0,
+      "operating_income": 6554000000.0,
+      "net_income": 5787000000.0,
+      "rd_expense": 4234000000.0,
+      "sga_expense": 2633000000.0,
+      "cogs": 3855000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 958000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -204,19 +222,36 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Pharma- ceutical",
+          "value": 14050000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Animal Health",
+          "value": 1646000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15806000000.0,
+      "gross_profit": 12249000000.0,
+      "operating_income": 5552000000.0,
+      "net_income": 4428000000.0,
+      "rd_expense": 4048000000.0,
+      "sga_expense": 2649000000.0,
+      "cogs": 3557000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 571000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -227,25 +262,25 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Total segment profits",
-          "value": 15226000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Pharmaceutical",
+          "value": 13638000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Other profits",
-          "value": 303000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Animal Health",
+          "value": 5026000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 15529000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 12110000000.0,
+      "operating_income": 5937000000.0,
       "net_income": 5085000000.0,
       "rd_expense": 3621000000.0,
       "sga_expense": 2552000000.0,
@@ -253,7 +288,7 @@
       "interest_expense": null,
       "income_tax": 818000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": []
     },
@@ -263,20 +298,55 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "United States",
+          "value": 8714000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Non-US",
+          "value": 7716000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Non-US - Animal Health segment",
+          "value": 1487000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate, Non-Segment",
+          "value": 227000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16657000000.0,
+      "gross_profit": 12577000000.0,
+      "operating_income": 3984000000.0,
+      "net_income": 3161000000.0,
+      "rd_expense": 5862000000.0,
+      "sga_expense": 2731000000.0,
+      "cogs": 4080000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 929000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (16657000000) differs from Yahoo (64168000000) by 74.0%"
+      ]
     },
     {
       "ticker": "MRK",
@@ -286,24 +356,16 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Noxafil - Non-US - Pharmaceutical segment",
-          "value": 3299930730.4422994,
+          "segment_name": "Non-US",
+          "value": 8036000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Gardasil/Gardasil 9 - United States - Pharmaceutical segment",
-          "value": 4609596542.284973,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Delstrigo - Non-US - Pharmaceutical segment",
-          "value": 1724710560.437977,
+          "segment_name": "United States",
+          "value": 7854000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -311,63 +373,7 @@
         },
         {
           "segment_name": "Non-US - Animal Health segment",
-          "value": 1164817980.1181386,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Livestock - Int’l - Animal Health segment",
-          "value": 388582163.95332086,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Livestock - United States - Animal Health segment",
-          "value": 599818585.2182683,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Companion Animal - United States - Animal Health segment",
-          "value": 598890073.4764444,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "ProQuad/M-M-R II/Varivax - United States - Pharmaceutical segment",
-          "value": 572891744.7053739,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Other pharmaceutical - United States - Pharmaceutical segment",
-          "value": 533429995.67785627,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Lagevrio - Pharmaceutical segment",
-          "value": 630459472.6984584,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Alliance revenue - Lynparza - Non-US - Pharmaceutical segment",
-          "value": 373261720.2132258,
+          "value": 1482000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -375,87 +381,7 @@
         },
         {
           "segment_name": "Corporate, Non-Segment",
-          "value": 103064803.34245786,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Vaxneuvance - Int’l - Pharmaceutical segment",
-          "value": 87744359.60236277,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Winrevair - Pharmaceutical segment",
-          "value": 321265062.67108494,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Alliance revenue - Adempas/Verquvo - United States - Pharmaceutical segment",
-          "value": 251626682.034289,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Pneumovax 23 - Non-US - Pharmaceutical segment",
-          "value": 277625010.8053595,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "RotaTeq - Pharmaceutical segment",
-          "value": 75673706.9586515,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Vaxneuvance - United States - Pharmaceutical segment",
-          "value": 147633366.9500072,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Pneumovax 23 - United States - Pharmaceutical segment",
-          "value": 153668693.27186283,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Alliance Revenue - Reblozyl - United States - Pharmaceutical segment",
-          "value": 83566056.76415502,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Isentress/Isentress HD - United States - Pharmaceutical segment",
-          "value": 89137127.21509868,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Belsomra - Int’l - Pharmaceutical segment",
-          "value": 24605561.158334535,
+          "value": 222000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -463,8 +389,8 @@
         }
       ],
       "total_revenue": 16112000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 12367000000.0,
+      "operating_income": 6128000000.0,
       "net_income": 5461000000.0,
       "rd_expense": 3500000000.0,
       "sga_expense": 2739000000.0,
@@ -486,24 +412,16 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Vaxneuvance - United States - Pharmaceutical segment",
-          "value": 3314299769.699443,
+          "segment_name": "Int’l",
+          "value": 8107000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Gardasil/Gardasil 9 - United States - Pharmaceutical segment",
-          "value": 4229445675.3053665,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Keytruda - Int’l - Pharmaceutical segment",
-          "value": 1646802757.7762878,
+          "segment_name": "United States",
+          "value": 7410000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -511,63 +429,7 @@
         },
         {
           "segment_name": "Non-US - Animal Health segment",
-          "value": 1171754657.027082,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Livestock - Int’l - Animal Health segment",
-          "value": 704984257.9366236,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Companion Animal - United States - Animal Health segment",
-          "value": 608411071.917908,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Other pharmaceutical - United States - Pharmaceutical segment",
-          "value": 529772906.1598111,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "ProQuad/M-M-R II/Varivax - United States - Pharmaceutical segment",
-          "value": 524714310.7016879,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Livestock - United States - Animal Health segment",
-          "value": 294318281.199895,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Lagevrio - Pharmaceutical segment",
-          "value": 737175319.942862,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Alliance revenue - Lynparza - Non-US - Pharmaceutical segment",
-          "value": 361459639.0986211,
+          "value": 1511000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -575,95 +437,7 @@
         },
         {
           "segment_name": "Corporate, Non-Segment",
-          "value": 118647057.10870768,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Vaxneuvance - Int’l - Pharmaceutical segment",
-          "value": 326509343.2061336,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "RotaTeq - Pharmaceutical segment",
-          "value": 99332419.90496458,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Winrevair - Pharmaceutical segment",
-          "value": 266725942.33740485,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Alliance revenue - Adempas/Verquvo - United States - Pharmaceutical segment",
-          "value": 231775646.44491735,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Pneumovax 23 - United States - Pharmaceutical segment",
-          "value": 167853394.74681515,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Belsomra - Int’l - Pharmaceutical segment",
-          "value": 121406290.9949567,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Isentress/Isentress HD - United States - Pharmaceutical segment",
-          "value": 107610121.56371163,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Alliance Revenue - Reblozyl - United States - Pharmaceutical segment",
-          "value": 64841996.326851875,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Pneumovax 23 - Non-US - Pharmaceutical segment",
-          "value": 53345188.46748097,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Noxafil - Non-US - Pharmaceutical segment",
-          "value": 47826720.694982946,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Delstrigo - Non-US - Pharmaceutical segment",
-          "value": 45987231.4374836,
+          "value": 258000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -671,8 +445,8 @@
         }
       ],
       "total_revenue": 15775000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 12235000000.0,
+      "operating_income": 5760000000.0,
       "net_income": 4767000000.0,
       "rd_expense": 3992000000.0,
       "sga_expense": 2483000000.0,
@@ -692,20 +466,55 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Int’l",
+          "value": 8048000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "United States",
+          "value": 7615000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Non-US - Animal Health segment",
+          "value": 1400000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate, Non-Segment",
+          "value": 299000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15962000000.0,
+      "gross_profit": 11698000000.0,
+      "operating_income": 5872000000.0,
+      "net_income": 4750000000.0,
+      "rd_expense": 3307000000.0,
+      "sga_expense": 2519000000.0,
+      "cogs": 4264000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 870000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (15962000000) differs from Yahoo (60115000000) by 73.4%"
+      ]
     },
     {
       "ticker": "MRK",
@@ -713,364 +522,239 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Int’l",
+          "value": 7869000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "United States",
+          "value": 7045000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Non-US - Animal Health segment",
+          "value": 1456000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate, Non-Segment",
+          "value": 149000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15035000000.0,
+      "gross_profit": 11011000000.0,
+      "operating_income": -5012000000.0,
+      "net_income": -5975000000.0,
+      "rd_expense": 13321000000.0,
+      "sga_expense": 2702000000.0,
+      "cogs": 4024000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 637000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "MRK",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (15035000000) differs from Yahoo (60115000000) by 75.0%"
+      ]
     }
   ],
-  "ttm_revenue": 15529000000.0,
-  "ttm_operating_income": null,
-  "ttm_net_income": 5085000000.0,
+  "ttm_revenue": 64897000000.0,
+  "ttm_operating_income": 14842000000.0,
+  "ttm_net_income": 11057000000.0,
   "segment_trend": {
-    "Vaxneuvance - United States - Pharmaceutical segment": [
+    "Int’l": [
+      {
+        "period": "2023Q2",
+        "value": 7869000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 8048000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
-        "value": 3314299769.699443,
+        "value": 8107000000.0,
+        "is_annual": false
+      }
+    ],
+    "United States": [
+      {
+        "period": "2023Q2",
+        "value": 7045000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 7615000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 7410000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 147633366.9500072,
-        "is_annual": false
-      }
-    ],
-    "Gardasil/Gardasil 9 - United States - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 4229445675.3053665,
+        "value": 7854000000.0,
         "is_annual": false
       },
       {
-        "period": "2024Q2",
-        "value": 4609596542.284973,
-        "is_annual": false
-      }
-    ],
-    "Keytruda - Int’l - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 1646802757.7762878,
+        "period": "2024Q3",
+        "value": 8714000000.0,
         "is_annual": false
       }
     ],
     "Non-US - Animal Health segment": [
       {
+        "period": "2023Q2",
+        "value": 1456000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1400000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
-        "value": 1171754657.027082,
+        "value": 1511000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 1164817980.1181386,
-        "is_annual": false
-      }
-    ],
-    "Livestock - Int’l - Animal Health segment": [
-      {
-        "period": "2024Q1",
-        "value": 704984257.9366236,
+        "value": 1482000000.0,
         "is_annual": false
       },
       {
-        "period": "2024Q2",
-        "value": 388582163.95332086,
-        "is_annual": false
-      }
-    ],
-    "Companion Animal - United States - Animal Health segment": [
-      {
-        "period": "2024Q1",
-        "value": 608411071.917908,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 598890073.4764444,
-        "is_annual": false
-      }
-    ],
-    "Other pharmaceutical - United States - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 529772906.1598111,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 533429995.67785627,
-        "is_annual": false
-      }
-    ],
-    "ProQuad/M-M-R II/Varivax - United States - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 524714310.7016879,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 572891744.7053739,
-        "is_annual": false
-      }
-    ],
-    "Livestock - United States - Animal Health segment": [
-      {
-        "period": "2024Q1",
-        "value": 294318281.199895,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 599818585.2182683,
-        "is_annual": false
-      }
-    ],
-    "Lagevrio - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 737175319.942862,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 630459472.6984584,
-        "is_annual": false
-      }
-    ],
-    "Alliance revenue - Lynparza - Non-US - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 361459639.0986211,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 373261720.2132258,
+        "period": "2024Q3",
+        "value": 1487000000.0,
         "is_annual": false
       }
     ],
     "Corporate, Non-Segment": [
       {
+        "period": "2023Q2",
+        "value": 149000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 299000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
-        "value": 118647057.10870768,
+        "value": 258000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 103064803.34245786,
-        "is_annual": false
-      }
-    ],
-    "Vaxneuvance - Int’l - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 326509343.2061336,
+        "value": 222000000.0,
         "is_annual": false
       },
       {
-        "period": "2024Q2",
-        "value": 87744359.60236277,
+        "period": "2024Q3",
+        "value": 227000000.0,
         "is_annual": false
       }
     ],
-    "RotaTeq - Pharmaceutical segment": [
+    "Non-US": [
       {
-        "period": "2024Q1",
-        "value": 99332419.90496458,
+        "period": "2024Q2",
+        "value": 8036000000.0,
         "is_annual": false
       },
       {
-        "period": "2024Q2",
-        "value": 75673706.9586515,
+        "period": "2024Q3",
+        "value": 7716000000.0,
         "is_annual": false
       }
     ],
-    "Winrevair - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 266725942.33740485,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 321265062.67108494,
-        "is_annual": false
-      }
-    ],
-    "Alliance revenue - Adempas/Verquvo - United States - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 231775646.44491735,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 251626682.034289,
-        "is_annual": false
-      }
-    ],
-    "Pneumovax 23 - United States - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 167853394.74681515,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 153668693.27186283,
-        "is_annual": false
-      }
-    ],
-    "Belsomra - Int’l - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 121406290.9949567,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 24605561.158334535,
-        "is_annual": false
-      }
-    ],
-    "Isentress/Isentress HD - United States - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 107610121.56371163,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 89137127.21509868,
-        "is_annual": false
-      }
-    ],
-    "Alliance Revenue - Reblozyl - United States - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 64841996.326851875,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 83566056.76415502,
-        "is_annual": false
-      }
-    ],
-    "Pneumovax 23 - Non-US - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 53345188.46748097,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 277625010.8053595,
-        "is_annual": false
-      }
-    ],
-    "Noxafil - Non-US - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 47826720.694982946,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 3299930730.4422994,
-        "is_annual": false
-      }
-    ],
-    "Delstrigo - Non-US - Pharmaceutical segment": [
-      {
-        "period": "2024Q1",
-        "value": 45987231.4374836,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 1724710560.437977,
-        "is_annual": false
-      }
-    ],
-    "Total segment profits": [
+    "Pharmaceutical": [
       {
         "period": "2025Q1",
-        "value": 15226000000.0,
+        "value": 13638000000.0,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 59208000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 63277000000.0,
+        "value": 57544161311.766014,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 64496000000.0,
+        "value": 58142000000.0,
         "is_annual": true
       }
     ],
-    "Other profits": [
+    "Animal Health": [
       {
         "period": "2025Q1",
-        "value": 303000000.0,
+        "value": 5026000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1646000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1615000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1791000000.0,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 907000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 891000000.0,
+        "value": 2570838688.2339907,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 515000000.0,
+        "value": 6354000000.0,
         "is_annual": true
+      }
+    ],
+    "Pharma- ceutical": [
+      {
+        "period": "2025Q2",
+        "value": 14050000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 15611000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 14349000000.0,
+        "is_annual": false
       }
     ]
   },
-  "annual_count": 4,
+  "annual_count": 3,
   "quarterly_count": 9,
   "has_partial_data": false,
   "data_notes": []

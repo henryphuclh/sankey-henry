@@ -1,6 +1,7 @@
 {
   "ticker": "GE",
   "name": "GE Aerospace",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "GE",
     "period": "FY2025",
@@ -26,8 +27,8 @@
       }
     ],
     "total_revenue": 45855000000.0,
-    "gross_profit": null,
-    "operating_income": null,
+    "gross_profit": 16887000000.0,
+    "operating_income": 11219000000.0,
     "net_income": 8704000000.0,
     "rd_expense": 1580000000.0,
     "sga_expense": 4088000000.0,
@@ -65,8 +66,8 @@
         }
       ],
       "total_revenue": 45855000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 16887000000.0,
+      "operating_income": 11219000000.0,
       "net_income": 8704000000.0,
       "rd_expense": 1580000000.0,
       "sga_expense": 4088000000.0,
@@ -103,8 +104,8 @@
         }
       ],
       "total_revenue": 38702000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 14394000000.0,
+      "operating_income": 8671000000.0,
       "net_income": 6566000000.0,
       "rd_expense": 1286000000.0,
       "sga_expense": 4437000000.0,
@@ -149,8 +150,8 @@
         }
       ],
       "total_revenue": 67954000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 17562000000.0,
+      "operating_income": 6460000000.0,
       "net_income": 9481000000.0,
       "rd_expense": 1907000000.0,
       "sga_expense": 9195000000.0,
@@ -168,23 +169,78 @@
   "quarterly_periods": [
     {
       "ticker": "GE",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Equipment",
+          "value": 6638187806.992199,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services - Defense & Propulsion Technologies",
+          "value": 5753812193.007801,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12392000000.0,
+      "gross_profit": 4470000000.0,
+      "operating_income": 2946000000.0,
+      "net_income": 1920000000.0,
+      "rd_expense": 440000000.0,
+      "sga_expense": 1084000000.0,
+      "cogs": 7922000000.0,
+      "interest_expense": null,
+      "income_tax": -252000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "GE",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Equipment",
+          "value": 6731250276.854928,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services - Defense & Propulsion Technologies",
+          "value": 5449749723.145072,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12181000000.0,
+      "gross_profit": 4419000000.0,
+      "operating_income": 2809000000.0,
+      "net_income": 2157000000.0,
+      "rd_expense": 415000000.0,
+      "sga_expense": 1195000000.0,
+      "cogs": 7762000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -344000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -193,19 +249,36 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Equipment",
+          "value": 6089885105.639951,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services - Defense & Propulsion Technologies",
+          "value": 4933114894.360049,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11023000000.0,
+      "gross_profit": 4177000000.0,
+      "operating_income": 2798000000.0,
+      "net_income": 2028000000.0,
+      "rd_expense": 359000000.0,
+      "sga_expense": 1020000000.0,
+      "cogs": 6846000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -388000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -217,7 +290,7 @@
       "segments": [
         {
           "segment_name": "Equipment",
-          "value": 2909000000.0,
+          "value": 5522819606.344354,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -225,23 +298,7 @@
         },
         {
           "segment_name": "Services - Defense & Propulsion Technologies",
-          "value": 3598000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment - Commercial Engines & Services",
-          "value": 1858000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment - Defense & Propulsion Technologies",
-          "value": 1050000000.0,
+          "value": 4412180393.655647,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -249,8 +306,8 @@
         }
       ],
       "total_revenue": 9935000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 3940000000.0,
+      "operating_income": 2705000000.0,
       "net_income": 1978000000.0,
       "rd_expense": 359000000.0,
       "sga_expense": 876000000.0,
@@ -268,20 +325,47 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Equipment",
+          "value": 4725457608.496612,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services - Defense & Propulsion Technologies",
+          "value": 4042410913.75206,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate & Other",
+          "value": 1074131477.7513275,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 9842000000.0,
+      "gross_profit": 3616000000.0,
+      "operating_income": 1955000000.0,
+      "net_income": 1852000000.0,
+      "rd_expense": 331000000.0,
+      "sga_expense": 1330000000.0,
+      "cogs": 6226000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -198000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (9842000000) differs from Yahoo (38702000000) by 74.6%"
+      ]
     },
     {
       "ticker": "GE",
@@ -292,7 +376,7 @@
       "segments": [
         {
           "segment_name": "Equipment",
-          "value": 2498000000.0,
+          "value": 4160588278.3882785,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -300,23 +384,7 @@
         },
         {
           "segment_name": "Services - Defense & Propulsion Technologies",
-          "value": 3730000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment - Commercial Engines & Services",
-          "value": 1427000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment - Defense & Propulsion Technologies",
-          "value": 1071000000.0,
+          "value": 3999028205.1282053,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -324,7 +392,7 @@
         },
         {
           "segment_name": "Corporate & Other",
-          "value": 561000000.0,
+          "value": 934383516.4835166,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -332,8 +400,8 @@
         }
       ],
       "total_revenue": 9094000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 3519000000.0,
+      "operating_income": 2295000000.0,
       "net_income": 1268000000.0,
       "rd_expense": 300000000.0,
       "sga_expense": 924000000.0,
@@ -355,33 +423,25 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Aerospace",
-          "value": 8064000000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Power Conversion, Nuclear and other - Power",
+          "value": 5816653413.353338,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
-          "segment_name": "Renewable Energy",
-          "value": 3005000000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "Power",
-          "value": 4134000000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Corporate",
+          "value": 10236346586.646662,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 16053000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 4433000000.0,
+      "operating_income": 1657000000.0,
       "net_income": 1563000000.0,
       "rd_expense": 507000000.0,
       "sga_expense": 2269000000.0,
@@ -389,7 +449,7 @@
       "interest_expense": null,
       "income_tax": -318000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (16053000000) differs from Yahoo (38702000000) by 58.5%"
@@ -401,20 +461,39 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Power Conversion, Nuclear and other - Power",
+          "value": 6185182250.396196,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 11160817749.603804,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17346000000.0,
+      "gross_profit": 4442000000.0,
+      "operating_income": 1800000000.0,
+      "net_income": 348000000.0,
+      "rd_expense": 471000000.0,
+      "sga_expense": 2171000000.0,
+      "cogs": 12904000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -138000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (17346000000) differs from Yahoo (35348000000) by 50.9%"
+      ]
     },
     {
       "ticker": "GE",
@@ -422,75 +501,102 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Equipment",
+          "value": 6825000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Power",
+          "value": 4152000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Renewable Energy",
+          "value": 3849000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate",
+          "value": 839000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16699000000.0,
+      "gross_profit": 4337000000.0,
+      "operating_income": 1524000000.0,
+      "net_income": 39000000.0,
+      "rd_expense": 455000000.0,
+      "sga_expense": 2358000000.0,
+      "cogs": 12362000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -333000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "GE",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (16699000000) differs from Yahoo (35348000000) by 52.8%"
+      ]
     }
   ],
-  "ttm_revenue": 9935000000.0,
-  "ttm_operating_income": null,
-  "ttm_net_income": 1978000000.0,
+  "ttm_revenue": 45531000000.0,
+  "ttm_operating_income": 11258000000.0,
+  "ttm_net_income": 8083000000.0,
   "segment_trend": {
-    "Aerospace": [
+    "Equipment": [
       {
-        "period": "2024Q1",
-        "value": 8064000000.0,
+        "period": "2023Q2",
+        "value": 6825000000.0,
         "is_annual": false
       },
       {
-        "period": "FY2023",
-        "value": 31062000000.0,
-        "is_annual": true
-      }
-    ],
-    "Renewable Energy": [
-      {
-        "period": "2024Q1",
-        "value": 3005000000.0,
+        "period": "2024Q2",
+        "value": 4160588278.3882785,
         "is_annual": false
       },
       {
-        "period": "FY2023",
-        "value": 14974000000.0,
-        "is_annual": true
+        "period": "2024Q3",
+        "value": 4725457608.496612,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 5522819606.344354,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 6089885105.639951,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 6731250276.854928,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 6638187806.992199,
+        "is_annual": false
       }
     ],
     "Power": [
       {
-        "period": "2024Q1",
-        "value": 4134000000.0,
+        "period": "2023Q2",
+        "value": 4152000000.0,
         "is_annual": false
       },
       {
@@ -499,27 +605,76 @@
         "is_annual": true
       }
     ],
-    "Equipment": [
+    "Renewable Energy": [
       {
-        "period": "2024Q2",
-        "value": 2498000000.0,
+        "period": "2023Q2",
+        "value": 3849000000.0,
         "is_annual": false
       },
       {
-        "period": "2025Q1",
-        "value": 2909000000.0,
+        "period": "FY2023",
+        "value": 14974000000.0,
+        "is_annual": true
+      }
+    ],
+    "Corporate": [
+      {
+        "period": "2023Q2",
+        "value": 839000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 11160817749.603804,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 10236346586.646662,
+        "is_annual": false
+      }
+    ],
+    "Power Conversion, Nuclear and other - Power": [
+      {
+        "period": "2023Q3",
+        "value": 6185182250.396196,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 5816653413.353338,
         "is_annual": false
       }
     ],
     "Services - Defense & Propulsion Technologies": [
       {
         "period": "2024Q2",
-        "value": 3730000000.0,
+        "value": 3999028205.1282053,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 4042410913.75206,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 3598000000.0,
+        "value": 4412180393.655647,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4933114894.360049,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 5449749723.145072,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 5753812193.007801,
         "is_annual": false
       },
       {
@@ -533,17 +688,26 @@
         "is_annual": true
       }
     ],
-    "Equipment - Commercial Engines & Services": [
+    "Corporate & Other": [
       {
         "period": "2024Q2",
-        "value": 1427000000.0,
+        "value": 934383516.4835166,
         "is_annual": false
       },
       {
-        "period": "2025Q1",
-        "value": 1858000000.0,
+        "period": "2024Q3",
+        "value": 1074131477.7513275,
         "is_annual": false
-      },
+      }
+    ],
+    "Aerospace": [
+      {
+        "period": "FY2023",
+        "value": 31062000000.0,
+        "is_annual": true
+      }
+    ],
+    "Equipment - Commercial Engines & Services": [
       {
         "period": "FY2024",
         "value": 26666000000.0,
@@ -553,25 +717,6 @@
         "period": "FY2025",
         "value": 33252000000.0,
         "is_annual": true
-      }
-    ],
-    "Equipment - Defense & Propulsion Technologies": [
-      {
-        "period": "2024Q2",
-        "value": 1071000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 1050000000.0,
-        "is_annual": false
-      }
-    ],
-    "Corporate & Other": [
-      {
-        "period": "2024Q2",
-        "value": 561000000.0,
-        "is_annual": false
       }
     ]
   },

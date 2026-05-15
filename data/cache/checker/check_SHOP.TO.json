@@ -1,1 +1,26 @@
-{"timestamp": 1778494127.1955059, "data": {"ticker": "SHOP.TO", "data_source": "yahoo_only", "classification": "INTL_YAHOO", "sector": "standard", "filing_type": "none", "cik": null, "confidence": 0.6, "notes": ["edgartools CIK lookup failed: Company not found: 'SHOP.TO'\n  Tip: Search by name with find_company(\"...\") or pass a CIK directly.", "No CIK found — will use Yahoo Finance only", "Non-US ticker suffix → INTL_YAHOO", "Yahoo Finance: sector='Technology', industry='Software - Application'", "No strong sector signal → standard"]}}
+{
+  "timestamp": 1778829719.162658,
+  "data": {
+    "ticker": "SHOP.TO",
+    "data_source": "both",
+    "classification": "US_SEC",
+    "sector": "standard",
+    "filing_type": "10-K/10-Q",
+    "cik": "0001594805",
+    "confidence": 0.6,
+    "notes": [
+      "edgartools CIK lookup failed: Company not found: 'SHOP.TO'\n  Tip: Search by name with find_company(\"...\") or pass a CIK directly.",
+      "CIK 0001275158 rejected: EDGAR name 'noodles & co' doesn't match 'shopify inc.'",
+      "CIK 0001776967 rejected: EDGAR name 'natura &co holding s.a.' doesn't match 'shopify inc.'",
+      "CIK 0001307748 rejected: EDGAR name 'inventrust properties corp.' doesn't match 'shopify inc.'",
+      "CIK 0001275158 rejected: EDGAR name 'noodles & co' doesn't match 'shopify inc.'",
+      "CIK 0001195734 rejected: EDGAR name 'potbelly corp' doesn't match 'shopify inc.'",
+      "Trying edgartools find_company: 'shopify'",
+      "CIK via edgartools find_company: 0001594805",
+      "Submissions fetched for CIK 0001594805",
+      "US SEC filer (forms found: {'10-Q', '10-K'})",
+      "SIC 7372 → using as secondary signal only",
+      "No strong sector signal → standard"
+    ]
+  }
+}

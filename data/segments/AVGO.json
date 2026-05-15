@@ -1,6 +1,7 @@
 {
   "ticker": "AVGO",
   "name": "Broadcom Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "AVGO",
     "period": "FY2025",
@@ -9,16 +10,16 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "infrastructure software",
-        "value": 42457813257.6037,
+        "segment_name": "semiconductor solutions",
+        "value": 36858000000.0,
         "unit": "USD",
         "period": "2025-11-02 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "Semiconductor Solutions and Infrastructure Software",
-        "value": 21429186742.3963,
+        "segment_name": "infrastructure software",
+        "value": 27029000000.0,
         "unit": "USD",
         "period": "2025-11-02 (FY)",
         "concept": "xbrl_dimension",
@@ -32,7 +33,7 @@
     "rd_expense": 10977000000.0,
     "sga_expense": 4211000000.0,
     "cogs": 20593000000.0,
-    "interest_expense": null,
+    "interest_expense": -3210000000.0,
     "income_tax": -397000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -48,16 +49,16 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "infrastructure software",
-          "value": 42457813257.6037,
+          "segment_name": "semiconductor solutions",
+          "value": 36858000000.0,
           "unit": "USD",
           "period": "2025-11-02 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Semiconductor Solutions and Infrastructure Software",
-          "value": 21429186742.3963,
+          "segment_name": "infrastructure software",
+          "value": 27029000000.0,
           "unit": "USD",
           "period": "2025-11-02 (FY)",
           "concept": "xbrl_dimension",
@@ -71,7 +72,7 @@
       "rd_expense": 10977000000.0,
       "sga_expense": 4211000000.0,
       "cogs": 20593000000.0,
-      "interest_expense": null,
+      "interest_expense": -3210000000.0,
       "income_tax": -397000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -166,18 +167,18 @@
         {
           "segment_name": "semiconductor solutions",
           "value": 12515000000.0,
-          "unit": "MILLIONS",
-          "period": "2026Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "unit": "USD",
+          "period": "2026-02-01 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "infrastructure software",
           "value": 6796000000.0,
-          "unit": "MILLIONS",
-          "period": "2026Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "unit": "USD",
+          "period": "2026-02-01 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 19311000000.0,
@@ -190,7 +191,7 @@
       "interest_expense": -801000000.0,
       "income_tax": 846000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": []
     },
@@ -568,6 +569,11 @@
         "period": "FY2024",
         "value": 30096000000.0,
         "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 36858000000.0,
+        "is_annual": true
       }
     ],
     "infrastructure software": [
@@ -628,14 +634,7 @@
       },
       {
         "period": "FY2025",
-        "value": 42457813257.6037,
-        "is_annual": true
-      }
-    ],
-    "Semiconductor Solutions and Infrastructure Software": [
-      {
-        "period": "FY2025",
-        "value": 21429186742.3963,
+        "value": 27029000000.0,
         "is_annual": true
       }
     ]

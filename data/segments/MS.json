@@ -1,6 +1,7 @@
 {
   "ticker": "MS",
   "name": "Morgan Stanley",
+  "sector": "financial",
   "latest_annual": {
     "ticker": "MS",
     "period": "FY2025",
@@ -25,24 +26,8 @@
         "is_annual": true
       },
       {
-        "segment_name": "Institutional Securities—Advisory - Institutional Securities",
-        "value": 2888000000.0,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Institutional Securities—Underwriting - Institutional Securities",
-        "value": 4731000000.0,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
         "segment_name": "Investment Management",
-        "value": 6525000000.0,
+        "value": 6641000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -62,7 +47,7 @@
     "extraction_method": "xbrl",
     "confidence": 1.0,
     "notes": [
-      "EXPENSE_DETAIL:{\"Personnel\": 29216000000.0, \"Technology & Equipment\": 4418000000.0, \"Occupancy\": 1872000000.0, \"Professional Services\": 2839000000.0, \"Marketing\": 1173000000.0, \"Other Expenses\": 4145000000.0}"
+      "EXPENSE_DETAIL:{\"Personnel\": 29216000000.0, \"Technology & Equipment\": 4418000000.0, \"Occupancy\": 1872000000.0, \"Professional Services\": 2839000000.0, \"Marketing\": 1173000000.0, \"Other Non-Interest Expense\": 4145000000.0}"
     ]
   },
   "annual_periods": [
@@ -90,24 +75,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities—Advisory - Institutional Securities",
-          "value": 2888000000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities—Underwriting - Institutional Securities",
-          "value": 4731000000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Investment Management",
-          "value": 6525000000.0,
+          "value": 6641000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -127,7 +96,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 29216000000.0, \"Technology & Equipment\": 4418000000.0, \"Occupancy\": 1872000000.0, \"Professional Services\": 2839000000.0, \"Marketing\": 1173000000.0, \"Other Expenses\": 4145000000.0}"
+        "EXPENSE_DETAIL:{\"Personnel\": 29216000000.0, \"Technology & Equipment\": 4418000000.0, \"Occupancy\": 1872000000.0, \"Professional Services\": 2839000000.0, \"Marketing\": 1173000000.0, \"Other Non-Interest Expense\": 4145000000.0}"
       ]
     },
     {
@@ -154,24 +123,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities—Advisory - Institutional Securities",
-          "value": 2378000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities—Underwriting - Institutional Securities",
-          "value": 3792000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Investment Management",
-          "value": 5861000000.0,
+          "value": 5983000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -191,7 +144,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 26178000000.0, \"Technology & Equipment\": 4088000000.0, \"Occupancy\": 1905000000.0, \"Professional Services\": 2901000000.0, \"Marketing\": 965000000.0, \"Other Expenses\": 3724000000.0}"
+        "EXPENSE_DETAIL:{\"Personnel\": 26178000000.0, \"Technology & Equipment\": 4088000000.0, \"Occupancy\": 1905000000.0, \"Professional Services\": 2901000000.0, \"Marketing\": 965000000.0, \"Other Non-Interest Expense\": 3724000000.0}"
       ]
     },
     {
@@ -218,24 +171,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities—Advisory - Institutional Securities",
-          "value": 2244000000.0,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities—Underwriting - Institutional Securities",
-          "value": 2334000000.0,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Investment Management",
-          "value": 5370000000.0,
+          "value": 5499000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -255,7 +192,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 24558000000.0, \"Technology & Equipment\": 3775000000.0, \"Occupancy\": 1895000000.0, \"Professional Services\": 3058000000.0, \"Marketing\": 898000000.0, \"Other Expenses\": 4138000000.0}"
+        "EXPENSE_DETAIL:{\"Personnel\": 24558000000.0, \"Technology & Equipment\": 3775000000.0, \"Occupancy\": 1895000000.0, \"Professional Services\": 3058000000.0, \"Marketing\": 898000000.0, \"Other Non-Interest Expense\": 4138000000.0}"
       ]
     }
   ],
@@ -284,24 +221,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities Advisory - Institutional Securities Segment",
-          "value": 978000000.0,
-          "unit": "USD",
-          "period": "2026-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities Underwriting - Institutional Securities Segment",
-          "value": 1138000000.0,
-          "unit": "USD",
-          "period": "2026-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Investment Management Segment",
-          "value": 1535000000.0,
+          "value": 1555000000.0,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -321,7 +242,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 8542000000.0, \"Technology & Equipment\": 1148000000.0, \"Occupancy\": 483000000.0, \"Professional Services\": 602000000.0, \"Marketing\": 310000000.0, \"Other Expenses\": 1130000000.0}"
+        "EXPENSE_DETAIL:{\"Personnel\": 8542000000.0, \"Technology & Equipment\": 1148000000.0, \"Occupancy\": 483000000.0, \"Professional Services\": 602000000.0, \"Marketing\": 310000000.0, \"Other Non-Interest Expense\": 1130000000.0}"
       ]
     },
     {
@@ -348,24 +269,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities Advisory - IS",
-          "value": 684000000.0,
-          "unit": "USD",
-          "period": "2025-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities Underwriting - IS",
-          "value": 1424000000.0,
-          "unit": "USD",
-          "period": "2025-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "IM",
-          "value": 1651000000.0,
+          "value": 1679000000.0,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -385,7 +290,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 7442000000.0, \"Technology & Equipment\": 1119000000.0, \"Occupancy\": 473000000.0, \"Professional Services\": 685000000.0, \"Marketing\": 280000000.0, \"Other Expenses\": 1056000000.0}"
+        "EXPENSE_DETAIL:{\"Personnel\": 7442000000.0, \"Technology & Equipment\": 1119000000.0, \"Occupancy\": 473000000.0, \"Professional Services\": 685000000.0, \"Marketing\": 280000000.0, \"Other Non-Interest Expense\": 1056000000.0}"
       ]
     },
     {
@@ -412,24 +317,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities Advisory - IS",
-          "value": 508000000.0,
-          "unit": "USD",
-          "period": "2025-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities Underwriting - IS",
-          "value": 1032000000.0,
-          "unit": "USD",
-          "period": "2025-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "IM",
-          "value": 1552000000.0,
+          "value": 1590000000.0,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -449,7 +338,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 7190000000.0, \"Technology & Equipment\": 1089000000.0, \"Occupancy\": 459000000.0, \"Professional Services\": 711000000.0, \"Marketing\": 297000000.0, \"Other Expenses\": 1040000000.0}"
+        "EXPENSE_DETAIL:{\"Personnel\": 7190000000.0, \"Technology & Equipment\": 1089000000.0, \"Occupancy\": 459000000.0, \"Professional Services\": 711000000.0, \"Marketing\": 297000000.0, \"Other Non-Interest Expense\": 1040000000.0}"
       ]
     },
     {
@@ -476,24 +365,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities Advisory - IS",
-          "value": 563000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities Underwriting - IS",
-          "value": 996000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "IM",
-          "value": 1602000000.0,
+          "value": 1631000000.0,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -513,7 +386,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 7521000000.0, \"Technology & Equipment\": 1050000000.0, \"Occupancy\": 449000000.0, \"Professional Services\": 674000000.0, \"Marketing\": 238000000.0, \"Other Expenses\": 906000000.0}"
+        "EXPENSE_DETAIL:{\"Personnel\": 7521000000.0, \"Technology & Equipment\": 1050000000.0, \"Occupancy\": 449000000.0, \"Professional Services\": 674000000.0, \"Marketing\": 238000000.0, \"Other Non-Interest Expense\": 906000000.0}"
       ]
     },
     {
@@ -540,24 +413,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities Advisory - IS",
-          "value": 546000000.0,
-          "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities Underwriting - IS",
-          "value": 917000000.0,
-          "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "IM",
-          "value": 1455000000.0,
+          "value": 1486000000.0,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -577,7 +434,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 6733000000.0, \"Technology & Equipment\": 1042000000.0, \"Occupancy\": 473000000.0, \"Professional Services\": 711000000.0, \"Marketing\": 224000000.0, \"Other Expenses\": 856000000.0}",
+        "EXPENSE_DETAIL:{\"Personnel\": 6733000000.0, \"Technology & Equipment\": 1042000000.0, \"Occupancy\": 473000000.0, \"Professional Services\": 711000000.0, \"Marketing\": 224000000.0, \"Other Non-Interest Expense\": 856000000.0}",
         "Warning: total_revenue (15383000000) differs from Yahoo (57621000000) by 73.3%"
       ]
     },
@@ -605,24 +462,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities Advisory - IS",
-          "value": 592000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities Underwriting - IS",
-          "value": 1027000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "IM",
-          "value": 1386000000.0,
+          "value": 1422000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -642,7 +483,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 6460000000.0, \"Technology & Equipment\": 1011000000.0, \"Occupancy\": 464000000.0, \"Professional Services\": 753000000.0, \"Marketing\": 245000000.0, \"Other Expenses\": 941000000.0}",
+        "EXPENSE_DETAIL:{\"Personnel\": 6460000000.0, \"Technology & Equipment\": 1011000000.0, \"Occupancy\": 464000000.0, \"Professional Services\": 753000000.0, \"Marketing\": 245000000.0, \"Other Non-Interest Expense\": 941000000.0}",
         "Warning: total_revenue (15019000000) differs from Yahoo (57621000000) by 73.9%"
       ]
     },
@@ -655,7 +496,7 @@
       "segments": [
         {
           "segment_name": "IS",
-          "value": 7016000000.0,
+          "value": 7051000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -670,24 +511,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities Advisory - IS",
-          "value": 461000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities Underwriting - IS",
-          "value": 986000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "IM",
-          "value": 1377000000.0,
+          "value": 1411000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -707,7 +532,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 6696000000.0, \"Technology & Equipment\": 976000000.0, \"Occupancy\": 441000000.0, \"Professional Services\": 639000000.0, \"Marketing\": 217000000.0, \"Other Expenses\": 857000000.0}",
+        "EXPENSE_DETAIL:{\"Personnel\": 6696000000.0, \"Technology & Equipment\": 976000000.0, \"Occupancy\": 441000000.0, \"Professional Services\": 639000000.0, \"Marketing\": 217000000.0, \"Other Non-Interest Expense\": 857000000.0}",
         "Warning: total_revenue (15136000000) differs from Yahoo (57621000000) by 73.7%"
       ]
     },
@@ -735,24 +560,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities Advisory - IS",
-          "value": 449000000.0,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities Underwriting - IS",
-          "value": 489000000.0,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "IM",
-          "value": 1336000000.0,
+          "value": 1368000000.0,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -772,7 +581,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 5935000000.0, \"Technology & Equipment\": 947000000.0, \"Occupancy\": 456000000.0, \"Professional Services\": 759000000.0, \"Marketing\": 191000000.0, \"Other Expenses\": 851000000.0}",
+        "EXPENSE_DETAIL:{\"Personnel\": 5935000000.0, \"Technology & Equipment\": 947000000.0, \"Occupancy\": 456000000.0, \"Professional Services\": 759000000.0, \"Marketing\": 191000000.0, \"Other Non-Interest Expense\": 851000000.0}",
         "Warning: total_revenue (13273000000) differs from Yahoo (50667000000) by 73.8%"
       ]
     },
@@ -785,7 +594,7 @@
       "segments": [
         {
           "segment_name": "IS",
-          "value": 5654000000.0,
+          "value": 5772000000.0,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -800,24 +609,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Institutional Securities Advisory - IS",
-          "value": 455000000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Institutional Securities Underwriting - IS",
-          "value": 620000000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "IM",
-          "value": 1281000000.0,
+          "value": 1313000000.0,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -837,7 +630,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "EXPENSE_DETAIL:{\"Personnel\": 6262000000.0, \"Technology & Equipment\": 926000000.0, \"Occupancy\": 471000000.0, \"Professional Services\": 767000000.0, \"Marketing\": 236000000.0, \"Other Expenses\": 947000000.0}",
+        "EXPENSE_DETAIL:{\"Personnel\": 6262000000.0, \"Technology & Equipment\": 926000000.0, \"Occupancy\": 471000000.0, \"Professional Services\": 767000000.0, \"Marketing\": 236000000.0, \"Other Non-Interest Expense\": 947000000.0}",
         "Warning: total_revenue (13457000000) differs from Yahoo (50667000000) by 73.4%"
       ]
     }
@@ -849,7 +642,7 @@
     "IS": [
       {
         "period": "2023Q2",
-        "value": 5654000000.0,
+        "value": 5772000000.0,
         "is_annual": false
       },
       {
@@ -859,7 +652,7 @@
       },
       {
         "period": "2024Q1",
-        "value": 7016000000.0,
+        "value": 7051000000.0,
         "is_annual": false
       },
       {
@@ -930,129 +723,45 @@
         "is_annual": false
       }
     ],
-    "Institutional Securities Advisory - IS": [
-      {
-        "period": "2023Q2",
-        "value": 455000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q3",
-        "value": 449000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 461000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 592000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 546000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 563000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 508000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 684000000.0,
-        "is_annual": false
-      }
-    ],
-    "Institutional Securities Underwriting - IS": [
-      {
-        "period": "2023Q2",
-        "value": 620000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q3",
-        "value": 489000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 986000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 1027000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 917000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 996000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 1032000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 1424000000.0,
-        "is_annual": false
-      }
-    ],
     "IM": [
       {
         "period": "2023Q2",
-        "value": 1281000000.0,
+        "value": 1313000000.0,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 1336000000.0,
+        "value": 1368000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 1377000000.0,
+        "value": 1411000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 1386000000.0,
+        "value": 1422000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 1455000000.0,
+        "value": 1486000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 1602000000.0,
+        "value": 1631000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 1552000000.0,
+        "value": 1590000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 1651000000.0,
+        "value": 1679000000.0,
         "is_annual": false
       }
     ],
@@ -1070,24 +779,10 @@
         "is_annual": false
       }
     ],
-    "Institutional Securities Advisory - Institutional Securities Segment": [
-      {
-        "period": "2026Q1",
-        "value": 978000000.0,
-        "is_annual": false
-      }
-    ],
-    "Institutional Securities Underwriting - Institutional Securities Segment": [
-      {
-        "period": "2026Q1",
-        "value": 1138000000.0,
-        "is_annual": false
-      }
-    ],
     "Investment Management Segment": [
       {
         "period": "2026Q1",
-        "value": 1535000000.0,
+        "value": 1555000000.0,
         "is_annual": false
       }
     ],
@@ -1125,54 +820,20 @@
         "is_annual": true
       }
     ],
-    "Institutional Securities—Advisory - Institutional Securities": [
-      {
-        "period": "FY2023",
-        "value": 2244000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 2378000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 2888000000.0,
-        "is_annual": true
-      }
-    ],
-    "Institutional Securities—Underwriting - Institutional Securities": [
-      {
-        "period": "FY2023",
-        "value": 2334000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 3792000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 4731000000.0,
-        "is_annual": true
-      }
-    ],
     "Investment Management": [
       {
         "period": "FY2023",
-        "value": 5370000000.0,
+        "value": 5499000000.0,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 5861000000.0,
+        "value": 5983000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 6525000000.0,
+        "value": 6641000000.0,
         "is_annual": true
       }
     ]

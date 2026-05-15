@@ -1,25 +1,51 @@
 {
   "ticker": "KLAC",
   "name": "KLA Corporation",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "KLAC",
     "period": "FY2025",
     "is_annual": true,
     "fiscal_year": 2025,
     "fiscal_quarter": null,
-    "segments": [],
-    "total_revenue": null,
-    "gross_profit": null,
-    "operating_income": null,
-    "net_income": null,
-    "rd_expense": null,
-    "sga_expense": null,
-    "cogs": null,
-    "interest_expense": null,
-    "income_tax": null,
+    "segments": [
+      {
+        "segment_name": "Semiconductor Process Control",
+        "value": 10947359000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Specialty Semiconductor Process",
+        "value": 587107000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "PCB, Display and Component Inspection",
+        "value": 621721000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 12156162000.0,
+    "gross_profit": 7404295000.0,
+    "operating_income": 5014227000.0,
+    "net_income": 4061643000.0,
+    "rd_expense": 1360334000.0,
+    "sga_expense": 1029734000.0,
+    "cogs": 4751867000.0,
+    "interest_expense": 302166000.0,
+    "income_tax": 582805000.0,
     "currency": "USD",
-    "extraction_method": "edgar",
-    "confidence": 0.0,
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
     "notes": []
   },
   "annual_periods": [
@@ -29,19 +55,44 @@
       "is_annual": true,
       "fiscal_year": 2025,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Semiconductor Process Control",
+          "value": 10947359000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Specialty Semiconductor Process",
+          "value": 587107000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PCB, Display and Component Inspection",
+          "value": 621721000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12156162000.0,
+      "gross_profit": 7404295000.0,
+      "operating_income": 5014227000.0,
+      "net_income": 4061643000.0,
+      "rd_expense": 1360334000.0,
+      "sga_expense": 1029734000.0,
+      "cogs": 4751867000.0,
+      "interest_expense": 302166000.0,
+      "income_tax": 582805000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -101,13 +152,13 @@
         }
       ],
       "total_revenue": 9812247000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 5884174000.0,
+      "operating_income": 3635684000.0,
       "net_income": 2761896000.0,
       "rd_expense": 1278981000.0,
       "sga_expense": 969509000.0,
       "cogs": 3928073000.0,
-      "interest_expense": null,
+      "interest_expense": 311253000.0,
       "income_tax": 428136000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -120,23 +171,110 @@
       "is_annual": true,
       "fiscal_year": 2023,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Semiconductor Process Control",
+          "value": 9324190000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Specialty Semiconductor Process",
+          "value": 543398000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PCB, Display and Component Inspection",
+          "value": 631604000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10496056000.0,
+      "gross_profit": 6277749000.0,
+      "operating_income": 3994696000.0,
+      "net_income": 3387351000.0,
+      "rd_expense": 1296727000.0,
+      "sga_expense": 986326000.0,
+      "cogs": 4218307000.0,
+      "interest_expense": 296940000.0,
+      "income_tax": 401839000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     }
   ],
   "quarterly_periods": [
+    {
+      "ticker": "KLAC",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Wafer Inspection",
+          "value": 1739671000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Patterning",
+          "value": 615076000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Specialty Semiconductor Process",
+          "value": 144199000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PCB, Display and Component Inspection",
+          "value": 95148000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 774791000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3415078000.0,
+      "gross_profit": 2087406000.0,
+      "operating_income": 1407509000.0,
+      "net_income": 1200990000.0,
+      "rd_expense": 388763000.0,
+      "sga_expense": 291134000.0,
+      "cogs": 1327672000.0,
+      "interest_expense": 70423000.0,
+      "income_tax": 215771000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
     {
       "ticker": "KLAC",
       "period": "2025Q4",
@@ -183,24 +321,16 @@
           "period": "2025-12-31 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Other",
-          "value": 40214000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 3297146000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 2025936000.0,
+      "operating_income": 1362146000.0,
       "net_income": 1145682000.0,
       "rd_expense": 383871000.0,
       "sga_expense": 279919000.0,
       "cogs": 1271210000.0,
-      "interest_expense": null,
+      "interest_expense": 69668000.0,
       "income_tax": 184621000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -213,19 +343,28 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Total revenues for reportable segments",
+          "value": 3208635000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3209696000.0,
+      "gross_profit": 1966626000.0,
+      "operating_income": 1337177000.0,
+      "net_income": 1121040000.0,
+      "rd_expense": 360461000.0,
+      "sga_expense": 268988000.0,
+      "cogs": 1243070000.0,
+      "interest_expense": 71075000.0,
+      "income_tax": 188436000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -274,24 +413,16 @@
           "period": "2025-03-31 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Other",
-          "value": 19091000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 3063029000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 1887340000.0,
+      "operating_income": 1300392000.0,
       "net_income": 1088416000.0,
       "rd_expense": 338043000.0,
       "sga_expense": 248905000.0,
       "cogs": 1175689000.0,
-      "interest_expense": null,
+      "interest_expense": 71889000.0,
       "income_tax": 176017000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -355,18 +486,20 @@
         }
       ],
       "total_revenue": 3076851000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 1855390000.0,
+      "operating_income": 1242152000.0,
       "net_income": 824527000.0,
       "rd_expense": 346157000.0,
       "sga_expense": 267081000.0,
       "cogs": 1221461000.0,
-      "interest_expense": null,
+      "interest_expense": 74981000.0,
       "income_tax": 148002000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "Warning: total_revenue (3076851000) differs from Yahoo (9812247000) by 68.6%"
+      ]
     },
     {
       "ticker": "KLAC",
@@ -374,20 +507,31 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Total revenues for reportable segments",
+          "value": 2841468000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2841541000.0,
+      "gross_profit": 1694110000.0,
+      "operating_income": 1119923000.0,
+      "net_income": 945851000.0,
+      "rd_expense": 323145000.0,
+      "sga_expense": 251042000.0,
+      "cogs": 1147431000.0,
+      "interest_expense": 82171000.0,
+      "income_tax": 132836000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (2841541000) differs from Yahoo (9812247000) by 71.0%"
+      ]
     },
     {
       "ticker": "KLAC",
@@ -446,8 +590,8 @@
         }
       ],
       "total_revenue": 2359830000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 1365945000.0,
+      "operating_income": 806841000.0,
       "net_income": 601541000.0,
       "rd_expense": 321590000.0,
       "sga_expense": 237514000.0,
@@ -518,8 +662,8 @@
         }
       ],
       "total_revenue": 2486726000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 1509980000.0,
+      "operating_income": 952318000.0,
       "net_income": 582534000.0,
       "rd_expense": 320418000.0,
       "sga_expense": 237244000.0,
@@ -539,48 +683,83 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Wafer Inspection",
+          "value": 1010198000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Patterning",
+          "value": 542488000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Specialty Semiconductor Process",
+          "value": 112103000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PCB, Display and Component Inspection",
+          "value": 71164000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 560292000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 100711000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2396956000.0,
+      "gross_profit": 1450065000.0,
+      "operating_income": 899206000.0,
+      "net_income": 741375000.0,
+      "rd_expense": 311214000.0,
+      "sga_expense": 239645000.0,
+      "cogs": 946891000.0,
+      "interest_expense": 74234000.0,
+      "income_tax": 110336000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "KLAC",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (2396956000) differs from Yahoo (10496056000) by 77.2%"
+      ]
     }
   ],
-  "ttm_revenue": 9437026000.0,
-  "ttm_operating_income": null,
-  "ttm_net_income": 3058625000.0,
+  "ttm_revenue": 12984949000.0,
+  "ttm_operating_income": 5407224000.0,
+  "ttm_net_income": 4556128000.0,
   "segment_trend": {
     "Wafer Inspection": [
+      {
+        "period": "2023Q3",
+        "value": 1010198000.0,
+        "is_annual": false
+      },
       {
         "period": "2023Q4",
         "value": 1166484000.0,
@@ -607,12 +786,22 @@
         "is_annual": false
       },
       {
+        "period": "2026Q1",
+        "value": 1739671000.0,
+        "is_annual": false
+      },
+      {
         "period": "FY2024",
         "value": 4333296000.0,
         "is_annual": true
       }
     ],
     "Patterning": [
+      {
+        "period": "2023Q3",
+        "value": 542488000.0,
+        "is_annual": false
+      },
       {
         "period": "2023Q4",
         "value": 430384000.0,
@@ -639,12 +828,22 @@
         "is_annual": false
       },
       {
+        "period": "2026Q1",
+        "value": 615076000.0,
+        "is_annual": false
+      },
+      {
         "period": "FY2024",
         "value": 2054442000.0,
         "is_annual": true
       }
     ],
     "Specialty Semiconductor Process": [
+      {
+        "period": "2023Q3",
+        "value": 112103000.0,
+        "is_annual": false
+      },
       {
         "period": "2023Q4",
         "value": 136278000.0,
@@ -671,12 +870,32 @@
         "is_annual": false
       },
       {
+        "period": "2026Q1",
+        "value": 144199000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 543398000.0,
+        "is_annual": true
+      },
+      {
         "period": "FY2024",
         "value": 470565000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 587107000.0,
         "is_annual": true
       }
     ],
     "PCB, Display and Component Inspection": [
+      {
+        "period": "2023Q3",
+        "value": 71164000.0,
+        "is_annual": false
+      },
       {
         "period": "2023Q4",
         "value": 77298000.0,
@@ -703,12 +922,32 @@
         "is_annual": false
       },
       {
+        "period": "2026Q1",
+        "value": 95148000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 631604000.0,
+        "is_annual": true
+      },
+      {
         "period": "FY2024",
         "value": 291161000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 621721000.0,
         "is_annual": true
       }
     ],
     "Services": [
+      {
+        "period": "2023Q3",
+        "value": 560292000.0,
+        "is_annual": false
+      },
       {
         "period": "2023Q4",
         "value": 564917000.0,
@@ -735,12 +974,22 @@
         "is_annual": false
       },
       {
+        "period": "2026Q1",
+        "value": 774791000.0,
+        "is_annual": false
+      },
+      {
         "period": "FY2024",
         "value": 2329568000.0,
         "is_annual": true
       }
     ],
     "Other": [
+      {
+        "period": "2023Q3",
+        "value": 100711000.0,
+        "is_annual": false
+      },
       {
         "period": "2023Q4",
         "value": 111365000.0,
@@ -757,18 +1006,32 @@
         "is_annual": false
       },
       {
-        "period": "2025Q1",
-        "value": 19091000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q4",
-        "value": 40214000.0,
-        "is_annual": false
-      },
-      {
         "period": "FY2024",
         "value": 333215000.0,
+        "is_annual": true
+      }
+    ],
+    "Total revenues for reportable segments": [
+      {
+        "period": "2024Q3",
+        "value": 2841468000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 3208635000.0,
+        "is_annual": false
+      }
+    ],
+    "Semiconductor Process Control": [
+      {
+        "period": "FY2023",
+        "value": 9324190000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 10947359000.0,
         "is_annual": true
       }
     ]

@@ -1,25 +1,43 @@
 {
   "ticker": "INTU",
   "name": "Intuit Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "INTU",
     "period": "FY2025",
     "is_annual": true,
     "fiscal_year": 2025,
     "fiscal_quarter": null,
-    "segments": [],
-    "total_revenue": null,
-    "gross_profit": null,
-    "operating_income": null,
-    "net_income": null,
-    "rd_expense": null,
-    "sga_expense": null,
-    "cogs": null,
+    "segments": [
+      {
+        "segment_name": "Service",
+        "value": 16400000000.0,
+        "unit": "USD",
+        "period": "2025-07-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Product and other",
+        "value": 2431000000.0,
+        "unit": "USD",
+        "period": "2025-07-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 18831000000.0,
+    "gross_profit": 15139000000.0,
+    "operating_income": 4923000000.0,
+    "net_income": 3869000000.0,
+    "rd_expense": 2928000000.0,
+    "sga_expense": 6636000000.0,
+    "cogs": 3692000000.0,
     "interest_expense": null,
-    "income_tax": null,
+    "income_tax": 965000000.0,
     "currency": "USD",
-    "extraction_method": "edgar",
-    "confidence": 0.0,
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
     "notes": []
   },
   "annual_periods": [
@@ -29,19 +47,36 @@
       "is_annual": true,
       "fiscal_year": 2025,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Service",
+          "value": 16400000000.0,
+          "unit": "USD",
+          "period": "2025-07-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Product and other",
+          "value": 2431000000.0,
+          "unit": "USD",
+          "period": "2025-07-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 18831000000.0,
+      "gross_profit": 15139000000.0,
+      "operating_income": 4923000000.0,
+      "net_income": 3869000000.0,
+      "rd_expense": 2928000000.0,
+      "sga_expense": 6636000000.0,
+      "cogs": 3692000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 965000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -69,11 +104,11 @@
         }
       ],
       "total_revenue": 16285000000.0,
-      "gross_profit": null,
+      "gross_profit": 12966000000.0,
       "operating_income": 3630000000.0,
       "net_income": 2963000000.0,
       "rd_expense": 2754000000.0,
-      "sga_expense": null,
+      "sga_expense": 5730000000.0,
       "cogs": 3319000000.0,
       "interest_expense": null,
       "income_tax": 587000000.0,
@@ -89,18 +124,18 @@
       "fiscal_year": 2023,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "total_revenue": 14368000000.0,
+      "gross_profit": 11388000000.0,
+      "operating_income": 3141000000.0,
+      "net_income": 2384000000.0,
+      "rd_expense": 2539000000.0,
+      "sga_expense": 5062000000.0,
+      "cogs": 2980000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 605000000.0,
       "currency": "USD",
       "extraction_method": "edgar",
-      "confidence": 0.0,
+      "confidence": 0.55,
       "notes": []
     }
   ],
@@ -130,11 +165,11 @@
         }
       ],
       "total_revenue": 4651000000.0,
-      "gross_profit": null,
+      "gross_profit": 3652000000.0,
       "operating_income": 855000000.0,
       "net_income": 693000000.0,
       "rd_expense": 836000000.0,
-      "sga_expense": null,
+      "sga_expense": 1796000000.0,
       "cogs": 999000000.0,
       "interest_expense": null,
       "income_tax": 176000000.0,
@@ -149,19 +184,36 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Service",
+          "value": 3497000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Product and other",
+          "value": 388000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3885000000.0,
+      "gross_profit": 3046000000.0,
+      "operating_income": 534000000.0,
+      "net_income": 446000000.0,
+      "rd_expense": 843000000.0,
+      "sga_expense": 1504000000.0,
+      "cogs": 839000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 115000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -189,11 +241,11 @@
         }
       ],
       "total_revenue": 7754000000.0,
-      "gross_profit": null,
+      "gross_profit": 6598000000.0,
       "operating_income": 3720000000.0,
       "net_income": 2820000000.0,
       "rd_expense": 707000000.0,
-      "sga_expense": null,
+      "sga_expense": 2012000000.0,
       "cogs": 1156000000.0,
       "interest_expense": null,
       "income_tax": 864000000.0,
@@ -227,11 +279,11 @@
         }
       ],
       "total_revenue": 3963000000.0,
-      "gross_profit": null,
+      "gross_profit": 3063000000.0,
       "operating_income": 593000000.0,
       "net_income": 471000000.0,
       "rd_expense": 716000000.0,
-      "sga_expense": null,
+      "sga_expense": 1593000000.0,
       "cogs": 900000000.0,
       "interest_expense": null,
       "income_tax": 100000000.0,
@@ -246,20 +298,39 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Service",
+          "value": 2889000000.0,
+          "unit": "USD",
+          "period": "2024-10-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Product and other",
+          "value": 394000000.0,
+          "unit": "USD",
+          "period": "2024-10-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3283000000.0,
+      "gross_profit": 2497000000.0,
+      "operating_income": 271000000.0,
+      "net_income": 197000000.0,
+      "rd_expense": 704000000.0,
+      "sga_expense": 1356000000.0,
+      "cogs": 786000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 16000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (3283000000) differs from Yahoo (16285000000) by 79.8%"
+      ]
     },
     {
       "ticker": "INTU",
@@ -302,12 +373,12 @@
         }
       ],
       "total_revenue": 6737000000.0,
-      "gross_profit": null,
+      "gross_profit": 5706000000.0,
       "operating_income": 3105000000.0,
       "net_income": 2389000000.0,
       "rd_expense": 671000000.0,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 1774000000.0,
+      "cogs": 1031000000.0,
       "interest_expense": null,
       "income_tax": 683000000.0,
       "currency": "USD",
@@ -358,12 +429,12 @@
         }
       ],
       "total_revenue": 3386000000.0,
-      "gross_profit": null,
+      "gross_profit": 2567000000.0,
       "operating_income": 369000000.0,
       "net_income": 353000000.0,
       "rd_expense": 678000000.0,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 1364000000.0,
+      "cogs": 819000000.0,
       "interest_expense": null,
       "income_tax": 1000000.0,
       "currency": "USD",
@@ -379,20 +450,47 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Small Business & Self-Employed",
+          "value": 2344000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consumer",
+          "value": 187000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Credit Karma",
+          "value": 405000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2978000000.0,
+      "gross_profit": 2256000000.0,
+      "operating_income": 307000000.0,
+      "net_income": 241000000.0,
+      "rd_expense": 680000000.0,
+      "sga_expense": 1111000000.0,
+      "cogs": 722000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 23000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (2978000000) differs from Yahoo (14368000000) by 79.3%"
+      ]
     },
     {
       "ticker": "INTU",
@@ -400,27 +498,72 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Small Business & Self-Employed",
+          "value": 2021000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consumer",
+          "value": 3341000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Credit Karma",
+          "value": 410000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ProTax",
+          "value": 246000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6018000000.0,
+      "gross_profit": 5077000000.0,
+      "operating_income": 2778000000.0,
+      "net_income": 2087000000.0,
+      "rd_expense": 604000000.0,
+      "sga_expense": 1535000000.0,
+      "cogs": 941000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 647000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6018000000) differs from Yahoo (14368000000) by 58.1%"
+      ]
     }
   ],
-  "ttm_revenue": 16368000000.0,
-  "ttm_operating_income": 5168000000.0,
-  "ttm_net_income": 3984000000.0,
+  "ttm_revenue": 20253000000.0,
+  "ttm_operating_income": 5702000000.0,
+  "ttm_net_income": 4430000000.0,
   "segment_trend": {
     "Small Business & Self-Employed": [
+      {
+        "period": "2023Q2",
+        "value": 2021000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 2344000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 2245000000.0,
@@ -434,6 +577,16 @@
     ],
     "Consumer": [
       {
+        "period": "2023Q2",
+        "value": 3341000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 187000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 492000000.0,
         "is_annual": false
@@ -445,6 +598,16 @@
       }
     ],
     "Credit Karma": [
+      {
+        "period": "2023Q2",
+        "value": 410000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 405000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 375000000.0,
@@ -458,6 +621,11 @@
     ],
     "ProTax": [
       {
+        "period": "2023Q2",
+        "value": 246000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 274000000.0,
         "is_annual": false
@@ -470,6 +638,11 @@
     ],
     "Service": [
       {
+        "period": "2024Q4",
+        "value": 2889000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 3249000000.0,
         "is_annual": false
@@ -477,6 +650,11 @@
       {
         "period": "2025Q2",
         "value": 6971000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 3497000000.0,
         "is_annual": false
       },
       {
@@ -488,9 +666,19 @@
         "period": "FY2024",
         "value": 13861000000.0,
         "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 16400000000.0,
+        "is_annual": true
       }
     ],
     "Product and other": [
+      {
+        "period": "2024Q4",
+        "value": 394000000.0,
+        "is_annual": false
+      },
       {
         "period": "2025Q1",
         "value": 714000000.0,
@@ -502,6 +690,11 @@
         "is_annual": false
       },
       {
+        "period": "2025Q4",
+        "value": 388000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 779000000.0,
         "is_annual": false
@@ -509,6 +702,11 @@
       {
         "period": "FY2024",
         "value": 2424000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2431000000.0,
         "is_annual": true
       }
     ]

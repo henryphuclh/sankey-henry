@@ -1,6 +1,7 @@
 {
   "ticker": "GOOG",
   "name": "Alphabet Inc. (Class C)",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "GOOG",
     "period": "FY2025",
@@ -34,11 +35,11 @@
       }
     ],
     "total_revenue": 402836000000.0,
-    "gross_profit": null,
+    "gross_profit": 240301000000.0,
     "operating_income": 129039000000.0,
     "net_income": 132170000000.0,
     "rd_expense": 61087000000.0,
-    "sga_expense": null,
+    "sga_expense": 50175000000.0,
     "cogs": 162535000000.0,
     "interest_expense": null,
     "income_tax": 26656000000.0,
@@ -81,11 +82,11 @@
         }
       ],
       "total_revenue": 402836000000.0,
-      "gross_profit": null,
+      "gross_profit": 240301000000.0,
       "operating_income": 129039000000.0,
       "net_income": 132170000000.0,
       "rd_expense": 61087000000.0,
-      "sga_expense": null,
+      "sga_expense": 50175000000.0,
       "cogs": 162535000000.0,
       "interest_expense": null,
       "income_tax": 26656000000.0,
@@ -116,22 +117,14 @@
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Other Bets",
-          "value": 1648000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 350018000000.0,
-      "gross_profit": null,
+      "gross_profit": 203712000000.0,
       "operating_income": 112390000000.0,
       "net_income": 100118000000.0,
       "rd_expense": 49326000000.0,
-      "sga_expense": null,
+      "sga_expense": 41996000000.0,
       "cogs": 146306000000.0,
       "interest_expense": null,
       "income_tax": 19697000000.0,
@@ -162,22 +155,14 @@
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Other Bets",
-          "value": 1527000000.0,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 307394000000.0,
-      "gross_profit": null,
+      "gross_profit": 174062000000.0,
       "operating_income": 84293000000.0,
       "net_income": 73795000000.0,
       "rd_expense": 45427000000.0,
-      "sga_expense": null,
+      "sga_expense": 44342000000.0,
       "cogs": 133332000000.0,
       "interest_expense": null,
       "income_tax": 11922000000.0,
@@ -190,23 +175,94 @@
   "quarterly_periods": [
     {
       "ticker": "GOOG",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Google Services",
+          "value": 89637000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google Cloud",
+          "value": 20028000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Other Bets",
+          "value": 411000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 109896000000.0,
+      "gross_profit": 68625000000.0,
+      "operating_income": 39696000000.0,
+      "net_income": 62578000000.0,
+      "rd_expense": 17032000000.0,
+      "sga_expense": 11897000000.0,
+      "cogs": 41271000000.0,
+      "interest_expense": null,
+      "income_tax": 14834000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "GOOG",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Google Services",
+          "value": 87052000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google Cloud",
+          "value": 15157000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Other Bets",
+          "value": 344000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 102346000000.0,
+      "gross_profit": 60977000000.0,
+      "operating_income": 31228000000.0,
+      "net_income": 34979000000.0,
+      "rd_expense": 15151000000.0,
+      "sga_expense": 14598000000.0,
+      "cogs": 41369000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 9008000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -215,19 +271,44 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Google Services",
+          "value": 82543000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google Cloud",
+          "value": 13624000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Other Bets",
+          "value": 373000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 96428000000.0,
+      "gross_profit": 57389000000.0,
+      "operating_income": 31271000000.0,
+      "net_income": 28196000000.0,
+      "rd_expense": 13808000000.0,
+      "sga_expense": 12310000000.0,
+      "cogs": 39039000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 5737000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -252,22 +333,14 @@
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Other Bets",
-          "value": 450000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 90234000000.0,
-      "gross_profit": null,
+      "gross_profit": 53873000000.0,
       "operating_income": 30606000000.0,
       "net_income": 34540000000.0,
       "rd_expense": 13556000000.0,
-      "sga_expense": null,
+      "sga_expense": 9711000000.0,
       "cogs": 36361000000.0,
       "interest_expense": null,
       "income_tax": 7249000000.0,
@@ -282,20 +355,39 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Google Services",
+          "value": 76510000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Google Cloud",
+          "value": 11353000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 88268000000.0,
+      "gross_profit": 51794000000.0,
+      "operating_income": 28521000000.0,
+      "net_income": 26301000000.0,
+      "rd_expense": 12447000000.0,
+      "sga_expense": 10826000000.0,
+      "cogs": 36474000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 5405000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (88268000000) differs from Yahoo (350018000000) by 74.8%"
+      ]
     },
     {
       "ticker": "GOOG",
@@ -319,22 +411,14 @@
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Other Bets",
-          "value": 365000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 84742000000.0,
-      "gross_profit": null,
+      "gross_profit": 49235000000.0,
       "operating_income": 27425000000.0,
       "net_income": 23619000000.0,
       "rd_expense": 11860000000.0,
-      "sga_expense": null,
+      "sga_expense": 9950000000.0,
       "cogs": 35507000000.0,
       "interest_expense": null,
       "income_tax": 3932000000.0,
@@ -378,11 +462,11 @@
         }
       ],
       "total_revenue": 80539000000.0,
-      "gross_profit": null,
+      "gross_profit": 46827000000.0,
       "operating_income": 25472000000.0,
       "net_income": 23662000000.0,
       "rd_expense": 11903000000.0,
-      "sga_expense": null,
+      "sga_expense": 9452000000.0,
       "cogs": 33712000000.0,
       "interest_expense": null,
       "income_tax": 4653000000.0,
@@ -399,20 +483,39 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Google Services",
+          "value": 67986000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Google Cloud",
+          "value": 8411000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 76693000000.0,
+      "gross_profit": 43464000000.0,
+      "operating_income": 21343000000.0,
+      "net_income": 19689000000.0,
+      "rd_expense": 11258000000.0,
+      "sga_expense": 10863000000.0,
+      "cogs": 33229000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1508000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (76693000000) differs from Yahoo (307394000000) by 75.1%"
+      ]
     },
     {
       "ticker": "GOOG",
@@ -420,48 +523,56 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Google Services",
+          "value": 66285000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Google Cloud",
+          "value": 8031000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 74604000000.0,
+      "gross_profit": 42688000000.0,
+      "operating_income": 21838000000.0,
+      "net_income": 18368000000.0,
+      "rd_expense": 10588000000.0,
+      "sga_expense": 10262000000.0,
+      "cogs": 31916000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 3535000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "GOOG",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (74604000000) differs from Yahoo (307394000000) by 75.7%"
+      ]
     }
   ],
-  "ttm_revenue": 90234000000.0,
-  "ttm_operating_income": 30606000000.0,
-  "ttm_net_income": 34540000000.0,
+  "ttm_revenue": 398904000000.0,
+  "ttm_operating_income": 132801000000.0,
+  "ttm_net_income": 160293000000.0,
   "segment_trend": {
     "Google Services": [
+      {
+        "period": "2023Q2",
+        "value": 66285000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 67986000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 70398000000.0,
@@ -473,8 +584,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 76510000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 77264000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 82543000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 87052000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 89637000000.0,
         "is_annual": false
       },
       {
@@ -495,6 +626,16 @@
     ],
     "Google Cloud": [
       {
+        "period": "2023Q2",
+        "value": 8031000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 8411000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 9574000000.0,
         "is_annual": false
@@ -505,8 +646,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 11353000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 12260000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 13624000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 15157000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 20028000000.0,
         "is_annual": false
       },
       {
@@ -532,24 +693,19 @@
         "is_annual": false
       },
       {
-        "period": "2024Q2",
-        "value": 365000000.0,
+        "period": "2025Q2",
+        "value": 373000000.0,
         "is_annual": false
       },
       {
-        "period": "2025Q1",
-        "value": 450000000.0,
+        "period": "2025Q3",
+        "value": 344000000.0,
         "is_annual": false
       },
       {
-        "period": "FY2023",
-        "value": 1527000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1648000000.0,
-        "is_annual": true
+        "period": "2026Q1",
+        "value": 411000000.0,
+        "is_annual": false
       },
       {
         "period": "FY2025",

@@ -12,7 +12,7 @@ from typing import Dict, List, Optional
 import sys
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from config import OUTPUT_DIR, DATA_DIR, TICKER_SECTOR, EXCEL_PATH
+from config import OUTPUT_DIR, DATA_DIR, EXCEL_PATH
 
 
 def _excel_ticker_order() -> Dict[str, int]:
@@ -28,6 +28,27 @@ def _excel_ticker_order() -> Dict[str, int]:
         return {}
 
 _SEGMENTS_DIR = DATA_DIR / "segments"
+
+
+def _get_display_sector(ticker: str, stored_sector: str) -> str:
+    """Auto-detect display sector from Yahoo Finance checker cache.
+
+    Priority:
+    1. Yahoo Finance sector string cached by data_source_checker (e.g. "Technology",
+       "Consumer Cyclical", "Financial Services") — human-readable GICS-style label.
+    2. Our internal sector (financial / pharma / standard) if Yahoo cache is absent.
+    3. "—" if nothing found.
+    """
+    try:
+        from src.cache.cache_manager import cache
+        yf = cache.get("checker", f"yf_info_{ticker}")
+        if yf:
+            s = (yf.get("sector") or "").strip()
+            if s:
+                return s
+    except Exception:
+        pass
+    return stored_sector.title() if stored_sector else "—"
 
 
 def _fmt_money(v):
@@ -74,7 +95,7 @@ def _load_snapshot(ticker: str) -> Optional[Dict]:
         "operating_income": latest.get("operating_income"),
         "gross_profit":  latest.get("gross_profit"),
         "n_segments":    len(segs),
-        "sector":        TICKER_SECTOR.get(ticker, "—"),
+        "sector":        _get_display_sector(ticker, d.get("sector", "")),
         "method":        latest.get("extraction_method", ""),
         "confidence":    latest.get("confidence", 0.0),
         "annual_count":  d.get("annual_count", 0),
@@ -114,7 +135,7 @@ def build_index(output_dir: Path = OUTPUT_DIR) -> Path:
         if s["total_revenue"] and s["net_income"] is not None:
             net_margin = f"{s['net_income']/s['total_revenue']*100:.1f}%"
         rows_html += f"""
-<tr data-ticker="{s['ticker']}" data-name="{s['name'].lower()}" data-sector="{s.get('sector','').lower()}">
+<tr data-ticker="{s['ticker']}" data-name="{s['name'].lower()}" data-sector="{s.get('sector','').lower()}" data-method="{s.get('method','')}">
   <td><strong><a href="{s['file']}" target="_blank">{s['ticker']}</a></strong></td>
   <td>{s['name']}</td>
   <td style="color:#555;font-size:12px">{s.get('sector','—')}</td>
@@ -131,8 +152,9 @@ def build_index(output_dir: Path = OUTPUT_DIR) -> Path:
          style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
 </tr>"""
 
-    xbrl_n  = sum(1 for s in snapshots if "xbrl" in (s.get("method") or ""))
-    llm_n   = sum(1 for s in snapshots if "llm"  in (s.get("method") or ""))
+    xbrl_n      = sum(1 for s in snapshots if (s.get("method") or "") == "xbrl")
+    edgar_llm_n = sum(1 for s in snapshots if (s.get("method") or "") == "edgar+llm")
+    yahoo_n     = sum(1 for s in snapshots if (s.get("method") or "") == "yahoo_only")
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -191,8 +213,9 @@ def build_index(output_dir: Path = OUTPUT_DIR) -> Path:
 
   <div class="stats">
     <div class="stat-card"><div class="lbl">Companies</div><div class="val">{len(snapshots)}</div></div>
-    <div class="stat-card"><div class="lbl">XBRL Extractions</div><div class="val">{xbrl_n}</div></div>
-    <div class="stat-card"><div class="lbl">LLM-assisted</div><div class="val">{llm_n}</div></div>
+    <div class="stat-card"><div class="lbl">XBRL</div><div class="val" style="color:#28a745">{xbrl_n}</div></div>
+    <div class="stat-card"><div class="lbl">EDGAR + LLM</div><div class="val" style="color:#6f42c1">{edgar_llm_n}</div></div>
+    <div class="stat-card"><div class="lbl">Yahoo Only</div><div class="val" style="color:#fd7e14">{yahoo_n}</div></div>
   </div>
 
   <div class="toolbar">
@@ -211,7 +234,7 @@ def build_index(output_dir: Path = OUTPUT_DIR) -> Path:
       <th style="text-align:right">Op&nbsp;Margin</th>
       <th style="text-align:right">Net&nbsp;Margin</th>
       <th onclick="sortBy(8,'n')" style="text-align:right">#&nbsp;Segs<span class="arrow">▲▼</span></th>
-      <th>Source</th>
+      <th onclick="sortBy(9,'s')">Source<span class="arrow">▲▼</span></th>
       <th onclick="sortBy(10,'n')" style="text-align:right">Conf<span class="arrow">▲▼</span></th>
       <th style="text-align:center">Periods</th>
       <th></th>

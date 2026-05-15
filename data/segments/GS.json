@@ -24,6 +24,14 @@
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
+      },
+      {
+        "segment_name": "Platform Solutions",
+        "value": 1380000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
       }
     ],
     "total_revenue": 58283000000.0,
@@ -61,6 +69,14 @@
         {
           "segment_name": "Asset & Wealth Management",
           "value": 16679000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Platform Solutions",
+          "value": 1380000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -156,7 +172,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 2378000000.0,
+          "value": 3418000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -398,7 +414,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 391000000.0,
+          "value": 498000000.0,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -545,7 +561,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 578000000.0,
+          "value": 1258000000.0,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -586,7 +602,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 3047000000.0,
+          "value": 3275000000.0,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -594,7 +610,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 659000000.0,
+          "value": 987000000.0,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -688,7 +704,7 @@
     "Asset & Wealth Management": [
       {
         "period": "2023Q2",
-        "value": 3047000000.0,
+        "value": 3275000000.0,
         "is_annual": false
       },
       {
@@ -750,12 +766,12 @@
     "Platform Solutions": [
       {
         "period": "2023Q2",
-        "value": 659000000.0,
+        "value": 987000000.0,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 578000000.0,
+        "value": 1258000000.0,
         "is_annual": false
       },
       {
@@ -770,7 +786,7 @@
       },
       {
         "period": "2024Q3",
-        "value": 391000000.0,
+        "value": 498000000.0,
         "is_annual": false
       },
       {
@@ -795,12 +811,17 @@
       },
       {
         "period": "FY2023",
-        "value": 2378000000.0,
+        "value": 3418000000.0,
         "is_annual": true
       },
       {
         "period": "FY2024",
         "value": 2427000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1380000000.0,
         "is_annual": true
       }
     ]

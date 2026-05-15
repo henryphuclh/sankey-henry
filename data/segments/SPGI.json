@@ -1,6 +1,7 @@
 {
   "ticker": "SPGI",
   "name": "S&P Global Inc.",
+  "sector": "financial",
   "latest_annual": {
     "ticker": "SPGI",
     "period": "FY2025",
@@ -9,67 +10,53 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Subscription",
-        "value": 7865000000.0,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
+        "segment_name": "Market Intelligence",
+        "value": 4916000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       },
       {
-        "segment_name": "Non-subscription / Transaction - Ratings",
-        "value": 3144000000.0,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
+        "segment_name": "Ratings",
+        "value": 4724000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       },
       {
-        "segment_name": "Non-transaction",
-        "value": 2054000000.0,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
+        "segment_name": "Energy",
+        "value": 2299000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       },
       {
-        "segment_name": "Asset-linked fees",
-        "value": 1206000000.0,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Sales usage-based royalties",
-        "value": 444000000.0,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Recurring variable revenue",
-        "value": 623000000.0,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
+        "segment_name": "Mobility",
+        "value": 1747000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       }
     ],
     "total_revenue": 15336000000.0,
-    "gross_profit": null,
+    "gross_profit": 15336000000.0,
     "operating_income": 6478000000.0,
     "net_income": 4820000000.0,
     "rd_expense": null,
-    "sga_expense": 3417000000.0,
-    "cogs": 4563000000.0,
+    "sga_expense": null,
+    "cogs": null,
     "interest_expense": null,
     "income_tax": 1407000000.0,
     "currency": "USD",
-    "extraction_method": "xbrl",
+    "extraction_method": "edgar+llm",
     "confidence": 1.0,
-    "notes": []
+    "notes": [
+      "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 1069000000.0}"
+    ]
   },
   "annual_periods": [
     {
@@ -80,67 +67,53 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Subscription",
-          "value": 7865000000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Market Intelligence",
+          "value": 4916000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Non-subscription / Transaction - Ratings",
-          "value": 3144000000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Ratings",
+          "value": 4724000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Non-transaction",
-          "value": 2054000000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Energy",
+          "value": 2299000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Asset-linked fees",
-          "value": 1206000000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Sales usage-based royalties",
-          "value": 444000000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Recurring variable revenue",
-          "value": 623000000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Mobility",
+          "value": 1747000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
       "total_revenue": 15336000000.0,
-      "gross_profit": null,
+      "gross_profit": 15336000000.0,
       "operating_income": 6478000000.0,
       "net_income": 4820000000.0,
       "rd_expense": null,
-      "sga_expense": 3417000000.0,
-      "cogs": 4563000000.0,
+      "sga_expense": null,
+      "cogs": null,
       "interest_expense": null,
       "income_tax": 1407000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 1069000000.0}"
+      ]
     },
     {
       "ticker": "SPGI",
@@ -150,67 +123,45 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Subscription",
-          "value": 7346000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Market Intelligence",
+          "value": 5915224522.721162,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Non-subscription / Transaction - Ratings",
-          "value": 2986000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Ratings",
+          "value": 5565022855.606345,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Non-transaction",
-          "value": 1858000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Asset-linked fees",
-          "value": 1046000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Sales usage-based royalties",
-          "value": 393000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Recurring variable revenue",
-          "value": 579000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Commodity Insights",
+          "value": 2727752621.6724925,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
       "total_revenue": 14208000000.0,
-      "gross_profit": null,
+      "gross_profit": 14208000000.0,
       "operating_income": 5580000000.0,
       "net_income": 4167000000.0,
       "rd_expense": null,
-      "sga_expense": 3166000000.0,
-      "cogs": 4391000000.0,
+      "sga_expense": null,
+      "cogs": null,
       "interest_expense": null,
       "income_tax": 1141000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 1077000000.0}"
+      ]
     },
     {
       "ticker": "SPGI",
@@ -220,32 +171,24 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Non-transaction - Ratings",
-          "value": 1162866155.9480824,
+          "segment_name": "Market Intelligence",
+          "value": 4376000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Mobility - Services transferred over time",
-          "value": 2731241485.3127747,
+          "segment_name": "Ratings",
+          "value": 3332000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Commodity Insights - Services transferred at a point in time",
-          "value": 2247679418.3663516,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription - Commodity Insights",
-          "value": 1040908509.8077486,
+          "segment_name": "Commodity Insights",
+          "value": 1946000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -253,15 +196,7 @@
         },
         {
           "segment_name": "Mobility",
-          "value": 904925734.3612764,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-subscription / Transaction - Ratings",
-          "value": 868948228.749878,
+          "value": 1484000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -269,71 +204,7 @@
         },
         {
           "segment_name": "Indices",
-          "value": 855532887.6744412,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription - Mobility",
-          "value": 712842441.6902508,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Asset-linked fees - Indices",
-          "value": 523808090.1727335,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Recurring variable revenue - Market Intelligence",
-          "value": 307333268.27364105,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-subscription / Transaction - Commodity Insights",
-          "value": 288429833.12188935,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription - Indices",
-          "value": 168911339.90436226,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Sales usage-based royalties - Commodity Insights",
-          "value": 212206304.28418073,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-subscription / Transaction - Market Intelligence",
-          "value": 114030399.14121206,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Market Intelligence - Services transferred at a point in time",
-          "value": 114030399.14121206,
+          "value": 1403000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -341,31 +212,7 @@
         },
         {
           "segment_name": "Engineering Solutions",
-          "value": 81101834.68332195,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription - Engineering Solutions",
-          "value": 76223528.83770859,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Engineering Solutions - Services transferred at a point in time",
-          "value": 81101834.68332194,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-subscription / Transaction - Engineering Solutions",
-          "value": 4878305.84561335,
+          "value": 133000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -373,41 +220,134 @@
         }
       ],
       "total_revenue": 12497000000.0,
-      "gross_profit": null,
+      "gross_profit": 12497000000.0,
       "operating_income": 4020000000.0,
       "net_income": 2893000000.0,
       "rd_expense": null,
-      "sga_expense": 3159000000.0,
-      "cogs": 4141000000.0,
-      "interest_expense": 334000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
       "income_tax": 778000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 1042000000.0}"
+      ]
     }
   ],
   "quarterly_periods": [
+    {
+      "ticker": "SPGI",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Market Intelligence",
+          "value": 1673533538.4615383,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Ratings",
+          "value": 1165313230.7692308,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Energy",
+          "value": 1332153230.7692308,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 4171000000.0,
+      "gross_profit": 4171000000.0,
+      "operating_income": 2002000000.0,
+      "net_income": 1504000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 404000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 276000000.0}"
+      ]
+    },
     {
       "ticker": "SPGI",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Market Intelligence",
+          "value": 1232000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ratings",
+          "value": 1196000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commodity Insights",
+          "value": 556000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Indices",
+          "value": 459000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mobility",
+          "value": 445000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3888000000.0,
+      "gross_profit": 3888000000.0,
+      "operating_income": 1675000000.0,
+      "net_income": 1265000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 333000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 266000000.0}"
+      ]
     },
     {
       "ticker": "SPGI",
@@ -415,20 +355,63 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Market Intelligence",
+          "value": 1214000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ratings",
+          "value": 1105000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commodity Insights",
+          "value": 555000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Indices",
+          "value": 443000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mobility",
+          "value": 438000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3755000000.0,
+      "gross_profit": 3755000000.0,
+      "operating_income": 1551000000.0,
+      "net_income": 1160000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 342000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 270000000.0}"
+      ]
     },
     {
       "ticker": "SPGI",
@@ -438,67 +421,45 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Subscription",
-          "value": 1898000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Market Intelligence",
+          "value": 1565012863.913338,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Non-subscription / Transaction - Ratings",
-          "value": 850000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Ratings",
+          "value": 1074028436.0189574,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Non-transaction",
-          "value": 481000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Asset-linked fees",
-          "value": 288000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Sales usage-based royalties",
-          "value": 110000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Recurring variable revenue",
-          "value": 150000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Commodity Insights",
+          "value": 1137958700.067705,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 3777000000.0,
-      "gross_profit": null,
+      "gross_profit": 3777000000.0,
       "operating_income": 1578000000.0,
       "net_income": 1171000000.0,
       "rd_expense": null,
-      "sga_expense": 764000000.0,
-      "cogs": 1153000000.0,
-      "interest_expense": 78000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
       "income_tax": 325000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 268000000.0}"
+      ]
     },
     {
       "ticker": "SPGI",
@@ -506,20 +467,64 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Market Intelligence",
+          "value": 1162000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ratings",
+          "value": 1110000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commodity Insights",
+          "value": 522000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mobility",
+          "value": 412000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Indices",
+          "value": 416000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3575000000.0,
+      "gross_profit": 3575000000.0,
+      "operating_income": 1434000000.0,
+      "net_income": 1047000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 313000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 271000000.0}",
+        "Warning: total_revenue (3575000000) differs from Yahoo (14208000000) by 74.8%"
+      ]
     },
     {
       "ticker": "SPGI",
@@ -529,8 +534,16 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Commodity Insights - Services transferred at a point in time",
-          "value": 746932147.7900553,
+          "segment_name": "Market Intelligence",
+          "value": 1155000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ratings",
+          "value": 1135000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -538,31 +551,7 @@
         },
         {
           "segment_name": "Commodity Insights",
-          "value": 316174723.7569061,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-transaction - Ratings",
-          "value": 311885531.76795584,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Mobility - Services transferred over time",
-          "value": 748157631.2154696,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription - Commodity Insights",
-          "value": 281248446.13259673,
+          "value": 516000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -570,7 +559,7 @@
         },
         {
           "segment_name": "Mobility",
-          "value": 245096685.08287296,
+          "value": 400000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -578,71 +567,7 @@
         },
         {
           "segment_name": "Indices",
-          "value": 238356526.24309394,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription - Mobility",
-          "value": 197915573.2044199,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Asset-linked fees - Indices",
-          "value": 150121719.61325967,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Recurring variable revenue - Market Intelligence",
-          "value": 90073031.76795581,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-subscription / Transaction - Commodity Insights",
-          "value": 66176104.97237569,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription - Indices",
-          "value": 45342886.74033149,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Sales usage-based royalties - Commodity Insights",
-          "value": 58823204.41988951,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-subscription / Transaction - Market Intelligence",
-          "value": 26347893.64640884,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Market Intelligence - Services transferred at a point in time",
-          "value": 26347893.64640884,
+          "value": 389000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -650,18 +575,19 @@
         }
       ],
       "total_revenue": 3549000000.0,
-      "gross_profit": null,
+      "gross_profit": 3549000000.0,
       "operating_income": 1452000000.0,
       "net_income": 1085000000.0,
       "rd_expense": null,
-      "sga_expense": 734000000.0,
-      "cogs": 1085000000.0,
-      "interest_expense": 77000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
       "income_tax": 293000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 266000000.0}",
         "Warning: total_revenue (3549000000) differs from Yahoo (14208000000) by 75.0%"
       ]
     },
@@ -673,8 +599,16 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Commodity Insights - Services transferred at a point in time",
-          "value": 733550371.5223777,
+          "segment_name": "Market Intelligence",
+          "value": 1142000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ratings",
+          "value": 1062000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -682,39 +616,7 @@
         },
         {
           "segment_name": "Commodity Insights",
-          "value": 337216001.3824088,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-transaction - Ratings",
-          "value": 289559357.1798859,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Mobility - Services transferred over time",
-          "value": 710626922.4123033,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription - Commodity Insights",
-          "value": 271461897.35614306,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Indices",
-          "value": 233457231.72628304,
+          "value": 559000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -722,71 +624,15 @@
         },
         {
           "segment_name": "Mobility",
-          "value": 232853983.06549162,
+          "value": 386000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Subscription - Mobility",
-          "value": 187610333.50613442,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Asset-linked fees - Indices",
-          "value": 147192673.23310867,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Recurring variable revenue - Market Intelligence",
-          "value": 85058061.17159149,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-subscription / Transaction - Commodity Insights",
-          "value": 95313288.40504578,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Sales usage-based royalties - Commodity Insights",
-          "value": 59721617.41835147,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription - Indices",
-          "value": 42227406.25540003,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-subscription / Transaction - Market Intelligence",
-          "value": 32575427.682737168,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Market Intelligence - Services transferred at a point in time",
-          "value": 32575427.682737168,
+          "segment_name": "Indices",
+          "value": 387000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -794,18 +640,19 @@
         }
       ],
       "total_revenue": 3491000000.0,
-      "gross_profit": null,
+      "gross_profit": 3491000000.0,
       "operating_income": 1385000000.0,
       "net_income": 1068000000.0,
       "rd_expense": null,
-      "sga_expense": 705000000.0,
-      "cogs": 1120000000.0,
-      "interest_expense": 78000000.0,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
       "income_tax": 248000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 264000000.0}",
         "Warning: total_revenue (3491000000) differs from Yahoo (14208000000) by 75.4%"
       ]
     },
@@ -815,20 +662,64 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Market Intelligence",
+          "value": 1099000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ratings",
+          "value": 819000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commodity Insights",
+          "value": 479000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mobility",
+          "value": 379000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Indices",
+          "value": 354000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3084000000.0,
+      "gross_profit": 3084000000.0,
+      "operating_income": 1074000000.0,
+      "net_income": 814000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 181000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 260000000.0}",
+        "Warning: total_revenue (3084000000) differs from Yahoo (12497000000) by 75.3%"
+      ]
     },
     {
       "ticker": "SPGI",
@@ -836,429 +727,351 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Market Intelligence",
+          "value": 1079000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ratings",
+          "value": 851000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commodity Insights",
+          "value": 462000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mobility",
+          "value": 369000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Indices",
+          "value": 348000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3101000000.0,
+      "gross_profit": 3101000000.0,
+      "operating_income": 911000000.0,
+      "net_income": 575000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 259000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "SPGI",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Other Non-Interest Expense\": 261000000.0}",
+        "Warning: total_revenue (3101000000) differs from Yahoo (12497000000) by 75.2%"
+      ]
     }
   ],
-  "ttm_revenue": 3777000000.0,
-  "ttm_operating_income": 1578000000.0,
-  "ttm_net_income": 1171000000.0,
+  "ttm_revenue": 15591000000.0,
+  "ttm_operating_income": 6806000000.0,
+  "ttm_net_income": 5100000000.0,
   "segment_trend": {
-    "Commodity Insights - Services transferred at a point in time": [
+    "Market Intelligence": [
+      {
+        "period": "2023Q2",
+        "value": 1079000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1099000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
-        "value": 733550371.5223777,
+        "value": 1142000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 746932147.7900553,
+        "value": 1155000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1162000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1565012863.913338,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1214000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1232000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1673533538.4615383,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 2247679418.3663516,
+        "value": 4376000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 5915224522.721162,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4916000000.0,
+        "is_annual": true
+      }
+    ],
+    "Ratings": [
+      {
+        "period": "2023Q2",
+        "value": 851000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 819000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 1062000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 1135000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1110000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1074028436.0189574,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1105000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1196000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1165313230.7692308,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 3332000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 5565022855.606345,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4724000000.0,
         "is_annual": true
       }
     ],
     "Commodity Insights": [
       {
+        "period": "2023Q2",
+        "value": 462000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 479000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
-        "value": 337216001.3824088,
+        "value": 559000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 316174723.7569061,
-        "is_annual": false
-      }
-    ],
-    "Non-transaction - Ratings": [
-      {
-        "period": "2024Q1",
-        "value": 289559357.1798859,
+        "value": 516000000.0,
         "is_annual": false
       },
       {
-        "period": "2024Q2",
-        "value": 311885531.76795584,
+        "period": "2024Q3",
+        "value": 522000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 1137958700.067705,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 555000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 556000000.0,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 1162866155.9480824,
+        "value": 1946000000.0,
         "is_annual": true
-      }
-    ],
-    "Mobility - Services transferred over time": [
-      {
-        "period": "2024Q1",
-        "value": 710626922.4123033,
-        "is_annual": false
       },
       {
-        "period": "2024Q2",
-        "value": 748157631.2154696,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 2731241485.3127747,
-        "is_annual": true
-      }
-    ],
-    "Subscription - Commodity Insights": [
-      {
-        "period": "2024Q1",
-        "value": 271461897.35614306,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 281248446.13259673,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1040908509.8077486,
-        "is_annual": true
-      }
-    ],
-    "Indices": [
-      {
-        "period": "2024Q1",
-        "value": 233457231.72628304,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 238356526.24309394,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 855532887.6744412,
+        "period": "FY2024",
+        "value": 2727752621.6724925,
         "is_annual": true
       }
     ],
     "Mobility": [
       {
+        "period": "2023Q2",
+        "value": 369000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 379000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
-        "value": 232853983.06549162,
+        "value": 386000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 245096685.08287296,
+        "value": 400000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 412000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 438000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 445000000.0,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 904925734.3612764,
-        "is_annual": true
-      }
-    ],
-    "Subscription - Mobility": [
-      {
-        "period": "2024Q1",
-        "value": 187610333.50613442,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 197915573.2044199,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 712842441.6902508,
-        "is_annual": true
-      }
-    ],
-    "Asset-linked fees - Indices": [
-      {
-        "period": "2024Q1",
-        "value": 147192673.23310867,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 150121719.61325967,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 523808090.1727335,
-        "is_annual": true
-      }
-    ],
-    "Recurring variable revenue - Market Intelligence": [
-      {
-        "period": "2024Q1",
-        "value": 85058061.17159149,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 90073031.76795581,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 307333268.27364105,
-        "is_annual": true
-      }
-    ],
-    "Non-subscription / Transaction - Commodity Insights": [
-      {
-        "period": "2024Q1",
-        "value": 95313288.40504578,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 66176104.97237569,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 288429833.12188935,
-        "is_annual": true
-      }
-    ],
-    "Sales usage-based royalties - Commodity Insights": [
-      {
-        "period": "2024Q1",
-        "value": 59721617.41835147,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 58823204.41988951,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 212206304.28418073,
-        "is_annual": true
-      }
-    ],
-    "Subscription - Indices": [
-      {
-        "period": "2024Q1",
-        "value": 42227406.25540003,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 45342886.74033149,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 168911339.90436226,
-        "is_annual": true
-      }
-    ],
-    "Non-subscription / Transaction - Market Intelligence": [
-      {
-        "period": "2024Q1",
-        "value": 32575427.682737168,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 26347893.64640884,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 114030399.14121206,
-        "is_annual": true
-      }
-    ],
-    "Market Intelligence - Services transferred at a point in time": [
-      {
-        "period": "2024Q1",
-        "value": 32575427.682737168,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 26347893.64640884,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 114030399.14121206,
-        "is_annual": true
-      }
-    ],
-    "Subscription": [
-      {
-        "period": "2025Q1",
-        "value": 1898000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2024",
-        "value": 7346000000.0,
+        "value": 1484000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 7865000000.0,
+        "value": 1747000000.0,
         "is_annual": true
       }
     ],
-    "Non-subscription / Transaction - Ratings": [
+    "Indices": [
       {
-        "period": "2025Q1",
-        "value": 850000000.0,
+        "period": "2023Q2",
+        "value": 348000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 354000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 387000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 389000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 416000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 443000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 459000000.0,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 868948228.749878,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 2986000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 3144000000.0,
+        "value": 1403000000.0,
         "is_annual": true
       }
     ],
-    "Non-transaction": [
+    "Energy": [
       {
-        "period": "2025Q1",
-        "value": 481000000.0,
+        "period": "2026Q1",
+        "value": 1332153230.7692308,
         "is_annual": false
       },
       {
-        "period": "FY2024",
-        "value": 1858000000.0,
-        "is_annual": true
-      },
-      {
         "period": "FY2025",
-        "value": 2054000000.0,
-        "is_annual": true
-      }
-    ],
-    "Asset-linked fees": [
-      {
-        "period": "2025Q1",
-        "value": 288000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2024",
-        "value": 1046000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 1206000000.0,
-        "is_annual": true
-      }
-    ],
-    "Sales usage-based royalties": [
-      {
-        "period": "2025Q1",
-        "value": 110000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2024",
-        "value": 393000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 444000000.0,
-        "is_annual": true
-      }
-    ],
-    "Recurring variable revenue": [
-      {
-        "period": "2025Q1",
-        "value": 150000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2024",
-        "value": 579000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 623000000.0,
+        "value": 2299000000.0,
         "is_annual": true
       }
     ],
     "Engineering Solutions": [
       {
         "period": "FY2023",
-        "value": 81101834.68332195,
-        "is_annual": true
-      }
-    ],
-    "Subscription - Engineering Solutions": [
-      {
-        "period": "FY2023",
-        "value": 76223528.83770859,
-        "is_annual": true
-      }
-    ],
-    "Engineering Solutions - Services transferred at a point in time": [
-      {
-        "period": "FY2023",
-        "value": 81101834.68332194,
-        "is_annual": true
-      }
-    ],
-    "Non-subscription / Transaction - Engineering Solutions": [
-      {
-        "period": "FY2023",
-        "value": 4878305.84561335,
+        "value": 133000000.0,
         "is_annual": true
       }
     ]

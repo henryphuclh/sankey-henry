@@ -22,7 +22,7 @@ SEC_RETRY_MAX      = 5
 SEC_RETRY_BASE_SEC = 2.0
 
 FILING_TYPES_US   = ["10-K", "10-Q"]
-FILING_TYPES_INTL = ["20-F", "6-K"]
+FILING_TYPES_INTL = ["20-F", "40-F", "6-K"]
 
 # ── Coverage ──────────────────────────────────────────────────────────────────
 YEARS_BACK    = 3
@@ -51,6 +51,24 @@ XBRL_REVENUE_TAGS = [
 ]
 XBRL_SEGMENT_AXIS = "StatementBusinessSegmentsAxis"
 
+# ── Extraction thresholds ─────────────────────────────────────────────────────
+XBRL_COVERAGE_MIN      = 0.70          # Below this → fall back to LLM extraction
+SEGMENT_MIN_PCT        = 0.005         # Drop segments < 0.5% of total revenue
+SEGMENT_MIN_VALUE      = 50_000_000    # Drop segments < $50 M regardless of pct
+SEGMENT_RESCALE_MIN    = 0.80          # Don't rescale when scale ∈ [0.80, 1.25]
+SEGMENT_RESCALE_MAX    = 1.25
+REVENUE_WARN_DIFF      = 0.15          # Warn when SEC vs Yahoo revenue differs > 15%
+
+# ── Financial sector thresholds ───────────────────────────────────────────────
+BANK_NII_MIN_PCT         = 0.05   # NII must be > 5% of revenue to classify as bank
+BANK_PROVISION_MAX_PCT   = 0.15   # Provision > 15% of revenue → likely gross interest, discard
+INSURANCE_COGS_MIN_PCT   = 0.20   # COGS/claims > 20% of revenue → insurance company
+INSURANCE_CLAIMS_MAX_PCT = 0.95   # Insurance claims cannot exceed 95% of revenue
+INSURANCE_BENEFITS_MIN_PCT = 0.30 # Benefits > 30% of revenue → insurance-dominant
+
+# ── Rate limits ────────────────────────────────────────────────────────────────
+YAHOO_RATE_LIMIT = 2   # requests per second for Yahoo Finance
+
 # ── Cache TTL (days) ──────────────────────────────────────────────────────────
 CACHE_TTL = {
     "filings":  30,
@@ -65,19 +83,14 @@ CACHE_TTL = {
 MAX_TICKER_WORKERS = 3
 MAX_LLM_WORKERS    = 20
 
+# ── XBRL axis overrides ───────────────────────────────────────────────────────
+# Tickers whose StatementBusinessSegmentsAxis returns geographic/mixed breakdowns
+# but whose ProductOrServiceAxis is more investor-relevant.
 # ── CIK seed map ──────────────────────────────────────────────────────────────
 # Fallback CIKs for international filers whose ADR tickers are not directly
 # resolvable via edgartools.  data_source_checker tries edgartools first and
 # falls back to this map.  Classification logic does NOT use this map.
-TICKER_TO_CIK = {
-    "TSM":   "0001046179",
-    "ASML":  "0000937966",
-    "TCEHY": "0001495479",
-    "RHHBY": "0001114388",
-    "HSBC":  "0000083246",
-    "AZN":   "0000901832",
-    "NVS":   "0001114448",
-}
+TICKER_TO_CIK: dict = {}  # CIK resolution is fully automatic via data_source_checker
 
 # ── Sankey Visual Config ──────────────────────────────────────────────────────
 SANKEY_COLORS = {
@@ -95,105 +108,3 @@ SANKEY_COLORS = {
     "net_loss":         "#d62728",
 }
 SANKEY_MIN_LINK_PCT = 0.01
-
-# ── GICS Sector mapping (display only — not used for classification) ───────────
-TICKER_SECTOR: dict = {
-    "NVDA": "Information Technology",
-    "AAPL": "Information Technology",
-    "MSFT": "Information Technology",
-    "AMZN": "Consumer Discretionary",
-    "GOOGL": "Communication Services",
-    "TSM":  "Information Technology",
-    "AVGO": "Information Technology",
-    "GOOG": "Communication Services",
-    "TSLA": "Consumer Discretionary",
-    "META": "Communication Services",
-    "BRK-B": "Financials",
-    "WMT":  "Consumer Staples",
-    "005930.KS": "Information Technology",
-    "LLY":  "Health Care",
-    "JPM":  "Financials",
-    "XOM":  "Energy",
-    "TCEHY": "Communication Services",
-    "ASML": "Information Technology",
-    "JNJ":  "Health Care",
-    "000660.KS": "Information Technology",
-    "V":    "Financials",
-    "MU":   "Information Technology",
-    "ORCL": "Information Technology",
-    "MA":   "Financials",
-    "AMD":  "Information Technology",
-    "COST": "Consumer Staples",
-    "NFLX": "Communication Services",
-    "BAC":  "Financials",
-    "CAT":  "Industrials",
-    "ABBV": "Health Care",
-    "CVX":  "Energy",
-    "HD":   "Consumer Discretionary",
-    "PG":   "Consumer Staples",
-    "CSCO": "Information Technology",
-    "INTC": "Information Technology",
-    "9988.HK": "Consumer Discretionary",
-    "PLTR": "Information Technology",
-    "LRCX": "Information Technology",
-    "RHHBY": "Health Care",
-    "KO":   "Consumer Staples",
-    "GE":   "Industrials",
-    "HSBC": "Financials",
-    "AZN":  "Health Care",
-    "AMAT": "Information Technology",
-    "MS":   "Financials",
-    "UNH":  "Health Care",
-    "NVS":  "Health Care",
-    "MRK":  "Health Care",
-    "MC.PA": "Consumer Discretionary",
-    "TM":   "Consumer Discretionary",
-    "GS":   "Financials",
-    "GEV":  "Industrials",
-    "RTX":  "Industrials",
-    "NESN.SW": "Consumer Staples",
-    "WFC":  "Financials",
-    "RY.TO": "Financials",
-    "SHEL.L": "Energy",
-    "PM":   "Consumer Staples",
-    "IBM":  "Information Technology",
-    "KLAC": "Information Technology",
-    "C":    "Financials",
-    "AXP":  "Financials",
-    "LIN":  "Materials",
-    "SIE.DE": "Industrials",
-    "MCD":  "Consumer Discretionary",
-    "CBA.AX": "Financials",
-    "PEP":  "Consumer Staples",
-    "SAP.DE": "Information Technology",
-    "8306.T": "Financials",
-    "TXN":  "Information Technology",
-    "TMO":  "Health Care",
-    "VZ":   "Communication Services",
-    "AMGN": "Health Care",
-    "NEE":  "Utilities",
-    "DIS":  "Communication Services",
-    "SAN.MC": "Financials",
-    "APH":  "Information Technology",
-    "T":    "Communication Services",
-    "NOVO-B.CO": "Health Care",
-    "TJX":  "Consumer Discretionary",
-    "BA":   "Industrials",
-    "TD.TO": "Financials",
-    "ALV.DE": "Financials",
-    "BLK":  "Financials",
-    "SHOP.TO": "Information Technology",
-    "ABT":  "Health Care",
-    "CRM":  "Information Technology",
-    "ISRG": "Health Care",
-    "APP":  "Information Technology",
-    "SCHW": "Financials",
-    "UBER": "Consumer Discretionary",
-    "QCOM": "Information Technology",
-    "SPGI": "Financials",
-    "6758.T": "Consumer Discretionary",
-    "ACN":  "Information Technology",
-    "INTU": "Information Technology",
-    "NOW":  "Information Technology",
-    "BKNG": "Consumer Discretionary",
-}

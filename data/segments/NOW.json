@@ -1,6 +1,7 @@
 {
   "ticker": "NOW",
   "name": "ServiceNow Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "NOW",
     "period": "FY2025",
@@ -30,7 +31,7 @@
     "operating_income": 1824000000.0,
     "net_income": 1748000000.0,
     "rd_expense": 2960000000.0,
-    "sga_expense": null,
+    "sga_expense": 5511000000.0,
     "cogs": 2983000000.0,
     "interest_expense": null,
     "income_tax": 513000000.0,
@@ -69,7 +70,7 @@
       "operating_income": 1824000000.0,
       "net_income": 1748000000.0,
       "rd_expense": 2960000000.0,
-      "sga_expense": null,
+      "sga_expense": 5511000000.0,
       "cogs": 2983000000.0,
       "interest_expense": null,
       "income_tax": 513000000.0,
@@ -115,7 +116,7 @@
       "operating_income": 1364000000.0,
       "net_income": 1425000000.0,
       "rd_expense": 2543000000.0,
-      "sga_expense": null,
+      "sga_expense": 4790000000.0,
       "cogs": 2287000000.0,
       "interest_expense": null,
       "income_tax": 313000000.0,
@@ -161,7 +162,7 @@
       "operating_income": 762000000.0,
       "net_income": 1731000000.0,
       "rd_expense": 2124000000.0,
-      "sga_expense": null,
+      "sga_expense": 4164000000.0,
       "cogs": 1921000000.0,
       "interest_expense": null,
       "income_tax": -723000000.0,
@@ -174,23 +175,78 @@
   "quarterly_periods": [
     {
       "ticker": "NOW",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Subscription",
+          "value": 3671000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Professional services and other",
+          "value": 120000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3770000000.0,
+      "gross_profit": 2830000000.0,
+      "operating_income": 503000000.0,
+      "net_income": 469000000.0,
+      "rd_expense": 823000000.0,
+      "sga_expense": 1504000000.0,
+      "cogs": 940000000.0,
+      "interest_expense": null,
+      "income_tax": 204000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "NOW",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Subscription",
+          "value": 3299000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Professional services and other",
+          "value": 108000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3407000000.0,
+      "gross_profit": 2633000000.0,
+      "operating_income": 572000000.0,
+      "net_income": 502000000.0,
+      "rd_expense": 750000000.0,
+      "sga_expense": 1311000000.0,
+      "cogs": 774000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 192000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -199,19 +255,36 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Subscription",
+          "value": 3113000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Professional services and other",
+          "value": 102000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3215000000.0,
+      "gross_profit": 2491000000.0,
+      "operating_income": 358000000.0,
+      "net_income": 385000000.0,
+      "rd_expense": 734000000.0,
+      "sga_expense": 1399000000.0,
+      "cogs": 724000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 86000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -243,7 +316,7 @@
       "operating_income": 451000000.0,
       "net_income": 460000000.0,
       "rd_expense": 703000000.0,
-      "sga_expense": null,
+      "sga_expense": 1283000000.0,
       "cogs": 651000000.0,
       "interest_expense": null,
       "income_tax": 95000000.0,
@@ -258,20 +331,47 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Digital workflow products",
+          "value": 2398000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ITOM products",
+          "value": 317000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Professional services and other",
+          "value": 88000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2797000000.0,
+      "gross_profit": 2213000000.0,
+      "operating_income": 418000000.0,
+      "net_income": 432000000.0,
+      "rd_expense": 626000000.0,
+      "sga_expense": 1169000000.0,
+      "cogs": 584000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 84000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (2797000000) differs from Yahoo (10984000000) by 74.5%"
+      ]
     },
     {
       "ticker": "NOW",
@@ -310,7 +410,7 @@
       "operating_income": 240000000.0,
       "net_income": 262000000.0,
       "rd_expense": 643000000.0,
-      "sga_expense": null,
+      "sga_expense": 1192000000.0,
       "cogs": 552000000.0,
       "interest_expense": null,
       "income_tax": 72000000.0,
@@ -358,7 +458,7 @@
       "operating_income": 332000000.0,
       "net_income": 347000000.0,
       "rd_expense": 606000000.0,
-      "sga_expense": null,
+      "sga_expense": 1145000000.0,
       "cogs": 520000000.0,
       "interest_expense": null,
       "income_tax": 78000000.0,
@@ -375,20 +475,47 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Digital workflow products",
+          "value": 1961000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ITOM products",
+          "value": 255000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Professional services and other",
+          "value": 76000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2288000000.0,
+      "gross_profit": 1792000000.0,
+      "operating_income": 231000000.0,
+      "net_income": 242000000.0,
+      "rd_expense": 549000000.0,
+      "sga_expense": 1012000000.0,
+      "cogs": 496000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 57000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (2288000000) differs from Yahoo (8971000000) by 74.5%"
+      ]
     },
     {
       "ticker": "NOW",
@@ -396,48 +523,64 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Digital workflow products",
+          "value": 1836000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ITOM products",
+          "value": 239000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Professional services and other",
+          "value": 82000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2150000000.0,
+      "gross_profit": 1679000000.0,
+      "operating_income": 117000000.0,
+      "net_income": 1044000000.0,
+      "rd_expense": 521000000.0,
+      "sga_expense": 1041000000.0,
+      "cogs": 471000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -870000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "NOW",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (2150000000) differs from Yahoo (8971000000) by 76.0%"
+      ]
     }
   ],
-  "ttm_revenue": 3088000000.0,
-  "ttm_operating_income": 451000000.0,
-  "ttm_net_income": 460000000.0,
+  "ttm_revenue": 13480000000.0,
+  "ttm_operating_income": 1884000000.0,
+  "ttm_net_income": 1816000000.0,
   "segment_trend": {
     "Digital workflow products": [
+      {
+        "period": "2023Q2",
+        "value": 1836000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1961000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 2231000000.0,
@@ -446,6 +589,11 @@
       {
         "period": "2024Q2",
         "value": 2248000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 2398000000.0,
         "is_annual": false
       },
       {
@@ -461,6 +609,16 @@
     ],
     "ITOM products": [
       {
+        "period": "2023Q2",
+        "value": 239000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 255000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 292000000.0,
         "is_annual": false
@@ -468,6 +626,11 @@
       {
         "period": "2024Q2",
         "value": 294000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 317000000.0,
         "is_annual": false
       },
       {
@@ -483,6 +646,16 @@
     ],
     "Professional services and other": [
       {
+        "period": "2023Q2",
+        "value": 82000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 76000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 80000000.0,
         "is_annual": false
@@ -493,8 +666,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 88000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 90000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 102000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 108000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 120000000.0,
         "is_annual": false
       },
       {
@@ -517,6 +710,21 @@
       {
         "period": "2025Q1",
         "value": 3005000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 3113000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 3299000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 3671000000.0,
         "is_annual": false
       },
       {

@@ -1,6 +1,7 @@
 {
   "ticker": "ABT",
   "name": "Abbott Laboratories",
+  "sector": "pharma",
   "latest_annual": {
     "ticker": "ABT",
     "period": "FY2025",
@@ -9,256 +10,32 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Medical Devices - Diabetes Care",
-        "value": 3027654753.6699715,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
         "segment_name": "Non-US - Established Pharmaceuticals",
-        "value": 4191322009.581636,
+        "value": 5536000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "Non-US - Diagnostics",
-        "value": 2044935106.1921964,
+        "segment_name": "Nutritionals",
+        "value": 8451000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "Non-US - Diagnostics - Core Laboratory",
-        "value": 3518636025.9267797,
+        "segment_name": "Diagnostics",
+        "value": 8937000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "Non-US - Nutritionals",
-        "value": 1834081930.674045,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Medical Devices - Diabetes Care",
-        "value": 3027654753.6699715,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Nutritionals - Adult Nutritionals",
-        "value": 2242917531.3196526,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Non-US - Established Pharmaceuticals - Key Emerging Markets",
-        "value": 3154848051.648605,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Non-US - Nutritionals - Pediatric Nutritionals",
-        "value": 2191813081.2389517,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Nutritional Products",
-        "value": 1365056644.377834,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Diagnostic Products",
-        "value": 1338179489.1502063,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "International - Nutritionals - Adult Nutritionals",
-        "value": 1146632439.2180974,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Non-US - Medical Devices - Vascular",
-        "value": 1844302820.690185,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Medical Devices - Electrophysiology",
-        "value": 2092632592.9341838,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Non-US - Medical Devices - Rhythm Management",
-        "value": 1500578074.9622114,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Medical Devices - Structural Heart",
-        "value": 2329227269.2337255,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Non-US - Diagnostics - Rapid Diagnostics",
-        "value": 1275718494.6071272,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Nutritional Products - Pediatric Nutritionals",
-        "value": 816914098.3270565,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Diagnostic Products - Rapid Diagnostics",
-        "value": 582212179.4379115,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Non-US - Medical Devices - Heart Failure",
-        "value": 677228601.4398073,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Diagnostic Products - Core Laboratory",
-        "value": 539435861.9629544,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "International - Established Pharmaceuticals - Other",
-        "value": 518236978.9665155,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Established Pharmaceutical Products - Other",
-        "value": 518236978.9665155,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Medical Devices - Rhythm Management",
-        "value": 504987677.0937412,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Medical Devices - Vascular",
-        "value": 423220556.9646197,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Medical Devices - Neuromodulation",
-        "value": 764673993.800118,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Diagnostics - Point of Care",
-        "value": 229402198.14003536,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Non-US - Diagnostics - Molecular",
-        "value": 334639510.1580714,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Diagnostics - Point of Care",
-        "value": 159748725.43745035,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "International - Diagnostics - Point of Care",
-        "value": 69653472.702585,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "United States - Diagnostics - Molecular",
-        "value": 56782722.31188994,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Other",
-        "value": 6435375.195347526,
+        "segment_name": "Medical Devices",
+        "value": 21387000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -266,13 +43,13 @@
       }
     ],
     "total_revenue": 44328000000.0,
-    "gross_profit": null,
+    "gross_profit": 25009000000.0,
     "operating_income": 8053000000.0,
     "net_income": 6524000000.0,
     "rd_expense": 2942000000.0,
     "sga_expense": 12332000000.0,
     "cogs": 19319000000.0,
-    "interest_expense": null,
+    "interest_expense": 493000000.0,
     "income_tax": 1942000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -288,256 +65,32 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Medical Devices - Diabetes Care",
-          "value": 3027654753.6699715,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Non-US - Established Pharmaceuticals",
-          "value": 4191322009.581636,
+          "value": 5536000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Non-US - Diagnostics",
-          "value": 2044935106.1921964,
+          "segment_name": "Nutritionals",
+          "value": 8451000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Non-US - Diagnostics - Core Laboratory",
-          "value": 3518636025.9267797,
+          "segment_name": "Diagnostics",
+          "value": 8937000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Non-US - Nutritionals",
-          "value": 1834081930.674045,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Diabetes Care",
-          "value": 3027654753.6699715,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritionals - Adult Nutritionals",
-          "value": 2242917531.3196526,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Established Pharmaceuticals - Key Emerging Markets",
-          "value": 3154848051.648605,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Nutritionals - Pediatric Nutritionals",
-          "value": 2191813081.2389517,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritional Products",
-          "value": 1365056644.377834,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products",
-          "value": 1338179489.1502063,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Nutritionals - Adult Nutritionals",
-          "value": 1146632439.2180974,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Vascular",
-          "value": 1844302820.690185,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Electrophysiology",
-          "value": 2092632592.9341838,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Rhythm Management",
-          "value": 1500578074.9622114,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Structural Heart",
-          "value": 2329227269.2337255,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Diagnostics - Rapid Diagnostics",
-          "value": 1275718494.6071272,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritional Products - Pediatric Nutritionals",
-          "value": 816914098.3270565,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Rapid Diagnostics",
-          "value": 582212179.4379115,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Heart Failure",
-          "value": 677228601.4398073,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Core Laboratory",
-          "value": 539435861.9629544,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Established Pharmaceuticals - Other",
-          "value": 518236978.9665155,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Established Pharmaceutical Products - Other",
-          "value": 518236978.9665155,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Rhythm Management",
-          "value": 504987677.0937412,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Vascular",
-          "value": 423220556.9646197,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Neuromodulation",
-          "value": 764673993.800118,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Diagnostics - Point of Care",
-          "value": 229402198.14003536,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Diagnostics - Molecular",
-          "value": 334639510.1580714,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostics - Point of Care",
-          "value": 159748725.43745035,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostics - Point of Care",
-          "value": 69653472.702585,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostics - Molecular",
-          "value": 56782722.31188994,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Other",
-          "value": 6435375.195347526,
+          "segment_name": "Medical Devices",
+          "value": 21387000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -545,13 +98,13 @@
         }
       ],
       "total_revenue": 44328000000.0,
-      "gross_profit": null,
+      "gross_profit": 25009000000.0,
       "operating_income": 8053000000.0,
       "net_income": 6524000000.0,
       "rd_expense": 2942000000.0,
       "sga_expense": 12332000000.0,
       "cogs": 19319000000.0,
-      "interest_expense": null,
+      "interest_expense": 493000000.0,
       "income_tax": 1942000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -566,336 +119,32 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Medical Devices - Diabetes Care",
-          "value": 2548245496.581151,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products",
-          "value": 2063685662.2569761,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Diagnostics - Core Laboratory",
-          "value": 1960332869.1553748,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Established Pharmaceuticals - Other",
-          "value": 2445267170.121222,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Non-US - Established Pharmaceuticals",
-          "value": 1944979736.8468034,
+          "value": 5194000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International - Nutritional Products",
-          "value": 1768980415.2607431,
+          "segment_name": "Nutritionals",
+          "value": 8413000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "United States - Nutritionals - Adult Nutritionals",
-          "value": 2198493653.2590647,
+          "segment_name": "Diagnostics",
+          "value": 9341000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International - Medical Devices - Diabetes Care",
-          "value": 1562274829.0575402,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Nutritionals - Pediatric Nutritionals",
-          "value": 1506479299.4483423,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products - Core Laboratory",
-          "value": 1461543302.4476461,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Established Pharmaceutical Products - Key Emerging Markets",
-          "value": 1444692303.572385,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Established Pharmaceuticals - Key Emerging Markets",
-          "value": 1444692303.572385,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products",
-          "value": 1434207237.605556,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritional Products",
-          "value": 1381407441.1297379,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Diagnostics - Rapid Diagnostics",
-          "value": 1122276525.0923893,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Nutritionals - Adult Nutritionals",
-          "value": 1089323460.625212,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Vascular",
-          "value": 1062361862.4247943,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Diabetes Care",
-          "value": 985970667.5236106,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Electrophysiology",
-          "value": 1351075643.1542678,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Rhythm Management",
-          "value": 894975273.5972006,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Structural Heart",
-          "value": 1603840626.2831843,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritional Products - Pediatric Nutritionals",
-          "value": 826822344.8128114,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Rapid Diagnostics",
-          "value": 726465284.8445897,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Nutritional Products - Pediatric Nutritionals",
-          "value": 679656954.6355311,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Neuromodulation",
-          "value": 739946083.9447986,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Established Pharmaceutical Products - Other",
-          "value": 500287433.2744185,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Core Laboratory",
-          "value": 498789566.70772856,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Electrophysiology",
-          "value": 496542766.8576938,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Heart Failure",
-          "value": 478942834.69908774,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Rhythm Management",
-          "value": 462840769.10717154,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Structural Heart",
-          "value": 557206362.8086337,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Rhythm Management",
-          "value": 432134504.4900291,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products - Rapid Diagnostics",
-          "value": 395811240.24779963,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Vascular",
-          "value": 395436773.60612714,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Neuromodulation",
-          "value": 647452823.4516988,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Diagnostics - Point of Care",
-          "value": 220186385.30341172,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Diagnostics - Molecular",
-          "value": 195097120.3113563,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostics - Point of Care",
-          "value": 152782389.8023673,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostics - Molecular",
-          "value": 138927124.06048596,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostics - Point of Care",
-          "value": 67403995.50104441,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostics - Molecular",
-          "value": 56169996.25087033,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Other",
-          "value": 5991466.266759503,
+          "segment_name": "Medical Devices",
+          "value": 18986000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -903,13 +152,13 @@
         }
       ],
       "total_revenue": 41950000000.0,
-      "gross_profit": null,
+      "gross_profit": 23244000000.0,
       "operating_income": 6825000000.0,
       "net_income": 13402000000.0,
       "rd_expense": 2844000000.0,
       "sga_expense": 11697000000.0,
       "cogs": 18706000000.0,
-      "interest_expense": null,
+      "interest_expense": 559000000.0,
       "income_tax": -6389000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -924,336 +173,32 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Medical Devices - Diabetes Care",
-          "value": 2130090423.8647468,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products",
-          "value": 2092376620.1441767,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Diagnostics - Core Laboratory",
-          "value": 1907505033.2786372,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Established Pharmaceuticals - Other",
-          "value": 2338625573.8490753,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Non-US - Established Pharmaceuticals",
-          "value": 1873118918.121647,
+          "value": 5066000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International - Nutritional Products",
-          "value": 1752952386.6590462,
+          "segment_name": "Nutritionals",
+          "value": 8154000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "United States - Diagnostic Products",
-          "value": 1600618199.0818415,
+          "segment_name": "Diagnostics",
+          "value": 9988000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "United States - Nutritionals - Adult Nutritionals",
-          "value": 2091267390.6229837,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Nutritionals - Pediatric Nutritionals",
-          "value": 1454569645.4580653,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products - Core Laboratory",
-          "value": 1447914268.330906,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Established Pharmaceutical Products - Key Emerging Markets",
-          "value": 1407612262.3942182,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Established Pharmaceuticals - Key Emerging Markets",
-          "value": 1407612262.3942182,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Diagnostics - Rapid Diagnostics",
-          "value": 1364352311.067682,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Diabetes Care",
-          "value": 1342907206.9912794,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritional Products",
-          "value": 1261933451.944173,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Nutritionals - Adult Nutritionals",
-          "value": 1029364995.6673243,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Vascular",
-          "value": 991281448.7730231,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Rapid Diagnostics",
-          "value": 931013311.4548572,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Rhythm Management",
-          "value": 833770856.7635834,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Electrophysiology",
-          "value": 1184287385.4606464,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Diabetes Care",
-          "value": 787183216.8734674,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritional Products - Pediatric Nutritionals",
-          "value": 730982254.4663434,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Nutritional Products - Pediatric Nutritionals",
-          "value": 723587390.9917219,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Structural Heart",
-          "value": 1373595890.410959,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Neuromodulation",
-          "value": 690680248.5296558,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Established Pharmaceutical Products - Other",
-          "value": 465506655.7274286,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Core Laboratory",
-          "value": 459590764.9477314,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Electrophysiology",
-          "value": 438885147.2187909,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products - Rapid Diagnostics",
-          "value": 433338999.61282474,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Rhythm Management",
-          "value": 432599513.26536256,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Heart Failure",
-          "value": 429271824.7017829,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Rhythm Management",
-          "value": 401171343.49822086,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Structural Heart",
-          "value": 493237393.7572596,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Vascular",
-          "value": 361608823.9089954,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Neuromodulation",
-          "value": 597135225.5756928,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Diagnostics - Molecular",
-          "value": 212232581.72163942,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Diagnostics - Point of Care",
-          "value": 208904893.15805972,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostics - Molecular",
-          "value": 148636755.83989382,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostics - Point of Care",
-          "value": 146418296.79750735,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostics - Molecular",
-          "value": 63595825.88174561,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostics - Point of Care",
-          "value": 62486596.36055237,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Corporate, Non-Segment",
-          "value": 5176404.432235108,
+          "segment_name": "Medical Devices",
+          "value": 16887000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -1261,7 +206,7 @@
         }
       ],
       "total_revenue": 40109000000.0,
-      "gross_profit": null,
+      "gross_profit": 22134000000.0,
       "operating_income": 6478000000.0,
       "net_income": 5723000000.0,
       "rd_expense": 2741000000.0,
@@ -1278,23 +223,110 @@
   "quarterly_periods": [
     {
       "ticker": "ABT",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Non-US - Established Pharmaceuticals",
+          "value": 1426000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nutritional Products",
+          "value": 2017000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Diagnostic Products",
+          "value": 2180000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Medical Devices",
+          "value": 5539000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11164000000.0,
+      "gross_profit": 6274000000.0,
+      "operating_income": 1345000000.0,
+      "net_income": 1077000000.0,
+      "rd_expense": 767000000.0,
+      "sga_expense": 3740000000.0,
+      "cogs": 4890000000.0,
+      "interest_expense": 174000000.0,
+      "income_tax": 372000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ABT",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Non-US - Established Pharmaceuticals",
+          "value": 1511000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nutritional Products",
+          "value": 2153000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Diagnostic Products",
+          "value": 2253000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Medical Devices",
+          "value": 5448000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11369000000.0,
+      "gross_profit": 6294000000.0,
+      "operating_income": 2057000000.0,
+      "net_income": 1644000000.0,
+      "rd_expense": 766000000.0,
+      "sga_expense": 3051000000.0,
+      "cogs": 5075000000.0,
+      "interest_expense": 121000000.0,
+      "income_tax": 536000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -1303,19 +335,52 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Non-US - Established Pharmaceuticals",
+          "value": 1383000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nutritional Products",
+          "value": 2212000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Diagnostic Products",
+          "value": 2173000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Medical Devices",
+          "value": 5369000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11142000000.0,
+      "gross_profit": 6288000000.0,
+      "operating_income": 2052000000.0,
+      "net_income": 1779000000.0,
+      "rd_expense": 725000000.0,
+      "sga_expense": 3091000000.0,
+      "cogs": 4854000000.0,
+      "interest_expense": 121000000.0,
+      "income_tax": 371000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -1326,288 +391,32 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Medical Devices - Diabetes Care",
-          "value": 689828527.685634,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Established Pharmaceuticals - Other",
-          "value": 587128276.1637443,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Non-US - Established Pharmaceuticals",
-          "value": 475743812.196989,
+          "value": 1260000000.0,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International - Nutritional Products",
-          "value": 449691174.862392,
+          "segment_name": "Nutritionals",
+          "value": 2146000000.0,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International - Diagnostic Products",
-          "value": 446670579.2293952,
+          "segment_name": "Diagnostic Products",
+          "value": 2054000000.0,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International - Diagnostic Products - Core Laboratory",
-          "value": 810274778.5513797,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritionals - Adult Nutritionals",
-          "value": 555789596.471403,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Diabetes Care",
-          "value": 407402836.00043744,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Nutritionals - Pediatric Nutritionals",
-          "value": 393055006.7437028,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Established Pharmaceutical Products - Key Emerging Markets",
-          "value": 364359348.23023367,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Established Pharmaceuticals - Key Emerging Markets",
-          "value": 364359348.23023367,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritional Products",
-          "value": 360583603.6889877,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products",
-          "value": 328867349.5425218,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Diabetes Care",
-          "value": 282425691.68519664,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Nutritionals - Adult Nutritionals",
-          "value": 278649947.1439507,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Vascular",
-          "value": 268077862.42846206,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Electrophysiology",
-          "value": 350389093.4276236,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Rapid Diagnostics",
-          "value": 382105347.5740896,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritional Products - Pediatric Nutritionals",
-          "value": 222013779.02526155,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Rhythm Management",
-          "value": 220881055.66288775,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Structural Heart",
-          "value": 423260963.0736704,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Nutritional Products - Pediatric Nutritionals",
-          "value": 171041227.71844128,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Neuromodulation",
-          "value": 186521780.33754966,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Heart Failure",
-          "value": 127997739.94823752,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Core Laboratory",
-          "value": 178215142.34680858,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Electrophysiology",
-          "value": 124599569.86111617,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Rhythm Management",
-          "value": 114782634.05387671,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Established Pharmaceutical Products - Other",
-          "value": 111384463.96675536,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Structural Heart",
-          "value": 140457696.93434912,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Rhythm Management",
-          "value": 106098421.60901104,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Vascular",
-          "value": 101189953.70539132,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Neuromodulation",
-          "value": 152540079.46633616,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products - Rapid Diagnostics",
-          "value": 80800933.18266322,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Int’l - Diagnostic Products - Point of Care",
-          "value": 53615572.48569241,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Int’l - Diagnostic Products - Molecular",
-          "value": 46064083.40320052,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Other",
-          "value": 1132723.3623737833,
+          "segment_name": "Medical Devices",
+          "value": 4895000000.0,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -1615,13 +424,13 @@
         }
       ],
       "total_revenue": 10358000000.0,
-      "gross_profit": null,
+      "gross_profit": 5890000000.0,
       "operating_income": 1693000000.0,
       "net_income": 1325000000.0,
       "rd_expense": 716000000.0,
       "sga_expense": 3061000000.0,
       "cogs": 4468000000.0,
-      "interest_expense": null,
+      "interest_expense": 131000000.0,
       "income_tax": 453000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -1634,20 +443,55 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Established Pharmaceutical Products - Other",
+          "value": 1406000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nutritional Products",
+          "value": 2066000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Diagnostic Products",
+          "value": 2412000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Medical Devices",
+          "value": 4747000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10635000000.0,
+      "gross_profit": 5937000000.0,
+      "operating_income": 1859000000.0,
+      "net_income": 1646000000.0,
+      "rd_expense": 713000000.0,
+      "sga_expense": 2895000000.0,
+      "cogs": 4698000000.0,
+      "interest_expense": 142000000.0,
+      "income_tax": 294000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (10635000000) differs from Yahoo (41950000000) by 74.6%"
+      ]
     },
     {
       "ticker": "ABT",
@@ -1657,256 +501,32 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Medical Devices - Diabetes Care",
-          "value": 617754434.129249,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products",
-          "value": 518418921.3596792,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products - Core Laboratory",
-          "value": 927381353.1770401,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Established Pharmaceuticals - Other",
-          "value": 485057183.10876715,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Established Pharmaceutical Products - Other",
-          "value": 599761586.5332515,
+          "value": 1294000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International - Nutritional Products",
-          "value": 456193656.7568544,
+          "segment_name": "Nutritional Products",
+          "value": 2150000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Int’l - Nutritional Products - Adult Nutritionals",
-          "value": 408962431.8173608,
+          "segment_name": "Diagnostic Products",
+          "value": 2195000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "United States - Nutritional Products - Pediatric Nutritionals",
-          "value": 746703175.233898,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Diabetes Care",
-          "value": 378974352.4906983,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Established Pharmaceutical Products - Key Emerging Markets",
-          "value": 855409962.7930499,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritional Products",
-          "value": 349735975.14720225,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products",
-          "value": 304379005.1656251,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Vascular",
-          "value": 271392117.9062963,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Nutritional Products - Pediatric Nutritionals",
-          "value": 456193656.7568544,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Diabetes Care",
-          "value": 238780081.63855073,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Electrophysiology",
-          "value": 342613806.3071199,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Rhythm Management",
-          "value": 227534551.89105228,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Rapid Diagnostics",
-          "value": 347861720.1892859,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Structural Heart",
-          "value": 399591157.0277788,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Neuromodulation",
-          "value": 187425495.79164106,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Electrophysiology",
-          "value": 127449337.13831593,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Core Laboratory",
-          "value": 175055413.06939277,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Heart Failure",
-          "value": 120327168.29823357,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Rhythm Management",
-          "value": 118078062.34873389,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Structural Heart",
-          "value": 143567929.77639708,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Rhythm Management",
-          "value": 109456489.54231839,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Vascular",
-          "value": 103084022.6854026,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Neuromodulation",
-          "value": 163060181.33872777,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products - Rapid Diagnostics",
-          "value": 89214535.99682115,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Int’l - Diagnostic Products - Point of Care",
-          "value": 58476754.68699202,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Int’l - Diagnostic Products - Molecular",
-          "value": 47606075.93107683,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Other",
-          "value": 1499403.9663331287,
+          "segment_name": "Medical Devices",
+          "value": 4734000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1914,13 +534,13 @@
         }
       ],
       "total_revenue": 10377000000.0,
-      "gross_profit": null,
+      "gross_profit": 5774000000.0,
       "operating_income": 1669000000.0,
       "net_income": 1302000000.0,
       "rd_expense": 698000000.0,
       "sga_expense": 2936000000.0,
       "cogs": 4603000000.0,
-      "interest_expense": null,
+      "interest_expense": 140000000.0,
       "income_tax": 305000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -1937,240 +557,32 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Medical Devices - Diabetes Care",
-          "value": 586425447.3161033,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products",
-          "value": 479530815.10934395,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Established Pharmaceutical Products - Other",
-          "value": 1027833001.9880716,
+          "value": 1226000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International - Diagnostic Products - Core Laboratory",
-          "value": 784890656.0636183,
+          "segment_name": "Nutritional Products",
+          "value": 2068000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International - Nutritional Products",
-          "value": 444771371.76938367,
+          "segment_name": "Diagnostic Products",
+          "value": 2214000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Int’l - Nutritional Products - Adult Nutritionals",
-          "value": 791618290.2584493,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Nutritional Products - Pediatric Nutritionals",
-          "value": 569232604.3737574,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Diabetes Care",
-          "value": 366282306.16302186,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "U.S. - Diagnostic Products",
-          "value": 347968190.8548708,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Established Pharmaceutical Products - Key Emerging Markets",
-          "value": 693693836.9781312,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "U.S. - Nutritional Products",
-          "value": 328159045.72564614,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Rapid Diagnostics",
-          "value": 456731610.33797216,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Vascular",
-          "value": 515037773.3598409,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Diabetes Care",
-          "value": 220143141.1530815,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Electrophysiology",
-          "value": 319936381.7097416,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Rhythm Management",
-          "value": 311339960.2385686,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Structural Heart",
-          "value": 279570576.5407555,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Nutritional Products - Pediatric Nutritionals",
-          "value": 185009940.35785288,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Electrophysiology",
-          "value": 118854870.77534792,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Diagnostic Products - Core Laboratory",
-          "value": 115864811.1332008,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-US - Medical Devices - Heart Failure",
-          "value": 227992047.7137177,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Established Pharmaceuticals - Other",
-          "value": 111379721.66998012,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Rhythm Management",
-          "value": 108763419.4831014,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Structural Heart",
-          "value": 105399602.38568589,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Diagnostic Products - Rapid Diagnostics",
-          "value": 97176938.36978132,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "United States - Medical Devices - Neuromodulation",
-          "value": 152119284.2942346,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Int’l - Diagnostic Products - Point of Care",
-          "value": 103904572.56461233,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Int’l - Diagnostic Products - Molecular",
-          "value": 96429423.45924453,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International - Medical Devices - Neuromodulation",
-          "value": 16819085.487077534,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Other",
-          "value": 1121272.3658051689,
+          "segment_name": "Medical Devices",
+          "value": 4453000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -2178,7 +590,7 @@
         }
       ],
       "total_revenue": 9964000000.0,
-      "gross_profit": null,
+      "gross_profit": 5501000000.0,
       "operating_income": 1386000000.0,
       "net_income": 1225000000.0,
       "rd_expense": 684000000.0,
@@ -2199,20 +611,55 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Established Pharmaceutical Products - Other",
+          "value": 1368000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nutritional Products",
+          "value": 2073000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Diagnostic Products",
+          "value": 2449000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Medical Devices",
+          "value": 4249000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 10143000000.0,
+      "gross_profit": 5538000000.0,
+      "operating_income": 1647000000.0,
+      "net_income": 1436000000.0,
+      "rd_expense": 672000000.0,
+      "sga_expense": 2723000000.0,
+      "cogs": 4605000000.0,
+      "interest_expense": 166000000.0,
+      "income_tax": 235000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (10143000000) differs from Yahoo (40109000000) by 74.7%"
+      ]
     },
     {
       "ticker": "ABT",
@@ -2220,1214 +667,312 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Established Pharmaceutical Products - Other",
+          "value": 1287000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Nutritional Products",
+          "value": 2076000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Diagnostic Products",
+          "value": 2317000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Medical Devices",
+          "value": 4295000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 9978000000.0,
+      "gross_profit": 5495000000.0,
+      "operating_income": 1542000000.0,
+      "net_income": 1375000000.0,
+      "rd_expense": 715000000.0,
+      "sga_expense": 2740000000.0,
+      "cogs": 4483000000.0,
+      "interest_expense": 159000000.0,
+      "income_tax": 261000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "ABT",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (9978000000) differs from Yahoo (40109000000) by 75.1%"
+      ]
     }
   ],
-  "ttm_revenue": 10358000000.0,
-  "ttm_operating_income": 1693000000.0,
-  "ttm_net_income": 1325000000.0,
+  "ttm_revenue": 44033000000.0,
+  "ttm_operating_income": 7147000000.0,
+  "ttm_net_income": 5825000000.0,
   "segment_trend": {
-    "Medical Devices - Diabetes Care": [
-      {
-        "period": "2024Q1",
-        "value": 586425447.3161033,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 617754434.129249,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 689828527.685634,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 2130090423.8647468,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 2548245496.581151,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 3027654753.6699715,
-        "is_annual": true
-      }
-    ],
-    "International - Diagnostic Products": [
-      {
-        "period": "2024Q1",
-        "value": 479530815.10934395,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 518418921.3596792,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 446670579.2293952,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 2092376620.1441767,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 2063685662.2569761,
-        "is_annual": true
-      }
-    ],
     "Established Pharmaceutical Products - Other": [
       {
+        "period": "2023Q2",
+        "value": 1287000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1368000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
-        "value": 1027833001.9880716,
+        "value": 1226000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 599761586.5332515,
+        "value": 1294000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1406000000.0,
+        "is_annual": false
+      }
+    ],
+    "Nutritional Products": [
+      {
+        "period": "2023Q2",
+        "value": 2076000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 2073000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 2068000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2150000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 2066000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 2212000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2153000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 2017000000.0,
+        "is_annual": false
+      }
+    ],
+    "Diagnostic Products": [
+      {
+        "period": "2023Q2",
+        "value": 2317000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 2449000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 2214000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 2195000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 2412000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 111384463.96675536,
+        "value": 2054000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 2173000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2253000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 2180000000.0,
+        "is_annual": false
+      }
+    ],
+    "Medical Devices": [
+      {
+        "period": "2023Q2",
+        "value": 4295000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 4249000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 4453000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4734000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 4747000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4895000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 5369000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 5448000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 5539000000.0,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 465506655.7274286,
+        "value": 16887000000.0,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 500287433.2744185,
+        "value": 18986000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 518236978.9665155,
-        "is_annual": true
-      }
-    ],
-    "International - Diagnostic Products - Core Laboratory": [
-      {
-        "period": "2024Q1",
-        "value": 784890656.0636183,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 927381353.1770401,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 810274778.5513797,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1447914268.330906,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1461543302.4476461,
-        "is_annual": true
-      }
-    ],
-    "International - Nutritional Products": [
-      {
-        "period": "2024Q1",
-        "value": 444771371.76938367,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 456193656.7568544,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 449691174.862392,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1752952386.6590462,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1768980415.2607431,
-        "is_annual": true
-      }
-    ],
-    "Int’l - Nutritional Products - Adult Nutritionals": [
-      {
-        "period": "2024Q1",
-        "value": 791618290.2584493,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 408962431.8173608,
-        "is_annual": false
-      }
-    ],
-    "United States - Nutritional Products - Pediatric Nutritionals": [
-      {
-        "period": "2024Q1",
-        "value": 569232604.3737574,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 746703175.233898,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 222013779.02526155,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 730982254.4663434,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 826822344.8128114,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 816914098.3270565,
-        "is_annual": true
-      }
-    ],
-    "International - Medical Devices - Diabetes Care": [
-      {
-        "period": "2024Q1",
-        "value": 366282306.16302186,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 378974352.4906983,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 407402836.00043744,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1342907206.9912794,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1562274829.0575402,
-        "is_annual": true
-      }
-    ],
-    "U.S. - Diagnostic Products": [
-      {
-        "period": "2024Q1",
-        "value": 347968190.8548708,
-        "is_annual": false
-      }
-    ],
-    "International - Established Pharmaceutical Products - Key Emerging Markets": [
-      {
-        "period": "2024Q1",
-        "value": 693693836.9781312,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 855409962.7930499,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 364359348.23023367,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1407612262.3942182,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1444692303.572385,
-        "is_annual": true
-      }
-    ],
-    "U.S. - Nutritional Products": [
-      {
-        "period": "2024Q1",
-        "value": 328159045.72564614,
-        "is_annual": false
-      }
-    ],
-    "United States - Diagnostic Products - Rapid Diagnostics": [
-      {
-        "period": "2024Q1",
-        "value": 456731610.33797216,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 347861720.1892859,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 382105347.5740896,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 931013311.4548572,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 726465284.8445897,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 582212179.4379115,
-        "is_annual": true
-      }
-    ],
-    "Non-US - Medical Devices - Vascular": [
-      {
-        "period": "2024Q1",
-        "value": 515037773.3598409,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 271392117.9062963,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 268077862.42846206,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 991281448.7730231,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1062361862.4247943,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 1844302820.690185,
-        "is_annual": true
-      }
-    ],
-    "United States - Medical Devices - Diabetes Care": [
-      {
-        "period": "2024Q1",
-        "value": 220143141.1530815,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 238780081.63855073,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 282425691.68519664,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 787183216.8734674,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 985970667.5236106,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 3027654753.6699715,
-        "is_annual": true
-      }
-    ],
-    "United States - Medical Devices - Electrophysiology": [
-      {
-        "period": "2024Q1",
-        "value": 319936381.7097416,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 342613806.3071199,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 350389093.4276236,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1184287385.4606464,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1351075643.1542678,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 2092632592.9341838,
-        "is_annual": true
-      }
-    ],
-    "Non-US - Medical Devices - Rhythm Management": [
-      {
-        "period": "2024Q1",
-        "value": 311339960.2385686,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 227534551.89105228,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 220881055.66288775,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 833770856.7635834,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 894975273.5972006,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 1500578074.9622114,
-        "is_annual": true
-      }
-    ],
-    "United States - Medical Devices - Structural Heart": [
-      {
-        "period": "2024Q1",
-        "value": 279570576.5407555,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 399591157.0277788,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 423260963.0736704,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1373595890.410959,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1603840626.2831843,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 2329227269.2337255,
-        "is_annual": true
-      }
-    ],
-    "International - Nutritional Products - Pediatric Nutritionals": [
-      {
-        "period": "2024Q1",
-        "value": 185009940.35785288,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 456193656.7568544,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 171041227.71844128,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 723587390.9917219,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 679656954.6355311,
-        "is_annual": true
-      }
-    ],
-    "International - Medical Devices - Electrophysiology": [
-      {
-        "period": "2024Q1",
-        "value": 118854870.77534792,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 127449337.13831593,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 124599569.86111617,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 438885147.2187909,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 496542766.8576938,
-        "is_annual": true
-      }
-    ],
-    "United States - Diagnostic Products - Core Laboratory": [
-      {
-        "period": "2024Q1",
-        "value": 115864811.1332008,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 175055413.06939277,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 178215142.34680858,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 459590764.9477314,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 498789566.70772856,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 539435861.9629544,
-        "is_annual": true
-      }
-    ],
-    "Non-US - Medical Devices - Heart Failure": [
-      {
-        "period": "2024Q1",
-        "value": 227992047.7137177,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 120327168.29823357,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 127997739.94823752,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 429271824.7017829,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 478942834.69908774,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 677228601.4398073,
-        "is_annual": true
-      }
-    ],
-    "International - Established Pharmaceuticals - Other": [
-      {
-        "period": "2024Q1",
-        "value": 111379721.66998012,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 485057183.10876715,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 587128276.1637443,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 2338625573.8490753,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 2445267170.121222,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 518236978.9665155,
-        "is_annual": true
-      }
-    ],
-    "International - Medical Devices - Rhythm Management": [
-      {
-        "period": "2024Q1",
-        "value": 108763419.4831014,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 118078062.34873389,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 106098421.60901104,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 432599513.26536256,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 462840769.10717154,
-        "is_annual": true
-      }
-    ],
-    "International - Medical Devices - Structural Heart": [
-      {
-        "period": "2024Q1",
-        "value": 105399602.38568589,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 143567929.77639708,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 140457696.93434912,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 493237393.7572596,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 557206362.8086337,
-        "is_annual": true
-      }
-    ],
-    "International - Diagnostic Products - Rapid Diagnostics": [
-      {
-        "period": "2024Q1",
-        "value": 97176938.36978132,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 89214535.99682115,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 80800933.18266322,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 433338999.61282474,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 395811240.24779963,
-        "is_annual": true
-      }
-    ],
-    "United States - Medical Devices - Neuromodulation": [
-      {
-        "period": "2024Q1",
-        "value": 152119284.2942346,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 163060181.33872777,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 152540079.46633616,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 597135225.5756928,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 647452823.4516988,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 764673993.800118,
-        "is_annual": true
-      }
-    ],
-    "Int’l - Diagnostic Products - Point of Care": [
-      {
-        "period": "2024Q1",
-        "value": 103904572.56461233,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 58476754.68699202,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 53615572.48569241,
-        "is_annual": false
-      }
-    ],
-    "Int’l - Diagnostic Products - Molecular": [
-      {
-        "period": "2024Q1",
-        "value": 96429423.45924453,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 47606075.93107683,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 46064083.40320052,
-        "is_annual": false
-      }
-    ],
-    "International - Medical Devices - Neuromodulation": [
-      {
-        "period": "2024Q1",
-        "value": 16819085.487077534,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 187425495.79164106,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 186521780.33754966,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 690680248.5296558,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 739946083.9447986,
-        "is_annual": true
-      }
-    ],
-    "Other": [
-      {
-        "period": "2024Q1",
-        "value": 1121272.3658051689,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 1499403.9663331287,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 1132723.3623737833,
-        "is_annual": false
-      },
-      {
-        "period": "FY2024",
-        "value": 5991466.266759503,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 6435375.195347526,
-        "is_annual": true
-      }
-    ],
-    "United States - Nutritional Products": [
-      {
-        "period": "2024Q2",
-        "value": 349735975.14720225,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 360583603.6889877,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1261933451.944173,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1381407441.1297379,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 1365056644.377834,
-        "is_annual": true
-      }
-    ],
-    "United States - Diagnostic Products": [
-      {
-        "period": "2024Q2",
-        "value": 304379005.1656251,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 328867349.5425218,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1600618199.0818415,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1434207237.605556,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 1338179489.1502063,
-        "is_annual": true
-      }
-    ],
-    "United States - Medical Devices - Rhythm Management": [
-      {
-        "period": "2024Q2",
-        "value": 109456489.54231839,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 114782634.05387671,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 401171343.49822086,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 432134504.4900291,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 504987677.0937412,
-        "is_annual": true
-      }
-    ],
-    "United States - Medical Devices - Vascular": [
-      {
-        "period": "2024Q2",
-        "value": 103084022.6854026,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 101189953.70539132,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 361608823.9089954,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 395436773.60612714,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 423220556.9646197,
+        "value": 21387000000.0,
         "is_annual": true
       }
     ],
     "Non-US - Established Pharmaceuticals": [
       {
         "period": "2025Q1",
-        "value": 475743812.196989,
+        "value": 1260000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1383000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1511000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1426000000.0,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 1873118918.121647,
+        "value": 5066000000.0,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 1944979736.8468034,
+        "value": 5194000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 4191322009.581636,
+        "value": 5536000000.0,
         "is_annual": true
       }
     ],
-    "United States - Nutritionals - Adult Nutritionals": [
+    "Nutritionals": [
       {
         "period": "2025Q1",
-        "value": 555789596.471403,
+        "value": 2146000000.0,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 2091267390.6229837,
+        "value": 8154000000.0,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 2198493653.2590647,
+        "value": 8413000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 2242917531.3196526,
+        "value": 8451000000.0,
         "is_annual": true
       }
     ],
-    "Non-US - Nutritionals - Pediatric Nutritionals": [
-      {
-        "period": "2025Q1",
-        "value": 393055006.7437028,
-        "is_annual": false
-      },
+    "Diagnostics": [
       {
         "period": "FY2023",
-        "value": 1454569645.4580653,
+        "value": 9988000000.0,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 1506479299.4483423,
+        "value": 9341000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 2191813081.2389517,
-        "is_annual": true
-      }
-    ],
-    "Non-US - Established Pharmaceuticals - Key Emerging Markets": [
-      {
-        "period": "2025Q1",
-        "value": 364359348.23023367,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1407612262.3942182,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1444692303.572385,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 3154848051.648605,
-        "is_annual": true
-      }
-    ],
-    "International - Nutritionals - Adult Nutritionals": [
-      {
-        "period": "2025Q1",
-        "value": 278649947.1439507,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1029364995.6673243,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1089323460.625212,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 1146632439.2180974,
-        "is_annual": true
-      }
-    ],
-    "Non-US - Diagnostics - Core Laboratory": [
-      {
-        "period": "FY2023",
-        "value": 1907505033.2786372,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1960332869.1553748,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 3518636025.9267797,
-        "is_annual": true
-      }
-    ],
-    "Non-US - Diagnostics - Rapid Diagnostics": [
-      {
-        "period": "FY2023",
-        "value": 1364352311.067682,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1122276525.0923893,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 1275718494.6071272,
-        "is_annual": true
-      }
-    ],
-    "Non-US - Diagnostics - Molecular": [
-      {
-        "period": "FY2023",
-        "value": 212232581.72163942,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 195097120.3113563,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 334639510.1580714,
-        "is_annual": true
-      }
-    ],
-    "Diagnostics - Point of Care": [
-      {
-        "period": "FY2023",
-        "value": 208904893.15805972,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 220186385.30341172,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 229402198.14003536,
-        "is_annual": true
-      }
-    ],
-    "International - Diagnostics - Molecular": [
-      {
-        "period": "FY2023",
-        "value": 148636755.83989382,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 138927124.06048596,
-        "is_annual": true
-      }
-    ],
-    "United States - Diagnostics - Point of Care": [
-      {
-        "period": "FY2023",
-        "value": 146418296.79750735,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 152782389.8023673,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 159748725.43745035,
-        "is_annual": true
-      }
-    ],
-    "United States - Diagnostics - Molecular": [
-      {
-        "period": "FY2023",
-        "value": 63595825.88174561,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 56169996.25087033,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 56782722.31188994,
-        "is_annual": true
-      }
-    ],
-    "International - Diagnostics - Point of Care": [
-      {
-        "period": "FY2023",
-        "value": 62486596.36055237,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 67403995.50104441,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 69653472.702585,
-        "is_annual": true
-      }
-    ],
-    "Corporate, Non-Segment": [
-      {
-        "period": "FY2023",
-        "value": 5176404.432235108,
-        "is_annual": true
-      }
-    ],
-    "Non-US - Diagnostics": [
-      {
-        "period": "FY2025",
-        "value": 2044935106.1921964,
-        "is_annual": true
-      }
-    ],
-    "Non-US - Nutritionals": [
-      {
-        "period": "FY2025",
-        "value": 1834081930.674045,
+        "value": 8937000000.0,
         "is_annual": true
       }
     ]

@@ -6,7 +6,7 @@ from typing import Dict, Optional
 import sys
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from config import OUTPUT_DIR
+from config import OUTPUT_DIR, INSURANCE_COGS_MIN_PCT, BANK_PROVISION_MAX_PCT
 from src.analysis.segment_aggregator import AggregatedCompanyData
 from src.visualization.sankey_builder import SankeyData, build_sankey
 from src.visualization.sankey_renderer import render_sankey_html
@@ -166,22 +166,67 @@ def _method_badge(m: str) -> str:
             f'border-radius:8px;font-size:11px;font-weight:600">{txt}</span>')
 
 
+_FINANCIAL_SECTORS_IS = {"financial", "financials", "banking", "insurance"}
+
+
 def _build_income_statement_table(agg: AggregatedCompanyData) -> str:
     """Build an Income Statement section with Annual and Quarterly YoY toggle."""
 
+    sector  = (getattr(agg, "sector", "") or "").lower()
+    is_bank = sector in _FINANCIAL_SECTORS_IS
+
+    # Detect insurance sub-type: cogs (PolicyholderBenefits) dominates revenue.
+    # Use latest annual period to decide; fall back to first available period.
+    _ref_sd = agg.latest_annual or (agg.annual_periods[0] if agg.annual_periods else None)
+    _is_insurance = False
+    if is_bank and _ref_sd and _ref_sd.total_revenue and _ref_sd.cogs:
+        if _ref_sd.cogs > _ref_sd.total_revenue * INSURANCE_COGS_MIN_PCT:
+            _is_insurance = True
+
     # ── Metrics definition ────────────────────────────────────────────────────
-    METRICS = [
-        ("Revenue",          "total_revenue",    False, "divider"),
-        ("Cost of Revenue",  "cogs",             False, "normal"),
-        ("Gross Profit",     "gross_profit",     False, "divider"),
-        ("Gross Margin",     None,               True,  "margin"),   # calculated
-        ("R&D Expense",      "rd_expense",       False, "normal"),
-        ("SG&A Expense",     "sga_expense",      False, "normal"),
-        ("Operating Income", "operating_income", False, "divider"),
-        ("Op. Margin",       None,               True,  "margin"),
-        ("Net Income",       "net_income",       False, "divider"),
-        ("Net Margin",       None,               True,  "margin"),
-    ]
+    if is_bank and _is_insurance:
+        # Insurance P&L: large medical/claims costs flow through cogs slot.
+        METRICS = [
+            ("Net Revenue",              "total_revenue",    False, "divider"),
+            ("Medical Costs & Claims",   "cogs",             False, "normal"),
+            ("Revenue after Claims",     "gross_profit",     False, "divider"),
+            ("Operating Expenses",       "sga_expense",      False, "normal"),
+            ("Pre-tax Income",           "operating_income", False, "divider"),
+            ("Pre-tax Margin",           None,               True,  "margin"),
+            ("Income Tax",               "income_tax",       False, "normal"),
+            ("Net Income",               "net_income",       False, "divider"),
+            ("Net Margin",               None,               True,  "margin"),
+        ]
+    elif is_bank:
+        # Bank P&L uses non-standard field names; SegmentData field → bank label:
+        #   interest_expense → Provision for Credit Losses
+        #   gross_profit     → Revenue after Provision
+        #   sga_expense      → Non-Interest Expense
+        #   operating_income → Pre-tax Income
+        METRICS = [
+            ("Net Revenue",                 "total_revenue",    False, "divider"),
+            ("Provision for Credit Losses", "interest_expense", False, "normal"),
+            ("Revenue after Provision",     "gross_profit",     False, "divider"),
+            ("Non-Interest Expense",        "sga_expense",      False, "normal"),
+            ("Pre-tax Income",              "operating_income", False, "divider"),
+            ("Pre-tax Margin",              None,               True,  "margin"),
+            ("Income Tax",                  "income_tax",       False, "normal"),
+            ("Net Income",                  "net_income",       False, "divider"),
+            ("Net Margin",                  None,               True,  "margin"),
+        ]
+    else:
+        METRICS = [
+            ("Revenue",          "total_revenue",    False, "divider"),
+            ("Cost of Revenue",  "cogs",             False, "normal"),
+            ("Gross Profit",     "gross_profit",     False, "divider"),
+            ("Gross Margin",     None,               True,  "margin"),
+            ("R&D Expense",      "rd_expense",       False, "normal"),
+            ("SG&A Expense",     "sga_expense",      False, "normal"),
+            ("Operating Income", "operating_income", False, "divider"),
+            ("Op. Margin",       None,               True,  "margin"),
+            ("Net Income",       "net_income",       False, "divider"),
+            ("Net Margin",       None,               True,  "margin"),
+        ]
 
     def _pct_margin(ni, rev):
         if ni is None or not rev:
@@ -202,19 +247,49 @@ def _build_income_statement_table(agg: AggregatedCompanyData) -> str:
             return f'<td style="text-align:right">{v*100:.1f}%</td>'
         return f'<td style="text-align:right">{_fmt_money(v)}</td>'
 
-    def _get_val(sd, field, is_pct):
-        if is_pct:
-            rev = sd.total_revenue if sd else None
-            if field is None:
-                return None  # handled separately per row
-            return None
-        return getattr(sd, field, None) if sd and field else None
-
     def _row_vals(sd):
         """Return dict of metric_name → value for a SegmentData."""
         if sd is None:
             return {}
         rev = sd.total_revenue
+        if is_bank and _is_insurance:
+            # Insurance: cogs = medical costs, gross_profit = revenue after claims
+            claims = sd.cogs
+            if claims is not None and rev and claims > rev:
+                claims = None
+            rac = sd.gross_profit
+            if rac is None and claims is not None and rev:
+                rac = rev - claims
+            return {
+                "Net Revenue":            sd.total_revenue,
+                "Medical Costs & Claims": claims,
+                "Revenue after Claims":   rac,
+                "Operating Expenses":     sd.sga_expense,
+                "Pre-tax Income":         sd.operating_income,
+                "Pre-tax Margin":         _pct_margin(sd.operating_income, rev),
+                "Income Tax":             sd.income_tax,
+                "Net Income":             sd.net_income,
+                "Net Margin":             _pct_margin(sd.net_income, rev),
+            }
+        if is_bank:
+            # Sanity-check fields that are re-used for bank concepts
+            provision = sd.interest_expense
+            if provision is not None and rev and abs(provision) > rev * BANK_PROVISION_MAX_PCT:
+                provision = None   # gross interest expense, not provision
+            rap = sd.gross_profit
+            if rap is not None and rev and rap > rev:
+                rap = None         # not a valid revenue-after-provision
+            return {
+                "Net Revenue":                 sd.total_revenue,
+                "Provision for Credit Losses": provision,
+                "Revenue after Provision":     rap,
+                "Non-Interest Expense":        sd.sga_expense,
+                "Pre-tax Income":              sd.operating_income,
+                "Pre-tax Margin":              _pct_margin(sd.operating_income, rev),
+                "Income Tax":                  sd.income_tax,
+                "Net Income":                  sd.net_income,
+                "Net Margin":                  _pct_margin(sd.net_income, rev),
+            }
         return {
             "Revenue":          sd.total_revenue,
             "Cost of Revenue":  sd.cogs,

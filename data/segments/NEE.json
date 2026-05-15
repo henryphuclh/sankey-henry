@@ -1,6 +1,7 @@
 {
   "ticker": "NEE",
   "name": "NextEra Energy Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "NEE",
     "period": "FY2025",
@@ -25,7 +26,7 @@
         "is_annual": true
       }
     ],
-    "total_revenue": null,
+    "total_revenue": 27412000000.0,
     "gross_profit": null,
     "operating_income": 8280000000.0,
     "net_income": 6835000000.0,
@@ -36,7 +37,7 @@
     "income_tax": -802000000.0,
     "currency": "USD",
     "extraction_method": "edgar+llm",
-    "confidence": 0.64,
+    "confidence": 1.0,
     "notes": []
   },
   "annual_periods": [
@@ -64,7 +65,7 @@
           "is_annual": true
         }
       ],
-      "total_revenue": null,
+      "total_revenue": 27412000000.0,
       "gross_profit": null,
       "operating_income": 8280000000.0,
       "net_income": 6835000000.0,
@@ -75,7 +76,7 @@
       "income_tax": -802000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
-      "confidence": 0.64,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -102,7 +103,7 @@
           "is_annual": true
         }
       ],
-      "total_revenue": null,
+      "total_revenue": 24753000000.0,
       "gross_profit": null,
       "operating_income": 7479000000.0,
       "net_income": 6946000000.0,
@@ -113,7 +114,7 @@
       "income_tax": 339000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
-      "confidence": 0.64,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -125,30 +126,22 @@
       "segments": [
         {
           "segment_name": "FPL",
-          "value": NaN,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 18365000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "NEER Segment",
+          "segment_name": "NEER",
           "value": 9672000000.0,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Corporate And Eliminations",
-          "value": 77000000.0,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
-      "total_revenue": null,
+      "total_revenue": 28114000000.0,
       "gross_profit": null,
       "operating_income": 10237000000.0,
       "net_income": 7310000000.0,
@@ -158,31 +151,78 @@
       "interest_expense": null,
       "income_tax": 1006000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
-      "confidence": 0.64,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     }
   ],
   "quarterly_periods": [
     {
       "ticker": "NEE",
-      "period": "2025Q3",
+      "period": "2026Q1",
       "is_annual": false,
-      "fiscal_year": 2025,
-      "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "FPL",
+          "value": 6582000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 6701000000.0,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 2208000000.0,
+      "net_income": 2182000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -489000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "edgar+llm",
+      "confidence": 0.84,
+      "notes": []
+    },
+    {
+      "ticker": "NEE",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [
+        {
+          "segment_name": "Florida Power & Light Company",
+          "value": 5285000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "NEER Segment",
+          "value": 2566000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7966000000.0,
+      "gross_profit": null,
+      "operating_income": 2527000000.0,
+      "net_income": 2438000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": -250000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -191,19 +231,36 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
+      "segments": [
+        {
+          "segment_name": "Florida Power & Light Company",
+          "value": 4708000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "NEER Segment",
+          "value": 1914000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6700000000.0,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 1911000000.0,
+      "net_income": 2028000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -256000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -230,7 +287,7 @@
           "is_annual": false
         }
       ],
-      "total_revenue": null,
+      "total_revenue": 6247000000.0,
       "gross_profit": null,
       "operating_income": 2256000000.0,
       "net_income": 833000000.0,
@@ -241,7 +298,7 @@
       "income_tax": -521000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
-      "confidence": 0.64,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -250,20 +307,39 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
+      "segments": [
+        {
+          "segment_name": "FPL Segment",
+          "value": 4939000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "NEER Segment",
+          "value": 2585000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7567000000.0,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 2856000000.0,
+      "net_income": 1852000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 5000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (7567000000) differs from Yahoo (24753000000) by 69.4%"
+      ]
     },
     {
       "ticker": "NEE",
@@ -273,23 +349,23 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "FPL",
-          "value": 1645000000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "FPL Segment",
+          "value": 4389000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
-          "segment_name": "NEER",
-          "value": 6069000000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "NEER Segment",
+          "value": 1645000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
-      "total_revenue": null,
+      "total_revenue": 6069000000.0,
       "gross_profit": null,
       "operating_income": 1670000000.0,
       "net_income": 1622000000.0,
@@ -299,9 +375,11 @@
       "interest_expense": null,
       "income_tax": -64000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
-      "confidence": 0.64,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (6069000000) differs from Yahoo (24753000000) by 75.5%"
+      ]
     },
     {
       "ticker": "NEE",
@@ -311,23 +389,15 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "FPL Segment",
-          "value": NaN,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "NEER Segment",
-          "value": 1864000000.0,
+          "value": 5731000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": null,
+      "total_revenue": 5731000000.0,
       "gross_profit": null,
       "operating_income": 2013000000.0,
       "net_income": 2268000000.0,
@@ -338,8 +408,10 @@
       "income_tax": 227000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.64,
-      "notes": []
+      "confidence": 0.84,
+      "notes": [
+        "Warning: total_revenue (5731000000) differs from Yahoo (24753000000) by 76.8%"
+      ]
     },
     {
       "ticker": "NEE",
@@ -347,20 +419,39 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
+      "segments": [
+        {
+          "segment_name": "FPL Segment",
+          "value": 5475000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "NEER Segment",
+          "value": 1669000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7172000000.0,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 1836000000.0,
+      "net_income": 1219000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -46000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (7172000000) differs from Yahoo (28114000000) by 74.5%"
+      ]
     },
     {
       "ticker": "NEE",
@@ -368,80 +459,118 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
+      "segments": [
+        {
+          "segment_name": "FPL Segment",
+          "value": 4774000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "NEER Segment",
+          "value": 2556000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7349000000.0,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 2799000000.0,
+      "net_income": 2795000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 497000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "NEE",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (7349000000) differs from Yahoo (28114000000) by 73.9%"
+      ]
     }
   ],
-  "ttm_revenue": null,
-  "ttm_operating_income": 2256000000.0,
-  "ttm_net_income": 833000000.0,
+  "ttm_revenue": 27614000000.0,
+  "ttm_operating_income": 8902000000.0,
+  "ttm_net_income": 7481000000.0,
   "segment_trend": {
     "FPL Segment": [
       {
-        "period": "2024Q1",
-        "value": NaN,
+        "period": "2023Q2",
+        "value": 4774000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 5475000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4389000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 4939000000.0,
         "is_annual": false
       }
     ],
     "NEER Segment": [
       {
-        "period": "2024Q1",
-        "value": 1864000000.0,
+        "period": "2023Q2",
+        "value": 2556000000.0,
         "is_annual": false
       },
       {
-        "period": "FY2023",
-        "value": 9672000000.0,
-        "is_annual": true
-      }
-    ],
-    "FPL": [
+        "period": "2023Q3",
+        "value": 1669000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 5731000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q2",
         "value": 1645000000.0,
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 2585000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1914000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2566000000.0,
+        "is_annual": false
+      }
+    ],
+    "FPL": [
+      {
         "period": "2025Q1",
         "value": 3997000000.0,
         "is_annual": false
       },
       {
+        "period": "2026Q1",
+        "value": 6582000000.0,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
-        "value": NaN,
+        "value": 18365000000.0,
         "is_annual": true
       },
       {
@@ -457,14 +586,14 @@
     ],
     "NEER": [
       {
-        "period": "2024Q2",
-        "value": 6069000000.0,
-        "is_annual": false
-      },
-      {
         "period": "2025Q1",
         "value": 2163000000.0,
         "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 9672000000.0,
+        "is_annual": true
       },
       {
         "period": "FY2024",
@@ -477,11 +606,16 @@
         "is_annual": true
       }
     ],
-    "Corporate And Eliminations": [
+    "Florida Power & Light Company": [
       {
-        "period": "FY2023",
-        "value": 77000000.0,
-        "is_annual": true
+        "period": "2025Q2",
+        "value": 4708000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 5285000000.0,
+        "is_annual": false
       }
     ]
   },

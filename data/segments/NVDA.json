@@ -1,6 +1,7 @@
 {
   "ticker": "NVDA",
   "name": "NVIDIA Corp",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "NVDA",
     "period": "FY2026",
@@ -47,14 +48,6 @@
         "period": "2026-01-25 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
-      },
-      {
-        "segment_name": "OEM and Other",
-        "value": 619000000.0,
-        "unit": "USD",
-        "period": "2026-01-25 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
       }
     ],
     "total_revenue": 215938000000.0,
@@ -64,7 +57,7 @@
     "rd_expense": 18497000000.0,
     "sga_expense": 4579000000.0,
     "cogs": 62475000000.0,
-    "interest_expense": null,
+    "interest_expense": -259000000.0,
     "income_tax": 21383000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -118,14 +111,6 @@
           "period": "2026-01-25 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "OEM and Other",
-          "value": 619000000.0,
-          "unit": "USD",
-          "period": "2026-01-25 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 215938000000.0,
@@ -135,7 +120,7 @@
       "rd_expense": 18497000000.0,
       "sga_expense": 4579000000.0,
       "cogs": 62475000000.0,
-      "interest_expense": null,
+      "interest_expense": -259000000.0,
       "income_tax": 21383000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -188,14 +173,6 @@
           "period": "2025-01-26 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "OEM and Other",
-          "value": 389000000.0,
-          "unit": "USD",
-          "period": "2025-01-26 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 130497000000.0,
@@ -205,7 +182,7 @@
       "rd_expense": 12914000000.0,
       "sga_expense": 3491000000.0,
       "cogs": 32639000000.0,
-      "interest_expense": null,
+      "interest_expense": -247000000.0,
       "income_tax": 11146000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -298,14 +275,6 @@
           "period": "2025-10-26 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "OEM and Other",
-          "value": 174000000.0,
-          "unit": "USD",
-          "period": "2025-10-26 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 57006000000.0,
@@ -315,7 +284,7 @@
       "rd_expense": 4705000000.0,
       "sga_expense": 1134000000.0,
       "cogs": 15157000000.0,
-      "interest_expense": null,
+      "interest_expense": -61000000.0,
       "income_tax": 6026000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -368,14 +337,6 @@
           "period": "2025-07-27 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "OEM and Other",
-          "value": 173000000.0,
-          "unit": "USD",
-          "period": "2025-07-27 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 46743000000.0,
@@ -385,7 +346,7 @@
       "rd_expense": 4291000000.0,
       "sga_expense": 1122000000.0,
       "cogs": 12890000000.0,
-      "interest_expense": null,
+      "interest_expense": -62000000.0,
       "income_tax": 4784000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -438,14 +399,6 @@
           "period": "2025-04-27 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "OEM and Other",
-          "value": 111000000.0,
-          "unit": "USD",
-          "period": "2025-04-27 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 44062000000.0,
@@ -455,7 +408,7 @@
       "rd_expense": 3989000000.0,
       "sga_expense": 1041000000.0,
       "cogs": 17394000000.0,
-      "interest_expense": null,
+      "interest_expense": -63000000.0,
       "income_tax": 3135000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -508,14 +461,6 @@
           "period": "2024-10-27 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "OEM and Other",
-          "value": 97000000.0,
-          "unit": "USD",
-          "period": "2024-10-27 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 35082000000.0,
@@ -525,7 +470,7 @@
       "rd_expense": 3390000000.0,
       "sga_expense": 897000000.0,
       "cogs": 8926000000.0,
-      "interest_expense": null,
+      "interest_expense": -61000000.0,
       "income_tax": 3007000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -565,7 +510,7 @@
       "rd_expense": 3090000000.0,
       "sga_expense": 842000000.0,
       "cogs": 7466000000.0,
-      "interest_expense": null,
+      "interest_expense": -61000000.0,
       "income_tax": 2615000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -960,38 +905,6 @@
       {
         "period": "FY2026",
         "value": 2349000000.0,
-        "is_annual": true
-      }
-    ],
-    "OEM and Other": [
-      {
-        "period": "2024Q4",
-        "value": 97000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 111000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 173000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q4",
-        "value": 174000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2025",
-        "value": 389000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2026",
-        "value": 619000000.0,
         "is_annual": true
       }
     ]

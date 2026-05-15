@@ -1,6 +1,7 @@
 {
   "ticker": "WMT",
   "name": "Walmart Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "WMT",
     "period": "FY2026",
@@ -34,7 +35,7 @@
       }
     ],
     "total_revenue": 713163000000.0,
-    "gross_profit": null,
+    "gross_profit": 177768000000.0,
     "operating_income": 29825000000.0,
     "net_income": 22270000000.0,
     "rd_expense": null,
@@ -81,7 +82,7 @@
         }
       ],
       "total_revenue": 713163000000.0,
-      "gross_profit": null,
+      "gross_profit": 177768000000.0,
       "operating_income": 29825000000.0,
       "net_income": 22270000000.0,
       "rd_expense": null,
@@ -127,7 +128,7 @@
         }
       ],
       "total_revenue": 680985000000.0,
-      "gross_profit": null,
+      "gross_profit": 169232000000.0,
       "operating_income": 29348000000.0,
       "net_income": 20157000000.0,
       "rd_expense": null,
@@ -173,7 +174,7 @@
         }
       ],
       "total_revenue": 648125000000.0,
-      "gross_profit": null,
+      "gross_profit": 157983000000.0,
       "operating_income": 27012000000.0,
       "net_income": 16270000000.0,
       "rd_expense": null,
@@ -194,19 +195,44 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Walmart U.S.",
+          "value": 120678000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Walmart International",
+          "value": 33541000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sam's Club U.S.",
+          "value": 23550000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 179496000000.0,
+      "gross_profit": 44790000000.0,
+      "operating_income": 6696000000.0,
+      "net_income": 6143000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 38094000000.0,
+      "cogs": 134706000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 2098000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -215,19 +241,44 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Walmart U.S.",
+          "value": 120911000000.0,
+          "unit": "USD",
+          "period": "2025-07-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Walmart International",
+          "value": 31201000000.0,
+          "unit": "USD",
+          "period": "2025-07-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sam's Club U.S.",
+          "value": 23638000000.0,
+          "unit": "USD",
+          "period": "2025-07-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 177402000000.0,
+      "gross_profit": 44631000000.0,
+      "operating_income": 7286000000.0,
+      "net_income": 7151000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 37345000000.0,
+      "cogs": 132771000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 2168000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -263,7 +314,7 @@
         }
       ],
       "total_revenue": 165609000000.0,
-      "gross_profit": null,
+      "gross_profit": 41306000000.0,
       "operating_income": 7135000000.0,
       "net_income": 4639000000.0,
       "rd_expense": null,
@@ -282,20 +333,47 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Walmart U.S.",
+          "value": 114875000000.0,
+          "unit": "USD",
+          "period": "2024-10-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Walmart International",
+          "value": 30277000000.0,
+          "unit": "USD",
+          "period": "2024-10-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sam's Club",
+          "value": 22851000000.0,
+          "unit": "USD",
+          "period": "2024-10-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 169588000000.0,
+      "gross_profit": 42248000000.0,
+      "operating_income": 6708000000.0,
+      "net_income": 4714000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 35540000000.0,
+      "cogs": 127340000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1384000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (169588000000) differs from Yahoo (648125000000) by 73.8%"
+      ]
     },
     {
       "ticker": "WMT",
@@ -330,7 +408,7 @@
         }
       ],
       "total_revenue": 169335000000.0,
-      "gross_profit": null,
+      "gross_profit": 42525000000.0,
       "operating_income": 7940000000.0,
       "net_income": 4711000000.0,
       "rd_expense": null,
@@ -378,7 +456,7 @@
         }
       ],
       "total_revenue": 161508000000.0,
-      "gross_profit": null,
+      "gross_profit": 40077000000.0,
       "operating_income": 6841000000.0,
       "net_income": 5307000000.0,
       "rd_expense": null,
@@ -399,20 +477,47 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Walmart U.S.",
+          "value": 109419000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Walmart International",
+          "value": 28022000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sam's Club",
+          "value": 21998000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 160804000000.0,
+      "gross_profit": 39621000000.0,
+      "operating_income": 6202000000.0,
+      "net_income": 643000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 33419000000.0,
+      "cogs": 121183000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 272000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (160804000000) differs from Yahoo (611289000000) by 73.7%"
+      ]
     },
     {
       "ticker": "WMT",
@@ -420,20 +525,47 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Walmart U.S.",
+          "value": 110854000000.0,
+          "unit": "USD",
+          "period": "2023-07-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Walmart International",
+          "value": 27596000000.0,
+          "unit": "USD",
+          "period": "2023-07-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sam's Club",
+          "value": 21830000000.0,
+          "unit": "USD",
+          "period": "2023-07-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 161632000000.0,
+      "gross_profit": 39782000000.0,
+      "operating_income": 7316000000.0,
+      "net_income": 8053000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 32466000000.0,
+      "cogs": 121850000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 2674000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (161632000000) differs from Yahoo (611289000000) by 73.6%"
+      ]
     },
     {
       "ticker": "WMT",
@@ -441,27 +573,69 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Walmart U.S.",
+          "value": 103901000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Walmart International",
+          "value": 26604000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sam's Club",
+          "value": 20499000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 152301000000.0,
+      "gross_profit": 37017000000.0,
+      "operating_income": 6240000000.0,
+      "net_income": 1896000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 30777000000.0,
+      "cogs": 115284000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 792000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (152301000000) differs from Yahoo (611289000000) by 75.1%"
+      ]
     }
   ],
-  "ttm_revenue": 165609000000.0,
-  "ttm_operating_income": 7135000000.0,
-  "ttm_net_income": 4639000000.0,
+  "ttm_revenue": 692095000000.0,
+  "ttm_operating_income": 27825000000.0,
+  "ttm_net_income": 22647000000.0,
   "segment_trend": {
     "Walmart U.S.": [
+      {
+        "period": "2023Q2",
+        "value": 103901000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 110854000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 109419000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q2",
         "value": 108670000000.0,
@@ -473,12 +647,42 @@
         "is_annual": false
       },
       {
+        "period": "2024Q4",
+        "value": 114875000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q2",
         "value": 112163000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 120911000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 120678000000.0,
         "is_annual": false
       }
     ],
     "Walmart International": [
+      {
+        "period": "2023Q2",
+        "value": 26604000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 27596000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 28022000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q2",
         "value": 29833000000.0,
@@ -490,8 +694,23 @@
         "is_annual": false
       },
       {
+        "period": "2024Q4",
+        "value": 30277000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q2",
         "value": 29754000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 31201000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 33541000000.0,
         "is_annual": false
       },
       {
@@ -512,6 +731,21 @@
     ],
     "Sam's Club": [
       {
+        "period": "2023Q2",
+        "value": 20499000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 21830000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 21998000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q2",
         "value": 21435000000.0,
         "is_annual": false
@@ -520,12 +754,27 @@
         "period": "2024Q3",
         "value": 22853000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 22851000000.0,
+        "is_annual": false
       }
     ],
     "Sam's Club U.S.": [
       {
         "period": "2025Q2",
         "value": 22064000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 23638000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 23550000000.0,
         "is_annual": false
       },
       {

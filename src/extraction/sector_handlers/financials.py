@@ -10,7 +10,12 @@ from __future__ import annotations
 
 import json
 import re
+import sys
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+
+sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
+from config import INSURANCE_COGS_MIN_PCT, INSURANCE_BENEFITS_MIN_PCT
 
 
 # ---------------------------------------------------------------------------
@@ -30,11 +35,16 @@ _BANK_CONCEPTS: Dict[str, str] = {
     # Standard US-GAAP revenue: used as total net revenue by C, SCHW, AXP
     "Revenues":                                                 "net_revenue_direct",
     "SalesRevenueNet":                                          "net_revenue_direct",
+    # Aggregate of NII + NoninterestIncome (used by some regional banks)
+    "NetInterestAndNoninterestIncome":                          "net_revenue_direct",
+    "TotalBankingRevenues":                                     "net_revenue_direct",
 
     # ── Net interest income (direct) ──
     "InterestIncomeExpenseNet":                                 "nii_direct",
     "NetInterestIncome":                                        "nii_direct",
     "InterestAndDividendIncomeOperatingNet":                    "nii_direct",
+    "InterestIncomeExpenseNetOperating":                        "nii_direct",
+    "InterestAndFeeIncomeOperatingAndNonoperating":             "nii_direct",
     # Components used to compute NII when direct tag absent
     "InterestAndDividendIncomeOperating":                       "interest_income_gross",
     "InterestIncomeOperating":                                  "interest_income_gross",
@@ -48,6 +58,11 @@ _BANK_CONCEPTS: Dict[str, str] = {
     "NonInterestIncome":                                        "noninterest_income",
     "TotalNoninterestIncome":                                   "noninterest_income",
     "OtherNoninterestIncome":                                   "noninterest_income",
+    # Fee income sub-categories (captured only when aggregate NoninterestIncome is absent)
+    "FeeAndCommissionIncome":                                   "noninterest_income",
+    "ServiceChargesOnDepositAccounts":                          "noninterest_income",
+    "TrustFees":                                                "noninterest_income",
+    "InvestmentAdvisoryFees":                                   "noninterest_income",
     # Card-company revenue (AXP, V, MA)
     "RevenueFromContractWithCustomerExcludingAssessedTax":      "noninterest_income",
     "RevenueFromContractWithCustomerIncludingAssessedTax":      "noninterest_income",
@@ -59,10 +74,19 @@ _BANK_CONCEPTS: Dict[str, str] = {
     "ProvisionForCreditLoss":                                   "provision_credit_loss",
     "ProvisionForCreditLosses":                                 "provision_credit_loss",
     "ProvisionForDoubtfulAccounts":                             "provision_credit_loss",
+    # CECL standard (ASU 2016-13, adopted 2020+) — primary tag for most major banks post-2020
+    "ProvisionForCreditLossesOnFinancingReceivables":           "provision_credit_loss",
+    "FinancingReceivableCreditLossExpenseReversal":              "provision_credit_loss",
+    "AllowanceForCreditLossesOnFinancingReceivablesExpense":     "provision_credit_loss",
+    # AXP uses this us-gaap tag (card-company variant of provision)
+    "ProvisionForLoanLossesExpensed":                           "provision_credit_loss",
     # Citi-specific provision concepts
     "FinancingReceivableExcludingAccruedInterestCreditLossExpenseReversal": "provision_credit_loss",
     "ProvisionForCreditLossBenefitsAndClaimsExpenseReversal":   "provision_credit_loss",
     "OffBalanceSheetCreditLossLiabilityCreditLossExpenseReversal": "provision_credit_loss",
+    "FinancingReceivableAllowanceForCreditLossesWriteOffs":     "provision_credit_loss",
+    # BAC extension: combined on-balance-sheet + off-balance-sheet credit loss provision
+    "FinancingReceivableExcludingAccruedInterestAndOffBalanceSheetLiabilityCreditLossProvisionReversal": "provision_credit_loss",
 
     # ── Non-interest expense (total operating costs for banks) ──
     "NoninterestExpense":                                       "noninterest_expense",
@@ -98,6 +122,13 @@ _BANK_CONCEPTS: Dict[str, str] = {
     "OtherNoninterestExpense":                                  "expense_other",
     "OtherExpenses":                                            "expense_other",
     "BusinessDevelopmentExpense":                               "expense_other",
+    # Post-acquisition amortization and restructuring (BAC/JPM after major M&A)
+    "AmortizationOfIntangibleAssets":                           "expense_other",
+    "BusinessAcquisitionCostOfAcquiredEntityTransactionCosts":  "expense_other",
+    "RestructuringChargesAndRelatedCosts":                      "expense_other",
+    # Regulatory and legal (FDIC, litigation — present in most large banks)
+    "FDICPremiumExpense":                                       "expense_other",
+    "LitigationSettlementExpense":                              "expense_other",
     # AXP-specific
     "CardMemberServicesExpense":                                "expense_card_services",
     "RewardsExpense":                                           "expense_card_services",
@@ -209,6 +240,36 @@ CANONICAL_SEGMENT_NAMES: Dict[str, str] = {
 
 def get_prompt_hints() -> str:
     return FINANCIAL_SEGMENT_HINTS
+
+
+def has_bank_indicators(pnl: Dict[str, Any], total_rev: float) -> bool:
+    """Return True if extracted P&L shows bank or insurance income structure.
+
+    Called after sector-specific extraction to validate that bank/insurance
+    concepts were actually found.  If False, caller should fall back to the
+    standard handler and store sector as "standard".
+    """
+    if not total_rev or total_rev <= 0:
+        return False
+    # --- SEC bank P&L fields (set by pnl_from_bank_filing) ---
+    nii        = pnl.get("nii")
+    provision  = pnl.get("provision_credit_loss")
+    nonint_inc = pnl.get("noninterest_income")
+    # --- Yahoo bank P&L fields (set by _pnl_from_yahoo) ---
+    bank_nii    = pnl.get("bank_nii")
+    bank_nonint = pnl.get("bank_nonint")
+    # --- Insurance indicator: cogs = policyholder benefits (both paths) ---
+    cogs = pnl.get("cogs")
+    ins_signal = cogs is not None and cogs > 0 and cogs / total_rev > 0.10
+
+    return bool(
+        (nii is not None and nii > 0) or
+        (provision is not None and provision > 0) or
+        (nonint_inc is not None and nonint_inc > 0) or
+        (bank_nii is not None and bank_nii > 0) or
+        (bank_nonint is not None and bank_nonint > 0) or
+        ins_signal
+    )
 
 
 def normalize_segment_name(raw: str) -> str:
@@ -380,10 +441,10 @@ def _detect_financial_type(filing_obj) -> str:
     total   = net_rev or (nii + nonint) or 1.0  # avoid division by zero
 
     # Only classify as insurance when premiums are material (>20% of revenue)
-    if premiums and premiums > total * 0.20:
+    if premiums and premiums > total * INSURANCE_COGS_MIN_PCT:
         return "insurance"
     # Or when insurance benefits dominate expenses (>30% of revenue)
-    if benefits and benefits > total * 0.30:
+    if benefits and benefits > total * INSURANCE_BENEFITS_MIN_PCT:
         return "insurance"
     return "bank"
 

@@ -1,6 +1,7 @@
 {
   "ticker": "CVX",
   "name": "Chevron Corporation",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "CVX",
     "period": "FY2025",
@@ -9,25 +10,33 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Reportable Segment, Aggregation before Other Operating Segment",
-        "value": 184328000000.0,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
+        "segment_name": "Upstream",
+        "value": 94324117140.0418,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Downstream",
+        "value": 94377335903.23872,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       },
       {
         "segment_name": "All Other",
-        "value": 644000000.0,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
+        "value": 329546956.71947247,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       }
     ],
     "total_revenue": 189031000000.0,
-    "gross_profit": null,
-    "operating_income": null,
+    "gross_profit": 80817000000.0,
+    "operating_income": 75691000000.0,
     "net_income": 12485000000.0,
     "rd_expense": null,
     "sga_expense": 5126000000.0,
@@ -35,8 +44,8 @@
     "interest_expense": null,
     "income_tax": 7258000000.0,
     "currency": "USD",
-    "extraction_method": "xbrl",
-    "confidence": 0.97,
+    "extraction_method": "edgar+llm",
+    "confidence": 1.0,
     "notes": []
   },
   "annual_periods": [
@@ -48,25 +57,33 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Reportable Segment, Aggregation before Other Operating Segment",
-          "value": 184328000000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Upstream",
+          "value": 94324117140.0418,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Downstream",
+          "value": 94377335903.23872,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
           "segment_name": "All Other",
-          "value": 644000000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 329546956.71947247,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
       "total_revenue": 189031000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 80817000000.0,
+      "operating_income": 75691000000.0,
       "net_income": 12485000000.0,
       "rd_expense": null,
       "sga_expense": 5126000000.0,
@@ -74,8 +91,8 @@
       "interest_expense": null,
       "income_tax": 7258000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
-      "confidence": 0.97,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -86,25 +103,33 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Reportable Segment, Aggregation before Other Operating Segment",
-          "value": 193282000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Upstream",
+          "value": 145747041423.1107,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Downstream",
+          "value": 56554816831.020485,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
           "segment_name": "All Other",
-          "value": 650000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 490141745.86884415,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
       "total_revenue": 202792000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 83586000000.0,
+      "operating_income": 78752000000.0,
       "net_income": 17749000000.0,
       "rd_expense": null,
       "sga_expense": 4834000000.0,
@@ -112,8 +137,8 @@
       "interest_expense": null,
       "income_tax": 9757000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
-      "confidence": 0.97,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -141,8 +166,8 @@
         }
       ],
       "total_revenue": 200949000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 81753000000.0,
+      "operating_income": 77612000000.0,
       "net_income": 21411000000.0,
       "rd_expense": null,
       "sga_expense": 4141000000.0,
@@ -151,30 +176,85 @@
       "income_tax": 8173000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
-      "confidence": 0.97,
+      "confidence": 1.0,
       "notes": []
     }
   ],
   "quarterly_periods": [
     {
       "ticker": "CVX",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Segment Total",
+          "value": 47542000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 48607000000.0,
+      "gross_profit": 20342000000.0,
+      "operating_income": 19276000000.0,
+      "net_income": 2293000000.0,
+      "rd_expense": null,
+      "sga_expense": 1066000000.0,
+      "cogs": 28265000000.0,
+      "interest_expense": null,
+      "income_tax": 1653000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "CVX",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Upstream",
+          "value": 18408670616.893803,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Downstream",
+          "value": 31238757785.23932,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "All Other",
+          "value": 78571597.86687735,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 49726000000.0,
+      "gross_profit": 22328000000.0,
+      "operating_income": 20804000000.0,
+      "net_income": 3613000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 1524000000.0,
+      "cogs": 27398000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1801000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -183,19 +263,44 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Upstream",
+          "value": 16367311552.34657,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Downstream",
+          "value": 28333329241.877254,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "All Other",
+          "value": 121359205.77617328,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 44822000000.0,
+      "gross_profit": 17964000000.0,
+      "operating_income": 17075000000.0,
+      "net_income": 2515000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 889000000.0,
+      "cogs": 26858000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1632000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -206,25 +311,33 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Reportable Segment, Aggregation before Other Operating Segment",
+          "segment_name": "Upstream",
           "value": 46082000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Downstream",
+          "value": 1919000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "All Other",
-          "value": 398000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 609000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 47610000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 19000000000.0,
+      "operating_income": 17779000000.0,
       "net_income": 3512000000.0,
       "rd_expense": null,
       "sga_expense": 1221000000.0,
@@ -232,8 +345,8 @@
       "interest_expense": null,
       "income_tax": 2071000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
-      "confidence": 0.97,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -242,20 +355,31 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Oil and Gas",
+          "value": 61854000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 50669000000.0,
+      "gross_profit": 20219000000.0,
+      "operating_income": 19028000000.0,
+      "net_income": 4496000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 1191000000.0,
+      "cogs": 30450000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1993000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (50669000000) differs from Yahoo (193414000000) by 73.8%"
+      ]
     },
     {
       "ticker": "CVX",
@@ -265,48 +389,8 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Oil and Gas - United States - Downstream",
-          "value": 21482000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Oil and Gas - International - Downstream",
-          "value": 20631000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Oil and Gas - United States - Upstream",
-          "value": 11287000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Oil and Gas - International - Upstream",
-          "value": 10221000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 153000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Total All Other",
-          "value": 33000000.0,
+          "segment_name": "Oil and Gas",
+          "value": 63774000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -314,8 +398,8 @@
         }
       ],
       "total_revenue": 51181000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 20314000000.0,
+      "operating_income": 19266000000.0,
       "net_income": 4443000000.0,
       "rd_expense": null,
       "sga_expense": 1048000000.0,
@@ -324,7 +408,7 @@
       "income_tax": 2593000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.97,
+      "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (51181000000) differs from Yahoo (193414000000) by 73.5%"
       ]
@@ -337,48 +421,8 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Oil and Gas - United States - Downstream",
-          "value": 20240000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Oil and Gas - International - Downstream",
-          "value": 18091000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Oil and Gas - United States - Upstream",
-          "value": 11167000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Oil and Gas - International - Upstream",
-          "value": 10783000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 121000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Total All Other",
-          "value": 27000000.0,
+          "segment_name": "Oil and Gas",
+          "value": 60402000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -386,8 +430,8 @@
         }
       ],
       "total_revenue": 48716000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 20975000000.0,
+      "operating_income": 19965000000.0,
       "net_income": 5551000000.0,
       "rd_expense": null,
       "sga_expense": 1010000000.0,
@@ -396,7 +440,7 @@
       "income_tax": 2371000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.97,
+      "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (48716000000) differs from Yahoo (193414000000) by 74.8%"
       ]
@@ -407,20 +451,31 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Oil and Gas",
+          "value": 64838000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 54080000000.0,
+      "gross_profit": 21752000000.0,
+      "operating_income": 20589000000.0,
+      "net_income": 6555000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 1163000000.0,
+      "cogs": 32328000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 2183000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (54080000000) differs from Yahoo (196913000000) by 72.5%"
+      ]
     },
     {
       "ticker": "CVX",
@@ -428,163 +483,160 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Oil and Gas",
+          "value": 58408000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 48896000000.0,
+      "gross_profit": 19912000000.0,
+      "operating_income": 18784000000.0,
+      "net_income": 6010000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 1128000000.0,
+      "cogs": 28984000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1829000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "CVX",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (48896000000) differs from Yahoo (196913000000) by 75.2%"
+      ]
     }
   ],
-  "ttm_revenue": 47610000000.0,
-  "ttm_operating_income": null,
-  "ttm_net_income": 3512000000.0,
+  "ttm_revenue": 190765000000.0,
+  "ttm_operating_income": 74934000000.0,
+  "ttm_net_income": 11933000000.0,
   "segment_trend": {
-    "Oil and Gas - United States - Downstream": [
+    "Oil and Gas": [
+      {
+        "period": "2023Q2",
+        "value": 58408000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 64838000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
-        "value": 20240000000.0,
+        "value": 60402000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 21482000000.0,
+        "value": 63774000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 61854000000.0,
         "is_annual": false
       }
     ],
-    "Oil and Gas - International - Downstream": [
-      {
-        "period": "2024Q1",
-        "value": 18091000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 20631000000.0,
-        "is_annual": false
-      }
-    ],
-    "Oil and Gas - United States - Upstream": [
-      {
-        "period": "2024Q1",
-        "value": 11167000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 11287000000.0,
-        "is_annual": false
-      }
-    ],
-    "Oil and Gas - International - Upstream": [
-      {
-        "period": "2024Q1",
-        "value": 10783000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 10221000000.0,
-        "is_annual": false
-      }
-    ],
-    "All Other": [
-      {
-        "period": "2024Q1",
-        "value": 121000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 153000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 398000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2024",
-        "value": 650000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 644000000.0,
-        "is_annual": true
-      }
-    ],
-    "Total All Other": [
-      {
-        "period": "2024Q1",
-        "value": 27000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 33000000.0,
-        "is_annual": false
-      }
-    ],
-    "Reportable Segment, Aggregation before Other Operating Segment": [
+    "Upstream": [
       {
         "period": "2025Q1",
         "value": 46082000000.0,
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 16367311552.34657,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 18408670616.893803,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 45742000000.0,
+        "is_annual": true
+      },
+      {
         "period": "FY2024",
-        "value": 193282000000.0,
+        "value": 145747041423.1107,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 184328000000.0,
-        "is_annual": true
-      }
-    ],
-    "Upstream": [
-      {
-        "period": "FY2023",
-        "value": 45742000000.0,
+        "value": 94324117140.0418,
         "is_annual": true
       }
     ],
     "Downstream": [
       {
+        "period": "2025Q1",
+        "value": 1919000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 28333329241.877254,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 31238757785.23932,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
         "value": 151038000000.0,
         "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 56554816831.020485,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 94377335903.23872,
+        "is_annual": true
+      }
+    ],
+    "All Other": [
+      {
+        "period": "2025Q1",
+        "value": 609000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 121359205.77617328,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 78571597.86687735,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 490141745.86884415,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 329546956.71947247,
+        "is_annual": true
+      }
+    ],
+    "Segment Total": [
+      {
+        "period": "2026Q1",
+        "value": 47542000000.0,
+        "is_annual": false
       }
     ]
   },

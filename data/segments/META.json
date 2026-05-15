@@ -1,6 +1,7 @@
 {
   "ticker": "META",
   "name": "Meta Platforms Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "META",
     "period": "FY2025",
@@ -26,11 +27,11 @@
       }
     ],
     "total_revenue": 200966000000.0,
-    "gross_profit": null,
+    "gross_profit": 164791000000.0,
     "operating_income": 83276000000.0,
     "net_income": 60458000000.0,
     "rd_expense": 57372000000.0,
-    "sga_expense": null,
+    "sga_expense": 24143000000.0,
     "cogs": 36175000000.0,
     "interest_expense": null,
     "income_tax": 25474000000.0,
@@ -65,11 +66,11 @@
         }
       ],
       "total_revenue": 200966000000.0,
-      "gross_profit": null,
+      "gross_profit": 164791000000.0,
       "operating_income": 83276000000.0,
       "net_income": 60458000000.0,
       "rd_expense": 57372000000.0,
-      "sga_expense": null,
+      "sga_expense": 24143000000.0,
       "cogs": 36175000000.0,
       "interest_expense": null,
       "income_tax": 25474000000.0,
@@ -103,11 +104,11 @@
         }
       ],
       "total_revenue": 164501000000.0,
-      "gross_profit": null,
+      "gross_profit": 134340000000.0,
       "operating_income": 69380000000.0,
       "net_income": 62360000000.0,
       "rd_expense": 43873000000.0,
-      "sga_expense": null,
+      "sga_expense": 21087000000.0,
       "cogs": 30161000000.0,
       "interest_expense": null,
       "income_tax": 8303000000.0,
@@ -141,11 +142,11 @@
         }
       ],
       "total_revenue": 134902000000.0,
-      "gross_profit": null,
+      "gross_profit": 108943000000.0,
       "operating_income": 46751000000.0,
       "net_income": 39098000000.0,
       "rd_expense": 38483000000.0,
-      "sga_expense": null,
+      "sga_expense": 23709000000.0,
       "cogs": 25959000000.0,
       "interest_expense": null,
       "income_tax": 8330000000.0,
@@ -156,6 +157,44 @@
     }
   ],
   "quarterly_periods": [
+    {
+      "ticker": "META",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Family of Apps",
+          "value": 55909000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Reality Labs",
+          "value": 402000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 56311000000.0,
+      "gross_profit": 46093000000.0,
+      "operating_income": 22872000000.0,
+      "net_income": 26773000000.0,
+      "rd_expense": 17699000000.0,
+      "sga_expense": 5522000000.0,
+      "cogs": 10218000000.0,
+      "interest_expense": null,
+      "income_tax": -5021000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
     {
       "ticker": "META",
       "period": "2025Q3",
@@ -181,11 +220,11 @@
         }
       ],
       "total_revenue": 51242000000.0,
-      "gross_profit": null,
+      "gross_profit": 42036000000.0,
       "operating_income": 20535000000.0,
       "net_income": 2709000000.0,
       "rd_expense": 15144000000.0,
-      "sga_expense": null,
+      "sga_expense": 6357000000.0,
       "cogs": 9206000000.0,
       "interest_expense": null,
       "income_tax": 18954000000.0,
@@ -219,11 +258,11 @@
         }
       ],
       "total_revenue": 47516000000.0,
-      "gross_profit": null,
+      "gross_profit": 39025000000.0,
       "operating_income": 20441000000.0,
       "net_income": 18337000000.0,
       "rd_expense": 12942000000.0,
-      "sga_expense": null,
+      "sga_expense": 5642000000.0,
       "cogs": 8491000000.0,
       "interest_expense": null,
       "income_tax": 2197000000.0,
@@ -257,11 +296,11 @@
         }
       ],
       "total_revenue": 42314000000.0,
-      "gross_profit": null,
+      "gross_profit": 34742000000.0,
       "operating_income": 17555000000.0,
       "net_income": 16644000000.0,
       "rd_expense": 12150000000.0,
-      "sga_expense": null,
+      "sga_expense": 5037000000.0,
       "cogs": 7572000000.0,
       "interest_expense": null,
       "income_tax": 1738000000.0,
@@ -295,11 +334,11 @@
         }
       ],
       "total_revenue": 40589000000.0,
-      "gross_profit": null,
+      "gross_profit": 33214000000.0,
       "operating_income": 17350000000.0,
       "net_income": 15688000000.0,
       "rd_expense": 11177000000.0,
-      "sga_expense": null,
+      "sga_expense": 4687000000.0,
       "cogs": 7375000000.0,
       "interest_expense": null,
       "income_tax": 2134000000.0,
@@ -335,11 +374,11 @@
         }
       ],
       "total_revenue": 39071000000.0,
-      "gross_profit": null,
+      "gross_profit": 31763000000.0,
       "operating_income": 14847000000.0,
       "net_income": 13465000000.0,
       "rd_expense": 10537000000.0,
-      "sga_expense": null,
+      "sga_expense": 6379000000.0,
       "cogs": 7308000000.0,
       "interest_expense": null,
       "income_tax": 1641000000.0,
@@ -375,11 +414,11 @@
         }
       ],
       "total_revenue": 36455000000.0,
-      "gross_profit": null,
+      "gross_profit": 29815000000.0,
       "operating_income": 13818000000.0,
       "net_income": 12369000000.0,
       "rd_expense": 9978000000.0,
-      "sga_expense": null,
+      "sga_expense": 6019000000.0,
       "cogs": 6640000000.0,
       "interest_expense": null,
       "income_tax": 1814000000.0,
@@ -415,11 +454,11 @@
         }
       ],
       "total_revenue": 34146000000.0,
-      "gross_profit": null,
+      "gross_profit": 27936000000.0,
       "operating_income": 13748000000.0,
       "net_income": 11583000000.0,
       "rd_expense": 9241000000.0,
-      "sga_expense": null,
+      "sga_expense": 4947000000.0,
       "cogs": 6210000000.0,
       "interest_expense": null,
       "income_tax": 2437000000.0,
@@ -455,11 +494,11 @@
         }
       ],
       "total_revenue": 31999000000.0,
-      "gross_profit": null,
+      "gross_profit": 26054000000.0,
       "operating_income": 9392000000.0,
       "net_income": 7788000000.0,
       "rd_expense": 9344000000.0,
-      "sga_expense": null,
+      "sga_expense": 7318000000.0,
       "cogs": 5945000000.0,
       "interest_expense": null,
       "income_tax": 1505000000.0,
@@ -469,58 +508,13 @@
       "notes": [
         "Warning: total_revenue (31999000000) differs from Yahoo (134902000000) by 76.3%"
       ]
-    },
-    {
-      "ticker": "META",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [
-        {
-          "segment_name": "Family of Apps",
-          "value": 28306000000.0,
-          "unit": "USD",
-          "period": "2023-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Reality Labs",
-          "value": 339000000.0,
-          "unit": "USD",
-          "period": "2023-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        }
-      ],
-      "total_revenue": 28645000000.0,
-      "gross_profit": null,
-      "operating_income": 7227000000.0,
-      "net_income": 5709000000.0,
-      "rd_expense": 9381000000.0,
-      "sga_expense": null,
-      "cogs": 6108000000.0,
-      "interest_expense": null,
-      "income_tax": 1598000000.0,
-      "currency": "USD",
-      "extraction_method": "xbrl",
-      "confidence": 1.0,
-      "notes": [
-        "Warning: total_revenue (28645000000) differs from Yahoo (134902000000) by 78.8%"
-      ]
     }
   ],
-  "ttm_revenue": 181661000000.0,
-  "ttm_operating_income": 75881000000.0,
-  "ttm_net_income": 53378000000.0,
+  "ttm_revenue": 197383000000.0,
+  "ttm_operating_income": 81403000000.0,
+  "ttm_net_income": 64463000000.0,
   "segment_trend": {
     "Family of Apps": [
-      {
-        "period": "2023Q1",
-        "value": 28306000000.0,
-        "is_annual": false
-      },
       {
         "period": "2023Q2",
         "value": 31723000000.0,
@@ -562,6 +556,11 @@
         "is_annual": false
       },
       {
+        "period": "2026Q1",
+        "value": 55909000000.0,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
         "value": 133006000000.0,
         "is_annual": true
@@ -578,11 +577,6 @@
       }
     ],
     "Reality Labs": [
-      {
-        "period": "2023Q1",
-        "value": 339000000.0,
-        "is_annual": false
-      },
       {
         "period": "2023Q2",
         "value": 276000000.0,
@@ -621,6 +615,11 @@
       {
         "period": "2025Q3",
         "value": 470000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 402000000.0,
         "is_annual": false
       },
       {

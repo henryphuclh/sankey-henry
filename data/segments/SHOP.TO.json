@@ -1,73 +1,46 @@
 {
   "ticker": "SHOP.TO",
   "name": "Shopify Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "SHOP.TO",
-    "period": "FY2026",
+    "period": "FY2025",
     "is_annual": true,
-    "fiscal_year": 2026,
+    "fiscal_year": 2025,
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Shopify Platform",
-        "value": 11556000000.0,
+        "segment_name": "Subscription solutions",
+        "value": 2752000000.0,
         "unit": "USD",
-        "period": "FY2026",
-        "concept": "llm_extracted",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Merchant solutions",
+        "value": 8804000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
         "is_annual": true
       }
     ],
     "total_revenue": 11556000000.0,
     "gross_profit": 5555000000.0,
-    "operating_income": 1885000000.0,
+    "operating_income": 1468000000.0,
     "net_income": 1231000000.0,
     "rd_expense": 1536000000.0,
     "sga_expense": 2134000000.0,
     "cogs": 6001000000.0,
     "interest_expense": null,
-    "income_tax": 278000000.0,
+    "income_tax": -278000000.0,
     "currency": "USD",
-    "extraction_method": "yahoo+llm",
+    "extraction_method": "xbrl",
     "confidence": 1.0,
-    "notes": [
-      "Source: Yahoo Finance (no SEC filing available)",
-      "⚠ Limited Segment Detail — aggregate data only"
-    ]
+    "notes": []
   },
   "annual_periods": [
-    {
-      "ticker": "SHOP.TO",
-      "period": "FY2026",
-      "is_annual": true,
-      "fiscal_year": 2026,
-      "fiscal_quarter": null,
-      "segments": [
-        {
-          "segment_name": "Shopify Platform",
-          "value": 11556000000.0,
-          "unit": "USD",
-          "period": "FY2026",
-          "concept": "llm_extracted",
-          "is_annual": true
-        }
-      ],
-      "total_revenue": 11556000000.0,
-      "gross_profit": 5555000000.0,
-      "operating_income": 1885000000.0,
-      "net_income": 1231000000.0,
-      "rd_expense": 1536000000.0,
-      "sga_expense": 2134000000.0,
-      "cogs": 6001000000.0,
-      "interest_expense": null,
-      "income_tax": 278000000.0,
-      "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 1.0,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
-    },
     {
       "ticker": "SHOP.TO",
       "period": "FY2025",
@@ -76,30 +49,35 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Shopify Platform",
-          "value": 11556000000.0,
+          "segment_name": "Subscription solutions",
+          "value": 2752000000.0,
           "unit": "USD",
-          "period": "FY2025",
-          "concept": "llm_extracted",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Merchant solutions",
+          "value": 8804000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
       "total_revenue": 11556000000.0,
       "gross_profit": 5555000000.0,
-      "operating_income": 1885000000.0,
+      "operating_income": 1468000000.0,
       "net_income": 1231000000.0,
       "rd_expense": 1536000000.0,
       "sga_expense": 2134000000.0,
       "cogs": 6001000000.0,
       "interest_expense": null,
-      "income_tax": 278000000.0,
+      "income_tax": -278000000.0,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "notes": []
     },
     {
       "ticker": "SHOP.TO",
@@ -109,246 +87,264 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Shopify Platform",
-          "value": 11556000000.0,
+          "segment_name": "Subscription solutions",
+          "value": 2350000000.0,
           "unit": "USD",
-          "period": "FY2024",
-          "concept": "llm_extracted",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Merchant solutions",
+          "value": 6530000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 11556000000.0,
-      "gross_profit": 5555000000.0,
-      "operating_income": 1885000000.0,
-      "net_income": 1231000000.0,
-      "rd_expense": 1536000000.0,
-      "sga_expense": 2134000000.0,
-      "cogs": 6001000000.0,
+      "total_revenue": 8880000000.0,
+      "gross_profit": 4472000000.0,
+      "operating_income": 1075000000.0,
+      "net_income": 2019000000.0,
+      "rd_expense": 1367000000.0,
+      "sga_expense": 1803000000.0,
+      "cogs": 4408000000.0,
       "interest_expense": null,
-      "income_tax": 278000000.0,
+      "income_tax": -209000000.0,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "notes": []
     }
   ],
   "quarterly_periods": [
     {
       "ticker": "SHOP.TO",
-      "period": "2025Q4",
+      "period": "2026Q1",
       "is_annual": false,
-      "fiscal_year": 2025,
-      "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 3672000000.0,
-      "gross_profit": 1693000000.0,
-      "operating_income": 745000000.0,
-      "net_income": 743000000.0,
-      "rd_expense": 390000000.0,
-      "sga_expense": 558000000.0,
-      "cogs": 1979000000.0,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Subscription solutions",
+          "value": 750000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Merchant solutions",
+          "value": 2420000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3170000000.0,
+      "gross_profit": 1546000000.0,
+      "operating_income": 382000000.0,
+      "net_income": -581000000.0,
+      "rd_expense": 437000000.0,
+      "sga_expense": 611000000.0,
+      "cogs": 1624000000.0,
       "interest_expense": null,
-      "income_tax": 149000000.0,
+      "income_tax": 53000000.0,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
     },
     {
       "ticker": "SHOP.TO",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Shopify Platform",
-          "value": 3672000000.0,
+          "segment_name": "Subscription solutions",
+          "value": 699000000.0,
           "unit": "USD",
-          "period": "2025Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Merchant solutions",
+          "value": 2145000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
-      "total_revenue": 3672000000.0,
-      "gross_profit": 1693000000.0,
-      "operating_income": 745000000.0,
-      "net_income": 743000000.0,
-      "rd_expense": 390000000.0,
-      "sga_expense": 558000000.0,
-      "cogs": 1979000000.0,
+      "total_revenue": 2844000000.0,
+      "gross_profit": 1391000000.0,
+      "operating_income": 343000000.0,
+      "net_income": 264000000.0,
+      "rd_expense": 375000000.0,
+      "sga_expense": 525000000.0,
+      "cogs": 1453000000.0,
       "interest_expense": null,
-      "income_tax": 149000000.0,
+      "income_tax": -44000000.0,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "notes": []
     },
     {
       "ticker": "SHOP.TO",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 3672000000.0,
-      "gross_profit": 1693000000.0,
-      "operating_income": 745000000.0,
-      "net_income": 743000000.0,
-      "rd_expense": 390000000.0,
-      "sga_expense": 558000000.0,
-      "cogs": 1979000000.0,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "Subscription solutions",
+          "value": 656000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Merchant solutions",
+          "value": 2024000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 2680000000.0,
+      "gross_profit": 1302000000.0,
+      "operating_income": 291000000.0,
+      "net_income": 906000000.0,
+      "rd_expense": 394000000.0,
+      "sga_expense": 537000000.0,
+      "cogs": 1378000000.0,
       "interest_expense": null,
-      "income_tax": 149000000.0,
+      "income_tax": -173000000.0,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
     },
     {
       "ticker": "SHOP.TO",
       "period": "2025Q1",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 3672000000.0,
-      "gross_profit": 1693000000.0,
-      "operating_income": 745000000.0,
-      "net_income": 743000000.0,
-      "rd_expense": 390000000.0,
-      "sga_expense": 558000000.0,
-      "cogs": 1979000000.0,
-      "interest_expense": null,
-      "income_tax": 149000000.0,
-      "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
-    },
-    {
-      "ticker": "SHOP.TO",
-      "period": "2024Q4",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Shopify Platform",
-          "value": 3672000000.0,
+          "segment_name": "Subscription solutions",
+          "value": 620000000.0,
           "unit": "USD",
-          "period": "2024Q4",
-          "concept": "llm_extracted",
-          "is_annual": false
-        }
-      ],
-      "total_revenue": 3672000000.0,
-      "gross_profit": 1693000000.0,
-      "operating_income": 745000000.0,
-      "net_income": 743000000.0,
-      "rd_expense": 390000000.0,
-      "sga_expense": 558000000.0,
-      "cogs": 1979000000.0,
-      "interest_expense": null,
-      "income_tax": 149000000.0,
-      "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 1.0,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
-    },
-    {
-      "ticker": "SHOP.TO",
-      "period": "2024Q3",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": null,
-      "segments": [
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
         {
-          "segment_name": "Shopify Platform",
-          "value": 3672000000.0,
+          "segment_name": "Merchant solutions",
+          "value": 1740000000.0,
           "unit": "USD",
-          "period": "2024Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
-      "total_revenue": 3672000000.0,
-      "gross_profit": 1693000000.0,
-      "operating_income": 745000000.0,
-      "net_income": 743000000.0,
-      "rd_expense": 390000000.0,
-      "sga_expense": 558000000.0,
-      "cogs": 1979000000.0,
+      "total_revenue": 2360000000.0,
+      "gross_profit": 1169000000.0,
+      "operating_income": 203000000.0,
+      "net_income": -682000000.0,
+      "rd_expense": 377000000.0,
+      "sga_expense": 514000000.0,
+      "cogs": 1191000000.0,
       "interest_expense": null,
-      "income_tax": 149000000.0,
+      "income_tax": 88000000.0,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "notes": []
     }
   ],
-  "ttm_revenue": 14688000000.0,
-  "ttm_operating_income": 2980000000.0,
-  "ttm_net_income": 2972000000.0,
+  "ttm_revenue": 11054000000.0,
+  "ttm_operating_income": 1219000000.0,
+  "ttm_net_income": -93000000.0,
   "segment_trend": {
-    "Shopify Platform": [
+    "Subscription solutions": [
       {
-        "period": "2024Q3",
-        "value": 3672000000.0,
+        "period": "2025Q1",
+        "value": 620000000.0,
         "is_annual": false
       },
       {
-        "period": "2024Q4",
-        "value": 3672000000.0,
+        "period": "2025Q2",
+        "value": 656000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 3672000000.0,
+        "value": 699000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 750000000.0,
         "is_annual": false
       },
       {
         "period": "FY2024",
-        "value": 11556000000.0,
+        "value": 2350000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 11556000000.0,
+        "value": 2752000000.0,
+        "is_annual": true
+      }
+    ],
+    "Merchant solutions": [
+      {
+        "period": "2025Q1",
+        "value": 1740000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 2024000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2145000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 2420000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 6530000000.0,
         "is_annual": true
       },
       {
-        "period": "FY2026",
-        "value": 11556000000.0,
+        "period": "FY2025",
+        "value": 8804000000.0,
         "is_annual": true
       }
     ]
   },
-  "annual_count": 3,
-  "quarterly_count": 6,
+  "annual_count": 2,
+  "quarterly_count": 4,
   "has_partial_data": true,
   "data_notes": [
-    "Partial data: 3/3 annual, 6/12 quarterly"
+    "Partial data: 2/3 annual, 4/12 quarterly"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "ticker": "AMZN",
   "name": "Amazon.com Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "AMZN",
     "period": "FY2025",
@@ -9,16 +10,40 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "North America",
-        "value": 426305000000.0,
+        "segment_name": "Online stores",
+        "value": 269287000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "International",
-        "value": 161894000000.0,
+        "segment_name": "Physical stores",
+        "value": 22561000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Third-party seller services",
+        "value": 172162000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Advertising services",
+        "value": 68635000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Subscription services",
+        "value": 49619000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -31,16 +56,24 @@
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
+      },
+      {
+        "segment_name": "Other",
+        "value": 5935000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
       }
     ],
     "total_revenue": 716924000000.0,
-    "gross_profit": null,
+    "gross_profit": 360510000000.0,
     "operating_income": 79975000000.0,
     "net_income": 77670000000.0,
     "rd_expense": null,
-    "sga_expense": null,
+    "sga_expense": 58301000000.0,
     "cogs": 356414000000.0,
-    "interest_expense": null,
+    "interest_expense": -2274000000.0,
     "income_tax": -19087000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -56,16 +89,40 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "North America",
-          "value": 426305000000.0,
+          "segment_name": "Online stores",
+          "value": 269287000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International",
-          "value": 161894000000.0,
+          "segment_name": "Physical stores",
+          "value": 22561000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Third-party seller services",
+          "value": 172162000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising services",
+          "value": 68635000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription services",
+          "value": 49619000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -78,16 +135,24 @@
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 5935000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 716924000000.0,
-      "gross_profit": null,
+      "gross_profit": 360510000000.0,
       "operating_income": 79975000000.0,
       "net_income": 77670000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 58301000000.0,
       "cogs": 356414000000.0,
-      "interest_expense": null,
+      "interest_expense": -2274000000.0,
       "income_tax": -19087000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -102,16 +167,40 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "North America",
-          "value": 387497000000.0,
+          "segment_name": "Online stores",
+          "value": 247029000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International",
-          "value": 142906000000.0,
+          "segment_name": "Physical stores",
+          "value": 21215000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Third-party seller services",
+          "value": 156146000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising services",
+          "value": 56214000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription services",
+          "value": 44374000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -124,16 +213,24 @@
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 5425000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 637959000000.0,
-      "gross_profit": null,
+      "gross_profit": 311671000000.0,
       "operating_income": 68593000000.0,
       "net_income": 59248000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 55266000000.0,
       "cogs": 326288000000.0,
-      "interest_expense": null,
+      "interest_expense": -2406000000.0,
       "income_tax": -9265000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -148,16 +245,40 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "North America",
-          "value": 352828000000.0,
+          "segment_name": "Online stores",
+          "value": 231872000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International",
-          "value": 131200000000.0,
+          "segment_name": "Physical stores",
+          "value": 20030000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Third-party seller services",
+          "value": 140053000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising services",
+          "value": 46906000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription services",
+          "value": 40209000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -170,14 +291,22 @@
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 4958000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 574785000000.0,
-      "gross_profit": null,
+      "gross_profit": 270046000000.0,
       "operating_income": 36852000000.0,
       "net_income": 30425000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 56186000000.0,
       "cogs": 304739000000.0,
       "interest_expense": -3182000000.0,
       "income_tax": -7120000000.0,
@@ -190,22 +319,124 @@
   "quarterly_periods": [
     {
       "ticker": "AMZN",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Online stores",
+          "value": 64254000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Physical stores",
+          "value": 5785000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Third-party seller services",
+          "value": 41578000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising services",
+          "value": 17243000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription services",
+          "value": 13427000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "AWS",
+          "value": 37587000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 1645000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 181519000000.0,
+      "gross_profit": 94056000000.0,
+      "operating_income": 23852000000.0,
+      "net_income": 30255000000.0,
+      "rd_expense": null,
+      "sga_expense": 12901000000.0,
+      "cogs": 87463000000.0,
+      "interest_expense": -800000000.0,
+      "income_tax": -9560000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "AMZN",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "North America",
-          "value": 106267000000.0,
+          "segment_name": "Online stores",
+          "value": 67407000000.0,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International",
-          "value": 40896000000.0,
+          "segment_name": "Physical stores",
+          "value": 5578000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Third-party seller services",
+          "value": 42486000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising services",
+          "value": 17703000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription services",
+          "value": 12574000000.0,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -218,16 +449,24 @@
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 1415000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 180169000000.0,
-      "gross_profit": null,
+      "gross_profit": 91499000000.0,
       "operating_income": 17422000000.0,
       "net_income": 21187000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 14561000000.0,
       "cogs": 88670000000.0,
-      "interest_expense": null,
+      "interest_expense": -538000000.0,
       "income_tax": -6910000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -242,16 +481,40 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "North America",
-          "value": 100068000000.0,
+          "segment_name": "Online stores",
+          "value": 61485000000.0,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "International",
-          "value": 36761000000.0,
+          "segment_name": "Physical stores",
+          "value": 5595000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Third-party seller services",
+          "value": 40348000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Advertising services",
+          "value": 15694000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Subscription services",
+          "value": 12208000000.0,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -264,16 +527,24 @@
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 1499000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 167702000000.0,
-      "gross_profit": null,
+      "gross_profit": 86893000000.0,
       "operating_income": 19171000000.0,
       "net_income": 18164000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 14381000000.0,
       "cogs": 80809000000.0,
-      "interest_expense": null,
+      "interest_expense": -516000000.0,
       "income_tax": -2678000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -290,39 +561,39 @@
         {
           "segment_name": "North America",
           "value": 92887000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "International",
           "value": 33513000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "AWS",
           "value": 29267000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 155667000000.0,
-      "gross_profit": null,
+      "gross_profit": 78691000000.0,
       "operating_income": 18405000000.0,
       "net_income": 17127000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 12391000000.0,
       "cogs": 76976000000.0,
-      "interest_expense": null,
+      "interest_expense": -541000000.0,
       "income_tax": -4553000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": []
     },
@@ -335,40 +606,40 @@
       "segments": [
         {
           "segment_name": "North America",
-          "value": 95537000000.0,
-          "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 87887000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "International",
-          "value": 35888000000.0,
-          "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 32137000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "AWS",
-          "value": 27452000000.0,
-          "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 23059000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 158877000000.0,
-      "gross_profit": null,
+      "gross_profit": 77900000000.0,
       "operating_income": 17411000000.0,
       "net_income": 15328000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 13322000000.0,
       "cogs": 80977000000.0,
-      "interest_expense": null,
+      "interest_expense": -603000000.0,
       "income_tax": -2706000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (158877000000) differs from Yahoo (637959000000) by 75.1%"
@@ -384,39 +655,39 @@
         {
           "segment_name": "North America",
           "value": 90033000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "International",
           "value": 31663000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "AWS",
           "value": 26281000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 147977000000.0,
-      "gross_profit": null,
+      "gross_profit": 74192000000.0,
       "operating_income": 14672000000.0,
       "net_income": 13485000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 13553000000.0,
       "cogs": 73785000000.0,
-      "interest_expense": null,
+      "interest_expense": -589000000.0,
       "income_tax": -1767000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (147977000000) differs from Yahoo (637959000000) by 76.8%"
@@ -432,39 +703,39 @@
         {
           "segment_name": "North America",
           "value": 86341000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "International",
           "value": 31935000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "AWS",
           "value": 25037000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 143313000000.0,
-      "gross_profit": null,
+      "gross_profit": 70680000000.0,
       "operating_income": 15307000000.0,
       "net_income": 10431000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 12404000000.0,
       "cogs": 72633000000.0,
       "interest_expense": -644000000.0,
       "income_tax": -2467000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (143313000000) differs from Yahoo (637959000000) by 77.5%"
@@ -479,40 +750,40 @@
       "segments": [
         {
           "segment_name": "North America",
-          "value": 87887000000.0,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 83779310183.22383,
+          "unit": "MILLIONS",
+          "period": "2023Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "International",
-          "value": 32137000000.0,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 34245988919.208374,
+          "unit": "MILLIONS",
+          "period": "2023Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "AWS",
-          "value": 23059000000.0,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 25057700897.567806,
+          "unit": "MILLIONS",
+          "period": "2023Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 143083000000.0,
-      "gross_profit": null,
+      "gross_profit": 68061000000.0,
       "operating_income": 11188000000.0,
       "net_income": 9879000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 13112000000.0,
       "cogs": 75022000000.0,
       "interest_expense": -806000000.0,
       "income_tax": -2306000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (143083000000) differs from Yahoo (574785000000) by 75.1%"
@@ -528,103 +799,50 @@
         {
           "segment_name": "North America",
           "value": 82546000000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2023Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "International",
           "value": 29697000000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2023Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "AWS",
           "value": 22140000000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2023Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 134383000000.0,
-      "gross_profit": null,
+      "gross_profit": 65010000000.0,
       "operating_income": 7681000000.0,
       "net_income": 6750000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 13947000000.0,
       "cogs": 69373000000.0,
       "interest_expense": -840000000.0,
       "income_tax": -804000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (134383000000) differs from Yahoo (574785000000) by 76.6%"
       ]
-    },
-    {
-      "ticker": "AMZN",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [
-        {
-          "segment_name": "North America",
-          "value": 76881000000.0,
-          "unit": "USD",
-          "period": "2023-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "International",
-          "value": 29123000000.0,
-          "unit": "USD",
-          "period": "2023-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "AWS",
-          "value": 21354000000.0,
-          "unit": "USD",
-          "period": "2023-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        }
-      ],
-      "total_revenue": 127358000000.0,
-      "gross_profit": null,
-      "operating_income": 4774000000.0,
-      "net_income": 3172000000.0,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": 67791000000.0,
-      "interest_expense": -823000000.0,
-      "income_tax": -948000000.0,
-      "currency": "USD",
-      "extraction_method": "xbrl",
-      "confidence": 1.0,
-      "notes": [
-        "Warning: total_revenue (127358000000) differs from Yahoo (574785000000) by 77.8%"
-      ]
     }
   ],
-  "ttm_revenue": 662415000000.0,
-  "ttm_operating_income": 72409000000.0,
-  "ttm_net_income": 71806000000.0,
+  "ttm_revenue": 685057000000.0,
+  "ttm_operating_income": 78850000000.0,
+  "ttm_net_income": 86733000000.0,
   "segment_trend": {
     "North America": [
-      {
-        "period": "2023Q1",
-        "value": 76881000000.0,
-        "is_annual": false
-      },
       {
         "period": "2023Q2",
         "value": 82546000000.0,
@@ -632,7 +850,7 @@
       },
       {
         "period": "2023Q3",
-        "value": 87887000000.0,
+        "value": 83779310183.22383,
         "is_annual": false
       },
       {
@@ -647,46 +865,16 @@
       },
       {
         "period": "2024Q3",
-        "value": 95537000000.0,
+        "value": 87887000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q1",
         "value": 92887000000.0,
         "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 100068000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 106267000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 352828000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 387497000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 426305000000.0,
-        "is_annual": true
       }
     ],
     "International": [
-      {
-        "period": "2023Q1",
-        "value": 29123000000.0,
-        "is_annual": false
-      },
       {
         "period": "2023Q2",
         "value": 29697000000.0,
@@ -694,7 +882,7 @@
       },
       {
         "period": "2023Q3",
-        "value": 32137000000.0,
+        "value": 34245988919.208374,
         "is_annual": false
       },
       {
@@ -709,46 +897,16 @@
       },
       {
         "period": "2024Q3",
-        "value": 35888000000.0,
+        "value": 32137000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q1",
         "value": 33513000000.0,
         "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 36761000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 40896000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 131200000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 142906000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 161894000000.0,
-        "is_annual": true
       }
     ],
     "AWS": [
-      {
-        "period": "2023Q1",
-        "value": 21354000000.0,
-        "is_annual": false
-      },
       {
         "period": "2023Q2",
         "value": 22140000000.0,
@@ -756,7 +914,7 @@
       },
       {
         "period": "2023Q3",
-        "value": 23059000000.0,
+        "value": 25057700897.567806,
         "is_annual": false
       },
       {
@@ -771,7 +929,7 @@
       },
       {
         "period": "2024Q3",
-        "value": 27452000000.0,
+        "value": 23059000000.0,
         "is_annual": false
       },
       {
@@ -790,6 +948,11 @@
         "is_annual": false
       },
       {
+        "period": "2026Q1",
+        "value": 37587000000.0,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
         "value": 90757000000.0,
         "is_annual": true
@@ -802,6 +965,198 @@
       {
         "period": "FY2025",
         "value": 128725000000.0,
+        "is_annual": true
+      }
+    ],
+    "Online stores": [
+      {
+        "period": "2025Q2",
+        "value": 61485000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 67407000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 64254000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 231872000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 247029000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 269287000000.0,
+        "is_annual": true
+      }
+    ],
+    "Physical stores": [
+      {
+        "period": "2025Q2",
+        "value": 5595000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 5578000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 5785000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 20030000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 21215000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 22561000000.0,
+        "is_annual": true
+      }
+    ],
+    "Third-party seller services": [
+      {
+        "period": "2025Q2",
+        "value": 40348000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 42486000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 41578000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 140053000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 156146000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 172162000000.0,
+        "is_annual": true
+      }
+    ],
+    "Advertising services": [
+      {
+        "period": "2025Q2",
+        "value": 15694000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 17703000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 17243000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 46906000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 56214000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 68635000000.0,
+        "is_annual": true
+      }
+    ],
+    "Subscription services": [
+      {
+        "period": "2025Q2",
+        "value": 12208000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 12574000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 13427000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 40209000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 44374000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 49619000000.0,
+        "is_annual": true
+      }
+    ],
+    "Other": [
+      {
+        "period": "2025Q2",
+        "value": 1499000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1415000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1645000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 4958000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 5425000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 5935000000.0,
         "is_annual": true
       }
     ]

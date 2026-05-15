@@ -1,6 +1,7 @@
 {
   "ticker": "KO",
   "name": "Coca-Cola Company",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "KO",
     "period": "FY2025",
@@ -8,14 +9,6 @@
     "fiscal_year": 2025,
     "fiscal_quarter": null,
     "segments": [
-      {
-        "segment_name": "North America",
-        "value": 19586000000.0,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
       {
         "segment_name": "EMEA",
         "value": 11513000000.0,
@@ -33,8 +26,8 @@
         "is_annual": true
       },
       {
-        "segment_name": "Bottling Investments",
-        "value": 5735000000.0,
+        "segment_name": "North America",
+        "value": 19586000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -49,8 +42,8 @@
         "is_annual": true
       },
       {
-        "segment_name": "Segment Reporting, Reconciling Item, Corporate Nonsegment",
-        "value": 144000000.0,
+        "segment_name": "Bottling Investments",
+        "value": 5735000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -64,7 +57,7 @@
     "rd_expense": null,
     "sga_expense": 14521000000.0,
     "cogs": 18397000000.0,
-    "interest_expense": null,
+    "interest_expense": 1654000000.0,
     "income_tax": 2861000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -79,14 +72,6 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [
-        {
-          "segment_name": "North America",
-          "value": 19586000000.0,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
         {
           "segment_name": "EMEA",
           "value": 11513000000.0,
@@ -104,8 +89,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Bottling Investments",
-          "value": 5735000000.0,
+          "segment_name": "North America",
+          "value": 19586000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -120,8 +105,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "Segment Reporting, Reconciling Item, Corporate Nonsegment",
-          "value": 144000000.0,
+          "segment_name": "Bottling Investments",
+          "value": 5735000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -135,7 +120,7 @@
       "rd_expense": null,
       "sga_expense": 14521000000.0,
       "cogs": 18397000000.0,
-      "interest_expense": null,
+      "interest_expense": 1654000000.0,
       "income_tax": 2861000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -196,14 +181,6 @@
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Corporate",
-          "value": 97000000.0,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 47061000000.0,
@@ -213,7 +190,7 @@
       "rd_expense": null,
       "sga_expense": 14582000000.0,
       "cogs": 18324000000.0,
-      "interest_expense": null,
+      "interest_expense": 1656000000.0,
       "income_tax": 2437000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -274,14 +251,6 @@
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Corporate",
-          "value": 126000000.0,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 45754000000.0,
@@ -302,23 +271,126 @@
   "quarterly_periods": [
     {
       "ticker": "KO",
+      "period": "2026Q2",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 2,
+      "segments": [
+        {
+          "segment_name": "EMEA",
+          "value": 3012000000.0,
+          "unit": "USD",
+          "period": "2026-04-03 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 1678000000.0,
+          "unit": "USD",
+          "period": "2026-04-03 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "North America",
+          "value": 4893000000.0,
+          "unit": "USD",
+          "period": "2026-04-03 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "A. Pacific",
+          "value": 1508000000.0,
+          "unit": "USD",
+          "period": "2026-04-03 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Bottling Investments",
+          "value": 1640000000.0,
+          "unit": "USD",
+          "period": "2026-04-03 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12472000000.0,
+      "gross_profit": 7852000000.0,
+      "operating_income": 4359000000.0,
+      "net_income": 3966000000.0,
+      "rd_expense": null,
+      "sga_expense": 3472000000.0,
+      "cogs": 4620000000.0,
+      "interest_expense": 375000000.0,
+      "income_tax": 645000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "KO",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Europe, Middle East & Africa",
+          "value": 2996000000.0,
+          "unit": "USD",
+          "period": "2025-09-26 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 1573000000.0,
+          "unit": "USD",
+          "period": "2025-09-26 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "North America",
+          "value": 5253000000.0,
+          "unit": "USD",
+          "period": "2025-09-26 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific",
+          "value": 1506000000.0,
+          "unit": "USD",
+          "period": "2025-09-26 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Bottling Investments",
+          "value": 1346000000.0,
+          "unit": "USD",
+          "period": "2025-09-26 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12455000000.0,
+      "gross_profit": 7658000000.0,
+      "operating_income": 3982000000.0,
+      "net_income": 3696000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 3618000000.0,
+      "cogs": 4797000000.0,
+      "interest_expense": 391000000.0,
+      "income_tax": 500000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -327,19 +399,60 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Europe, Middle East & Africa",
+          "value": 3176000000.0,
+          "unit": "USD",
+          "period": "2025-06-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 1587000000.0,
+          "unit": "USD",
+          "period": "2025-06-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "North America",
+          "value": 5029000000.0,
+          "unit": "USD",
+          "period": "2025-06-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific",
+          "value": 1572000000.0,
+          "unit": "USD",
+          "period": "2025-06-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Bottling Investments",
+          "value": 1411000000.0,
+          "unit": "USD",
+          "period": "2025-06-27 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12535000000.0,
+      "gross_profit": 7821000000.0,
+      "operating_income": 4280000000.0,
+      "net_income": 3810000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 3470000000.0,
+      "cogs": 4714000000.0,
+      "interest_expense": 445000000.0,
+      "income_tax": 993000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -388,14 +501,6 @@
           "period": "2025-03-28 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Corporate",
-          "value": 26000000.0,
-          "unit": "USD",
-          "period": "2025-03-28 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 11129000000.0,
@@ -405,7 +510,7 @@
       "rd_expense": null,
       "sga_expense": 3234000000.0,
       "cogs": 4163000000.0,
-      "interest_expense": null,
+      "interest_expense": 387000000.0,
       "income_tax": 722000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -418,20 +523,71 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Europe, Middle East & Africa",
+          "value": 2019000000.0,
+          "unit": "USD",
+          "period": "2024-09-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 1639000000.0,
+          "unit": "USD",
+          "period": "2024-09-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "North America",
+          "value": 4984000000.0,
+          "unit": "USD",
+          "period": "2024-09-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific",
+          "value": 1349000000.0,
+          "unit": "USD",
+          "period": "2024-09-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Ventures",
+          "value": 781000000.0,
+          "unit": "USD",
+          "period": "2024-09-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Bottling Investments",
+          "value": 1316000000.0,
+          "unit": "USD",
+          "period": "2024-09-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11854000000.0,
+      "gross_profit": 7190000000.0,
+      "operating_income": 2510000000.0,
+      "net_income": 2850000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 3636000000.0,
+      "cogs": 4664000000.0,
+      "interest_expense": 425000000.0,
+      "income_tax": 530000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (11854000000) differs from Yahoo (47061000000) by 74.8%"
+      ]
     },
     {
       "ticker": "KO",
@@ -487,14 +643,6 @@
           "period": "2024-06-28 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Corporate",
-          "value": 30000000.0,
-          "unit": "USD",
-          "period": "2024-06-28 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 12363000000.0,
@@ -504,7 +652,7 @@
       "rd_expense": null,
       "sga_expense": 3549000000.0,
       "cogs": 4812000000.0,
-      "interest_expense": null,
+      "interest_expense": 418000000.0,
       "income_tax": 627000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -512,27 +660,6 @@
       "notes": [
         "Warning: total_revenue (12363000000) differs from Yahoo (47061000000) by 73.7%"
       ]
-    },
-    {
-      "ticker": "KO",
-      "period": "2024Q1",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
     },
     {
       "ticker": "KO",
@@ -588,14 +715,6 @@
           "period": "2024-03-29 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Corporate",
-          "value": 27000000.0,
-          "unit": "USD",
-          "period": "2024-03-29 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 11300000000.0,
@@ -620,20 +739,71 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Europe, Middle East & Africa",
+          "value": 2176000000.0,
+          "unit": "USD",
+          "period": "2023-09-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 1574000000.0,
+          "unit": "USD",
+          "period": "2023-09-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "North America",
+          "value": 4463000000.0,
+          "unit": "USD",
+          "period": "2023-09-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific",
+          "value": 1402000000.0,
+          "unit": "USD",
+          "period": "2023-09-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Ventures",
+          "value": 779000000.0,
+          "unit": "USD",
+          "period": "2023-09-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Bottling Investments",
+          "value": 1859000000.0,
+          "unit": "USD",
+          "period": "2023-09-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11953000000.0,
+      "gross_profit": 7296000000.0,
+      "operating_income": 3270000000.0,
+      "net_income": 3087000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 3667000000.0,
+      "cogs": 4657000000.0,
+      "interest_expense": 368000000.0,
+      "income_tax": 454000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (11953000000) differs from Yahoo (45754000000) by 73.9%"
+      ]
     },
     {
       "ticker": "KO",
@@ -641,48 +811,88 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Europe, Middle East & Africa",
+          "value": 2188000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America",
+          "value": 1378000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "North America",
+          "value": 4367000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific",
+          "value": 1567000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Ventures",
+          "value": 765000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Bottling Investments",
+          "value": 2042000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11972000000.0,
+      "gross_profit": 7060000000.0,
+      "operating_income": 2401000000.0,
+      "net_income": 2547000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 3321000000.0,
+      "cogs": 4912000000.0,
+      "interest_expense": 374000000.0,
+      "income_tax": 359000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "KO",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (11972000000) differs from Yahoo (45754000000) by 73.8%"
+      ]
     }
   ],
-  "ttm_revenue": 11129000000.0,
-  "ttm_operating_income": 3659000000.0,
-  "ttm_net_income": 3335000000.0,
+  "ttm_revenue": 48591000000.0,
+  "ttm_operating_income": 16280000000.0,
+  "ttm_net_income": 14807000000.0,
   "segment_trend": {
     "Europe, Middle East & Africa": [
+      {
+        "period": "2023Q2",
+        "value": 2188000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 2176000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 1973000000.0,
@@ -694,12 +904,37 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 2019000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 2657000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 3176000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2996000000.0,
         "is_annual": false
       }
     ],
     "Latin America": [
+      {
+        "period": "2023Q2",
+        "value": 1378000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1574000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 1527000000.0,
@@ -711,8 +946,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 1639000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 1477000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1587000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1573000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q2",
+        "value": 1678000000.0,
         "is_annual": false
       },
       {
@@ -733,6 +988,16 @@
     ],
     "North America": [
       {
+        "period": "2023Q2",
+        "value": 4367000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 4463000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 4174000000.0,
         "is_annual": false
@@ -743,8 +1008,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 4984000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 4361000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 5029000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 5253000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q2",
+        "value": 4893000000.0,
         "is_annual": false
       },
       {
@@ -765,6 +1050,16 @@
     ],
     "Asia Pacific": [
       {
+        "period": "2023Q2",
+        "value": 1567000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1402000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 1469000000.0,
         "is_annual": false
@@ -775,8 +1070,23 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 1349000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 1421000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1572000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1506000000.0,
         "is_annual": false
       },
       {
@@ -797,6 +1107,16 @@
     ],
     "Global Ventures": [
       {
+        "period": "2023Q2",
+        "value": 765000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 779000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 730000000.0,
         "is_annual": false
@@ -804,6 +1124,11 @@
       {
         "period": "2024Q2",
         "value": 768000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 781000000.0,
         "is_annual": false
       },
       {
@@ -819,6 +1144,16 @@
     ],
     "Bottling Investments": [
       {
+        "period": "2023Q2",
+        "value": 2042000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1859000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 1817000000.0,
         "is_annual": false
@@ -829,8 +1164,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 1316000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 1463000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1411000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1346000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q2",
+        "value": 1640000000.0,
         "is_annual": false
       },
       {
@@ -849,34 +1204,12 @@
         "is_annual": true
       }
     ],
-    "Corporate": [
-      {
-        "period": "2024Q1",
-        "value": 27000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 30000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 26000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 126000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 97000000.0,
-        "is_annual": true
-      }
-    ],
     "EMEA": [
+      {
+        "period": "2026Q2",
+        "value": 3012000000.0,
+        "is_annual": false
+      },
       {
         "period": "FY2023",
         "value": 8078000000.0,
@@ -893,16 +1226,16 @@
         "is_annual": true
       }
     ],
-    "Segment Reporting, Reconciling Item, Corporate Nonsegment": [
+    "A. Pacific": [
       {
-        "period": "FY2025",
-        "value": 144000000.0,
-        "is_annual": true
+        "period": "2026Q2",
+        "value": 1508000000.0,
+        "is_annual": false
       }
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 10,
+  "quarterly_count": 9,
   "has_partial_data": false,
   "data_notes": []
 }

@@ -1,25 +1,43 @@
 {
   "ticker": "ACN",
   "name": "Accenture plc",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "ACN",
     "period": "FY2025",
     "is_annual": true,
     "fiscal_year": 2025,
     "fiscal_quarter": null,
-    "segments": [],
-    "total_revenue": null,
-    "gross_profit": null,
-    "operating_income": null,
-    "net_income": null,
+    "segments": [
+      {
+        "segment_name": "Consulting",
+        "value": 35106786000.0,
+        "unit": "USD",
+        "period": "2025-08-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Managed Services",
+        "value": 34566191000.0,
+        "unit": "USD",
+        "period": "2025-08-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 69672977000.0,
+    "gross_profit": 22235401000.0,
+    "operating_income": 10225664000.0,
+    "net_income": 7678433000.0,
     "rd_expense": null,
-    "sga_expense": null,
-    "cogs": null,
-    "interest_expense": null,
-    "income_tax": null,
+    "sga_expense": 11394413000.0,
+    "cogs": 47437576000.0,
+    "interest_expense": -228555000.0,
+    "income_tax": 2437993000.0,
     "currency": "USD",
-    "extraction_method": "edgar",
-    "confidence": 0.0,
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
     "notes": []
   },
   "annual_periods": [
@@ -29,19 +47,36 @@
       "is_annual": true,
       "fiscal_year": 2025,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Consulting",
+          "value": 35106786000.0,
+          "unit": "USD",
+          "period": "2025-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Managed Services",
+          "value": 34566191000.0,
+          "unit": "USD",
+          "period": "2025-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 69672977000.0,
+      "gross_profit": 22235401000.0,
+      "operating_income": 10225664000.0,
+      "net_income": 7678433000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 11394413000.0,
+      "cogs": 47437576000.0,
+      "interest_expense": -228555000.0,
+      "income_tax": 2437993000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -50,19 +85,44 @@
       "is_annual": true,
       "fiscal_year": 2024,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "North America",
+          "value": 30740611000.0,
+          "unit": "USD",
+          "period": "2024-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "EMEA",
+          "value": 22817879000.0,
+          "unit": "USD",
+          "period": "2024-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Growth Markets",
+          "value": 11337974000.0,
+          "unit": "USD",
+          "period": "2024-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 64896464000.0,
+      "gross_profit": 21162317000.0,
+      "operating_income": 9595847000.0,
+      "net_income": 7264787000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 11128030000.0,
+      "cogs": 43734147000.0,
+      "interest_expense": -58969000.0,
+      "income_tax": 2280126000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -71,19 +131,52 @@
       "is_annual": true,
       "fiscal_year": 2023,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Communications, Media & Technology",
+          "value": 16314181924.539478,
+          "unit": "USD",
+          "period": "2023-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financial Services",
+          "value": 17280842566.109406,
+          "unit": "USD",
+          "period": "2023-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Health & Public Service",
+          "value": 17891830574.08248,
+          "unit": "USD",
+          "period": "2023-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Resources",
+          "value": 12624889935.26863,
+          "unit": "USD",
+          "period": "2023-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 64111745000.0,
+      "gross_profit": 20731607000.0,
+      "operating_income": 8809889000.0,
+      "net_income": 6871557000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 10858572000.0,
+      "cogs": 43380138000.0,
+      "interest_expense": -47525000.0,
+      "income_tax": 2135802000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     }
   ],
@@ -96,24 +189,16 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Americas",
-          "value": 8896402000.0,
+          "segment_name": "Consulting",
+          "value": 8859641000.0,
           "unit": "USD",
           "period": "2026-02-28 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "EMEA",
-          "value": 6569391000.0,
-          "unit": "USD",
-          "period": "2026-02-28 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Asia Pacific",
-          "value": 2578273000.0,
+          "segment_name": "Managed Services",
+          "value": 9184425000.0,
           "unit": "USD",
           "period": "2026-02-28 (Q2)",
           "concept": "xbrl_dimension",
@@ -121,11 +206,11 @@
         }
       ],
       "total_revenue": 18044066000.0,
-      "gross_profit": null,
+      "gross_profit": 5459361000.0,
       "operating_income": 2493547000.0,
       "net_income": 1825239000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 2965814000.0,
       "cogs": 12584705000.0,
       "interest_expense": -63566000.0,
       "income_tax": 597266000.0,
@@ -140,19 +225,36 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Consulting",
+          "value": 9414567000.0,
+          "unit": "USD",
+          "period": "2025-11-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Managed Services",
+          "value": 9327558000.0,
+          "unit": "USD",
+          "period": "2025-11-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 18742125000.0,
+      "gross_profit": 6197118000.0,
+      "operating_income": 2873698000.0,
+      "net_income": 2211561000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 3015879000.0,
+      "cogs": 12545007000.0,
+      "interest_expense": -65365000.0,
+      "income_tax": 725774000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -163,24 +265,16 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Americas",
-          "value": 8966131000.0,
+          "segment_name": "Consulting",
+          "value": 9007033000.0,
           "unit": "USD",
           "period": "2025-05-31 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "EMEA",
-          "value": 6231849000.0,
-          "unit": "USD",
-          "period": "2025-05-31 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Asia Pacific",
-          "value": 2529891000.0,
+          "segment_name": "Managed Services",
+          "value": 8720838000.0,
           "unit": "USD",
           "period": "2025-05-31 (Q3)",
           "concept": "xbrl_dimension",
@@ -188,11 +282,11 @@
         }
       ],
       "total_revenue": 17727871000.0,
-      "gross_profit": null,
+      "gross_profit": 5826650000.0,
       "operating_income": 2982782000.0,
       "net_income": 2197501000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 2843868000.0,
       "cogs": 11901221000.0,
       "interest_expense": -67601000.0,
       "income_tax": 707176000.0,
@@ -209,24 +303,16 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Americas",
-          "value": 8553098000.0,
+          "segment_name": "Consulting",
+          "value": 8282260000.0,
           "unit": "USD",
           "period": "2025-02-28 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "EMEA",
-          "value": 5803875000.0,
-          "unit": "USD",
-          "period": "2025-02-28 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Asia Pacific",
-          "value": 2302328000.0,
+          "segment_name": "Managed Services",
+          "value": 8377041000.0,
           "unit": "USD",
           "period": "2025-02-28 (Q2)",
           "concept": "xbrl_dimension",
@@ -234,11 +320,11 @@
         }
       ],
       "total_revenue": 16659301000.0,
-      "gross_profit": null,
+      "gross_profit": 4974988000.0,
       "operating_income": 2244714000.0,
       "net_income": 1788075000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 2730274000.0,
       "cogs": 11684313000.0,
       "interest_expense": -64669000.0,
       "income_tax": 466333000.0,
@@ -253,20 +339,39 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Consulting",
+          "value": 9045228000.0,
+          "unit": "USD",
+          "period": "2024-11-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Managed Services",
+          "value": 8644317000.0,
+          "unit": "USD",
+          "period": "2024-11-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17689545000.0,
+      "gross_profit": 5822829000.0,
+      "operating_income": 2948477000.0,
+      "net_income": 2278894000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 2874352000.0,
+      "cogs": 11866716000.0,
+      "interest_expense": -30042000.0,
+      "income_tax": 639055000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (17689545000) differs from Yahoo (64896464000) by 72.7%"
+      ]
     },
     {
       "ticker": "ACN",
@@ -276,41 +381,49 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "North America",
-          "value": 7834206000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Communications, Media & Technology",
+          "value": 3962160463.796891,
+          "unit": "USD",
+          "period": "2024-05-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
-          "segment_name": "EMEA",
-          "value": 5776624000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Financial Services",
+          "value": 4150980967.971001,
+          "unit": "USD",
+          "period": "2024-05-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
-          "segment_name": "Growth Markets",
-          "value": 2855998000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Health & Public Service",
+          "value": 5040773413.618921,
+          "unit": "USD",
+          "period": "2024-05-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Resources",
+          "value": 3312913154.6131873,
+          "unit": "USD",
+          "period": "2024-05-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 16466828000.0,
-      "gross_profit": null,
+      "gross_profit": 5498451000.0,
       "operating_income": 2630865000.0,
       "net_income": 1932183000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 2790166000.0,
       "cogs": 10968377000.0,
       "interest_expense": -11334000.0,
       "income_tax": 673022000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (16466828000) differs from Yahoo (64896464000) by 74.6%"
@@ -324,41 +437,49 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "North America",
-          "value": 7376812000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Communications, Media & Technology",
+          "value": 3799176084.659307,
+          "unit": "USD",
+          "period": "2024-02-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
-          "segment_name": "EMEA",
-          "value": 5598850000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Financial Services",
+          "value": 4020749373.330038,
+          "unit": "USD",
+          "period": "2024-02-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
-          "segment_name": "Growth Markets",
-          "value": 2823852000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Health & Public Service",
+          "value": 4772399176.877995,
+          "unit": "USD",
+          "period": "2024-02-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Resources",
+          "value": 3207189365.13266,
+          "unit": "USD",
+          "period": "2024-02-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 15799514000.0,
-      "gross_profit": null,
+      "gross_profit": 4878469000.0,
       "operating_income": 2046427000.0,
       "net_income": 1674859000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 2716633000.0,
       "cogs": 10921045000.0,
       "interest_expense": -10305000.0,
       "income_tax": 386537000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (15799514000) differs from Yahoo (64896464000) by 75.7%"
@@ -370,20 +491,55 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Communications, Media & Technology",
+          "value": 3811046190.086935,
+          "unit": "USD",
+          "period": "2023-11-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financial Services",
+          "value": 4330897578.537415,
+          "unit": "USD",
+          "period": "2023-11-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Health & Public Service",
+          "value": 4821850409.316144,
+          "unit": "USD",
+          "period": "2023-11-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Resources",
+          "value": 3260508822.0595064,
+          "unit": "USD",
+          "period": "2023-11-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16224303000.0,
+      "gross_profit": 5447941000.0,
+      "operating_income": 2564887000.0,
+      "net_income": 1973444000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 2743390000.0,
+      "cogs": 10776362000.0,
+      "interest_expense": -14495000.0,
+      "income_tax": 606672000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (16224303000) differs from Yahoo (64111745000) by 74.7%"
+      ]
     },
     {
       "ticker": "ACN",
@@ -391,109 +547,256 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Communications, Media & Technology",
+          "value": 4114206375.9062676,
+          "unit": "USD",
+          "period": "2023-05-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financial Services",
+          "value": 4482738196.842048,
+          "unit": "USD",
+          "period": "2023-05-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Health & Public Service",
+          "value": 4665817064.420577,
+          "unit": "USD",
+          "period": "2023-05-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Resources",
+          "value": 3301823362.8311067,
+          "unit": "USD",
+          "period": "2023-05-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16564585000.0,
+      "gross_profit": 5529070000.0,
+      "operating_income": 2359288000.0,
+      "net_income": 2009996000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 2822909000.0,
+      "cogs": 11035515000.0,
+      "interest_expense": -11208000.0,
+      "income_tax": 583346000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (16564585000) differs from Yahoo (64111745000) by 74.2%"
+      ]
     }
   ],
-  "ttm_revenue": 52431238000.0,
-  "ttm_operating_income": 7721043000.0,
-  "ttm_net_income": 5810815000.0,
+  "ttm_revenue": 71173363000.0,
+  "ttm_operating_income": 10594741000.0,
+  "ttm_net_income": 8022376000.0,
   "segment_trend": {
-    "North America": [
+    "Communications, Media & Technology": [
+      {
+        "period": "2023Q2",
+        "value": 4114206375.9062676,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 3811046190.086935,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
-        "value": 7376812000.0,
+        "value": 3799176084.659307,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 7834206000.0,
+        "value": 3962160463.796891,
         "is_annual": false
+      }
+    ],
+    "Financial Services": [
+      {
+        "period": "2023Q2",
+        "value": 4482738196.842048,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 4330897578.537415,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 4020749373.330038,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4150980967.971001,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 17280842566.109406,
+        "is_annual": true
+      }
+    ],
+    "Health & Public Service": [
+      {
+        "period": "2023Q2",
+        "value": 4665817064.420577,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 4821850409.316144,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 4772399176.877995,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 5040773413.618921,
+        "is_annual": false
+      }
+    ],
+    "Resources": [
+      {
+        "period": "2023Q2",
+        "value": 3301823362.8311067,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 3260508822.0595064,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 3207189365.13266,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 3312913154.6131873,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 12624889935.26863,
+        "is_annual": true
+      }
+    ],
+    "Consulting": [
+      {
+        "period": "2024Q4",
+        "value": 9045228000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 8282260000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 9007033000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 9414567000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 8859641000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 35106786000.0,
+        "is_annual": true
+      }
+    ],
+    "Managed Services": [
+      {
+        "period": "2024Q4",
+        "value": 8644317000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 8377041000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 8720838000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 9327558000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 9184425000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 34566191000.0,
+        "is_annual": true
+      }
+    ],
+    "Communications, Media & Technology": [
+      {
+        "period": "FY2023",
+        "value": 16314181924.539478,
+        "is_annual": true
+      }
+    ],
+    "Health & Public Service": [
+      {
+        "period": "FY2023",
+        "value": 17891830574.08248,
+        "is_annual": true
+      }
+    ],
+    "North America": [
+      {
+        "period": "FY2024",
+        "value": 30740611000.0,
+        "is_annual": true
       }
     ],
     "EMEA": [
       {
-        "period": "2024Q1",
-        "value": 5598850000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 5776624000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 5803875000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 6231849000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 6569391000.0,
-        "is_annual": false
+        "period": "FY2024",
+        "value": 22817879000.0,
+        "is_annual": true
       }
     ],
     "Growth Markets": [
       {
-        "period": "2024Q1",
-        "value": 2823852000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 2855998000.0,
-        "is_annual": false
-      }
-    ],
-    "Americas": [
-      {
-        "period": "2025Q1",
-        "value": 8553098000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 8966131000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 8896402000.0,
-        "is_annual": false
-      }
-    ],
-    "Asia Pacific": [
-      {
-        "period": "2025Q1",
-        "value": 2302328000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 2529891000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 2578273000.0,
-        "is_annual": false
+        "period": "FY2024",
+        "value": 11337974000.0,
+        "is_annual": true
       }
     ]
   },

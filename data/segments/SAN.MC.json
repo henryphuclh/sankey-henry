@@ -1,77 +1,230 @@
 {
   "ticker": "SAN.MC",
   "name": "Banco Santander",
+  "sector": "financial",
   "latest_annual": {
     "ticker": "SAN.MC",
-    "period": "FY2026",
+    "period": "FY2025",
     "is_annual": true,
-    "fiscal_year": 2026,
+    "fiscal_year": 2025,
     "fiscal_quarter": null,
-    "segments": [],
-    "total_revenue": 70631911668.65826,
-    "gross_profit": null,
+    "segments": [
+      {
+        "segment_name": "United Kingdom",
+        "value": 2749418882.2229238,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "DCB Europe",
+        "value": 2572090148.4054313,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Mexico",
+        "value": 2500170445.216293,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Corporate & Investment Banking",
+        "value": 2221824723.7132936,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Poland",
+        "value": 1621212851.278813,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Payments",
+        "value": 1595958604.3574362,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Chile",
+        "value": 1052443290.1799811,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Argentina",
+        "value": 948132270.2873383,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Wealth Management & Insurance",
+        "value": 793312756.5519419,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Portugal",
+        "value": 738961225.1341964,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Rest of the Group",
+        "value": 593474802.6523525,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 17387000000.0,
+    "gross_profit": 17387000000.0,
     "operating_income": null,
-    "net_income": 16593315669.6558,
+    "net_income": 15500000000.0,
     "rd_expense": null,
-    "sga_expense": 25262414069.652557,
+    "sga_expense": null,
     "cogs": null,
-    "interest_expense": 69854081609.96437,
-    "income_tax": 5557778165.221214,
+    "interest_expense": null,
+    "income_tax": null,
     "currency": "USD",
-    "extraction_method": "yahoo+llm",
-    "confidence": 0.55,
+    "extraction_method": "xbrl",
+    "confidence": 0.95,
     "notes": [
-      "Source: Yahoo Finance (no SEC filing available)",
-      "⚠ Limited Segment Detail — aggregate data only"
+      "Warning: total_revenue (17387000000) differs from Yahoo (70268086171) by 75.3%"
     ]
   },
   "annual_periods": [
-    {
-      "ticker": "SAN.MC",
-      "period": "FY2026",
-      "is_annual": true,
-      "fiscal_year": 2026,
-      "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 70631911668.65826,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": 16593315669.6558,
-      "rd_expense": null,
-      "sga_expense": 25262414069.652557,
-      "cogs": null,
-      "interest_expense": 69854081609.96437,
-      "income_tax": 5557778165.221214,
-      "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
-    },
     {
       "ticker": "SAN.MC",
       "period": "FY2025",
       "is_annual": true,
       "fiscal_year": 2025,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 70631911668.65826,
-      "gross_profit": null,
+      "segments": [
+        {
+          "segment_name": "United Kingdom",
+          "value": 2749418882.2229238,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "DCB Europe",
+          "value": 2572090148.4054313,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mexico",
+          "value": 2500170445.216293,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate & Investment Banking",
+          "value": 2221824723.7132936,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Poland",
+          "value": 1621212851.278813,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Payments",
+          "value": 1595958604.3574362,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Chile",
+          "value": 1052443290.1799811,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Argentina",
+          "value": 948132270.2873383,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth Management & Insurance",
+          "value": 793312756.5519419,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Portugal",
+          "value": 738961225.1341964,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Rest of the Group",
+          "value": 593474802.6523525,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17387000000.0,
+      "gross_profit": 17387000000.0,
       "operating_income": null,
-      "net_income": 16593315669.6558,
+      "net_income": 15500000000.0,
       "rd_expense": null,
-      "sga_expense": 25262414069.652557,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 69854081609.96437,
-      "income_tax": 5557778165.221214,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
+      "extraction_method": "xbrl",
+      "confidence": 0.95,
       "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
+        "Warning: total_revenue (17387000000) differs from Yahoo (70268086171) by 75.3%"
       ]
     },
     {
@@ -80,179 +233,498 @@
       "is_annual": true,
       "fiscal_year": 2024,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 70631911668.65826,
-      "gross_profit": null,
+      "segments": [
+        {
+          "segment_name": "North America",
+          "value": 10330000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Corporate & Investment Banking",
+          "value": 4020000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Payments",
+          "value": 2609000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wealth Management & Insurance",
+          "value": 1627000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 17602000000.0,
+      "gross_profit": 17602000000.0,
       "operating_income": null,
-      "net_income": 16593315669.6558,
+      "net_income": 13744000000.0,
       "rd_expense": null,
-      "sga_expense": 25262414069.652557,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 69854081609.96437,
-      "income_tax": 5557778165.221214,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
+      "extraction_method": "xbrl",
+      "confidence": 0.95,
       "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
+        "Warning: total_revenue (17602000000) differs from Yahoo (70598219625) by 75.1%"
+      ]
+    },
+    {
+      "ticker": "SAN.MC",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Non-bank subsidiaries",
+          "value": 16321000000.000002,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16321000000.0,
+      "gross_profit": 16321000000.0,
+      "operating_income": null,
+      "net_income": 12183000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 0.95,
+      "notes": [
+        "Warning: total_revenue (16321000000) differs from Yahoo (66362677653) by 75.4%"
       ]
     }
   ],
   "quarterly_periods": [
     {
       "ticker": "SAN.MC",
+      "period": "2026Q2",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SAN.MC",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SAN.MC",
       "period": "2025Q4",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 4,
       "segments": [],
-      "total_revenue": 17625323175.668716,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 4429277369.022369,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 6561543732.643127,
+      "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 1368557274.222374,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "SAN.MC",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 3,
       "segments": [],
-      "total_revenue": 17625323175.668716,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 4429277369.022369,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 6561543732.643127,
+      "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 1368557274.222374,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "SAN.MC",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 2,
       "segments": [],
-      "total_revenue": 17625323175.668716,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 4429277369.022369,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 6561543732.643127,
+      "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 1368557274.222374,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "SAN.MC",
       "period": "2025Q1",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 1,
       "segments": [],
-      "total_revenue": 17625323175.668716,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 4429277369.022369,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 6561543732.643127,
+      "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 1368557274.222374,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "SAN.MC",
       "period": "2024Q4",
       "is_annual": false,
       "fiscal_year": 2024,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 4,
       "segments": [],
-      "total_revenue": 17625323175.668716,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 4429277369.022369,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 6561543732.643127,
+      "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 1368557274.222374,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "SAN.MC",
       "period": "2024Q3",
       "is_annual": false,
       "fiscal_year": 2024,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 3,
       "segments": [],
-      "total_revenue": 17625323175.668716,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 4429277369.022369,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 6561543732.643127,
+      "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 1368557274.222374,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SAN.MC",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SAN.MC",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SAN.MC",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SAN.MC",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SAN.MC",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "SAN.MC",
+      "period": "2023Q1",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     }
   ],
-  "ttm_revenue": 70501292702.67487,
+  "ttm_revenue": null,
   "ttm_operating_income": null,
-  "ttm_net_income": 17717109476.089478,
-  "segment_trend": {},
+  "ttm_net_income": null,
+  "segment_trend": {
+    "Non-bank subsidiaries": [
+      {
+        "period": "FY2023",
+        "value": 16321000000.000002,
+        "is_annual": true
+      }
+    ],
+    "North America": [
+      {
+        "period": "FY2024",
+        "value": 10330000000.0,
+        "is_annual": true
+      }
+    ],
+    "Corporate & Investment Banking": [
+      {
+        "period": "FY2024",
+        "value": 4020000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2221824723.7132936,
+        "is_annual": true
+      }
+    ],
+    "Payments": [
+      {
+        "period": "FY2024",
+        "value": 2609000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1595958604.3574362,
+        "is_annual": true
+      }
+    ],
+    "Wealth Management & Insurance": [
+      {
+        "period": "FY2024",
+        "value": 1627000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 793312756.5519419,
+        "is_annual": true
+      }
+    ],
+    "United Kingdom": [
+      {
+        "period": "FY2025",
+        "value": 2749418882.2229238,
+        "is_annual": true
+      }
+    ],
+    "DCB Europe": [
+      {
+        "period": "FY2025",
+        "value": 2572090148.4054313,
+        "is_annual": true
+      }
+    ],
+    "Mexico": [
+      {
+        "period": "FY2025",
+        "value": 2500170445.216293,
+        "is_annual": true
+      }
+    ],
+    "Poland": [
+      {
+        "period": "FY2025",
+        "value": 1621212851.278813,
+        "is_annual": true
+      }
+    ],
+    "Chile": [
+      {
+        "period": "FY2025",
+        "value": 1052443290.1799811,
+        "is_annual": true
+      }
+    ],
+    "Argentina": [
+      {
+        "period": "FY2025",
+        "value": 948132270.2873383,
+        "is_annual": true
+      }
+    ],
+    "Portugal": [
+      {
+        "period": "FY2025",
+        "value": 738961225.1341964,
+        "is_annual": true
+      }
+    ],
+    "Rest of the Group": [
+      {
+        "period": "FY2025",
+        "value": 593474802.6523525,
+        "is_annual": true
+      }
+    ]
+  },
   "annual_count": 3,
-  "quarterly_count": 6,
-  "has_partial_data": true,
-  "data_notes": [
-    "Partial data: 3/3 annual, 6/12 quarterly"
-  ]
+  "quarterly_count": 14,
+  "has_partial_data": false,
+  "data_notes": []
 }

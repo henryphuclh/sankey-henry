@@ -1,25 +1,67 @@
 {
   "ticker": "COST",
   "name": "Costco Wholesale Corporation",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "COST",
     "period": "FY2025",
     "is_annual": true,
     "fiscal_year": 2025,
     "fiscal_quarter": null,
-    "segments": [],
-    "total_revenue": null,
-    "gross_profit": null,
-    "operating_income": null,
-    "net_income": null,
+    "segments": [
+      {
+        "segment_name": "Food and Sundries",
+        "value": 109564000000.0,
+        "unit": "USD",
+        "period": "2025-08-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Non-Foods",
+        "value": 71190000000.0,
+        "unit": "USD",
+        "period": "2025-08-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Warehouse ancillary and other businesses",
+        "value": 51170000000.0,
+        "unit": "USD",
+        "period": "2025-08-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Fresh Foods",
+        "value": 37988000000.0,
+        "unit": "USD",
+        "period": "2025-08-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Membership",
+        "value": 5323000000.0,
+        "unit": "USD",
+        "period": "2025-08-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 275235000000.0,
+    "gross_profit": 35349000000.0,
+    "operating_income": 10383000000.0,
+    "net_income": 8099000000.0,
     "rd_expense": null,
-    "sga_expense": null,
-    "cogs": null,
-    "interest_expense": null,
-    "income_tax": null,
+    "sga_expense": 24966000000.0,
+    "cogs": 239886000000.0,
+    "interest_expense": -154000000.0,
+    "income_tax": 2719000000.0,
     "currency": "USD",
-    "extraction_method": "edgar",
-    "confidence": 0.0,
+    "extraction_method": "xbrl",
+    "confidence": 1.0,
     "notes": []
   },
   "annual_periods": [
@@ -29,19 +71,60 @@
       "is_annual": true,
       "fiscal_year": 2025,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Food and Sundries",
+          "value": 109564000000.0,
+          "unit": "USD",
+          "period": "2025-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Non-Foods",
+          "value": 71190000000.0,
+          "unit": "USD",
+          "period": "2025-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Warehouse ancillary and other businesses",
+          "value": 51170000000.0,
+          "unit": "USD",
+          "period": "2025-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fresh Foods",
+          "value": 37988000000.0,
+          "unit": "USD",
+          "period": "2025-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Membership",
+          "value": 5323000000.0,
+          "unit": "USD",
+          "period": "2025-08-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 275235000000.0,
+      "gross_profit": 35349000000.0,
+      "operating_income": 10383000000.0,
+      "net_income": 8099000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 24966000000.0,
+      "cogs": 239886000000.0,
+      "interest_expense": -154000000.0,
+      "income_tax": 2719000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -50,19 +133,60 @@
       "is_annual": true,
       "fiscal_year": 2024,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Membership",
+          "value": 4828000000.0,
+          "unit": "USD",
+          "period": "2024-09-01 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Food and Sundries",
+          "value": 101463000000.0,
+          "unit": "USD",
+          "period": "2024-09-01 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Non-Foods",
+          "value": 63973000000.0,
+          "unit": "USD",
+          "period": "2024-09-01 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fresh Foods",
+          "value": 34220000000.0,
+          "unit": "USD",
+          "period": "2024-09-01 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Warehouse ancillary and other businesses",
+          "value": 49969000000.0,
+          "unit": "USD",
+          "period": "2024-09-01 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 254453000000.0,
+      "gross_profit": 32095000000.0,
+      "operating_income": 9285000000.0,
+      "net_income": 7367000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 22810000000.0,
+      "cogs": 222358000000.0,
+      "interest_expense": -169000000.0,
+      "income_tax": 2373000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -71,19 +195,60 @@
       "is_annual": true,
       "fiscal_year": 2023,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Membership",
+          "value": 4580000000.0,
+          "unit": "USD",
+          "period": "2023-09-03 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Food and Sundries",
+          "value": 96175000000.0,
+          "unit": "USD",
+          "period": "2023-09-03 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Non-Foods",
+          "value": 60865000000.0,
+          "unit": "USD",
+          "period": "2023-09-03 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fresh Foods",
+          "value": 31977000000.0,
+          "unit": "USD",
+          "period": "2023-09-03 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Warehouse ancillary and other businesses",
+          "value": 48693000000.0,
+          "unit": "USD",
+          "period": "2023-09-03 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 242290000000.0,
+      "gross_profit": 29704000000.0,
+      "operating_income": 8114000000.0,
+      "net_income": 6292000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 21590000000.0,
+      "cogs": 212586000000.0,
+      "interest_expense": -160000000.0,
+      "income_tax": 2195000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     }
   ],
@@ -137,7 +302,7 @@
         }
       ],
       "total_revenue": 69597000000.0,
-      "gross_profit": null,
+      "gross_profit": 8878000000.0,
       "operating_income": 2606000000.0,
       "net_income": 2035000000.0,
       "rd_expense": null,
@@ -156,19 +321,60 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Foods and Sundries",
+          "value": 26943000000.0,
+          "unit": "USD",
+          "period": "2025-11-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Non-Foods",
+          "value": 17440000000.0,
+          "unit": "USD",
+          "period": "2025-11-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ancillary and Other Businesses",
+          "value": 12579000000.0,
+          "unit": "USD",
+          "period": "2025-11-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fresh Foods",
+          "value": 9016000000.0,
+          "unit": "USD",
+          "period": "2025-11-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Membership fees",
+          "value": 1329000000.0,
+          "unit": "USD",
+          "period": "2025-11-23 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 67307000000.0,
+      "gross_profit": 8797000000.0,
+      "operating_income": 2463000000.0,
+      "net_income": 2001000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 6334000000.0,
+      "cogs": 58510000000.0,
+      "interest_expense": -35000000.0,
+      "income_tax": 582000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -220,7 +426,7 @@
         }
       ],
       "total_revenue": 63205000000.0,
-      "gross_profit": null,
+      "gross_profit": 8209000000.0,
       "operating_income": 2530000000.0,
       "net_income": 1903000000.0,
       "rd_expense": null,
@@ -282,7 +488,7 @@
         }
       ],
       "total_revenue": 63723000000.0,
-      "gross_profit": null,
+      "gross_profit": 7979000000.0,
       "operating_income": 2316000000.0,
       "net_income": 1788000000.0,
       "rd_expense": null,
@@ -301,20 +507,63 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Foods and Sundries",
+          "value": 25062000000.0,
+          "unit": "USD",
+          "period": "2024-11-24 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Non-Foods",
+          "value": 16171000000.0,
+          "unit": "USD",
+          "period": "2024-11-24 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ancillary and Other Businesses",
+          "value": 11534000000.0,
+          "unit": "USD",
+          "period": "2024-11-24 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fresh Foods",
+          "value": 8218000000.0,
+          "unit": "USD",
+          "period": "2024-11-24 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Membership fees",
+          "value": 1166000000.0,
+          "unit": "USD",
+          "period": "2024-11-24 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 62151000000.0,
+      "gross_profit": 8042000000.0,
+      "operating_income": 2196000000.0,
+      "net_income": 1798000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 5846000000.0,
+      "cogs": 54109000000.0,
+      "interest_expense": -37000000.0,
+      "income_tax": 508000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (62151000000) differs from Yahoo (254453000000) by 75.6%"
+      ]
     },
     {
       "ticker": "COST",
@@ -365,7 +614,7 @@
         }
       ],
       "total_revenue": 58515000000.0,
-      "gross_profit": null,
+      "gross_profit": 7342000000.0,
       "operating_income": 2197000000.0,
       "net_income": 1681000000.0,
       "rd_expense": null,
@@ -429,7 +678,7 @@
         }
       ],
       "total_revenue": 58442000000.0,
-      "gross_profit": null,
+      "gross_profit": 7302000000.0,
       "operating_income": 2062000000.0,
       "net_income": 1743000000.0,
       "rd_expense": null,
@@ -450,20 +699,63 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Foods and Sundries",
+          "value": 23024000000.0,
+          "unit": "USD",
+          "period": "2023-11-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Non-Foods",
+          "value": 14766000000.0,
+          "unit": "USD",
+          "period": "2023-11-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ancillary and Other Businesses",
+          "value": 11599000000.0,
+          "unit": "USD",
+          "period": "2023-11-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fresh Foods",
+          "value": 7328000000.0,
+          "unit": "USD",
+          "period": "2023-11-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Membership fees",
+          "value": 1082000000.0,
+          "unit": "USD",
+          "period": "2023-11-26 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 57799000000.0,
+      "gross_profit": 7342000000.0,
+      "operating_income": 1984000000.0,
+      "net_income": 1589000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 5358000000.0,
+      "cogs": 50457000000.0,
+      "interest_expense": -38000000.0,
+      "income_tax": 517000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (57799000000) differs from Yahoo (242290000000) by 76.1%"
+      ]
     },
     {
       "ticker": "COST",
@@ -471,27 +763,80 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Foods and Sundries",
+          "value": 21298000000.0,
+          "unit": "USD",
+          "period": "2023-05-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Non-Foods",
+          "value": 13087000000.0,
+          "unit": "USD",
+          "period": "2023-05-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ancillary and Other Businesses",
+          "value": 11025000000.0,
+          "unit": "USD",
+          "period": "2023-05-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fresh Foods",
+          "value": 7194000000.0,
+          "unit": "USD",
+          "period": "2023-05-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Membership fees",
+          "value": 1044000000.0,
+          "unit": "USD",
+          "period": "2023-05-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 53648000000.0,
+      "gross_profit": 6473000000.0,
+      "operating_income": 1679000000.0,
+      "net_income": 1302000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 4794000000.0,
+      "cogs": 47175000000.0,
+      "interest_expense": -36000000.0,
+      "income_tax": 469000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (53648000000) differs from Yahoo (242290000000) by 77.9%"
+      ]
     }
   ],
-  "ttm_revenue": 196525000000.0,
-  "ttm_operating_income": 7452000000.0,
-  "ttm_net_income": 5726000000.0,
+  "ttm_revenue": 263832000000.0,
+  "ttm_operating_income": 9915000000.0,
+  "ttm_net_income": 7727000000.0,
   "segment_trend": {
     "Foods and Sundries": [
+      {
+        "period": "2023Q2",
+        "value": 21298000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 23024000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 23675000000.0,
@@ -500,6 +845,11 @@
       {
         "period": "2024Q2",
         "value": 23065000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 25062000000.0,
         "is_annual": false
       },
       {
@@ -513,12 +863,27 @@
         "is_annual": false
       },
       {
+        "period": "2025Q4",
+        "value": 26943000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 27149000000.0,
         "is_annual": false
       }
     ],
     "Non-Foods": [
+      {
+        "period": "2023Q2",
+        "value": 13087000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 14766000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 15017000000.0,
@@ -527,6 +892,11 @@
       {
         "period": "2024Q2",
         "value": 14518000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 16171000000.0,
         "is_annual": false
       },
       {
@@ -540,12 +910,42 @@
         "is_annual": false
       },
       {
+        "period": "2025Q4",
+        "value": 17440000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 19153000000.0,
         "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 60865000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 63973000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 71190000000.0,
+        "is_annual": true
       }
     ],
     "Ancillary and Other Businesses": [
+      {
+        "period": "2023Q2",
+        "value": 11025000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 11599000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 10643000000.0,
@@ -554,6 +954,11 @@
       {
         "period": "2024Q2",
         "value": 11921000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 11534000000.0,
         "is_annual": false
       },
       {
@@ -567,12 +972,27 @@
         "is_annual": false
       },
       {
+        "period": "2025Q4",
+        "value": 12579000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 12053000000.0,
         "is_annual": false
       }
     ],
     "Fresh Foods": [
+      {
+        "period": "2023Q2",
+        "value": 7194000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 7328000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 7996000000.0,
@@ -581,6 +1001,11 @@
       {
         "period": "2024Q2",
         "value": 7888000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 8218000000.0,
         "is_annual": false
       },
       {
@@ -594,12 +1019,42 @@
         "is_annual": false
       },
       {
+        "period": "2025Q4",
+        "value": 9016000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 9887000000.0,
         "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 31977000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 34220000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 37988000000.0,
+        "is_annual": true
       }
     ],
     "Membership fees": [
+      {
+        "period": "2023Q2",
+        "value": 1044000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 1082000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 1111000000.0,
@@ -608,6 +1063,11 @@
       {
         "period": "2024Q2",
         "value": 1123000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 1166000000.0,
         "is_annual": false
       },
       {
@@ -621,9 +1081,65 @@
         "is_annual": false
       },
       {
+        "period": "2025Q4",
+        "value": 1329000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 1355000000.0,
         "is_annual": false
+      }
+    ],
+    "Membership": [
+      {
+        "period": "FY2023",
+        "value": 4580000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 4828000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 5323000000.0,
+        "is_annual": true
+      }
+    ],
+    "Food and Sundries": [
+      {
+        "period": "FY2023",
+        "value": 96175000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 101463000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 109564000000.0,
+        "is_annual": true
+      }
+    ],
+    "Warehouse ancillary and other businesses": [
+      {
+        "period": "FY2023",
+        "value": 48693000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 49969000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 51170000000.0,
+        "is_annual": true
       }
     ]
   },

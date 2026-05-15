@@ -1,6 +1,7 @@
 {
   "ticker": "PEP",
   "name": "PepsiCo Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "PEP",
     "period": "FY2025",
@@ -376,19 +377,68 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "PepsiCo Foods North America",
+          "value": 6526000000.0,
+          "unit": "USD",
+          "period": "2025-09-06 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PepsiCo Beverages North America",
+          "value": 7327000000.0,
+          "unit": "USD",
+          "period": "2025-09-06 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Beverage Franchise",
+          "value": 1291000000.0,
+          "unit": "USD",
+          "period": "2025-09-06 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe, Middle East & Africa (Segment)",
+          "value": 5022000000.0,
+          "unit": "USD",
+          "period": "2025-09-06 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America Foods (Segment)",
+          "value": 2656000000.0,
+          "unit": "USD",
+          "period": "2025-09-06 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific Foods (Segment)",
+          "value": 1115000000.0,
+          "unit": "USD",
+          "period": "2025-09-06 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 23937000000.0,
+      "gross_profit": 12824000000.0,
+      "operating_income": 3569000000.0,
+      "net_income": 2618000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 9122000000.0,
+      "cogs": 11113000000.0,
+      "interest_expense": -264000000.0,
+      "income_tax": 713000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -397,19 +447,68 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "PepsiCo Foods North America",
+          "value": 6476000000.0,
+          "unit": "USD",
+          "period": "2025-06-14 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PepsiCo Beverages North America",
+          "value": 6796000000.0,
+          "unit": "USD",
+          "period": "2025-06-14 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Beverage Franchise",
+          "value": 1368000000.0,
+          "unit": "USD",
+          "period": "2025-06-14 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe, Middle East & Africa (Segment)",
+          "value": 4536000000.0,
+          "unit": "USD",
+          "period": "2025-06-14 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Latin America Foods (Segment)",
+          "value": 2548000000.0,
+          "unit": "USD",
+          "period": "2025-06-14 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asia Pacific Foods (Segment)",
+          "value": 1002000000.0,
+          "unit": "USD",
+          "period": "2025-06-14 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 22726000000.0,
+      "gross_profit": 12422000000.0,
+      "operating_income": 1789000000.0,
+      "net_income": 1279000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 8773000000.0,
+      "cogs": 10304000000.0,
+      "interest_expense": -260000000.0,
+      "income_tax": 292000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -488,20 +587,79 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "FLNA",
+          "value": 5888000000.0,
+          "unit": "USD",
+          "period": "2024-09-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QFNA",
+          "value": 648000000.0,
+          "unit": "USD",
+          "period": "2024-09-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PBNA",
+          "value": 7175000000.0,
+          "unit": "USD",
+          "period": "2024-09-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LatAm",
+          "value": 2915000000.0,
+          "unit": "USD",
+          "period": "2024-09-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 3946000000.0,
+          "unit": "USD",
+          "period": "2024-09-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "AMESA",
+          "value": 1552000000.0,
+          "unit": "USD",
+          "period": "2024-09-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "APAC",
+          "value": 1195000000.0,
+          "unit": "USD",
+          "period": "2024-09-07 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 23319000000.0,
+      "gross_profit": 12923000000.0,
+      "operating_income": 3872000000.0,
+      "net_income": 2945000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 9051000000.0,
+      "cogs": 10396000000.0,
+      "interest_expense": -219000000.0,
+      "income_tax": 749000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (23319000000) differs from Yahoo (91854000000) by 74.6%"
+      ]
     },
     {
       "ticker": "PEP",
@@ -669,20 +827,79 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "FLNA",
+          "value": 5954000000.0,
+          "unit": "USD",
+          "period": "2023-09-09 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QFNA",
+          "value": 747000000.0,
+          "unit": "USD",
+          "period": "2023-09-09 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PBNA",
+          "value": 7161000000.0,
+          "unit": "USD",
+          "period": "2023-09-09 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LatAm",
+          "value": 3055000000.0,
+          "unit": "USD",
+          "period": "2023-09-09 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 3704000000.0,
+          "unit": "USD",
+          "period": "2023-09-09 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "AMESA",
+          "value": 1615000000.0,
+          "unit": "USD",
+          "period": "2023-09-09 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "APAC",
+          "value": 1217000000.0,
+          "unit": "USD",
+          "period": "2023-09-09 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 23453000000.0,
+      "gross_profit": 12778000000.0,
+      "operating_income": 4015000000.0,
+      "net_income": 3116000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 8757000000.0,
+      "cogs": 10675000000.0,
+      "interest_expense": -201000000.0,
+      "income_tax": 760000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (23453000000) differs from Yahoo (91471000000) by 74.4%"
+      ]
     },
     {
       "ticker": "PEP",
@@ -690,48 +907,96 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "FLNA",
+          "value": 5904000000.0,
+          "unit": "USD",
+          "period": "2023-06-17 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "QFNA",
+          "value": 684000000.0,
+          "unit": "USD",
+          "period": "2023-06-17 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "PBNA",
+          "value": 6755000000.0,
+          "unit": "USD",
+          "period": "2023-06-17 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LatAm",
+          "value": 2856000000.0,
+          "unit": "USD",
+          "period": "2023-06-17 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Europe",
+          "value": 3428000000.0,
+          "unit": "USD",
+          "period": "2023-06-17 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "AMESA",
+          "value": 1568000000.0,
+          "unit": "USD",
+          "period": "2023-06-17 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "APAC",
+          "value": 1127000000.0,
+          "unit": "USD",
+          "period": "2023-06-17 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 22322000000.0,
+      "gross_profit": 12201000000.0,
+      "operating_income": 3659000000.0,
+      "net_income": 2771000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 8542000000.0,
+      "cogs": 10121000000.0,
+      "interest_expense": -201000000.0,
+      "income_tax": 747000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "PEP",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (22322000000) differs from Yahoo (91471000000) by 75.6%"
+      ]
     }
   ],
-  "ttm_revenue": 37362000000.0,
-  "ttm_operating_income": 5796000000.0,
-  "ttm_net_income": 4181000000.0,
+  "ttm_revenue": 84025000000.0,
+  "ttm_operating_income": 11154000000.0,
+  "ttm_net_income": 8078000000.0,
   "segment_trend": {
     "FLNA": [
+      {
+        "period": "2023Q2",
+        "value": 5904000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 5954000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 5676000000.0,
@@ -741,9 +1006,24 @@
         "period": "2024Q2",
         "value": 5874000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 5888000000.0,
+        "is_annual": false
       }
     ],
     "QFNA": [
+      {
+        "period": "2023Q2",
+        "value": 684000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 747000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 593000000.0,
@@ -753,9 +1033,24 @@
         "period": "2024Q2",
         "value": 561000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 648000000.0,
+        "is_annual": false
       }
     ],
     "PBNA": [
+      {
+        "period": "2023Q2",
+        "value": 6755000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 7161000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 5874000000.0,
@@ -765,9 +1060,24 @@
         "period": "2024Q2",
         "value": 6811000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 7175000000.0,
+        "is_annual": false
       }
     ],
     "LatAm": [
+      {
+        "period": "2023Q2",
+        "value": 2856000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 3055000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 2067000000.0,
@@ -777,9 +1087,24 @@
         "period": "2024Q2",
         "value": 3045000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 2915000000.0,
+        "is_annual": false
       }
     ],
     "Europe": [
+      {
+        "period": "2023Q2",
+        "value": 3428000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 3704000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 1936000000.0,
@@ -788,6 +1113,11 @@
       {
         "period": "2024Q2",
         "value": 3515000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 3946000000.0,
         "is_annual": false
       },
       {
@@ -803,6 +1133,16 @@
     ],
     "AMESA": [
       {
+        "period": "2023Q2",
+        "value": 1568000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1615000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 1040000000.0,
         "is_annual": false
@@ -811,9 +1151,24 @@
         "period": "2024Q2",
         "value": 1592000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1552000000.0,
+        "is_annual": false
       }
     ],
     "APAC": [
+      {
+        "period": "2023Q2",
+        "value": 1127000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1217000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 1064000000.0,
@@ -823,12 +1178,27 @@
         "period": "2024Q2",
         "value": 1103000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1195000000.0,
+        "is_annual": false
       }
     ],
     "PepsiCo Foods North America": [
       {
         "period": "2025Q1",
         "value": 6213000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 6476000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 6526000000.0,
         "is_annual": false
       },
       {
@@ -846,6 +1216,16 @@
       {
         "period": "2025Q1",
         "value": 5876000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 6796000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 7327000000.0,
         "is_annual": false
       },
       {
@@ -876,6 +1256,16 @@
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 1368000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1291000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 824000000.0,
         "is_annual": false
@@ -890,6 +1280,16 @@
       {
         "period": "2025Q1",
         "value": 2388000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4536000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 5022000000.0,
         "is_annual": false
       },
       {
@@ -910,6 +1310,16 @@
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 2548000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2656000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 1934000000.0,
         "is_annual": false
@@ -924,6 +1334,16 @@
       {
         "period": "2025Q1",
         "value": 1022000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1002000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1115000000.0,
         "is_annual": false
       },
       {
@@ -999,7 +1419,7 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 10,
+  "quarterly_count": 9,
   "has_partial_data": false,
   "data_notes": []
 }

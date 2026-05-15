@@ -95,15 +95,44 @@ def get_financials(ticker: str) -> Dict[str, Any]:
 
 def _get_usd_rate(currency: str) -> float:
     """Return the latest exchange rate: 1 unit of `currency` in USD."""
+    if currency == "USD":
+        return 1.0
     pair = f"{currency}USD=X"
     cached = cache.get("yfinance", f"fx_{pair}")
     if cached:
         return cached.get("rate", 1.0)
+
+    def _extract_close(df) -> float:
+        """Extract scalar close from yfinance DataFrame (handles multi-index columns)."""
+        if df is None or df.empty:
+            return 0.0
+        close = df["Close"]
+        # newer yfinance: Close is a DataFrame with ticker column
+        if hasattr(close, "values"):
+            v = close.values[-1]
+            # v might be a numpy array of shape (1,)
+            if hasattr(v, "__len__") and len(v) == 1:
+                v = v[0]
+            return float(v)
+        return 0.0
+
     try:
         yahoo_limiter()
         data = yf.download(pair, period="5d", auto_adjust=True, progress=False)
-        if not data.empty:
-            rate = float(data["Close"].iloc[-1])
+        rate = _extract_close(data)
+        if rate > 0:
+            cache.set("yfinance", f"fx_{pair}", {"rate": rate})
+            return rate
+    except Exception:
+        pass
+    # Fallback: try reciprocal pair USDXXX=X → 1/rate
+    pair2 = f"USD{currency}=X"
+    try:
+        yahoo_limiter()
+        data2 = yf.download(pair2, period="5d", auto_adjust=True, progress=False)
+        rate2 = _extract_close(data2)
+        if rate2 > 0:
+            rate = 1.0 / rate2
             cache.set("yfinance", f"fx_{pair}", {"rate": rate})
             return rate
     except Exception:

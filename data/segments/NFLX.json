@@ -1,6 +1,7 @@
 {
   "ticker": "NFLX",
   "name": "Netflix Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "NFLX",
     "period": "FY2025",
@@ -18,17 +19,17 @@
       }
     ],
     "total_revenue": 45183036000.0,
-    "gross_profit": null,
+    "gross_profit": 21907707000.0,
     "operating_income": 13326603000.0,
     "net_income": 10981201000.0,
     "rd_expense": 3391390000.0,
-    "sga_expense": null,
+    "sga_expense": 5189714000.0,
     "cogs": 23275329000.0,
-    "interest_expense": null,
+    "interest_expense": -776510000.0,
     "income_tax": -1741351000.0,
     "currency": "USD",
     "extraction_method": "edgar+llm",
-    "confidence": 0.92,
+    "confidence": 1.0,
     "notes": []
   },
   "annual_periods": [
@@ -49,17 +50,17 @@
         }
       ],
       "total_revenue": 45183036000.0,
-      "gross_profit": null,
+      "gross_profit": 21907707000.0,
       "operating_income": 13326603000.0,
       "net_income": 10981201000.0,
       "rd_expense": 3391390000.0,
-      "sga_expense": null,
+      "sga_expense": 5189714000.0,
       "cogs": 23275329000.0,
-      "interest_expense": null,
+      "interest_expense": -776510000.0,
       "income_tax": -1741351000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
-      "confidence": 0.92,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -79,17 +80,17 @@
         }
       ],
       "total_revenue": 39000966000.0,
-      "gross_profit": null,
+      "gross_profit": 17962502000.0,
       "operating_income": 10417614000.0,
       "net_income": 8711631000.0,
       "rd_expense": 2925295000.0,
-      "sga_expense": null,
+      "sga_expense": 4619593000.0,
       "cogs": 21038464000.0,
-      "interest_expense": null,
+      "interest_expense": -718733000.0,
       "income_tax": -1254026000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
-      "confidence": 0.92,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -109,17 +110,17 @@
         }
       ],
       "total_revenue": 33723297000.0,
-      "gross_profit": null,
+      "gross_profit": 14007929000.0,
       "operating_income": 6954003000.0,
       "net_income": 5407990000.0,
       "rd_expense": 2675758000.0,
-      "sga_expense": null,
+      "sga_expense": 4378168000.0,
       "cogs": 19715368000.0,
       "interest_expense": -699826000.0,
       "income_tax": -797415000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
-      "confidence": 0.96,
+      "confidence": 1.0,
       "notes": []
     }
   ],
@@ -141,17 +142,17 @@
         }
       ],
       "total_revenue": 12249757000.0,
-      "gross_profit": null,
+      "gross_profit": 6361519000.0,
       "operating_income": 3956997000.0,
       "net_income": 5282791000.0,
       "rd_expense": 959696000.0,
-      "sga_expense": null,
+      "sga_expense": 1444826000.0,
       "cogs": 5888238000.0,
-      "interest_expense": null,
+      "interest_expense": -262077000.0,
       "income_tax": -1264295000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
-      "confidence": 0.92,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -160,19 +161,28 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Single Operating Segment",
+          "value": 11510000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 11510307000.0,
+      "gross_profit": 5346057000.0,
+      "operating_income": 3248247000.0,
+      "net_income": 2546916000.0,
+      "rd_expense": 853584000.0,
+      "sga_expense": 1244226000.0,
+      "cogs": 6164250000.0,
+      "interest_expense": -175294000.0,
+      "income_tax": -562494000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -181,19 +191,28 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Single Operating Segment",
+          "value": 11079000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 11079166000.0,
+      "gross_profit": 5753855000.0,
+      "operating_income": 3774694000.0,
+      "net_income": 3125413000.0,
+      "rd_expense": 824683000.0,
+      "sga_expense": 1154478000.0,
+      "cogs": 5325311000.0,
+      "interest_expense": -182649000.0,
+      "income_tax": -506262000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -213,17 +232,17 @@
         }
       ],
       "total_revenue": 10542801000.0,
-      "gross_profit": null,
+      "gross_profit": 5279654000.0,
       "operating_income": 3346999000.0,
       "net_income": 2890351000.0,
       "rd_expense": 822823000.0,
-      "sga_expense": null,
+      "sga_expense": 1109832000.0,
       "cogs": 5263147000.0,
-      "interest_expense": null,
+      "interest_expense": -184172000.0,
       "income_tax": -323375000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
-      "confidence": 0.92,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -232,20 +251,31 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "United States",
+          "value": 9824703000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 9824703000.0,
+      "gross_profit": 4704819000.0,
+      "operating_income": 2909477000.0,
+      "net_income": 2363509000.0,
+      "rd_expense": 735063000.0,
+      "sga_expense": 1060279000.0,
+      "cogs": 5119884000.0,
+      "interest_expense": -184830000.0,
+      "income_tax": -339445000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (9824703000) differs from Yahoo (39000966000) by 74.8%"
+      ]
     },
     {
       "ticker": "NFLX",
@@ -255,7 +285,7 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "United States",
+          "segment_name": "U.S.",
           "value": 9559310000.0,
           "unit": "MILLIONS",
           "period": "2024Q2",
@@ -264,17 +294,17 @@
         }
       ],
       "total_revenue": 9559310000.0,
-      "gross_profit": null,
+      "gross_profit": 4385167000.0,
       "operating_income": 2602837000.0,
       "net_income": 2147306000.0,
       "rd_expense": 711254000.0,
-      "sga_expense": null,
+      "sga_expense": 1071076000.0,
       "cogs": 5174143000.0,
       "interest_expense": -167986000.0,
       "income_tax": -366550000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
-      "confidence": 0.96,
+      "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (9559310000) differs from Yahoo (39000966000) by 75.5%"
       ]
@@ -296,17 +326,17 @@
         }
       ],
       "total_revenue": 9370440000.0,
-      "gross_profit": null,
+      "gross_profit": 4393367000.0,
       "operating_income": 2632534000.0,
       "net_income": 2332209000.0,
       "rd_expense": 702473000.0,
-      "sga_expense": null,
+      "sga_expense": 1058360000.0,
       "cogs": 4977073000.0,
       "interest_expense": -173314000.0,
       "income_tax": -282370000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
-      "confidence": 0.96,
+      "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (9370440000) differs from Yahoo (39000966000) by 76.0%"
       ]
@@ -317,20 +347,31 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Streaming",
+          "value": 8541668000.000001,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8541668000.0,
+      "gross_profit": 3610880000.0,
+      "operating_income": 1916394000.0,
+      "net_income": 1677422000.0,
+      "rd_expense": 657159000.0,
+      "sga_expense": 1037327000.0,
+      "cogs": 4930788000.0,
+      "interest_expense": -175563000.0,
+      "income_tax": -231627000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8541668000) differs from Yahoo (33723297000) by 74.7%"
+      ]
     },
     {
       "ticker": "NFLX",
@@ -338,58 +379,65 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Streaming",
+          "value": 8187301000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8187301000.0,
+      "gross_profit": 3513831000.0,
+      "operating_income": 1827183000.0,
+      "net_income": 1487610000.0,
+      "rd_expense": 657983000.0,
+      "sga_expense": 1028665000.0,
+      "cogs": 4673470000.0,
+      "interest_expense": -174812000.0,
+      "income_tax": -191722000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "NFLX",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8187301000) differs from Yahoo (33723297000) by 75.7%"
+      ]
     }
   ],
-  "ttm_revenue": 22792558000.0,
-  "ttm_operating_income": 7303996000.0,
-  "ttm_net_income": 8173142000.0,
+  "ttm_revenue": 45382031000.0,
+  "ttm_operating_income": 14326937000.0,
+  "ttm_net_income": 13845471000.0,
   "segment_trend": {
+    "Streaming": [
+      {
+        "period": "2023Q2",
+        "value": 8187301000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 8541668000.000001,
+        "is_annual": false
+      }
+    ],
     "U.S.": [
       {
         "period": "2024Q1",
         "value": 9370440000.0,
         "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 9559310000.0,
+        "is_annual": false
       }
     ],
     "United States": [
       {
-        "period": "2024Q2",
-        "value": 9559310000.0,
+        "period": "2024Q3",
+        "value": 9824703000.0,
         "is_annual": false
       },
       {
@@ -402,6 +450,16 @@
       {
         "period": "2025Q1",
         "value": 10542801000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 11079000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 11510000000.0,
         "is_annual": false
       },
       {
@@ -422,7 +480,7 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 10,
+  "quarterly_count": 9,
   "has_partial_data": false,
   "data_notes": []
 }

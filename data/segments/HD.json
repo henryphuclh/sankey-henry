@@ -1,6 +1,7 @@
 {
   "ticker": "HD",
   "name": "Home Depot Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "HD",
     "period": "FY2026",
@@ -32,7 +33,7 @@
     "rd_expense": null,
     "sga_expense": 30702000000.0,
     "cogs": 109818000000.0,
-    "interest_expense": null,
+    "interest_expense": 2412000000.0,
     "income_tax": 4446000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -71,7 +72,7 @@
       "rd_expense": null,
       "sga_expense": 30702000000.0,
       "cogs": 109818000000.0,
-      "interest_expense": null,
+      "interest_expense": 2412000000.0,
       "income_tax": 4446000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -109,7 +110,7 @@
       "rd_expense": null,
       "sga_expense": 28748000000.0,
       "cogs": 106206000000.0,
-      "interest_expense": null,
+      "interest_expense": 2321000000.0,
       "income_tax": 4600000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -220,14 +221,6 @@
           "is_annual": true
         },
         {
-          "segment_name": "Décor/Storage",
-          "value": 6012000000.0,
-          "unit": "USD",
-          "period": "2024-01-28 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Net sales – services",
           "value": 5834000000.0,
           "unit": "USD",
@@ -258,19 +251,36 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Primary",
+          "value": 37462000000.0,
+          "unit": "USD",
+          "period": "2025-11-02 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 3890000000.0,
+          "unit": "USD",
+          "period": "2025-11-02 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 41352000000.0,
+      "gross_profit": 13815000000.0,
+      "operating_income": 5353000000.0,
+      "net_income": 3601000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 7636000000.0,
+      "cogs": 27537000000.0,
+      "interest_expense": 628000000.0,
+      "income_tax": 1156000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -279,19 +289,36 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Primary Segment",
+          "value": 42157000000.0,
+          "unit": "USD",
+          "period": "2025-08-03 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 3120000000.0,
+          "unit": "USD",
+          "period": "2025-08-03 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 45277000000.0,
+      "gross_profit": 15125000000.0,
+      "operating_income": 6555000000.0,
+      "net_income": 4551000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 7764000000.0,
+      "cogs": 30152000000.0,
+      "interest_expense": 575000000.0,
+      "income_tax": 1454000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -325,7 +352,7 @@
       "rd_expense": null,
       "sga_expense": 7530000000.0,
       "cogs": 26397000000.0,
-      "interest_expense": null,
+      "interest_expense": 615000000.0,
       "income_tax": 1109000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -338,20 +365,39 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Primary Segment",
+          "value": 37289000000.0,
+          "unit": "USD",
+          "period": "2024-10-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 2928000000.0,
+          "unit": "USD",
+          "period": "2024-10-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 40217000000.0,
+      "gross_profit": 13425000000.0,
+      "operating_income": 5418000000.0,
+      "net_income": 3648000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 7212000000.0,
+      "cogs": 26792000000.0,
+      "interest_expense": 625000000.0,
+      "income_tax": 1175000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (40217000000) differs from Yahoo (152669000000) by 73.7%"
+      ]
     },
     {
       "ticker": "HD",
@@ -392,7 +438,7 @@
       "rd_expense": null,
       "sga_expense": 7144000000.0,
       "cogs": 28759000000.0,
-      "interest_expense": null,
+      "interest_expense": 573000000.0,
       "income_tax": 1484000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -463,20 +509,55 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Services",
+          "value": 1554000000.0,
+          "unit": "USD",
+          "period": "2023-10-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Building Materials",
+          "value": 14744000000.0,
+          "unit": "USD",
+          "period": "2023-10-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Décor",
+          "value": 12653000000.0,
+          "unit": "USD",
+          "period": "2023-10-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Hardlines",
+          "value": 10313000000.0,
+          "unit": "USD",
+          "period": "2023-10-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 37710000000.0,
+      "gross_profit": 12738000000.0,
+      "operating_income": 5406000000.0,
+      "net_income": 3810000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 6649000000.0,
+      "cogs": 24972000000.0,
+      "interest_expense": 487000000.0,
+      "income_tax": 1158000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (37710000000) differs from Yahoo (157403000000) by 76.0%"
+      ]
     },
     {
       "ticker": "HD",
@@ -484,20 +565,55 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Services",
+          "value": 1555000000.0,
+          "unit": "USD",
+          "period": "2023-07-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Building Materials",
+          "value": 15391000000.0,
+          "unit": "USD",
+          "period": "2023-07-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Décor",
+          "value": 13411000000.0,
+          "unit": "USD",
+          "period": "2023-07-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Hardlines",
+          "value": 14114000000.0,
+          "unit": "USD",
+          "period": "2023-07-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 42916000000.0,
+      "gross_profit": 14157000000.0,
+      "operating_income": 6589000000.0,
+      "net_income": 4659000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 6915000000.0,
+      "cogs": 28759000000.0,
+      "interest_expense": 469000000.0,
+      "income_tax": 1502000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (42916000000) differs from Yahoo (157403000000) by 72.7%"
+      ]
     },
     {
       "ticker": "HD",
@@ -505,27 +621,77 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Services",
+          "value": 1369000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Building Materials",
+          "value": 14079000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Décor",
+          "value": 12251000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Hardlines",
+          "value": 10927000000.0,
+          "unit": "USD",
+          "period": "2023-04-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 37257000000.0,
+      "gross_profit": 12557000000.0,
+      "operating_income": 5551000000.0,
+      "net_income": 3873000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 6355000000.0,
+      "cogs": 24700000000.0,
+      "interest_expense": 474000000.0,
+      "income_tax": 1237000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (37257000000) differs from Yahoo (157403000000) by 76.3%"
+      ]
     }
   ],
-  "ttm_revenue": 39856000000.0,
-  "ttm_operating_income": 5133000000.0,
-  "ttm_net_income": 3433000000.0,
+  "ttm_revenue": 166702000000.0,
+  "ttm_operating_income": 22459000000.0,
+  "ttm_net_income": 15233000000.0,
   "segment_trend": {
     "Services": [
+      {
+        "period": "2023Q2",
+        "value": 1369000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1555000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 1554000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q2",
         "value": 1340000000.0,
@@ -533,6 +699,21 @@
       }
     ],
     "Building Materials": [
+      {
+        "period": "2023Q2",
+        "value": 14079000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 15391000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 14744000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q2",
         "value": 12614000000.0,
@@ -546,12 +727,42 @@
     ],
     "Décor": [
       {
+        "period": "2023Q2",
+        "value": 12251000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 13411000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 12653000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q2",
         "value": 12344000000.0,
         "is_annual": false
       }
     ],
     "Hardlines": [
+      {
+        "period": "2023Q2",
+        "value": 10927000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 14114000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 10313000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q2",
         "value": 11460000000.0,
@@ -581,8 +792,18 @@
     ],
     "Primary Segment": [
       {
+        "period": "2024Q4",
+        "value": 37289000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q2",
         "value": 37287000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 42157000000.0,
         "is_annual": false
       },
       {
@@ -593,8 +814,23 @@
     ],
     "Other": [
       {
+        "period": "2024Q4",
+        "value": 2928000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q2",
         "value": 2569000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 3120000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 3890000000.0,
         "is_annual": false
       },
       {
@@ -605,6 +841,18 @@
       {
         "period": "FY2026",
         "value": 12717000000.0,
+        "is_annual": true
+      }
+    ],
+    "Primary": [
+      {
+        "period": "2025Q4",
+        "value": 37462000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2026",
+        "value": 151966000000.0,
         "is_annual": true
       }
     ],
@@ -685,24 +933,10 @@
         "is_annual": true
       }
     ],
-    "Décor/Storage": [
-      {
-        "period": "FY2024",
-        "value": 6012000000.0,
-        "is_annual": true
-      }
-    ],
     "Net sales – services": [
       {
         "period": "FY2024",
         "value": 5834000000.0,
-        "is_annual": true
-      }
-    ],
-    "Primary": [
-      {
-        "period": "FY2026",
-        "value": 151966000000.0,
         "is_annual": true
       }
     ]

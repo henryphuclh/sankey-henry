@@ -1,6 +1,7 @@
 {
   "ticker": "CSCO",
   "name": "Cisco Systems Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "CSCO",
     "period": "FY2025",
@@ -9,8 +10,8 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Subscription Revenue, Product",
-        "value": 17783000000.0,
+        "segment_name": "Networking",
+        "value": 28304000000.0,
         "unit": "USD",
         "period": "2025-07-26 (FY)",
         "concept": "xbrl_dimension",
@@ -19,14 +20,6 @@
       {
         "segment_name": "Services",
         "value": 15046000000.0,
-        "unit": "USD",
-        "period": "2025-07-26 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Subscription Revenue, Service",
-        "value": 13743000000.0,
         "unit": "USD",
         "period": "2025-07-26 (FY)",
         "concept": "xbrl_dimension",
@@ -62,9 +55,9 @@
     "operating_income": 11760000000.0,
     "net_income": 10180000000.0,
     "rd_expense": 9300000000.0,
-    "sga_expense": 10966000000.0,
+    "sga_expense": 13958000000.0,
     "cogs": 19864000000.0,
-    "interest_expense": null,
+    "interest_expense": -1593000000.0,
     "income_tax": 920000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -80,8 +73,8 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Subscription Revenue, Product",
-          "value": 17783000000.0,
+          "segment_name": "Networking",
+          "value": 28304000000.0,
           "unit": "USD",
           "period": "2025-07-26 (FY)",
           "concept": "xbrl_dimension",
@@ -90,14 +83,6 @@
         {
           "segment_name": "Services",
           "value": 15046000000.0,
-          "unit": "USD",
-          "period": "2025-07-26 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription Revenue, Service",
-          "value": 13743000000.0,
           "unit": "USD",
           "period": "2025-07-26 (FY)",
           "concept": "xbrl_dimension",
@@ -133,9 +118,9 @@
       "operating_income": 11760000000.0,
       "net_income": 10180000000.0,
       "rd_expense": 9300000000.0,
-      "sga_expense": 10966000000.0,
+      "sga_expense": 13958000000.0,
       "cogs": 19864000000.0,
-      "interest_expense": null,
+      "interest_expense": -1593000000.0,
       "income_tax": 920000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -150,24 +135,16 @@
       "fiscal_quarter": null,
       "segments": [
         {
+          "segment_name": "Subscription",
+          "value": 27380000000.0,
+          "unit": "USD",
+          "period": "2024-07-27 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
           "segment_name": "Services",
           "value": 14550000000.0,
-          "unit": "USD",
-          "period": "2024-07-27 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription Revenue, Product",
-          "value": 14078000000.0,
-          "unit": "USD",
-          "period": "2024-07-27 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription Revenue, Service",
-          "value": 13302000000.0,
           "unit": "USD",
           "period": "2024-07-27 (FY)",
           "concept": "xbrl_dimension",
@@ -203,9 +180,9 @@
       "operating_income": 12181000000.0,
       "net_income": 10320000000.0,
       "rd_expense": 7983000000.0,
-      "sga_expense": 10364000000.0,
+      "sga_expense": 13177000000.0,
       "cogs": 18975000000.0,
-      "interest_expense": null,
+      "interest_expense": -1006000000.0,
       "income_tax": 1914000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -260,14 +237,6 @@
           "is_annual": true
         },
         {
-          "segment_name": "Other Products",
-          "value": 9000000.0,
-          "unit": "USD",
-          "period": "2023-07-29 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Services",
           "value": 13856000000.0,
           "unit": "USD",
@@ -281,7 +250,7 @@
       "operating_income": 15031000000.0,
       "net_income": 12613000000.0,
       "rd_expense": 7551000000.0,
-      "sga_expense": 9880000000.0,
+      "sga_expense": 12358000000.0,
       "cogs": 21245000000.0,
       "interest_expense": -427000000.0,
       "income_tax": 2705000000.0,
@@ -300,8 +269,8 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Subscription Revenue, Product",
-          "value": 4474000000.0,
+          "segment_name": "Subscription",
+          "value": 7836000000.0,
           "unit": "USD",
           "period": "2026-01-24 (Q2)",
           "concept": "xbrl_dimension",
@@ -310,14 +279,6 @@
         {
           "segment_name": "Services",
           "value": 3707000000.0,
-          "unit": "USD",
-          "period": "2026-01-24 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription Revenue, Service",
-          "value": 3362000000.0,
           "unit": "USD",
           "period": "2026-01-24 (Q2)",
           "concept": "xbrl_dimension",
@@ -353,9 +314,9 @@
       "operating_income": 3781000000.0,
       "net_income": 3175000000.0,
       "rd_expense": 2355000000.0,
-      "sga_expense": 2881000000.0,
+      "sga_expense": 3569000000.0,
       "cogs": 5377000000.0,
-      "interest_expense": null,
+      "interest_expense": -370000000.0,
       "income_tax": 471000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -370,8 +331,8 @@
       "fiscal_quarter": 4,
       "segments": [
         {
-          "segment_name": "Subscription Revenue, Product",
-          "value": 4500000000.0,
+          "segment_name": "Networking",
+          "value": 7768000000.0,
           "unit": "USD",
           "period": "2025-10-25 (Q1)",
           "concept": "xbrl_dimension",
@@ -380,14 +341,6 @@
         {
           "segment_name": "Services",
           "value": 3806000000.0,
-          "unit": "USD",
-          "period": "2025-10-25 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription Revenue, Service",
-          "value": 3500000000.0,
           "unit": "USD",
           "period": "2025-10-25 (Q1)",
           "concept": "xbrl_dimension",
@@ -423,9 +376,9 @@
       "operating_income": 3363000000.0,
       "net_income": 2860000000.0,
       "rd_expense": 2400000000.0,
-      "sga_expense": 2871000000.0,
+      "sga_expense": 3604000000.0,
       "cogs": 5138000000.0,
-      "interest_expense": null,
+      "interest_expense": -350000000.0,
       "income_tax": 531000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -440,8 +393,8 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Subscription Revenue, Product",
-          "value": 4483000000.0,
+          "segment_name": "Networking",
+          "value": 7068000000.0,
           "unit": "USD",
           "period": "2025-04-26 (Q3)",
           "concept": "xbrl_dimension",
@@ -450,14 +403,6 @@
         {
           "segment_name": "Services",
           "value": 3775000000.0,
-          "unit": "USD",
-          "period": "2025-04-26 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription Revenue, Service",
-          "value": 3433000000.0,
           "unit": "USD",
           "period": "2025-04-26 (Q3)",
           "concept": "xbrl_dimension",
@@ -493,9 +438,9 @@
       "operating_income": 3202000000.0,
       "net_income": 2491000000.0,
       "rd_expense": 2335000000.0,
-      "sga_expense": 2724000000.0,
+      "sga_expense": 3463000000.0,
       "cogs": 4871000000.0,
-      "interest_expense": null,
+      "interest_expense": -403000000.0,
       "income_tax": 456000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -510,8 +455,8 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Subscription Revenue, Product",
-          "value": 4432000000.0,
+          "segment_name": "Networking",
+          "value": 6850000000.0,
           "unit": "USD",
           "period": "2025-01-25 (Q2)",
           "concept": "xbrl_dimension",
@@ -520,14 +465,6 @@
         {
           "segment_name": "Services",
           "value": 3757000000.0,
-          "unit": "USD",
-          "period": "2025-01-25 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription Revenue, Service",
-          "value": 3430000000.0,
           "unit": "USD",
           "period": "2025-01-25 (Q2)",
           "concept": "xbrl_dimension",
@@ -563,9 +500,9 @@
       "operating_income": 3113000000.0,
       "net_income": 2428000000.0,
       "rd_expense": 2299000000.0,
-      "sga_expense": 2672000000.0,
+      "sga_expense": 3424000000.0,
       "cogs": 4880000000.0,
-      "interest_expense": null,
+      "interest_expense": -404000000.0,
       "income_tax": 459000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -580,8 +517,8 @@
       "fiscal_quarter": 4,
       "segments": [
         {
-          "segment_name": "Subscription Revenue, Product",
-          "value": 4419000000.0,
+          "segment_name": "Networking",
+          "value": 6753000000.0,
           "unit": "USD",
           "period": "2024-10-26 (Q1)",
           "concept": "xbrl_dimension",
@@ -590,14 +527,6 @@
         {
           "segment_name": "Services",
           "value": 3727000000.0,
-          "unit": "USD",
-          "period": "2024-10-26 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Subscription Revenue, Service",
-          "value": 3425000000.0,
           "unit": "USD",
           "period": "2024-10-26 (Q1)",
           "concept": "xbrl_dimension",
@@ -633,9 +562,9 @@
       "operating_income": 2358000000.0,
       "net_income": 2711000000.0,
       "rd_expense": 2286000000.0,
-      "sga_expense": 2752000000.0,
+      "sga_expense": 3547000000.0,
       "cogs": 4720000000.0,
-      "interest_expense": null,
+      "interest_expense": -418000000.0,
       "income_tax": -444000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -697,7 +626,7 @@
       "operating_income": 2191000000.0,
       "net_income": 1886000000.0,
       "rd_expense": 1948000000.0,
-      "sga_expense": 2559000000.0,
+      "sga_expense": 3295000000.0,
       "cogs": 4429000000.0,
       "interest_expense": -357000000.0,
       "income_tax": 349000000.0,
@@ -761,7 +690,7 @@
       "operating_income": 3096000000.0,
       "net_income": 2634000000.0,
       "rd_expense": 1943000000.0,
-      "sga_expense": 2458000000.0,
+      "sga_expense": 3100000000.0,
       "cogs": 4574000000.0,
       "interest_expense": -120000000.0,
       "income_tax": 527000000.0,
@@ -825,7 +754,7 @@
       "operating_income": 4276000000.0,
       "net_income": 3638000000.0,
       "rd_expense": 1913000000.0,
-      "sga_expense": 2506000000.0,
+      "sga_expense": 3178000000.0,
       "cogs": 5111000000.0,
       "interest_expense": -111000000.0,
       "income_tax": 804000000.0,
@@ -890,14 +819,6 @@
           "period": "2023-04-29 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Other Products",
-          "value": 3000000.0,
-          "unit": "USD",
-          "period": "2023-04-29 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
       "total_revenue": 14571000000.0,
@@ -905,7 +826,7 @@
       "operating_income": 3946000000.0,
       "net_income": 3212000000.0,
       "rd_expense": 1962000000.0,
-      "sga_expense": 2526000000.0,
+      "sga_expense": 3167000000.0,
       "cogs": 5339000000.0,
       "interest_expense": -109000000.0,
       "income_tax": 745000000.0,
@@ -1093,18 +1014,6 @@
         "is_annual": true
       }
     ],
-    "Other Products": [
-      {
-        "period": "2023Q2",
-        "value": 3000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 9000000.0,
-        "is_annual": true
-      }
-    ],
     "Networking": [
       {
         "period": "2023Q4",
@@ -1120,6 +1029,31 @@
         "period": "2024Q2",
         "value": 6522000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 6753000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 6850000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 7068000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 7768000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 28304000000.0,
+        "is_annual": true
       }
     ],
     "Security": [
@@ -1226,77 +1160,15 @@
         "is_annual": true
       }
     ],
-    "Subscription Revenue, Product": [
-      {
-        "period": "2024Q4",
-        "value": 4419000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 4432000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 4483000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q4",
-        "value": 4500000000.0,
-        "is_annual": false
-      },
+    "Subscription": [
       {
         "period": "2026Q1",
-        "value": 4474000000.0,
+        "value": 7836000000.0,
         "is_annual": false
       },
       {
         "period": "FY2024",
-        "value": 14078000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 17783000000.0,
-        "is_annual": true
-      }
-    ],
-    "Subscription Revenue, Service": [
-      {
-        "period": "2024Q4",
-        "value": 3425000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 3430000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 3433000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q4",
-        "value": 3500000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 3362000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2024",
-        "value": 13302000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 13743000000.0,
+        "value": 27380000000.0,
         "is_annual": true
       }
     ]

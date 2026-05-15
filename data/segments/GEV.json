@@ -1,6 +1,7 @@
 {
   "ticker": "GEV",
   "name": "GE Vernova Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "GEV",
     "period": "FY2025",
@@ -144,23 +145,94 @@
   "quarterly_periods": [
     {
       "ticker": "GEV",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Power",
+          "value": 4971000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Electrification",
+          "value": 2959000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Wind",
+          "value": 1432000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 9339000000.0,
+      "gross_profit": 1781000000.0,
+      "operating_income": 179000000.0,
+      "net_income": 4750000000.0,
+      "rd_expense": 304000000.0,
+      "sga_expense": 1298000000.0,
+      "cogs": 7558000000.0,
+      "interest_expense": null,
+      "income_tax": 354000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "GEV",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Power",
+          "value": 4838000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Wind",
+          "value": 2647000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Electrification",
+          "value": 2601000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 9969000000.0,
+      "gross_profit": 1897000000.0,
+      "operating_income": 366000000.0,
+      "net_income": 453000000.0,
+      "rd_expense": 310000000.0,
+      "sga_expense": 1221000000.0,
+      "cogs": 8071000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 293000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -169,19 +241,44 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Power",
+          "value": 4758000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Wind",
+          "value": 2245000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Electrification",
+          "value": 2201000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        }
+      ],
+      "total_revenue": 9111000000.0,
+      "gross_profit": 1846000000.0,
+      "operating_income": 378000000.0,
+      "net_income": 514000000.0,
+      "rd_expense": 282000000.0,
+      "sga_expense": 1185000000.0,
+      "cogs": 7266000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 153000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -236,20 +333,47 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Power",
+          "value": 4151000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wind",
+          "value": 2880000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Electrification",
+          "value": 1876000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8913000000.0,
+      "gross_profit": 1109000000.0,
+      "operating_income": -359000000.0,
+      "net_income": -99000000.0,
+      "rd_expense": 243000000.0,
+      "sga_expense": 1226000000.0,
+      "cogs": 7804000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -23000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (8913000000) differs from Yahoo (34935000000) by 74.5%"
+      ]
     },
     {
       "ticker": "GEV",
@@ -258,6 +382,14 @@
       "fiscal_year": 2024,
       "fiscal_quarter": 2,
       "segments": [
+        {
+          "segment_name": "Power",
+          "value": 4413000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
         {
           "segment_name": "Wind",
           "value": 2052000000.0,
@@ -269,70 +401,6 @@
         {
           "segment_name": "Electrification",
           "value": 1721000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment - Wind",
-          "value": 1660000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment - Power",
-          "value": 1284000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment - Electrification",
-          "value": 1246000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Services - Electrification",
-          "value": 475000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Services - Wind",
-          "value": 393000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Intersegment",
-          "value": 119000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Corporate and other - Services",
-          "value": 13000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Corporate and other - Equipment",
-          "value": 4000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -363,6 +431,14 @@
       "fiscal_quarter": 1,
       "segments": [
         {
+          "segment_name": "Power",
+          "value": 4007000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
           "segment_name": "Wind",
           "value": 1634000000.0,
           "unit": "USD",
@@ -373,70 +449,6 @@
         {
           "segment_name": "Electrification",
           "value": 1606000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment - Wind",
-          "value": 1227000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment - Electrification",
-          "value": 1203000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment - Power",
-          "value": 1185000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Services - Wind",
-          "value": 407000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Services - Electrification",
-          "value": 403000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Intersegment",
-          "value": 78000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Corporate and other - Services",
-          "value": 10000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Corporate and other - Equipment",
-          "value": 2000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -460,10 +472,57 @@
       ]
     }
   ],
-  "ttm_revenue": 8032000000.0,
-  "ttm_operating_income": 43000000.0,
-  "ttm_net_income": 264000000.0,
+  "ttm_revenue": 36451000000.0,
+  "ttm_operating_income": 966000000.0,
+  "ttm_net_income": 5981000000.0,
   "segment_trend": {
+    "Power": [
+      {
+        "period": "2024Q1",
+        "value": 4007000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4413000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 4151000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4423000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4758000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 4838000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 4971000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 18127000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 19767000000.0,
+        "is_annual": true
+      }
+    ],
     "Wind": [
       {
         "period": "2024Q1",
@@ -476,8 +535,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 2880000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 1850000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 2245000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2647000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1432000000.0,
         "is_annual": false
       },
       {
@@ -503,8 +582,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 1876000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 1879000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 2201000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2601000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 2959000000.0,
         "is_annual": false
       },
       {
@@ -517,125 +616,12 @@
         "value": 9642000000.0,
         "is_annual": true
       }
-    ],
-    "Equipment - Wind": [
-      {
-        "period": "2024Q1",
-        "value": 1227000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 1660000000.0,
-        "is_annual": false
-      }
-    ],
-    "Equipment - Electrification": [
-      {
-        "period": "2024Q1",
-        "value": 1203000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 1246000000.0,
-        "is_annual": false
-      }
-    ],
-    "Equipment - Power": [
-      {
-        "period": "2024Q1",
-        "value": 1185000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 1284000000.0,
-        "is_annual": false
-      }
-    ],
-    "Services - Wind": [
-      {
-        "period": "2024Q1",
-        "value": 407000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 393000000.0,
-        "is_annual": false
-      }
-    ],
-    "Services - Electrification": [
-      {
-        "period": "2024Q1",
-        "value": 403000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 475000000.0,
-        "is_annual": false
-      }
-    ],
-    "Intersegment": [
-      {
-        "period": "2024Q1",
-        "value": 78000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 119000000.0,
-        "is_annual": false
-      }
-    ],
-    "Corporate and other - Services": [
-      {
-        "period": "2024Q1",
-        "value": 10000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 13000000.0,
-        "is_annual": false
-      }
-    ],
-    "Corporate and other - Equipment": [
-      {
-        "period": "2024Q1",
-        "value": 2000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 4000000.0,
-        "is_annual": false
-      }
-    ],
-    "Power": [
-      {
-        "period": "2025Q1",
-        "value": 4423000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2024",
-        "value": 18127000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 19767000000.0,
-        "is_annual": true
-      }
     ]
   },
   "annual_count": 2,
-  "quarterly_count": 6,
+  "quarterly_count": 7,
   "has_partial_data": true,
   "data_notes": [
-    "Partial data: 2/3 annual, 6/12 quarterly"
+    "Partial data: 2/3 annual, 7/12 quarterly"
   ]
 }

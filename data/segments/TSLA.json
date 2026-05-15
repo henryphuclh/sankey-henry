@@ -1,6 +1,7 @@
 {
   "ticker": "TSLA",
   "name": "Tesla Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "TSLA",
     "period": "FY2025",
@@ -32,7 +33,7 @@
     "rd_expense": 6411000000.0,
     "sga_expense": 5834000000.0,
     "cogs": 77733000000.0,
-    "interest_expense": null,
+    "interest_expense": -338000000.0,
     "income_tax": 1423000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -71,32 +72,11 @@
       "rd_expense": 6411000000.0,
       "sga_expense": 5834000000.0,
       "cogs": 77733000000.0,
-      "interest_expense": null,
+      "interest_expense": -338000000.0,
       "income_tax": 1423000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
-    },
-    {
-      "ticker": "TSLA",
-      "period": "FY2024",
-      "is_annual": true,
-      "fiscal_year": 2024,
-      "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
       "notes": []
     },
     {
@@ -130,7 +110,7 @@
       "rd_expense": 4540000000.0,
       "sga_expense": 5150000000.0,
       "cogs": 80240000000.0,
-      "interest_expense": null,
+      "interest_expense": -350000000.0,
       "income_tax": 1837000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -162,7 +142,7 @@
         },
         {
           "segment_name": "Energy generation and storage segment",
-          "value": 12070000000.0,
+          "value": 6035000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -195,23 +175,78 @@
   "quarterly_periods": [
     {
       "ticker": "TSLA",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Automotive segment",
+          "value": 20542008094.1869,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy generation and storage segment",
+          "value": 1844991905.8130977,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 22387000000.0,
+      "gross_profit": 4720000000.0,
+      "operating_income": 941000000.0,
+      "net_income": 491000000.0,
+      "rd_expense": 1946000000.0,
+      "sga_expense": 1833000000.0,
+      "cogs": 17667000000.0,
+      "interest_expense": -92000000.0,
+      "income_tax": 257000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "TSLA",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Automotive segment",
+          "value": 20699000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy generation and storage segment",
+          "value": 2342000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 28095000000.0,
+      "gross_profit": 5054000000.0,
+      "operating_income": 1624000000.0,
+      "net_income": 1389000000.0,
+      "rd_expense": 1630000000.0,
+      "sga_expense": 1562000000.0,
+      "cogs": 23041000000.0,
+      "interest_expense": -76000000.0,
+      "income_tax": 570000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -220,19 +255,36 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Automotive segment",
+          "value": 16675000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy generation and storage segment",
+          "value": 1943000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 22496000000.0,
+      "gross_profit": 3878000000.0,
+      "operating_income": 923000000.0,
+      "net_income": 1190000000.0,
+      "rd_expense": 1589000000.0,
+      "sga_expense": 1366000000.0,
+      "cogs": 18618000000.0,
+      "interest_expense": -86000000.0,
+      "income_tax": 359000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -266,7 +318,7 @@
       "rd_expense": 1409000000.0,
       "sga_expense": 1251000000.0,
       "cogs": 16182000000.0,
-      "interest_expense": null,
+      "interest_expense": -91000000.0,
       "income_tax": 169000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -279,20 +331,55 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Automotive leasing",
+          "value": 19277000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services and other",
+          "value": 2790000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy generation and storage segment",
+          "value": 2376000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Automotive regulatory credits",
+          "value": 739000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 25182000000.0,
+      "gross_profit": 4997000000.0,
+      "operating_income": 2717000000.0,
+      "net_income": 2183000000.0,
+      "rd_expense": 1039000000.0,
+      "sga_expense": 1186000000.0,
+      "cogs": 20185000000.0,
+      "interest_expense": -92000000.0,
+      "income_tax": 601000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (25182000000) differs from Yahoo (97690000000) by 74.2%"
+      ]
     },
     {
       "ticker": "TSLA",
@@ -311,7 +398,7 @@
         },
         {
           "segment_name": "Energy generation and storage segment",
-          "value": 6028000000.0,
+          "value": 3014000000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -375,7 +462,7 @@
         },
         {
           "segment_name": "Energy generation and storage segment",
-          "value": 3270000000.0,
+          "value": 1635000000.0,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -412,20 +499,55 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Automotive leasing",
+          "value": 19071000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services and other",
+          "value": 2166000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy Generation and Storage",
+          "value": 1559000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Automotive regulatory credits",
+          "value": 554000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 23350000000.0,
+      "gross_profit": 4178000000.0,
+      "operating_income": 1764000000.0,
+      "net_income": 1878000000.0,
+      "rd_expense": 1161000000.0,
+      "sga_expense": 1253000000.0,
+      "cogs": 19172000000.0,
+      "interest_expense": -38000000.0,
+      "income_tax": 167000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (23350000000) differs from Yahoo (96773000000) by 75.9%"
+      ]
     },
     {
       "ticker": "TSLA",
@@ -433,48 +555,70 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Automotive Segment",
+          "value": 23418000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy Generation and Storage",
+          "value": 1509000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 28436000000.0,
+      "gross_profit": 4533000000.0,
+      "operating_income": 2399000000.0,
+      "net_income": 2703000000.0,
+      "rd_expense": 943000000.0,
+      "sga_expense": 1191000000.0,
+      "cogs": 20394000000.0,
+      "interest_expense": -28000000.0,
+      "income_tax": 323000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "TSLA",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (28436000000) differs from Yahoo (96773000000) by 70.6%"
+      ]
     }
   ],
-  "ttm_revenue": 19335000000.0,
-  "ttm_operating_income": 399000000.0,
-  "ttm_net_income": 420000000.0,
+  "ttm_revenue": 92313000000.0,
+  "ttm_operating_income": 3887000000.0,
+  "ttm_net_income": 3490000000.0,
   "segment_trend": {
+    "Automotive Segment": [
+      {
+        "period": "2023Q2",
+        "value": 23418000000.0,
+        "is_annual": false
+      }
+    ],
+    "Energy Generation and Storage": [
+      {
+        "period": "2023Q2",
+        "value": 1509000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1559000000.0,
+        "is_annual": false
+      }
+    ],
     "Automotive leasing": [
+      {
+        "period": "2023Q3",
+        "value": 19071000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 16936000000.0,
@@ -486,12 +630,22 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 19277000000.0,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
         "value": 80629000000.0,
         "is_annual": true
       }
     ],
     "Services and other": [
+      {
+        "period": "2023Q3",
+        "value": 2166000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 2288000000.0,
@@ -503,20 +657,57 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 2790000000.0,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
         "value": 8319000000.0,
+        "is_annual": true
+      }
+    ],
+    "Automotive regulatory credits": [
+      {
+        "period": "2023Q3",
+        "value": 554000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 442000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 890000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 739000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1790000000.0,
         "is_annual": true
       }
     ],
     "Energy generation and storage segment": [
       {
         "period": "2024Q1",
-        "value": 3270000000.0,
+        "value": 1635000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 6028000000.0,
+        "value": 3014000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 2376000000.0,
         "is_annual": false
       },
       {
@@ -525,8 +716,23 @@
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 1943000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2342000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1844991905.8130977,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
-        "value": 12070000000.0,
+        "value": 6035000000.0,
         "is_annual": true
       },
       {
@@ -540,27 +746,25 @@
         "is_annual": true
       }
     ],
-    "Automotive regulatory credits": [
-      {
-        "period": "2024Q1",
-        "value": 442000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 890000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1790000000.0,
-        "is_annual": true
-      }
-    ],
     "Automotive segment": [
       {
         "period": "2025Q1",
         "value": 14237000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 16675000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 20699000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 20542008094.1869,
         "is_annual": false
       },
       {
@@ -575,7 +779,7 @@
       }
     ]
   },
-  "annual_count": 4,
+  "annual_count": 3,
   "quarterly_count": 9,
   "has_partial_data": false,
   "data_notes": []

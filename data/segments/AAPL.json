@@ -1,6 +1,7 @@
 {
   "ticker": "AAPL",
   "name": "Apple Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "AAPL",
     "period": "FY2025",
@@ -12,40 +13,40 @@
         "segment_name": "iPhone",
         "value": 209586000000.0,
         "unit": "USD",
-        "period": "FY2025",
-        "concept": "mda_table",
+        "period": "2025-09-27 (FY)",
+        "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
         "segment_name": "Mac",
         "value": 33708000000.0,
         "unit": "USD",
-        "period": "FY2025",
-        "concept": "mda_table",
+        "period": "2025-09-27 (FY)",
+        "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
         "segment_name": "iPad",
         "value": 28023000000.0,
         "unit": "USD",
-        "period": "FY2025",
-        "concept": "mda_table",
+        "period": "2025-09-27 (FY)",
+        "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
         "segment_name": "Wearables, Home and Accessories",
         "value": 35686000000.0,
         "unit": "USD",
-        "period": "FY2025",
-        "concept": "mda_table",
+        "period": "2025-09-27 (FY)",
+        "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
         "segment_name": "Services",
         "value": 109158000000.0,
         "unit": "USD",
-        "period": "FY2025",
-        "concept": "mda_table",
+        "period": "2025-09-27 (FY)",
+        "concept": "xbrl_dimension",
         "is_annual": true
       }
     ],
@@ -59,7 +60,7 @@
     "interest_expense": null,
     "income_tax": 20719000000.0,
     "currency": "USD",
-    "extraction_method": "mda_table",
+    "extraction_method": "xbrl",
     "confidence": 1.0,
     "notes": []
   },
@@ -75,40 +76,40 @@
           "segment_name": "iPhone",
           "value": 209586000000.0,
           "unit": "USD",
-          "period": "FY2025",
-          "concept": "mda_table",
+          "period": "2025-09-27 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Mac",
           "value": 33708000000.0,
           "unit": "USD",
-          "period": "FY2025",
-          "concept": "mda_table",
+          "period": "2025-09-27 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "iPad",
           "value": 28023000000.0,
           "unit": "USD",
-          "period": "FY2025",
-          "concept": "mda_table",
+          "period": "2025-09-27 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Wearables, Home and Accessories",
           "value": 35686000000.0,
           "unit": "USD",
-          "period": "FY2025",
-          "concept": "mda_table",
+          "period": "2025-09-27 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Services",
           "value": 109158000000.0,
           "unit": "USD",
-          "period": "FY2025",
-          "concept": "mda_table",
+          "period": "2025-09-27 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
@@ -122,7 +123,7 @@
       "interest_expense": null,
       "income_tax": 20719000000.0,
       "currency": "USD",
-      "extraction_method": "mda_table",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": []
     },
@@ -137,40 +138,40 @@
           "segment_name": "iPhone",
           "value": 201183000000.0,
           "unit": "USD",
-          "period": "FY2024",
-          "concept": "mda_table",
+          "period": "2024-09-28 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Mac",
           "value": 29984000000.0,
           "unit": "USD",
-          "period": "FY2024",
-          "concept": "mda_table",
+          "period": "2024-09-28 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "iPad",
           "value": 26694000000.0,
           "unit": "USD",
-          "period": "FY2024",
-          "concept": "mda_table",
+          "period": "2024-09-28 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Wearables, Home and Accessories",
           "value": 37005000000.0,
           "unit": "USD",
-          "period": "FY2024",
-          "concept": "mda_table",
+          "period": "2024-09-28 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Services",
           "value": 96169000000.0,
           "unit": "USD",
-          "period": "FY2024",
-          "concept": "mda_table",
+          "period": "2024-09-28 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
@@ -184,7 +185,7 @@
       "interest_expense": null,
       "income_tax": 29749000000.0,
       "currency": "USD",
-      "extraction_method": "mda_table",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": []
     },
@@ -199,40 +200,40 @@
           "segment_name": "iPhone",
           "value": 200583000000.0,
           "unit": "USD",
-          "period": "FY2023",
-          "concept": "mda_table",
+          "period": "2023-09-30 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Mac",
           "value": 29357000000.0,
           "unit": "USD",
-          "period": "FY2023",
-          "concept": "mda_table",
+          "period": "2023-09-30 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "iPad",
           "value": 28300000000.0,
           "unit": "USD",
-          "period": "FY2023",
-          "concept": "mda_table",
+          "period": "2023-09-30 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Wearables, Home and Accessories",
           "value": 39845000000.0,
           "unit": "USD",
-          "period": "FY2023",
-          "concept": "mda_table",
+          "period": "2023-09-30 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Services",
           "value": 85200000000.0,
           "unit": "USD",
-          "period": "FY2023",
-          "concept": "mda_table",
+          "period": "2023-09-30 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
@@ -246,7 +247,7 @@
       "interest_expense": null,
       "income_tax": 16741000000.0,
       "currency": "USD",
-      "extraction_method": "mda_table",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": []
     }
@@ -258,7 +259,48 @@
       "is_annual": false,
       "fiscal_year": 2026,
       "fiscal_quarter": 1,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 56994000000.0,
+          "unit": "USD",
+          "period": "2026-03-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 8399000000.0,
+          "unit": "USD",
+          "period": "2026-03-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 6914000000.0,
+          "unit": "USD",
+          "period": "2026-03-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 7901000000.0,
+          "unit": "USD",
+          "period": "2026-03-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 30976000000.0,
+          "unit": "USD",
+          "period": "2026-03-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 111184000000.0,
       "gross_profit": 54781000000.0,
       "operating_income": 35885000000.0,
@@ -269,8 +311,8 @@
       "interest_expense": null,
       "income_tax": 6255000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.55,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -279,7 +321,48 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 4,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 85269000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 8386000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 8595000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 11493000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 30013000000.0,
+          "unit": "USD",
+          "period": "2025-12-27 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 143756000000.0,
       "gross_profit": 69231000000.0,
       "operating_income": 50852000000.0,
@@ -290,8 +373,8 @@
       "interest_expense": null,
       "income_tax": 8905000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.55,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -300,7 +383,48 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 44582000000.0,
+          "unit": "USD",
+          "period": "2025-06-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 8046000000.0,
+          "unit": "USD",
+          "period": "2025-06-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 6581000000.0,
+          "unit": "USD",
+          "period": "2025-06-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 7404000000.0,
+          "unit": "USD",
+          "period": "2025-06-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 27423000000.0,
+          "unit": "USD",
+          "period": "2025-06-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 94036000000.0,
       "gross_profit": 43718000000.0,
       "operating_income": 28202000000.0,
@@ -311,8 +435,8 @@
       "interest_expense": null,
       "income_tax": 4597000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.55,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -321,7 +445,48 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 1,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 46841000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 7949000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 6402000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 7522000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 26645000000.0,
+          "unit": "USD",
+          "period": "2025-03-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 95359000000.0,
       "gross_profit": 44867000000.0,
       "operating_income": 29589000000.0,
@@ -332,8 +497,8 @@
       "interest_expense": null,
       "income_tax": 4530000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.55,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -342,7 +507,48 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 4,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 69138000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 8987000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 8088000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 11747000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 26340000000.0,
+          "unit": "USD",
+          "period": "2024-12-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 124300000000.0,
       "gross_profit": 58275000000.0,
       "operating_income": 42832000000.0,
@@ -353,8 +559,8 @@
       "interest_expense": null,
       "income_tax": 6254000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.55,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (124300000000) differs from Yahoo (391035000000) by 68.2%"
       ]
@@ -365,7 +571,48 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 2,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 39296000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 7009000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 7162000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 8097000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 24213000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 85777000000.0,
       "gross_profit": 39678000000.0,
       "operating_income": 25352000000.0,
@@ -376,8 +623,8 @@
       "interest_expense": null,
       "income_tax": 4046000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.55,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (85777000000) differs from Yahoo (391035000000) by 78.1%"
       ]
@@ -388,7 +635,48 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 1,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 45963000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 7451000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 5559000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 7913000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 23867000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 90753000000.0,
       "gross_profit": 42271000000.0,
       "operating_income": 27900000000.0,
@@ -399,8 +687,8 @@
       "interest_expense": null,
       "income_tax": 4422000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.55,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (90753000000) differs from Yahoo (391035000000) by 76.8%"
       ]
@@ -411,7 +699,48 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 4,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 69702000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 7780000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 7023000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 11953000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 23117000000.0,
+          "unit": "USD",
+          "period": "2023-12-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 119575000000.0,
       "gross_profit": 54855000000.0,
       "operating_income": 40373000000.0,
@@ -422,8 +751,8 @@
       "interest_expense": null,
       "income_tax": 6407000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.55,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (119575000000) differs from Yahoo (383285000000) by 68.8%"
       ]
@@ -434,7 +763,48 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "iPhone",
+          "value": 39669000000.0,
+          "unit": "USD",
+          "period": "2023-07-01 (Q4)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mac",
+          "value": 6840000000.0,
+          "unit": "USD",
+          "period": "2023-07-01 (Q4)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "iPad",
+          "value": 5791000000.0,
+          "unit": "USD",
+          "period": "2023-07-01 (Q4)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Wearables, Home and Accessories",
+          "value": 8284000000.0,
+          "unit": "USD",
+          "period": "2023-07-01 (Q4)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 21213000000.0,
+          "unit": "USD",
+          "period": "2023-07-01 (Q4)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 81797000000.0,
       "gross_profit": 36413000000.0,
       "operating_income": 22998000000.0,
@@ -445,8 +815,8 @@
       "interest_expense": null,
       "income_tax": 2852000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.55,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (81797000000) differs from Yahoo (383285000000) by 78.7%"
       ]
@@ -457,6 +827,51 @@
   "ttm_net_income": 119889000000.0,
   "segment_trend": {
     "iPhone": [
+      {
+        "period": "2023Q3",
+        "value": 39669000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 69702000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 45963000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 39296000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 69138000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 46841000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 44582000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 85269000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 56994000000.0,
+        "is_annual": false
+      },
       {
         "period": "FY2023",
         "value": 200583000000.0,
@@ -475,6 +890,51 @@
     ],
     "Mac": [
       {
+        "period": "2023Q3",
+        "value": 6840000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 7780000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 7451000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 7009000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 8987000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 7949000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 8046000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 8386000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 8399000000.0,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
         "value": 29357000000.0,
         "is_annual": true
@@ -491,6 +951,51 @@
       }
     ],
     "iPad": [
+      {
+        "period": "2023Q3",
+        "value": 5791000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 7023000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 5559000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 7162000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 8088000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 6402000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 6581000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 8595000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 6914000000.0,
+        "is_annual": false
+      },
       {
         "period": "FY2023",
         "value": 28300000000.0,
@@ -509,6 +1014,51 @@
     ],
     "Wearables, Home and Accessories": [
       {
+        "period": "2023Q3",
+        "value": 8284000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 11953000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 7913000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 8097000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 11747000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 7522000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 7404000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 11493000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 7901000000.0,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
         "value": 39845000000.0,
         "is_annual": true
@@ -525,6 +1075,51 @@
       }
     ],
     "Services": [
+      {
+        "period": "2023Q3",
+        "value": 21213000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 23117000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 23867000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 24213000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 26340000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 26645000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 27423000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 30013000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 30976000000.0,
+        "is_annual": false
+      },
       {
         "period": "FY2023",
         "value": 85200000000.0,

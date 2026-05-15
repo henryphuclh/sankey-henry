@@ -1,6 +1,7 @@
 {
   "ticker": "TJX",
   "name": "TJX Companies Inc.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "TJX",
     "period": "FY2026",
@@ -42,8 +43,8 @@
       }
     ],
     "total_revenue": 60372000000.0,
-    "gross_profit": null,
-    "operating_income": null,
+    "gross_profit": 18693000000.0,
+    "operating_income": 7178000000.0,
     "net_income": 5494000000.0,
     "rd_expense": null,
     "sga_expense": 11515000000.0,
@@ -52,7 +53,7 @@
     "income_tax": 1805000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
-    "confidence": 0.97,
+    "confidence": 1.0,
     "notes": []
   },
   "annual_periods": [
@@ -97,8 +98,8 @@
         }
       ],
       "total_revenue": 60372000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 18693000000.0,
+      "operating_income": 7178000000.0,
       "net_income": 5494000000.0,
       "rd_expense": null,
       "sga_expense": 11515000000.0,
@@ -107,7 +108,7 @@
       "income_tax": 1805000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.97,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -151,8 +152,8 @@
         }
       ],
       "total_revenue": 56360000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 17248000000.0,
+      "operating_income": 6302000000.0,
       "net_income": 4864000000.0,
       "rd_expense": null,
       "sga_expense": 10946000000.0,
@@ -161,7 +162,7 @@
       "income_tax": 1619000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.97,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -205,8 +206,8 @@
         }
       ],
       "total_revenue": 54217000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 16266000000.0,
+      "operating_income": 5797000000.0,
       "net_income": 4474000000.0,
       "rd_expense": null,
       "sga_expense": 10469000000.0,
@@ -215,7 +216,7 @@
       "income_tax": 1493000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.97,
+      "confidence": 1.0,
       "notes": []
     }
   ],
@@ -226,19 +227,52 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Marmaxx",
+          "value": 9037000000.0,
+          "unit": "USD",
+          "period": "2025-11-01 (Q4)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "HomeGoods",
+          "value": 2539000000.0,
+          "unit": "USD",
+          "period": "2025-11-01 (Q4)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TJX Canada",
+          "value": 1492000000.0,
+          "unit": "USD",
+          "period": "2025-11-01 (Q4)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Net sales",
+          "value": 2049000000.0,
+          "unit": "USD",
+          "period": "2025-11-01 (Q4)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15117000000.0,
+      "gross_profit": 4927000000.0,
+      "operating_income": 1888000000.0,
+      "net_income": 1442000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 3039000000.0,
+      "cogs": 10190000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 474000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -247,19 +281,52 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Marmaxx",
+          "value": 8841000000.0,
+          "unit": "USD",
+          "period": "2025-08-02 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "HomeGoods",
+          "value": 2286000000.0,
+          "unit": "USD",
+          "period": "2025-08-02 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TJX Canada",
+          "value": 1381000000.0,
+          "unit": "USD",
+          "period": "2025-08-02 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Net sales",
+          "value": 1893000000.0,
+          "unit": "USD",
+          "period": "2025-08-02 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14401000000.0,
+      "gross_profit": 4425000000.0,
+      "operating_income": 1620000000.0,
+      "net_income": 1243000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 2805000000.0,
+      "cogs": 9976000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 404000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -303,8 +370,8 @@
         }
       ],
       "total_revenue": 13111000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 3865000000.0,
+      "operating_income": 1316000000.0,
       "net_income": 1036000000.0,
       "rd_expense": null,
       "sga_expense": 2549000000.0,
@@ -313,7 +380,7 @@
       "income_tax": 310000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.97,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -322,20 +389,55 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Marmaxx",
+          "value": 8438000000.0,
+          "unit": "USD",
+          "period": "2024-11-02 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "HomeGoods",
+          "value": 2355000000.0,
+          "unit": "USD",
+          "period": "2024-11-02 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TJX Canada",
+          "value": 1382000000.0,
+          "unit": "USD",
+          "period": "2024-11-02 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TJX International",
+          "value": 1888000000.0,
+          "unit": "USD",
+          "period": "2024-11-02 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14063000000.0,
+      "gross_profit": 4441000000.0,
+      "operating_income": 1693000000.0,
+      "net_income": 1297000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 2748000000.0,
+      "cogs": 9622000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 439000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (14063000000) differs from Yahoo (54217000000) by 74.1%"
+      ]
     },
     {
       "ticker": "TJX",
@@ -378,8 +480,8 @@
         }
       ],
       "total_revenue": 13468000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 4088000000.0,
+      "operating_income": 1422000000.0,
       "net_income": 1099000000.0,
       "rd_expense": null,
       "sga_expense": 2666000000.0,
@@ -388,7 +490,7 @@
       "income_tax": 369000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.97,
+      "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (13468000000) differs from Yahoo (54217000000) by 75.2%"
       ]
@@ -434,8 +536,8 @@
         }
       ],
       "total_revenue": 12479000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 3740000000.0,
+      "operating_income": 1340000000.0,
       "net_income": 1070000000.0,
       "rd_expense": null,
       "sga_expense": 2400000000.0,
@@ -444,7 +546,7 @@
       "income_tax": 320000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.97,
+      "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (12479000000) differs from Yahoo (54217000000) by 77.0%"
       ]
@@ -455,20 +557,55 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Marmaxx",
+          "value": 8107000000.0,
+          "unit": "USD",
+          "period": "2023-10-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "HomeGoods",
+          "value": 2208000000.0,
+          "unit": "USD",
+          "period": "2023-10-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TJX Canada",
+          "value": 1317000000.0,
+          "unit": "USD",
+          "period": "2023-10-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TJX International",
+          "value": 1633000000.0,
+          "unit": "USD",
+          "period": "2023-10-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 13265000000.0,
+      "gross_profit": 4126000000.0,
+      "operating_income": 1548000000.0,
+      "net_income": 1191000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 2578000000.0,
+      "cogs": 9139000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 398000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (13265000000) differs from Yahoo (49936000000) by 73.4%"
+      ]
     },
     {
       "ticker": "TJX",
@@ -476,20 +613,55 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Marmaxx",
+          "value": 7903000000.0,
+          "unit": "USD",
+          "period": "2023-07-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "HomeGoods",
+          "value": 2011000000.0,
+          "unit": "USD",
+          "period": "2023-07-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TJX Canada",
+          "value": 1223000000.0,
+          "unit": "USD",
+          "period": "2023-07-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TJX International",
+          "value": 1621000000.0,
+          "unit": "USD",
+          "period": "2023-07-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12758000000.0,
+      "gross_profit": 3848000000.0,
+      "operating_income": 1289000000.0,
+      "net_income": 989000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 2559000000.0,
+      "cogs": 8910000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 338000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (12758000000) differs from Yahoo (49936000000) by 74.5%"
+      ]
     },
     {
       "ticker": "TJX",
@@ -497,27 +669,77 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Marmaxx",
+          "value": 7366000000.0,
+          "unit": "USD",
+          "period": "2023-04-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "HomeGoods",
+          "value": 1966000000.0,
+          "unit": "USD",
+          "period": "2023-04-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TJX Canada",
+          "value": 1038000000.0,
+          "unit": "USD",
+          "period": "2023-04-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "TJX International",
+          "value": 1413000000.0,
+          "unit": "USD",
+          "period": "2023-04-29 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 11783000000.0,
+      "gross_profit": 3409000000.0,
+      "operating_income": 1171000000.0,
+      "net_income": 891000000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "sga_expense": 2238000000.0,
+      "cogs": 8374000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 317000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (11783000000) differs from Yahoo (49936000000) by 76.4%"
+      ]
     }
   ],
-  "ttm_revenue": 13111000000.0,
-  "ttm_operating_income": null,
-  "ttm_net_income": 1036000000.0,
+  "ttm_revenue": 56692000000.0,
+  "ttm_operating_income": 6517000000.0,
+  "ttm_net_income": 5018000000.0,
   "segment_trend": {
     "Marmaxx": [
+      {
+        "period": "2023Q2",
+        "value": 7366000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 7903000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 8107000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q2",
         "value": 7750000000.0,
@@ -529,8 +751,23 @@
         "is_annual": false
       },
       {
+        "period": "2024Q4",
+        "value": 8438000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q2",
         "value": 8052000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 8841000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 9037000000.0,
         "is_annual": false
       },
       {
@@ -551,6 +788,21 @@
     ],
     "HomeGoods": [
       {
+        "period": "2023Q2",
+        "value": 1966000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 2011000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 2208000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q2",
         "value": 2079000000.0,
         "is_annual": false
@@ -561,8 +813,23 @@
         "is_annual": false
       },
       {
+        "period": "2024Q4",
+        "value": 2355000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q2",
         "value": 2254000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2286000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 2539000000.0,
         "is_annual": false
       },
       {
@@ -583,6 +850,21 @@
     ],
     "TJX Canada": [
       {
+        "period": "2023Q2",
+        "value": 1038000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1223000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 1317000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q2",
         "value": 1113000000.0,
         "is_annual": false
@@ -593,8 +875,23 @@
         "is_annual": false
       },
       {
+        "period": "2024Q4",
+        "value": 1382000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q2",
         "value": 1144000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1381000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 1492000000.0,
         "is_annual": false
       },
       {
@@ -615,6 +912,21 @@
     ],
     "TJX International": [
       {
+        "period": "2023Q2",
+        "value": 1413000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1621000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 1633000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q2",
         "value": 1537000000.0,
         "is_annual": false
@@ -622,6 +934,11 @@
       {
         "period": "2024Q3",
         "value": 1678000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 1888000000.0,
         "is_annual": false
       },
       {
@@ -644,6 +961,16 @@
       {
         "period": "2025Q2",
         "value": 1661000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1893000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 2049000000.0,
         "is_annual": false
       }
     ]

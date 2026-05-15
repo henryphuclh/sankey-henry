@@ -1,6 +1,7 @@
 {
   "ticker": "IBM",
   "name": "International Business Machines",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "IBM",
     "period": "FY2025",
@@ -43,7 +44,7 @@
     ],
     "total_revenue": 67535000000.0,
     "gross_profit": 39297000000.0,
-    "operating_income": null,
+    "operating_income": 10858000000.0,
     "net_income": 10593000000.0,
     "rd_expense": 8316000000.0,
     "sga_expense": 20123000000.0,
@@ -98,7 +99,7 @@
       ],
       "total_revenue": 67535000000.0,
       "gross_profit": 39297000000.0,
-      "operating_income": null,
+      "operating_income": 10858000000.0,
       "net_income": 10593000000.0,
       "rd_expense": 8316000000.0,
       "sga_expense": 20123000000.0,
@@ -152,7 +153,7 @@
       ],
       "total_revenue": 62753000000.0,
       "gross_profit": 35551000000.0,
-      "operating_income": null,
+      "operating_income": 8384000000.0,
       "net_income": 6023000000.0,
       "rd_expense": 7479000000.0,
       "sga_expense": 19688000000.0,
@@ -206,7 +207,7 @@
       ],
       "total_revenue": 61860000000.0,
       "gross_profit": 34300000000.0,
-      "operating_income": null,
+      "operating_income": 8522000000.0,
       "net_income": 7502000000.0,
       "rd_expense": 6775000000.0,
       "sga_expense": 19003000000.0,
@@ -222,23 +223,110 @@
   "quarterly_periods": [
     {
       "ticker": "IBM",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Software",
+          "value": 7052000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consulting",
+          "value": 5272000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Infrastructure",
+          "value": 3326000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financing",
+          "value": 220000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15917000000.0,
+      "gross_profit": 8950000000.0,
+      "operating_income": 1688000000.0,
+      "net_income": 1216000000.0,
+      "rd_expense": 2173000000.0,
+      "sga_expense": 5089000000.0,
+      "cogs": 6968000000.0,
+      "interest_expense": 473000000.0,
+      "income_tax": 172000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "IBM",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Software",
+          "value": 7209000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consulting",
+          "value": 5324000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Infrastructure",
+          "value": 3559000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financing",
+          "value": 200000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16331000000.0,
+      "gross_profit": 9360000000.0,
+      "operating_income": 2530000000.0,
+      "net_income": 1744000000.0,
+      "rd_expense": 2082000000.0,
+      "sga_expense": 4748000000.0,
+      "cogs": 6970000000.0,
+      "interest_expense": 492000000.0,
+      "income_tax": 686000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -247,19 +335,52 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Software",
+          "value": 7387000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consulting",
+          "value": 5314000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Infrastructure",
+          "value": 4142000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financing",
+          "value": 166000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 16977000000.0,
+      "gross_profit": 9977000000.0,
+      "operating_income": 2853000000.0,
+      "net_income": 2194000000.0,
+      "rd_expense": 2097000000.0,
+      "sga_expense": 5027000000.0,
+      "cogs": 7001000000.0,
+      "interest_expense": 510000000.0,
+      "income_tax": 404000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -304,7 +425,7 @@
       ],
       "total_revenue": 14541000000.0,
       "gross_profit": 8031000000.0,
-      "operating_income": null,
+      "operating_income": 1195000000.0,
       "net_income": 1055000000.0,
       "rd_expense": 1950000000.0,
       "sga_expense": 4886000000.0,
@@ -322,20 +443,55 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Software",
+          "value": 6524000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consulting",
+          "value": 5152000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Infrastructure",
+          "value": 3042000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financing",
+          "value": 181000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14968000000.0,
+      "gross_profit": 8420000000.0,
+      "operating_income": 1633000000.0,
+      "net_income": -330000000.0,
+      "rd_expense": 1876000000.0,
+      "sga_expense": 4911000000.0,
+      "cogs": 6548000000.0,
+      "interest_expense": 429000000.0,
+      "income_tax": -485000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (14968000000) differs from Yahoo (62753000000) by 76.1%"
+      ]
     },
     {
       "ticker": "IBM",
@@ -379,7 +535,7 @@
       ],
       "total_revenue": 15770000000.0,
       "gross_profit": 8950000000.0,
-      "operating_income": null,
+      "operating_income": 2172000000.0,
       "net_income": 1834000000.0,
       "rd_expense": 1840000000.0,
       "sga_expense": 4938000000.0,
@@ -435,7 +591,7 @@
       ],
       "total_revenue": 14462000000.0,
       "gross_profit": 7742000000.0,
-      "operating_income": null,
+      "operating_income": 972000000.0,
       "net_income": 1605000000.0,
       "rd_expense": 1796000000.0,
       "sga_expense": 4974000000.0,
@@ -455,20 +611,55 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Software",
+          "value": 6265000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consulting",
+          "value": 4963000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Infrastructure",
+          "value": 3272000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financing",
+          "value": 186000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 14752000000.0,
+      "gross_profit": 8023000000.0,
+      "operating_income": 1880000000.0,
+      "net_income": 1704000000.0,
+      "rd_expense": 1685000000.0,
+      "sga_expense": 4458000000.0,
+      "cogs": 6729000000.0,
+      "interest_expense": 412000000.0,
+      "income_tax": 159000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (14752000000) differs from Yahoo (61860000000) by 76.2%"
+      ]
     },
     {
       "ticker": "IBM",
@@ -476,48 +667,72 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "segments": [
+        {
+          "segment_name": "Software",
+          "value": 6608000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consulting",
+          "value": 5013000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Infrastructure",
+          "value": 3618000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Financing",
+          "value": 185000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 15475000000.0,
+      "gross_profit": 8501000000.0,
+      "operating_income": 1914000000.0,
+      "net_income": 1583000000.0,
+      "rd_expense": 1687000000.0,
+      "sga_expense": 4900000000.0,
+      "cogs": 6974000000.0,
+      "interest_expense": 423000000.0,
+      "income_tax": 419000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "IBM",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (15475000000) differs from Yahoo (61860000000) by 75.0%"
+      ]
     }
   ],
-  "ttm_revenue": 14541000000.0,
-  "ttm_operating_income": null,
-  "ttm_net_income": 1055000000.0,
+  "ttm_revenue": 63766000000.0,
+  "ttm_operating_income": 8266000000.0,
+  "ttm_net_income": 6209000000.0,
   "segment_trend": {
     "Software": [
+      {
+        "period": "2023Q2",
+        "value": 6608000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 6265000000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 5899000000.0,
@@ -529,8 +744,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 6524000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 6336000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 7387000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 7209000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 7052000000.0,
         "is_annual": false
       },
       {
@@ -551,6 +786,16 @@
     ],
     "Consulting": [
       {
+        "period": "2023Q2",
+        "value": 5013000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 4963000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 5186000000.0,
         "is_annual": false
@@ -561,8 +806,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 5152000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 5068000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 5314000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 5324000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 5272000000.0,
         "is_annual": false
       },
       {
@@ -583,6 +848,16 @@
     ],
     "Infrastructure": [
       {
+        "period": "2023Q2",
+        "value": 3618000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 3272000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 3076000000.0,
         "is_annual": false
@@ -593,8 +868,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 3042000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 2886000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4142000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 3559000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 3326000000.0,
         "is_annual": false
       },
       {
@@ -615,6 +910,16 @@
     ],
     "Financing": [
       {
+        "period": "2023Q2",
+        "value": 185000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 186000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 193000000.0,
         "is_annual": false
@@ -625,8 +930,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 181000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 191000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 166000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 200000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 220000000.0,
         "is_annual": false
       },
       {

@@ -1,77 +1,120 @@
 {
   "ticker": "8306.T",
   "name": "Mitsubishi UFJ Financial",
+  "sector": "financial",
   "latest_annual": {
     "ticker": "8306.T",
-    "period": "FY2026",
+    "period": "FY2025",
     "is_annual": true,
-    "fiscal_year": 2026,
+    "fiscal_year": 2025,
     "fiscal_quarter": null,
-    "segments": [],
-    "total_revenue": 43121871993.60877,
-    "gross_profit": null,
-    "operating_income": null,
-    "net_income": 11747376695.618034,
+    "segments": [
+      {
+        "segment_name": "Retail & Digital Business Group",
+        "value": 2566438212181.6875,
+        "unit": "JPY",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Commercial Banking & Wealth Management Business Group",
+        "value": 2414458572683.005,
+        "unit": "JPY",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Japanese Corporate & Investment Banking Business Group",
+        "value": 258184698012.29346,
+        "unit": "JPY",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Global Commercial Banking Business Group",
+        "value": 419650517123.0143,
+        "unit": "JPY",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      }
+    ],
+    "total_revenue": 5658732000000.0,
+    "gross_profit": 5536942000000.0,
+    "operating_income": 1795576000000.0,
+    "net_income": 1267638000000.0,
     "rd_expense": null,
-    "sga_expense": 19964403571.82175,
+    "sga_expense": 3741366000000.0,
     "cogs": null,
-    "interest_expense": 35257409055.61298,
-    "income_tax": 3841219766.110182,
+    "interest_expense": 121790000000.0,
+    "income_tax": 527938000000.0,
     "currency": "USD",
-    "extraction_method": "yahoo+llm",
-    "confidence": 0.55,
+    "extraction_method": "edgar+llm",
+    "confidence": 1.0,
     "notes": [
-      "Source: Yahoo Finance (no SEC filing available)",
-      "⚠ Limited Segment Detail — aggregate data only"
+      "EXPENSE_DETAIL:{\"Personnel\": 1473650000000.0, \"Occupancy\": 160032000000.0, \"Other Non-Interest Expense\": 533961000000.0}",
+      "Warning: total_revenue (5658732000000) differs from Yahoo (43333640717) by 12958.5%"
     ]
   },
   "annual_periods": [
-    {
-      "ticker": "8306.T",
-      "period": "FY2026",
-      "is_annual": true,
-      "fiscal_year": 2026,
-      "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 43121871993.60877,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": 11747376695.618034,
-      "rd_expense": null,
-      "sga_expense": 19964403571.82175,
-      "cogs": null,
-      "interest_expense": 35257409055.61298,
-      "income_tax": 3841219766.110182,
-      "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
-    },
     {
       "ticker": "8306.T",
       "period": "FY2025",
       "is_annual": true,
       "fiscal_year": 2025,
       "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 43121871993.60877,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": 11747376695.618034,
+      "segments": [
+        {
+          "segment_name": "Retail & Digital Business Group",
+          "value": 2566438212181.6875,
+          "unit": "JPY",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Commercial Banking & Wealth Management Business Group",
+          "value": 2414458572683.005,
+          "unit": "JPY",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Japanese Corporate & Investment Banking Business Group",
+          "value": 258184698012.29346,
+          "unit": "JPY",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Commercial Banking Business Group",
+          "value": 419650517123.0143,
+          "unit": "JPY",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 5658732000000.0,
+      "gross_profit": 5536942000000.0,
+      "operating_income": 1795576000000.0,
+      "net_income": 1267638000000.0,
       "rd_expense": null,
-      "sga_expense": 19964403571.82175,
+      "sga_expense": 3741366000000.0,
       "cogs": null,
-      "interest_expense": 35257409055.61298,
-      "income_tax": 3841219766.110182,
+      "interest_expense": 121790000000.0,
+      "income_tax": 527938000000.0,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
+        "EXPENSE_DETAIL:{\"Personnel\": 1473650000000.0, \"Occupancy\": 160032000000.0, \"Other Non-Interest Expense\": 533961000000.0}",
+        "Warning: total_revenue (5658732000000) differs from Yahoo (43333640717) by 12958.5%"
       ]
     },
     {
@@ -82,226 +125,586 @@
       "fiscal_quarter": null,
       "segments": [
         {
+          "segment_name": "Digital Service",
+          "value": 493216807717.23926,
+          "unit": "JPY",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
           "segment_name": "Retail & Commercial Banking",
-          "value": 2876456000000.0,
+          "value": 202075416686.56818,
+          "unit": "JPY",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Japanese Corporate & Investment Banking",
+          "value": 171610381529.11874,
+          "unit": "JPY",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Commercial Banking",
+          "value": 76488666251.5779,
+          "unit": "JPY",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset Management & Investor Services",
+          "value": 1846535158472.9282,
+          "unit": "JPY",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Corporate & Investment Banking",
+          "value": 280986379311.52124,
+          "unit": "JPY",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Markets",
+          "value": 2390620190031.0464,
           "unit": "JPY",
           "period": "FY2024",
           "concept": "llm_extracted",
           "is_annual": true
         }
       ],
-      "total_revenue": 43121871993.60877,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": 11747376695.618034,
+      "total_revenue": 5461533000000.0,
+      "gross_profit": 5223543000000.0,
+      "operating_income": 1882594000000.0,
+      "net_income": 1381027000000.0,
       "rd_expense": null,
-      "sga_expense": 19964403571.82175,
+      "sga_expense": 3340949000000.0,
       "cogs": null,
-      "interest_expense": 35257409055.61298,
-      "income_tax": 3841219766.110182,
+      "interest_expense": 237990000000.0,
+      "income_tax": 501567000000.0,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.77,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
+        "EXPENSE_DETAIL:{\"Personnel\": 1397950000000.0, \"Occupancy\": 156027000000.0, \"Other Non-Interest Expense\": 409827000000.0}",
+        "Warning: total_revenue (5461533000000) differs from Yahoo (37258803851) by 14558.4%"
+      ]
+    },
+    {
+      "ticker": "8306.T",
+      "period": "FY2023",
+      "is_annual": true,
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "segments": [
+        {
+          "segment_name": "Digital Service Business Group",
+          "value": 1097982596438.4708,
+          "unit": "JPY",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Retail & Commercial Banking Business Group",
+          "value": 1205892893206.4224,
+          "unit": "JPY",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Japanese Corporate & Investment Banking Business Group",
+          "value": 534290823492.4952,
+          "unit": "JPY",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Commercial Banking Business Group",
+          "value": 34875240677.78882,
+          "unit": "JPY",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Asset Management & Investor Services Business Group",
+          "value": 574293205219.3923,
+          "unit": "JPY",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Corporate & Investment Banking Business Group",
+          "value": 563184399612.991,
+          "unit": "JPY",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Markets Business Group",
+          "value": 74316841352.43973,
+          "unit": "JPY",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 4084836000000.0,
+      "gross_profit": 4076688000000.0,
+      "operating_income": 656734000000.0,
+      "net_income": 630321000000.0,
+      "rd_expense": null,
+      "sga_expense": 3419954000000.0,
+      "cogs": null,
+      "interest_expense": 8148000000.0,
+      "income_tax": 26413000000.0,
+      "currency": "USD",
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
+      "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 1343631000000.0, \"Occupancy\": 162204000000.0, \"Other Non-Interest Expense\": 433632000000.0}",
+        "Warning: total_revenue (4084836000000) differs from Yahoo (38383308709) by 10542.2%"
       ]
     }
   ],
   "quarterly_periods": [
     {
       "ticker": "8306.T",
+      "period": "2026Q4",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2026Q2",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "8306.T",
       "period": "2025Q4",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
+      "fiscal_quarter": 4,
       "segments": [],
-      "total_revenue": 11976227019.265293,
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 3282506407.0746303,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5642088692.598045,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 9475476647.235453,
-      "income_tax": 1091459407.567978,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "8306.T",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
-      "segments": [
-        {
-          "segment_name": "Retail & Commercial Banking",
-          "value": 753266000000.0,
-          "unit": "JPY",
-          "period": "2025Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
-        }
-      ],
-      "total_revenue": 11976227019.265293,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 3282506407.0746303,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5642088692.598045,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 9475476647.235453,
-      "income_tax": 1091459407.567978,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.77,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "8306.T",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
-      "segments": [
-        {
-          "segment_name": "Retail & Commercial Banking",
-          "value": 753266000000.0,
-          "unit": "JPY",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
-        }
-      ],
-      "total_revenue": 11976227019.265293,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 3282506407.0746303,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5642088692.598045,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 9475476647.235453,
-      "income_tax": 1091459407.567978,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.77,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "8306.T",
       "period": "2025Q1",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": null,
-      "segments": [
-        {
-          "segment_name": "Retail & Commercial Banking",
-          "value": 753266000000.0,
-          "unit": "JPY",
-          "period": "2025Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
-        }
-      ],
-      "total_revenue": 11976227019.265293,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 3282506407.0746303,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5642088692.598045,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 9475476647.235453,
-      "income_tax": 1091459407.567978,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.77,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     },
     {
       "ticker": "8306.T",
       "period": "2024Q4",
       "is_annual": false,
       "fiscal_year": 2024,
-      "fiscal_quarter": null,
-      "segments": [
-        {
-          "segment_name": "Retail & Commercial Banking",
-          "value": 753266000000.0,
-          "unit": "JPY",
-          "period": "2024Q4",
-          "concept": "llm_extracted",
-          "is_annual": false
-        }
-      ],
-      "total_revenue": 11976227019.265293,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
       "gross_profit": null,
       "operating_income": null,
-      "net_income": 3282506407.0746303,
+      "net_income": null,
       "rd_expense": null,
-      "sga_expense": 5642088692.598045,
+      "sga_expense": null,
       "cogs": null,
-      "interest_expense": 9475476647.235453,
-      "income_tax": 1091459407.567978,
+      "interest_expense": null,
+      "income_tax": null,
       "currency": "USD",
-      "extraction_method": "yahoo+llm",
-      "confidence": 0.77,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2024Q3",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2024Q2",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2024Q1",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2023Q4",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2023Q3",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
+    },
+    {
+      "ticker": "8306.T",
+      "period": "2023Q2",
+      "is_annual": false,
+      "fiscal_year": 2023,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": null,
+      "gross_profit": null,
+      "operating_income": null,
+      "net_income": null,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": null,
+      "currency": "USD",
+      "extraction_method": "edgar",
+      "confidence": 0.0,
+      "notes": []
     }
   ],
-  "ttm_revenue": 47904908077.06117,
+  "ttm_revenue": null,
   "ttm_operating_income": null,
-  "ttm_net_income": 13130025628.298521,
+  "ttm_net_income": null,
   "segment_trend": {
-    "Retail & Commercial Banking": [
+    "Digital Service Business Group": [
       {
-        "period": "2024Q4",
-        "value": 753266000000.0,
-        "is_annual": false
+        "period": "FY2023",
+        "value": 1097982596438.4708,
+        "is_annual": true
+      }
+    ],
+    "Retail & Commercial Banking Business Group": [
+      {
+        "period": "FY2023",
+        "value": 1205892893206.4224,
+        "is_annual": true
+      }
+    ],
+    "Japanese Corporate & Investment Banking Business Group": [
+      {
+        "period": "FY2023",
+        "value": 534290823492.4952,
+        "is_annual": true
       },
       {
-        "period": "2025Q1",
-        "value": 753266000000.0,
-        "is_annual": false
+        "period": "FY2025",
+        "value": 258184698012.29346,
+        "is_annual": true
+      }
+    ],
+    "Global Commercial Banking Business Group": [
+      {
+        "period": "FY2023",
+        "value": 34875240677.78882,
+        "is_annual": true
       },
       {
-        "period": "2025Q2",
-        "value": 753266000000.0,
-        "is_annual": false
-      },
+        "period": "FY2025",
+        "value": 419650517123.0143,
+        "is_annual": true
+      }
+    ],
+    "Asset Management & Investor Services Business Group": [
       {
-        "period": "2025Q3",
-        "value": 753266000000.0,
-        "is_annual": false
-      },
+        "period": "FY2023",
+        "value": 574293205219.3923,
+        "is_annual": true
+      }
+    ],
+    "Global Corporate & Investment Banking Business Group": [
+      {
+        "period": "FY2023",
+        "value": 563184399612.991,
+        "is_annual": true
+      }
+    ],
+    "Global Markets Business Group": [
+      {
+        "period": "FY2023",
+        "value": 74316841352.43973,
+        "is_annual": true
+      }
+    ],
+    "Digital Service": [
       {
         "period": "FY2024",
-        "value": 2876456000000.0,
+        "value": 493216807717.23926,
+        "is_annual": true
+      }
+    ],
+    "Retail & Commercial Banking": [
+      {
+        "period": "FY2024",
+        "value": 202075416686.56818,
+        "is_annual": true
+      }
+    ],
+    "Japanese Corporate & Investment Banking": [
+      {
+        "period": "FY2024",
+        "value": 171610381529.11874,
+        "is_annual": true
+      }
+    ],
+    "Global Commercial Banking": [
+      {
+        "period": "FY2024",
+        "value": 76488666251.5779,
+        "is_annual": true
+      }
+    ],
+    "Asset Management & Investor Services": [
+      {
+        "period": "FY2024",
+        "value": 1846535158472.9282,
+        "is_annual": true
+      }
+    ],
+    "Global Corporate & Investment Banking": [
+      {
+        "period": "FY2024",
+        "value": 280986379311.52124,
+        "is_annual": true
+      }
+    ],
+    "Global Markets": [
+      {
+        "period": "FY2024",
+        "value": 2390620190031.0464,
+        "is_annual": true
+      }
+    ],
+    "Retail & Digital Business Group": [
+      {
+        "period": "FY2025",
+        "value": 2566438212181.6875,
+        "is_annual": true
+      }
+    ],
+    "Commercial Banking & Wealth Management Business Group": [
+      {
+        "period": "FY2025",
+        "value": 2414458572683.005,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 5,
-  "has_partial_data": true,
-  "data_notes": [
-    "Partial data: 3/3 annual, 5/12 quarterly"
-  ]
+  "quarterly_count": 14,
+  "has_partial_data": false,
+  "data_notes": []
 }

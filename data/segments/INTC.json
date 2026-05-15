@@ -1,6 +1,7 @@
 {
   "ticker": "INTC",
   "name": "Intel Corporation",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "INTC",
     "period": "FY2025",
@@ -10,7 +11,7 @@
     "segments": [
       {
         "segment_name": "Intel Foundry",
-        "value": 24398746031.334972,
+        "value": 24594277383.31419,
         "unit": "USD",
         "period": "2025-12-27 (FY)",
         "concept": "xbrl_dimension",
@@ -18,7 +19,7 @@
       },
       {
         "segment_name": "Data Center and AI",
-        "value": 23157319875.695972,
+        "value": 23342902448.57471,
         "unit": "USD",
         "period": "2025-12-27 (FY)",
         "concept": "xbrl_dimension",
@@ -26,15 +27,7 @@
       },
       {
         "segment_name": "All Other",
-        "value": 4876738029.26324,
-        "unit": "USD",
-        "period": "2025-12-27 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Assembly And Test - Intel Foundry",
-        "value": 420196063.7058138,
+        "value": 4915820168.111099,
         "unit": "USD",
         "period": "2025-12-27 (FY)",
         "concept": "xbrl_dimension",
@@ -65,7 +58,7 @@
       "segments": [
         {
           "segment_name": "Intel Foundry",
-          "value": 24398746031.334972,
+          "value": 24594277383.31419,
           "unit": "USD",
           "period": "2025-12-27 (FY)",
           "concept": "xbrl_dimension",
@@ -73,7 +66,7 @@
         },
         {
           "segment_name": "Data Center and AI",
-          "value": 23157319875.695972,
+          "value": 23342902448.57471,
           "unit": "USD",
           "period": "2025-12-27 (FY)",
           "concept": "xbrl_dimension",
@@ -81,15 +74,7 @@
         },
         {
           "segment_name": "All Other",
-          "value": 4876738029.26324,
-          "unit": "USD",
-          "period": "2025-12-27 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Assembly And Test - Intel Foundry",
-          "value": 420196063.7058138,
+          "value": 4915820168.111099,
           "unit": "USD",
           "period": "2025-12-27 (FY)",
           "concept": "xbrl_dimension",
@@ -119,7 +104,7 @@
       "segments": [
         {
           "segment_name": "Intel Foundry",
-          "value": 23051912672.2922,
+          "value": 23273643206.915504,
           "unit": "USD",
           "period": "2024-12-28 (FY)",
           "concept": "xbrl_dimension",
@@ -127,7 +112,7 @@
         },
         {
           "segment_name": "DCAI",
-          "value": 16841838039.147757,
+          "value": 17003835431.96922,
           "unit": "USD",
           "period": "2024-12-28 (FY)",
           "concept": "xbrl_dimension",
@@ -135,7 +120,7 @@
         },
         {
           "segment_name": "NEX",
-          "value": 7676524758.110415,
+          "value": 7750363313.846,
           "unit": "USD",
           "period": "2024-12-28 (FY)",
           "concept": "xbrl_dimension",
@@ -143,15 +128,7 @@
         },
         {
           "segment_name": "All Other",
-          "value": 5024825517.804559,
-          "unit": "USD",
-          "period": "2024-12-28 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Assembly And Test - Intel Foundry",
-          "value": 505899012.6450719,
+          "value": 5073158047.269275,
           "unit": "USD",
           "period": "2024-12-28 (FY)",
           "concept": "xbrl_dimension",
@@ -238,23 +215,94 @@
   "quarterly_periods": [
     {
       "ticker": "INTC",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Intel Foundry",
+          "value": 5421000000.0,
+          "unit": "USD",
+          "period": "2026-03-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Datacenter and AI",
+          "value": 5052000000.0,
+          "unit": "USD",
+          "period": "2026-03-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 628000000.0,
+          "unit": "USD",
+          "period": "2026-03-28 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 13577000000.0,
+      "gross_profit": 5347000000.0,
+      "operating_income": -3136000000.0,
+      "net_income": -4281000000.0,
+      "rd_expense": 3375000000.0,
+      "sga_expense": 1038000000.0,
+      "cogs": 8230000000.0,
+      "interest_expense": null,
+      "income_tax": 335000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "INTC",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Intel Foundry",
+          "value": 6187314606.741572,
+          "unit": "USD",
+          "period": "2025-09-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Datacenter and AI",
+          "value": 6014917174.959871,
+          "unit": "USD",
+          "period": "2025-09-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 1450768218.2985554,
+          "unit": "USD",
+          "period": "2025-09-27 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 13653000000.0,
+      "gross_profit": 5218000000.0,
+      "operating_income": 683000000.0,
+      "net_income": 4270000000.0,
+      "rd_expense": 3231000000.0,
+      "sga_expense": 1129000000.0,
+      "cogs": 8435000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 304000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -263,19 +311,44 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Intel Foundry",
+          "value": 6036582314.804974,
+          "unit": "USD",
+          "period": "2025-06-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Datacenter and AI",
+          "value": 5383313954.7242,
+          "unit": "USD",
+          "period": "2025-06-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 1439103730.4708257,
+          "unit": "USD",
+          "period": "2025-06-28 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12859000000.0,
+      "gross_profit": 3542000000.0,
+      "operating_income": -3176000000.0,
+      "net_income": -3024000000.0,
+      "rd_expense": 3684000000.0,
+      "sga_expense": 1144000000.0,
+      "cogs": 9317000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 255000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -287,7 +360,7 @@
       "segments": [
         {
           "segment_name": "Intel Foundry",
-          "value": 6052717211.016689,
+          "value": 6071989420.706656,
           "unit": "USD",
           "period": "2025-03-29 (Q1)",
           "concept": "xbrl_dimension",
@@ -295,7 +368,7 @@
         },
         {
           "segment_name": "Datacenter and AI",
-          "value": 5351084468.106891,
+          "value": 5368122637.633526,
           "unit": "USD",
           "period": "2025-03-29 (Q1)",
           "concept": "xbrl_dimension",
@@ -303,15 +376,7 @@
         },
         {
           "segment_name": "Other",
-          "value": 1222993856.8649535,
-          "unit": "USD",
-          "period": "2025-03-29 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Assembly And Test - Intel Foundry",
-          "value": 40204464.01146719,
+          "value": 1226887941.6598194,
           "unit": "USD",
           "period": "2025-03-29 (Q1)",
           "concept": "xbrl_dimension",
@@ -338,20 +403,71 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Intel Foundry",
+          "value": 5639641791.044776,
+          "unit": "USD",
+          "period": "2024-09-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Datacenter and AI",
+          "value": 4339880597.014925,
+          "unit": "USD",
+          "period": "2024-09-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Network and Edge",
+          "value": 1958064969.2712905,
+          "unit": "USD",
+          "period": "2024-09-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mobileye",
+          "value": 628498683.0553117,
+          "unit": "USD",
+          "period": "2024-09-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Altera",
+          "value": 533899912.2036874,
+          "unit": "USD",
+          "period": "2024-09-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 184014047.41000876,
+          "unit": "USD",
+          "period": "2024-09-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 13284000000.0,
+      "gross_profit": 1997000000.0,
+      "operating_income": -9057000000.0,
+      "net_income": -16989000000.0,
+      "rd_expense": 4049000000.0,
+      "sga_expense": 1383000000.0,
+      "cogs": 11287000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 7903000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (13284000000) differs from Yahoo (53101000000) by 75.0%"
+      ]
     },
     {
       "ticker": "INTC",
@@ -362,7 +478,7 @@
       "segments": [
         {
           "segment_name": "Intel Foundry",
-          "value": 4320000000.0,
+          "value": 5728899452.3096,
           "unit": "USD",
           "period": "2024-06-29 (Q2)",
           "concept": "xbrl_dimension",
@@ -370,15 +486,7 @@
         },
         {
           "segment_name": "Datacenter and AI",
-          "value": 3045000000.0,
-          "unit": "USD",
-          "period": "2024-06-29 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Desktop - Client Computing",
-          "value": 2930000000.0,
+          "value": 4038078433.3987803,
           "unit": "USD",
           "period": "2024-06-29 (Q2)",
           "concept": "xbrl_dimension",
@@ -386,15 +494,7 @@
         },
         {
           "segment_name": "Network and Edge",
-          "value": 1344000000.0,
-          "unit": "USD",
-          "period": "2024-06-29 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 968000000.0,
+          "value": 1782324274.0518756,
           "unit": "USD",
           "period": "2024-06-29 (Q2)",
           "concept": "xbrl_dimension",
@@ -402,7 +502,7 @@
         },
         {
           "segment_name": "Mobileye",
-          "value": 440000000.0,
+          "value": 583499018.2907926,
           "unit": "USD",
           "period": "2024-06-29 (Q2)",
           "concept": "xbrl_dimension",
@@ -410,7 +510,7 @@
         },
         {
           "segment_name": "Altera",
-          "value": 361000000.0,
+          "value": 478734421.82494575,
           "unit": "USD",
           "period": "2024-06-29 (Q2)",
           "concept": "xbrl_dimension",
@@ -418,15 +518,7 @@
         },
         {
           "segment_name": "Other",
-          "value": 167000000.0,
-          "unit": "USD",
-          "period": "2024-06-29 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Assembly And Test - Intel Foundry",
-          "value": 77000000.0,
+          "value": 221464400.12400538,
           "unit": "USD",
           "period": "2024-06-29 (Q2)",
           "concept": "xbrl_dimension",
@@ -458,7 +550,7 @@
       "segments": [
         {
           "segment_name": "Intel Foundry",
-          "value": 4369000000.0,
+          "value": 5824722967.309304,
           "unit": "USD",
           "period": "2024-03-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -466,15 +558,7 @@
         },
         {
           "segment_name": "Datacenter and AI",
-          "value": 3036000000.0,
-          "unit": "USD",
-          "period": "2024-03-30 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Desktop - Client Computing",
-          "value": 2852000000.0,
+          "value": 4047575859.1785417,
           "unit": "USD",
           "period": "2024-03-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -482,15 +566,7 @@
         },
         {
           "segment_name": "Network and Edge",
-          "value": 1364000000.0,
-          "unit": "USD",
-          "period": "2024-03-30 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 775000000.0,
+          "value": 1818476110.6454318,
           "unit": "USD",
           "period": "2024-03-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -498,7 +574,7 @@
         },
         {
           "segment_name": "Altera",
-          "value": 342000000.0,
+          "value": 455952221.2908634,
           "unit": "USD",
           "period": "2024-03-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -506,7 +582,7 @@
         },
         {
           "segment_name": "Mobileye",
-          "value": 239000000.0,
+          "value": 318633277.4518022,
           "unit": "USD",
           "period": "2024-03-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -514,15 +590,7 @@
         },
         {
           "segment_name": "Other",
-          "value": 194000000.0,
-          "unit": "USD",
-          "period": "2024-03-30 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Assembly And Test - Intel Foundry",
-          "value": 27000000.0,
+          "value": 258639564.12405702,
           "unit": "USD",
           "period": "2024-03-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -551,224 +619,283 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
+      "segments": [
+        {
+          "segment_name": "Client Computing Group",
+          "value": 6780000000.0,
+          "unit": "USD",
+          "period": "2023-07-01 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Datacenter and AI",
+          "value": 4004000000.0,
+          "unit": "USD",
+          "period": "2023-07-01 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Network and Edge",
+          "value": 1364000000.0,
+          "unit": "USD",
+          "period": "2023-07-01 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mobileye",
+          "value": 454000000.0,
+          "unit": "USD",
+          "period": "2023-07-01 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "All other",
+          "value": 115000000.0,
+          "unit": "USD",
+          "period": "2023-07-01 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Intel Foundry Services",
+          "value": 232000000.0,
+          "unit": "USD",
+          "period": "2023-07-01 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 12949000000.0,
+      "gross_profit": 4638000000.0,
+      "operating_income": -1016000000.0,
+      "net_income": 1481000000.0,
+      "rd_expense": 4080000000.0,
+      "sga_expense": 1374000000.0,
+      "cogs": 8311000000.0,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -2289000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "INTC",
-      "period": "2023Q3",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "INTC",
-      "period": "2023Q2",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (12949000000) differs from Yahoo (54228000000) by 76.1%"
+      ]
     }
   ],
-  "ttm_revenue": 12667000000.0,
-  "ttm_operating_income": -301000000.0,
-  "ttm_net_income": -887000000.0,
+  "ttm_revenue": 52756000000.0,
+  "ttm_operating_income": -5930000000.0,
+  "ttm_net_income": -3922000000.0,
   "segment_trend": {
-    "Intel Foundry": [
+    "Client Computing Group": [
       {
-        "period": "2024Q1",
-        "value": 4369000000.0,
+        "period": "2023Q3",
+        "value": 6780000000.0,
         "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 4320000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 6052717211.016689,
-        "is_annual": false
-      },
-      {
-        "period": "FY2024",
-        "value": 23051912672.2922,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 24398746031.334972,
-        "is_annual": true
       }
     ],
     "Datacenter and AI": [
       {
+        "period": "2023Q3",
+        "value": 4004000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
-        "value": 3036000000.0,
+        "value": 4047575859.1785417,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 3045000000.0,
+        "value": 4038078433.3987803,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 4339880597.014925,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 5351084468.106891,
-        "is_annual": false
-      }
-    ],
-    "Desktop - Client Computing": [
-      {
-        "period": "2024Q1",
-        "value": 2852000000.0,
+        "value": 5368122637.633526,
         "is_annual": false
       },
       {
-        "period": "2024Q2",
-        "value": 2930000000.0,
+        "period": "2025Q2",
+        "value": 5383313954.7242,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 6014917174.959871,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 5052000000.0,
         "is_annual": false
       }
     ],
     "Network and Edge": [
       {
-        "period": "2024Q1",
+        "period": "2023Q3",
         "value": 1364000000.0,
         "is_annual": false
       },
       {
-        "period": "2024Q2",
-        "value": 1344000000.0,
-        "is_annual": false
-      }
-    ],
-    "All Other": [
-      {
         "period": "2024Q1",
-        "value": 775000000.0,
+        "value": 1818476110.6454318,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 968000000.0,
+        "value": 1782324274.0518756,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 1958064969.2712905,
+        "is_annual": false
+      }
+    ],
+    "Mobileye": [
+      {
+        "period": "2023Q3",
+        "value": 454000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 318633277.4518022,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 583499018.2907926,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 628498683.0553117,
+        "is_annual": false
+      }
+    ],
+    "All other": [
+      {
+        "period": "2023Q3",
+        "value": 115000000.0,
+        "is_annual": false
+      }
+    ],
+    "Intel Foundry Services": [
+      {
+        "period": "2023Q3",
+        "value": 232000000.0,
+        "is_annual": false
+      }
+    ],
+    "Intel Foundry": [
+      {
+        "period": "2024Q1",
+        "value": 5824722967.309304,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 5728899452.3096,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 5639641791.044776,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 6071989420.706656,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 6036582314.804974,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 6187314606.741572,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 5421000000.0,
         "is_annual": false
       },
       {
         "period": "FY2024",
-        "value": 5024825517.804559,
+        "value": 23273643206.915504,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 4876738029.26324,
+        "value": 24594277383.31419,
         "is_annual": true
       }
     ],
     "Altera": [
       {
         "period": "2024Q1",
-        "value": 342000000.0,
+        "value": 455952221.2908634,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 361000000.0,
-        "is_annual": false
-      }
-    ],
-    "Mobileye": [
-      {
-        "period": "2024Q1",
-        "value": 239000000.0,
+        "value": 478734421.82494575,
         "is_annual": false
       },
       {
-        "period": "2024Q2",
-        "value": 440000000.0,
+        "period": "2024Q3",
+        "value": 533899912.2036874,
         "is_annual": false
       }
     ],
     "Other": [
       {
         "period": "2024Q1",
-        "value": 194000000.0,
+        "value": 258639564.12405702,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 167000000.0,
+        "value": 221464400.12400538,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 184014047.41000876,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 1222993856.8649535,
-        "is_annual": false
-      }
-    ],
-    "Assembly And Test - Intel Foundry": [
-      {
-        "period": "2024Q1",
-        "value": 27000000.0,
+        "value": 1226887941.6598194,
         "is_annual": false
       },
       {
-        "period": "2024Q2",
-        "value": 77000000.0,
+        "period": "2025Q2",
+        "value": 1439103730.4708257,
         "is_annual": false
       },
       {
-        "period": "2025Q1",
-        "value": 40204464.01146719,
+        "period": "2025Q3",
+        "value": 1450768218.2985554,
         "is_annual": false
       },
       {
-        "period": "FY2024",
-        "value": 505899012.6450719,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 420196063.7058138,
-        "is_annual": true
+        "period": "2026Q1",
+        "value": 628000000.0,
+        "is_annual": false
       }
     ],
     "China": [
@@ -809,27 +936,39 @@
     "DCAI": [
       {
         "period": "FY2024",
-        "value": 16841838039.147757,
+        "value": 17003835431.96922,
         "is_annual": true
       }
     ],
     "NEX": [
       {
         "period": "FY2024",
-        "value": 7676524758.110415,
+        "value": 7750363313.846,
+        "is_annual": true
+      }
+    ],
+    "All Other": [
+      {
+        "period": "FY2024",
+        "value": 5073158047.269275,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4915820168.111099,
         "is_annual": true
       }
     ],
     "Data Center and AI": [
       {
         "period": "FY2025",
-        "value": 23157319875.695972,
+        "value": 23342902448.57471,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 8,
   "has_partial_data": false,
   "data_notes": []
 }

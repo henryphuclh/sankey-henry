@@ -25,7 +25,7 @@ from typing import Dict, List, Optional, Tuple #type hint, IDE autocomplete
 sys.path.insert(0, str(Path(__file__).parent)) #cho phép import module nội bộ, tránh lỗi ModuleNotFoundError: src
 
 from config import (
-    OPENAI_API_KEY, MAX_TICKER_WORKERS, YEARS_BACK,
+    OPENAI_API_KEY, MAX_TICKER_WORKERS, YEARS_BACK, QUARTERS_BACK,
     FILING_TYPES_US, FILING_TYPES_INTL,
 ) #lấy cấu hình hệ thống, vì tách config khỏi code logic nên dễ đổi cấu hình môi trường
 from src.llm.provider import provider_status #kiểm tra OpenAI API, verify key trước khi chạy pipeline
@@ -123,12 +123,24 @@ def process_ticker( #định nghĩa “job xử lý 1 công ty”
         all_segment_data = normalize_segments(all_segment_data, ticker_info.ticker)
 
         # Step 5 — Aggregate
+        # If ALL annual periods fell back to standard, use "standard" as the sector
+        # so the Sankey and income statement use standard format for this company.
+        effective_sector = ticker_info.sector
+        annual_sds = [sd for sd in all_segment_data if sd.is_annual]
+        if annual_sds:
+            fallback_notes = [
+                n for sd in annual_sds for n in (sd.notes or [])
+                if n.startswith("SECTOR_FALLBACK:")
+            ]
+            if len(fallback_notes) == len(annual_sds):
+                effective_sector = fallback_notes[0].split(":", 1)[1]
+
         log("Aggregating...")
         agg = aggregate(
             ticker      = ticker_info.ticker,
             name        = ticker_info.name,
             all_periods = all_segment_data,
-            sector      = ticker_info.sector,
+            sector      = effective_sector,
         )
 
         # Step 6 — Business model narrative
@@ -167,7 +179,7 @@ def _extract_from_yahoo_all_periods(
 
     periods_data = []
     # Annual periods (last 3 years)
-    for year_offset in range(3):
+    for year_offset in range(YEARS_BACK):
         fy = datetime.date.today().year - year_offset
         period = f"FY{fy}"
         sd = extract_for_yahoo_only(
@@ -182,7 +194,7 @@ def _extract_from_yahoo_all_periods(
 
     # Quarterly periods (last 8 quarters from Yahoo)
     qtr_income = yahoo_data.get("quarterly_income", {})
-    for date_str in sorted(qtr_income.keys(), reverse=True)[:8]:
+    for date_str in sorted(qtr_income.keys(), reverse=True)[:QUARTERS_BACK]:
         try:
             import pandas as pd
             d = pd.Timestamp(date_str)

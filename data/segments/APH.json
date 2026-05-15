@@ -1,6 +1,7 @@
 {
   "ticker": "APH",
   "name": "Amphenol Corp.",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "APH",
     "period": "FY2025",
@@ -40,7 +41,7 @@
     "rd_expense": null,
     "sga_expense": 2545700000.0,
     "cogs": 14577000000.0,
-    "interest_expense": null,
+    "interest_expense": -367800000.0,
     "income_tax": -1295400000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -87,7 +88,7 @@
       "rd_expense": null,
       "sga_expense": 2545700000.0,
       "cogs": 14577000000.0,
-      "interest_expense": null,
+      "interest_expense": -367800000.0,
       "income_tax": -1295400000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -133,7 +134,7 @@
       "rd_expense": null,
       "sga_expense": 1855400000.0,
       "cogs": 10083000000.0,
-      "interest_expense": null,
+      "interest_expense": -217000000.0,
       "income_tax": -570300000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -182,23 +183,94 @@
   "quarterly_periods": [
     {
       "ticker": "APH",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Communications Solutions",
+          "value": 4534700000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Harsh Environment Solutions",
+          "value": 1693100000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Interconnect and Sensor Systems",
+          "value": 1392300000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 7620100000.0,
+      "gross_profit": 2800200000.0,
+      "operating_income": 1831800000.0,
+      "net_income": 943300000.0,
+      "rd_expense": null,
+      "sga_expense": 851500000.0,
+      "cogs": 4819900000.0,
+      "interest_expense": -207900000.0,
+      "income_tax": -702400000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "APH",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Harsh Environment Solutions",
+          "value": 1515800000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Communications Solutions",
+          "value": 3309500000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Interconnect and Sensor Systems",
+          "value": 1369100000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 6194400000.0,
+      "gross_profit": 2359300000.0,
+      "operating_income": 1702300000.0,
+      "net_income": 1255100000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 657000000.0,
+      "cogs": 3835100000.0,
+      "interest_expense": -80700000.0,
+      "income_tax": -385800000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -207,19 +279,44 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Harsh Environment Solutions",
+          "value": 1445200000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Communications Solutions",
+          "value": 2909800000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Interconnect and Sensor Systems",
+          "value": 1295300000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 5650300000.0,
+      "gross_profit": 2053300000.0,
+      "operating_income": 1418800000.0,
+      "net_income": 1100800000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 622500000.0,
+      "cogs": 3597000000.0,
+      "interest_expense": -80900000.0,
+      "income_tax": -247300000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -261,7 +358,7 @@
       "rd_expense": null,
       "sga_expense": 575200000.0,
       "cogs": 3167000000.0,
-      "interest_expense": null,
+      "interest_expense": -76500000.0,
       "income_tax": -218700000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -274,20 +371,47 @@
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Harsh Environment Solutions",
+          "value": 1193500000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Communications Solutions",
+          "value": 1685500000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Interconnect and Sensor Systems",
+          "value": 1159800000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 4038800000.0,
+      "gross_profit": 1356900000.0,
+      "operating_income": 819500000.0,
+      "net_income": 608900000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 492000000.0,
+      "cogs": 2681900000.0,
+      "interest_expense": -55700000.0,
+      "income_tax": -166100000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (4038800000) differs from Yahoo (15222700000) by 73.5%"
+      ]
     },
     {
       "ticker": "APH",
@@ -328,7 +452,7 @@
       "rd_expense": null,
       "sga_expense": 444300000.0,
       "cogs": 2396600000.0,
-      "interest_expense": null,
+      "interest_expense": -56300000.0,
       "income_tax": -135100000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -391,20 +515,47 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Harsh Environment Solutions",
+          "value": 887300000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Communications Solutions",
+          "value": 1279200000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Interconnect and Sensor Systems",
+          "value": 1032700000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3199200000.0,
+      "gross_profit": 1048500000.0,
+      "operating_income": 657900000.0,
+      "net_income": 518300000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 381600000.0,
+      "cogs": 2150700000.0,
+      "interest_expense": -33600000.0,
+      "income_tax": -115200000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (3199200000) differs from Yahoo (12554700000) by 74.5%"
+      ]
     },
     {
       "ticker": "APH",
@@ -412,48 +563,64 @@
       "is_annual": false,
       "fiscal_year": 2023,
       "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "segments": [
+        {
+          "segment_name": "Harsh Environment Solutions",
+          "value": 888900000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Communications Solutions",
+          "value": 1161600000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Interconnect and Sensor Systems",
+          "value": 1003400000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 3053900000.0,
+      "gross_profit": 991700000.0,
+      "operating_income": 619900000.0,
+      "net_income": 465300000.0,
       "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "sga_expense": 367800000.0,
+      "cogs": 2062200000.0,
+      "interest_expense": -35000000.0,
+      "income_tax": -130600000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "APH",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "Warning: total_revenue (3053900000) differs from Yahoo (12554700000) by 75.7%"
+      ]
     }
   ],
-  "ttm_revenue": 4811000000.0,
-  "ttm_operating_income": 1024800000.0,
-  "ttm_net_income": 744200000.0,
+  "ttm_revenue": 24275800000.0,
+  "ttm_operating_income": 5977700000.0,
+  "ttm_net_income": 4043400000.0,
   "segment_trend": {
     "Harsh Environment Solutions": [
+      {
+        "period": "2023Q2",
+        "value": 888900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 887300000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q1",
         "value": 916000000.0,
@@ -465,8 +632,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 1193500000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 1268200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1445200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1515800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1693100000.0,
         "is_annual": false
       },
       {
@@ -482,6 +669,16 @@
     ],
     "Communications Solutions": [
       {
+        "period": "2023Q2",
+        "value": 1161600000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1279200000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 1265700000.0,
         "is_annual": false
@@ -492,8 +689,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 1685500000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 2413700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 2909800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 3309500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 4534700000.0,
         "is_annual": false
       },
       {
@@ -509,6 +726,16 @@
     ],
     "Interconnect and Sensor Systems": [
       {
+        "period": "2023Q2",
+        "value": 1003400000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 1032700000.0,
+        "is_annual": false
+      },
+      {
         "period": "2024Q1",
         "value": 1074600000.0,
         "is_annual": false
@@ -519,8 +746,28 @@
         "is_annual": false
       },
       {
+        "period": "2024Q3",
+        "value": 1159800000.0,
+        "is_annual": false
+      },
+      {
         "period": "2025Q1",
         "value": 1129100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1295300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1369100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1392300000.0,
         "is_annual": false
       },
       {

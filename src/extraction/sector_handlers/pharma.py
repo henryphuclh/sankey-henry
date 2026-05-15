@@ -53,9 +53,35 @@ def get_prompt_hints() -> str:
     return PHARMA_SEGMENT_HINTS
 
 
+_PHARMA_RD_MIN_PCT = 0.05  # R&D must be ≥ 5% of revenue to confirm pharma structure
+
+
+def has_pharma_indicators(pnl: dict, total_rev: float) -> bool:
+    """Return True if extracted P&L shows pharma R&D structure.
+
+    Called after sector-specific extraction to validate that R&D expense was
+    actually found.  If False, caller should fall back to standard handler.
+    """
+    if not total_rev or total_rev <= 0:
+        return False
+    rd = pnl.get("rd_expense")
+    # Use abs() — IFRS filers (NVS, RHHBY) store expenses as negative values
+    return rd is not None and rd != 0 and abs(rd) / abs(total_rev) >= _PHARMA_RD_MIN_PCT
+
+
 def normalize_segment_name(raw: str) -> str:
     lower = raw.lower().strip()
     for key, canonical in CANONICAL_THERAPEUTIC_AREAS.items():
         if key in lower:
             return canonical
     return raw.title()
+
+
+def pnl_from_pharma_filing(filing_obj) -> dict:
+    """Pharma P&L — uses the comprehensive standard XBRL extractor.
+
+    R&D is captured via ResearchAndDevelopmentExpense (and its variants)
+    which are included in the standard concept map.
+    """
+    from src.extraction.sector_handlers.standard import pnl_from_standard_filing
+    return pnl_from_standard_filing(filing_obj)

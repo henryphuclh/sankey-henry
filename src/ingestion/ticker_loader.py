@@ -18,7 +18,7 @@ class TickerInfo:
     name:           str
     market_cap_b:   Optional[float]
     classification: str       # "US_SEC" | "INTL_SEC" | "INTL_YAHOO"
-    sector:         str       # "financial" | "pharma" | "conglomerate" | "standard"
+    sector:         str       # "financial" | "pharma" | "standard"
     cik:            Optional[str] = None
     exchange:       str = ""
 
@@ -54,7 +54,7 @@ def load_tickers(path: Path = EXCEL_PATH) -> Dict[str, TickerInfo]:
         except (ValueError, TypeError):
             mc = None
 
-        result: CheckResult = check_ticker(ticker)
+        result: CheckResult = check_ticker(ticker, hint_name=name)
 
         tickers[ticker] = TickerInfo(
             ticker         = ticker,
@@ -86,7 +86,7 @@ def print_classification_table() -> None:
     print(f"  INTL_SEC  (20-F/6-K on EDGAR):  {len(isec):>3} tickers  — {[t.ticker for t in isec]}")
     print(f"  INTL_YAHOO (Yahoo Finance only): {len(iyf):>3} tickers  — {[t.ticker for t in iyf]}")
     print(f"\n  Sectors:")
-    for sector in ("financial", "pharma", "conglomerate", "standard"):
+    for sector in ("financial", "pharma", "standard"):
         subset = [t.ticker for t in tickers.values() if t.sector == sector]
         print(f"    {sector:<14}: {len(subset):>3}  — {subset}")
     print(f"{'='*60}\n")

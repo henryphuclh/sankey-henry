@@ -1,6 +1,7 @@
 {
   "ticker": "MA",
   "name": "Mastercard Incorporated",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "MA",
     "period": "FY2025",
@@ -30,14 +31,16 @@
     "operating_income": 18897000000.0,
     "net_income": 14968000000.0,
     "rd_expense": null,
-    "sga_expense": 11318000000.0,
+    "sga_expense": 12247000000.0,
     "cogs": null,
-    "interest_expense": null,
+    "interest_expense": -722000000.0,
     "income_tax": 3610000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
-    "notes": []
+    "notes": [
+      "SECTOR_FALLBACK:standard"
+    ]
   },
   "annual_periods": [
     {
@@ -69,14 +72,16 @@
       "operating_income": 18897000000.0,
       "net_income": 14968000000.0,
       "rd_expense": null,
-      "sga_expense": 11318000000.0,
+      "sga_expense": 12247000000.0,
       "cogs": null,
-      "interest_expense": null,
+      "interest_expense": -722000000.0,
       "income_tax": 3610000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "SECTOR_FALLBACK:standard"
+      ]
     },
     {
       "ticker": "MA",
@@ -107,14 +112,16 @@
       "operating_income": 15582000000.0,
       "net_income": 12874000000.0,
       "rd_expense": null,
-      "sga_expense": 10193000000.0,
+      "sga_expense": 11008000000.0,
       "cogs": null,
-      "interest_expense": null,
+      "interest_expense": -646000000.0,
       "income_tax": 2380000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "SECTOR_FALLBACK:standard"
+      ]
     },
     {
       "ticker": "MA",
@@ -145,17 +152,59 @@
       "operating_income": 14008000000.0,
       "net_income": 11195000000.0,
       "rd_expense": null,
-      "sga_expense": 8927000000.0,
+      "sga_expense": 9752000000.0,
       "cogs": null,
       "interest_expense": -575000000.0,
       "income_tax": 2444000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "SECTOR_FALLBACK:standard"
+      ]
     }
   ],
   "quarterly_periods": [
+    {
+      "ticker": "MA",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [
+        {
+          "segment_name": "Payment network",
+          "value": 4948000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Value-added services and solutions",
+          "value": 3450000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "total_revenue": 8398000000.0,
+      "gross_profit": null,
+      "operating_income": 4907000000.0,
+      "net_income": 3882000000.0,
+      "rd_expense": null,
+      "sga_expense": 3192000000.0,
+      "cogs": null,
+      "interest_expense": -185000000.0,
+      "income_tax": 930000000.0,
+      "currency": "USD",
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": [
+        "SECTOR_FALLBACK:standard"
+      ]
+    },
     {
       "ticker": "MA",
       "period": "2025Q3",
@@ -185,14 +234,16 @@
       "operating_income": 5061000000.0,
       "net_income": 3927000000.0,
       "rd_expense": null,
-      "sga_expense": 2923000000.0,
+      "sga_expense": 3168000000.0,
       "cogs": null,
-      "interest_expense": null,
+      "interest_expense": -186000000.0,
       "income_tax": 1072000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "SECTOR_FALLBACK:standard"
+      ]
     },
     {
       "ticker": "MA",
@@ -223,14 +274,16 @@
       "operating_income": 4777000000.0,
       "net_income": 3701000000.0,
       "rd_expense": null,
-      "sga_expense": 2766000000.0,
+      "sga_expense": 2979000000.0,
       "cogs": null,
-      "interest_expense": null,
+      "interest_expense": -195000000.0,
       "income_tax": 971000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "SECTOR_FALLBACK:standard"
+      ]
     },
     {
       "ticker": "MA",
@@ -261,14 +314,16 @@
       "operating_income": 4149000000.0,
       "net_income": 3280000000.0,
       "rd_expense": null,
-      "sga_expense": 2523000000.0,
+      "sga_expense": 2675000000.0,
       "cogs": null,
-      "interest_expense": null,
+      "interest_expense": -182000000.0,
       "income_tax": 751000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "SECTOR_FALLBACK:standard"
+      ]
     },
     {
       "ticker": "MA",
@@ -299,7 +354,7 @@
       "operating_income": 4004000000.0,
       "net_income": 3263000000.0,
       "rd_expense": null,
-      "sga_expense": 2744000000.0,
+      "sga_expense": 2964000000.0,
       "cogs": null,
       "interest_expense": -159000000.0,
       "income_tax": 603000000.0,
@@ -307,6 +362,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
+        "SECTOR_FALLBACK:standard",
         "Warning: total_revenue (7369000000) differs from Yahoo (28167000000) by 73.8%"
       ]
     },
@@ -339,7 +395,7 @@
       "operating_income": 4036000000.0,
       "net_income": 3258000000.0,
       "rd_expense": null,
-      "sga_expense": 2418000000.0,
+      "sga_expense": 2602000000.0,
       "cogs": null,
       "interest_expense": -153000000.0,
       "income_tax": 681000000.0,
@@ -347,6 +403,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
+        "SECTOR_FALLBACK:standard",
         "Warning: total_revenue (6961000000) differs from Yahoo (28167000000) by 75.3%"
       ]
     },
@@ -379,7 +436,7 @@
       "operating_income": 3604000000.0,
       "net_income": 3011000000.0,
       "rd_expense": null,
-      "sga_expense": 2286000000.0,
+      "sga_expense": 2402000000.0,
       "cogs": null,
       "interest_expense": -150000000.0,
       "income_tax": 547000000.0,
@@ -387,6 +444,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
+        "SECTOR_FALLBACK:standard",
         "Warning: total_revenue (6348000000) differs from Yahoo (28167000000) by 77.5%"
       ]
     },
@@ -419,7 +477,7 @@
       "operating_income": 3844000000.0,
       "net_income": 3198000000.0,
       "rd_expense": null,
-      "sga_expense": 2285000000.0,
+      "sga_expense": 2478000000.0,
       "cogs": null,
       "interest_expense": -151000000.0,
       "income_tax": 563000000.0,
@@ -427,6 +485,7 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
+        "SECTOR_FALLBACK:standard",
         "Warning: total_revenue (6533000000) differs from Yahoo (25098000000) by 74.0%"
       ]
     },
@@ -459,7 +518,7 @@
       "operating_income": 3656000000.0,
       "net_income": 2845000000.0,
       "rd_expense": null,
-      "sga_expense": 2200000000.0,
+      "sga_expense": 2401000000.0,
       "cogs": null,
       "interest_expense": -144000000.0,
       "income_tax": 859000000.0,
@@ -467,60 +526,16 @@
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
+        "SECTOR_FALLBACK:standard",
         "Warning: total_revenue (6269000000) differs from Yahoo (25098000000) by 75.0%"
-      ]
-    },
-    {
-      "ticker": "MA",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [
-        {
-          "segment_name": "Payment network",
-          "value": 3650000000.0,
-          "unit": "USD",
-          "period": "2023-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Value-added services and solutions",
-          "value": 2098000000.0,
-          "unit": "USD",
-          "period": "2023-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        }
-      ],
-      "total_revenue": 5748000000.0,
-      "gross_profit": null,
-      "operating_income": 3136000000.0,
-      "net_income": 2361000000.0,
-      "rd_expense": null,
-      "sga_expense": 2043000000.0,
-      "cogs": null,
-      "interest_expense": -132000000.0,
-      "income_tax": 492000000.0,
-      "currency": "USD",
-      "extraction_method": "xbrl",
-      "confidence": 1.0,
-      "notes": [
-        "Warning: total_revenue (5748000000) differs from Yahoo (25098000000) by 77.1%"
       ]
     }
   ],
-  "ttm_revenue": 31354000000.0,
-  "ttm_operating_income": 17991000000.0,
-  "ttm_net_income": 14171000000.0,
+  "ttm_revenue": 32383000000.0,
+  "ttm_operating_income": 18894000000.0,
+  "ttm_net_income": 14790000000.0,
   "segment_trend": {
     "Payment network": [
-      {
-        "period": "2023Q1",
-        "value": 3650000000.0,
-        "is_annual": false
-      },
       {
         "period": "2023Q2",
         "value": 4073000000.0,
@@ -562,6 +577,11 @@
         "is_annual": false
       },
       {
+        "period": "2026Q1",
+        "value": 4948000000.0,
+        "is_annual": false
+      },
+      {
         "period": "FY2023",
         "value": 15824000000.0,
         "is_annual": true
@@ -578,11 +598,6 @@
       }
     ],
     "Value-added services and solutions": [
-      {
-        "period": "2023Q1",
-        "value": 2098000000.0,
-        "is_annual": false
-      },
       {
         "period": "2023Q2",
         "value": 2196000000.0,
@@ -621,6 +636,11 @@
       {
         "period": "2025Q3",
         "value": 3423000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 3450000000.0,
         "is_annual": false
       },
       {
