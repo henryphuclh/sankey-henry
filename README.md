@@ -1,170 +1,177 @@
-# Financial Analysis System - Task 1
+# Financial Analysis System
 
-Hệ thống phân tích tài chính tự động cho 98 cổ phiếu toàn cầu. Hệ thống lấy dữ liệu từ SEC EDGAR và Yahoo Finance, trich xuất phân khúc kinh doanh bằng XBRL và LLM, tính toán các chỉ số tài chính, rồi sinh ra báo cáo HTML tương tác với biểu đồ Sankey và bảng Income Statement có so sánh YoY.
+Automated financial analysis pipeline for 98 global equities. The system fetches data from SEC EDGAR and Yahoo Finance, extracts business segments using XBRL and LLM, computes P&L metrics, and generates interactive HTML reports with Sankey flow charts and Income Statement tables with YoY comparisons.
 
+**Live output:** `output/sankey/index.html` — sortable dashboard of all 98 companies.
 
-## Mục lục
+---
 
-1. [Cài đặt](#cài-đặt)
-2. [Cách chạy](#cách-chạy)
-3. [Cấu trúc thư mục](#cấu-trúc-thư-mục)
-4. [Quy trình xử lý chi tiết](#quy-trình-xử-lý-chi-tiết)
-5. [Tính toán chỉ số tài chính](#tính-toán-chỉ-số-tài-chính)
-6. [Xây dựng biểu đồ Sankey](#xây-dựng-biểu-đồ-sankey)
-7. [Bảng Income Statement và YoY](#bảng-income-statement-và-yoy)
-8. [Hệ thống cache](#hệ-thống-cache)
-9. [Cấu hình nâng cao](#cấu-hình-nâng-cao)
-10. [Lưu ý vận hành](#lưu-ý-vận-hành)
+## Table of Contents
 
+1. [Setup](#setup)
+2. [Running the pipeline](#running-the-pipeline)
+3. [Project structure](#project-structure)
+4. [How it works](#how-it-works)
+   - [Ticker classification](#step-1--ticker-classification)
+   - [Filing ingestion](#step-2--filing-ingestion)
+   - [P&L extraction](#step-3--pl-extraction-by-sector)
+   - [Segment extraction](#step-4--segment-extraction)
+   - [Segment normalization](#step-5--segment-normalization)
+   - [Multi-period aggregation](#step-6--multi-period-aggregation)
+5. [Sankey chart construction](#sankey-chart-construction)
+6. [Income Statement table & YoY](#income-statement-table--yoy)
+7. [Cache system](#cache-system)
+8. [Configuration reference](#configuration-reference)
+9. [Operating notes](#operating-notes)
 
-## Cài đặt
+---
 
-Yêu cầu Python 3.8 trở lên.
+## Setup
+
+Requires Python 3.8+.
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Tạo file `.env` trong thư mục `task1/` (xem `.env.example` làm mẫu):
+Create `.env` in the project root:
 
 ```
 OPENAI_API_KEY=sk-YOUR_KEY_HERE
-SEC_USER_AGENT=HoTen Email@example.com
+SEC_USER_AGENT=YourName email@example.com
 ```
 
-- `OPENAI_API_KEY`: Lấy tại https://platform.openai.com/api-keys. Chi phí ước tính toàn bộ 98 mã cổ phiếu khoảng 1-3 USD khi dùng gpt-4o-mini.
-- `SEC_USER_AGENT`: Bắt buộc theo quy định của SEC EDGAR. Ghi tên và email thực để tránh bị chặn IP.
+- `OPENAI_API_KEY`: from https://platform.openai.com/api-keys. Full 98-ticker run costs roughly $1–3 using `gpt-4o-mini`.
+- `SEC_USER_AGENT`: required by SEC EDGAR policy. Use a real name and email to avoid IP throttling.
 
+---
 
-## Cách chạy
+## Running the pipeline
 
 ```bash
-cd task1
-
-# Xử lý một vài mã cổ phiếu cụ thể
+# Process specific tickers
 python main.py --tickers NVDA AAPL MSFT AMZN
 
-# Xử lý từ file danh sách (mỗi dòng một ticker)
-python main.py --tickers-file stocks.txt
-
-# Xử lý toàn bộ 98 mã
+# Process all 98 tickers
 python main.py --all
 ```
 
-Các tùy chọn bổ sung:
+| Flag | Description |
+|------|-------------|
+| `--no-cache` | Ignore all cached data, re-fetch everything from source |
+| `--verbose` / `-v` | Print per-ticker processing details |
+| `--workers N` | Number of tickers processed in parallel (default: 3) |
+| `--output-dir PATH` | Override HTML output directory |
 
-| Tùy chọn | Giải thích |
-|----------|------------|
-| `--no-cache` | Bỏ qua cache, lấy lại toàn bộ dữ liệu từ nguồn |
-| `--verbose` / `-v` | Hiển thị chi tiết quá trình xử lý từng ticker |
-| `--workers N` | Số lượng ticker xử lý song song (mặc định: 3) |
-| `--output-dir PATH` | Thư mục lưu file HTML đầu ra |
+After the run, open `output/sankey/index.html` in a browser to see the full dashboard.
 
-Sau khi chạy xong, mở `output/sankey/index.html` trong trình duyệt để xem dashboard.
+**Re-runs without `--no-cache`** skip all API calls and only re-render HTML from the aggregated JSON files in `data/segments/`. This is very fast (seconds).
 
-Khi chạy lại mà không có `--no-cache`, hệ thống đọc JSON đã lưu trong `data/segments/` và chỉ render lại HTML. Không gọi thêm bất kỳ API nào, nên rất nhanh.
+---
 
-
-## Cấu trúc thư mục
+## Project structure
 
 ```
-task1/
-|-- main.py                          # Điểm vào CLI, điều phối toàn bộ pipeline
-|-- config.py                        # Cấu hình toàn cục
-|-- requirements.txt
-|-- .env.example
-|-- Valuation_Top100_2026-04-18.xlsx # Danh sách 98 mã cổ phiếu (nguồn gốc thứ tự)
-|
-|-- src/
-|   |-- ingestion/
-|   |   |-- ticker_loader.py         # Đọc Excel, phân loại US_SEC / INTL_SEC / INTL_YAHOO
-|   |   |-- edgar_client.py          # Gọi SEC EDGAR, parse P&L từ edgartools
-|   |   |-- yahoo_client.py          # Gọi Yahoo Finance API
-|   |   `-- filing_router.py         # Định tuyến nguồn dữ liệu theo loại ticker
-|   |
-|   |-- extraction/
-|   |   |-- models.py                # Dataclass SegmentData, SegmentValue, FilingRecord
-|   |   |-- extraction_router.py     # Điều phối XBRL + LLM, ghép kết quả
-|   |   |-- llm_extractor.py         # Gọi OpenAI để trich xuất phân khúc từ văn bản
-|   |   |-- normalizer.py            # Chuẩn hóa tên phân khúc bằng fuzzy matching
-|   |   `-- sector_handlers/         # Xử lý đặc thù theo ngành (tài chính, pharma, tập đoàn)
-|   |
-|   |-- analysis/
-|   |   |-- segment_aggregator.py    # Tổng hợp dữ liệu đa kỳ, tính TTM, segment trend
-|   |   `-- business_model_writer.py # Gọi LLM viết narrative phân tích mô hình kinh doanh
-|   |
-|   |-- visualization/
-|   |   |-- sankey_builder.py        # Xây dựng 6 lớp P&L flow từ SegmentData
-|   |   |-- sankey_renderer.py       # Render Sankey bằng Plotly, tạo period dropdown
-|   |   |-- report_generator.py      # Ghép HTML đầy đủ (Sankey + Income Statement + Coverage)
-|   |   `-- index_generator.py       # Tạo dashboard index.html
-|   |
-|   |-- cache/
-|   |   `-- cache_manager.py         # Cache file JSON với TTL theo namespace
-|   `-- llm/
-|       `-- provider.py              # Wrapper OpenAI với retry, rate limiting
-|
-|-- data/
-|   |-- cache/
-|   |   |-- filings/                 # Danh sách filing SEC (JSON, TTL 30 ngày)
-|   |   |-- llm/                     # Kết quả trich xuất LLM (JSON, TTL 90 ngày)
-|   |   `-- yfinance/                # Dữ liệu Yahoo Finance (JSON, TTL 7 ngày)
-|   `-- segments/                    # Dữ liệu tổng hợp theo mã (JSON tổng hợp cuối cùng)
-|
-`-- output/
-    `-- sankey/
-        |-- index.html               # Dashboard toàn bộ 98 công ty
-        `-- {TICKER}_sankey.html     # Báo cáo từng công ty
+.
+├── main.py                          # CLI entry point, orchestrates the pipeline
+├── config.py                        # All global constants and thresholds
+├── requirements.txt
+├── Valuation_Top100_2026-04-18.xlsx # 98-ticker input list (preserves display order)
+│
+├── src/
+│   ├── ingestion/
+│   │   ├── ticker_loader.py         # Reads Excel; auto-classifies US_SEC / INTL_SEC / INTL_YAHOO
+│   │   ├── data_source_checker.py   # Resolves CIK, inspects recent SEC filings, assigns sector
+│   │   ├── edgar_client.py          # SEC EDGAR fetching, XBRL parsing, segment axis logic
+│   │   ├── yahoo_client.py          # Yahoo Finance financials and revenue validation
+│   │   ├── filing_router.py         # Routes each ticker to the correct data sources
+│   │   └── rate_limiter.py          # Token-bucket rate limiter (SEC: 8 req/s)
+│   │
+│   ├── extraction/
+│   │   ├── models.py                # Dataclasses: FilingRecord, SegmentData, SegmentValue
+│   │   ├── extraction_router.py     # Orchestrates XBRL → LLM fallback per filing
+│   │   ├── llm_extractor.py         # OpenAI-based segment extraction from filing text
+│   │   ├── normalizer.py            # Fuzzy-matches segment names across periods
+│   │   └── sector_handlers/
+│   │       ├── financials.py        # P&L for banks/insurers (NII, non-interest income)
+│   │       ├── pharma.py            # P&L for pharma/biotech
+│   │       └── standard.py          # P&L for all other companies
+│   │
+│   ├── analysis/
+│   │   ├── segment_aggregator.py    # Merges multi-period data, computes TTM, segment trends
+│   │   └── business_model_writer.py # LLM narrative for each company's business model
+│   │
+│   ├── visualization/
+│   │   ├── sankey_builder.py        # Builds 6-layer P&L flow nodes and links
+│   │   ├── sankey_renderer.py       # Renders Sankey via Plotly, period dropdown
+│   │   ├── report_generator.py      # Assembles full HTML (Sankey + IS table + coverage)
+│   │   └── index_generator.py       # Builds sortable dashboard index.html
+│   │
+│   ├── cache/
+│   │   └── cache_manager.py         # File-based JSON cache with per-namespace TTL
+│   └── llm/
+│       └── provider.py              # OpenAI wrapper with retry and rate limiting
+│
+├── data/
+│   ├── cache/
+│   │   ├── checker/                 # data_source_checker results (TTL 30 days)
+│   │   ├── filings/                 # SEC filing lists (TTL 30 days)
+│   │   ├── llm/                     # LLM extraction results (TTL 90 days)
+│   │   └── yfinance/                # Yahoo Finance data (TTL 7 days)
+│   └── segments/                    # Final aggregated JSON per ticker
+│
+└── output/
+    └── sankey/
+        ├── index.html               # Dashboard — all 98 companies
+        └── {TICKER}_sankey.html     # Per-company interactive report
 ```
 
+---
 
-## Quy trình xử lý chi tiết
+## How it works
 
-### Bước 1 - Phân loại mã cổ phiếu
+### Step 1 — Ticker classification
 
-Khi khởi động, `ticker_loader.py` đọc file Excel và phân loại từng mã vào một trong ba nhóm:
+`data_source_checker.py` resolves each ticker's CIK via edgartools and inspects the last 3 years of SEC submissions to classify it:
 
-- **US_SEC**: Công ty Mỹ nộp 10-K/10-Q lên SEC EDGAR. Đây là nhóm lớn nhất (~73 mã). Ví dụ: AAPL, NVDA, MSFT, JPM.
-- **INTL_SEC**: Công ty nước ngoài nộp 20-F/6-K lên SEC EDGAR. Gồm 7 mã: TSM, ASML, TCEHY, RHHBY, HSBC, AZN, NVS.
-- **INTL_YAHOO**: Công ty quốc tế không nộp SEC, chỉ dùng Yahoo Finance. Gồm 18 mã như Samsung (005930.KS), Toyota (TM), LVMH (MC.PA), Siemens (SIE.DE).
+| Class | Count | Source | Filing types |
+|-------|-------|--------|--------------|
+| **US_SEC** | 74 | SEC EDGAR | 10-K (annual), 10-Q (quarterly) |
+| **INTL_SEC** | 15 | SEC EDGAR | 20-F or **40-F** (annual), 6-K (quarterly) |
+| **INTL_YAHOO** | 9 | Yahoo Finance only | — |
 
-Ngoài ra mỗi mã còn được gắn nhãn ngành đặc thù để áp dụng logic trich xuất phù hợp:
-- **financial**: JPM, BAC, GS, V, MA... Công ty tài chính có cấu trúc P&L khác biệt (không có COGS, dùng net interest income).
-- **pharma**: LLY, ABBV, MRK, AZN... Công ty dược có phân khúc theo loại thuốc và khu vực.
-- **conglomerate**: BRK-B, GE, SIE.DE... Tập đoàn đa ngành cần xử lý đặc biệt.
-- **standard**: Phần còn lại, áp dụng logic P&L thông thường.
+**40-F** is the Canadian annual report format filed with the SEC (used by RY.TO and TD.TO instead of 20-F). The system automatically detects it from the submissions feed and treats it as equivalent to 20-F for all purposes.
 
-### Bước 2 - Kiểm tra cache
+INTL_YAHOO tickers (no SEC filings): 005930.KS (Samsung), 000660.KS (SK Hynix), TCEHY, RHHBY, MC.PA, NESN.SW, SIE.DE, CBA.AX, ALV.DE.
 
-Trước khi làm bất cứ điều gì, hệ thống kiểm tra `data/segments/{TICKER}.json`. Nếu file tồn tại và có ít nhất 1 kỳ annual thì bỏ qua toàn bộ bước lấy dữ liệu, nhảy thẳng sang bước render HTML. Đây là lý do khi chạy lại `python main.py --all` lần thứ hai rất nhanh.
+Each ticker is also assigned a **sector** based on SIC code:
 
-### Bước 3 - Lấy danh sách filing
+| Sector | Count | Handler |
+|--------|-------|---------|
+| **standard** | 65 | Generic US-GAAP P&L |
+| **financial** | 20 | Banks / insurers (NII + non-interest income) |
+| **pharma** | 13 | Pharmaceutical / biotech |
 
-Với US_SEC và INTL_SEC, hệ thống gọi SEC EDGAR API để lấy danh sách filing:
+### Step 2 — Filing ingestion
+
+For US_SEC and INTL_SEC tickers, `edgar_client.py` fetches the filing list from:
 
 ```
 GET https://data.sec.gov/submissions/{CIK}.json
 ```
 
-Mỗi filing được ghi lại thành một `FilingRecord` gồm: ticker, loại form (10-K/10-Q/20-F), kỳ báo cáo, ngày nộp, accession number, CIK.
+Each filing becomes a `FilingRecord` (ticker, form type, period, accession number, CIK). SEC rate limit: 8 req/s with exponential-backoff retry (up to 5 attempts, base delay 2 s). Filing lists are cached 30 days.
 
-Giới hạn tốc độ: 8 request/giây (SEC quy định tối đa 10 req/s, để biên an toàn). Tất cả HTTP request đều có retry với exponential backoff (tối đa 5 lần, delay cơ sở 2 giây).
+For INTL_YAHOO tickers, only Yahoo Finance data is used — no SEC filings are fetched.
 
-Kết quả được cache 30 ngày trong `data/cache/filings/`.
+### Step 3 — P&L extraction by sector
 
-### Bước 4 - Trich xuất P&L từ SEC filing
+`edgartools` parses the XBRL income statement from each filing directly. The sector handler maps XBRL concepts to P&L fields:
 
-Với mỗi filing, `edgar_client.py` dùng thư viện `edgartools` để parse filing:
+**Standard / Pharma** — US-GAAP concepts:
 
-```python
-obj = get_filing_obj(filing)   # TenK / TenQ / TwentyF object
-pnl = pnl_from_filing_obj(obj) # Đọc income_statement có cấu trúc
-```
-
-`edgartools` đọc trực tiếp từ XBRL có cấu trúc trong filing, không cần LLM. Kết quả là dict chứa các chỉ số P&L:
-
-| Trường | XBRL concept tương ứng |
-|--------|------------------------|
+| Field | XBRL concept |
+|-------|-------------|
 | `total_revenue` | `Revenues`, `RevenueFromContractWithCustomerExcludingAssessedTax` |
 | `gross_profit` | `GrossProfit` |
 | `operating_income` | `OperatingIncomeLoss` |
@@ -175,520 +182,270 @@ pnl = pnl_from_filing_obj(obj) # Đọc income_statement có cấu trúc
 | `interest_expense` | `InterestExpense` |
 | `income_tax` | `IncomeTaxExpense` |
 
-Đây là dữ liệu có cấu trúc, độ chính xác cao, không cần LLM.
+**Financial sector** — uses bank/insurer-specific concepts:
 
-### Bước 5 - Trich xuất phân khúc doanh thu
+| Field | Concepts tried |
+|-------|----------------|
+| `total_revenue` | `Revenues`, `RevenueFromContractWithCustomer`, `NetInterestIncome`, `InterestAndFeeIncome`, `ifrs-full:Revenue` |
+| `net_income` | `NetIncomeLoss`, `ProfitLoss` (IFRS) |
 
-Đây là bước phức tạp nhất. Hệ thống thử XBRL trước, nếu không đủ thì dùng LLM.
+If the financial handler returns no revenue (common for IFRS banks where the P&L only captures NII), the system falls back to standard extraction.
 
-#### 5a - Thử XBRL dimensions
+### Step 4 — Segment extraction
+
+This is the most complex step. The system attempts XBRL extraction first, then falls back to LLM if needed.
+
+#### 4a — XBRL dimension extraction
+
+`segments_from_xbrl_dimensions()` searches the income statement DataFrame for dimensioned revenue rows. Axes are tried in priority order:
+
+```
+1. us-gaap:StatementBusinessSegmentsAxis     # ASC 280 reportable segments
+2. ifrs-full:SegmentsAxis                    # IFRS IAS 8 business segments (TD.TO, RY.TO, NOVO-B.CO)
+3. srt:ConsolidationItemsAxis
+4. ifrs-full:SegmentConsolidationItemsAxis   # IFRS consolidation axis (RY.TO)
+5. srt:ProductOrServiceAxis
+6. ifrs-full:ProductsAndServicesAxis
+7. srt:StatementGeographicalAxis
+8. ifrs-full:GeographicalAreasAxis
+```
+
+Several axes are **blocked** entirely (financial instrument categories, carrying amount axes, employee benefit axes, etc.) to prevent misidentifying non-segment data as business segments.
+
+**Revenue concept filtering** — only concepts matching these hints are considered:
+- Standard/pharma: `Revenue`, `Sales`, `NetSales`
+- Financial sector: `Revenue`, `Sales`, `NetSales`, `Noninterest`, `Premium`, `Fee`, `Interest`
+
+**Subtotal-drop heuristic** — after collecting (name, value) pairs, the largest member is iteratively dropped until the sum falls within ±15% of `total_revenue`. This removes "Total" or "Operating Segments" rollup rows that appear alongside leaf segments.
+
+#### 4b — `dimension_label` fallback
+
+Some filers (MRK, RY.TO) encode segment membership in the `dimension_label` column rather than as the primary `dimension_axis`. For example, MRK uses `ConsolidationItemsAxis` as the primary axis but stores `StatementBusinessSegmentsAxis: Pharmaceutical` in `dimension_label`.
+
+When no usable axis is found via 4a, the system scans `dimension_label` for rows containing either `StatementBusinessSegmentsAxis` or `ifrs-full:SegmentsAxis`, excludes rows that also contain product/geo/financial-instrument axes, and extracts the segment name from the label string.
+
+**IFRS bank partial-revenue guard** — IFRS banks (RY.TO, TD.TO) often report only net interest income in `total_revenue` from the P&L handler (~half of actual segment revenue). When the sum of extracted segments exceeds `1.5 × total_revenue`, the reference is treated as partial and the subtotal-drop heuristic is disabled.
+
+#### 4c — LLM fallback
+
+If XBRL coverage (`sum of segment values / total_revenue`) is below 0.7, the system extracts the Segment Information note from the filing text and sends it to OpenAI:
 
 ```python
-segments = segments_from_xbrl_dimensions(obj, total_revenue=total_rev)
+note_text = get_segment_note_text(obj)   # typically 5,000–30,000 chars
 ```
 
-Hàm này tìm kiếm các XBRL dimension trong filing theo trục `StatementBusinessSegmentsAxis`. Mỗi dimension value là một phân khúc kinh doanh với giá trị doanh thu tương ứng.
+Smart slicing: 30,000 chars before the "Segment" anchor + 90,000 chars after, capped at 120,000 total (~30k tokens). Primary model: `gpt-4o-mini`; auto-fallback to `gpt-4o` on failure. LLM results are cached 90 days.
 
-Sau đó tính độ phủ:
+The final method label reflects what was used:
+- `xbrl` — XBRL coverage ≥ 70%
+- `edgar+llm` — LLM beat XBRL coverage
+- `yahoo+llm` — INTL_YAHOO ticker, segments from Yahoo financial text
 
-```
-xbrl_coverage = sum(segment.value for segment in segments) / total_revenue
-```
+#### 4d — Yahoo Finance cross-validation
 
-Nếu `xbrl_coverage >= 0.7` (XBRL giải thích được ít nhất 70% doanh thu), dùng kết quả XBRL luôn, đặt `method = "xbrl"`.
+When Yahoo revenue data is available, a warning is appended if SEC vs. Yahoo revenue differs by more than 15%.
 
-#### 5b - Fallback sang LLM nếu XBRL không đủ
+### Step 5 — Segment normalization
 
-Nếu XBRL trả về rỗng hoặc `xbrl_coverage < 0.7`, hệ thống lấy văn bản từ note "Segment Information" trong filing:
-
-```python
-note_text = get_segment_note_text(obj)  # Thường 5,000-30,000 ký tự
-```
-
-Văn bản này sau đó được cắt thông minh (smart slicing): lấy 30,000 ký tự trước anchor "Segment" và 90,000 ký tự sau, tổng không quá 120,000 ký tự (~30k tokens), vừa với context window của gpt-4o-mini.
-
-LLM được gọi với structured output (JSON schema), yêu cầu trả về danh sách:
-
-```json
-[
-  {"segment_name": "Cloud & AI", "value": 54800000000},
-  {"segment_name": "Personal Computing", "value": 23500000000}
-]
-```
-
-Nếu gpt-4o-mini trả về rỗng hoặc lỗi, tự động fallback sang gpt-4o.
-
-Sau đó so sánh độ phủ giữa XBRL và LLM:
-
-```python
-llm_coverage  = sum(s.value for s in llm_segs) / total_rev
-xbrl_coverage = sum(s.value for s in xbrl_segs) / total_rev
-
-# Chọn kết quả có độ phủ cao hơn
-if llm_coverage > xbrl_coverage:
-    segments = llm_segs
-    method = "edgar+llm"
-else:
-    segments = xbrl_segs  # giữ XBRL
-```
-
-Kết quả LLM được cache 90 ngày trong `data/cache/llm/`.
-
-#### 5c - Kiểm tra tỉ lệ scale
-
-Sau khi có segments, hệ thống kiểm tra xem tổng các phân khúc có hợp lý so với `total_revenue` không:
-
-```python
-seg_sum = sum(s.value for s in segments)
-scale   = total_revenue / seg_sum
-
-# Chỉ rescale nếu chênh lệch > 25%
-if not (0.8 <= scale <= 1.25):
-    for s in segments:
-        s.value *= scale  # điều chỉnh tỉ lệ để tổng khớp total_revenue
-```
-
-Bước này xử lý trường hợp LLM trả về đơn vị sai (ví dụ: trich xuất số liệu tính bằng triệu thay vì đơn vị tuyệt đối).
-
-#### 5d - Kiểm tra chéo với Yahoo Finance
-
-Nếu có dữ liệu Yahoo Finance, hệ thống so sánh:
-
-```python
-diff = abs(sd.total_revenue - yahoo_rev) / max(abs(yahoo_rev), 1)
-if diff > 0.15:
-    sd.notes.append("Warning: chênh lệch >15% so với Yahoo Finance")
-```
-
-### Bước 6 - Chuẩn hóa tên phân khúc
-
-Vấn đề thực tế: cùng một phân khúc kinh doanh nhưng tên gọi trong filing thay đổi qua các năm. Ví dụ: "Greater China" năm 2022, "China" năm 2023, "Mainland China, Hong Kong and Taiwan" năm 2024.
-
-`normalizer.py` giải quyết bằng fuzzy matching với thư viện `rapidfuzz`:
+`normalizer.py` unifies segment names that change wording across periods (e.g. "Greater China" → "China" → "Mainland China, Hong Kong and Taiwan"). It uses fuzzy matching with `rapidfuzz`:
 
 ```python
 best_match, score, _ = process.extractOne(
     name, canonical_names, scorer=fuzz.token_sort_ratio
 )
-if score >= 80:  # ngưỡng 80% tương đồng
-    canonical_map[name] = best_match  # gộp vào tên canonical
+if score >= 80:
+    canonical_map[name] = best_match   # merge into existing canonical name
 else:
-    canonical_names.append(name)      # đây là phân khúc mới
-    canonical_map[name] = name
+    canonical_names.append(name)       # new distinct segment
 ```
 
-Thuật toán `token_sort_ratio` sắp xếp các từ trước khi so sánh, nên "Cloud Computing Services" và "Services Cloud Computing" vẫn được coi là giống nhau.
+`token_sort_ratio` sorts tokens before comparing, so "Cloud Computing Services" and "Services Cloud Computing" score 100.
 
-Tên canonical được chọn theo nguyên tắc: ưu tiên tên dài hơn vì thường đầy đủ mô tả hơn (sort theo độ dài giảm dần trước khi xử lý).
+Canonical names are chosen by descending length (longer = more descriptive). Per-ticker canonical maps are saved to `data/segments/{TICKER}_canonical.json` for manual inspection.
 
-Sau khi map, các phân khúc trùng tên trong cùng một kỳ được gộp lại bằng cách cộng giá trị.
+### Step 6 — Multi-period aggregation
 
-Canonical map được lưu vào `data/segments/{TICKER}_canonical.json` để kiểm tra thủ công khi cần.
-
-### Bước 7 - Tổng hợp đa kỳ
-
-`segment_aggregator.py` nhận toàn bộ list `SegmentData` (gồm annual và quarterly) rồi tổng hợp:
+`segment_aggregator.py` produces a single JSON per ticker:
 
 ```python
-annuals    = sorted(annual_periods,    key=lambda s: s.period, reverse=True)
-quarterlies = sorted(quarterly_periods, key=lambda s: s.period, reverse=True)
-
-agg = AggregatedCompanyData(
-    latest_annual     = annuals[0],      # kỳ annual gần nhất
-    annual_periods    = annuals,          # tất cả kỳ annual (tối đa 3)
-    quarterly_periods = quarterlies,      # tất cả kỳ quarterly (tối đa 12)
-    annual_count      = len(annuals),
-    quarterly_count   = len(quarterlies),
-    has_partial_data  = len(annuals) < 3 or len(quarterlies) < 8,
-)
-```
-
-Đồng thời xây dựng `segment_trend`: dict ánh xạ tên phân khúc sang chuỗi giá trị theo thời gian:
-
-```python
-segment_trend = {
-    "iPhone": [
-        {"period": "FY2023", "value": 200583000000, "is_annual": True},
-        {"period": "FY2024", "value": 201183000000, "is_annual": True},
-    ],
-    "Services": [...]
+{
+  "latest_annual":      <most recent annual SegmentData>,
+  "annual_periods":     [<FY2025>, <FY2024>, <FY2023>],        # up to 3
+  "quarterly_periods":  [<2026Q1>, <2025Q4>, ..., <2023Q2>],   # up to 12
+  "segment_trend":      {"iPhone": [{"period": "FY2023", "value": ...}, ...]},
+  "ttm_revenue":        <sum of 4 most recent quarters>,
+  "annual_count":       3,
+  "quarterly_count":    12
 }
 ```
 
-Kết quả được lưu vào `data/segments/{TICKER}.json`.
+TTM is computed from the 4 most recent quarterly records; if fewer than 4 are available it falls back to the most recent annual value.
 
+---
 
-## Tính toán chỉ số tài chính
+## Sankey chart construction
 
-### Điểm tin cậy (Confidence Score)
+The Sankey represents the P&L flow across 6 layers:
 
-Mỗi `SegmentData` được tính điểm tin cậy từ 0.0 đến 1.0 dựa trên mức độ đầy đủ của dữ liệu:
+```
+Layer 0: Business segments ─┐
+                             ├─► Layer 1: Total Revenue ─► Layer 2a: Gross Profit ─► Layer 3: R&D / SG&A / Other OpEx
+                                                         │                                      └─► Layer 4: Operating Income ─► Layer 5: Tax / Interest
+                                                         └─► Layer 2b: COGS (exits)                                              └─► Layer 6: Net Income
+```
+
+**Missing value inference:**
+- If `gross_profit` is known but `cogs` is not: `cogs = total_revenue − gross_profit`
+- If `cogs` is known but `gross_profit` is not: `gross_profit = total_revenue − cogs`
+- If both are absent: estimated from `operating_income + rd_expense + sga_expense`
+
+**Small-segment bucketing:** segments below 1.5% of revenue (or beyond the top 8) are merged into an "Other" node.
+
+**Minimum link width:** links are floored at 1% of total revenue so no flow disappears visually.
+
+**Node x-positions:**
+
+| Node | x |
+|------|---|
+| Segments | 0.00 |
+| Total Revenue | 0.20 |
+| Gross Profit | 0.40 |
+| R&D / SG&A / Other OpEx | 0.60 |
+| Operating Income | 0.75 |
+| Tax / Interest | 0.87 |
+| Net Income | 1.00 |
+
+**Colors** (from `config.py`):
+
+| Node type | Color |
+|-----------|-------|
+| Segment | `#1f77b4` (blue) |
+| Revenue / profit nodes | `#2ca02c` (green) |
+| Cost / loss nodes | `#d62728` (red) |
+| R&D, SG&A | `#ff7f0e` (orange) |
+| Tax, interest | `#7f7f7f` (grey) |
+
+Links use a semi-transparent version (alpha 0.4) of the source node color.
+
+**Period dropdown:** each fiscal period is pre-built as a separate `SankeyData` object. All period data is embedded as JSON in the HTML `<script>` block. Switching periods calls `Plotly.react()` — no page reload.
+
+---
+
+## Income Statement table & YoY
+
+### Annual mode
+
+Compares the two most recent annual periods side by side:
+
+| Metric | FY2025 | FY2024 | YoY% |
+|--------|--------|--------|------|
+
+### Quarterly mode
+
+Each recent quarter is paired with the same quarter of the prior year (e.g. 2025Q4 vs 2024Q4). Up to 4 pairs are shown as tabs.
+
+YoY formula:
 
 ```python
-score = 0.0
-
-# Doanh thu là chỉ số bắt buộc, chiếm 40%
-if total_revenue is not None and total_revenue != 0:
-    score += 0.40
-
-# Các chỉ số P&L cơ bản, mỗi cái 10-15%
-if gross_profit is not None:      score += 0.10
-if operating_income is not None:  score += 0.15
-if net_income is not None:        score += 0.15
-
-# Các dòng chi phí chi tiết (COGS, R&D, SG&A, Interest, Tax)
-# Mỗi cái +4%, tổng tối đa 20%
-pnl_count = sum(1 for f in (cogs, rd_expense, sga_expense, interest_expense, income_tax)
-                if f is not None)
-score += min(pnl_count * 0.04, 0.20)
-
-# Phân khúc: không có phân khúc bị giới hạn tối đa 55%
-if len(segments) == 0:
-    score = min(score, 0.55)
-elif len(segments) >= 2:
-    score = min(1.0, score + 0.30)  # có ít nhất 2 phân khúc: +30%
-elif len(segments) == 1:
-    score = min(1.0, score + 0.10)  # chỉ 1 phân khúc: +10%
+yoy_pct = (current - prior) / abs(prior) * 100
 ```
 
-Ví dụ: Apple với đầy đủ P&L và 5 phân khúc đạt 1.0 (100%). Công ty chỉ có doanh thu và net income từ Yahoo nhưng không có phân khúc đạt khoảng 0.55 (55%).
+`abs(prior)` handles the case where the prior year was a loss.
 
-### Tính Trailing Twelve Months (TTM)
+**Confidence score** (0.0 – 1.0) reflects data completeness:
 
-TTM được dùng để tính doanh thu 12 tháng gần nhất, không phụ thuộc vào kỳ năm tài chính:
+| Criterion | Points |
+|-----------|--------|
+| `total_revenue` present | +0.40 |
+| `gross_profit` present | +0.10 |
+| `operating_income` present | +0.15 |
+| `net_income` present | +0.15 |
+| Each detail line (cogs, rd, sga, interest, tax) | +0.04 each, max 0.20 |
+| ≥ 2 segments | +0.30 |
+| 1 segment | +0.10 |
+| 0 segments | cap at 0.55 |
 
-```python
-last4q = quarterly_periods[:4]  # 4 quý gần nhất
+---
 
-if len(last4q) >= 4:
-    ttm_revenue          = sum(q.total_revenue    for q in last4q if q.total_revenue)
-    ttm_operating_income = sum(q.operating_income for q in last4q if q.operating_income)
-    ttm_net_income       = sum(q.net_income       for q in last4q if q.net_income)
-else:
-    # Fallback: dùng annual gần nhất thay thế
-    ttm_revenue          = annual_periods[0].total_revenue
-    ttm_operating_income = annual_periods[0].operating_income
-    ttm_net_income       = annual_periods[0].net_income
-```
+## Cache system
 
-### Các chỉ số biên lợi nhuận
-
-Tính toán trực tiếp khi render HTML, không lưu trong JSON:
-
-```python
-gross_margin     = gross_profit     / total_revenue  # Biên lợi nhuận gộp
-operating_margin = operating_income / total_revenue  # Biên lợi nhuận hoạt động
-net_margin       = net_income       / total_revenue  # Biên lợi nhuận ròng
-```
-
-### Tính YoY (Year-over-Year)
-
-```python
-yoy_pct = (current_value - prior_value) / abs(prior_value) * 100
-```
-
-Dùng `abs(prior_value)` ở mẫu số để xử lý đúng trường hợp năm trước lỗ (giá trị âm). Nếu một trong hai giá trị là None hoặc prior = 0, hiển thị "—" thay vì tính.
-
-### Lựa chọn phân khúc tối ưu cho Sankey
-
-Khi một công ty có nhiều tập phân khúc chồng lên nhau (ví dụ Apple có cả phân khúc địa lý lẫn phân khúc sản phẩm), hệ thống chọn tập nào hợp lý hơn:
-
-```python
-seg_sum = sum(s.value for s in segments)
-
-# Nếu tổng <= 110% doanh thu, không có chồng chéo, dùng luôn
-if seg_sum <= total_rev * 1.10:
-    return segments
-
-# Tách địa lý vs phi địa lý
-geo_segs     = [s for s in segments if any(k in s.segment_name.lower()
-               for k in {"americas", "europe", "china", "japan", "asia", "emea", ...})]
-non_geo_segs = [s for s in segments if s not in geo_segs]
-
-# Ưu tiên phi địa lý (phân khúc sản phẩm/dịch vụ) nếu tổng trong khoảng 70-130% doanh thu
-non_geo_sum = sum(s.value for s in non_geo_segs)
-if 0.70 * total_rev <= non_geo_sum <= 1.30 * total_rev:
-    return non_geo_segs
-
-# Fallback: dùng địa lý nếu phù hợp
-geo_sum = sum(s.value for s in geo_segs)
-if 0.70 * total_rev <= geo_sum <= 1.30 * total_rev:
-    return geo_segs
-```
-
-Đối với Apple (AAPL), do dữ liệu XBRL chỉ có phân khúc địa lý, hệ thống cho phép override thủ công qua `PRODUCT_SEGMENT_OVERRIDES` trong `config.py`. Khi Sankey được build, nếu có override cho ticker + kỳ tương ứng, dữ liệu override được dùng thay cho dữ liệu từ JSON:
-
-```python
-# FY2024: override bằng phân khúc sản phẩm từ annual report
-PRODUCT_SEGMENT_OVERRIDES = {
-    "AAPL": {
-        "FY2024": [
-            {"segment_name": "iPhone",                        "value": 201183000000.0},
-            {"segment_name": "Services",                      "value":  96169000000.0},
-            {"segment_name": "Wearables, Home & Accessories", "value":  37005000000.0},
-            {"segment_name": "Mac",                           "value":  29984000000.0},
-            {"segment_name": "iPad",                          "value":  26694000000.0},
-        ],
-        "FY2023": [...]
-    }
-}
-```
-
-
-## Xây dựng biểu đồ Sankey
-
-Sankey chart thể hiện dòng chảy tài chính từ doanh thu đến lợi nhuận ròng qua 7 lớp:
-
-```
-Lớp 0: Phân khúc doanh thu  --\
-                               +--> Lớp 1: Tổng doanh thu --+--> Lớp 2a: Lợi nhuận gộp
-                                                             |         \--> Lớp 3: R&D, SG&A
-                                                             |              \--> Lớp 4: EBIT
-                                                             |                   \--> Lớp 5: Thuế
-                                                             |                        \--> Lớp 6: Lợi nhuận ròng
-                                                             `--> Lớp 2b: Giá vốn hàng bán (thoát ra)
-```
-
-### Tính toán các node
-
-**Gross Profit và COGS** (khi thiếu một trong hai):
-
-```python
-if gross_profit is not None and cogs is None:
-    cogs = total_revenue - gross_profit
-
-elif cogs is not None and gross_profit is None:
-    gross_profit = total_revenue - cogs
-
-elif gross_profit is None and cogs is None:
-    # Ước tính từ operating income và opex
-    opex = (rd_expense or 0) + (sga_expense or 0)
-    gross_profit = operating_income + opex
-    cogs = total_revenue - gross_profit
-```
-
-**Other Operating Expenses** (chi phí vận hành còn lại):
-
-```python
-other_opex = gross_profit - rd_expense - sga_expense - operating_income
-# Chỉ hiển thị nếu > 1% doanh thu (để tránh nhiễu)
-if other_opex > total_revenue * 0.01:
-    add_node("Other OpEx", other_opex)
-```
-
-**Đảm bảo link nhỏ vẫn nhìn thấy được**:
-
-```python
-min_val = max(total_revenue * 0.01, abs(val) * 0.001)
-link_val = max(abs(val), min_val)  # Không cho link nào nhỏ hơn 1% tổng doanh thu
-```
-
-**Vị trí node** (trục x từ 0.0 đến 1.0):
-
-```
-Phân khúc (x=0.0) -> Tổng DT (x=0.2) -> Lợi nhuận gộp (x=0.4) -> R&D/SG&A (x=0.6)
--> EBIT (x=0.75) -> Thuế/Lãi vay (x=0.87) -> Lợi nhuận ròng (x=1.0)
-```
-
-Vị trí trục y của các phân khúc được phân bố đều:
-
-```python
-for i, seg in enumerate(visible_segments):
-    y_pos = (i + 0.5) / n_display  # Phân bố đều từ 0 đến 1
-```
-
-**Phân khúc nhỏ** (< 1.5% doanh thu) được gộp vào node "Other":
-
-```python
-MIN_PCT  = 0.015  # 1.5% ngưỡng tối thiểu để hiển thị riêng
-MAX_SEGS = 8      # Tối đa 8 phân khúc hiển thị
-
-for seg in sorted_segments:
-    if seg.value / total_revenue < MIN_PCT or len(visible) >= MAX_SEGS:
-        other_val += seg.value
-    else:
-        visible.append(seg)
-```
-
-### Màu sắc nodes và links
-
-```python
-SANKEY_COLORS = {
-    "segment":          "#1f77b4",  # Xanh dương: phân khúc doanh thu
-    "total_revenue":    "#2ca02c",  # Xanh lá: doanh thu tổng
-    "gross_profit":     "#2ca02c",  # Xanh lá: lợi nhuận gộp
-    "cogs":             "#d62728",  # Đỏ: giá vốn (chi phí, thoát ra)
-    "rd":               "#ff7f0e",  # Cam: R&D
-    "sga":              "#ff7f0e",  # Cam: SG&A
-    "other_opex":       "#ffbb78",  # Cam nhạt: chi phí khác
-    "operating_income": "#2ca02c",  # Xanh lá: EBIT
-    "interest":         "#7f7f7f",  # Xám: lãi vay
-    "tax":              "#7f7f7f",  # Xám: thuế
-    "net_income":       "#2ca02c",  # Xanh lá: lợi nhuận ròng
-    "net_loss":         "#d62728",  # Đỏ: lỗ ròng
-}
-```
-
-Links dùng màu semi-transparent (alpha 0.4) từ màu của node nguồn:
-
-```python
-link_color = f"rgba({r},{g},{b},0.4)"  # Chuyển hex sang rgba với alpha 40%
-```
-
-### Period dropdown
-
-Mỗi kỳ tài chính được build thành một `SankeyData` object độc lập. Khi render HTML, tất cả dữ liệu được nhúng dưới dạng JSON vào `<script>`:
-
-```javascript
-var SANKEY_DATA = {
-    "FY2025": { nodes: [...], links: [...] },
-    "FY2024": { nodes: [...], links: [...] },
-    "FY2023": { nodes: [...], links: [...] },
-};
-```
-
-Khi người dùng đổi dropdown, JavaScript cập nhật biểu đồ Plotly bằng `Plotly.react()` với dữ liệu tương ứng, không cần reload trang.
-
-
-## Bảng Income Statement và YoY
-
-### Chế độ Annual
-
-Lấy 2 kỳ annual gần nhất từ `agg.annual_periods` (đã sắp xếp giảm dần):
-
-```python
-annual = sorted(agg.annual_periods, key=lambda p: p.period, reverse=True)
-curr_period = annual[0]  # Ví dụ: FY2025
-prev_period = annual[1]  # Ví dụ: FY2024
-```
-
-Bảng hiển thị 4 cột: Metric | FY2025 | FY2024 | YoY%
-
-### Chế độ Quarterly
-
-Hệ thống ghép từng quý năm nay với quý cùng kỳ năm trước:
-
-```python
-# Tên kỳ có dạng "2025Q4", "2024Q4", "2025Q2"...
-for qp in sorted(qtr_map.keys(), reverse=True):
-    year_str, qnum = qp.split("Q")      # "2025", "4"
-    prior_key = f"{int(year_str)-1}Q{qnum}"  # "2024Q4"
-
-    if prior_key in qtr_map:
-        qtr_pairs.append((qtr_map[qp], qtr_map[prior_key]))
-```
-
-Kết quả là tối đa 4 cặp quý gần nhất (2025Q4 vs 2024Q4, 2025Q2 vs 2024Q2, ...). Mỗi cặp hiển thị dưới dạng tab riêng.
-
-### Phân loại dòng trong bảng
-
-```python
-METRICS = [
-    ("Revenue",          "total_revenue",    False, "divider"),   # In đậm, nền xám nhạt
-    ("Cost of Revenue",  "cogs",             False, "normal"),
-    ("Gross Profit",     "gross_profit",     False, "divider"),
-    ("Gross Margin",     None,               True,  "margin"),    # In nghiêng, là tỉ lệ %
-    ("R&D Expense",      "rd_expense",       False, "normal"),
-    ("SG&A Expense",     "sga_expense",      False, "normal"),
-    ("Operating Income", "operating_income", False, "divider"),
-    ("Op. Margin",       None,               True,  "margin"),
-    ("Net Income",       "net_income",       False, "divider"),
-    ("Net Margin",       None,               True,  "margin"),
-]
-```
-
-Các dòng `margin` được tính là `value / total_revenue`, không lưu trực tiếp trong JSON mà tính lại mỗi lần render.
-
-YoY hiển thị màu xanh nếu tăng trưởng dương, màu đỏ nếu âm. Riêng các dòng chi phí (Cost of Revenue, R&D, SG&A) nếu tăng cũng hiển thị màu đỏ vì đó là chi phí tăng không tốt. Hiện tại code render đồng nhất: xanh là tăng, đỏ là giảm cho mọi dòng. Nếu muốn đảo logic màu cho dòng chi phí, cần chỉnh `_yoy_cell()` trong `report_generator.py`.
-
-
-## Hệ thống cache
-
-Cache lưu trong `data/cache/` dưới dạng file JSON với timestamp. Mỗi entry có dạng:
+Cache files live in `data/cache/` as JSON with a Unix timestamp:
 
 ```json
-{
-  "timestamp": 1714320000.0,
-  "data": { ... }
-}
+{ "timestamp": 1714320000.0, "data": { ... } }
 ```
 
-Khi đọc, hệ thống kiểm tra:
+TTL by namespace:
+
+| Namespace | TTL | Rationale |
+|-----------|-----|-----------|
+| `filings` | 30 days | Filing lists change rarely |
+| `checker` | 30 days | Classification is stable |
+| `yfinance` | 7 days | Prices update weekly |
+| `xbrl` | 7 days | Minor XBRL amendments possible |
+| `llm` | 90 days | Expensive to re-run, filing text stable |
+| `segments` | 30 days | Final aggregated output |
+
+File names are derived from the namespace + key with `/`, `\`, `:` replaced by `_`. LLM cache keys include an MD5 of the prompt so that prompt changes automatically invalidate the cache.
+
+---
+
+## Configuration reference
+
+Key constants in `config.py`:
 
 ```python
-age_days = (time.time() - entry["timestamp"]) / 86400
-if age_days > TTL[namespace]:
-    delete(cache_file)
-    return None  # cache miss, cần lấy lại
-```
+# Data coverage
+YEARS_BACK    = 3   # annual filings to fetch (also controls _get_recent_forms in checker)
+QUARTERS_BACK = 12  # quarterly filings to fetch
 
-TTL theo namespace:
+# SEC EDGAR rate limiting
+SEC_RATE_LIMIT     = 8    # requests per second
+SEC_RETRY_MAX      = 5    # max retry attempts
+SEC_RETRY_BASE_SEC = 2.0  # base delay for exponential backoff
 
-| Namespace | TTL | Lý do |
-|-----------|-----|-------|
-| filings | 30 ngày | Danh sách filing ít thay đổi |
-| yfinance | 7 ngày | Dữ liệu Yahoo cập nhật hàng tuần |
-| xbrl | 7 ngày | Dữ liệu XBRL ổn định nhưng có thể có sửa đổi nhỏ |
-| llm | 90 ngày | Trich xuất LLM tốn tiền, ít thay đổi theo thời gian |
-| segments | 30 ngày | Dữ liệu tổng hợp cuối cùng |
+# Filing types
+FILING_TYPES_US   = ["10-K", "10-Q"]
+FILING_TYPES_INTL = ["20-F", "40-F", "6-K"]   # 40-F for Canadian filers
 
-Tên file cache được tạo từ namespace + key, với `/`, `\`, `:` được thay bằng `_`. Ví dụ:
+# Concurrency
+MAX_TICKER_WORKERS = 3    # parallel tickers (keep low to respect SEC rate limit)
+MAX_LLM_WORKERS    = 20   # parallel LLM calls within one ticker
 
-```
-filings/filings_list_AAPL_10-K_10-Q.json
-llm/seg_AAPL_FY2025_standard_openai_30b3603f.json
-yfinance/AAPL.json
-```
+# XBRL thresholds
+XBRL_COVERAGE_MIN      = 0.70   # below this → LLM fallback
+XBRL_CONFIDENCE_HIGH   = 0.75
+XBRL_CONFIDENCE_MEDIUM = 0.30
 
-Hash ở cuối tên file LLM là MD5 của nội dung prompt, đảm bảo khi thay đổi prompt thì cache tự động bị bỏ qua.
+# Segment filtering
+SEGMENT_MIN_PCT        = 0.005  # drop segments < 0.5% of revenue
+SEGMENT_MIN_VALUE      = 50_000_000  # drop segments < $50M
+SEGMENT_RESCALE_MIN    = 0.80   # rescale only when scale ∉ [0.80, 1.25]
+SEGMENT_RESCALE_MAX    = 1.25
+REVENUE_WARN_DIFF      = 0.15   # warn when SEC vs Yahoo revenue differs > 15%
 
-
-## Cấu hình nâng cao
-
-Các hằng số quan trọng trong `config.py`:
-
-```python
-# Phạm vi dữ liệu lấy
-YEARS_BACK    = 3   # 3 năm tài chính
-QUARTERS_BACK = 12  # 12 quý
-
-# Giới hạn tốc độ SEC EDGAR
-SEC_RATE_LIMIT     = 8    # request/giây
-SEC_RETRY_MAX      = 5    # số lần retry tối đa
-SEC_RETRY_BASE_SEC = 2.0  # delay cơ sở (giây), tăng theo exponential backoff
-
-# Xử lý song song
-MAX_TICKER_WORKERS = 3   # ticker song song (giữ thấp để tôn trọng SEC rate limit)
-MAX_LLM_WORKERS    = 20  # LLM call song song trong một ticker
-
-# XBRL
-XBRL_CONFIDENCE_HIGH   = 0.75  # XBRL >= 75% -> chỉ dùng XBRL
-XBRL_CONFIDENCE_MEDIUM = 0.30  # XBRL 30-75% -> dùng XBRL làm context cho LLM
+# Financial sector thresholds
+BANK_NII_MIN_PCT         = 0.05   # NII > 5% → classify as bank
+BANK_PROVISION_MAX_PCT   = 0.15   # provision > 15% → likely gross interest, discard
+INSURANCE_COGS_MIN_PCT   = 0.20   # COGS/claims > 20% → insurance
+INSURANCE_CLAIMS_MAX_PCT = 0.95   # insurance claims cap
 
 # LLM
-FILING_TEXT_MAX_CHARS = 120_000  # ~30k tokens, an toàn với 128k context window
-SMART_SLICE_PRE       = 30_000   # ký tự trước anchor "Segment"
-SMART_SLICE_POST      = 90_000   # ký tự sau anchor
+OPENAI_MODEL_EXTRACTION = "gpt-4o-mini"
+OPENAI_MODEL_FALLBACK   = "gpt-4o"
+FILING_TEXT_MAX_CHARS   = 120_000  # ~30k tokens
+SMART_SLICE_PRE         = 30_000
+SMART_SLICE_POST        = 90_000
 ```
 
-Thêm phân khúc sản phẩm cho công ty khác trong `PRODUCT_SEGMENT_OVERRIDES`:
+---
 
-```python
-PRODUCT_SEGMENT_OVERRIDES["MSFT"] = {
-    "FY2024": [
-        {"segment_name": "Intelligent Cloud",                  "value": 105396000000.0},
-        {"segment_name": "Productivity and Business Processes","value":  78999000000.0},
-        {"segment_name": "More Personal Computing",            "value":  59655000000.0},
-    ]
-}
-```
+## Operating notes
 
-
-## Lưu ý vận hành
-
-- Không tăng `MAX_TICKER_WORKERS` quá 5. SEC EDGAR giới hạn 10 req/s tổng cộng cho tất cả thread, vượt quá sẽ bị HTTP 429 và tạm khóa IP.
-- Lần đầu chạy `--all` mất khoảng 20-40 phút tùy tốc độ mạng và số lần cần gọi LLM. Các lần sau chỉ mất vài phút vì dùng cache.
-- Một số công ty quốc tế (Samsung, Sony, Toyota) chỉ có dữ liệu tài chính tổng hợp từ Yahoo Finance, không có phân khúc chi tiết do không nộp SEC. Độ tin cậy thường dưới 60%.
-- Apple (AAPL) có phân khúc sản phẩm cho FY2023 và FY2024. FY2025 hiển thị phân khúc địa lý vì dữ liệu FY2025 được thu thập sau thời điểm cập nhật cuối cùng của `PRODUCT_SEGMENT_OVERRIDES`.
-- Để xóa cache và xử lý lại từ đầu cho một mã: `python main.py --tickers AAPL --no-cache`.
-- Để chỉ cập nhật lại file HTML (không gọi API): `python main.py --all` (không có `--no-cache`).
+- **Do not raise `MAX_TICKER_WORKERS` above 5.** SEC EDGAR enforces a global 10 req/s cap across all threads. Exceeding it results in HTTP 429 and a temporary IP ban.
+- **First full run** (`--all`) takes 20–40 minutes depending on network speed and how many filings require LLM extraction. Subsequent runs with cache take a few seconds.
+- **INTL_YAHOO tickers** (9 companies: Samsung, SK Hynix, Tencent, Roche, LVMH, Nestlé, Siemens, CBA, Allianz) have no segment breakdown available — they don't file with the SEC and Yahoo Finance doesn't provide granular segment data. Confidence scores are typically below 0.60.
+- **IFRS banks** (RY.TO, TD.TO, SAN.MC, HSBC, 8306.T) report NII-only in the main P&L; full segment revenue (NII + non-interest income) comes from the XBRL segment note. The system handles this via the 1.5× partial-revenue guard.
+- **40-F filers** (RY.TO, TD.TO): annual reports are 40-F, quarterly reports are 6-K. The system automatically identifies and processes both.
+- To force-reprocess a single ticker: `python main.py --tickers RY.TO --no-cache`
+- To rebuild HTML only (no API calls): `python main.py --all` (without `--no-cache`)
