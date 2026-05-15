@@ -1,7 +1,7 @@
 {
   "ticker": "TD.TO",
   "name": "Toronto Dominion Bank",
-  "sector": "financial",
+  "sector": "standard",
   "latest_annual": {
     "ticker": "TD.TO",
     "period": "FY2025",
@@ -9,6 +9,22 @@
     "fiscal_year": 2025,
     "fiscal_quarter": null,
     "segments": [
+      {
+        "segment_name": "Canadian Personal And Commercial Banking",
+        "value": 20686000000.0,
+        "unit": "USD",
+        "period": "2025-10-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "US Retail",
+        "value": 12305000000.0,
+        "unit": "USD",
+        "period": "2025-10-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
       {
         "segment_name": "Wealth Management And Insurance",
         "value": 14562000000.0,
@@ -18,8 +34,8 @@
         "is_annual": true
       },
       {
-        "segment_name": "US Retail",
-        "value": 12368000000.0,
+        "segment_name": "Wholesale Banking",
+        "value": 8392000000.0,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
@@ -32,29 +48,24 @@
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
-      },
-      {
-        "segment_name": "Wholesale Banking",
-        "value": 8410000000.0,
-        "unit": "USD",
-        "period": "2025-10-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
       }
     ],
-    "total_revenue": null,
+    "total_revenue": 67777000000.0,
     "gross_profit": null,
     "operating_income": null,
     "net_income": 20538000000.0,
     "rd_expense": null,
     "sga_expense": null,
     "cogs": null,
-    "interest_expense": null,
+    "interest_expense": 54559000000.0,
     "income_tax": null,
     "currency": "USD",
     "extraction_method": "xbrl",
-    "confidence": 0.45,
-    "notes": []
+    "confidence": 0.89,
+    "notes": [
+      "SECTOR_FALLBACK:standard",
+      "Warning: total_revenue (67777000000) differs from Yahoo (44746987613) by 51.5%"
+    ]
   },
   "annual_periods": [
     {
@@ -65,6 +76,22 @@
       "fiscal_quarter": null,
       "segments": [
         {
+          "segment_name": "Canadian Personal And Commercial Banking",
+          "value": 20686000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "US Retail",
+          "value": 12305000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
           "segment_name": "Wealth Management And Insurance",
           "value": 14562000000.0,
           "unit": "USD",
@@ -73,8 +100,8 @@
           "is_annual": true
         },
         {
-          "segment_name": "US Retail",
-          "value": 12368000000.0,
+          "segment_name": "Wholesale Banking",
+          "value": 8392000000.0,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -87,29 +114,24 @@
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
-        },
-        {
-          "segment_name": "Wholesale Banking",
-          "value": 8410000000.0,
-          "unit": "USD",
-          "period": "2025-10-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
         }
       ],
-      "total_revenue": null,
+      "total_revenue": 67777000000.0,
       "gross_profit": null,
       "operating_income": null,
       "net_income": 20538000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
-      "interest_expense": null,
+      "interest_expense": 54559000000.0,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.45,
-      "notes": []
+      "confidence": 0.89,
+      "notes": [
+        "SECTOR_FALLBACK:standard",
+        "Warning: total_revenue (67777000000) differs from Yahoo (44746987613) by 51.5%"
+      ]
     },
     {
       "ticker": "TD.TO",
@@ -118,6 +140,14 @@
       "fiscal_year": 2024,
       "fiscal_quarter": null,
       "segments": [
+        {
+          "segment_name": "Canadian Personal and Commercial Banking",
+          "value": 19790000000.0,
+          "unit": "USD",
+          "period": "2024-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
         {
           "segment_name": "U.S. Retail",
           "value": 13713000000.0,
@@ -144,26 +174,29 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 5007000000.0,
+          "value": 2899000000.0,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": null,
+      "total_revenue": 57223000000.0,
       "gross_profit": null,
       "operating_income": null,
       "net_income": 8842000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
-      "interest_expense": null,
+      "interest_expense": 62917000000.0,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.45,
-      "notes": []
+      "confidence": 0.89,
+      "notes": [
+        "SECTOR_FALLBACK:standard",
+        "Warning: total_revenue (57223000000) differs from Yahoo (41077765297) by 39.3%"
+      ]
     },
     {
       "ticker": "TD.TO",
@@ -172,6 +205,14 @@
       "fiscal_year": 2023,
       "fiscal_quarter": null,
       "segments": [
+        {
+          "segment_name": "Canadian Personal and Commercial Banking",
+          "value": 18317000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
         {
           "segment_name": "U.S. Retail",
           "value": 14442000000.0,
@@ -198,26 +239,29 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 5408000000.0,
+          "value": 635000000.0,
           "unit": "USD",
           "period": "2023-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": null,
+      "total_revenue": 50492000000.0,
       "gross_profit": null,
       "operating_income": null,
       "net_income": 10782000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
-      "interest_expense": null,
+      "interest_expense": 50730000000.0,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.45,
-      "notes": []
+      "confidence": 0.89,
+      "notes": [
+        "SECTOR_FALLBACK:standard",
+        "Warning: total_revenue (50492000000) differs from Yahoo (37622489675) by 34.2%"
+      ]
     }
   ],
   "quarterly_periods": [
@@ -499,6 +543,18 @@
   "ttm_operating_income": null,
   "ttm_net_income": null,
   "segment_trend": {
+    "Canadian Personal and Commercial Banking": [
+      {
+        "period": "FY2023",
+        "value": 18317000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 19790000000.0,
+        "is_annual": true
+      }
+    ],
     "U.S. Retail": [
       {
         "period": "FY2023",
@@ -536,19 +592,19 @@
       },
       {
         "period": "FY2025",
-        "value": 8410000000.0,
+        "value": 8392000000.0,
         "is_annual": true
       }
     ],
     "Corporate": [
       {
         "period": "FY2023",
-        "value": 5408000000.0,
+        "value": 635000000.0,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 5007000000.0,
+        "value": 2899000000.0,
         "is_annual": true
       },
       {
@@ -557,17 +613,24 @@
         "is_annual": true
       }
     ],
-    "Wealth Management And Insurance": [
+    "Canadian Personal And Commercial Banking": [
       {
         "period": "FY2025",
-        "value": 14562000000.0,
+        "value": 20686000000.0,
         "is_annual": true
       }
     ],
     "US Retail": [
       {
         "period": "FY2025",
-        "value": 12368000000.0,
+        "value": 12305000000.0,
+        "is_annual": true
+      }
+    ],
+    "Wealth Management And Insurance": [
+      {
+        "period": "FY2025",
+        "value": 14562000000.0,
         "is_annual": true
       }
     ]

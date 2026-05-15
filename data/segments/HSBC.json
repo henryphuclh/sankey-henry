@@ -10,24 +10,40 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Constant currency",
-        "value": 16246619258.057976,
+        "segment_name": "Hong Kong",
+        "value": 15878000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "Inter-segment",
-        "value": 1361380741.942023,
+        "segment_name": "UK",
+        "value": 12938000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "CIB",
+        "value": 27637000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "International Wealth and Premier Banking",
+        "value": 14520000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       }
     ],
-    "total_revenue": 17608000000.0,
-    "gross_profit": 17608000000.0,
+    "total_revenue": 68274000000.0,
+    "gross_profit": 68274000000.0,
     "operating_income": null,
     "net_income": 23131000000.0,
     "rd_expense": null,
@@ -38,9 +54,7 @@
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 0.95,
-    "notes": [
-      "Warning: total_revenue (17608000000) differs from Yahoo (66224000000) by 73.4%"
-    ]
+    "notes": []
   },
   "annual_periods": [
     {
@@ -51,24 +65,40 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Constant currency",
-          "value": 16246619258.057976,
+          "segment_name": "Hong Kong",
+          "value": 15878000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Inter-segment",
-          "value": 1361380741.942023,
+          "segment_name": "UK",
+          "value": 12938000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "CIB",
+          "value": 27637000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Wealth and Premier Banking",
+          "value": 14520000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 17608000000.0,
-      "gross_profit": 17608000000.0,
+      "total_revenue": 68274000000.0,
+      "gross_profit": 68274000000.0,
       "operating_income": null,
       "net_income": 23131000000.0,
       "rd_expense": null,
@@ -79,9 +109,7 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 0.95,
-      "notes": [
-        "Warning: total_revenue (17608000000) differs from Yahoo (66224000000) by 73.4%"
-      ]
+      "notes": []
     },
     {
       "ticker": "HSBC",
@@ -91,24 +119,32 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Constant currency",
-          "value": 14462131608.79192,
+          "segment_name": "Wealth and Personal Banking",
+          "value": 28674000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Inter-segment",
-          "value": 1803868391.2080789,
+          "segment_name": "Commercial Banking",
+          "value": 21580000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Global Banking and Markets",
+          "value": 17529000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 16266000000.0,
-      "gross_profit": 16266000000.0,
+      "total_revenue": 65854000000.0,
+      "gross_profit": 65854000000.0,
       "operating_income": null,
       "net_income": 24999000000.0,
       "rd_expense": null,
@@ -119,9 +155,7 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 0.95,
-      "notes": [
-        "Warning: total_revenue (16266000000) differs from Yahoo (67396000000) by 75.9%"
-      ]
+      "notes": []
     },
     {
       "ticker": "HSBC",
@@ -131,24 +165,24 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Operating segments excluding intersegment elimination",
-          "value": 7808000000.0,
+          "segment_name": "Life direct participating and investment DPF contracts",
+          "value": 50735117308.5436,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Constant currency",
-          "value": 7808000000.0,
+          "segment_name": "Life other contracts",
+          "value": 15322882691.456396,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 15616000000.0,
-      "gross_profit": 15616000000.0,
+      "total_revenue": 66058000000.0,
+      "gross_profit": 66058000000.0,
       "operating_income": null,
       "net_income": 24559000000.0,
       "rd_expense": null,
@@ -159,9 +193,7 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 0.95,
-      "notes": [
-        "Warning: total_revenue (15616000000) differs from Yahoo (64528000000) by 75.8%"
-      ]
+      "notes": []
     }
   ],
   "quarterly_periods": [
@@ -443,39 +475,66 @@
   "ttm_operating_income": null,
   "ttm_net_income": null,
   "segment_trend": {
-    "Operating segments excluding intersegment elimination": [
+    "Life direct participating and investment DPF contracts": [
       {
         "period": "FY2023",
-        "value": 7808000000.0,
+        "value": 50735117308.5436,
         "is_annual": true
       }
     ],
-    "Constant currency": [
+    "Life other contracts": [
       {
         "period": "FY2023",
-        "value": 7808000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 14462131608.79192,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 16246619258.057976,
+        "value": 15322882691.456396,
         "is_annual": true
       }
     ],
-    "Inter-segment": [
+    "Wealth and Personal Banking": [
       {
         "period": "FY2024",
-        "value": 1803868391.2080789,
+        "value": 28674000000.0,
         "is_annual": true
-      },
+      }
+    ],
+    "Commercial Banking": [
+      {
+        "period": "FY2024",
+        "value": 21580000000.0,
+        "is_annual": true
+      }
+    ],
+    "Global Banking and Markets": [
+      {
+        "period": "FY2024",
+        "value": 17529000000.0,
+        "is_annual": true
+      }
+    ],
+    "Hong Kong": [
       {
         "period": "FY2025",
-        "value": 1361380741.942023,
+        "value": 15878000000.0,
+        "is_annual": true
+      }
+    ],
+    "UK": [
+      {
+        "period": "FY2025",
+        "value": 12938000000.0,
+        "is_annual": true
+      }
+    ],
+    "CIB": [
+      {
+        "period": "FY2025",
+        "value": 27637000000.0,
+        "is_annual": true
+      }
+    ],
+    "International Wealth and Premier Banking": [
+      {
+        "period": "FY2025",
+        "value": 14520000000.0,
         "is_annual": true
       }
     ]

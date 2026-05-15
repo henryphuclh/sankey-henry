@@ -731,24 +731,69 @@ _SKIP_SEGMENT_PREFIXES = frozenset({
 })
 
 
+# IFRS SegmentConsolidationItemsAxis carries both:
+#   a) "Constant currency - {SegName}" rows: per-segment revenue at constant FX
+#      → extract segment name from the " - {SegName}" suffix
+#   b) "Operating segments excluding intersegment elimination - {SegName}" rows:
+#      pre-elimination subtotals → inflated values, skip entirely
+#   c) "Inter-segment - {SegName}" rows: intercompany adjustment → skip entirely
+# Set (a) member labels that we should parse for a segment suffix:
+_CONSOLIDATION_EXTRACT_LABELS = frozenset({"constant currency"})
+# Set (b/c) member labels whose rows must be skipped entirely (no segment extracted):
+_CONSOLIDATION_SKIP_LABELS = frozenset({
+    "operating segments excluding intersegment elimination",
+    "inter-segment",
+    "currency translation",
+})
+
+
 def _segment_display_name(row) -> str:
     """Build a clean segment name from a row. Prefer member_label, fall back to label."""
-    candidates = [
-        row.get("dimension_member_label"),
-        row.get("label"),
-    ]
+    # Handle IFRS SegmentConsolidationItemsAxis compound labels first.
+    # These rows have a consolidation-dimension member (e.g. "Constant currency") but
+    # the real segment name is embedded in the label as "Constant currency - Hong Kong".
+    member_lbl_raw = str(row.get("dimension_member_label") or "").strip()
+    member_lbl_low = _re.sub(r'\s*\[[Mm]ember\]$', '', member_lbl_raw).strip().lower()
+
+    if member_lbl_low in _CONSOLIDATION_SKIP_LABELS:
+        return ""  # pre-elimination subtotals and inter-segment rows → always skip
+
+    if member_lbl_low in _CONSOLIDATION_EXTRACT_LABELS:
+        # "Constant currency - Hong Kong" → segment name is "Hong Kong"
+        lbl_raw = str(row.get("label") or "").strip()
+        if " - " in lbl_raw:
+            prefix_part, seg_part = lbl_raw.split(" - ", 1)
+            if prefix_part.strip().lower() == member_lbl_low:
+                # Valid compound: use extracted segment name
+                candidates = [seg_part.strip()]
+            else:
+                return ""  # unexpected compound format → skip
+        else:
+            return ""  # rollup total row (e.g. label = "Constant currency") → skip
+    else:
+        candidates = [
+            row.get("dimension_member_label"),
+            row.get("label"),
+        ]
+
     for c in candidates:
         s = str(c or "").strip()
         if not s:
             continue
-        # Strip boilerplate prefixes like "Operating segments - "
+        # Strip XBRL "[member]" / "[Member]" suffix (IFRS 20-F filers: NVS, RHHBY, ASML)
+        s = _re.sub(r'\s*\[[Mm]ember\]$', '', s).strip()
+        # Strip boilerplate segment-reporting prefixes
         for pref in ("Operating segments - ", "Operating Segments - ", "Reportable segments - "):
             if s.startswith(pref):
                 s = s[len(pref):]
-        # Strip XBRL "[member]" / "[Member]" suffix (IFRS 20-F filers: NVS, RHHBY, ASML)
-        s = _re.sub(r'\s*\[[Mm]ember\]$', '', s).strip()
         s_low = s.lower()
         if s_low in _SKIP_SEGMENT_LABELS:
+            continue
+        # Skip inter-segment / consolidation adjustment labels (with or without hyphen)
+        if s_low.startswith("inter-segment") or s_low.startswith("intersegment"):
+            continue
+        # Skip "Operating segments excluding..." (pre-intercompany-elimination subtotals)
+        if s_low.startswith("operating segments excluding"):
             continue
         # Skip compound labels that start with an income-concept phrase (XOM pattern)
         if any(s_low.startswith(pref) for pref in _SKIP_SEGMENT_PREFIXES):
@@ -756,7 +801,6 @@ def _segment_display_name(row) -> str:
         # Skip XBRL reconciling-item / rollup / elimination labels
         if (s_low.startswith("segment reporting")
                 or s_low.startswith("consolidation, elim")
-                or s_low.startswith("intersegment")
                 or s_low.startswith("total ")          # "Total segment profits", "Total revenues"
                 or "reportable segment, aggregation" in s_low
                 or "segment profits" in s_low          # MRK ConsolidationItemsAxis rollup

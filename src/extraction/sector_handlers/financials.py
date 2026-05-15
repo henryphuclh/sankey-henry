@@ -38,6 +38,10 @@ _BANK_CONCEPTS: Dict[str, str] = {
     # Aggregate of NII + NoninterestIncome (used by some regional banks)
     "NetInterestAndNoninterestIncome":                          "net_revenue_direct",
     "TotalBankingRevenues":                                     "net_revenue_direct",
+    # IFRS equivalents (HSBC, SAN.MC): total operating income
+    "RevenueAndOperatingIncome":                                "net_revenue_direct",
+    # Singular "Revenue" used by IFRS 9 filers (TD.TO, RY.TO via ifrs-full:Revenue)
+    "Revenue":                                                  "net_revenue_direct",
 
     # ── Net interest income (direct) ──
     "InterestIncomeExpenseNet":                                 "nii_direct",
@@ -45,6 +49,8 @@ _BANK_CONCEPTS: Dict[str, str] = {
     "InterestAndDividendIncomeOperatingNet":                    "nii_direct",
     "InterestIncomeExpenseNetOperating":                        "nii_direct",
     "InterestAndFeeIncomeOperatingAndNonoperating":             "nii_direct",
+    # IFRS NII concept (HSBC, SAN.MC)
+    "InterestRevenueExpense":                                   "nii_direct",
     # Components used to compute NII when direct tag absent
     "InterestAndDividendIncomeOperating":                       "interest_income_gross",
     "InterestIncomeOperating":                                  "interest_income_gross",

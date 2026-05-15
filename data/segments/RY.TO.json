@@ -11,59 +11,67 @@
     "segments": [
       {
         "segment_name": "Personal Banking",
-        "value": 10026805578.515503,
+        "value": 19854000000.0,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "Commercial Banking [member]",
-        "value": 4324040967.223216,
+        "segment_name": "Commercial Banking",
+        "value": 8562000000.0,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "Wealth Management [member]",
-        "value": 11301493665.559582,
+        "segment_name": "Wealth Management",
+        "value": 22378000000.0,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "Capital Markets [member]",
-        "value": 7285519153.604546,
+        "segment_name": "Capital Markets",
+        "value": 14426000000.0,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "Insurance [member]",
-        "value": 667140635.0971582,
+        "segment_name": "Unallocated amounts",
+        "value": 988000000.0,
+        "unit": "USD",
+        "period": "2025-10-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Insurance",
+        "value": 1321000000.0,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       }
     ],
-    "total_revenue": 33605000000.0,
-    "gross_profit": 33605000000.0,
-    "operating_income": null,
+    "total_revenue": 66605000000.0,
+    "gross_profit": 66605000000.0,
+    "operating_income": 30013000000.0,
     "net_income": 20369000000.0,
     "rd_expense": null,
-    "sga_expense": null,
+    "sga_expense": 36592000000.0,
     "cogs": null,
     "interest_expense": null,
     "income_tax": null,
     "currency": "USD",
     "extraction_method": "xbrl",
-    "confidence": 0.95,
+    "confidence": 1.0,
     "notes": [
-      "Warning: total_revenue (33605000000) differs from Yahoo (48581233659) by 30.8%"
+      "Warning: total_revenue (66605000000) differs from Yahoo (48581233659) by 37.1%"
     ]
   },
   "annual_periods": [
@@ -76,59 +84,67 @@
       "segments": [
         {
           "segment_name": "Personal Banking",
-          "value": 10026805578.515503,
+          "value": 19854000000.0,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Commercial Banking [member]",
-          "value": 4324040967.223216,
+          "segment_name": "Commercial Banking",
+          "value": 8562000000.0,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Wealth Management [member]",
-          "value": 11301493665.559582,
+          "segment_name": "Wealth Management",
+          "value": 22378000000.0,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Capital Markets [member]",
-          "value": 7285519153.604546,
+          "segment_name": "Capital Markets",
+          "value": 14426000000.0,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Insurance [member]",
-          "value": 667140635.0971582,
+          "segment_name": "Unallocated amounts",
+          "value": 988000000.0,
+          "unit": "USD",
+          "period": "2025-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Insurance",
+          "value": 1321000000.0,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 33605000000.0,
-      "gross_profit": 33605000000.0,
-      "operating_income": null,
+      "total_revenue": 66605000000.0,
+      "gross_profit": 66605000000.0,
+      "operating_income": 30013000000.0,
       "net_income": 20369000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 36592000000.0,
       "cogs": null,
       "interest_expense": null,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.95,
+      "confidence": 1.0,
       "notes": [
-        "Warning: total_revenue (33605000000) differs from Yahoo (48581233659) by 30.8%"
+        "Warning: total_revenue (66605000000) differs from Yahoo (48581233659) by 37.1%"
       ]
     },
     {
@@ -139,60 +155,68 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Personal Banking",
-          "value": 8851087451.811203,
+          "segment_name": "Operating segments [member] - Personal Banking",
+          "value": 17342000000.0,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Commercial Banking [member]",
-          "value": 3767658146.0771713,
+          "segment_name": "Operating segments [member] - Commercial Banking",
+          "value": 7382000000.0,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Wealth Management [member]",
-          "value": 10016805577.74459,
+          "segment_name": "Operating segments [member] - Wealth Management",
+          "value": 19626000000.0,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Capital Markets [member]",
-          "value": 6130738234.98767,
+          "segment_name": "Operating segments [member] - Capital Markets",
+          "value": 12012000000.0,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Insurance [member]",
-          "value": 624710589.379363,
+          "segment_name": "Unallocated amounts",
+          "value": 1640000000.0,
+          "unit": "USD",
+          "period": "2024-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Operating segments [member] - Insurance",
+          "value": 1224000000.0,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 29391000000.0,
-      "gross_profit": 29391000000.0,
-      "operating_income": null,
+      "total_revenue": 57344000000.0,
+      "gross_profit": 57344000000.0,
+      "operating_income": 23094000000.0,
       "net_income": 16240000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 34250000000.0,
       "cogs": null,
       "interest_expense": null,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.95,
+      "confidence": 1.0,
       "notes": [
-        "Warning: total_revenue (29391000000) differs from Yahoo (41979554264) by 30.0%"
+        "Warning: total_revenue (57344000000) differs from Yahoo (41979554264) by 36.6%"
       ]
     },
     {
@@ -202,6 +226,14 @@
       "fiscal_year": 2023,
       "fiscal_quarter": null,
       "segments": [
+        {
+          "segment_name": "Operating segments [member] - Personal & Commercial Banking",
+          "value": 22120000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
         {
           "segment_name": "Operating segments [member] - Wealth Management",
           "value": 17544000000.0,
@@ -219,35 +251,38 @@
           "is_annual": true
         },
         {
-          "segment_name": "Operating segments [member] - Insurance",
-          "value": 5675000000.0,
-          "unit": "USD",
-          "period": "2023-10-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Unallocated amounts",
           "value": 1181000000.0,
           "unit": "USD",
           "period": "2023-10-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Operating segments [member] - Insurance",
+          "value": 5675000000.0,
+          "unit": "USD",
+          "period": "2023-10-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
-      "total_revenue": null,
+      "total_revenue": 56129000000.0,
       "gross_profit": null,
       "operating_income": null,
       "net_income": 14866000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
-      "interest_expense": null,
+      "interest_expense": 61862000000.0,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.45,
-      "notes": []
+      "confidence": 0.89,
+      "notes": [
+        "SECTOR_FALLBACK:standard",
+        "Warning: total_revenue (56129000000) differs from Yahoo (37671412639) by 49.0%"
+      ]
     }
   ],
   "quarterly_periods": [
@@ -529,10 +564,22 @@
   "ttm_operating_income": null,
   "ttm_net_income": null,
   "segment_trend": {
+    "Operating segments [member] - Personal & Commercial Banking": [
+      {
+        "period": "FY2023",
+        "value": 22120000000.0,
+        "is_annual": true
+      }
+    ],
     "Operating segments [member] - Wealth Management": [
       {
         "period": "FY2023",
         "value": 17544000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 19626000000.0,
         "is_annual": true
       }
     ],
@@ -541,12 +588,10 @@
         "period": "FY2023",
         "value": 11051000000.0,
         "is_annual": true
-      }
-    ],
-    "Operating segments [member] - Insurance": [
+      },
       {
-        "period": "FY2023",
-        "value": 5675000000.0,
+        "period": "FY2024",
+        "value": 12012000000.0,
         "is_annual": true
       }
     ],
@@ -555,65 +600,76 @@
         "period": "FY2023",
         "value": 1181000000.0,
         "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1640000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 988000000.0,
+        "is_annual": true
+      }
+    ],
+    "Operating segments [member] - Insurance": [
+      {
+        "period": "FY2023",
+        "value": 5675000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1224000000.0,
+        "is_annual": true
+      }
+    ],
+    "Operating segments [member] - Personal Banking": [
+      {
+        "period": "FY2024",
+        "value": 17342000000.0,
+        "is_annual": true
+      }
+    ],
+    "Operating segments [member] - Commercial Banking": [
+      {
+        "period": "FY2024",
+        "value": 7382000000.0,
+        "is_annual": true
       }
     ],
     "Personal Banking": [
       {
-        "period": "FY2024",
-        "value": 8851087451.811203,
-        "is_annual": true
-      },
-      {
         "period": "FY2025",
-        "value": 10026805578.515503,
+        "value": 19854000000.0,
         "is_annual": true
       }
     ],
-    "Commercial Banking [member]": [
-      {
-        "period": "FY2024",
-        "value": 3767658146.0771713,
-        "is_annual": true
-      },
+    "Commercial Banking": [
       {
         "period": "FY2025",
-        "value": 4324040967.223216,
+        "value": 8562000000.0,
         "is_annual": true
       }
     ],
-    "Wealth Management [member]": [
-      {
-        "period": "FY2024",
-        "value": 10016805577.74459,
-        "is_annual": true
-      },
+    "Wealth Management": [
       {
         "period": "FY2025",
-        "value": 11301493665.559582,
+        "value": 22378000000.0,
         "is_annual": true
       }
     ],
-    "Capital Markets [member]": [
-      {
-        "period": "FY2024",
-        "value": 6130738234.98767,
-        "is_annual": true
-      },
+    "Capital Markets": [
       {
         "period": "FY2025",
-        "value": 7285519153.604546,
+        "value": 14426000000.0,
         "is_annual": true
       }
     ],
-    "Insurance [member]": [
-      {
-        "period": "FY2024",
-        "value": 624710589.379363,
-        "is_annual": true
-      },
+    "Insurance": [
       {
         "period": "FY2025",
-        "value": 667140635.0971582,
+        "value": 1321000000.0,
         "is_annual": true
       }
     ]
