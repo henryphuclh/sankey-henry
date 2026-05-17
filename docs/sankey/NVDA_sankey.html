@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NVIDIA Corp (NVDA) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NVIDIA Corp (NVDA) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>NVIDIA Corp <span style="opacity:0.7">(NVDA)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2026" selected>FY2026</option>
+<option value="FY2025">FY2025</option>
+<option value="FY2024">FY2024</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,127,14,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Compute (75.2%)","Networking (14.5%)","Gaming (7.4%)","Other: Professional Visualization, Automotive","Gross Profit (71.1%)","COGS (28.9%)","R&D (8.6%)","SG&A (2.1%)","Operating Income (60.4%)","Interest & Other","Income Tax","Net Income (55.6%)"],"source":[1,2,3,4,0,0,5,5,5,9,9,9],"target":[0,0,0,0,5,6,7,8,9,10,11,12],"value":[162827756110.70087,31466199861.600697,16088117611.543804,5555926416.154636,153463000000.0,62475000000.0,18497000000.0,4579000000.0,130387000000.0,2159380000.0,19384172488.229057,108843447511.77094]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#2ca02c","#d62728","#ff7f0e","#ff7f0e","#2ca02c","#7f7f7f","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$215.9B (100.0%)","Compute\u003cbr\u003e$162.4B (75.2%)","Networking\u003cbr\u003e$31.4B (14.5%)","Gaming\u003cbr\u003e$16.0B (7.4%)","Other\u003cbr\u003e$5.5B (2.6%)","Gross Profit\u003cbr\u003e$153.5B (71.1%)","Cost of Revenue\u003cbr\u003e$62.5B (28.9%)","R&D\u003cbr\u003e$18.5B (8.6%)","SG&A\u003cbr\u003e$4.6B (2.1%)","Operating Income\u003cbr\u003e$130.4B (60.4%)","Interest & Other\u003cbr\u003e$259M (0.1%)","Income Tax\u003cbr\u003e$21.4B (9.9%)","Net Income\u003cbr\u003e$120.1B (55.6%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2026": {"node_labels": ["Total Revenue<br>$215.9B (100.0%)", "Compute<br>$162.4B (75.2%)", "Networking<br>$31.4B (14.5%)", "Gaming<br>$16.0B (7.4%)", "Other<br>$5.5B (2.6%)", "Gross Profit<br>$153.5B (71.1%)", "Cost of Revenue<br>$62.5B (28.9%)", "R&D<br>$18.5B (8.6%)", "SG&A<br>$4.6B (2.1%)", "Operating Income<br>$130.4B (60.4%)", "Interest & Other<br>$259M (0.1%)", "Income Tax<br>$21.4B (9.9%)", "Net Income<br>$120.1B (55.6%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.125, 0.375, 0.625, 0.875, 0.35, 0.75, 0.2, 0.4, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 0, 0, 5, 5, 5, 9, 9, 9], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9, 10, 11, 12], "link_values": [162827756110.70087, 31466199861.600697, 16088117611.543804, 5555926416.154636, 153463000000.0, 62475000000.0, 18497000000.0, 4579000000.0, 130387000000.0, 2159380000.0, 19384172488.229057, 108843447511.77094], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Compute (75.2%)", "Networking (14.5%)", "Gaming (7.4%)", "Other: Professional Visualization, Automotive", "Gross Profit (71.1%)", "COGS (28.9%)", "R&D (8.6%)", "SG&A (2.1%)", "Operating Income (60.4%)", "Interest & Other", "Income Tax", "Net Income (55.6%)"], "title": "NVIDIA Corp (NVDA) — Financial Flow FY2026", "currency": "USD", "has_partial": false, "coverage_note": "FY2026"}, "FY2025": {"node_labels": ["Total Revenue<br>$130.5B (100.0%)", "Compute<br>$102.2B (78.3%)", "Networking<br>$13.0B (10.0%)", "Gaming<br>$11.3B (8.7%)", "Other<br>$3.6B (2.7%)", "Gross Profit<br>$97.9B (75.0%)", "Cost of Revenue<br>$32.6B (25.0%)", "R&D<br>$12.9B (9.9%)", "SG&A<br>$3.5B (2.7%)", "Operating Income<br>$81.5B (62.4%)", "Interest & Other<br>$247M (0.2%)", "Income Tax<br>$11.1B (8.5%)", "Net Income<br>$72.9B (55.8%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.125, 0.375, 0.625, 0.875, 0.35, 0.75, 0.2, 0.4, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 0, 0, 5, 5, 5, 9, 9, 9], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9, 10, 11, 12], "link_values": [102501548037.01541, 13028837811.664158, 11383934500.56876, 3582679650.7516837, 97858000000.0, 32639000000.0, 12914000000.0, 3491000000.0, 81453000000.0, 1304970000.0, 10631589536.333992, 69516440463.666], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Compute (78.3%)", "Networking (10.0%)", "Gaming (8.7%)", "Other: Professional Visualization, Automotive", "Gross Profit (75.0%)", "COGS (25.0%)", "R&D (9.9%)", "SG&A (2.7%)", "Operating Income (62.4%)", "Interest & Other", "Income Tax", "Net Income (55.8%)"], "title": "NVIDIA Corp (NVDA) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$60.9B (100.0%)", "Compute & Networking<br>$47.4B (77.8%)", "Graphics<br>$13.5B (22.2%)", "Gross Profit<br>$44.3B (72.7%)", "Cost of Revenue<br>$16.6B (27.3%)", "R&D<br>$8.7B (14.2%)", "SG&A<br>$2.7B (4.4%)", "Operating Income<br>$33.0B (54.1%)", "Interest & Other<br>$257M (0.4%)", "Income Tax<br>$4.1B (6.7%)", "Net Income<br>$29.8B (48.8%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.2, 0.4, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 0, 0, 3, 3, 3, 7, 7, 7], "link_targets": [0, 0, 3, 4, 5, 6, 7, 8, 9, 10], "link_values": [47405000000.0, 13517000000.0, 44301000000.0, 16621000000.0, 8675000000.0, 2654000000.0, 32972000000.0, 609220000.0, 3883380484.948844, 28479399515.051155], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Compute & Networking (77.8%)", "Graphics (22.2%)", "Gross Profit (72.7%)", "COGS (27.3%)", "R&D (14.2%)", "SG&A (4.4%)", "Operating Income (54.1%)", "Interest & Other", "Income Tax", "Net Income (48.8%)"], "title": "NVIDIA Corp (NVDA) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>NVIDIA Corp (NVDA) Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>NVIDIA Corp operates primarily through five business segments: Compute, Networking, Gaming, Professional Visualization, and Automotive. For FY2026, the total revenue reached <strong>$215.94 billion</strong>, with the Compute segment being the largest contributor at <strong>$162.36 billion</strong>, accounting for approximately <strong>75%</strong> of total revenue. The Networking segment followed with <strong>$31.38 billion</strong> (about <strong>14.5%</strong>), while Gaming generated <strong>$16.04 billion</strong> (around <strong>7.4%</strong>). The Professional Visualization and Automotive segments contributed <strong>$3.19 billion</strong> and <strong>$2.35 billion</strong>, respectively.</p>
+<p>Over the past three years, NVIDIA has experienced significant growth, particularly in the Compute segment, which saw a revenue increase from <strong>$102.20 billion</strong> in FY2025 to <strong>$162.36 billion</strong> in FY2026, reflecting a <strong>59%</strong> year-over-year growth. The Networking segment also demonstrated robust growth, increasing from <strong>$12.99 billion</strong> in FY2025 to <strong>$31.38 billion</strong> in FY2026, a remarkable <strong>142%</strong> increase. Conversely, the Gaming segment's revenue grew from <strong>$11.35 billion</strong> in FY2025 to <strong>$16.04 billion</strong> in FY2026, indicating a more modest growth rate of <strong>41%</strong>.</p>
+<p>Key products driving this growth include NVIDIA's GPUs, which are essential for AI, gaming, and data center applications. The company's focus on high-performance computing and AI technologies has positioned it favorably in rapidly expanding markets, particularly in data centers and cloud computing.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>NVIDIA's profitability is reflected in its strong gross and operating margins. For FY2026, the gross margin was <strong>71.1%</strong>, while the operating margin stood at <strong>60.4%</strong>. The Compute segment, being the largest, also boasts a high gross margin, contributing significantly to overall profitability. The Networking segment, while smaller, has shown a gross margin that supports its rapid revenue growth.</p>
+<p>Major cost drivers for NVIDIA include Research and Development (R&amp;D) and Selling, General, and Administrative (SG&amp;A) expenses. In FY2026, R&amp;D expenses were <strong>$18.50 billion</strong>, representing about <strong>8.6%</strong> of total revenue, while SG&amp;A expenses were <strong>$4.58 billion</strong> (approximately <strong>2.1%</strong> of total revenue). The company has maintained a disciplined approach to managing these costs, allowing for substantial operating leverage as revenue has increased.</p>
+<p>The operating income for FY2026 was <strong>$130.39 billion</strong>, reflecting a significant increase from <strong>$81.45 billion</strong> in FY2025. This trend indicates that NVIDIA has effectively leveraged its revenue growth to enhance profitability, with operating margins remaining robust despite increased investment in R&amp;D.</p>
+<h2>Business Model Summary</h2>
+<p>NVIDIA converts revenue into earnings through a combination of high-margin products and efficient cost management. The company's ability to maintain gross margins above <strong>70%</strong> across its segments demonstrates its competitive advantage in the technology sector, particularly in high-performance computing and AI applications.</p>
+<p>The segment structure reveals a strong competitive positioning, with the Compute segment leading in both revenue and profitability. The rapid growth in Networking and the steady performance of Gaming, Professional Visualization, and Automotive segments indicate a diversified revenue base that mitigates risks associated with reliance on a single market.</p>
+<p>Notably, the shift in segment mix over the past three years highlights NVIDIA's strategic focus on high-growth areas such as AI and data centers, which are expected to continue driving future revenue. The increase in the Networking segment's contribution to total revenue from <strong>10%</strong> in FY2025 to <strong>14.5%</strong> in FY2026 illustrates this strategic pivot. Overall, NVIDIA's business model is characterized by its ability to innovate and adapt to market demands, ensuring sustained growth and profitability.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2026</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$215.94B</td><td style="text-align:right">$130.50B</td><td style="text-align:right" class="yoy-pos">+65.5%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$62.48B</td><td style="text-align:right">$32.64B</td><td style="text-align:right" class="yoy-pos">+91.4%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$153.46B</td><td style="text-align:right">$97.86B</td><td style="text-align:right" class="yoy-pos">+56.8%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">71.1%</td><td style="text-align:right">75.0%</td><td style="text-align:right" class="yoy-neg">-5.2%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$18.50B</td><td style="text-align:right">$12.91B</td><td style="text-align:right" class="yoy-pos">+43.2%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$4.58B</td><td style="text-align:right">$3.49B</td><td style="text-align:right" class="yoy-pos">+31.2%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$130.39B</td><td style="text-align:right">$81.45B</td><td style="text-align:right" class="yoy-pos">+60.1%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">60.4%</td><td style="text-align:right">62.4%</td><td style="text-align:right" class="yoy-neg">-3.3%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$120.07B</td><td style="text-align:right">$72.88B</td><td style="text-align:right" class="yoy-pos">+64.7%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">55.6%</td><td style="text-align:right">55.8%</td><td style="text-align:right" class="yoy-neg">-0.4%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q4</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q3</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2025 Q2</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$68.13B</td><td style="text-align:right">$39.33B</td><td style="text-align:right" class="yoy-pos">+73.2%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$17.03B</td><td style="text-align:right">$10.61B</td><td style="text-align:right" class="yoy-pos">+60.6%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$51.09B</td><td style="text-align:right">$28.72B</td><td style="text-align:right" class="yoy-pos">+77.9%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">75.0%</td><td style="text-align:right">73.0%</td><td style="text-align:right" class="yoy-pos">+2.7%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$5.51B</td><td style="text-align:right">$3.71B</td><td style="text-align:right" class="yoy-pos">+48.4%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$1.28B</td><td style="text-align:right">$975.0M</td><td style="text-align:right" class="yoy-pos">+31.5%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$44.30B</td><td style="text-align:right">$24.03B</td><td style="text-align:right" class="yoy-pos">+84.3%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">65.0%</td><td style="text-align:right">61.1%</td><td style="text-align:right" class="yoy-pos">+6.4%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$42.96B</td><td style="text-align:right">$22.09B</td><td style="text-align:right" class="yoy-pos">+94.5%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">63.1%</td><td style="text-align:right">56.2%</td><td style="text-align:right" class="yoy-pos">+12.3%</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q4</th><th style='text-align:right'>2024 Q4</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$57.01B</td><td style="text-align:right">$35.08B</td><td style="text-align:right" class="yoy-pos">+62.5%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$15.16B</td><td style="text-align:right">$8.93B</td><td style="text-align:right" class="yoy-pos">+69.8%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$41.85B</td><td style="text-align:right">$26.16B</td><td style="text-align:right" class="yoy-pos">+60.0%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">73.4%</td><td style="text-align:right">74.6%</td><td style="text-align:right" class="yoy-neg">-1.5%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$4.71B</td><td style="text-align:right">$3.39B</td><td style="text-align:right" class="yoy-pos">+38.8%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$1.13B</td><td style="text-align:right">$897.0M</td><td style="text-align:right" class="yoy-pos">+26.4%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$36.01B</td><td style="text-align:right">$21.87B</td><td style="text-align:right" class="yoy-pos">+64.7%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">63.2%</td><td style="text-align:right">62.3%</td><td style="text-align:right" class="yoy-pos">+1.3%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$31.91B</td><td style="text-align:right">$19.31B</td><td style="text-align:right" class="yoy-pos">+65.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">56.0%</td><td style="text-align:right">55.0%</td><td style="text-align:right" class="yoy-pos">+1.7%</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$46.74B</td><td style="text-align:right">$30.04B</td><td style="text-align:right" class="yoy-pos">+55.6%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$12.89B</td><td style="text-align:right">$7.47B</td><td style="text-align:right" class="yoy-pos">+72.6%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$33.85B</td><td style="text-align:right">$22.57B</td><td style="text-align:right" class="yoy-pos">+50.0%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">72.4%</td><td style="text-align:right">75.1%</td><td style="text-align:right" class="yoy-neg">-3.6%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$4.29B</td><td style="text-align:right">$3.09B</td><td style="text-align:right" class="yoy-pos">+38.9%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$1.12B</td><td style="text-align:right">$842.0M</td><td style="text-align:right" class="yoy-pos">+33.3%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$28.44B</td><td style="text-align:right">$18.64B</td><td style="text-align:right" class="yoy-pos">+52.6%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">60.8%</td><td style="text-align:right">62.1%</td><td style="text-align:right" class="yoy-neg">-2.0%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$26.42B</td><td style="text-align:right">$16.60B</td><td style="text-align:right" class="yoy-pos">+59.2%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">56.5%</td><td style="text-align:right">55.3%</td><td style="text-align:right" class="yoy-pos">+2.3%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$44.06B</td><td style="text-align:right">$26.04B</td><td style="text-align:right" class="yoy-pos">+69.2%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$17.39B</td><td style="text-align:right">$5.64B</td><td style="text-align:right" class="yoy-pos">+208.5%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$26.67B</td><td style="text-align:right">$20.41B</td><td style="text-align:right" class="yoy-pos">+30.7%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">60.5%</td><td style="text-align:right">78.4%</td><td style="text-align:right" class="yoy-neg">-22.8%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$3.99B</td><td style="text-align:right">$2.72B</td><td style="text-align:right" class="yoy-pos">+46.7%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$1.04B</td><td style="text-align:right">$777.0M</td><td style="text-align:right" class="yoy-pos">+34.0%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$21.64B</td><td style="text-align:right">$16.91B</td><td style="text-align:right" class="yoy-pos">+28.0%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">49.1%</td><td style="text-align:right">64.9%</td><td style="text-align:right" class="yoy-neg">-24.4%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$18.77B</td><td style="text-align:right">$14.88B</td><td style="text-align:right" class="yoy-pos">+26.2%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">42.6%</td><td style="text-align:right">57.1%</td><td style="text-align:right" class="yoy-neg">-25.4%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 11/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>SEC 10-Q quarterly filings cover only the first three fiscal quarters; the fourth fiscal quarter (fiscal year-end) is not filed as a standalone quarterly report and must be sourced from Yahoo Finance. Yahoo Finance's quarterly income history is limited to approximately the most recent five quarters, so fiscal year-end quarter data for periods beyond that window is unavailable.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for NVIDIA Corp is missing for the periods 2025Q1 and 2026Q1 due to the company's disclosure practice of not providing segment data in its quarterly reports extracted from Yahoo, as indicated by the zero segments reported for these specific quarters.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2026</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$215.94B</td><td>$120.07B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$130.50B</td><td>$72.88B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$60.92B</td><td>$29.76B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$68.13B</td><td>$42.96B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$57.01B</td><td>$31.91B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$46.74B</td><td>$26.42B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$44.06B</td><td>$18.77B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$39.33B</td><td>$22.09B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2024Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$35.08B</td><td>$19.31B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$30.04B</td><td>$16.60B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$26.04B</td><td>$14.88B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$18.12B</td><td>$9.24B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$13.51B</td><td>$6.19B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$7.19B</td><td>$2.04B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2026 — $215.94B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Compute</td><td style='text-align:right'>$162.36B</td><td style='text-align:right'>75.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:75.2%'></div>  </div></td></tr><tr><td>Networking</td><td style='text-align:right'>$31.38B</td><td style='text-align:right'>14.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:14.5%'></div>  </div></td></tr><tr><td>Gaming</td><td style='text-align:right'>$16.04B</td><td style='text-align:right'>7.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.4%'></div>  </div></td></tr><tr><td>Professional Visualization</td><td style='text-align:right'>$3.19B</td><td style='text-align:right'>1.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.5%'></div>  </div></td></tr><tr><td>Automotive</td><td style='text-align:right'>$2.35B</td><td style='text-align:right'>1.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.1%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $130.50B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Compute</td><td style='text-align:right'>$102.20B</td><td style='text-align:right'>78.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:78.3%'></div>  </div></td></tr><tr><td>Networking</td><td style='text-align:right'>$12.99B</td><td style='text-align:right'>10.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:10.0%'></div>  </div></td></tr><tr><td>Gaming</td><td style='text-align:right'>$11.35B</td><td style='text-align:right'>8.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:8.7%'></div>  </div></td></tr><tr><td>Professional Visualization</td><td style='text-align:right'>$1.88B</td><td style='text-align:right'>1.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.4%'></div>  </div></td></tr><tr><td>Automotive</td><td style='text-align:right'>$1.69B</td><td style='text-align:right'>1.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.3%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $60.92B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Compute & Networking</td><td style='text-align:right'>$47.41B</td><td style='text-align:right'>77.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:77.8%'></div>  </div></td></tr><tr><td>Graphics</td><td style='text-align:right'>$13.52B</td><td style='text-align:right'>22.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:22.2%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2026</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Compute</td><td style='text-align:right'>$162.36B</td><td style='text-align:right'>$102.20B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+58.9%</td></tr><tr><td>Compute & Networking</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$47.41B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Networking</td><td style='text-align:right'>$31.38B</td><td style='text-align:right'>$12.99B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+141.5%</td></tr><tr><td>Gaming</td><td style='text-align:right'>$16.04B</td><td style='text-align:right'>$11.35B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+41.3%</td></tr><tr><td>Graphics</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$13.52B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Professional Visualization</td><td style='text-align:right'>$3.19B</td><td style='text-align:right'>$1.88B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+69.9%</td></tr><tr><td>Automotive</td><td style='text-align:right'>$2.35B</td><td style='text-align:right'>$1.69B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+38.7%</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 11 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 11 quarterly reports
+</div>
+</body>
+</html>

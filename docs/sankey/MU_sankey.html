@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Micron Technology (MU) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Micron Technology (MU) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Micron Technology <span style="opacity:0.7">(MU)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,127,14,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["CMBU (36.2%)","MCBU (31.7%)","CDBU (19.3%)","AEBU (12.7%)","Gross Profit (39.8%)","COGS (60.2%)","R&D (10.2%)","SG&A (3.2%)","Operating Income (26.1%)","Interest & Other","Income Tax","Net Income (22.8%)"],"source":[1,2,3,4,0,0,5,5,5,9,9,9],"target":[0,0,0,0,5,6,7,8,9,10,11,12],"value":[13528705258.932156,11863125973.504618,7231515107.721129,4754653659.842098,14873000000.0,22505000000.0,3798000000.0,1205000000.0,9770000000.0,459594674.556213,1082986193.2938857,8227419132.149901]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#2ca02c","#d62728","#ff7f0e","#ff7f0e","#2ca02c","#7f7f7f","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$37.4B (100.0%)","CMBU\u003cbr\u003e$13.5B (36.2%)","MCBU\u003cbr\u003e$11.9B (31.7%)","CDBU\u003cbr\u003e$7.2B (19.3%)","AEBU\u003cbr\u003e$4.8B (12.7%)","Gross Profit\u003cbr\u003e$14.9B (39.8%)","Cost of Revenue\u003cbr\u003e$22.5B (60.2%)","R&D\u003cbr\u003e$3.8B (10.2%)","SG&A\u003cbr\u003e$1.2B (3.2%)","Operating Income\u003cbr\u003e$9.8B (26.1%)","Interest & Other\u003cbr\u003e$477M (1.3%)","Income Tax\u003cbr\u003e$1.1B (3.0%)","Net Income\u003cbr\u003e$8.5B (22.8%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$37.4B (100.0%)", "CMBU<br>$13.5B (36.2%)", "MCBU<br>$11.9B (31.7%)", "CDBU<br>$7.2B (19.3%)", "AEBU<br>$4.8B (12.7%)", "Gross Profit<br>$14.9B (39.8%)", "Cost of Revenue<br>$22.5B (60.2%)", "R&D<br>$3.8B (10.2%)", "SG&A<br>$1.2B (3.2%)", "Operating Income<br>$9.8B (26.1%)", "Interest & Other<br>$477M (1.3%)", "Income Tax<br>$1.1B (3.0%)", "Net Income<br>$8.5B (22.8%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.125, 0.375, 0.625, 0.875, 0.35, 0.75, 0.2, 0.4, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 0, 0, 5, 5, 5, 9, 9, 9], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9, 10, 11, 12], "link_values": [13528705258.932156, 11863125973.504618, 7231515107.721129, 4754653659.842098, 14873000000.0, 22505000000.0, 3798000000.0, 1205000000.0, 9770000000.0, 459594674.556213, 1082986193.2938857, 8227419132.149901], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["CMBU (36.2%)", "MCBU (31.7%)", "CDBU (19.3%)", "AEBU (12.7%)", "Gross Profit (39.8%)", "COGS (60.2%)", "R&D (10.2%)", "SG&A (3.2%)", "Operating Income (26.1%)", "Interest & Other", "Income Tax", "Net Income (22.8%)"], "title": "Micron Technology (MU) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$25.1B (100.0%)", "CNBU<br>$9.5B (37.9%)", "CMBU<br>$6.4B (25.3%)", "AEBU<br>$4.6B (18.4%)", "SBU<br>$4.6B (18.3%)", "Gross Profit<br>$5.6B (22.4%)", "Cost of Revenue<br>$19.5B (77.6%)", "R&D<br>$3.4B (13.7%)", "SG&A<br>$1.1B (4.5%)", "Operating Income<br>$1.3B (5.2%)", "Interest & Other<br>$562M (2.2%)", "Income Tax<br>$451M (1.8%)", "Net Income<br>$778M (3.1%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.125, 0.375, 0.625, 0.875, 0.35, 0.75, 0.2, 0.4, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 0, 0, 5, 5, 5, 9, 9, 9], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9, 10, 11, 12], "link_values": [9527417660.431541, 6363629960.515296, 4620992860.846329, 4598959518.206837, 5613000000.0, 19498000000.0, 3430000000.0, 1129000000.0, 1304000000.0, 409183696.25907314, 328366275.82356226, 566450027.9173646], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["CNBU (37.9%)", "CMBU (25.3%)", "AEBU (18.4%)", "SBU (18.3%)", "Gross Profit (22.4%)", "COGS (77.6%)", "R&D (13.7%)", "SG&A (4.5%)", "Operating Income (5.2%)", "Interest & Other", "Income Tax", "Net Income (3.1%)"], "title": "Micron Technology (MU) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$15.5B (100.0%)", "CNBU<br>$5.7B (36.7%)", "AEBU<br>$3.6B (23.4%)", "CMBU<br>$3.6B (23.4%)", "SBU<br>$2.6B (16.4%)", "Cost of Revenue<br>$17.0B (109.1%)", "R&D<br>$3.1B (20.0%)", "SG&A<br>$920M (5.9%)", "Other OpEx<br>$295M (1.9%)", "Operating Loss<br>-$5.7B (-37.0%)", "Interest & Other<br>$388M (2.5%)", "Income Tax<br>$177M (1.1%)", "Net Loss<br>-$5.8B (-37.5%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#d62728", "#ff7f0e", "#ff7f0e", "#ffbb78", "#d62728", "#7f7f7f", "#7f7f7f", "#d62728"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.4, 0.6, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.125, 0.375, 0.625, 0.875, 0.75, 0.2, 0.4, 0.6, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 0, 0, 0, 0, 0, 9, 9, 9], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9, 10, 11, 12], "link_values": [5713676754.668384, 3639341918.8667097, 3632337411.461687, 2554643915.0032196, 16956000000.0, 3114000000.0, 920000000.0, 295000000.0, 5745000000.0, 388000000.0, 177000000.0, 5833000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(214,39,40,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(214,39,40,0.4)"], "link_labels": ["CNBU (36.7%)", "AEBU (23.4%)", "CMBU (23.4%)", "SBU (16.4%)", "COGS (109.1%)", "R&D (20.0%)", "SG&A (5.9%)", "Other Operating Expenses", "Operating Income (-37.0%)", "Interest & Other", "Income Tax", "Net Loss (-37.5%)"], "title": "Micron Technology (MU) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Micron Technology (MU) Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Micron Technology operates primarily through four business segments: <strong>CMBU (Compute and Mobile Business Unit)</strong>, <strong>CDBU (Cloud Data Center Business Unit)</strong>, <strong>MCBU (Mobile and Consumer Business Unit)</strong>, and <strong>AEBU (Automotive and Embedded Business Unit)</strong>. </p>
+<p>In FY2025, Micron reported total revenue of <strong>$37.38 billion</strong>, with the CMBU contributing <strong>$13.52 billion</strong> (36.2%), MCBU at <strong>$11.86 billion</strong> (31.7%), CDBU at <strong>$7.23 billion</strong> (19.3%), and AEBU at <strong>$4.75 billion</strong> (12.7%). This distribution indicates a strong reliance on the CMBU and MCBU segments, which together account for over two-thirds of total revenue.</p>
+<p>Over the past three years, Micron's revenue mix has evolved significantly. In FY2023, total revenue was <strong>$15.54 billion</strong>, with the CMBU and MCBU generating <strong>$3.63 billion</strong> and <strong>$2.55 billion</strong>, respectively. By FY2024, total revenue increased to <strong>$25.11 billion</strong>, with notable growth in the CNBU segment, which generated <strong>$9.51 billion</strong>. This upward trend continued into FY2025, where total revenue reached <strong>$37.38 billion</strong>, reflecting a recovery from the previous fiscal year’s downturn.</p>
+<p>Key products driving growth include DRAM and NAND memory solutions, which are essential for data centers, mobile devices, and automotive applications. The increasing demand for cloud computing and AI technologies has further bolstered revenue, particularly in the CDBU segment.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Micron's profitability has shown a marked recovery from the previous fiscal years. In FY2025, the company achieved a gross profit of <strong>$14.87 billion</strong>, resulting in a gross margin of <strong>39.8%</strong>. This is a significant improvement compared to FY2024, where the gross profit was <strong>$5.61 billion</strong> with a gross margin of <strong>22.4%</strong>, and a stark contrast to FY2023, which reported a gross loss of <strong>$1.42 billion</strong> and a gross margin of <strong>-9.1%</strong>.</p>
+<p>Operating income also reflects this recovery, with FY2025 reporting <strong>$9.77 billion</strong> (operating margin of <strong>26.1%</strong>), compared to <strong>$1.30 billion</strong> (5.2%) in FY2024 and a loss of <strong>$5.75 billion</strong> (-37.0%) in FY2023. The major cost drivers include R&amp;D expenses, which totaled <strong>$3.80 billion</strong> in FY2025, and SG&amp;A expenses at <strong>$1.21 billion</strong>. The company has managed to leverage its operating structure effectively, leading to improved profitability as revenue has increased.</p>
+<h2>Business Model Summary</h2>
+<p>Micron Technology's business model is centered around converting revenue from its diverse product offerings into earnings through efficient cost management and strategic investments in R&amp;D. The company has demonstrated a strong ability to recover from previous losses, with a clear trajectory of increasing revenue and profitability.</p>
+<p>The competitive positioning of Micron is evident from its segment structure, which allows it to cater to various markets, including data centers, mobile devices, and automotive applications. The significant contributions from the CMBU and MCBU segments highlight its strength in the compute and mobile markets, while the growth in the CDBU segment indicates a strategic focus on cloud and data center solutions.</p>
+<p>Notable shifts in segment mix and margin profile are apparent, particularly with the CDBU and MCBU segments gaining prominence in revenue contribution. The improvement in gross and operating margins over the past three years underscores Micron's operational efficiency and its ability to capitalize on market demand, positioning the company favorably for future growth.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$37.38B</td><td style="text-align:right">$25.11B</td><td style="text-align:right" class="yoy-pos">+48.9%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$22.50B</td><td style="text-align:right">$19.50B</td><td style="text-align:right" class="yoy-pos">+15.4%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$14.87B</td><td style="text-align:right">$5.61B</td><td style="text-align:right" class="yoy-pos">+165.0%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">39.8%</td><td style="text-align:right">22.4%</td><td style="text-align:right" class="yoy-pos">+78.0%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$3.80B</td><td style="text-align:right">$3.43B</td><td style="text-align:right" class="yoy-pos">+10.7%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$1.21B</td><td style="text-align:right">$1.13B</td><td style="text-align:right" class="yoy-pos">+6.7%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$9.77B</td><td style="text-align:right">$1.30B</td><td style="text-align:right" class="yoy-pos">+649.2%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">26.1%</td><td style="text-align:right">5.2%</td><td style="text-align:right" class="yoy-pos">+403.3%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$8.54B</td><td style="text-align:right">$778.0M</td><td style="text-align:right" class="yoy-pos">+997.6%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">22.8%</td><td style="text-align:right">3.1%</td><td style="text-align:right" class="yoy-pos">+637.4%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q4</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q2</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2025 Q1</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$23.86B</td><td style="text-align:right">$8.05B</td><td style="text-align:right" class="yoy-pos">+196.3%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$6.11B</td><td style="text-align:right">$5.09B</td><td style="text-align:right" class="yoy-pos">+19.9%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$17.75B</td><td style="text-align:right">$2.96B</td><td style="text-align:right" class="yoy-pos">+499.2%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">74.4%</td><td style="text-align:right">36.8%</td><td style="text-align:right" class="yoy-pos">+102.2%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$1.25B</td><td style="text-align:right">$898.0M</td><td style="text-align:right" class="yoy-pos">+39.2%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$344.0M</td><td style="text-align:right">$285.0M</td><td style="text-align:right" class="yoy-pos">+20.7%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$16.14B</td><td style="text-align:right">$1.77B</td><td style="text-align:right" class="yoy-pos">+810.0%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">67.6%</td><td style="text-align:right">22.0%</td><td style="text-align:right" class="yoy-pos">+207.1%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$13.79B</td><td style="text-align:right">$1.58B</td><td style="text-align:right" class="yoy-pos">+770.8%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">57.8%</td><td style="text-align:right">19.7%</td><td style="text-align:right" class="yoy-pos">+193.9%</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q4</th><th style='text-align:right'>2024 Q4</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$13.64B</td><td style="text-align:right">$8.71B</td><td style="text-align:right" class="yoy-pos">+56.7%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$6.00B</td><td style="text-align:right">$5.36B</td><td style="text-align:right" class="yoy-pos">+11.9%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$7.65B</td><td style="text-align:right">$3.35B</td><td style="text-align:right" class="yoy-pos">+128.4%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">56.0%</td><td style="text-align:right">38.4%</td><td style="text-align:right" class="yoy-pos">+45.8%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$1.17B</td><td style="text-align:right">$888.0M</td><td style="text-align:right" class="yoy-pos">+31.9%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$337.0M</td><td style="text-align:right">$288.0M</td><td style="text-align:right" class="yoy-pos">+17.0%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$6.14B</td><td style="text-align:right">$2.17B</td><td style="text-align:right" class="yoy-pos">+182.2%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">45.0%</td><td style="text-align:right">25.0%</td><td style="text-align:right" class="yoy-pos">+80.2%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$5.24B</td><td style="text-align:right">$1.87B</td><td style="text-align:right" class="yoy-pos">+180.2%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">38.4%</td><td style="text-align:right">21.5%</td><td style="text-align:right" class="yoy-pos">+78.9%</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$9.30B</td><td style="text-align:right">$6.81B</td><td style="text-align:right" class="yoy-pos">+36.6%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$5.79B</td><td style="text-align:right">$4.98B</td><td style="text-align:right" class="yoy-pos">+16.3%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$3.51B</td><td style="text-align:right">$1.83B</td><td style="text-align:right" class="yoy-pos">+91.5%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">37.7%</td><td style="text-align:right">26.9%</td><td style="text-align:right" class="yoy-pos">+40.2%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$965.0M</td><td style="text-align:right">$850.0M</td><td style="text-align:right" class="yoy-pos">+13.5%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$318.0M</td><td style="text-align:right">$291.0M</td><td style="text-align:right" class="yoy-pos">+9.3%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$2.17B</td><td style="text-align:right">$719.0M</td><td style="text-align:right" class="yoy-pos">+201.7%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">23.3%</td><td style="text-align:right">10.6%</td><td style="text-align:right" class="yoy-pos">+120.9%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$1.89B</td><td style="text-align:right">$332.0M</td><td style="text-align:right" class="yoy-pos">+467.8%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">20.3%</td><td style="text-align:right">4.9%</td><td style="text-align:right" class="yoy-pos">+315.8%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$8.05B</td><td style="text-align:right">$5.82B</td><td style="text-align:right" class="yoy-pos">+38.3%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$5.09B</td><td style="text-align:right">$4.75B</td><td style="text-align:right" class="yoy-pos">+7.3%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$2.96B</td><td style="text-align:right">$1.08B</td><td style="text-align:right" class="yoy-pos">+174.6%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">36.8%</td><td style="text-align:right">18.5%</td><td style="text-align:right" class="yoy-pos">+98.6%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$898.0M</td><td style="text-align:right">$832.0M</td><td style="text-align:right" class="yoy-pos">+7.9%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$285.0M</td><td style="text-align:right">$280.0M</td><td style="text-align:right" class="yoy-pos">+1.8%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$1.77B</td><td style="text-align:right">$191.0M</td><td style="text-align:right" class="yoy-pos">+828.3%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">22.0%</td><td style="text-align:right">3.3%</td><td style="text-align:right" class="yoy-pos">+571.3%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$1.58B</td><td style="text-align:right">$793.0M</td><td style="text-align:right" class="yoy-pos">+99.6%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">19.7%</td><td style="text-align:right">13.6%</td><td style="text-align:right" class="yoy-pos">+44.4%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 10/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>SEC 10-Q quarterly filings cover only the first three fiscal quarters; the fourth fiscal quarter (fiscal year-end) is not filed as a standalone quarterly report and must be sourced from Yahoo Finance. Yahoo Finance's quarterly income history is limited to approximately the most recent five quarters, so fiscal year-end quarter data for periods beyond that window is unavailable.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for Micron Technology is missing for the period 2025Q3 due to the company's disclosure practice, which may not provide quarterly segment data through Yahoo's extraction method for that specific quarter. Instead, segment data is available for other periods, such as FY2025 and 2025Q4, through XBRL reporting.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$37.38B</td><td>$8.54B</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$25.11B</td><td>$778.0M</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$15.54B</td><td>-$5.83B</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$23.86B</td><td>$13.79B</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$13.64B</td><td>$5.24B</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$11.31B</td><td>$3.20B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$9.30B</td><td>$1.89B</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$8.05B</td><td>$1.58B</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$8.71B</td><td>$1.87B</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$6.81B</td><td>$332.0M</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$5.82B</td><td>$793.0M</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$4.73B</td><td>-$1.23B</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$3.75B</td><td>-$1.90B</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $37.38B revenue across 4 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>CMBU</td><td style='text-align:right'>$13.52B</td><td style='text-align:right'>36.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:36.2%'></div>  </div></td></tr><tr><td>MCBU</td><td style='text-align:right'>$11.86B</td><td style='text-align:right'>31.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:31.7%'></div>  </div></td></tr><tr><td>CDBU</td><td style='text-align:right'>$7.23B</td><td style='text-align:right'>19.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:19.3%'></div>  </div></td></tr><tr><td>AEBU</td><td style='text-align:right'>$4.75B</td><td style='text-align:right'>12.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:12.7%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $25.11B revenue across 4 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>CNBU</td><td style='text-align:right'>$9.51B</td><td style='text-align:right'>37.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:37.9%'></div>  </div></td></tr><tr><td>CMBU</td><td style='text-align:right'>$6.35B</td><td style='text-align:right'>25.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:25.3%'></div>  </div></td></tr><tr><td>AEBU</td><td style='text-align:right'>$4.61B</td><td style='text-align:right'>18.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:18.4%'></div>  </div></td></tr><tr><td>SBU</td><td style='text-align:right'>$4.59B</td><td style='text-align:right'>18.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:18.3%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $15.54B revenue across 4 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>CNBU</td><td style='text-align:right'>$5.71B</td><td style='text-align:right'>36.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:36.7%'></div>  </div></td></tr><tr><td>AEBU</td><td style='text-align:right'>$3.64B</td><td style='text-align:right'>23.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.4%'></div>  </div></td></tr><tr><td>CMBU</td><td style='text-align:right'>$3.63B</td><td style='text-align:right'>23.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.4%'></div>  </div></td></tr><tr><td>SBU</td><td style='text-align:right'>$2.55B</td><td style='text-align:right'>16.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:16.4%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>CMBU</td><td style='text-align:right'>$13.52B</td><td style='text-align:right'>$6.35B</td><td style='text-align:right'>$3.63B</td><td style='text-align:right;color:#28a745;font-weight:600'>+112.8%</td></tr><tr><td>CNBU</td><td style='text-align:right'>—</td><td style='text-align:right'>$9.51B</td><td style='text-align:right'>$5.71B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>AEBU</td><td style='text-align:right'>$4.75B</td><td style='text-align:right'>$4.61B</td><td style='text-align:right'>$3.64B</td><td style='text-align:right;color:#28a745;font-weight:600'>+3.0%</td></tr><tr><td>MCBU</td><td style='text-align:right'>$11.86B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>CDBU</td><td style='text-align:right'>$7.23B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>SBU</td><td style='text-align:right'>—</td><td style='text-align:right'>$4.59B</td><td style='text-align:right'>$2.55B</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 10 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 10 quarterly reports
+</div>
+</body>
+</html>

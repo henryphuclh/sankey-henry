@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lam Research Corp. (LRCX) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lam Research Corp. (LRCX) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Lam Research Corp. <span style="opacity:0.7">(LRCX)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,127,14,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Systems Revenue (62.3%)","Customer support-related revenue and other (37.7%)","Gross Profit (48.7%)","COGS (51.3%)","R&D (11.4%)","SG&A (5.3%)","Operating Income (32.0%)","Income Tax","Net Income (29.1%)"],"source":[1,2,0,0,3,3,3,7,7],"target":[0,0,3,4,5,6,7,8,9],"value":[11491280000.0,6944311000.0,8979059000.0,9456532000.0,2096387000.0,981704000.0,5900968000.0,594156574.1218426,5306811425.878158]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#2ca02c","#d62728","#ff7f0e","#ff7f0e","#2ca02c","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$18.4B (100.0%)","Systems Revenue\u003cbr\u003e$11.5B (62.3%)","Customer support-related revenue and other\u003cbr\u003e$6.9B (37.7%)","Gross Profit\u003cbr\u003e$9.0B (48.7%)","Cost of Revenue\u003cbr\u003e$9.5B (51.3%)","R&D\u003cbr\u003e$2.1B (11.4%)","SG&A\u003cbr\u003e$982M (5.3%)","Operating Income\u003cbr\u003e$5.9B (32.0%)","Income Tax\u003cbr\u003e$600M (3.3%)","Net Income\u003cbr\u003e$5.4B (29.1%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$18.4B (100.0%)", "Systems Revenue<br>$11.5B (62.3%)", "Customer support-related revenue and other<br>$6.9B (37.7%)", "Gross Profit<br>$9.0B (48.7%)", "Cost of Revenue<br>$9.5B (51.3%)", "R&D<br>$2.1B (11.4%)", "SG&A<br>$982M (5.3%)", "Operating Income<br>$5.9B (32.0%)", "Income Tax<br>$600M (3.3%)", "Net Income<br>$5.4B (29.1%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 0, 0, 3, 3, 3, 7, 7], "link_targets": [0, 0, 3, 4, 5, 6, 7, 8, 9], "link_values": [11491280000.0, 6944311000.0, 8979059000.0, 9456532000.0, 2096387000.0, 981704000.0, 5900968000.0, 594156574.1218426, 5306811425.878158], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Systems Revenue (62.3%)", "Customer support-related revenue and other (37.7%)", "Gross Profit (48.7%)", "COGS (51.3%)", "R&D (11.4%)", "SG&A (5.3%)", "Operating Income (32.0%)", "Income Tax", "Net Income (29.1%)"], "title": "Lam Research Corp. (LRCX) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$14.9B (100.0%)", "Systems Revenue<br>$8.9B (59.9%)", "Customer support-related revenue and other<br>$6.0B (40.1%)", "Gross Profit<br>$7.1B (47.3%)", "Cost of Revenue<br>$7.9B (52.7%)", "R&D<br>$1.9B (12.8%)", "SG&A<br>$868M (5.8%)", "Operating Income<br>$4.3B (28.6%)", "Income Tax<br>$532M (3.6%)", "Net Income<br>$3.8B (25.7%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 0, 0, 3, 3, 3, 7, 7], "link_targets": [0, 0, 3, 4, 5, 6, 7, 8, 9], "link_values": [8921643000.0, 5983743000.0, 7052791000.0, 7852595000.0, 1902444000.0, 868247000.0, 4263913000.0, 520689193.5433563, 3743223806.4566436], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Systems Revenue (59.9%)", "Customer support-related revenue and other (40.1%)", "Gross Profit (47.3%)", "COGS (52.7%)", "R&D (12.8%)", "SG&A (5.8%)", "Operating Income (28.6%)", "Income Tax", "Net Income (25.7%)"], "title": "Lam Research Corp. (LRCX) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$17.4B (100.0%)", "Systems Revenue<br>$10.7B (61.4%)", "Customer support-related revenue and other<br>$6.7B (38.6%)", "Gross Profit<br>$7.8B (44.6%)", "Cost of Revenue<br>$9.7B (55.4%)", "R&D<br>$1.7B (9.9%)", "SG&A<br>$833M (4.8%)", "Operating Income<br>$5.2B (29.7%)", "Income Tax<br>$598M (3.4%)", "Net Income<br>$4.5B (25.9%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 0, 0, 3, 3, 3, 7, 7], "link_targets": [0, 0, 3, 4, 5, 6, 7, 8, 9], "link_values": [10695897000.0, 6732619000.0, 7776925000.0, 9651591000.0, 1727162000.0, 832753000.0, 5174860000.0, 598279000.0, 4510931000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Systems Revenue (61.4%)", "Customer support-related revenue and other (38.6%)", "Gross Profit (44.6%)", "COGS (55.4%)", "R&D (9.9%)", "SG&A (4.8%)", "Operating Income (29.7%)", "Income Tax", "Net Income (25.9%)"], "title": "Lam Research Corp. (LRCX) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Lam Research Corp. (LRCX) Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Lam Research Corp. operates primarily in two segments: <strong>Systems Revenue</strong> and <strong>Customer Support-Related Revenue and Other</strong>. In FY2025, the company generated a total revenue of <strong>$18.44 billion</strong>, with <strong>Systems Revenue</strong> contributing <strong>$11.49 billion</strong> (62.2%) and <strong>Customer Support-Related Revenue</strong> contributing <strong>$6.94 billion</strong> (37.8%). This represents a notable increase in Systems Revenue from <strong>$8.92 billion</strong> in FY2024 and <strong>$10.70 billion</strong> in FY2023, indicating a strong recovery and growth trajectory in this segment.</p>
+<p>The revenue mix has evolved over the past three years, with Systems Revenue showing a significant rebound in FY2025 compared to FY2024, where it declined to <strong>$8.92 billion</strong> from <strong>$10.70 billion</strong> in FY2023. Conversely, Customer Support-Related Revenue has remained relatively stable, decreasing slightly from <strong>$6.73 billion</strong> in FY2023 to <strong>$5.98 billion</strong> in FY2024, before recovering to <strong>$6.94 billion</strong> in FY2025. This stability in customer support revenue suggests a consistent demand for ongoing services and maintenance, which is critical for customer retention.</p>
+<p>Key products driving growth include advanced semiconductor manufacturing equipment, which is essential for the production of integrated circuits. The geographical distribution of revenue is not explicitly detailed in the provided data, but the semiconductor industry is heavily concentrated in regions such as Asia-Pacific, particularly in countries like Taiwan, South Korea, and China, which are significant markets for Lam Research.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Lam Research has demonstrated strong profitability metrics over the past three years. The gross margin for FY2025 was <strong>48.7%</strong>, slightly improving from <strong>47.3%</strong> in FY2024 and <strong>44.6%</strong> in FY2023. This upward trend in gross margin reflects improved operational efficiency and cost management, particularly in the Systems Revenue segment, which has the highest gross margin contribution.</p>
+<p>Operating income for FY2025 was <strong>$5.90 billion</strong>, yielding an operating margin of <strong>32.0%</strong>, a significant increase from <strong>28.6%</strong> in FY2024 and <strong>29.7%</strong> in FY2023. The increase in operating margin can be attributed to effective cost control measures, particularly in R&amp;D and SG&amp;A expenses, which were <strong>$2.10 billion</strong> and <strong>$982 million</strong> respectively in FY2025. R&amp;D expenses have increased from <strong>$1.73 billion</strong> in FY2023 to <strong>$2.10 billion</strong> in FY2025, reflecting Lam's commitment to innovation and product development, which is crucial in the competitive semiconductor equipment market.</p>
+<p>The major cost drivers include R&amp;D and SG&amp;A expenses, which together accounted for a significant portion of total operating expenses. The company has managed to maintain a balance between investing in R&amp;D for future growth and controlling SG&amp;A expenses, which have increased moderately from <strong>$833 million</strong> in FY2023 to <strong>$982 million</strong> in FY2025.</p>
+<h2>Business Model Summary</h2>
+<p>Lam Research converts revenue into earnings through a combination of high-margin product sales and ongoing customer support services. The company's ability to maintain a gross margin above 48% while achieving an operating margin of 32% indicates a robust business model that effectively leverages its technological expertise and operational efficiencies.</p>
+<p>The competitive positioning of Lam Research is evident from its segment structure, with a strong emphasis on Systems Revenue, which has shown resilience and growth despite fluctuations in the semiconductor market. The notable shift in segment mix, particularly the recovery of Systems Revenue in FY2025, highlights the company's adaptability and responsiveness to market demands.</p>
+<p>Overall, Lam Research's business model is characterized by a strong focus on innovation, operational efficiency, and a balanced revenue mix that supports sustainable growth and profitability in the dynamic semiconductor industry.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$18.44B</td><td style="text-align:right">$14.91B</td><td style="text-align:right" class="yoy-pos">+23.7%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$9.46B</td><td style="text-align:right">$7.85B</td><td style="text-align:right" class="yoy-pos">+20.4%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$8.98B</td><td style="text-align:right">$7.05B</td><td style="text-align:right" class="yoy-pos">+27.3%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">48.7%</td><td style="text-align:right">47.3%</td><td style="text-align:right" class="yoy-pos">+2.9%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$2.10B</td><td style="text-align:right">$1.90B</td><td style="text-align:right" class="yoy-pos">+10.2%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$981.7M</td><td style="text-align:right">$868.2M</td><td style="text-align:right" class="yoy-pos">+13.1%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$5.90B</td><td style="text-align:right">$4.26B</td><td style="text-align:right" class="yoy-pos">+38.4%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">32.0%</td><td style="text-align:right">28.6%</td><td style="text-align:right" class="yoy-pos">+11.9%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$5.36B</td><td style="text-align:right">$3.83B</td><td style="text-align:right" class="yoy-pos">+40.0%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">29.1%</td><td style="text-align:right">25.7%</td><td style="text-align:right" class="yoy-pos">+13.2%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q4</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q3</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2025 Q1</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$5.84B</td><td style="text-align:right">$4.72B</td><td style="text-align:right" class="yoy-pos">+23.8%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$2.41B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$2.91B</td><td style="text-align:right">$2.31B</td><td style="text-align:right" class="yoy-pos">+25.8%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">49.8%</td><td style="text-align:right">49.0%</td><td style="text-align:right" class="yoy-pos">+1.6%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$583.2M</td><td style="text-align:right">$525.9M</td><td style="text-align:right" class="yoy-pos">+10.9%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$280.3M</td><td style="text-align:right">$226.0M</td><td style="text-align:right" class="yoy-pos">+24.0%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$2.05B</td><td style="text-align:right">$1.56B</td><td style="text-align:right" class="yoy-pos">+31.1%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">35.0%</td><td style="text-align:right">33.1%</td><td style="text-align:right" class="yoy-pos">+5.9%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$1.83B</td><td style="text-align:right">$1.33B</td><td style="text-align:right" class="yoy-pos">+37.2%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">31.2%</td><td style="text-align:right">28.2%</td><td style="text-align:right" class="yoy-pos">+10.9%</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q4</th><th style='text-align:right'>2024 Q4</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$5.34B</td><td style="text-align:right">$4.38B</td><td style="text-align:right" class="yoy-pos">+22.1%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$2.30B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$2.65B</td><td style="text-align:right">$2.07B</td><td style="text-align:right" class="yoy-pos">+27.9%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">49.6%</td><td style="text-align:right">47.4%</td><td style="text-align:right" class="yoy-pos">+4.7%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$573.3M</td><td style="text-align:right">$494.9M</td><td style="text-align:right" class="yoy-pos">+15.8%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$267.7M</td><td style="text-align:right">$244.2M</td><td style="text-align:right" class="yoy-pos">+9.6%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$1.81B</td><td style="text-align:right">$1.33B</td><td style="text-align:right" class="yoy-pos">+35.7%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">33.9%</td><td style="text-align:right">30.5%</td><td style="text-align:right" class="yoy-pos">+11.1%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$1.59B</td><td style="text-align:right">$1.19B</td><td style="text-align:right" class="yoy-pos">+33.8%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">29.8%</td><td style="text-align:right">27.2%</td><td style="text-align:right" class="yoy-pos">+9.6%</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$5.32B</td><td style="text-align:right">$4.17B</td><td style="text-align:right" class="yoy-pos">+27.7%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right">$2.17B</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$2.68B</td><td style="text-align:right">$2.00B</td><td style="text-align:right" class="yoy-pos">+34.1%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">50.4%</td><td style="text-align:right">48.0%</td><td style="text-align:right" class="yoy-pos">+5.0%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$576.4M</td><td style="text-align:right">$495.4M</td><td style="text-align:right" class="yoy-pos">+16.4%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$279.3M</td><td style="text-align:right">$243.1M</td><td style="text-align:right" class="yoy-pos">+14.9%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$1.83B</td><td style="text-align:right">$1.26B</td><td style="text-align:right" class="yoy-pos">+44.7%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">34.4%</td><td style="text-align:right">30.3%</td><td style="text-align:right" class="yoy-pos">+13.3%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$1.57B</td><td style="text-align:right">$1.12B</td><td style="text-align:right" class="yoy-pos">+40.5%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">29.5%</td><td style="text-align:right">26.8%</td><td style="text-align:right" class="yoy-pos">+10.0%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$4.72B</td><td style="text-align:right">$3.79B</td><td style="text-align:right" class="yoy-pos">+24.4%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$2.41B</td><td style="text-align:right">$1.99B</td><td style="text-align:right" class="yoy-pos">+20.7%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$2.31B</td><td style="text-align:right">$1.80B</td><td style="text-align:right" class="yoy-pos">+28.5%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">49.0%</td><td style="text-align:right">47.5%</td><td style="text-align:right" class="yoy-pos">+3.3%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$525.9M</td><td style="text-align:right">$512.3M</td><td style="text-align:right" class="yoy-pos">+2.7%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$226.0M</td><td style="text-align:right">$215.9M</td><td style="text-align:right" class="yoy-pos">+4.7%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$1.56B</td><td style="text-align:right">$1.06B</td><td style="text-align:right" class="yoy-pos">+47.7%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">33.1%</td><td style="text-align:right">27.9%</td><td style="text-align:right" class="yoy-pos">+18.7%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$1.33B</td><td style="text-align:right">$965.8M</td><td style="text-align:right" class="yoy-pos">+37.8%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">28.2%</td><td style="text-align:right">25.5%</td><td style="text-align:right" class="yoy-pos">+10.7%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 10/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>SEC 10-Q quarterly filings cover only the first three fiscal quarters; the fourth fiscal quarter (fiscal year-end) is not filed as a standalone quarterly report and must be sourced from Yahoo Finance. Yahoo Finance's quarterly income history is limited to approximately the most recent five quarters, so fiscal year-end quarter data for periods beyond that window is unavailable.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for Lam Research Corp. is missing for the period '2025Q2' due to the company's disclosure practice, which may not provide quarterly segment data through Yahoo for that specific quarter, while segment data is available for other quarters and annual periods through XBRL.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$18.44B</td><td>$5.36B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$14.91B</td><td>$3.83B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$17.43B</td><td>$4.51B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$5.84B</td><td>$1.83B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$5.34B</td><td>$1.59B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$5.32B</td><td>$1.57B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$5.17B</td><td>$1.72B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$4.72B</td><td>$1.33B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$4.38B</td><td>$1.19B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$4.17B</td><td>$1.12B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$3.79B</td><td>$965.8M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$3.76B</td><td>$954.3M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$3.48B</td><td>$887.4M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $18.44B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Systems Revenue</td><td style='text-align:right'>$11.49B</td><td style='text-align:right'>62.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:62.3%'></div>  </div></td></tr><tr><td>Customer support-related revenue and other</td><td style='text-align:right'>$6.94B</td><td style='text-align:right'>37.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:37.7%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $14.91B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Systems Revenue</td><td style='text-align:right'>$8.92B</td><td style='text-align:right'>59.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:59.9%'></div>  </div></td></tr><tr><td>Customer support-related revenue and other</td><td style='text-align:right'>$5.98B</td><td style='text-align:right'>40.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:40.1%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $17.43B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Systems Revenue</td><td style='text-align:right'>$10.70B</td><td style='text-align:right'>61.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:61.4%'></div>  </div></td></tr><tr><td>Customer support-related revenue and other</td><td style='text-align:right'>$6.73B</td><td style='text-align:right'>38.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:38.6%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Systems Revenue</td><td style='text-align:right'>$11.49B</td><td style='text-align:right'>$8.92B</td><td style='text-align:right'>$10.70B</td><td style='text-align:right;color:#28a745;font-weight:600'>+28.8%</td></tr><tr><td>Customer support-related revenue and other</td><td style='text-align:right'>$6.94B</td><td style='text-align:right'>$5.98B</td><td style='text-align:right'>$6.73B</td><td style='text-align:right;color:#28a745;font-weight:600'>+16.1%</td></tr><tr><td>Systems revenue</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 10 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 10 quarterly reports
+</div>
+</body>
+</html>

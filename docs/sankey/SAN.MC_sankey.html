@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Banco Santander (SAN.MC) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banco Santander (SAN.MC) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Banco Santander <span style="opacity:0.7">(SAN.MC)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(198,219,239,0.4)","rgba(33,113,181,0.4)","rgba(8,69,148,0.4)","rgba(44,127,184,0.4)","rgba(65,182,196,0.4)","rgba(44,160,44,0.4)","rgba(255,127,14,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Digital Consumer Bank (16.9%)","Brazil (14.4%)","Spain (11.2%)","United States (9.0%)","United Kingdom (7.7%)","DCB Europe (7.2%)","Mexico (7.0%)","Corporate & Investment Banking (6.2%)","Other: Poland, Payments, Chile, Argentina, Wealth Management & Insurance, Portugal, Rest of the Group","Revenue after Provision (100.0%)","Non-Interest Expense (68.7%)","Pre-tax Income (31.3%)","Income Tax","Net Income (25.9%)"],"source":[1,2,3,4,5,6,7,8,9,0,10,10,12,12],"target":[0,0,0,0,0,0,0,0,0,10,11,12,13,14],"value":[10098737113.007246,8583377502.719098,6684602628.71674,5387945281.024526,4582681720.001839,4287113390.217375,4167238928.2924066,3703297308.4759264,12240006127.544846,59735000000.0,41054000000.0,18681000000.0,3181000000.0,15500000000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#c6dbef","#2171b5","#084594","#2c7fb8","#41b6c4","#2ca02c","#ff7f0e","#2ca02c","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Net Revenue\u003cbr\u003e$59.7B (100.0%)","Digital Consumer Bank\u003cbr\u003e$10.1B (16.9%)","Brazil\u003cbr\u003e$8.6B (14.4%)","Spain\u003cbr\u003e$6.7B (11.2%)","United States\u003cbr\u003e$5.4B (9.0%)","United Kingdom\u003cbr\u003e$4.6B (7.7%)","DCB Europe\u003cbr\u003e$4.3B (7.2%)","Mexico\u003cbr\u003e$4.2B (7.0%)","Corporate & Investment Banking\u003cbr\u003e$3.7B (6.2%)","Other (7 segments)\u003cbr\u003e$12.2B (20.5%)","Revenue after Provision\u003cbr\u003e$59.7B (100.0%)","Non-Interest Expense\u003cbr\u003e$41.1B (68.7%)","Pre-tax Income\u003cbr\u003e$18.7B (31.3%)","Income Tax\u003cbr\u003e$3.2B (5.3%)","Net Income\u003cbr\u003e$15.5B (25.9%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Net Revenue<br>$59.7B (100.0%)", "Digital Consumer Bank<br>$10.1B (16.9%)", "Brazil<br>$8.6B (14.4%)", "Spain<br>$6.7B (11.2%)", "United States<br>$5.4B (9.0%)", "United Kingdom<br>$4.6B (7.7%)", "DCB Europe<br>$4.3B (7.2%)", "Mexico<br>$4.2B (7.0%)", "Corporate & Investment Banking<br>$3.7B (6.2%)", "Other (7 segments)<br>$12.2B (20.5%)", "Revenue after Provision<br>$59.7B (100.0%)", "Non-Interest Expense<br>$41.1B (68.7%)", "Pre-tax Income<br>$18.7B (31.3%)", "Income Tax<br>$3.2B (5.3%)", "Net Income<br>$15.5B (25.9%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#084594", "#2c7fb8", "#41b6c4", "#2ca02c", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.35, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.05555555555555555, 0.16666666666666666, 0.2777777777777778, 0.3888888888888889, 0.5, 0.6111111111111112, 0.7222222222222222, 0.8333333333333334, 0.9444444444444444, 0.35, 0.75, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 10, 10, 12, 12], "link_targets": [0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 11, 12, 13, 14], "link_values": [10098737113.007246, 8583377502.719098, 6684602628.71674, 5387945281.024526, 4582681720.001839, 4287113390.217375, 4167238928.2924066, 3703297308.4759264, 12240006127.544846, 59735000000.0, 41054000000.0, 18681000000.0, 3181000000.0, 15500000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(8,69,148,0.4)", "rgba(44,127,184,0.4)", "rgba(65,182,196,0.4)", "rgba(44,160,44,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Digital Consumer Bank (16.9%)", "Brazil (14.4%)", "Spain (11.2%)", "United States (9.0%)", "United Kingdom (7.7%)", "DCB Europe (7.2%)", "Mexico (7.0%)", "Corporate & Investment Banking (6.2%)", "Other: Poland, Payments, Chile, Argentina, Wealth Management & Insurance, Portugal, Rest of the Group", "Revenue after Provision (100.0%)", "Non-Interest Expense (68.7%)", "Pre-tax Income (31.3%)", "Income Tax", "Net Income (25.9%)"], "title": "Banco Santander (SAN.MC) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Net Revenue<br>$64.3B (100.0%)", "Europe<br>$16.7B (26.0%)", "South America<br>$15.6B (24.2%)", "Digital Consumer Bank<br>$10.8B (16.8%)", "North America<br>$10.3B (16.1%)", "Corporate & Investment Banking<br>$4.0B (6.3%)", "Payments<br>$2.6B (4.1%)", "Wealth Management & Insurance<br>$1.6B (2.5%)", "Revenue after Provision<br>$64.3B (100.0%)", "Non-Interest Expense<br>$45.2B (70.4%)", "Pre-tax Income<br>$19.0B (29.6%)", "Income Tax<br>$5.3B (8.2%)", "Net Income<br>$13.7B (21.4%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#084594", "#2ca02c", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.35, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.07142857142857142, 0.21428571428571427, 0.35714285714285715, 0.5, 0.6428571428571429, 0.7857142857142857, 0.9285714285714286, 0.35, 0.75, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 7, 0, 8, 8, 10, 10], "link_targets": [0, 0, 0, 0, 0, 0, 0, 8, 9, 10, 11, 12], "link_values": [17430848837.775146, 16227786663.206217, 11235182890.23342, 10769178737.692421, 4190909828.2210584, 2719921328.8131194, 1696171714.0586224, 64270000000.0, 45243000000.0, 19027000000.0, 5283000000.0, 13744000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(8,69,148,0.4)", "rgba(44,160,44,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Europe (26.0%)", "South America (24.2%)", "Digital Consumer Bank (16.8%)", "North America (16.1%)", "Corporate & Investment Banking (6.3%)", "Payments (4.1%)", "Wealth Management & Insurance (2.5%)", "Revenue after Provision (100.0%)", "Non-Interest Expense (70.4%)", "Pre-tax Income (29.6%)", "Income Tax", "Net Income (21.4%)"], "title": "Banco Santander (SAN.MC) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Net Revenue<br>$59.6B (100.0%)", "Statutory results<br>$59.6B (100.0%)", "Revenue after Provision<br>$59.6B (100.0%)", "Non-Interest Expense<br>$43.1B (72.4%)", "Pre-tax Income<br>$16.5B (27.6%)", "Income Tax<br>$4.3B (7.2%)", "Net Income<br>$12.2B (20.4%)"], "node_colors": ["#2ca02c", "#1f77b4", "#2ca02c", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.35, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.5, 0.35, 0.75, 0.45, 0.65, 0.5], "link_sources": [1, 0, 2, 2, 4, 4], "link_targets": [0, 2, 3, 4, 5, 6], "link_values": [59582000000.0, 59582000000.0, 43123000000.0, 16459000000.0, 4276000000.0, 12183000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(44,160,44,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Statutory results (100.0%)", "Revenue after Provision (100.0%)", "Non-Interest Expense (72.4%)", "Pre-tax Income (27.6%)", "Income Tax", "Net Income (20.4%)"], "title": "Banco Santander (SAN.MC) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Banco Santander Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Banco Santander operates through a diverse range of business segments, contributing to its total revenue of $68.99 billion for the trailing twelve months (TTM). The primary segments include:</p>
+<ul>
+<li><strong>Digital Consumer Bank</strong>: $10.10 billion</li>
+<li><strong>Brazil</strong>: $8.58 billion</li>
+<li><strong>Spain</strong>: $6.68 billion</li>
+<li><strong>United States</strong>: $5.39 billion</li>
+<li><strong>United Kingdom</strong>: $4.58 billion</li>
+<li><strong>DCB Europe</strong>: $4.29 billion</li>
+<li><strong>Mexico</strong>: $4.17 billion</li>
+<li><strong>Corporate &amp; Investment Banking</strong>: $3.70 billion</li>
+<li><strong>Poland</strong>: $2.70 billion</li>
+<li><strong>Payments</strong>: $2.66 billion</li>
+<li><strong>Chile</strong>: $1.75 billion</li>
+<li><strong>Argentina</strong>: $1.58 billion</li>
+<li><strong>Wealth Management &amp; Insurance</strong>: $1.32 billion</li>
+<li><strong>Portugal</strong>: $1.23 billion</li>
+<li><strong>Rest of the Group</strong>: $989 million</li>
+</ul>
+<p>Over the past three years, the revenue mix has evolved, with a notable increase in contributions from the Digital Consumer Bank and geographic segments such as Brazil and Spain. For instance, the Digital Consumer Bank's revenue decreased slightly from $10.78 billion in FY2024 to $10.10 billion in FY2025, while Brazil's revenue remained stable at $8.58 billion in FY2025. The overall revenue for FY2025 was $59.73 billion, reflecting a slight increase from $64.27 billion in FY2024 and $59.58 billion in FY2023.</p>
+<p>Key growth drivers include the expansion of digital banking services, particularly in Europe and South America, as well as a strong performance in corporate and investment banking. The geographic diversification allows Banco Santander to mitigate risks associated with economic fluctuations in specific regions.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Banco Santander has maintained a consistent gross margin of 100% across the analyzed periods, indicating that the company effectively manages its cost of goods sold (COGS). The operating margin has shown a positive trend, increasing from 27.6% in FY2023 to 31.3% in FY2025, with operating income rising from $16.46 billion in FY2023 to $18.68 billion in FY2025.</p>
+<p>The major cost drivers for Banco Santander are not explicitly detailed in the provided data, as R&amp;D and SG&amp;A expenses are not disclosed. However, the operating leverage is evident, as the company has been able to increase its operating income while maintaining a stable gross margin. This suggests effective cost management and operational efficiency.</p>
+<p>The profitability trends indicate that Banco Santander is successfully converting revenue into earnings, with net income increasing from $12.18 billion in FY2023 to $15.50 billion in FY2025. This growth in net income reflects the company's ability to enhance its operational efficiency and manage costs effectively.</p>
+<h2>Business Model Summary</h2>
+<p>Banco Santander's business model is characterized by its ability to convert revenue into earnings through a diversified segment structure. The company generates revenue primarily from its banking operations, including retail banking, corporate banking, and investment services. The consistent gross margin of 100% highlights the company's strong pricing power and cost management capabilities.</p>
+<p>The competitive positioning of Banco Santander is evident from its broad geographic reach and diverse product offerings. The significant contributions from various regions, particularly Europe and South America, demonstrate the company's ability to leverage local market opportunities while maintaining a global presence.</p>
+<p>Notable shifts in the segment mix include a slight decline in revenue from the Digital Consumer Bank and Corporate &amp; Investment Banking, which may indicate a need for strategic adjustments to enhance growth in these areas. Overall, Banco Santander's business model reflects a robust framework for generating earnings, supported by a diverse revenue base and effective cost management strategies.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Net Revenue</td><td style="text-align:right">$59.73B</td><td style="text-align:right">$64.27B</td><td style="text-align:right" class="yoy-neg">-7.1%</td></tr><tr><td>Provision for Credit Losses</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Revenue after Provision</td><td style="text-align:right">$59.73B</td><td style="text-align:right">$64.27B</td><td style="text-align:right" class="yoy-neg">-7.1%</td></tr><tr><td>Non-Interest Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Pre-tax Income</td><td style="text-align:right">$18.68B</td><td style="text-align:right">$19.03B</td><td style="text-align:right" class="yoy-neg">-1.8%</td></tr><tr class="row-margin"><td>Pre-tax Margin</td><td style="text-align:right">31.3%</td><td style="text-align:right">29.6%</td><td style="text-align:right" class="yoy-pos">+5.6%</td></tr><tr><td>Income Tax</td><td style="text-align:right">-$4.72B</td><td style="text-align:right">-$5.28B</td><td style="text-align:right" class="yoy-pos">+10.6%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$15.50B</td><td style="text-align:right">$13.74B</td><td style="text-align:right" class="yoy-pos">+12.8%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">25.9%</td><td style="text-align:right">21.4%</td><td style="text-align:right" class="yoy-pos">+21.3%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Net Revenue</td><td style="text-align:right">$18.08B</td><td style="text-align:right">$17.56B</td><td style="text-align:right" class="yoy-pos">+2.9%</td></tr><tr><td>Provision for Credit Losses</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Revenue after Provision</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Non-Interest Expense</td><td style="text-align:right">$5.85B</td><td style="text-align:right">$5.95B</td><td style="text-align:right" class="yoy-neg">-1.6%</td></tr><tr class="row-divider"><td>Pre-tax Income</td><td style="text-align:right">$5.89B</td><td style="text-align:right">$5.49B</td><td style="text-align:right" class="yoy-pos">+7.3%</td></tr><tr class="row-margin"><td>Pre-tax Margin</td><td style="text-align:right">32.6%</td><td style="text-align:right">31.3%</td><td style="text-align:right" class="yoy-pos">+4.2%</td></tr><tr><td>Income Tax</td><td style="text-align:right">$1.46B</td><td style="text-align:right">$1.55B</td><td style="text-align:right" class="yoy-neg">-5.6%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$6.39B</td><td style="text-align:right">$3.98B</td><td style="text-align:right" class="yoy-pos">+60.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">35.3%</td><td style="text-align:right">22.7%</td><td style="text-align:right" class="yoy-pos">+55.8%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 5/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>The absence of a standardized income statement structure in SEC 6-K filings necessitates sourcing quarterly P&L data from Yahoo Finance. However, Yahoo Finance's incomplete maintenance of a 3-year quarterly history has resulted in only 5 periods being available for Banco Santander.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for Banco Santander is missing for the periods 2025Q1, 2025Q2, 2025Q3, 2025Q4, and 2026Q1 due to the company's reliance on Yahoo Finance as a data source, which does not provide SEC filings for these quarters, resulting in only aggregate data being available.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$59.73B</td><td>$15.50B</td><td>100%</td><td>15</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$64.27B</td><td>$13.74B</td><td>100%</td><td>7</td><td>96%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$59.58B</td><td>$12.18B</td><td>100%</td><td>1</td><td>100%</td><td>94%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$18.08B</td><td>$6.39B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$17.53B</td><td>$4.41B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$16.60B</td><td>$4.10B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$16.78B</td><td>$4.02B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$17.56B</td><td>$3.98B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $59.73B revenue across 15 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Digital Consumer Bank</td><td style='text-align:right'>$10.10B</td><td style='text-align:right'>16.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:16.9%'></div>  </div></td></tr><tr><td>Brazil</td><td style='text-align:right'>$8.58B</td><td style='text-align:right'>14.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:14.4%'></div>  </div></td></tr><tr><td>Spain</td><td style='text-align:right'>$6.68B</td><td style='text-align:right'>11.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:11.2%'></div>  </div></td></tr><tr><td>United States</td><td style='text-align:right'>$5.39B</td><td style='text-align:right'>9.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:9.0%'></div>  </div></td></tr><tr><td>United Kingdom</td><td style='text-align:right'>$4.58B</td><td style='text-align:right'>7.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.7%'></div>  </div></td></tr><tr><td>DCB Europe</td><td style='text-align:right'>$4.29B</td><td style='text-align:right'>7.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.2%'></div>  </div></td></tr><tr><td>Mexico</td><td style='text-align:right'>$4.17B</td><td style='text-align:right'>7.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.0%'></div>  </div></td></tr><tr><td>Corporate & Investment Banking</td><td style='text-align:right'>$3.70B</td><td style='text-align:right'>6.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:6.2%'></div>  </div></td></tr><tr><td>Poland</td><td style='text-align:right'>$2.70B</td><td style='text-align:right'>4.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:4.5%'></div>  </div></td></tr><tr><td>Payments</td><td style='text-align:right'>$2.66B</td><td style='text-align:right'>4.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:4.5%'></div>  </div></td></tr><tr><td>Chile</td><td style='text-align:right'>$1.75B</td><td style='text-align:right'>2.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.9%'></div>  </div></td></tr><tr><td>Argentina</td><td style='text-align:right'>$1.58B</td><td style='text-align:right'>2.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.6%'></div>  </div></td></tr><tr><td>Wealth Management & Insurance</td><td style='text-align:right'>$1.32B</td><td style='text-align:right'>2.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.2%'></div>  </div></td></tr><tr><td>Portugal</td><td style='text-align:right'>$1.23B</td><td style='text-align:right'>2.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.1%'></div>  </div></td></tr><tr><td>Rest of the Group</td><td style='text-align:right'>$989.2M</td><td style='text-align:right'>1.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.7%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $64.27B revenue across 7 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Europe</td><td style='text-align:right'>$16.72B</td><td style='text-align:right'>26.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:26.0%'></div>  </div></td></tr><tr><td>South America</td><td style='text-align:right'>$15.57B</td><td style='text-align:right'>24.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:24.2%'></div>  </div></td></tr><tr><td>Digital Consumer Bank</td><td style='text-align:right'>$10.78B</td><td style='text-align:right'>16.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:16.8%'></div>  </div></td></tr><tr><td>North America</td><td style='text-align:right'>$10.33B</td><td style='text-align:right'>16.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:16.1%'></div>  </div></td></tr><tr><td>Corporate & Investment Banking</td><td style='text-align:right'>$4.02B</td><td style='text-align:right'>6.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:6.3%'></div>  </div></td></tr><tr><td>Payments</td><td style='text-align:right'>$2.61B</td><td style='text-align:right'>4.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:4.1%'></div>  </div></td></tr><tr><td>Wealth Management & Insurance</td><td style='text-align:right'>$1.63B</td><td style='text-align:right'>2.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.5%'></div>  </div></td></tr><tr style='color:#888'><td><em>Other / Unallocated</em></td><td style='text-align:right'>$2.62B</td><td style='text-align:right'>4.1%</td><td></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $59.58B revenue across 1 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Statutory results</td><td style='text-align:right'>$59.58B</td><td style='text-align:right'>100.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:100.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Statutory results</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$59.58B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Digital Consumer Bank</td><td style='text-align:right'>$10.10B</td><td style='text-align:right'>$10.78B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#dc3545;font-weight:600'>-6.3%</td></tr><tr><td>Europe</td><td style='text-align:right'>—</td><td style='text-align:right'>$16.72B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>South America</td><td style='text-align:right'>—</td><td style='text-align:right'>$15.57B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>North America</td><td style='text-align:right'>—</td><td style='text-align:right'>$10.33B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Brazil</td><td style='text-align:right'>$8.58B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Corporate & Investment Banking</td><td style='text-align:right'>$3.70B</td><td style='text-align:right'>$4.02B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#dc3545;font-weight:600'>-7.9%</td></tr><tr><td>Spain</td><td style='text-align:right'>$6.68B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>United States</td><td style='text-align:right'>$5.39B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Payments</td><td style='text-align:right'>$2.66B</td><td style='text-align:right'>$2.61B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+2.0%</td></tr><tr><td>United Kingdom</td><td style='text-align:right'>$4.58B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>DCB Europe</td><td style='text-align:right'>$4.29B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Mexico</td><td style='text-align:right'>$4.17B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Wealth Management & Insurance</td><td style='text-align:right'>$1.32B</td><td style='text-align:right'>$1.63B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#dc3545;font-weight:600'>-18.7%</td></tr><tr><td>Poland</td><td style='text-align:right'>$2.70B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Chile</td><td style='text-align:right'>$1.75B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Argentina</td><td style='text-align:right'>$1.58B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Portugal</td><td style='text-align:right'>$1.23B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Rest of the Group</td><td style='text-align:right'>$989.2M</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 5 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 5 quarterly reports
+</div>
+</body>
+</html>

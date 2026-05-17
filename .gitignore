@@ -12,6 +12,8 @@ __pycache__/
 data/cache/
 output/
 
+# docs/ is intentionally tracked (GitHub Pages)
+
 # OS
 .DS_Store
 

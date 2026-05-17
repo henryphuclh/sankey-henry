@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Goldman Sachs Group Inc. (GS) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Goldman Sachs Group Inc. (GS) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Goldman Sachs Group Inc. <span style="opacity:0.7">(GS)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(214,39,40,0.4)","rgba(44,160,44,0.4)","rgba(230,85,13,0.4)","rgba(253,141,60,0.4)","rgba(253,174,107,0.4)","rgba(253,208,162,0.4)","rgba(132,60,57,0.4)","rgba(253,141,60,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Global Banking & Markets (71.1%)","Asset & Wealth Management (28.6%)","Platform Solutions (2.4%)","Provision (1.9%)","Revenue after Provision (98.1%)","Personnel (32.4%)","Other Non-Interest Expense (4.9%)","Technology & Equipment (3.7%)","Professional Services (3.0%)","Occupancy (1.6%)","Other Non-Interest Expenses","Pre-tax Income (37.5%)","Income Tax","Net Income (29.5%)"],"source":[1,2,3,0,0,5,5,5,5,5,5,5,12,12],"target":[0,0,0,4,5,6,7,8,9,10,11,12,13,14],"value":[40596941776.44845,16334557013.711521,1351501209.8400323,1113000000.0,57170000000.0,18906000000.0,2851000000.0,2170000000.0,1770000000.0,958000000.0,8663000000.0,21852000000.0,4676000000.0,17176000000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#d62728","#2ca02c","#e6550d","#fd8d3c","#fdae6b","#fdd0a2","#843c39","#fd8d3c","#2ca02c","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Net Revenue\u003cbr\u003e$58.3B (100.0%)","Global Banking & Markets\u003cbr\u003e$41.5B (71.1%)","Asset & Wealth Management\u003cbr\u003e$16.7B (28.6%)","Platform Solutions\u003cbr\u003e$1.4B (2.4%)","Provision for Credit Losses\u003cbr\u003e$1.1B (1.9%)","Revenue after Provision\u003cbr\u003e$57.2B (98.1%)","Personnel\u003cbr\u003e$18.9B (32.4%)","Other Non-Interest Expense\u003cbr\u003e$2.9B (4.9%)","Technology & Equipment\u003cbr\u003e$2.2B (3.7%)","Professional Services\u003cbr\u003e$1.8B (3.0%)","Occupancy\u003cbr\u003e$958M (1.6%)","Other NIE\u003cbr\u003e$8.7B (14.9%)","Pre-tax Income\u003cbr\u003e$21.9B (37.5%)","Income Tax\u003cbr\u003e$4.7B (8.0%)","Net Income\u003cbr\u003e$17.2B (29.5%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Net Revenue<br>$58.3B (100.0%)", "Global Banking & Markets<br>$41.5B (71.1%)", "Asset & Wealth Management<br>$16.7B (28.6%)", "Platform Solutions<br>$1.4B (2.4%)", "Provision for Credit Losses<br>$1.1B (1.9%)", "Revenue after Provision<br>$57.2B (98.1%)", "Personnel<br>$18.9B (32.4%)", "Other Non-Interest Expense<br>$2.9B (4.9%)", "Technology & Equipment<br>$2.2B (3.7%)", "Professional Services<br>$1.8B (3.0%)", "Occupancy<br>$958M (1.6%)", "Other NIE<br>$8.7B (14.9%)", "Pre-tax Income<br>$21.9B (37.5%)", "Income Tax<br>$4.7B (8.0%)", "Net Income<br>$17.2B (29.5%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#d62728", "#2ca02c", "#e6550d", "#fd8d3c", "#fdae6b", "#fdd0a2", "#843c39", "#fd8d3c", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.35, 0.35, 0.62, 0.62, 0.62, 0.62, 0.62, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.16666666666666666, 0.5, 0.8333333333333334, 0.85, 0.35, 0.04, 0.184, 0.32799999999999996, 0.4719999999999999, 0.616, 0.9, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 0, 0, 5, 5, 5, 5, 5, 5, 5, 12, 12], "link_targets": [0, 0, 0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "link_values": [40596941776.44845, 16334557013.711521, 1351501209.8400323, 1113000000.0, 57170000000.0, 18906000000.0, 2851000000.0, 2170000000.0, 1770000000.0, 958000000.0, 8663000000.0, 21852000000.0, 4676000000.0, 17176000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(214,39,40,0.4)", "rgba(44,160,44,0.4)", "rgba(230,85,13,0.4)", "rgba(253,141,60,0.4)", "rgba(253,174,107,0.4)", "rgba(253,208,162,0.4)", "rgba(132,60,57,0.4)", "rgba(253,141,60,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Global Banking & Markets (71.1%)", "Asset & Wealth Management (28.6%)", "Platform Solutions (2.4%)", "Provision (1.9%)", "Revenue after Provision (98.1%)", "Personnel (32.4%)", "Other Non-Interest Expense (4.9%)", "Technology & Equipment (3.7%)", "Professional Services (3.0%)", "Occupancy (1.6%)", "Other Non-Interest Expenses", "Pre-tax Income (37.5%)", "Income Tax", "Net Income (29.5%)"], "title": "Goldman Sachs Group Inc. (GS) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Net Revenue<br>$53.5B (100.0%)", "Global Banking & Markets<br>$34.9B (65.3%)", "Asset & Wealth Management<br>$16.1B (30.2%)", "Platform Solutions<br>$2.4B (4.5%)", "Provision for Credit Losses<br>$1.3B (2.5%)", "Revenue after Provision<br>$52.2B (97.5%)", "Personnel<br>$16.7B (31.2%)", "Other Non-Interest Expense<br>$2.7B (5.0%)", "Technology & Equipment<br>$2.0B (3.7%)", "Professional Services<br>$1.7B (3.1%)", "Occupancy<br>$973M (1.8%)", "Other NIE<br>$9.8B (18.2%)", "Pre-tax Income<br>$18.4B (34.4%)", "Income Tax<br>$4.1B (7.7%)", "Net Income<br>$14.3B (26.7%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#d62728", "#2ca02c", "#e6550d", "#fd8d3c", "#fdae6b", "#fdd0a2", "#843c39", "#fd8d3c", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.35, 0.35, 0.62, 0.62, 0.62, 0.62, 0.62, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.16666666666666666, 0.5, 0.8333333333333334, 0.85, 0.35, 0.04, 0.184, 0.32799999999999996, 0.4719999999999999, 0.616, 0.9, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 0, 0, 5, 5, 5, 5, 5, 5, 5, 12, 12], "link_targets": [0, 0, 0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "link_values": [34943000000.0, 16142000000.0, 2427000000.0, 1348000000.0, 52164000000.0, 16706000000.0, 2683000000.0, 1991000000.0, 1652000000.0, 973000000.0, 9762000000.0, 18397000000.0, 4121000000.0, 14276000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(214,39,40,0.4)", "rgba(44,160,44,0.4)", "rgba(230,85,13,0.4)", "rgba(253,141,60,0.4)", "rgba(253,174,107,0.4)", "rgba(253,208,162,0.4)", "rgba(132,60,57,0.4)", "rgba(253,141,60,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Global Banking & Markets (65.3%)", "Asset & Wealth Management (30.2%)", "Platform Solutions (4.5%)", "Provision (2.5%)", "Revenue after Provision (97.5%)", "Personnel (31.2%)", "Other Non-Interest Expense (5.0%)", "Technology & Equipment (3.7%)", "Professional Services (3.1%)", "Occupancy (1.8%)", "Other Non-Interest Expenses", "Pre-tax Income (34.4%)", "Income Tax", "Net Income (26.7%)"], "title": "Goldman Sachs Group Inc. (GS) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Net Revenue<br>$46.3B (100.0%)", "Global Banking & Markets<br>$30.0B (64.9%)", "Asset & Wealth Management<br>$13.9B (30.0%)", "Platform Solutions<br>$3.4B (7.4%)", "Provision for Credit Losses<br>$1.0B (2.2%)", "Revenue after Provision<br>$45.2B (97.8%)", "Personnel<br>$15.5B (33.5%)", "Other Non-Interest Expense<br>$3.2B (6.9%)", "Technology & Equipment<br>$1.9B (4.1%)", "Professional Services<br>$1.6B (3.5%)", "Occupancy<br>$1.1B (2.3%)", "Other NIE<br>$11.2B (24.2%)", "Pre-tax Income<br>$10.7B (23.2%)", "Income Tax<br>$2.2B (4.8%)", "Net Income<br>$8.5B (18.4%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#d62728", "#2ca02c", "#e6550d", "#fd8d3c", "#fdae6b", "#fdd0a2", "#843c39", "#fd8d3c", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.35, 0.35, 0.62, 0.62, 0.62, 0.62, 0.62, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.16666666666666666, 0.5, 0.8333333333333334, 0.85, 0.35, 0.04, 0.184, 0.32799999999999996, 0.4719999999999999, 0.616, 0.9, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 0, 0, 5, 5, 5, 5, 5, 5, 5, 12, 12], "link_targets": [0, 0, 0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "link_values": [29336384826.827927, 13574777350.192413, 3342837822.979659, 1028000000.0, 45226000000.0, 15499000000.0, 3210000000.0, 1919000000.0, 1623000000.0, 1053000000.0, 11183000000.0, 10739000000.0, 2223000000.0, 8516000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(214,39,40,0.4)", "rgba(44,160,44,0.4)", "rgba(230,85,13,0.4)", "rgba(253,141,60,0.4)", "rgba(253,174,107,0.4)", "rgba(253,208,162,0.4)", "rgba(132,60,57,0.4)", "rgba(253,141,60,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Global Banking & Markets (64.9%)", "Asset & Wealth Management (30.0%)", "Platform Solutions (7.4%)", "Provision (2.2%)", "Revenue after Provision (97.8%)", "Personnel (33.5%)", "Other Non-Interest Expense (6.9%)", "Technology & Equipment (4.1%)", "Professional Services (3.5%)", "Occupancy (2.3%)", "Other Non-Interest Expenses", "Pre-tax Income (23.2%)", "Income Tax", "Net Income (18.4%)"], "title": "Goldman Sachs Group Inc. (GS) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Goldman Sachs Group Inc. Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Goldman Sachs Group Inc. operates primarily through three business segments: Global Banking &amp; Markets, Asset &amp; Wealth Management, and Platform Solutions. In FY2025, the total revenue reached $58.28 billion, with Global Banking &amp; Markets contributing the largest share at $41.45 billion, accounting for approximately 71% of total revenue. Asset &amp; Wealth Management followed with $16.68 billion (29%), while Platform Solutions generated $1.38 billion (2%).</p>
+<p>Over the past three years, the revenue mix has evolved significantly. In FY2023, Global Banking &amp; Markets generated $30.00 billion, which represented 65% of total revenue, while Asset &amp; Wealth Management contributed $13.88 billion (30%) and Platform Solutions $3.42 billion (5%). By FY2024, Global Banking &amp; Markets increased to $34.94 billion (65%), and Asset &amp; Wealth Management rose to $16.14 billion (30%), but Platform Solutions saw a decline to $2.43 billion (5%). This trend continued into FY2025, where Global Banking &amp; Markets further increased its dominance, reflecting a strategic focus on this segment.</p>
+<p>Key products driving growth include investment banking services, trading and market-making activities, and wealth management solutions. Geographically, Goldman Sachs has a strong presence in North America, which remains a significant contributor to its revenue, although it also has a growing footprint in international markets.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Goldman Sachs has demonstrated strong profitability metrics, with gross margins consistently above 97% across the last three fiscal years. In FY2025, the gross margin was 98.1%, reflecting the high-value nature of its services. The operating margin also showed a positive trend, increasing from 23.2% in FY2023 to 37.5% in FY2025, indicating improved operational efficiency and cost management.</p>
+<p>The major cost drivers for Goldman Sachs include Selling, General and Administrative (SG&amp;A) expenses, which totaled $37.54 billion in FY2025, up from $34.49 billion in FY2023. Notably, there are no reported R&amp;D expenses, which is typical for financial services firms. The increase in SG&amp;A expenses has been offset by revenue growth, leading to enhanced operating leverage. The operating income rose from $10.74 billion in FY2023 to $21.85 billion in FY2025, showcasing the company's ability to convert revenue into earnings effectively.</p>
+<h2>Business Model Summary</h2>
+<p>Goldman Sachs converts revenue into earnings primarily through its high-margin business model, which leverages its expertise in investment banking, trading, and wealth management. The company’s competitive positioning is evident from its segment structure, with Global Banking &amp; Markets being the cornerstone of its operations. This segment not only generates the majority of revenue but also exhibits the highest margins, underscoring its critical role in the overall business model.</p>
+<p>The notable shift in segment mix over the past three years highlights a strategic pivot towards enhancing the Global Banking &amp; Markets segment, which has seen substantial revenue growth from $30.00 billion in FY2023 to $41.45 billion in FY2025. Conversely, the Platform Solutions segment has experienced a decline, indicating a potential area for reassessment or strategic realignment.</p>
+<p>Overall, Goldman Sachs' business model is characterized by its ability to maintain high gross and operating margins while effectively managing costs. The firm’s focus on its core competencies in banking and markets positions it well for sustained profitability and growth in the competitive financial services landscape.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Net Revenue</td><td style="text-align:right">$58.28B</td><td style="text-align:right">$53.51B</td><td style="text-align:right" class="yoy-pos">+8.9%</td></tr><tr><td>Provision for Credit Losses</td><td style="text-align:right">$1.11B</td><td style="text-align:right">$1.35B</td><td style="text-align:right" class="yoy-neg">-17.4%</td></tr><tr class="row-divider"><td>Revenue after Provision</td><td style="text-align:right">$57.17B</td><td style="text-align:right">$52.16B</td><td style="text-align:right" class="yoy-pos">+9.6%</td></tr><tr><td>Non-Interest Expense</td><td style="text-align:right">$37.54B</td><td style="text-align:right">$33.77B</td><td style="text-align:right" class="yoy-pos">+11.2%</td></tr><tr class="row-divider"><td>Pre-tax Income</td><td style="text-align:right">$21.85B</td><td style="text-align:right">$18.40B</td><td style="text-align:right" class="yoy-pos">+18.8%</td></tr><tr class="row-margin"><td>Pre-tax Margin</td><td style="text-align:right">37.5%</td><td style="text-align:right">34.4%</td><td style="text-align:right" class="yoy-pos">+9.1%</td></tr><tr><td>Income Tax</td><td style="text-align:right">$4.68B</td><td style="text-align:right">$4.12B</td><td style="text-align:right" class="yoy-pos">+13.5%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$17.18B</td><td style="text-align:right">$14.28B</td><td style="text-align:right" class="yoy-pos">+20.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">29.5%</td><td style="text-align:right">26.7%</td><td style="text-align:right" class="yoy-pos">+10.5%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q3</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q2</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2025 Q1</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Net Revenue</td><td style="text-align:right">$17.23B</td><td style="text-align:right">$15.06B</td><td style="text-align:right" class="yoy-pos">+14.4%</td></tr><tr><td>Provision for Credit Losses</td><td style="text-align:right">$315.0M</td><td style="text-align:right">$287.0M</td><td style="text-align:right" class="yoy-pos">+9.8%</td></tr><tr class="row-divider"><td>Revenue after Provision</td><td style="text-align:right">$16.91B</td><td style="text-align:right">$14.78B</td><td style="text-align:right" class="yoy-pos">+14.5%</td></tr><tr><td>Non-Interest Expense</td><td style="text-align:right">$10.43B</td><td style="text-align:right">$9.13B</td><td style="text-align:right" class="yoy-pos">+14.2%</td></tr><tr class="row-divider"><td>Pre-tax Income</td><td style="text-align:right">$6.49B</td><td style="text-align:right">$5.65B</td><td style="text-align:right" class="yoy-pos">+14.9%</td></tr><tr class="row-margin"><td>Pre-tax Margin</td><td style="text-align:right">37.7%</td><td style="text-align:right">37.5%</td><td style="text-align:right" class="yoy-pos">+0.4%</td></tr><tr><td>Income Tax</td><td style="text-align:right">$856.0M</td><td style="text-align:right">$909.0M</td><td style="text-align:right" class="yoy-neg">-5.8%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$5.63B</td><td style="text-align:right">$4.74B</td><td style="text-align:right" class="yoy-pos">+18.8%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">32.7%</td><td style="text-align:right">31.5%</td><td style="text-align:right" class="yoy-pos">+3.9%</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Net Revenue</td><td style="text-align:right">$15.18B</td><td style="text-align:right">$12.70B</td><td style="text-align:right" class="yoy-pos">+19.6%</td></tr><tr><td>Provision for Credit Losses</td><td style="text-align:right">$339.0M</td><td style="text-align:right">$397.0M</td><td style="text-align:right" class="yoy-neg">-14.6%</td></tr><tr class="row-divider"><td>Revenue after Provision</td><td style="text-align:right">$14.85B</td><td style="text-align:right">$12.30B</td><td style="text-align:right" class="yoy-pos">+20.7%</td></tr><tr><td>Non-Interest Expense</td><td style="text-align:right">$9.45B</td><td style="text-align:right">$8.31B</td><td style="text-align:right" class="yoy-pos">+13.7%</td></tr><tr class="row-divider"><td>Pre-tax Income</td><td style="text-align:right">$5.39B</td><td style="text-align:right">$3.99B</td><td style="text-align:right" class="yoy-pos">+35.2%</td></tr><tr class="row-margin"><td>Pre-tax Margin</td><td style="text-align:right">35.5%</td><td style="text-align:right">31.4%</td><td style="text-align:right" class="yoy-pos">+13.1%</td></tr><tr><td>Income Tax</td><td style="text-align:right">$1.29B</td><td style="text-align:right">$997.0M</td><td style="text-align:right" class="yoy-pos">+29.8%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$4.10B</td><td style="text-align:right">$2.99B</td><td style="text-align:right" class="yoy-pos">+37.1%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">27.0%</td><td style="text-align:right">23.5%</td><td style="text-align:right" class="yoy-pos">+14.6%</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Net Revenue</td><td style="text-align:right">$14.58B</td><td style="text-align:right">$12.73B</td><td style="text-align:right" class="yoy-pos">+14.5%</td></tr><tr><td>Provision for Credit Losses</td><td style="text-align:right">$384.0M</td><td style="text-align:right">$282.0M</td><td style="text-align:right" class="yoy-pos">+36.2%</td></tr><tr class="row-divider"><td>Revenue after Provision</td><td style="text-align:right">$14.20B</td><td style="text-align:right">$12.45B</td><td style="text-align:right" class="yoy-pos">+14.1%</td></tr><tr><td>Non-Interest Expense</td><td style="text-align:right">$9.24B</td><td style="text-align:right">$8.53B</td><td style="text-align:right" class="yoy-pos">+8.3%</td></tr><tr class="row-divider"><td>Pre-tax Income</td><td style="text-align:right">$4.96B</td><td style="text-align:right">$3.92B</td><td style="text-align:right" class="yoy-pos">+26.6%</td></tr><tr class="row-margin"><td>Pre-tax Margin</td><td style="text-align:right">34.0%</td><td style="text-align:right">30.8%</td><td style="text-align:right" class="yoy-pos">+10.5%</td></tr><tr><td>Income Tax</td><td style="text-align:right">$1.24B</td><td style="text-align:right">$873.0M</td><td style="text-align:right" class="yoy-pos">+41.5%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$3.72B</td><td style="text-align:right">$3.04B</td><td style="text-align:right" class="yoy-pos">+22.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">25.5%</td><td style="text-align:right">23.9%</td><td style="text-align:right" class="yoy-pos">+6.8%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Net Revenue</td><td style="text-align:right">$15.06B</td><td style="text-align:right">$14.21B</td><td style="text-align:right" class="yoy-pos">+6.0%</td></tr><tr><td>Provision for Credit Losses</td><td style="text-align:right">$287.0M</td><td style="text-align:right">$318.0M</td><td style="text-align:right" class="yoy-neg">-9.7%</td></tr><tr class="row-divider"><td>Revenue after Provision</td><td style="text-align:right">$14.78B</td><td style="text-align:right">$13.89B</td><td style="text-align:right" class="yoy-pos">+6.3%</td></tr><tr><td>Non-Interest Expense</td><td style="text-align:right">$9.13B</td><td style="text-align:right">$8.66B</td><td style="text-align:right" class="yoy-pos">+5.4%</td></tr><tr class="row-divider"><td>Pre-tax Income</td><td style="text-align:right">$5.65B</td><td style="text-align:right">$5.24B</td><td style="text-align:right" class="yoy-pos">+7.8%</td></tr><tr class="row-margin"><td>Pre-tax Margin</td><td style="text-align:right">37.5%</td><td style="text-align:right">36.8%</td><td style="text-align:right" class="yoy-pos">+1.8%</td></tr><tr><td>Income Tax</td><td style="text-align:right">$909.0M</td><td style="text-align:right">$1.10B</td><td style="text-align:right" class="yoy-neg">-17.7%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$4.74B</td><td style="text-align:right">$4.13B</td><td style="text-align:right" class="yoy-pos">+14.7%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">31.5%</td><td style="text-align:right">29.1%</td><td style="text-align:right" class="yoy-pos">+8.2%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 10/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>SEC 10-Q quarterly filings cover only the first three fiscal quarters; the fourth fiscal quarter (fiscal year-end) is not filed as a standalone quarterly report and must be sourced from Yahoo Finance. Yahoo Finance's quarterly income history is limited to approximately the most recent five quarters, so fiscal year-end quarter data for periods beyond that window is unavailable.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for Goldman Sachs Group Inc. is missing for the period '2025Q4' due to the company's disclosure practice, which does not provide quarterly segment data through Yahoo for that specific quarter. Instead, segment information is available for other periods, such as annual reports and other quarterly periods, through XBRL filings.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$58.28B</td><td>$17.18B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$53.51B</td><td>$14.28B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$46.25B</td><td>$8.52B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$17.23B</td><td>$5.63B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$13.45B</td><td>$4.62B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$15.18B</td><td>$4.10B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$14.58B</td><td>$3.72B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$15.06B</td><td>$4.74B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$12.70B</td><td>$2.99B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$12.73B</td><td>$3.04B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$14.21B</td><td>$4.13B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$11.82B</td><td>$2.06B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$10.89B</td><td>$1.22B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $58.28B revenue across 3 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Global Banking & Markets</td><td style='text-align:right'>$41.45B</td><td style='text-align:right'>71.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:71.1%'></div>  </div></td></tr><tr><td>Asset & Wealth Management</td><td style='text-align:right'>$16.68B</td><td style='text-align:right'>28.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:28.6%'></div>  </div></td></tr><tr><td>Platform Solutions</td><td style='text-align:right'>$1.38B</td><td style='text-align:right'>2.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:2.4%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $53.51B revenue across 3 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Global Banking & Markets</td><td style='text-align:right'>$34.94B</td><td style='text-align:right'>65.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:65.3%'></div>  </div></td></tr><tr><td>Asset & Wealth Management</td><td style='text-align:right'>$16.14B</td><td style='text-align:right'>30.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:30.2%'></div>  </div></td></tr><tr><td>Platform Solutions</td><td style='text-align:right'>$2.43B</td><td style='text-align:right'>4.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:4.5%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $46.25B revenue across 3 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Global Banking & Markets</td><td style='text-align:right'>$30.00B</td><td style='text-align:right'>64.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:64.9%'></div>  </div></td></tr><tr><td>Asset & Wealth Management</td><td style='text-align:right'>$13.88B</td><td style='text-align:right'>30.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:30.0%'></div>  </div></td></tr><tr><td>Platform Solutions</td><td style='text-align:right'>$3.42B</td><td style='text-align:right'>7.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.4%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Global Banking & Markets</td><td style='text-align:right'>$41.45B</td><td style='text-align:right'>$34.94B</td><td style='text-align:right'>$30.00B</td><td style='text-align:right;color:#28a745;font-weight:600'>+18.6%</td></tr><tr><td>Asset & Wealth Management</td><td style='text-align:right'>$16.68B</td><td style='text-align:right'>$16.14B</td><td style='text-align:right'>$13.88B</td><td style='text-align:right;color:#28a745;font-weight:600'>+3.3%</td></tr><tr><td>Platform Solutions</td><td style='text-align:right'>$1.38B</td><td style='text-align:right'>$2.43B</td><td style='text-align:right'>$3.42B</td><td style='text-align:right;color:#dc3545;font-weight:600'>-43.1%</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 10 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 10 quarterly reports
+</div>
+</body>
+</html>

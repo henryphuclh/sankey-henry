@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Apple Inc. (AAPL) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apple Inc. (AAPL) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Apple Inc. <span style="opacity:0.7">(AAPL)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(198,219,239,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,127,14,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["iPhone (50.4%)","Services (26.2%)","Wearables, Home and Accessories (8.6%)","Mac (8.1%)","iPad (6.7%)","Gross Profit (46.9%)","COGS (53.1%)","R&D (8.3%)","SG&A (6.6%)","Operating Income (32.0%)","Income Tax","Net Income (26.9%)"],"source":[1,2,3,4,5,0,0,6,6,6,10,10],"target":[0,0,0,0,0,6,7,8,9,10,11,12],"value":[209586000000.0,109158000000.0,35686000000.0,33708000000.0,28023000000.0,195201000000.0,220960000000.0,34550000000.0,27601000000.0,133050000000.0,20719000000.0,112010000000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#c6dbef","#2ca02c","#d62728","#ff7f0e","#ff7f0e","#2ca02c","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$416.2B (100.0%)","iPhone\u003cbr\u003e$209.6B (50.4%)","Services\u003cbr\u003e$109.2B (26.2%)","Wearables, Home and Accessories\u003cbr\u003e$35.7B (8.6%)","Mac\u003cbr\u003e$33.7B (8.1%)","iPad\u003cbr\u003e$28.0B (6.7%)","Gross Profit\u003cbr\u003e$195.2B (46.9%)","Cost of Revenue\u003cbr\u003e$221.0B (53.1%)","R&D\u003cbr\u003e$34.5B (8.3%)","SG&A\u003cbr\u003e$27.6B (6.6%)","Operating Income\u003cbr\u003e$133.1B (32.0%)","Income Tax\u003cbr\u003e$20.7B (5.0%)","Net Income\u003cbr\u003e$112.0B (26.9%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$416.2B (100.0%)", "iPhone<br>$209.6B (50.4%)", "Services<br>$109.2B (26.2%)", "Wearables, Home and Accessories<br>$35.7B (8.6%)", "Mac<br>$33.7B (8.1%)", "iPad<br>$28.0B (6.7%)", "Gross Profit<br>$195.2B (46.9%)", "Cost of Revenue<br>$221.0B (53.1%)", "R&D<br>$34.5B (8.3%)", "SG&A<br>$27.6B (6.6%)", "Operating Income<br>$133.1B (32.0%)", "Income Tax<br>$20.7B (5.0%)", "Net Income<br>$112.0B (26.9%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 10, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12], "link_values": [209586000000.0, 109158000000.0, 35686000000.0, 33708000000.0, 28023000000.0, 195201000000.0, 220960000000.0, 34550000000.0, 27601000000.0, 133050000000.0, 20719000000.0, 112010000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["iPhone (50.4%)", "Services (26.2%)", "Wearables, Home and Accessories (8.6%)", "Mac (8.1%)", "iPad (6.7%)", "Gross Profit (46.9%)", "COGS (53.1%)", "R&D (8.3%)", "SG&A (6.6%)", "Operating Income (32.0%)", "Income Tax", "Net Income (26.9%)"], "title": "Apple Inc. (AAPL) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$391.0B (100.0%)", "iPhone<br>$201.2B (51.4%)", "Services<br>$96.2B (24.6%)", "Wearables, Home and Accessories<br>$37.0B (9.5%)", "Mac<br>$30.0B (7.7%)", "iPad<br>$26.7B (6.8%)", "Gross Profit<br>$180.7B (46.2%)", "Cost of Revenue<br>$210.4B (53.8%)", "R&D<br>$31.4B (8.0%)", "SG&A<br>$26.1B (6.7%)", "Operating Income<br>$123.2B (31.5%)", "Income Tax<br>$29.7B (7.6%)", "Net Income<br>$93.7B (24.0%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 10, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12], "link_values": [201183000000.0, 96169000000.0, 37005000000.0, 29984000000.0, 26694000000.0, 180683000000.0, 210352000000.0, 31370000000.0, 26097000000.0, 123216000000.0, 29749000000.0, 93736000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["iPhone (51.4%)", "Services (24.6%)", "Wearables, Home and Accessories (9.5%)", "Mac (7.7%)", "iPad (6.8%)", "Gross Profit (46.2%)", "COGS (53.8%)", "R&D (8.0%)", "SG&A (6.7%)", "Operating Income (31.5%)", "Income Tax", "Net Income (24.0%)"], "title": "Apple Inc. (AAPL) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$383.3B (100.0%)", "iPhone<br>$200.6B (52.3%)", "Services<br>$85.2B (22.2%)", "Wearables, Home and Accessories<br>$39.8B (10.4%)", "Mac<br>$29.4B (7.7%)", "iPad<br>$28.3B (7.4%)", "Gross Profit<br>$169.1B (44.1%)", "Cost of Revenue<br>$214.1B (55.9%)", "R&D<br>$29.9B (7.8%)", "SG&A<br>$24.9B (6.5%)", "Operating Income<br>$114.3B (29.8%)", "Income Tax<br>$16.7B (4.4%)", "Net Income<br>$97.0B (25.3%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 10, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12], "link_values": [200583000000.0, 85200000000.0, 39845000000.0, 29357000000.0, 28300000000.0, 169148000000.0, 214137000000.0, 29915000000.0, 24932000000.0, 114301000000.0, 16741000000.0, 96995000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["iPhone (52.3%)", "Services (22.2%)", "Wearables, Home and Accessories (10.4%)", "Mac (7.7%)", "iPad (7.4%)", "Gross Profit (44.1%)", "COGS (55.9%)", "R&D (7.8%)", "SG&A (6.5%)", "Operating Income (29.8%)", "Income Tax", "Net Income (25.3%)"], "title": "Apple Inc. (AAPL) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Apple Inc. (AAPL) Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Apple Inc. generates its revenue primarily through five key segments: iPhone, Mac, iPad, Wearables, Home and Accessories, and Services. For FY2025, total revenue reached <strong>$416.16 billion</strong>, with the iPhone segment contributing the largest share at <strong>$209.59 billion</strong>, accounting for approximately <strong>50.3%</strong> of total revenue. The Services segment, which includes offerings such as the App Store, Apple Music, and iCloud, has shown significant growth, generating <strong>$109.16 billion</strong> in FY2025, representing about <strong>26.2%</strong> of total revenue.</p>
+<p>Over the past three years, the revenue mix has evolved, with the Services segment experiencing the most substantial growth. In FY2023, Services revenue was <strong>$85.20 billion</strong>, which increased to <strong>$96.17 billion</strong> in FY2024, and further to <strong>$109.16 billion</strong> in FY2025, reflecting a <strong>28.2%</strong> increase from FY2024. Conversely, the iPhone segment, while still dominant, has shown more modest growth, increasing from <strong>$200.58 billion</strong> in FY2023 to <strong>$209.59 billion</strong> in FY2025.</p>
+<p>The Wearables, Home and Accessories segment also contributed significantly, generating <strong>$35.69 billion</strong> in FY2025, although it has seen fluctuations in revenue over the years. The Mac and iPad segments have remained relatively stable, with revenues of <strong>$33.71 billion</strong> and <strong>$28.02 billion</strong>, respectively, in FY2025.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Apple's profitability is reflected in its gross and operating margins. For FY2025, the gross margin was <strong>46.9%</strong>, slightly up from <strong>46.2%</strong> in FY2024 and <strong>44.1%</strong> in FY2023. This improvement indicates effective cost management and pricing power, particularly in the Services segment, which typically enjoys higher margins compared to hardware products.</p>
+<p>Operating income for FY2025 was <strong>$133.05 billion</strong>, yielding an operating margin of <strong>32.0%</strong>, up from <strong>31.5%</strong> in FY2024 and <strong>29.8%</strong> in FY2023. The increase in operating margin can be attributed to the growth in the Services segment, which has a lower cost of goods sold (COGS) compared to hardware segments.</p>
+<p>Major cost drivers include Research and Development (R&amp;D) and Selling, General and Administrative (SG&amp;A) expenses. R&amp;D expenses increased from <strong>$29.91 billion</strong> in FY2023 to <strong>$34.55 billion</strong> in FY2025, reflecting Apple's commitment to innovation and product development. SG&amp;A expenses also rose from <strong>$24.93 billion</strong> in FY2023 to <strong>$27.60 billion</strong> in FY2025, indicating increased investment in marketing and sales efforts.</p>
+<h2>Business Model Summary</h2>
+<p>Apple's business model effectively converts revenue into earnings through a combination of high-margin products and services, operational efficiency, and a strong brand presence. The company leverages its ecosystem of products and services to drive customer loyalty and repeat purchases, which is evident in the growing Services segment.</p>
+<p>The competitive positioning of Apple is reinforced by its diverse segment structure, with the iPhone remaining a flagship product while Services emerge as a critical growth driver. The notable shift towards Services, which have higher margins, suggests a strategic pivot to enhance profitability and reduce reliance on hardware sales.</p>
+<p>Overall, Apple has demonstrated resilience and adaptability in its business model, with a clear focus on innovation and customer engagement, positioning itself favorably in the competitive technology landscape. The consistent growth in both revenue and profitability metrics underscores the effectiveness of its strategic initiatives and operational execution.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$416.16B</td><td style="text-align:right">$391.04B</td><td style="text-align:right" class="yoy-pos">+6.4%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$220.96B</td><td style="text-align:right">$210.35B</td><td style="text-align:right" class="yoy-pos">+5.0%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$195.20B</td><td style="text-align:right">$180.68B</td><td style="text-align:right" class="yoy-pos">+8.0%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">46.9%</td><td style="text-align:right">46.2%</td><td style="text-align:right" class="yoy-pos">+1.5%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$34.55B</td><td style="text-align:right">$31.37B</td><td style="text-align:right" class="yoy-pos">+10.1%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$27.60B</td><td style="text-align:right">$26.10B</td><td style="text-align:right" class="yoy-pos">+5.8%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$133.05B</td><td style="text-align:right">$123.22B</td><td style="text-align:right" class="yoy-pos">+8.0%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">32.0%</td><td style="text-align:right">31.5%</td><td style="text-align:right" class="yoy-pos">+1.5%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$112.01B</td><td style="text-align:right">$93.74B</td><td style="text-align:right" class="yoy-pos">+19.5%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">26.9%</td><td style="text-align:right">24.0%</td><td style="text-align:right" class="yoy-pos">+12.3%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q4</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q2</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2025 Q1</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$111.18B</td><td style="text-align:right">$95.36B</td><td style="text-align:right" class="yoy-pos">+16.6%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$56.40B</td><td style="text-align:right">$50.49B</td><td style="text-align:right" class="yoy-pos">+11.7%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$54.78B</td><td style="text-align:right">$44.87B</td><td style="text-align:right" class="yoy-pos">+22.1%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">49.3%</td><td style="text-align:right">47.1%</td><td style="text-align:right" class="yoy-pos">+4.7%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$11.42B</td><td style="text-align:right">$8.55B</td><td style="text-align:right" class="yoy-pos">+33.6%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$7.48B</td><td style="text-align:right">$6.73B</td><td style="text-align:right" class="yoy-pos">+11.1%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$35.88B</td><td style="text-align:right">$29.59B</td><td style="text-align:right" class="yoy-pos">+21.3%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">32.3%</td><td style="text-align:right">31.0%</td><td style="text-align:right" class="yoy-pos">+4.0%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$29.58B</td><td style="text-align:right">$24.78B</td><td style="text-align:right" class="yoy-pos">+19.4%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">26.6%</td><td style="text-align:right">26.0%</td><td style="text-align:right" class="yoy-pos">+2.4%</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q4</th><th style='text-align:right'>2024 Q4</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$143.76B</td><td style="text-align:right">$124.30B</td><td style="text-align:right" class="yoy-pos">+15.7%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$74.53B</td><td style="text-align:right">$66.03B</td><td style="text-align:right" class="yoy-pos">+12.9%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$69.23B</td><td style="text-align:right">$58.27B</td><td style="text-align:right" class="yoy-pos">+18.8%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">48.2%</td><td style="text-align:right">46.9%</td><td style="text-align:right" class="yoy-pos">+2.7%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$10.89B</td><td style="text-align:right">$8.27B</td><td style="text-align:right" class="yoy-pos">+31.7%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$7.49B</td><td style="text-align:right">$7.17B</td><td style="text-align:right" class="yoy-pos">+4.4%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$50.85B</td><td style="text-align:right">$42.83B</td><td style="text-align:right" class="yoy-pos">+18.7%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">35.4%</td><td style="text-align:right">34.5%</td><td style="text-align:right" class="yoy-pos">+2.7%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$42.10B</td><td style="text-align:right">$36.33B</td><td style="text-align:right" class="yoy-pos">+15.9%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">29.3%</td><td style="text-align:right">29.2%</td><td style="text-align:right" class="yoy-pos">+0.2%</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$94.04B</td><td style="text-align:right">$85.78B</td><td style="text-align:right" class="yoy-pos">+9.6%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$50.32B</td><td style="text-align:right">$46.10B</td><td style="text-align:right" class="yoy-pos">+9.2%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$43.72B</td><td style="text-align:right">$39.68B</td><td style="text-align:right" class="yoy-pos">+10.2%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">46.5%</td><td style="text-align:right">46.3%</td><td style="text-align:right" class="yoy-pos">+0.5%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$8.87B</td><td style="text-align:right">$8.01B</td><td style="text-align:right" class="yoy-pos">+10.7%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$6.65B</td><td style="text-align:right">$6.32B</td><td style="text-align:right" class="yoy-pos">+5.2%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$28.20B</td><td style="text-align:right">$25.35B</td><td style="text-align:right" class="yoy-pos">+11.2%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">30.0%</td><td style="text-align:right">29.6%</td><td style="text-align:right" class="yoy-pos">+1.5%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$23.43B</td><td style="text-align:right">$21.45B</td><td style="text-align:right" class="yoy-pos">+9.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">24.9%</td><td style="text-align:right">25.0%</td><td style="text-align:right" class="yoy-neg">-0.3%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$95.36B</td><td style="text-align:right">$90.75B</td><td style="text-align:right" class="yoy-pos">+5.1%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$50.49B</td><td style="text-align:right">$48.48B</td><td style="text-align:right" class="yoy-pos">+4.1%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$44.87B</td><td style="text-align:right">$42.27B</td><td style="text-align:right" class="yoy-pos">+6.1%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">47.1%</td><td style="text-align:right">46.6%</td><td style="text-align:right" class="yoy-pos">+1.0%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$8.55B</td><td style="text-align:right">$7.90B</td><td style="text-align:right" class="yoy-pos">+8.2%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$6.73B</td><td style="text-align:right">$6.47B</td><td style="text-align:right" class="yoy-pos">+4.0%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$29.59B</td><td style="text-align:right">$27.90B</td><td style="text-align:right" class="yoy-pos">+6.1%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">31.0%</td><td style="text-align:right">30.7%</td><td style="text-align:right" class="yoy-pos">+0.9%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$24.78B</td><td style="text-align:right">$23.64B</td><td style="text-align:right" class="yoy-pos">+4.8%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">26.0%</td><td style="text-align:right">26.0%</td><td style="text-align:right" class="yoy-neg">-0.2%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 10/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>SEC 10-Q quarterly filings cover only the first three fiscal quarters; the fourth fiscal quarter (fiscal year-end) is not filed as a standalone quarterly report and must be sourced from Yahoo Finance. Yahoo Finance's quarterly income history is limited to approximately the most recent five quarters, so fiscal year-end quarter data for periods beyond that window is unavailable.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for Apple Inc. is missing for the period 2025Q3 due to the company's disclosure practice, which may not provide quarterly segment data through Yahoo's extraction method for that specific quarter. This limitation results in an incomplete segment report for 2025Q3, while other periods are available through different reporting methods.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$416.16B</td><td>$112.01B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$391.04B</td><td>$93.74B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$383.29B</td><td>$97.00B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$111.18B</td><td>$29.58B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$143.76B</td><td>$42.10B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$102.47B</td><td>$27.47B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$94.04B</td><td>$23.43B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$95.36B</td><td>$24.78B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$124.30B</td><td>$36.33B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$85.78B</td><td>$21.45B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$90.75B</td><td>$23.64B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$119.58B</td><td>$33.92B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$81.80B</td><td>$19.88B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $416.16B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>iPhone</td><td style='text-align:right'>$209.59B</td><td style='text-align:right'>50.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:50.4%'></div>  </div></td></tr><tr><td>Services</td><td style='text-align:right'>$109.16B</td><td style='text-align:right'>26.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:26.2%'></div>  </div></td></tr><tr><td>Wearables, Home and Accessories</td><td style='text-align:right'>$35.69B</td><td style='text-align:right'>8.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:8.6%'></div>  </div></td></tr><tr><td>Mac</td><td style='text-align:right'>$33.71B</td><td style='text-align:right'>8.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:8.1%'></div>  </div></td></tr><tr><td>iPad</td><td style='text-align:right'>$28.02B</td><td style='text-align:right'>6.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:6.7%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $391.04B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>iPhone</td><td style='text-align:right'>$201.18B</td><td style='text-align:right'>51.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:51.4%'></div>  </div></td></tr><tr><td>Services</td><td style='text-align:right'>$96.17B</td><td style='text-align:right'>24.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:24.6%'></div>  </div></td></tr><tr><td>Wearables, Home and Accessories</td><td style='text-align:right'>$37.01B</td><td style='text-align:right'>9.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:9.5%'></div>  </div></td></tr><tr><td>Mac</td><td style='text-align:right'>$29.98B</td><td style='text-align:right'>7.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.7%'></div>  </div></td></tr><tr><td>iPad</td><td style='text-align:right'>$26.69B</td><td style='text-align:right'>6.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:6.8%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $383.29B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>iPhone</td><td style='text-align:right'>$200.58B</td><td style='text-align:right'>52.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:52.3%'></div>  </div></td></tr><tr><td>Services</td><td style='text-align:right'>$85.20B</td><td style='text-align:right'>22.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:22.2%'></div>  </div></td></tr><tr><td>Wearables, Home and Accessories</td><td style='text-align:right'>$39.84B</td><td style='text-align:right'>10.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:10.4%'></div>  </div></td></tr><tr><td>Mac</td><td style='text-align:right'>$29.36B</td><td style='text-align:right'>7.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.7%'></div>  </div></td></tr><tr><td>iPad</td><td style='text-align:right'>$28.30B</td><td style='text-align:right'>7.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.4%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>iPhone</td><td style='text-align:right'>$209.59B</td><td style='text-align:right'>$201.18B</td><td style='text-align:right'>$200.58B</td><td style='text-align:right;color:#28a745;font-weight:600'>+4.2%</td></tr><tr><td>Services</td><td style='text-align:right'>$109.16B</td><td style='text-align:right'>$96.17B</td><td style='text-align:right'>$85.20B</td><td style='text-align:right;color:#28a745;font-weight:600'>+13.5%</td></tr><tr><td>Wearables, Home and Accessories</td><td style='text-align:right'>$35.69B</td><td style='text-align:right'>$37.01B</td><td style='text-align:right'>$39.84B</td><td style='text-align:right;color:#dc3545;font-weight:600'>-3.6%</td></tr><tr><td>Mac</td><td style='text-align:right'>$33.71B</td><td style='text-align:right'>$29.98B</td><td style='text-align:right'>$29.36B</td><td style='text-align:right;color:#28a745;font-weight:600'>+12.4%</td></tr><tr><td>iPad</td><td style='text-align:right'>$28.02B</td><td style='text-align:right'>$26.69B</td><td style='text-align:right'>$28.30B</td><td style='text-align:right;color:#28a745;font-weight:600'>+5.0%</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 10 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 10 quarterly reports
+</div>
+</body>
+</html>

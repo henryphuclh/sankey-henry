@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Palantir Technologies (PLTR) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Palantir Technologies (PLTR) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Palantir Technologies <span style="opacity:0.7">(PLTR)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,127,14,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Government (53.7%)","Commercial (46.3%)","Gross Profit (82.4%)","COGS (17.6%)","R&D (12.5%)","SG&A (38.3%)","Operating Income (31.6%)","Income Tax","Net Income (36.5%)"],"source":[1,2,0,0,3,3,3,7,7],"target":[0,0,3,4,5,6,7,8,9],"value":[2402287000.0,2073159000.0,3686269000.0,789177000.0,557677000.0,1714577000.0,1414015000.0,44754460.0,1394627587.6329217]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#2ca02c","#d62728","#ff7f0e","#ff7f0e","#2ca02c","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$4.5B (100.0%)","Government\u003cbr\u003e$2.4B (53.7%)","Commercial\u003cbr\u003e$2.1B (46.3%)","Gross Profit\u003cbr\u003e$3.7B (82.4%)","Cost of Revenue\u003cbr\u003e$789M (17.6%)","R&D\u003cbr\u003e$558M (12.5%)","SG&A\u003cbr\u003e$1.7B (38.3%)","Operating Income\u003cbr\u003e$1.4B (31.6%)","Income Tax\u003cbr\u003e$23M (0.5%)","Net Income\u003cbr\u003e$1.6B (36.5%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$4.5B (100.0%)", "Government<br>$2.4B (53.7%)", "Commercial<br>$2.1B (46.3%)", "Gross Profit<br>$3.7B (82.4%)", "Cost of Revenue<br>$789M (17.6%)", "R&D<br>$558M (12.5%)", "SG&A<br>$1.7B (38.3%)", "Operating Income<br>$1.4B (31.6%)", "Income Tax<br>$23M (0.5%)", "Net Income<br>$1.6B (36.5%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 0, 0, 3, 3, 3, 7, 7], "link_targets": [0, 0, 3, 4, 5, 6, 7, 8, 9], "link_values": [2402287000.0, 2073159000.0, 3686269000.0, 789177000.0, 557677000.0, 1714577000.0, 1414015000.0, 44754460.0, 1394627587.6329217], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Government (53.7%)", "Commercial (46.3%)", "Gross Profit (82.4%)", "COGS (17.6%)", "R&D (12.5%)", "SG&A (38.3%)", "Operating Income (31.6%)", "Income Tax", "Net Income (36.5%)"], "title": "Palantir Technologies (PLTR) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$2.9B (100.0%)", "Government Operating Segment<br>$1.6B (54.8%)", "Commercial<br>$1.3B (45.2%)", "Gross Profit<br>$2.3B (80.2%)", "Cost of Revenue<br>$566M (19.8%)", "R&D<br>$508M (17.7%)", "SG&A<br>$1.5B (51.7%)", "Operating Income<br>$310M (10.8%)", "Income Tax<br>$21M (0.7%)", "Net Income<br>$468M (16.3%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 0, 0, 3, 3, 3, 7, 7], "link_targets": [0, 0, 3, 4, 5, 6, 7, 8, 9], "link_values": [1569605000.0, 1295902000.0, 2299517000.0, 565990000.0, 507878000.0, 1481236000.0, 310403000.0, 28655070.0, 296915714.7961968], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Government Operating Segment (54.8%)", "Commercial (45.2%)", "Gross Profit (80.2%)", "COGS (19.8%)", "R&D (17.7%)", "SG&A (51.7%)", "Operating Income (10.8%)", "Income Tax", "Net Income (16.3%)"], "title": "Palantir Technologies (PLTR) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$2.2B (100.0%)", "Government<br>$1.2B (54.9%)", "Commercial<br>$1.0B (45.1%)", "Gross Profit<br>$1.8B (80.6%)", "Cost of Revenue<br>$431M (19.4%)", "R&D<br>$405M (18.2%)", "SG&A<br>$1.3B (57.0%)", "Operating Income<br>$120M (5.4%)", "Interest & Other<br>$3M (0.2%)", "Income Tax<br>$20M (0.9%)", "Net Income<br>$217M (9.8%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.2, 0.4, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 0, 0, 3, 3, 3, 7, 7, 7], "link_targets": [0, 0, 3, 4, 5, 6, 7, 8, 9, 10], "link_values": [1222215000.0, 1002797000.0, 1793907000.0, 431105000.0, 404624000.0, 1269317000.0, 119966000.0, 22250120.0, 22250120.0, 89590028.36463636], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Government (54.9%)", "Commercial (45.1%)", "Gross Profit (80.6%)", "COGS (19.4%)", "R&D (18.2%)", "SG&A (57.0%)", "Operating Income (5.4%)", "Interest & Other", "Income Tax", "Net Income (9.8%)"], "title": "Palantir Technologies (PLTR) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Palantir Technologies Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Palantir Technologies operates primarily through two business segments: Government and Commercial. For FY2025, the total revenue reached $4.48 billion, with the Government segment contributing $2.40 billion (approximately 53.5% of total revenue) and the Commercial segment contributing $2.07 billion (approximately 46.5%). This represents a significant increase in total revenue compared to FY2024, which reported $2.87 billion, and FY2023, which reported $2.23 billion.</p>
+<p>Over the past three years, the revenue mix has evolved, with the Government segment showing robust growth. In FY2023, Government revenue was $1.22 billion, which increased to $1.57 billion in FY2024, and further to $2.40 billion in FY2025. This indicates a compound annual growth rate (CAGR) of approximately 49.5% for the Government segment over this period. Conversely, the Commercial segment also grew from $1.00 billion in FY2023 to $1.30 billion in FY2024, and then to $2.07 billion in FY2025, reflecting a CAGR of about 49.0%.</p>
+<p>Key products and services driving this growth include Palantir's data analytics platforms, which are utilized by government agencies for defense and intelligence purposes, as well as by commercial clients across various industries, including finance, healthcare, and manufacturing. The company has also expanded its geographic reach, enhancing its presence in both domestic and international markets.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Palantir's gross margin has remained strong, with FY2025 reporting a gross margin of 82.4%, up from 80.2% in FY2024 and 80.6% in FY2023. This indicates a consistent ability to maintain high profitability on its core offerings. The operating margin, however, has shown significant improvement, increasing from 5.4% in FY2023 to 10.8% in FY2024, and further to 31.6% in FY2025. This trend suggests that Palantir has effectively managed its operating expenses relative to revenue growth.</p>
+<p>Major cost drivers for Palantir include Research and Development (R&amp;D) and Selling, General, and Administrative (SG&amp;A) expenses. R&amp;D expenses have increased from $405 million in FY2023 to $558 million in FY2025, reflecting the company's commitment to innovation and product development. SG&amp;A expenses also rose from $1.27 billion in FY2023 to $1.71 billion in FY2025, indicating a focus on expanding sales and marketing efforts to drive revenue growth.</p>
+<p>The operating leverage is evident in the company's profitability trends, as the substantial increase in revenue has outpaced the growth in operating expenses, leading to improved margins.</p>
+<h2>Business Model Summary</h2>
+<p>Palantir Technologies converts revenue into earnings through its high-margin software solutions that leverage advanced data analytics capabilities. The company's ability to maintain a gross margin above 80% demonstrates its effective pricing strategy and operational efficiency. The significant increase in operating income from $120 million in FY2023 to $1.41 billion in FY2025 highlights the successful scaling of its business model.</p>
+<p>The competitive positioning of Palantir is reinforced by its dual-segment structure, which allows it to serve both government and commercial clients effectively. The strong growth in the Government segment, alongside a rapidly expanding Commercial segment, positions Palantir favorably in the market, catering to a diverse range of clients and industries.</p>
+<p>Notable shifts in the segment mix are evident, particularly the increasing contribution of the Government segment to total revenue, which has grown from 54.7% in FY2023 to 53.5% in FY2025. This shift, combined with the improvement in margin profiles, indicates a strategic focus on high-value contracts and long-term partnerships, enhancing the company's overall financial health and sustainability.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$4.48B</td><td style="text-align:right">$2.87B</td><td style="text-align:right" class="yoy-pos">+56.2%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$789.2M</td><td style="text-align:right">$566.0M</td><td style="text-align:right" class="yoy-pos">+39.4%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$3.69B</td><td style="text-align:right">$2.30B</td><td style="text-align:right" class="yoy-pos">+60.3%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">82.4%</td><td style="text-align:right">80.2%</td><td style="text-align:right" class="yoy-pos">+2.6%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$557.7M</td><td style="text-align:right">$507.9M</td><td style="text-align:right" class="yoy-pos">+9.8%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$1.71B</td><td style="text-align:right">$1.48B</td><td style="text-align:right" class="yoy-pos">+15.8%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$1.41B</td><td style="text-align:right">$310.4M</td><td style="text-align:right" class="yoy-pos">+355.5%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">31.6%</td><td style="text-align:right">10.8%</td><td style="text-align:right" class="yoy-pos">+191.7%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$1.63B</td><td style="text-align:right">$467.9M</td><td style="text-align:right" class="yoy-pos">+249.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">36.5%</td><td style="text-align:right">16.3%</td><td style="text-align:right" class="yoy-pos">+123.7%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q3</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q2</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2025 Q1</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$1.63B</td><td style="text-align:right">$883.9M</td><td style="text-align:right" class="yoy-pos">+84.7%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$215.8M</td><td style="text-align:right">$173.0M</td><td style="text-align:right" class="yoy-pos">+24.8%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$1.42B</td><td style="text-align:right">$710.9M</td><td style="text-align:right" class="yoy-pos">+99.3%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">86.8%</td><td style="text-align:right">80.4%</td><td style="text-align:right" class="yoy-pos">+7.9%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$161.0M</td><td style="text-align:right">$134.9M</td><td style="text-align:right" class="yoy-pos">+19.3%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$501.8M</td><td style="text-align:right">$399.9M</td><td style="text-align:right" class="yoy-pos">+25.5%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$754.0M</td><td style="text-align:right">$176.0M</td><td style="text-align:right" class="yoy-pos">+328.3%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">46.2%</td><td style="text-align:right">19.9%</td><td style="text-align:right" class="yoy-pos">+131.9%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$876.4M</td><td style="text-align:right">$217.7M</td><td style="text-align:right" class="yoy-pos">+302.5%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">53.7%</td><td style="text-align:right">24.6%</td><td style="text-align:right" class="yoy-pos">+117.9%</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$1.18B</td><td style="text-align:right">$725.5M</td><td style="text-align:right" class="yoy-pos">+62.8%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$207.3M</td><td style="text-align:right">$146.6M</td><td style="text-align:right" class="yoy-pos">+41.4%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$973.8M</td><td style="text-align:right">$578.9M</td><td style="text-align:right" class="yoy-pos">+68.2%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">82.4%</td><td style="text-align:right">79.8%</td><td style="text-align:right" class="yoy-pos">+3.3%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$144.2M</td><td style="text-align:right">$117.6M</td><td style="text-align:right" class="yoy-pos">+22.7%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$436.3M</td><td style="text-align:right">$348.2M</td><td style="text-align:right" class="yoy-pos">+25.3%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$393.3M</td><td style="text-align:right">$113.1M</td><td style="text-align:right" class="yoy-pos">+247.6%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">33.3%</td><td style="text-align:right">15.6%</td><td style="text-align:right" class="yoy-pos">+113.5%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$476.7M</td><td style="text-align:right">$149.3M</td><td style="text-align:right" class="yoy-pos">+219.2%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">40.4%</td><td style="text-align:right">20.6%</td><td style="text-align:right" class="yoy-pos">+96.1%</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$1.00B</td><td style="text-align:right">$678.1M</td><td style="text-align:right" class="yoy-pos">+48.0%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$192.9M</td><td style="text-align:right">$128.6M</td><td style="text-align:right" class="yoy-pos">+50.1%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$810.8M</td><td style="text-align:right">$549.6M</td><td style="text-align:right" class="yoy-pos">+47.5%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">80.8%</td><td style="text-align:right">81.0%</td><td style="text-align:right" class="yoy-neg">-0.3%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$135.0M</td><td style="text-align:right">$108.8M</td><td style="text-align:right" class="yoy-pos">+24.1%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$406.4M</td><td style="text-align:right">$335.5M</td><td style="text-align:right" class="yoy-pos">+21.2%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$269.3M</td><td style="text-align:right">$105.3M</td><td style="text-align:right" class="yoy-pos">+155.7%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">26.8%</td><td style="text-align:right">15.5%</td><td style="text-align:right" class="yoy-pos">+72.7%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$328.6M</td><td style="text-align:right">$135.6M</td><td style="text-align:right" class="yoy-pos">+142.4%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">32.7%</td><td style="text-align:right">20.0%</td><td style="text-align:right" class="yoy-pos">+63.7%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$883.9M</td><td style="text-align:right">$634.3M</td><td style="text-align:right" class="yoy-pos">+39.3%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$173.0M</td><td style="text-align:right">$116.3M</td><td style="text-align:right" class="yoy-pos">+48.8%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$710.9M</td><td style="text-align:right">$518.1M</td><td style="text-align:right" class="yoy-pos">+37.2%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">80.4%</td><td style="text-align:right">81.7%</td><td style="text-align:right" class="yoy-neg">-1.5%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$134.9M</td><td style="text-align:right">$110.0M</td><td style="text-align:right" class="yoy-pos">+22.6%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$399.9M</td><td style="text-align:right">$327.2M</td><td style="text-align:right" class="yoy-pos">+22.2%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$176.0M</td><td style="text-align:right">$80.9M</td><td style="text-align:right" class="yoy-pos">+117.7%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">19.9%</td><td style="text-align:right">12.8%</td><td style="text-align:right" class="yoy-pos">+56.2%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$217.7M</td><td style="text-align:right">$106.1M</td><td style="text-align:right" class="yoy-pos">+105.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">24.6%</td><td style="text-align:right">16.7%</td><td style="text-align:right" class="yoy-pos">+47.3%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 10/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>SEC 10-Q quarterly filings cover only the first three fiscal quarters, as the fourth fiscal quarter (fiscal year-end) is not filed as a standalone quarterly report and must be sourced from Yahoo Finance. However, Yahoo Finance's quarterly income history is limited to approximately the most recent five quarters, resulting in the unavailability of fiscal year-end quarter data for periods beyond that window.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for Palantir Technologies is missing for the period 2025Q4 due to the company's disclosure practice, which does not provide segment data in its quarterly reports extracted from Yahoo for that specific quarter. Instead, segment information is available for other periods, such as FY2025 and prior quarters, through XBRL filings.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$4.48B</td><td>$1.63B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$2.87B</td><td>$467.9M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$2.23B</td><td>$217.4M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$1.63B</td><td>$876.4M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$1.41B</td><td>$608.7M</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$1.18B</td><td>$476.7M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$1.00B</td><td>$328.6M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$883.9M</td><td>$217.7M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$725.5M</td><td>$149.3M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$678.1M</td><td>$135.6M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$634.3M</td><td>$106.1M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$558.2M</td><td>$73.4M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$533.3M</td><td>$28.1M</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $4.48B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Government</td><td style='text-align:right'>$2.40B</td><td style='text-align:right'>53.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:53.7%'></div>  </div></td></tr><tr><td>Commercial</td><td style='text-align:right'>$2.07B</td><td style='text-align:right'>46.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:46.3%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $2.87B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Government Operating Segment</td><td style='text-align:right'>$1.57B</td><td style='text-align:right'>54.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:54.8%'></div>  </div></td></tr><tr><td>Commercial</td><td style='text-align:right'>$1.30B</td><td style='text-align:right'>45.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:45.2%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $2.23B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Government</td><td style='text-align:right'>$1.22B</td><td style='text-align:right'>54.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:54.9%'></div>  </div></td></tr><tr><td>Commercial</td><td style='text-align:right'>$1.00B</td><td style='text-align:right'>45.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:45.1%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Commercial</td><td style='text-align:right'>$2.07B</td><td style='text-align:right'>$1.30B</td><td style='text-align:right'>$1.00B</td><td style='text-align:right;color:#28a745;font-weight:600'>+60.0%</td></tr><tr><td>Government</td><td style='text-align:right'>$2.40B</td><td style='text-align:right'>—</td><td style='text-align:right'>$1.22B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Government Operating Segment</td><td style='text-align:right'>—</td><td style='text-align:right'>$1.57B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 10 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 10 quarterly reports
+</div>
+</body>
+</html>

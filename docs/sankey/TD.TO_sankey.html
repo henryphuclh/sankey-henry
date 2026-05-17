@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Toronto Dominion Bank (TD.TO) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toronto Dominion Bank (TD.TO) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Toronto Dominion Bank <span style="opacity:0.7">(TD.TO)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(198,219,239,0.4)","rgba(214,39,40,0.4)","rgba(44,160,44,0.4)","rgba(230,85,13,0.4)","rgba(253,141,60,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Canadian Personal And Commercial Banking (30.5%)","Wealth Management And Insurance (21.5%)","US Retail (18.2%)","Corporate (17.4%)","Wholesale Banking (12.4%)","Provision (6.6%)","Revenue after Provision (93.4%)","Personnel (26.9%)","Other Non-Interest Expenses","Pre-tax Income (34.9%)","Income Tax","Net Income (30.3%)"],"source":[1,2,3,4,5,0,0,7,7,7,10,10],"target":[0,0,0,0,0,6,7,8,9,10,11,12],"value":[20661307760.32303,14544617790.091072,12353236700.167997,11817876506.823072,8399961242.5948305,4506000000.0,63271000000.0,18227000000.0,21401000000.0,23643000000.0,3366570486.053115,20276429513.946884]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#c6dbef","#d62728","#2ca02c","#e6550d","#fd8d3c","#2ca02c","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Net Revenue\u003cbr\u003e$67.8B (100.0%)","Canadian Personal And Commercial Banking\u003cbr\u003e$20.7B (30.5%)","Wealth Management And Insurance\u003cbr\u003e$14.5B (21.5%)","US Retail\u003cbr\u003e$12.4B (18.2%)","Corporate\u003cbr\u003e$11.8B (17.4%)","Wholesale Banking\u003cbr\u003e$8.4B (12.4%)","Provision for Credit Losses\u003cbr\u003e$4.5B (6.6%)","Revenue after Provision\u003cbr\u003e$63.3B (93.4%)","Personnel\u003cbr\u003e$18.2B (26.9%)","Other NIE\u003cbr\u003e$21.4B (31.6%)","Pre-tax Income\u003cbr\u003e$23.6B (34.9%)","Income Tax\u003cbr\u003e$3.4B (5.0%)","Net Income\u003cbr\u003e$20.5B (30.3%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Net Revenue<br>$67.8B (100.0%)", "Canadian Personal And Commercial Banking<br>$20.7B (30.5%)", "Wealth Management And Insurance<br>$14.5B (21.5%)", "US Retail<br>$12.4B (18.2%)", "Corporate<br>$11.8B (17.4%)", "Wholesale Banking<br>$8.4B (12.4%)", "Provision for Credit Losses<br>$4.5B (6.6%)", "Revenue after Provision<br>$63.3B (93.4%)", "Personnel<br>$18.2B (26.9%)", "Other NIE<br>$21.4B (31.6%)", "Pre-tax Income<br>$23.6B (34.9%)", "Income Tax<br>$3.4B (5.0%)", "Net Income<br>$20.5B (30.3%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#d62728", "#2ca02c", "#e6550d", "#fd8d3c", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.35, 0.35, 0.62, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.85, 0.35, 0.04, 0.9, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 7, 7, 7, 10, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12], "link_values": [20661307760.32303, 14544617790.091072, 12353236700.167997, 11817876506.823072, 8399961242.5948305, 4506000000.0, 63271000000.0, 18227000000.0, 21401000000.0, 23643000000.0, 3366570486.053115, 20276429513.946884], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(214,39,40,0.4)", "rgba(44,160,44,0.4)", "rgba(230,85,13,0.4)", "rgba(253,141,60,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Canadian Personal And Commercial Banking (30.5%)", "Wealth Management And Insurance (21.5%)", "US Retail (18.2%)", "Corporate (17.4%)", "Wholesale Banking (12.4%)", "Provision (6.6%)", "Revenue after Provision (93.4%)", "Personnel (26.9%)", "Other Non-Interest Expenses", "Pre-tax Income (34.9%)", "Income Tax", "Net Income (30.3%)"], "title": "Toronto Dominion Bank (TD.TO) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Net Revenue<br>$57.2B (100.0%)", "Canadian Personal and Commercial Banking<br>$19.1B (33.4%)", "U.S. Retail<br>$13.2B (23.1%)", "Wealth Management and Insurance<br>$13.1B (22.8%)", "Wholesale Banking<br>$7.0B (12.3%)", "Corporate<br>$4.8B (8.4%)", "Provision for Credit Losses<br>$4.3B (7.4%)", "Revenue after Provision<br>$53.0B (92.6%)", "Personnel<br>$16.7B (29.2%)", "Other NIE<br>$25.4B (44.4%)", "Pre-tax Income<br>$10.8B (18.9%)", "Income Tax<br>$2.7B (4.7%)", "Net Income<br>$8.8B (15.5%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#d62728", "#2ca02c", "#e6550d", "#fd8d3c", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.35, 0.35, 0.62, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.85, 0.35, 0.04, 0.9, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 7, 7, 7, 10, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12], "link_values": [19086871450.000843, 13225784143.196642, 13054108391.903051, 7027132156.882574, 4829103858.016888, 4253000000.0, 52970000000.0, 16733000000.0, 25407000000.0, 10830000000.0, 2526968698.517298, 8303031301.482702], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(214,39,40,0.4)", "rgba(44,160,44,0.4)", "rgba(230,85,13,0.4)", "rgba(253,141,60,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Canadian Personal and Commercial Banking (33.4%)", "U.S. Retail (23.1%)", "Wealth Management and Insurance (22.8%)", "Wholesale Banking (12.3%)", "Corporate (8.4%)", "Provision (7.4%)", "Revenue after Provision (92.6%)", "Personnel (29.2%)", "Other Non-Interest Expenses", "Pre-tax Income (18.9%)", "Income Tax", "Net Income (15.5%)"], "title": "Toronto Dominion Bank (TD.TO) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Net Revenue<br>$50.5B (100.0%)", "Canadian Personal and Commercial Banking<br>$16.7B (33.1%)", "U.S. Retail<br>$13.2B (26.1%)", "Wealth Management and Insurance<br>$10.3B (20.4%)", "Wholesale Banking<br>$5.3B (10.5%)", "Corporate<br>$4.9B (9.8%)", "Provision for Credit Losses<br>$2.9B (5.8%)", "Revenue after Provision<br>$47.6B (94.2%)", "Personnel<br>$15.8B (31.2%)", "Other NIE<br>$18.7B (37.1%)", "Pre-tax Income<br>$13.1B (25.9%)", "Income Tax<br>$3.2B (6.3%)", "Net Income<br>$10.8B (21.4%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#d62728", "#2ca02c", "#e6550d", "#fd8d3c", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.0, 0.0, 0.35, 0.35, 0.62, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.85, 0.35, 0.04, 0.9, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 7, 7, 7, 10, 10], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12], "link_values": [16735039609.155886, 13194706667.872976, 10305794987.786121, 5315524400.615217, 4940934334.5698, 2933000000.0, 47559000000.0, 15753000000.0, 18720000000.0, 13086000000.0, 2971788387.096774, 10114211612.903227], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(214,39,40,0.4)", "rgba(44,160,44,0.4)", "rgba(230,85,13,0.4)", "rgba(253,141,60,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Canadian Personal and Commercial Banking (33.1%)", "U.S. Retail (26.1%)", "Wealth Management and Insurance (20.4%)", "Wholesale Banking (10.5%)", "Corporate (9.8%)", "Provision (5.8%)", "Revenue after Provision (94.2%)", "Personnel (31.2%)", "Other Non-Interest Expenses", "Pre-tax Income (25.9%)", "Income Tax", "Net Income (21.4%)"], "title": "Toronto Dominion Bank (TD.TO) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Toronto Dominion Bank (TD.TO) Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Toronto Dominion Bank (TD) operates through several key business segments, which collectively contribute to its total revenue. For the fiscal year 2025, TD reported total revenue of $67.78 billion, with the following segment contributions:</p>
+<ul>
+<li><strong>Canadian Personal and Commercial Banking</strong>: $20.66 billion</li>
+<li><strong>U.S. Retail</strong>: $12.35 billion</li>
+<li><strong>Wealth Management and Insurance</strong>: $14.54 billion</li>
+<li><strong>Corporate</strong>: $11.82 billion</li>
+<li><strong>Wholesale Banking</strong>: $8.40 billion</li>
+</ul>
+<p>The revenue mix has evolved significantly over the past three years. In FY2023, total revenue was $50.49 billion, with Canadian Personal and Commercial Banking generating $16.74 billion, and U.S. Retail contributing $13.19 billion. By FY2024, total revenue increased to $57.22 billion, with notable growth in Wealth Management and Insurance, which rose from $10.31 billion in FY2023 to $13.05 billion in FY2024. This upward trend continued into FY2025, where total revenue reached $67.78 billion, driven by strong performances across all segments, particularly in Canadian Personal and Commercial Banking and Wealth Management.</p>
+<p>Key products and services driving growth include retail banking services in Canada and the U.S., wealth management solutions, and insurance products. The expansion of the U.S. Retail segment, which saw a slight increase from $13.19 billion in FY2023 to $13.23 billion in FY2024, indicates a stable growth trajectory in this market.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>TD's profitability is reflected in its gross and operating margins. For FY2025, the bank achieved a gross margin of 93.4% and an operating margin of 34.9%. In comparison, FY2024 saw a gross margin of 92.6% and an operating margin of 18.9%, while FY2023 had a gross margin of 94.2% and an operating margin of 25.9%. The fluctuations in margins suggest a dynamic operating environment, with significant improvements in operating income in FY2025, which reached $23.64 billion, compared to $10.83 billion in FY2024 and $13.09 billion in FY2023.</p>
+<p>Major cost drivers for TD include Selling, General and Administrative (SG&amp;A) expenses, which totaled $33.54 billion in FY2025, up from $35.49 billion in FY2024 and $30.77 billion in FY2023. The increase in SG&amp;A expenses, despite rising revenues, indicates a focus on scaling operations and enhancing service offerings. The absence of R&amp;D expenses suggests that TD's growth strategy is primarily focused on operational efficiency and market expansion rather than product innovation.</p>
+<p>Operating leverage is evident as TD has managed to increase its operating income significantly while controlling costs. The substantial rise in operating income from FY2024 to FY2025, despite a slight increase in SG&amp;A expenses, indicates improved efficiency and profitability.</p>
+<h2>Business Model Summary</h2>
+<p>Toronto Dominion Bank effectively converts revenue into earnings through a diversified business model that leverages its strong presence in both Canadian and U.S. markets. The bank's ability to generate high gross margins, consistently above 90%, reflects its operational efficiency and pricing power in its core banking services.</p>
+<p>The competitive positioning of TD is reinforced by its segment structure, which allows it to capitalize on various revenue streams. The growth in Wealth Management and Insurance, alongside stable contributions from retail banking, highlights the bank's strategic focus on diversifying its income sources. Notably, the Corporate segment's revenue surged from $4.83 billion in FY2024 to $11.82 billion in FY2025, indicating a significant shift in its contribution to overall revenue.</p>
+<p>In summary, TD's business model is characterized by a strong revenue-generating capacity across multiple segments, effective cost management, and a focus on operational efficiency, positioning it well for sustained growth in the competitive banking landscape. The notable shifts in segment mix and margin profiles suggest a proactive approach to adapting to market conditions and customer needs.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Net Revenue</td><td style="text-align:right">$67.78B</td><td style="text-align:right">$57.22B</td><td style="text-align:right" class="yoy-pos">+18.4%</td></tr><tr><td>Provision for Credit Losses</td><td style="text-align:right">$4.51B</td><td style="text-align:right">$4.25B</td><td style="text-align:right" class="yoy-pos">+5.9%</td></tr><tr class="row-divider"><td>Revenue after Provision</td><td style="text-align:right">$63.27B</td><td style="text-align:right">$52.97B</td><td style="text-align:right" class="yoy-pos">+19.4%</td></tr><tr><td>Non-Interest Expense</td><td style="text-align:right">$33.54B</td><td style="text-align:right">$35.49B</td><td style="text-align:right" class="yoy-neg">-5.5%</td></tr><tr class="row-divider"><td>Pre-tax Income</td><td style="text-align:right">$23.64B</td><td style="text-align:right">$10.83B</td><td style="text-align:right" class="yoy-pos">+118.3%</td></tr><tr class="row-margin"><td>Pre-tax Margin</td><td style="text-align:right">34.9%</td><td style="text-align:right">18.9%</td><td style="text-align:right" class="yoy-pos">+84.3%</td></tr><tr><td>Income Tax</td><td style="text-align:right">$3.41B</td><td style="text-align:right">$2.69B</td><td style="text-align:right" class="yoy-pos">+26.7%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$20.54B</td><td style="text-align:right">$8.84B</td><td style="text-align:right" class="yoy-pos">+132.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">30.3%</td><td style="text-align:right">15.5%</td><td style="text-align:right" class="yoy-pos">+96.1%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Net Revenue</td><td style="text-align:right">$12.05B</td><td style="text-align:right">$10.88B</td><td style="text-align:right" class="yoy-pos">+10.7%</td></tr><tr><td>Provision for Credit Losses</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Revenue after Provision</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Non-Interest Expense</td><td style="text-align:right">$5.06B</td><td style="text-align:right">$4.74B</td><td style="text-align:right" class="yoy-pos">+6.7%</td></tr><tr class="row-divider"><td>Pre-tax Income</td><td style="text-align:right">$3.78B</td><td style="text-align:right">$2.38B</td><td style="text-align:right" class="yoy-pos">+58.6%</td></tr><tr class="row-margin"><td>Pre-tax Margin</td><td style="text-align:right">31.3%</td><td style="text-align:right">21.9%</td><td style="text-align:right" class="yoy-pos">+43.2%</td></tr><tr><td>Income Tax</td><td style="text-align:right">$823.7M</td><td style="text-align:right">$509.7M</td><td style="text-align:right" class="yoy-pos">+61.6%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$2.95B</td><td style="text-align:right">$2.04B</td><td style="text-align:right" class="yoy-pos">+44.8%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">24.5%</td><td style="text-align:right">18.7%</td><td style="text-align:right" class="yoy-pos">+30.7%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 5/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>The absence of a standardized income statement structure in SEC 6-K filings necessitates sourcing quarterly P&L data from Yahoo Finance. However, Yahoo Finance's incomplete 3-year quarterly history has resulted in only 5 out of the expected 12 quarterly reports being available for Toronto Dominion Bank.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for Toronto Dominion Bank is missing for the periods 2025Q1, 2025Q2, 2025Q3, 2025Q4, and 2026Q1 due to the reliance on Yahoo Finance as the data source, which does not provide SEC filings for these quarters, resulting in only aggregate data being available.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$67.78B</td><td>$20.54B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$57.22B</td><td>$8.84B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$50.49B</td><td>$10.78B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$12.05B</td><td>$2.95B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$11.61B</td><td>$2.40B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$11.30B</td><td>$2.44B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$10.96B</td><td>$8.13B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$10.88B</td><td>$2.04B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $67.78B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Canadian Personal And Commercial Banking</td><td style='text-align:right'>$20.66B</td><td style='text-align:right'>30.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:30.5%'></div>  </div></td></tr><tr><td>Wealth Management And Insurance</td><td style='text-align:right'>$14.54B</td><td style='text-align:right'>21.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:21.5%'></div>  </div></td></tr><tr><td>US Retail</td><td style='text-align:right'>$12.35B</td><td style='text-align:right'>18.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:18.2%'></div>  </div></td></tr><tr><td>Corporate</td><td style='text-align:right'>$11.82B</td><td style='text-align:right'>17.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:17.4%'></div>  </div></td></tr><tr><td>Wholesale Banking</td><td style='text-align:right'>$8.40B</td><td style='text-align:right'>12.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:12.4%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $57.22B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Canadian Personal and Commercial Banking</td><td style='text-align:right'>$19.09B</td><td style='text-align:right'>33.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:33.4%'></div>  </div></td></tr><tr><td>U.S. Retail</td><td style='text-align:right'>$13.23B</td><td style='text-align:right'>23.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.1%'></div>  </div></td></tr><tr><td>Wealth Management and Insurance</td><td style='text-align:right'>$13.05B</td><td style='text-align:right'>22.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:22.8%'></div>  </div></td></tr><tr><td>Wholesale Banking</td><td style='text-align:right'>$7.03B</td><td style='text-align:right'>12.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:12.3%'></div>  </div></td></tr><tr><td>Corporate</td><td style='text-align:right'>$4.83B</td><td style='text-align:right'>8.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:8.4%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $50.49B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Canadian Personal and Commercial Banking</td><td style='text-align:right'>$16.74B</td><td style='text-align:right'>33.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:33.1%'></div>  </div></td></tr><tr><td>U.S. Retail</td><td style='text-align:right'>$13.19B</td><td style='text-align:right'>26.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:26.1%'></div>  </div></td></tr><tr><td>Wealth Management and Insurance</td><td style='text-align:right'>$10.31B</td><td style='text-align:right'>20.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:20.4%'></div>  </div></td></tr><tr><td>Wholesale Banking</td><td style='text-align:right'>$5.32B</td><td style='text-align:right'>10.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:10.5%'></div>  </div></td></tr><tr><td>Corporate</td><td style='text-align:right'>$4.94B</td><td style='text-align:right'>9.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:9.8%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Canadian Personal and Commercial Banking</td><td style='text-align:right'>—</td><td style='text-align:right'>$19.09B</td><td style='text-align:right'>$16.74B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>U.S. Retail</td><td style='text-align:right'>—</td><td style='text-align:right'>$13.23B</td><td style='text-align:right'>$13.19B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Wealth Management and Insurance</td><td style='text-align:right'>—</td><td style='text-align:right'>$13.05B</td><td style='text-align:right'>$10.31B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Corporate</td><td style='text-align:right'>$11.82B</td><td style='text-align:right'>$4.83B</td><td style='text-align:right'>$4.94B</td><td style='text-align:right;color:#28a745;font-weight:600'>+144.7%</td></tr><tr><td>Wholesale Banking</td><td style='text-align:right'>$8.40B</td><td style='text-align:right'>$7.03B</td><td style='text-align:right'>$5.32B</td><td style='text-align:right;color:#28a745;font-weight:600'>+19.5%</td></tr><tr><td>Canadian Personal And Commercial Banking</td><td style='text-align:right'>$20.66B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Wealth Management And Insurance</td><td style='text-align:right'>$14.54B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>US Retail</td><td style='text-align:right'>$12.35B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 5 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 5 quarterly reports
+</div>
+</body>
+</html>

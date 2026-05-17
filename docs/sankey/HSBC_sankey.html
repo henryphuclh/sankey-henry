@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HSBC Holdings plc (HSBC) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HSBC Holdings plc (HSBC) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>HSBC Holdings plc <span style="opacity:0.7">(HSBC)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(44,160,44,0.4)","rgba(255,127,14,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["CIB (38.9%)","Hong Kong (22.4%)","International Wealth and Premier Banking (20.5%)","UK (18.2%)","Revenue after Provision (100.0%)","Non-Interest Expense (56.2%)","Pre-tax Income (43.8%)","Income Tax","Net Income (33.9%)"],"source":[1,2,3,4,0,5,5,7,7],"target":[0,0,0,0,5,6,7,8,9],"value":[26586005072.351456,15274182745.551125,13967825511.109858,12445986670.987558,68274000000.0,38367000000.0,29907000000.0,6776000000.0,23131000000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#2ca02c","#ff7f0e","#2ca02c","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Net Revenue\u003cbr\u003e$68.3B (100.0%)","CIB\u003cbr\u003e$26.6B (38.9%)","Hong Kong\u003cbr\u003e$15.3B (22.4%)","International Wealth and Premier Banking\u003cbr\u003e$14.0B (20.5%)","UK\u003cbr\u003e$12.4B (18.2%)","Revenue after Provision\u003cbr\u003e$68.3B (100.0%)","Non-Interest Expense\u003cbr\u003e$38.4B (56.2%)","Pre-tax Income\u003cbr\u003e$29.9B (43.8%)","Income Tax\u003cbr\u003e$6.8B (9.9%)","Net Income\u003cbr\u003e$23.1B (33.9%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Net Revenue<br>$68.3B (100.0%)", "CIB<br>$26.6B (38.9%)", "Hong Kong<br>$15.3B (22.4%)", "International Wealth and Premier Banking<br>$14.0B (20.5%)", "UK<br>$12.4B (18.2%)", "Revenue after Provision<br>$68.3B (100.0%)", "Non-Interest Expense<br>$38.4B (56.2%)", "Pre-tax Income<br>$29.9B (43.8%)", "Income Tax<br>$6.8B (9.9%)", "Net Income<br>$23.1B (33.9%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#2ca02c", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.0, 0.35, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.125, 0.375, 0.625, 0.875, 0.35, 0.75, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 0, 5, 5, 7, 7], "link_targets": [0, 0, 0, 0, 5, 6, 7, 8, 9], "link_values": [26586005072.351456, 15274182745.551125, 13967825511.109858, 12445986670.987558, 68274000000.0, 38367000000.0, 29907000000.0, 6776000000.0, 23131000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(44,160,44,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["CIB (38.9%)", "Hong Kong (22.4%)", "International Wealth and Premier Banking (20.5%)", "UK (18.2%)", "Revenue after Provision (100.0%)", "Non-Interest Expense (56.2%)", "Pre-tax Income (43.8%)", "Income Tax", "Net Income (33.9%)"], "title": "HSBC Holdings plc (HSBC) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Net Revenue<br>$65.9B (100.0%)", "Wealth and Personal Banking<br>$28.7B (43.5%)", "Commercial Banking<br>$21.6B (32.8%)", "Global Banking and Markets<br>$17.5B (26.6%)", "Revenue after Provision<br>$65.9B (100.0%)", "Non-Interest Expense<br>$33.5B (50.9%)", "Pre-tax Income<br>$32.3B (49.1%)", "Income Tax<br>$7.3B (11.1%)", "Net Income<br>$25.0B (38.0%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#2ca02c", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.0, 0.35, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.16666666666666666, 0.5, 0.8333333333333334, 0.35, 0.75, 0.45, 0.65, 0.5], "link_sources": [1, 2, 3, 0, 4, 4, 6, 6], "link_targets": [0, 0, 0, 4, 5, 6, 7, 8], "link_values": [27857982030.8927, 20965866367.67331, 17030151601.433987, 65854000000.0, 33545000000.0, 32309000000.0, 7310000000.0, 24999000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(44,160,44,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Wealth and Personal Banking (43.5%)", "Commercial Banking (32.8%)", "Global Banking and Markets (26.6%)", "Revenue after Provision (100.0%)", "Non-Interest Expense (50.9%)", "Pre-tax Income (49.1%)", "Income Tax", "Net Income (38.0%)"], "title": "HSBC Holdings plc (HSBC) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Net Revenue<br>$66.1B (100.0%)", "Life direct participating and investment DPF contracts<br>$50.7B (76.8%)", "Life other contracts<br>$15.3B (23.2%)", "Revenue after Provision<br>$66.1B (100.0%)", "Non-Interest Expense<br>$35.7B (54.1%)", "Pre-tax Income<br>$30.3B (45.9%)", "Income Tax<br>$5.8B (8.8%)", "Net Income<br>$24.6B (37.2%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#2ca02c", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.15, 0.0, 0.0, 0.35, 0.62, 0.78, 0.9, 1.0], "node_y": [0.5, 0.25, 0.75, 0.35, 0.75, 0.45, 0.65, 0.5], "link_sources": [1, 2, 0, 3, 3, 5, 5], "link_targets": [0, 0, 3, 4, 5, 6, 7], "link_values": [50735117308.5436, 15322882691.456396, 66058000000.0, 35710000000.0, 30348000000.0, 5789000000.0, 24559000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(44,160,44,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Life direct participating and investment DPF contracts (76.8%)", "Life other contracts (23.2%)", "Revenue after Provision (100.0%)", "Non-Interest Expense (54.1%)", "Pre-tax Income (45.9%)", "Income Tax", "Net Income (37.2%)"], "title": "HSBC Holdings plc (HSBC) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>HSBC Holdings plc Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>HSBC Holdings plc operates through several key business segments that contribute significantly to its total revenue. Over the past three years, the company has reported total revenues of $66.06 billion in FY2023, $65.85 billion in FY2024, and $68.27 billion in FY2025, indicating a slight upward trend in revenue.</p>
+<h3>Primary Business Segments</h3>
+<ol>
+<li>
+<p><strong>Wealth and Personal Banking</strong>: This segment generated $28.67 billion in FY2024, marking a significant contribution to the overall revenue mix. It reflects HSBC's focus on retail banking and wealth management services.</p>
+</li>
+<li>
+<p><strong>Commercial Banking</strong>: With revenues of $21.58 billion in FY2024, this segment plays a crucial role in serving small to medium-sized enterprises and corporate clients.</p>
+</li>
+<li>
+<p><strong>Global Banking and Markets</strong>: This segment contributed $17.53 billion in FY2024, showcasing HSBC's strength in investment banking and capital markets.</p>
+</li>
+<li>
+<p><strong>Hong Kong</strong>: In FY2025, this region alone generated $15.27 billion, highlighting its importance as a key market for HSBC.</p>
+</li>
+<li>
+<p><strong>UK</strong>: Contributing $12.45 billion in FY2025, the UK remains a vital market for HSBC, reflecting its historical roots and established customer base.</p>
+</li>
+<li>
+<p><strong>Corporate Investment Banking (CIB)</strong>: This segment generated $26.59 billion in FY2025, indicating a robust performance in corporate finance and advisory services.</p>
+</li>
+</ol>
+<h3>Revenue Mix Evolution</h3>
+<p>The revenue mix has evolved notably over the past three years. In FY2023, the revenue was primarily driven by life insurance contracts, with $50.74 billion from direct participating and investment contracts. However, in FY2024, the focus shifted towards Wealth and Personal Banking and Commercial Banking, which together accounted for a substantial portion of total revenue. By FY2025, the revenue mix diversified further, with significant contributions from CIB and regional segments like Hong Kong and the UK.</p>
+<h3>Key Growth Drivers</h3>
+<p>The growth in revenue can be attributed to HSBC's strategic focus on expanding its wealth management services, enhancing its commercial banking capabilities, and leveraging its strong presence in Asia, particularly in Hong Kong. The company's ability to adapt its offerings to meet the needs of diverse customer segments has been a critical factor in driving revenue growth.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>HSBC has maintained strong profitability metrics over the past three years, with gross margins consistently at 100%. This indicates that the company effectively converts its revenues into gross profit without significant cost of goods sold (COGS).</p>
+<h3>Operating Margins</h3>
+<ul>
+<li><strong>FY2023</strong>: Operating margin stood at 45.9%.</li>
+<li><strong>FY2024</strong>: Increased to 49.1%.</li>
+<li><strong>FY2025</strong>: Slightly decreased to 43.8%.</li>
+</ul>
+<p>The operating income has shown fluctuations, with $30.35 billion in FY2023, $32.31 billion in FY2024, and $29.91 billion in FY2025. The operating margin trends suggest that while HSBC has been able to maintain high profitability, there are variations likely due to changes in operational efficiency and cost management.</p>
+<h3>Major Cost Drivers</h3>
+<p>While specific R&amp;D and SG&amp;A expenses are not disclosed, the absence of these costs in the provided data suggests that HSBC's primary cost drivers may include operational expenses related to its banking services and compliance costs associated with regulatory requirements. The company’s ability to manage these costs effectively is crucial for maintaining its operating margins.</p>
+<h3>Operating Leverage</h3>
+<p>HSBC's operating leverage appears to be strong, as evidenced by the high operating margins relative to its revenue. The company has been able to scale its operations effectively, which is reflected in the relatively stable operating income despite fluctuations in total revenue.</p>
+<h2>Business Model Summary</h2>
+<p>HSBC converts revenue into earnings primarily through its diversified business model, which encompasses retail banking, commercial banking, and investment banking services. The company's competitive positioning is evident from its segment structure, which allows it to cater to a wide range of customer needs across different geographies.</p>
+<h3>Competitive Positioning</h3>
+<p>The segmentation into Wealth and Personal Banking, Commercial Banking, and Global Banking and Markets illustrates HSBC's comprehensive approach to financial services. This diversified structure not only mitigates risks associated with reliance on a single revenue stream but also positions the company to capitalize on growth opportunities across various markets.</p>
+<h3>Notable Shifts</h3>
+<p>The shift in revenue mix from life insurance products in FY2023 to a more balanced distribution across banking services in FY2024 and FY2025 indicates a strategic pivot towards higher-margin banking operations. This evolution reflects HSBC's adaptability in responding to market demands and its commitment to enhancing profitability through diversified offerings. </p>
+<p>In summary, HSBC's business model is characterized by a strong focus on profitability, a diversified revenue base, and a strategic emphasis on key markets, particularly in Asia.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Net Revenue</td><td style="text-align:right">$68.27B</td><td style="text-align:right">$65.85B</td><td style="text-align:right" class="yoy-pos">+3.7%</td></tr><tr><td>Provision for Credit Losses</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Revenue after Provision</td><td style="text-align:right">$68.27B</td><td style="text-align:right">$65.85B</td><td style="text-align:right" class="yoy-pos">+3.7%</td></tr><tr><td>Non-Interest Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Pre-tax Income</td><td style="text-align:right">$29.91B</td><td style="text-align:right">$32.31B</td><td style="text-align:right" class="yoy-neg">-7.4%</td></tr><tr class="row-margin"><td>Pre-tax Margin</td><td style="text-align:right">43.8%</td><td style="text-align:right">49.1%</td><td style="text-align:right" class="yoy-neg">-10.7%</td></tr><tr><td>Income Tax</td><td style="text-align:right">-$6.78B</td><td style="text-align:right">-$7.31B</td><td style="text-align:right" class="yoy-pos">+7.3%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$23.13B</td><td style="text-align:right">$25.00B</td><td style="text-align:right" class="yoy-neg">-7.5%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">33.9%</td><td style="text-align:right">38.0%</td><td style="text-align:right" class="yoy-neg">-10.8%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Net Revenue</td><td style="text-align:right">$19.12B</td><td style="text-align:right">$17.74B</td><td style="text-align:right" class="yoy-pos">+7.8%</td></tr><tr><td>Provision for Credit Losses</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr class="row-divider"><td>Revenue after Provision</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>Non-Interest Expense</td><td style="text-align:right">$8.54B</td><td style="text-align:right">$7.91B</td><td style="text-align:right" class="yoy-pos">+8.0%</td></tr><tr class="row-divider"><td>Pre-tax Income</td><td style="text-align:right">$9.38B</td><td style="text-align:right">$9.48B</td><td style="text-align:right" class="yoy-neg">-1.1%</td></tr><tr class="row-margin"><td>Pre-tax Margin</td><td style="text-align:right">49.0%</td><td style="text-align:right">53.5%</td><td style="text-align:right" class="yoy-neg">-8.3%</td></tr><tr><td>Income Tax</td><td style="text-align:right">$1.98B</td><td style="text-align:right">$1.91B</td><td style="text-align:right" class="yoy-pos">+3.6%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$7.34B</td><td style="text-align:right">$7.32B</td><td style="text-align:right" class="yoy-pos">+0.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">38.4%</td><td style="text-align:right">41.3%</td><td style="text-align:right" class="yoy-neg">-7.0%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 5/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>The limited availability of quarterly reports for HSBC Holdings plc is due to the lack of a standardized income statement structure in SEC 6-K filings, necessitating reliance on Yahoo Finance for P&L data. Consequently, Yahoo Finance's incomplete 3-year quarterly history has resulted in only 5 periods being accessible.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for HSBC Holdings plc is missing for the periods 2025Q1, 2025Q2, 2025Q3, 2025Q4, and 2026Q1 due to the company's reliance on Yahoo Finance as the data source, which does not provide SEC filings for these quarters, resulting in only aggregate data being available.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$68.27B</td><td>$23.13B</td><td>100%</td><td>4</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$65.85B</td><td>$25.00B</td><td>100%</td><td>3</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$66.06B</td><td>$24.56B</td><td>100%</td><td>2</td><td>100%</td><td>100%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$19.12B</td><td>$7.34B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$12.93B</td><td>$4.94B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$17.90B</td><td>$5.28B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$17.66B</td><td>$4.73B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$17.74B</td><td>$7.32B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $68.27B revenue across 4 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>CIB</td><td style='text-align:right'>$26.59B</td><td style='text-align:right'>38.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:38.9%'></div>  </div></td></tr><tr><td>Hong Kong</td><td style='text-align:right'>$15.27B</td><td style='text-align:right'>22.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:22.4%'></div>  </div></td></tr><tr><td>International Wealth and Premier Banking</td><td style='text-align:right'>$13.97B</td><td style='text-align:right'>20.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:20.5%'></div>  </div></td></tr><tr><td>UK</td><td style='text-align:right'>$12.45B</td><td style='text-align:right'>18.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:18.2%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $65.85B revenue across 3 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Wealth and Personal Banking</td><td style='text-align:right'>$28.67B</td><td style='text-align:right'>43.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:43.5%'></div>  </div></td></tr><tr><td>Commercial Banking</td><td style='text-align:right'>$21.58B</td><td style='text-align:right'>32.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:32.8%'></div>  </div></td></tr><tr><td>Global Banking and Markets</td><td style='text-align:right'>$17.53B</td><td style='text-align:right'>26.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:26.6%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $66.06B revenue across 2 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Life direct participating and investment DPF contracts</td><td style='text-align:right'>$50.74B</td><td style='text-align:right'>76.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:76.8%'></div>  </div></td></tr><tr><td>Life other contracts</td><td style='text-align:right'>$15.32B</td><td style='text-align:right'>23.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:23.2%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Life direct participating and investment DPF contracts</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$50.74B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Wealth and Personal Banking</td><td style='text-align:right'>—</td><td style='text-align:right'>$28.67B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>CIB</td><td style='text-align:right'>$26.59B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Commercial Banking</td><td style='text-align:right'>—</td><td style='text-align:right'>$21.58B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Global Banking and Markets</td><td style='text-align:right'>—</td><td style='text-align:right'>$17.53B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Life other contracts</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$15.32B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Hong Kong</td><td style='text-align:right'>$15.27B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>International Wealth and Premier Banking</td><td style='text-align:right'>$13.97B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>UK</td><td style='text-align:right'>$12.45B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 5 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 5 quarterly reports
+</div>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Sankey — Company Index</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1200px; margin: 0 auto; padding: 24px; background: #f5f5f5; }
+  h1 { color: #1a1a2e; margin-bottom: 4px; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 20px; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  a { color: #1a1a2e; font-weight: 600; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  input { padding: 8px 12px; border: 1px solid #ccc; border-radius: 6px;
+           font-size: 13px; width: 280px; margin-bottom: 14px; }
+</style>
+</head>
+<body>
+<h1>Financial Sankey — Company Index</h1>
+<p class="subtitle">Interactive Sankey flow diagrams for 98 global companies · Data: SEC EDGAR + Yahoo Finance</p>
+<div class="section">
+  <input type="text" id="search" placeholder="Search company or ticker..." oninput="filterTable()">
+  <table id="tbl">
+  <thead><tr>
+    <th>Company</th><th>Ticker</th><th>Sector</th><th>Source</th>
+    <th style="text-align:center">Annual</th>
+    <th style="text-align:center">Quarterly</th>
+    <th style="text-align:center">Confidence</th>
+  </tr></thead>
+  <tbody><tr><td><a href="sankey/000660.KS_sankey.html">SK Hynix Inc.</a></td><td style="color:#666">000660.KS</td><td>standard</td><td>INTL_YAHOO</td><td style="text-align:center">3</td><td style="text-align:center">6</td><td style="text-align:center">55%</td></tr>
+<tr><td><a href="sankey/005930.KS_sankey.html">Samsung Electronics</a></td><td style="color:#666">005930.KS</td><td>standard</td><td>INTL_YAHOO</td><td style="text-align:center">3</td><td style="text-align:center">6</td><td style="text-align:center">55%</td></tr>
+<tr><td><a href="sankey/6758.T_sankey.html">Sony Group Corporation</a></td><td style="color:#666">6758.T</td><td>standard</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/8306.T_sankey.html">Mitsubishi UFJ Financial</a></td><td style="color:#666">8306.T</td><td>financial</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/9988.HK_sankey.html">Alibaba Group Holding</a></td><td style="color:#666">9988.HK</td><td>standard</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/AAPL_sankey.html">Apple Inc.</a></td><td style="color:#666">AAPL</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/ABBV_sankey.html">AbbVie Inc.</a></td><td style="color:#666">ABBV</td><td>pharma</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/ABT_sankey.html">Abbott Laboratories</a></td><td style="color:#666">ABT</td><td>pharma</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/ACN_sankey.html">Accenture plc</a></td><td style="color:#666">ACN</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/ALV.DE_sankey.html">Allianz SE</a></td><td style="color:#666">ALV.DE</td><td>financial</td><td>INTL_YAHOO</td><td style="text-align:center">3</td><td style="text-align:center">6</td><td style="text-align:center">55%</td></tr>
+<tr><td><a href="sankey/AMAT_sankey.html">Applied Materials Inc.</a></td><td style="color:#666">AMAT</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/AMD_sankey.html">AMD Inc.</a></td><td style="color:#666">AMD</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/AMGN_sankey.html">Amgen Inc.</a></td><td style="color:#666">AMGN</td><td>pharma</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/AMZN_sankey.html">Amazon.com Inc.</a></td><td style="color:#666">AMZN</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/APH_sankey.html">Amphenol Corp.</a></td><td style="color:#666">APH</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/APP_sankey.html">AppLovin Corp.</a></td><td style="color:#666">APP</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/ASML_sankey.html">ASML Holding NV</a></td><td style="color:#666">ASML</td><td>standard</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/AVGO_sankey.html">Broadcom Inc.</a></td><td style="color:#666">AVGO</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/AXP_sankey.html">American Express</a></td><td style="color:#666">AXP</td><td>financial</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/AZN_sankey.html">AstraZeneca PLC</a></td><td style="color:#666">AZN</td><td>pharma</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/BA_sankey.html">Boeing Company</a></td><td style="color:#666">BA</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/BAC_sankey.html">Bank of America Corp.</a></td><td style="color:#666">BAC</td><td>financial</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/BKNG_sankey.html">Booking Holdings Inc.</a></td><td style="color:#666">BKNG</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">92%</td></tr>
+<tr><td><a href="sankey/BLK_sankey.html">BlackRock Inc.</a></td><td style="color:#666">BLK</td><td>financial</td><td>US_SEC</td><td style="text-align:center">2</td><td style="text-align:center">7</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/BRK-B_sankey.html">Berkshire Hathaway Inc.</a></td><td style="color:#666">BRK-B</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/C_sankey.html">Citigroup Inc.</a></td><td style="color:#666">C</td><td>financial</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/CAT_sankey.html">Caterpillar Inc.</a></td><td style="color:#666">CAT</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/CBA.AX_sankey.html">Commonwealth Bank of Australia</a></td><td style="color:#666">CBA.AX</td><td>financial</td><td>INTL_YAHOO</td><td style="text-align:center">3</td><td style="text-align:center">0</td><td style="text-align:center">55%</td></tr>
+<tr><td><a href="sankey/COST_sankey.html">Costco Wholesale Corporation</a></td><td style="color:#666">COST</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/CRM_sankey.html">Salesforce Inc.</a></td><td style="color:#666">CRM</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/CSCO_sankey.html">Cisco Systems Inc.</a></td><td style="color:#666">CSCO</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/CVX_sankey.html">Chevron Corporation</a></td><td style="color:#666">CVX</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/DIS_sankey.html">Walt Disney Company</a></td><td style="color:#666">DIS</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/GE_sankey.html">GE Aerospace</a></td><td style="color:#666">GE</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/GEV_sankey.html">GE Vernova Inc.</a></td><td style="color:#666">GEV</td><td>standard</td><td>US_SEC</td><td style="text-align:center">2</td><td style="text-align:center">8</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/GOOG_sankey.html">Alphabet Inc. (Class C)</a></td><td style="color:#666">GOOG</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/GOOGL_sankey.html">Alphabet Inc. (Class A)</a></td><td style="color:#666">GOOGL</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/GS_sankey.html">Goldman Sachs Group Inc.</a></td><td style="color:#666">GS</td><td>financial</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/HD_sankey.html">Home Depot Inc.</a></td><td style="color:#666">HD</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/HSBC_sankey.html">HSBC Holdings plc</a></td><td style="color:#666">HSBC</td><td>financial</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/IBM_sankey.html">International Business Machines</a></td><td style="color:#666">IBM</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/INTC_sankey.html">Intel Corporation</a></td><td style="color:#666">INTC</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">9</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/INTU_sankey.html">Intuit Inc.</a></td><td style="color:#666">INTU</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/ISRG_sankey.html">Intuitive Surgical Inc.</a></td><td style="color:#666">ISRG</td><td>pharma</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/JNJ_sankey.html">Johnson & Johnson</a></td><td style="color:#666">JNJ</td><td>pharma</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/JPM_sankey.html">JPMorgan Chase & Co.</a></td><td style="color:#666">JPM</td><td>financial</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/KLAC_sankey.html">KLA Corporation</a></td><td style="color:#666">KLAC</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/KO_sankey.html">Coca-Cola Company</a></td><td style="color:#666">KO</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/LIN_sankey.html">Linde plc</a></td><td style="color:#666">LIN</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/LLY_sankey.html">Eli Lilly and Company</a></td><td style="color:#666">LLY</td><td>pharma</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/LRCX_sankey.html">Lam Research Corp.</a></td><td style="color:#666">LRCX</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/MA_sankey.html">Mastercard Incorporated</a></td><td style="color:#666">MA</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/MC.PA_sankey.html">LVMH Moët Hennessy</a></td><td style="color:#666">MC.PA</td><td>standard</td><td>INTL_YAHOO</td><td style="text-align:center">3</td><td style="text-align:center">0</td><td style="text-align:center">55%</td></tr>
+<tr><td><a href="sankey/MCD_sankey.html">McDonald's Corporation</a></td><td style="color:#666">MCD</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/META_sankey.html">Meta Platforms Inc.</a></td><td style="color:#666">META</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/MRK_sankey.html">Merck & Co. Inc.</a></td><td style="color:#666">MRK</td><td>pharma</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/MS_sankey.html">Morgan Stanley</a></td><td style="color:#666">MS</td><td>financial</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/MSFT_sankey.html">Microsoft Corp</a></td><td style="color:#666">MSFT</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/MU_sankey.html">Micron Technology</a></td><td style="color:#666">MU</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/NEE_sankey.html">NextEra Energy Inc.</a></td><td style="color:#666">NEE</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/NESN.SW_sankey.html">Nestlé S.A.</a></td><td style="color:#666">NESN.SW</td><td>standard</td><td>INTL_YAHOO</td><td style="text-align:center">3</td><td style="text-align:center">0</td><td style="text-align:center">55%</td></tr>
+<tr><td><a href="sankey/NFLX_sankey.html">Netflix Inc.</a></td><td style="color:#666">NFLX</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/NOVO-B.CO_sankey.html">Novo Nordisk A/S</a></td><td style="color:#666">NOVO-B.CO</td><td>pharma</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/NOW_sankey.html">ServiceNow Inc.</a></td><td style="color:#666">NOW</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/NVDA_sankey.html">NVIDIA Corp</a></td><td style="color:#666">NVDA</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/NVS_sankey.html">Novartis AG</a></td><td style="color:#666">NVS</td><td>pharma</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/ORCL_sankey.html">Oracle Corporation</a></td><td style="color:#666">ORCL</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/PEP_sankey.html">PepsiCo Inc.</a></td><td style="color:#666">PEP</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/PG_sankey.html">Procter & Gamble Co.</a></td><td style="color:#666">PG</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/PLTR_sankey.html">Palantir Technologies</a></td><td style="color:#666">PLTR</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/PM_sankey.html">Philip Morris International</a></td><td style="color:#666">PM</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/QCOM_sankey.html">Qualcomm Incorporated</a></td><td style="color:#666">QCOM</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/RHHBY_sankey.html">Roche Holding AG</a></td><td style="color:#666">RHHBY</td><td>pharma</td><td>INTL_YAHOO</td><td style="text-align:center">3</td><td style="text-align:center">0</td><td style="text-align:center">55%</td></tr>
+<tr><td><a href="sankey/RTX_sankey.html">RTX Corporation</a></td><td style="color:#666">RTX</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/RY.TO_sankey.html">Royal Bank of Canada</a></td><td style="color:#666">RY.TO</td><td>financial</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/SAN.MC_sankey.html">Banco Santander</a></td><td style="color:#666">SAN.MC</td><td>financial</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/SAP.DE_sankey.html">SAP SE</a></td><td style="color:#666">SAP.DE</td><td>standard</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/SCHW_sankey.html">Charles Schwab Corp.</a></td><td style="color:#666">SCHW</td><td>financial</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/SHEL.L_sankey.html">Shell plc</a></td><td style="color:#666">SHEL.L</td><td>standard</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/SHOP.TO_sankey.html">Shopify Inc.</a></td><td style="color:#666">SHOP.TO</td><td>standard</td><td>US_SEC</td><td style="text-align:center">2</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/SIE.DE_sankey.html">Siemens AG</a></td><td style="color:#666">SIE.DE</td><td>standard</td><td>INTL_YAHOO</td><td style="text-align:center">3</td><td style="text-align:center">6</td><td style="text-align:center">55%</td></tr>
+<tr><td><a href="sankey/SPGI_sankey.html">S&P Global Inc.</a></td><td style="color:#666">SPGI</td><td>financial</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/T_sankey.html">AT&T Inc.</a></td><td style="color:#666">T</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/TCEHY_sankey.html">Tencent Holdings Ltd.</a></td><td style="color:#666">TCEHY</td><td>standard</td><td>INTL_YAHOO</td><td style="text-align:center">3</td><td style="text-align:center">1</td><td style="text-align:center">55%</td></tr>
+<tr><td><a href="sankey/TD.TO_sankey.html">Toronto Dominion Bank</a></td><td style="color:#666">TD.TO</td><td>financial</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/TJX_sankey.html">TJX Companies Inc.</a></td><td style="color:#666">TJX</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/TM_sankey.html">Toyota Motor Corporation</a></td><td style="color:#666">TM</td><td>standard</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/TMO_sankey.html">Thermo Fisher Scientific</a></td><td style="color:#666">TMO</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">9</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/TSLA_sankey.html">Tesla Inc.</a></td><td style="color:#666">TSLA</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/TSM_sankey.html">Taiwan Semiconductor</a></td><td style="color:#666">TSM</td><td>standard</td><td>INTL_SEC</td><td style="text-align:center">3</td><td style="text-align:center">5</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/TXN_sankey.html">Texas Instruments Inc.</a></td><td style="color:#666">TXN</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/UBER_sankey.html">Uber Technologies Inc.</a></td><td style="color:#666">UBER</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/UNH_sankey.html">UnitedHealth Group Inc.</a></td><td style="color:#666">UNH</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/V_sankey.html">Visa Inc.</a></td><td style="color:#666">V</td><td>financial</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/VZ_sankey.html">Verizon Communications</a></td><td style="color:#666">VZ</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/WFC_sankey.html">Wells Fargo & Company</a></td><td style="color:#666">WFC</td><td>financial</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/WMT_sankey.html">Walmart Inc.</a></td><td style="color:#666">WMT</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">11</td><td style="text-align:center">100%</td></tr>
+<tr><td><a href="sankey/XOM_sankey.html">Exxon Mobil Corporation</a></td><td style="color:#666">XOM</td><td>standard</td><td>US_SEC</td><td style="text-align:center">3</td><td style="text-align:center">10</td><td style="text-align:center">100%</td></tr>
+</tbody>
+  </table>
+</div>
+<script>
+function filterTable() {
+  var q = document.getElementById("search").value.toLowerCase();
+  document.querySelectorAll("#tbl tbody tr").forEach(function(row) {
+    row.style.display = row.textContent.toLowerCase().includes(q) ? "" : "none";
+  });
+}
+</script>
+</body>
+</html>

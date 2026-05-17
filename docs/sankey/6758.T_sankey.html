@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sony Group Corporation (6758.T) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sony Group Corporation (6758.T) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Sony Group Corporation <span style="opacity:0.7">(6758.T)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(198,219,239,0.4)","rgba(33,113,181,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,187,120,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Operating segments [member] - Game & Network Services (36.0%)","Operating segments [member] - Entertainment, Technology & Services (18.6%)","Operating segments [member] - Music (14.2%)","Operating segments [member] - Imaging & Sensing Solutions (13.9%)","Operating segments [member] - Pictures (11.6%)","Operating segments [member] - Financial Services (7.2%)","Gross Profit (34.4%)","COGS (65.6%)","SG&A (17.4%)","Other Operating Expenses","Operating Income (10.9%)","Interest & Other","Income Tax","Net Income (9.0%)"],"source":[1,2,3,4,5,6,0,0,7,7,7,11,11,11],"target":[0,0,0,0,0,0,7,8,9,10,11,12,13,14],"value":[29140494524.258667,15033576759.64794,11497620102.161161,11225567757.308916,9396903516.506523,5811820316.873786,28212926256.457344,53893056720.299644,14301014755.769632,4995037946.345285,8916873554.342426,821059829.7675699,1060363793.7618684,7035449930.812988]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#c6dbef","#2171b5","#2ca02c","#d62728","#ff7f0e","#ffbb78","#2ca02c","#7f7f7f","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$82.1B (100.0%)","Operating segments [member] - Game & Network Services\u003cbr\u003e$29.6B (36.0%)","Operating segments [member] - Entertainment, Technology & Services\u003cbr\u003e$15.3B (18.6%)","Operating segments [member] - Music\u003cbr\u003e$11.7B (14.2%)","Operating segments [member] - Imaging & Sensing Solutions\u003cbr\u003e$11.4B (13.9%)","Operating segments [member] - Pictures\u003cbr\u003e$9.5B (11.6%)","Operating segments [member] - Financial Services\u003cbr\u003e$5.9B (7.2%)","Gross Profit\u003cbr\u003e$28.2B (34.4%)","Cost of Revenue\u003cbr\u003e$53.9B (65.6%)","SG&A\u003cbr\u003e$14.3B (17.4%)","Other OpEx\u003cbr\u003e$5.0B (6.1%)","Operating Income\u003cbr\u003e$8.9B (10.9%)","Interest & Other\u003cbr\u003e$459M (0.6%)","Income Tax\u003cbr\u003e$1.1B (1.3%)","Net Income\u003cbr\u003e$7.3B (9.0%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$82.1B (100.0%)", "Operating segments [member] - Game & Network Services<br>$29.6B (36.0%)", "Operating segments [member] - Entertainment, Technology & Services<br>$15.3B (18.6%)", "Operating segments [member] - Music<br>$11.7B (14.2%)", "Operating segments [member] - Imaging & Sensing Solutions<br>$11.4B (13.9%)", "Operating segments [member] - Pictures<br>$9.5B (11.6%)", "Operating segments [member] - Financial Services<br>$5.9B (7.2%)", "Gross Profit<br>$28.2B (34.4%)", "Cost of Revenue<br>$53.9B (65.6%)", "SG&A<br>$14.3B (17.4%)", "Other OpEx<br>$5.0B (6.1%)", "Operating Income<br>$8.9B (10.9%)", "Interest & Other<br>$459M (0.6%)", "Income Tax<br>$1.1B (1.3%)", "Net Income<br>$7.3B (9.0%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.08333333333333333, 0.25, 0.4166666666666667, 0.5833333333333334, 0.75, 0.9166666666666666, 0.35, 0.75, 0.4, 0.6, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 0, 0, 7, 7, 7, 11, 11, 11], "link_targets": [0, 0, 0, 0, 0, 0, 7, 8, 9, 10, 11, 12, 13, 14], "link_values": [29140494524.258667, 15033576759.64794, 11497620102.161161, 11225567757.308916, 9396903516.506523, 5811820316.873786, 28212926256.457344, 53893056720.299644, 14301014755.769632, 4995037946.345285, 8916873554.342426, 821059829.7675699, 1060363793.7618684, 7035449930.812988], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Operating segments [member] - Game & Network Services (36.0%)", "Operating segments [member] - Entertainment, Technology & Services (18.6%)", "Operating segments [member] - Music (14.2%)", "Operating segments [member] - Imaging & Sensing Solutions (13.9%)", "Operating segments [member] - Pictures (11.6%)", "Operating segments [member] - Financial Services (7.2%)", "Gross Profit (34.4%)", "COGS (65.6%)", "SG&A (17.4%)", "Other Operating Expenses", "Operating Income (10.9%)", "Interest & Other", "Income Tax", "Net Income (9.0%)"], "title": "Sony Group Corporation (6758.T) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$82.5B (100.0%)", "Operating segments [member] - Game & Network Services<br>$27.0B (32.8%)", "Operating segments [member] - Entertainment, Technology & Services<br>$15.5B (18.8%)", "Operating segments [member] - Financial Services<br>$11.2B (13.6%)", "Operating segments [member] - Music<br>$10.3B (12.4%)", "Operating segments [member] - Imaging & Sensing Solutions<br>$10.2B (12.3%)", "Operating segments [member] - Pictures<br>$9.5B (11.5%)", "Gross Profit<br>$31.2B (37.9%)", "Cost of Revenue<br>$51.3B (62.1%)", "SG&A<br>$13.7B (16.6%)", "Other OpEx<br>$9.9B (12.0%)", "Operating Income<br>$7.7B (9.3%)", "Interest & Other<br>$417M (0.5%)", "Income Tax<br>$1.0B (1.2%)", "Net Income<br>$6.2B (7.5%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.08333333333333333, 0.25, 0.4166666666666667, 0.5833333333333334, 0.75, 0.9166666666666666, 0.35, 0.75, 0.4, 0.6, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 0, 0, 7, 7, 7, 11, 11, 11], "link_targets": [0, 0, 0, 0, 0, 0, 7, 8, 9, 10, 11, 12, 13, 14], "link_values": [26664033911.885166, 15330388436.159103, 11058354030.142645, 10114958198.875042, 10013618558.20138, 9328307676.190723, 31249489225.08303, 51260171586.371025, 13663072732.467205, 9926327948.80867, 7660088543.807157, 825096608.1145406, 972098239.3630142, 5862893696.329601], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Operating segments [member] - Game & Network Services (32.8%)", "Operating segments [member] - Entertainment, Technology & Services (18.8%)", "Operating segments [member] - Financial Services (13.6%)", "Operating segments [member] - Music (12.4%)", "Operating segments [member] - Imaging & Sensing Solutions (12.3%)", "Operating segments [member] - Pictures (11.5%)", "Gross Profit (37.9%)", "COGS (62.1%)", "SG&A (16.6%)", "Other Operating Expenses", "Operating Income (9.3%)", "Interest & Other", "Income Tax", "Net Income (7.5%)"], "title": "Sony Group Corporation (6758.T) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$69.5B (100.0%)", "Game & Network Services<br>$22.0B (31.6%)", "Entertainment, Technology & Services<br>$14.9B (21.5%)", "Financial Services<br>$8.8B (12.6%)", "Imaging & Sensing Solutions<br>$8.4B (12.2%)", "Music<br>$8.3B (12.0%)", "Pictures<br>$8.3B (11.9%)", "Gross Profit<br>$26.3B (37.8%)", "Cost of Revenue<br>$43.2B (62.2%)", "SG&A<br>$11.9B (17.1%)", "Other OpEx<br>$7.2B (10.3%)", "Operating Income<br>$7.3B (10.5%)", "Interest & Other<br>$355M (0.5%)", "Income Tax<br>$1.2B (1.8%)", "Net Income<br>$5.7B (8.2%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#2ca02c", "#d62728", "#ff7f0e", "#ffbb78", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.08333333333333333, 0.25, 0.4166666666666667, 0.5833333333333334, 0.75, 0.9166666666666666, 0.35, 0.75, 0.4, 0.6, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 0, 0, 7, 7, 7, 11, 11, 11], "link_targets": [0, 0, 0, 0, 0, 0, 7, 8, 9, 10, 11, 12, 13, 14], "link_values": [21612024030.659885, 14682527894.850035, 8625281335.746828, 8314798817.175144, 8186980281.912579, 8120506341.745873, 26305334809.855324, 43236783892.23503, 11866740742.056864, 7157624235.332215, 7280969832.466245, 695421187.0209035, 1178333898.5767834, 5407214746.868557], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Game & Network Services (31.6%)", "Entertainment, Technology & Services (21.5%)", "Financial Services (12.6%)", "Imaging & Sensing Solutions (12.2%)", "Music (12.0%)", "Pictures (11.9%)", "Gross Profit (37.8%)", "COGS (62.2%)", "SG&A (17.1%)", "Other Operating Expenses", "Operating Income (10.5%)", "Interest & Other", "Income Tax", "Net Income (8.2%)"], "title": "Sony Group Corporation (6758.T) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Sony Group Corporation Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Sony Group Corporation operates through several key segments that contribute significantly to its total revenue. For FY2025, the company reported total revenue of <strong>$82.11 billion</strong>, with the following primary segments:</p>
+<ul>
+<li><strong>Game &amp; Network Services</strong>: $29.59 billion (36% of total revenue)</li>
+<li><strong>Music</strong>: $11.68 billion (14% of total revenue)</li>
+<li><strong>Pictures</strong>: $9.54 billion (12% of total revenue)</li>
+<li><strong>Entertainment, Technology &amp; Services</strong>: $15.27 billion (19% of total revenue)</li>
+<li><strong>Imaging &amp; Sensing Solutions</strong>: $11.40 billion (14% of total revenue)</li>
+<li><strong>Financial Services</strong>: $5.90 billion (7% of total revenue)</li>
+</ul>
+<p>Over the past three years, the revenue mix has shown a notable shift, particularly in the <strong>Game &amp; Network Services</strong> segment, which has grown from <strong>$21.96 billion</strong> in FY2023 to <strong>$29.59 billion</strong> in FY2025, reflecting a robust growth trajectory. The <strong>Music</strong> segment also demonstrated growth, increasing from <strong>$8.32 billion</strong> in FY2023 to <strong>$11.68 billion</strong> in FY2025. Conversely, the <strong>Entertainment, Technology &amp; Services</strong> segment saw a slight decline from <strong>$15.55 billion</strong> in FY2024 to <strong>$15.27 billion</strong> in FY2025.</p>
+<p>Key products driving growth include the PlayStation gaming consoles and associated services, which have solidified Sony's position in the gaming industry. Additionally, the music segment benefits from a diverse catalog of artists and streaming services, while the Imaging &amp; Sensing Solutions segment capitalizes on demand from smartphone manufacturers and automotive applications.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Sony's profitability metrics indicate a healthy financial structure, with gross margins and operating margins reflecting the efficiency of its operations. For FY2025, the company reported a gross profit of <strong>$28.21 billion</strong>, resulting in a gross margin of <strong>34.4%</strong>. The operating income was <strong>$8.92 billion</strong>, yielding an operating margin of <strong>10.9%</strong>.</p>
+<p>The major cost drivers for Sony include Selling, General and Administrative (SG&amp;A) expenses, which amounted to <strong>$14.30 billion</strong> in FY2025. While R&amp;D expenses are not disclosed, they are typically significant in technology-driven segments like Imaging &amp; Sensing Solutions and Game &amp; Network Services. The cost of goods sold (COGS) is also a critical factor, particularly in the gaming and electronics segments, where product development and manufacturing costs can be substantial.</p>
+<p>Operating leverage appears to be a positive trend for Sony, as evidenced by the increase in operating income relative to revenue growth. The operating income increased from <strong>$7.28 billion</strong> in FY2023 to <strong>$8.92 billion</strong> in FY2025, despite fluctuations in revenue across segments.</p>
+<h2>Business Model Summary</h2>
+<p>Sony Group Corporation effectively converts revenue into earnings through a diversified business model that leverages its strengths across multiple segments. The company’s ability to generate significant revenue from its Game &amp; Network Services and Music segments highlights its competitive positioning in the entertainment and technology sectors.</p>
+<p>The segment structure reveals a balanced approach to revenue generation, with no single segment overwhelmingly dominating total revenue. This diversification mitigates risks associated with market fluctuations in any one area. Notably, the growth in the Game &amp; Network Services segment underscores Sony's strong foothold in the gaming industry, while the steady performance of the Music and Imaging segments showcases its adaptability and innovation.</p>
+<p>In summary, Sony's business model is characterized by a strong revenue-generating capacity across diverse segments, effective cost management, and a focus on innovation, which collectively contribute to its profitability and competitive positioning in the global market. The slight shifts in segment mix and margin profiles indicate a responsive strategy to market demands and opportunities, positioning Sony well for future growth.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$82.11B</td><td style="text-align:right">$82.51B</td><td style="text-align:right" class="yoy-neg">-0.5%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$53.89B</td><td style="text-align:right">$51.26B</td><td style="text-align:right" class="yoy-pos">+5.1%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$28.21B</td><td style="text-align:right">$31.25B</td><td style="text-align:right" class="yoy-neg">-9.7%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">34.4%</td><td style="text-align:right">37.9%</td><td style="text-align:right" class="yoy-neg">-9.3%</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$14.30B</td><td style="text-align:right">$13.66B</td><td style="text-align:right" class="yoy-pos">+4.7%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$8.92B</td><td style="text-align:right">$7.66B</td><td style="text-align:right" class="yoy-pos">+16.4%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">10.9%</td><td style="text-align:right">9.3%</td><td style="text-align:right" class="yoy-pos">+17.0%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$7.35B</td><td style="text-align:right">$6.21B</td><td style="text-align:right" class="yoy-pos">+18.3%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">9.0%</td><td style="text-align:right">7.5%</td><td style="text-align:right" class="yoy-pos">+18.9%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2025 Q4</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q4</th><th style='text-align:right'>2024 Q4</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$23.53B</td><td style="text-align:right">$23.40B</td><td style="text-align:right" class="yoy-pos">+0.5%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$16.84B</td><td style="text-align:right">$17.08B</td><td style="text-align:right" class="yoy-neg">-1.4%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$6.69B</td><td style="text-align:right">$6.32B</td><td style="text-align:right" class="yoy-pos">+5.8%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">28.4%</td><td style="text-align:right">27.0%</td><td style="text-align:right" class="yoy-pos">+5.3%</td></tr><tr><td>R&D Expense</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td><td style="text-align:right;color:#aaa">—</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$3.70B</td><td style="text-align:right">$3.65B</td><td style="text-align:right" class="yoy-pos">+1.2%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$3.23B</td><td style="text-align:right">$2.71B</td><td style="text-align:right" class="yoy-pos">+19.4%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">13.7%</td><td style="text-align:right">11.6%</td><td style="text-align:right" class="yoy-pos">+18.8%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">-$6.39B</td><td style="text-align:right">$2.37B</td><td style="text-align:right" class="yoy-neg">-369.9%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">-27.2%</td><td style="text-align:right">10.1%</td><td style="text-align:right" class="yoy-neg">-368.4%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 5/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>The limited availability of quarterly reports for Sony Group Corporation is due to the lack of a standardized income statement structure in SEC 6-K filings, necessitating reliance on Yahoo Finance for quarterly P&L data. However, Yahoo Finance does not consistently provide a complete 3-year quarterly history, leading to only 5 periods being accessible.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for Sony Group Corporation is missing for the periods 2025Q1, 2025Q2, 2025Q3, 2025Q4, and 2024Q4 due to the reliance on Yahoo Finance as the data source, which does not provide SEC filings for these quarters, resulting in only aggregate data being available.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$82.11B</td><td>$7.35B</td><td>100%</td><td>6</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$82.51B</td><td>$6.21B</td><td>100%</td><td>6</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$69.54B</td><td>$5.69B</td><td>100%</td><td>6</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$23.53B</td><td>-$6.39B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$19.69B</td><td>$2.29B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$16.61B</td><td>$1.50B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$16.67B</td><td>$1.25B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2024Q4</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$23.40B</td><td>$2.37B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $82.11B revenue across 6 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Operating segments [member] - Game & Network Services</td><td style='text-align:right'>$29.59B</td><td style='text-align:right'>36.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:36.0%'></div>  </div></td></tr><tr><td>Operating segments [member] - Entertainment, Technology & Services</td><td style='text-align:right'>$15.27B</td><td style='text-align:right'>18.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:18.6%'></div>  </div></td></tr><tr><td>Operating segments [member] - Music</td><td style='text-align:right'>$11.68B</td><td style='text-align:right'>14.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:14.2%'></div>  </div></td></tr><tr><td>Operating segments [member] - Imaging & Sensing Solutions</td><td style='text-align:right'>$11.40B</td><td style='text-align:right'>13.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:13.9%'></div>  </div></td></tr><tr><td>Operating segments [member] - Pictures</td><td style='text-align:right'>$9.54B</td><td style='text-align:right'>11.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:11.6%'></div>  </div></td></tr><tr><td>Operating segments [member] - Financial Services</td><td style='text-align:right'>$5.90B</td><td style='text-align:right'>7.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.2%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $82.51B revenue across 6 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Operating segments [member] - Game & Network Services</td><td style='text-align:right'>$27.04B</td><td style='text-align:right'>32.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:32.8%'></div>  </div></td></tr><tr><td>Operating segments [member] - Entertainment, Technology & Services</td><td style='text-align:right'>$15.55B</td><td style='text-align:right'>18.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:18.8%'></div>  </div></td></tr><tr><td>Operating segments [member] - Financial Services</td><td style='text-align:right'>$11.22B</td><td style='text-align:right'>13.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:13.6%'></div>  </div></td></tr><tr><td>Operating segments [member] - Music</td><td style='text-align:right'>$10.26B</td><td style='text-align:right'>12.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:12.4%'></div>  </div></td></tr><tr><td>Operating segments [member] - Imaging & Sensing Solutions</td><td style='text-align:right'>$10.16B</td><td style='text-align:right'>12.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:12.3%'></div>  </div></td></tr><tr><td>Operating segments [member] - Pictures</td><td style='text-align:right'>$9.46B</td><td style='text-align:right'>11.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:11.5%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $69.54B revenue across 6 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Game & Network Services</td><td style='text-align:right'>$21.96B</td><td style='text-align:right'>31.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:31.6%'></div>  </div></td></tr><tr><td>Entertainment, Technology & Services</td><td style='text-align:right'>$14.92B</td><td style='text-align:right'>21.5%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:21.5%'></div>  </div></td></tr><tr><td>Financial Services</td><td style='text-align:right'>$8.77B</td><td style='text-align:right'>12.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:12.6%'></div>  </div></td></tr><tr><td>Imaging & Sensing Solutions</td><td style='text-align:right'>$8.45B</td><td style='text-align:right'>12.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:12.2%'></div>  </div></td></tr><tr><td>Music</td><td style='text-align:right'>$8.32B</td><td style='text-align:right'>12.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:12.0%'></div>  </div></td></tr><tr><td>Pictures</td><td style='text-align:right'>$8.25B</td><td style='text-align:right'>11.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:11.9%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Operating segments [member] - Game & Network Services</td><td style='text-align:right'>$29.59B</td><td style='text-align:right'>$27.04B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+9.4%</td></tr><tr><td>Operating segments [member] - Entertainment, Technology & Services</td><td style='text-align:right'>$15.27B</td><td style='text-align:right'>$15.55B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#dc3545;font-weight:600'>-1.8%</td></tr><tr><td>Game & Network Services</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$21.96B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Operating segments [member] - Music</td><td style='text-align:right'>$11.68B</td><td style='text-align:right'>$10.26B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+13.8%</td></tr><tr><td>Operating segments [member] - Imaging & Sensing Solutions</td><td style='text-align:right'>$11.40B</td><td style='text-align:right'>$10.16B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+12.2%</td></tr><tr><td>Operating segments [member] - Pictures</td><td style='text-align:right'>$9.54B</td><td style='text-align:right'>$9.46B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+0.9%</td></tr><tr><td>Operating segments [member] - Financial Services</td><td style='text-align:right'>$5.90B</td><td style='text-align:right'>$11.22B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#dc3545;font-weight:600'>-47.4%</td></tr><tr><td>Entertainment, Technology & Services</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$14.92B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Financial Services</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$8.77B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Imaging & Sensing Solutions</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$8.45B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Music</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$8.32B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Pictures</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$8.25B</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 5 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 5 quarterly reports
+</div>
+</body>
+</html>

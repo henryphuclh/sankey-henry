@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Cisco Systems Inc. (CSCO) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cisco Systems Inc. (CSCO) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Cisco Systems Inc. <span style="opacity:0.7">(CSCO)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(198,219,239,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,127,14,0.4)","rgba(255,187,120,0.4)","rgba(44,160,44,0.4)","rgba(127,127,127,0.4)","rgba(127,127,127,0.4)","rgba(44,160,44,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Networking (50.0%)","Services (26.6%)","Security (14.3%)","Collaboration (7.3%)","Observability (1.9%)","Gross Profit (64.9%)","COGS (35.1%)","R&D (16.4%)","SG&A (24.6%)","Other Operating Expenses","Operating Income (20.8%)","Interest & Other","Income Tax","Net Income (18.0%)"],"source":[1,2,3,4,5,0,0,6,6,6,6,11,11,11],"target":[0,0,0,0,0,6,7,8,9,10,11,12,13,14],"value":[28304499602.84539,15046265581.699116,8094142869.750939,4154073323.566272,1055018622.1382804,36790000000.0,19864000000.0,9300000000.0,13958000000.0,1772000000.0,11760000000.0,1475906405.105176,852375324.9822737,9431718269.91255]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#c6dbef","#2ca02c","#d62728","#ff7f0e","#ff7f0e","#ffbb78","#2ca02c","#7f7f7f","#7f7f7f","#2ca02c"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$56.7B (100.0%)","Networking\u003cbr\u003e$28.3B (50.0%)","Services\u003cbr\u003e$15.0B (26.6%)","Security\u003cbr\u003e$8.1B (14.3%)","Collaboration\u003cbr\u003e$4.2B (7.3%)","Observability\u003cbr\u003e$1.1B (1.9%)","Gross Profit\u003cbr\u003e$36.8B (64.9%)","Cost of Revenue\u003cbr\u003e$19.9B (35.1%)","R&D\u003cbr\u003e$9.3B (16.4%)","SG&A\u003cbr\u003e$14.0B (24.6%)","Other OpEx\u003cbr\u003e$1.8B (3.1%)","Operating Income\u003cbr\u003e$11.8B (20.8%)","Interest & Other\u003cbr\u003e$1.6B (2.8%)","Income Tax\u003cbr\u003e$920M (1.6%)","Net Income\u003cbr\u003e$10.2B (18.0%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$56.7B (100.0%)", "Networking<br>$28.3B (50.0%)", "Services<br>$15.0B (26.6%)", "Security<br>$8.1B (14.3%)", "Collaboration<br>$4.2B (7.3%)", "Observability<br>$1.1B (1.9%)", "Gross Profit<br>$36.8B (64.9%)", "Cost of Revenue<br>$19.9B (35.1%)", "R&D<br>$9.3B (16.4%)", "SG&A<br>$14.0B (24.6%)", "Other OpEx<br>$1.8B (3.1%)", "Operating Income<br>$11.8B (20.8%)", "Interest & Other<br>$1.6B (2.8%)", "Income Tax<br>$920M (1.6%)", "Net Income<br>$10.2B (18.0%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#ffbb78", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.2, 0.4, 0.6, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 6, 11, 11, 11], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12, 13, 14], "link_values": [28304499602.84539, 15046265581.699116, 8094142869.750939, 4154073323.566272, 1055018622.1382804, 36790000000.0, 19864000000.0, 9300000000.0, 13958000000.0, 1772000000.0, 11760000000.0, 1475906405.105176, 852375324.9822737, 9431718269.91255], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Networking (50.0%)", "Services (26.6%)", "Security (14.3%)", "Collaboration (7.3%)", "Observability (1.9%)", "Gross Profit (64.9%)", "COGS (35.1%)", "R&D (16.4%)", "SG&A (24.6%)", "Other Operating Expenses", "Operating Income (20.8%)", "Interest & Other", "Income Tax", "Net Income (18.0%)"], "title": "Cisco Systems Inc. (CSCO) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$53.8B (100.0%)", "Subscription<br>$27.4B (50.9%)", "Services<br>$14.6B (27.0%)", "Security<br>$5.1B (9.4%)", "Collaboration<br>$4.1B (7.6%)", "Observability<br>$837M (1.6%)", "Gross Profit<br>$34.8B (64.7%)", "Cost of Revenue<br>$19.0B (35.3%)", "R&D<br>$8.0B (14.8%)", "SG&A<br>$13.2B (24.5%)", "Other OpEx<br>$1.5B (2.8%)", "Operating Income<br>$12.2B (22.6%)", "Interest & Other<br>$1.0B (1.9%)", "Income Tax<br>$1.9B (3.6%)", "Net Income<br>$10.3B (19.2%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#ffbb78", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.2, 0.4, 0.6, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 6, 11, 11, 11], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12, 13, 14], "link_values": [28353885862.765854, 15067532480.030794, 5255513906.265037, 4259296294.8705606, 866771456.0677509, 34828000000.0, 18975000000.0, 7983000000.0, 13177000000.0, 1487000000.0, 12181000000.0, 925535196.3746223, 1760908912.386707, 9494555891.23867], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Subscription (50.9%)", "Services (27.0%)", "Security (9.4%)", "Collaboration (7.6%)", "Observability (1.6%)", "Gross Profit (64.7%)", "COGS (35.3%)", "R&D (14.8%)", "SG&A (24.5%)", "Other Operating Expenses", "Operating Income (22.6%)", "Interest & Other", "Income Tax", "Net Income (19.2%)"], "title": "Cisco Systems Inc. (CSCO) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$57.0B (100.0%)", "APJC<br>$57.0B (100.0%)", "Gross Profit<br>$35.8B (62.7%)", "Cost of Revenue<br>$21.2B (37.3%)", "R&D<br>$7.6B (13.2%)", "SG&A<br>$12.4B (21.7%)", "Other OpEx<br>$813M (1.4%)", "Operating Income<br>$15.0B (26.4%)", "Interest & Other<br>$427M (0.7%)", "Income Tax<br>$2.7B (4.7%)", "Net Income<br>$12.6B (22.1%)"], "node_colors": ["#2ca02c", "#1f77b4", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#ffbb78", "#2ca02c", "#7f7f7f", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.4, 0.4, 0.6, 0.6, 0.6, 0.75, 0.87, 0.87, 1.0], "node_y": [0.5, 0.5, 0.35, 0.75, 0.2, 0.4, 0.6, 0.5, 0.35, 0.65, 0.5], "link_sources": [1, 0, 0, 2, 2, 2, 2, 7, 7, 7], "link_targets": [0, 2, 3, 4, 5, 6, 7, 8, 9, 10], "link_values": [56998000000.0, 35753000000.0, 21245000000.0, 7551000000.0, 12358000000.0, 813000000.0, 15031000000.0, 569980000.0, 2553666216.216216, 11907353783.783785], "link_colors": ["rgba(31,119,180,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["APJC (100.0%)", "Gross Profit (62.7%)", "COGS (37.3%)", "R&D (13.2%)", "SG&A (21.7%)", "Other Operating Expenses", "Operating Income (26.4%)", "Interest & Other", "Income Tax", "Net Income (22.1%)"], "title": "Cisco Systems Inc. (CSCO) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Cisco Systems Inc. Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Cisco Systems Inc. generates its revenue primarily through five key segments: Networking, Services, Security, Collaboration, and Observability. For FY2025, the total revenue reached $56.65 billion, with the Networking segment contributing the largest share at $28.30 billion, accounting for approximately 49.9% of total revenue. The Services segment followed with $15.05 billion (26.5%), while Security, Collaboration, and Observability contributed $8.09 billion (14.3%), $4.15 billion (7.3%), and $1.05 billion (1.9%), respectively.</p>
+<p>Over the past three years, Cisco's revenue mix has evolved significantly. In FY2024, the company reported total revenue of $53.80 billion, with a notable shift towards Subscription-based revenue, which generated $27.38 billion, indicating a strategic pivot towards recurring revenue models. This trend continued into FY2025, where the Networking segment remained robust, but the Services and Security segments also showed growth, with Security revenue increasing from $5.08 billion in FY2024 to $8.09 billion in FY2025.</p>
+<p>Key products driving growth include Cisco's networking hardware and software solutions, which remain foundational to its business. Additionally, the increasing demand for cybersecurity solutions has bolstered the Security segment, reflecting broader market trends towards enhanced digital security. Geographically, the APJC region has been a significant contributor, with revenue reported at $57.00 billion in FY2023, indicating strong performance in Asia-Pacific, Japan, and China.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Cisco's profitability metrics reveal a solid financial foundation. The gross margin for FY2025 was 64.9%, slightly up from 64.7% in FY2024, indicating effective cost management and pricing strategies. The operating margin, however, showed a decline from 26.4% in FY2023 to 20.8% in FY2025, primarily due to increased operating expenses, particularly in R&amp;D and SG&amp;A.</p>
+<p>R&amp;D expenses have risen from $7.55 billion in FY2023 to $9.30 billion in FY2025, reflecting Cisco's commitment to innovation and product development. SG&amp;A expenses also increased from $12.36 billion in FY2023 to $13.96 billion in FY2025, driven by higher sales and marketing efforts to support growth initiatives. The increase in these costs has impacted operating leverage, as the operating income decreased from $15.03 billion in FY2023 to $11.76 billion in FY2025, despite revenue growth.</p>
+<h2>Business Model Summary</h2>
+<p>Cisco Systems Inc. effectively converts revenue into earnings through a combination of high-margin products and services, strategic cost management, and a diversified revenue base. The company's competitive positioning is evident in its segment structure, with a strong emphasis on Networking and Services, which together account for over 76% of total revenue in FY2025. The growth in the Security segment also highlights Cisco's adaptability to market demands, positioning it favorably against competitors in the cybersecurity space.</p>
+<p>Notable shifts in the segment mix include the transition towards Subscription-based revenue, which has become a significant driver of growth. This shift not only enhances revenue predictability but also improves customer retention and engagement. The margin profile has experienced some volatility, particularly in operating margins, which have been affected by rising costs in R&amp;D and SG&amp;A. However, the overall gross margin remains robust, indicating that Cisco maintains a strong pricing power and operational efficiency.</p>
+<p>In summary, Cisco's business model is characterized by a strong focus on innovation, a diversified revenue stream, and a commitment to maintaining high profitability, despite the challenges posed by rising operational costs. The company's strategic initiatives in expanding its Security and Subscription offerings position it well for future growth in an increasingly digital and security-conscious market.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$56.65B</td><td style="text-align:right">$53.80B</td><td style="text-align:right" class="yoy-pos">+5.3%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$19.86B</td><td style="text-align:right">$18.98B</td><td style="text-align:right" class="yoy-pos">+4.7%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$36.79B</td><td style="text-align:right">$34.83B</td><td style="text-align:right" class="yoy-pos">+5.6%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">64.9%</td><td style="text-align:right">64.7%</td><td style="text-align:right" class="yoy-pos">+0.3%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$9.30B</td><td style="text-align:right">$7.98B</td><td style="text-align:right" class="yoy-pos">+16.5%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$13.96B</td><td style="text-align:right">$13.18B</td><td style="text-align:right" class="yoy-pos">+5.9%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$11.76B</td><td style="text-align:right">$12.18B</td><td style="text-align:right" class="yoy-neg">-3.5%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">20.8%</td><td style="text-align:right">22.6%</td><td style="text-align:right" class="yoy-neg">-8.3%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$10.18B</td><td style="text-align:right">$10.32B</td><td style="text-align:right" class="yoy-neg">-1.4%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">18.0%</td><td style="text-align:right">19.2%</td><td style="text-align:right" class="yoy-neg">-6.3%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q4</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q2</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2025 Q1</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$15.35B</td><td style="text-align:right">$13.99B</td><td style="text-align:right" class="yoy-pos">+9.7%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$5.38B</td><td style="text-align:right">$4.88B</td><td style="text-align:right" class="yoy-pos">+10.2%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$9.97B</td><td style="text-align:right">$9.11B</td><td style="text-align:right" class="yoy-pos">+9.5%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">65.0%</td><td style="text-align:right">65.1%</td><td style="text-align:right" class="yoy-neg">-0.2%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$2.35B</td><td style="text-align:right">$2.30B</td><td style="text-align:right" class="yoy-pos">+2.4%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$3.57B</td><td style="text-align:right">$3.42B</td><td style="text-align:right" class="yoy-pos">+4.2%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$3.78B</td><td style="text-align:right">$3.11B</td><td style="text-align:right" class="yoy-pos">+21.5%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">24.6%</td><td style="text-align:right">22.3%</td><td style="text-align:right" class="yoy-pos">+10.7%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$3.17B</td><td style="text-align:right">$2.43B</td><td style="text-align:right" class="yoy-pos">+30.8%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">20.7%</td><td style="text-align:right">17.4%</td><td style="text-align:right" class="yoy-pos">+19.2%</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q4</th><th style='text-align:right'>2024 Q4</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$14.88B</td><td style="text-align:right">$13.84B</td><td style="text-align:right" class="yoy-pos">+7.5%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$5.14B</td><td style="text-align:right">$4.72B</td><td style="text-align:right" class="yoy-pos">+8.9%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$9.74B</td><td style="text-align:right">$9.12B</td><td style="text-align:right" class="yoy-pos">+6.8%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">65.5%</td><td style="text-align:right">65.9%</td><td style="text-align:right" class="yoy-neg">-0.6%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$2.40B</td><td style="text-align:right">$2.29B</td><td style="text-align:right" class="yoy-pos">+5.0%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$3.60B</td><td style="text-align:right">$3.55B</td><td style="text-align:right" class="yoy-pos">+1.6%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$3.36B</td><td style="text-align:right">$2.36B</td><td style="text-align:right" class="yoy-pos">+42.6%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">22.6%</td><td style="text-align:right">17.0%</td><td style="text-align:right" class="yoy-pos">+32.6%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$2.86B</td><td style="text-align:right">$2.71B</td><td style="text-align:right" class="yoy-pos">+5.5%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">19.2%</td><td style="text-align:right">19.6%</td><td style="text-align:right" class="yoy-neg">-1.9%</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$14.15B</td><td style="text-align:right">$12.70B</td><td style="text-align:right" class="yoy-pos">+11.4%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$4.87B</td><td style="text-align:right">$4.43B</td><td style="text-align:right" class="yoy-pos">+10.0%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$9.28B</td><td style="text-align:right">$8.27B</td><td style="text-align:right" class="yoy-pos">+12.1%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">65.6%</td><td style="text-align:right">65.1%</td><td style="text-align:right" class="yoy-pos">+0.7%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$2.33B</td><td style="text-align:right">$1.95B</td><td style="text-align:right" class="yoy-pos">+19.9%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$3.46B</td><td style="text-align:right">$3.29B</td><td style="text-align:right" class="yoy-pos">+5.1%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$3.20B</td><td style="text-align:right">$2.19B</td><td style="text-align:right" class="yoy-pos">+46.1%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">22.6%</td><td style="text-align:right">17.2%</td><td style="text-align:right" class="yoy-pos">+31.2%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$2.49B</td><td style="text-align:right">$1.89B</td><td style="text-align:right" class="yoy-pos">+32.1%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">17.6%</td><td style="text-align:right">14.8%</td><td style="text-align:right" class="yoy-pos">+18.6%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$13.99B</td><td style="text-align:right">$12.79B</td><td style="text-align:right" class="yoy-pos">+9.4%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$4.88B</td><td style="text-align:right">$4.57B</td><td style="text-align:right" class="yoy-pos">+6.7%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$9.11B</td><td style="text-align:right">$8.22B</td><td style="text-align:right" class="yoy-pos">+10.9%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">65.1%</td><td style="text-align:right">64.2%</td><td style="text-align:right" class="yoy-pos">+1.4%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$2.30B</td><td style="text-align:right">$1.94B</td><td style="text-align:right" class="yoy-pos">+18.3%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$3.42B</td><td style="text-align:right">$3.10B</td><td style="text-align:right" class="yoy-pos">+10.5%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$3.11B</td><td style="text-align:right">$3.10B</td><td style="text-align:right" class="yoy-pos">+0.5%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">22.3%</td><td style="text-align:right">24.2%</td><td style="text-align:right" class="yoy-neg">-8.1%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$2.43B</td><td style="text-align:right">$2.63B</td><td style="text-align:right" class="yoy-neg">-7.8%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">17.4%</td><td style="text-align:right">20.6%</td><td style="text-align:right" class="yoy-neg">-15.7%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 10/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>SEC 10-Q quarterly filings cover only the first three fiscal quarters; the fourth fiscal quarter (fiscal year-end) is not filed as a standalone quarterly report and must be sourced from Yahoo Finance. Yahoo Finance's quarterly income history is limited to approximately the most recent five quarters, so fiscal year-end quarter data for periods beyond that window is unavailable.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for Cisco Systems Inc. is missing for the period 2025Q3 due to the company's disclosure practice, which may not provide detailed segment data for certain quarterly reports when using the Yahoo extraction method. This limitation results in incomplete segment information for that specific quarter.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$56.65B</td><td>$10.18B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$53.80B</td><td>$10.32B</td><td>100%</td><td>5</td><td>97%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td><td>$57.00B</td><td>$12.61B</td><td>100%</td><td>1</td><td>100%</td><td>100%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$15.35B</td><td>$3.17B</td><td>100%</td><td>5</td><td>97%</td><td>100%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$14.88B</td><td>$2.86B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$14.67B</td><td>$2.55B</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$14.15B</td><td>$2.49B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$13.99B</td><td>$2.43B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q4</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$13.84B</td><td>$2.71B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td><td>$12.70B</td><td>$1.89B</td><td>100%</td><td>1</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td><td>$12.79B</td><td>$2.63B</td><td>100%</td><td>1</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q4</strong></td><td>Quarterly</td><td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td><td>$14.67B</td><td>$3.64B</td><td>100%</td><td>1</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q2</strong></td><td>Quarterly</td><td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td><td>$14.57B</td><td>$3.21B</td><td>100%</td><td>1</td><td>100%</td><td>100%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $56.65B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Networking</td><td style='text-align:right'>$28.30B</td><td style='text-align:right'>50.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:50.0%'></div>  </div></td></tr><tr><td>Services</td><td style='text-align:right'>$15.05B</td><td style='text-align:right'>26.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:26.6%'></div>  </div></td></tr><tr><td>Security</td><td style='text-align:right'>$8.09B</td><td style='text-align:right'>14.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:14.3%'></div>  </div></td></tr><tr><td>Collaboration</td><td style='text-align:right'>$4.15B</td><td style='text-align:right'>7.3%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.3%'></div>  </div></td></tr><tr><td>Observability</td><td style='text-align:right'>$1.05B</td><td style='text-align:right'>1.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.9%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $53.80B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Subscription</td><td style='text-align:right'>$27.38B</td><td style='text-align:right'>50.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:50.9%'></div>  </div></td></tr><tr><td>Services</td><td style='text-align:right'>$14.55B</td><td style='text-align:right'>27.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:27.0%'></div>  </div></td></tr><tr><td>Security</td><td style='text-align:right'>$5.08B</td><td style='text-align:right'>9.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:9.4%'></div>  </div></td></tr><tr><td>Collaboration</td><td style='text-align:right'>$4.11B</td><td style='text-align:right'>7.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:7.6%'></div>  </div></td></tr><tr><td>Observability</td><td style='text-align:right'>$837.0M</td><td style='text-align:right'>1.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.6%'></div>  </div></td></tr><tr style='color:#888'><td><em>Other / Unallocated</em></td><td style='text-align:right'>$1.85B</td><td style='text-align:right'>3.4%</td><td></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $57.00B revenue across 1 segments
+    &nbsp;<span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>APJC</td><td style='text-align:right'>$57.00B</td><td style='text-align:right'>100.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:100.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>APJC</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$57.00B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Services</td><td style='text-align:right'>$15.05B</td><td style='text-align:right'>$14.55B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+3.4%</td></tr><tr><td>Networking</td><td style='text-align:right'>$28.30B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Subscription</td><td style='text-align:right'>—</td><td style='text-align:right'>$27.38B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Security</td><td style='text-align:right'>$8.09B</td><td style='text-align:right'>$5.08B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+59.5%</td></tr><tr><td>Collaboration</td><td style='text-align:right'>$4.15B</td><td style='text-align:right'>$4.11B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+1.0%</td></tr><tr><td>Observability</td><td style='text-align:right'>$1.05B</td><td style='text-align:right'>$837.0M</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+26.0%</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 10 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 10 quarterly reports
+</div>
+</body>
+</html>

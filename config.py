@@ -8,7 +8,7 @@ load_dotenv(override=True)
 BASE_DIR   = Path(__file__).parent
 DATA_DIR   = BASE_DIR / "data"
 CACHE_DIR  = DATA_DIR / "cache"
-OUTPUT_DIR = BASE_DIR / "output" / "sankey"
+OUTPUT_DIR = BASE_DIR / "docs" / "sankey"
 EXCEL_PATH = BASE_DIR / "Valuation_Top100_2026-04-18.xlsx"
 
 # ── API Keys ──────────────────────────────────────────────────────────────────

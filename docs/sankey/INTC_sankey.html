@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Intel Corporation (INTC) — Financial Analysis</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          max-width: 1600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+  .chart-container, #sankey-chart { width: 100% !important; }
+  #sankey-chart .plot-container, #sankey-chart .svg-container { width: 100% !important; }
+  h2, h3 { color: #1a1a2e; }
+  .section { background: white; border-radius: 8px; padding: 20px 24px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .section h3 { margin-top: 0; border-bottom: 2px solid #1a1a2e; padding-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  th { background: #1a1a2e; color: white; padding: 8px 12px; text-align: left; }
+  td { padding: 7px 12px; border-bottom: 1px solid #eee; }
+  tr:hover { background: #f9f9f9; }
+  .analysis-text p { line-height: 1.7; color: #333; }
+  .analysis-text h2 { font-size: 1.1rem; color: #1a1a2e; margin-top: 1.4em; }
+  .footer { font-size: 11px; color: #999; text-align: center; margin-top: 20px; }
+  .is-toggle { display:flex; gap:0; margin-bottom:14px; }
+  .is-toggle button { padding:6px 18px; font-size:13px; font-weight:600;
+                       border:1px solid #1a1a2e; cursor:pointer; background:white;
+                       color:#1a1a2e; transition:all .15s; }
+  .is-toggle button:first-child { border-radius:6px 0 0 6px; }
+  .is-toggle button:last-child  { border-radius:0 6px 6px 0; }
+  .is-toggle button.active { background:#1a1a2e; color:white; }
+  .is-panel { display:none; }
+  .is-panel.active { display:block; }
+  .yoy-pos { color:#28a745; font-weight:600; }
+  .yoy-neg { color:#dc3545; font-weight:600; }
+  .row-divider td { border-top:2px solid #dee2e6; font-weight:600;
+                     background:#f8f9fa !important; color:#1a1a2e; }
+  .row-margin td { color:#555; font-style:italic; }
+</style>
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intel Corporation (INTC) — Sankey Financial Flow</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 16px; background: #f5f5f5; }
+  .header { background: #1a1a2e; color: white; padding: 16px 24px; border-radius: 8px;
+             margin-bottom: 16px; display: flex; align-items: center; gap: 16px; }
+  .header h1 { margin: 0; font-size: 1.4rem; }
+  .controls { background: white; padding: 12px 20px; border-radius: 8px;
+               margin-bottom: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .controls label { font-weight: 600; margin-right: 10px; color: #333; }
+  select { padding: 6px 14px; font-size: 14px; border-radius: 6px;
+            border: 1px solid #ccc; cursor: pointer; }
+  .chart-container { background: white; border-radius: 8px;
+                      box-shadow: 0 1px 4px rgba(0,0,0,0.08); padding: 8px; }
+  .badge { background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
+            border-radius: 10px; }
+  .source-note { font-size: 11px; color: #888; margin-top: 8px; }
+  .zoom-controls { display:flex; align-items:center; gap:6px; margin-left:auto; }
+  .zoom-btn { background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }
+  .zoom-btn:hover { background:#f0f0f0; }
+  .zoom-pct { font-size:12px; color:#666; min-width:40px; text-align:center; }
+  .zoom-hint { font-size:11px; color:#999; }
+  #zoom-wrapper { overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }
+  #zoom-target { transform-origin:0 0; width:100%; height:100%; }
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <h1>Intel Corporation <span style="opacity:0.7">(INTC)</span></h1>
+    <div class="source-note">Data sources: SEC EDGAR (10-K/10-Q/20-F) + Yahoo Finance</div>
+  </div>
+</div>
+
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      <option value="FY2025" selected>FY2025</option>
+<option value="FY2024">FY2024</option>
+<option value="FY2023">FY2023</option>
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
+</div>
+
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      <div>                        <script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script>
+        <script charset="utf-8" src="https://cdn.plot.ly/plotly-3.1.0.min.js" integrity="sha256-Ei4740bWZhaUTQuD6q9yQlgVCMPBz6CZWhevDYPv93A=" crossorigin="anonymous"></script>                <div id="sankey-chart" class="plotly-graph-div" style="height:780px; width:100%;"></div>            <script type="text/javascript">                window.PLOTLYENV=window.PLOTLYENV || {};                                if (document.getElementById("sankey-chart")) {                    Plotly.newPlot(                        "sankey-chart",                        [{"arrangement":"snap","link":{"color":["rgba(31,119,180,0.4)","rgba(66,146,198,0.4)","rgba(107,174,214,0.4)","rgba(158,202,225,0.4)","rgba(198,219,239,0.4)","rgba(44,160,44,0.4)","rgba(214,39,40,0.4)","rgba(255,127,14,0.4)","rgba(255,127,14,0.4)","rgba(255,187,120,0.4)","rgba(214,39,40,0.4)","rgba(127,127,127,0.4)","rgba(214,39,40,0.4)"],"hovertemplate":"%{label}\u003cbr\u003e%{source.label} → %{target.label}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Intel Products (41.1%)","Client Computing (26.9%)","Intel Foundry (14.9%)","Data Center and AI (14.1%)","All Other (3.0%)","Gross Profit (34.8%)","COGS (65.2%)","R&D (26.1%)","SG&A (8.7%)","Other Operating Expenses","Operating Income (-4.2%)","Income Tax","Net Loss (-0.5%)"],"source":[1,2,3,4,5,0,0,6,6,6,6,11,11],"target":[0,0,0,0,0,6,7,8,9,10,11,12,13],"value":[21703720586.883682,14232150631.250887,7872108636.982696,7471569955.632796,1573450189.2499352,18375000000.0,34478000000.0,13774000000.0,4624000000.0,2191000000.0,2214000000.0,1531000000.0,528530000.0]},"node":{"color":["#2ca02c","#1f77b4","#4292c6","#6baed6","#9ecae1","#c6dbef","#2ca02c","#d62728","#ff7f0e","#ff7f0e","#ffbb78","#d62728","#7f7f7f","#d62728"],"hovertemplate":"%{label}\u003cbr\u003eValue: %{value:,.0f}\u003cextra\u003e\u003c\u002fextra\u003e","label":["Total Revenue\u003cbr\u003e$52.9B (100.0%)","Total Intel Products\u003cbr\u003e$21.7B (41.1%)","Client Computing\u003cbr\u003e$14.2B (26.9%)","Intel Foundry\u003cbr\u003e$7.9B (14.9%)","Data Center and AI\u003cbr\u003e$7.5B (14.1%)","All Other\u003cbr\u003e$1.6B (3.0%)","Gross Profit\u003cbr\u003e$18.4B (34.8%)","Cost of Revenue\u003cbr\u003e$34.5B (65.2%)","R&D\u003cbr\u003e$13.8B (26.1%)","SG&A\u003cbr\u003e$4.6B (8.7%)","Other OpEx\u003cbr\u003e$2.2B (4.1%)","Operating Loss\u003cbr\u003e-$2.2B (-4.2%)","Income Tax\u003cbr\u003e$1.5B (2.9%)","Net Loss\u003cbr\u003e-$267M (-0.5%)"],"line":{"color":"black","width":0.5},"pad":28,"thickness":18},"type":"sankey"}],                        {"autosize":true,"font":{"size":12},"height":780,"margin":{"b":20,"l":20,"r":20,"t":20},"paper_bgcolor":"rgba(0,0,0,0)","template":{"data":{"histogram2dcontour":[{"type":"histogram2dcontour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"choropleth":[{"type":"choropleth","colorbar":{"outlinewidth":0,"ticks":""}}],"histogram2d":[{"type":"histogram2d","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"heatmap":[{"type":"heatmap","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"contourcarpet":[{"type":"contourcarpet","colorbar":{"outlinewidth":0,"ticks":""}}],"contour":[{"type":"contour","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"surface":[{"type":"surface","colorbar":{"outlinewidth":0,"ticks":""},"colorscale":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]]}],"mesh3d":[{"type":"mesh3d","colorbar":{"outlinewidth":0,"ticks":""}}],"scatter":[{"fillpattern":{"fillmode":"overlay","size":10,"solidity":0.2},"type":"scatter"}],"parcoords":[{"type":"parcoords","line":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolargl":[{"type":"scatterpolargl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"bar":[{"error_x":{"color":"#2a3f5f"},"error_y":{"color":"#2a3f5f"},"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"bar"}],"scattergeo":[{"type":"scattergeo","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterpolar":[{"type":"scatterpolar","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"histogram":[{"marker":{"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"histogram"}],"scattergl":[{"type":"scattergl","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatter3d":[{"type":"scatter3d","line":{"colorbar":{"outlinewidth":0,"ticks":""}},"marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermap":[{"type":"scattermap","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattermapbox":[{"type":"scattermapbox","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scatterternary":[{"type":"scatterternary","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"scattercarpet":[{"type":"scattercarpet","marker":{"colorbar":{"outlinewidth":0,"ticks":""}}}],"carpet":[{"aaxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"baxis":{"endlinecolor":"#2a3f5f","gridcolor":"white","linecolor":"white","minorgridcolor":"white","startlinecolor":"#2a3f5f"},"type":"carpet"}],"table":[{"cells":{"fill":{"color":"#EBF0F8"},"line":{"color":"white"}},"header":{"fill":{"color":"#C8D4E3"},"line":{"color":"white"}},"type":"table"}],"barpolar":[{"marker":{"line":{"color":"#E5ECF6","width":0.5},"pattern":{"fillmode":"overlay","size":10,"solidity":0.2}},"type":"barpolar"}],"pie":[{"automargin":true,"type":"pie"}]},"layout":{"autotypenumbers":"strict","colorway":["#636efa","#EF553B","#00cc96","#ab63fa","#FFA15A","#19d3f3","#FF6692","#B6E880","#FF97FF","#FECB52"],"font":{"color":"#2a3f5f"},"hovermode":"closest","hoverlabel":{"align":"left"},"paper_bgcolor":"white","plot_bgcolor":"#E5ECF6","polar":{"bgcolor":"#E5ECF6","angularaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"radialaxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"ternary":{"bgcolor":"#E5ECF6","aaxis":{"gridcolor":"white","linecolor":"white","ticks":""},"baxis":{"gridcolor":"white","linecolor":"white","ticks":""},"caxis":{"gridcolor":"white","linecolor":"white","ticks":""}},"coloraxis":{"colorbar":{"outlinewidth":0,"ticks":""}},"colorscale":{"sequential":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"sequentialminus":[[0.0,"#0d0887"],[0.1111111111111111,"#46039f"],[0.2222222222222222,"#7201a8"],[0.3333333333333333,"#9c179e"],[0.4444444444444444,"#bd3786"],[0.5555555555555556,"#d8576b"],[0.6666666666666666,"#ed7953"],[0.7777777777777778,"#fb9f3a"],[0.8888888888888888,"#fdca26"],[1.0,"#f0f921"]],"diverging":[[0,"#8e0152"],[0.1,"#c51b7d"],[0.2,"#de77ae"],[0.3,"#f1b6da"],[0.4,"#fde0ef"],[0.5,"#f7f7f7"],[0.6,"#e6f5d0"],[0.7,"#b8e186"],[0.8,"#7fbc41"],[0.9,"#4d9221"],[1,"#276419"]]},"xaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"yaxis":{"gridcolor":"white","linecolor":"white","ticks":"","title":{"standoff":15},"zerolinecolor":"white","automargin":true,"zerolinewidth":2},"scene":{"xaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"yaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2},"zaxis":{"backgroundcolor":"#E5ECF6","gridcolor":"white","linecolor":"white","showbackground":true,"ticks":"","zerolinecolor":"white","gridwidth":2}},"shapedefaults":{"line":{"color":"#2a3f5f"}},"annotationdefaults":{"arrowcolor":"#2a3f5f","arrowhead":0,"arrowwidth":1},"geo":{"bgcolor":"white","landcolor":"#E5ECF6","subunitcolor":"white","showland":true,"showlakes":true,"lakecolor":"white"},"title":{"x":0.05},"mapbox":{"style":"light"}}}},                        {"responsive": true, "scrollZoom": false, "displayModeBar": false}                    )                };            </script>        </div>
+    </div>
+  </div>
+</div>
+
+<script>
+var ALL_DATA = {"FY2025": {"node_labels": ["Total Revenue<br>$52.9B (100.0%)", "Total Intel Products<br>$21.7B (41.1%)", "Client Computing<br>$14.2B (26.9%)", "Intel Foundry<br>$7.9B (14.9%)", "Data Center and AI<br>$7.5B (14.1%)", "All Other<br>$1.6B (3.0%)", "Gross Profit<br>$18.4B (34.8%)", "Cost of Revenue<br>$34.5B (65.2%)", "R&D<br>$13.8B (26.1%)", "SG&A<br>$4.6B (8.7%)", "Other OpEx<br>$2.2B (4.1%)", "Operating Loss<br>-$2.2B (-4.2%)", "Income Tax<br>$1.5B (2.9%)", "Net Loss<br>-$267M (-0.5%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#ffbb78", "#d62728", "#7f7f7f", "#d62728"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.1, 0.3, 0.5, 0.7, 0.9, 0.35, 0.75, 0.2, 0.4, 0.6, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 0, 0, 6, 6, 6, 6, 11, 11], "link_targets": [0, 0, 0, 0, 0, 6, 7, 8, 9, 10, 11, 12, 13], "link_values": [21703720586.883682, 14232150631.250887, 7872108636.982696, 7471569955.632796, 1573450189.2499352, 18375000000.0, 34478000000.0, 13774000000.0, 4624000000.0, 2191000000.0, 2214000000.0, 1531000000.0, 528530000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(214,39,40,0.4)", "rgba(127,127,127,0.4)", "rgba(214,39,40,0.4)"], "link_labels": ["Total Intel Products (41.1%)", "Client Computing (26.9%)", "Intel Foundry (14.9%)", "Data Center and AI (14.1%)", "All Other (3.0%)", "Gross Profit (34.8%)", "COGS (65.2%)", "R&D (26.1%)", "SG&A (8.7%)", "Other Operating Expenses", "Operating Income (-4.2%)", "Income Tax", "Net Loss (-0.5%)"], "title": "Intel Corporation (INTC) — Financial Flow FY2025", "currency": "USD", "has_partial": false, "coverage_note": "FY2025"}, "FY2024": {"node_labels": ["Total Revenue<br>$53.1B (100.0%)", "Total Intel Products<br>$21.8B (41.0%)", "CCG<br>$13.5B (25.4%)", "Intel Foundry<br>$7.8B (14.7%)", "DCAI<br>$5.7B (10.7%)", "NEX<br>$2.6B (4.9%)", "All Other<br>$1.7B (3.2%)", "Gross Profit<br>$17.3B (32.7%)", "Cost of Revenue<br>$35.8B (67.3%)", "R&D<br>$16.5B (31.2%)", "SG&A<br>$5.5B (10.4%)", "Other OpEx<br>$7.0B (13.1%)", "Operating Loss<br>-$11.7B (-22.0%)", "Income Tax<br>$8.0B (15.1%)", "Net Loss<br>-$19.2B (-36.2%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#ffbb78", "#d62728", "#7f7f7f", "#d62728"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.08333333333333333, 0.25, 0.4166666666666667, 0.5833333333333334, 0.75, 0.9166666666666666, 0.35, 0.75, 0.2, 0.4, 0.6, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 0, 0, 7, 7, 7, 7, 12, 12], "link_targets": [0, 0, 0, 0, 0, 0, 7, 8, 9, 10, 11, 12, 13, 14], "link_values": [21793827602.39802, 13486180270.825474, 7810764624.99476, 5706582123.841865, 2601065207.730684, 1702580170.209198, 17345000000.0, 35756000000.0, 16546000000.0, 5507000000.0, 6970000000.0, 11678000000.0, 8023000000.0, 19233000000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(255,187,120,0.4)", "rgba(214,39,40,0.4)", "rgba(127,127,127,0.4)", "rgba(214,39,40,0.4)"], "link_labels": ["Total Intel Products (41.0%)", "CCG (25.4%)", "Intel Foundry (14.7%)", "DCAI (10.7%)", "NEX (4.9%)", "All Other (3.2%)", "Gross Profit (32.7%)", "COGS (67.3%)", "R&D (31.2%)", "SG&A (10.4%)", "Other Operating Expenses", "Operating Income (-22.0%)", "Income Tax", "Net Loss (-36.2%)"], "title": "Intel Corporation (INTC) — Financial Flow FY2024", "currency": "USD", "has_partial": false, "coverage_note": "FY2024"}, "FY2023": {"node_labels": ["Total Revenue<br>$54.2B (100.0%)", "Client Computing<br>$29.3B (54.0%)", "Datacenter and AI<br>$15.5B (28.6%)", "Network and Edge<br>$5.8B (10.6%)", "Mobileye<br>$2.1B (3.8%)", "Intel Foundry Services<br>$952M (1.8%)", "Other<br>$644M (1.2%)", "Gross Profit<br>$21.7B (40.0%)", "Cost of Revenue<br>$32.5B (60.0%)", "R&D<br>$16.0B (29.6%)", "SG&A<br>$5.6B (10.4%)", "Operating Income<br>$93M (0.2%)", "Income Tax<br>$913M (1.7%)", "Net Income<br>$1.7B (3.1%)"], "node_colors": ["#2ca02c", "#1f77b4", "#4292c6", "#6baed6", "#9ecae1", "#c6dbef", "#2171b5", "#2ca02c", "#d62728", "#ff7f0e", "#ff7f0e", "#2ca02c", "#7f7f7f", "#2ca02c"], "node_x": [0.2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.4, 0.4, 0.6, 0.6, 0.75, 0.87, 1.0], "node_y": [0.5, 0.08333333333333333, 0.25, 0.4166666666666667, 0.5833333333333334, 0.75, 0.9166666666666666, 0.35, 0.75, 0.2, 0.4, 0.5, 0.65, 0.5], "link_sources": [1, 2, 3, 4, 5, 6, 0, 0, 7, 7, 7, 11, 11], "link_targets": [0, 0, 0, 0, 0, 0, 7, 8, 9, 10, 11, 12, 13], "link_values": [29258000000.0, 15521000000.0, 5774000000.0, 2079000000.0, 952000000.0, 644000000.0, 21711000000.0, 32517000000.0, 16046000000.0, 5634000000.0, 542280000.0, 542280000.0, 542280000.0], "link_colors": ["rgba(31,119,180,0.4)", "rgba(66,146,198,0.4)", "rgba(107,174,214,0.4)", "rgba(158,202,225,0.4)", "rgba(198,219,239,0.4)", "rgba(33,113,181,0.4)", "rgba(44,160,44,0.4)", "rgba(214,39,40,0.4)", "rgba(255,127,14,0.4)", "rgba(255,127,14,0.4)", "rgba(44,160,44,0.4)", "rgba(127,127,127,0.4)", "rgba(44,160,44,0.4)"], "link_labels": ["Client Computing (54.0%)", "Datacenter and AI (28.6%)", "Network and Edge (10.6%)", "Mobileye (3.8%)", "Intel Foundry Services (1.8%)", "Other: All other", "Gross Profit (40.0%)", "COGS (60.0%)", "R&D (29.6%)", "SG&A (10.4%)", "Operating Income (0.2%)", "Income Tax", "Net Income (3.1%)"], "title": "Intel Corporation (INTC) — Financial Flow FY2023", "currency": "USD", "has_partial": false, "coverage_note": "FY2023"}};
+
+function switchPeriod(period) {
+  var data = ALL_DATA[period];
+  if (!data) return;
+
+  var update = {
+    "node.label":  [data.node_labels],
+    "node.color":  [data.node_colors],
+    "link.source": [data.link_sources],
+    "link.target": [data.link_targets],
+    "link.value":  [data.link_values],
+    "link.color":  [data.link_colors],
+    "link.label":  [data.link_labels],
+  };
+
+  Plotly.update("sankey-chart", update, {});
+
+  var badge = document.getElementById("data-badge");
+  if (data.has_partial) {
+    badge.innerHTML = '<span class="badge">⚠ Partial Data</span> ' + data.coverage_note;
+  } else {
+    badge.textContent = data.coverage_note || "";
+  }
+}
+
+// Set initial badge
+switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }, {passive: false});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  });
+  document.addEventListener('mousemove', function(e) {
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  });
+  document.addEventListener('mouseup', function(e) {
+    if (e.button === 2 && dragging) {
+      dragging = false;
+      wrapper.style.cursor = '';
+    }
+  });
+  wrapper.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') { scale = Math.min(6, scale * 1.15); applyXform(); }
+    if (e.key === '-' || e.key === '_') { scale = Math.max(0.2, scale / 1.15); applyXform(); }
+    if (e.key === '0' || e.key.toLowerCase() === 'r') { scale=1; tx=0; ty=0; applyXform(); }
+    if (e.key === 'ArrowLeft')  { tx += 40; applyXform(); }
+    if (e.key === 'ArrowRight') { tx -= 40; applyXform(); }
+    if (e.key === 'ArrowUp')    { ty += 40; applyXform(); }
+    if (e.key === 'ArrowDown')  { ty -= 40; applyXform(); }
+  });
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() { scale = Math.min(6, scale * 1.2); applyXform(); };
+  window.zoomOut   = function() { scale = Math.max(0.2, scale / 1.2); applyXform(); };
+  window.resetZoom = function() { scale=1; tx=0; ty=0; applyXform(); };
+})();
+</script>
+</body>
+</html>
+
+<div class="section">
+  <h3>Business Model Analysis</h3>
+  <div class="analysis-text"><h1>Intel Corporation (INTC) Business Model Analysis</h1>
+<h2>Revenue Drivers</h2>
+<p>Intel Corporation operates primarily through several key business segments, which include Client Computing, Data Center and AI, Intel Foundry, and others. In FY2025, total revenue reached <strong>$52.85 billion</strong>, with the following contributions from major segments:</p>
+<ul>
+<li><strong>Client Computing</strong>: $14.23 billion</li>
+<li><strong>Data Center and AI</strong>: $7.47 billion</li>
+<li><strong>Intel Foundry</strong>: $7.87 billion</li>
+<li><strong>All Other</strong>: $1.57 billion</li>
+</ul>
+<p>Over the past three years, Intel's revenue mix has shown significant shifts. In FY2023, the Client Computing segment generated <strong>$29.26 billion</strong>, accounting for a substantial portion of total revenue. However, by FY2025, this segment's revenue decreased to <strong>$14.23 billion</strong>, indicating a notable decline. Conversely, the Data Center and AI segment has seen growth, increasing from <strong>$15.52 billion</strong> in FY2023 to <strong>$7.47 billion</strong> in FY2025, although it reflects a decline in the overall context.</p>
+<p>The Intel Foundry segment has also shown resilience, contributing <strong>$7.87 billion</strong> in FY2025, up from <strong>$952 million</strong> in FY2023. This growth reflects Intel's strategic pivot towards foundry services, aiming to capitalize on the increasing demand for semiconductor manufacturing.</p>
+<h2>Earnings &amp; Profitability</h2>
+<p>Intel's profitability has faced challenges, particularly in the last two fiscal years. The gross margin for FY2025 was <strong>34.8%</strong>, down from <strong>40.0%</strong> in FY2023, indicating pressure on profitability. The operating margin has also been negative, with FY2025 reporting <strong>-4.2%</strong> and FY2024 at <strong>-22.0%</strong>. This decline in margins can be attributed to several factors, including increased R&amp;D expenses, which reached <strong>$13.77 billion</strong> in FY2025, and SG&amp;A expenses of <strong>$4.62 billion</strong>.</p>
+<p>The major cost drivers impacting profitability include:</p>
+<ul>
+<li><strong>R&amp;D Expenses</strong>: Increased from <strong>$16.05 billion</strong> in FY2023 to <strong>$16.55 billion</strong> in FY2024, before decreasing to <strong>$13.77 billion</strong> in FY2025.</li>
+<li><strong>SG&amp;A Expenses</strong>: Rose from <strong>$5.63 billion</strong> in FY2023 to <strong>$5.51 billion</strong> in FY2024, and then to <strong>$4.62 billion</strong> in FY2025.</li>
+</ul>
+<p>Despite these challenges, the company has maintained a focus on innovation and product development, which is critical for long-term growth.</p>
+<h2>Business Model Summary</h2>
+<p>Intel's business model revolves around converting revenue into earnings through its diverse product offerings and strategic focus on high-growth areas such as AI and foundry services. The company has historically relied on its Client Computing segment for a significant portion of its revenue; however, the recent decline in this segment's contribution highlights a need for diversification and adaptation.</p>
+<p>The competitive positioning of Intel is evident in its segment structure, which includes a mix of traditional computing products and emerging technologies. The shift towards foundry services indicates a strategic response to market demands and competitive pressures from other semiconductor manufacturers.</p>
+<p>Notably, the segment mix has evolved, with a declining reliance on Client Computing and a growing emphasis on Data Center and AI, as well as Intel Foundry services. This shift is crucial for Intel's long-term sustainability and profitability, as it seeks to leverage its technological capabilities in a rapidly changing market landscape.</p>
+<p>In summary, while Intel faces significant challenges in terms of profitability and revenue generation, its strategic focus on innovation and diversification into foundry services positions it for potential recovery and growth in the future.</p></div>
+</div>
+
+<div class="section">
+  <h3>Income Statement</h3>
+  <div class="is-toggle">
+    <button class="active" id="is-btn-annual" onclick="switchIS('annual')">Annual</button>
+    <button id="is-btn-quarterly" onclick="switchIS('quarterly')">Quarterly</button>
+  </div>
+  <div id="is-panel-annual" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$52.85B</td><td style="text-align:right">$53.10B</td><td style="text-align:right" class="yoy-neg">-0.5%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$34.48B</td><td style="text-align:right">$35.76B</td><td style="text-align:right" class="yoy-neg">-3.6%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$18.38B</td><td style="text-align:right">$17.34B</td><td style="text-align:right" class="yoy-pos">+5.9%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">34.8%</td><td style="text-align:right">32.7%</td><td style="text-align:right" class="yoy-pos">+6.4%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$13.77B</td><td style="text-align:right">$16.55B</td><td style="text-align:right" class="yoy-neg">-16.8%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$4.62B</td><td style="text-align:right">$5.51B</td><td style="text-align:right" class="yoy-neg">-16.0%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">-$2.21B</td><td style="text-align:right">-$11.68B</td><td style="text-align:right" class="yoy-pos">+81.0%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">-4.2%</td><td style="text-align:right">-22.0%</td><td style="text-align:right" class="yoy-pos">+81.0%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">-$267.0M</td><td style="text-align:right">-$19.23B</td><td style="text-align:right" class="yoy-pos">+98.6%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">-0.5%</td><td style="text-align:right">-36.2%</td><td style="text-align:right" class="yoy-pos">+98.6%</td></tr></tbody></table></div>
+  <div id="is-panel-quarterly" class="is-panel">
+<div class="is-toggle" style="margin-bottom:10px"><button id="btn_qtr0" class="active" onclick="switchQtr('qtr0')">2026 Q1</button><button id="btn_qtr1" class="" onclick="switchQtr('qtr1')">2025 Q3</button><button id="btn_qtr2" class="" onclick="switchQtr('qtr2')">2025 Q2</button><button id="btn_qtr3" class="" onclick="switchQtr('qtr3')">2025 Q1</button></div>
+<div id="panel_qtr0" class="is-panel active"><table><thead><tr><th>Metric</th><th style='text-align:right'>2026 Q1</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$13.58B</td><td style="text-align:right">$12.67B</td><td style="text-align:right" class="yoy-pos">+7.2%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$8.23B</td><td style="text-align:right">$8.00B</td><td style="text-align:right" class="yoy-pos">+2.9%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$5.35B</td><td style="text-align:right">$4.67B</td><td style="text-align:right" class="yoy-pos">+14.4%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">39.4%</td><td style="text-align:right">36.9%</td><td style="text-align:right" class="yoy-pos">+6.8%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$3.38B</td><td style="text-align:right">$3.64B</td><td style="text-align:right" class="yoy-neg">-7.3%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$1.04B</td><td style="text-align:right">$1.18B</td><td style="text-align:right" class="yoy-neg">-11.8%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">-$3.14B</td><td style="text-align:right">-$301.0M</td><td style="text-align:right" class="yoy-neg">-941.9%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">-23.1%</td><td style="text-align:right">-2.4%</td><td style="text-align:right" class="yoy-neg">-872.0%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">-$4.28B</td><td style="text-align:right">-$887.0M</td><td style="text-align:right" class="yoy-neg">-382.6%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">-31.5%</td><td style="text-align:right">-7.0%</td><td style="text-align:right" class="yoy-neg">-350.3%</td></tr></tbody></table></div><div id="panel_qtr1" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q3</th><th style='text-align:right'>2024 Q3</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$13.65B</td><td style="text-align:right">$13.28B</td><td style="text-align:right" class="yoy-pos">+2.8%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$8.44B</td><td style="text-align:right">$11.29B</td><td style="text-align:right" class="yoy-neg">-25.3%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$5.22B</td><td style="text-align:right">$2.00B</td><td style="text-align:right" class="yoy-pos">+161.3%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">38.2%</td><td style="text-align:right">15.0%</td><td style="text-align:right" class="yoy-pos">+154.2%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$3.23B</td><td style="text-align:right">$4.05B</td><td style="text-align:right" class="yoy-neg">-20.2%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$1.13B</td><td style="text-align:right">$1.38B</td><td style="text-align:right" class="yoy-neg">-18.4%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">$683.0M</td><td style="text-align:right">-$9.06B</td><td style="text-align:right" class="yoy-pos">+107.5%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">5.0%</td><td style="text-align:right">-68.2%</td><td style="text-align:right" class="yoy-pos">+107.3%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">$4.27B</td><td style="text-align:right">-$16.99B</td><td style="text-align:right" class="yoy-pos">+125.1%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">31.3%</td><td style="text-align:right">-127.9%</td><td style="text-align:right" class="yoy-pos">+124.5%</td></tr></tbody></table></div><div id="panel_qtr2" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q2</th><th style='text-align:right'>2024 Q2</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$12.86B</td><td style="text-align:right">$12.83B</td><td style="text-align:right" class="yoy-pos">+0.2%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$9.32B</td><td style="text-align:right">$8.29B</td><td style="text-align:right" class="yoy-pos">+12.4%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$3.54B</td><td style="text-align:right">$4.55B</td><td style="text-align:right" class="yoy-neg">-22.1%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">27.5%</td><td style="text-align:right">35.4%</td><td style="text-align:right" class="yoy-neg">-22.3%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$3.68B</td><td style="text-align:right">$4.24B</td><td style="text-align:right" class="yoy-neg">-13.1%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$1.14B</td><td style="text-align:right">$1.33B</td><td style="text-align:right" class="yoy-neg">-13.9%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">-$3.18B</td><td style="text-align:right">-$1.96B</td><td style="text-align:right" class="yoy-neg">-61.7%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">-24.7%</td><td style="text-align:right">-15.3%</td><td style="text-align:right" class="yoy-neg">-61.4%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">-$3.02B</td><td style="text-align:right">-$1.65B</td><td style="text-align:right" class="yoy-neg">-82.8%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">-23.5%</td><td style="text-align:right">-12.9%</td><td style="text-align:right" class="yoy-neg">-82.5%</td></tr></tbody></table></div><div id="panel_qtr3" class="is-panel "><table><thead><tr><th>Metric</th><th style='text-align:right'>2025 Q1</th><th style='text-align:right'>2024 Q1</th><th style='text-align:right'>YoY</th></tr></thead><tbody><tr class="row-divider"><td>Revenue</td><td style="text-align:right">$12.67B</td><td style="text-align:right">$12.72B</td><td style="text-align:right" class="yoy-neg">-0.4%</td></tr><tr><td>Cost of Revenue</td><td style="text-align:right">$8.00B</td><td style="text-align:right">$7.51B</td><td style="text-align:right" class="yoy-pos">+6.5%</td></tr><tr class="row-divider"><td>Gross Profit</td><td style="text-align:right">$4.67B</td><td style="text-align:right">$5.22B</td><td style="text-align:right" class="yoy-neg">-10.4%</td></tr><tr class="row-margin"><td>Gross Margin</td><td style="text-align:right">36.9%</td><td style="text-align:right">41.0%</td><td style="text-align:right" class="yoy-neg">-10.0%</td></tr><tr><td>R&D Expense</td><td style="text-align:right">$3.64B</td><td style="text-align:right">$4.38B</td><td style="text-align:right" class="yoy-neg">-16.9%</td></tr><tr><td>SG&A Expense</td><td style="text-align:right">$1.18B</td><td style="text-align:right">$1.56B</td><td style="text-align:right" class="yoy-neg">-24.4%</td></tr><tr class="row-divider"><td>Operating Income</td><td style="text-align:right">-$301.0M</td><td style="text-align:right">-$1.07B</td><td style="text-align:right" class="yoy-pos">+71.8%</td></tr><tr class="row-margin"><td>Op. Margin</td><td style="text-align:right">-2.4%</td><td style="text-align:right">-8.4%</td><td style="text-align:right" class="yoy-pos">+71.7%</td></tr><tr class="row-divider"><td>Net Income</td><td style="text-align:right">-$887.0M</td><td style="text-align:right">-$437.0M</td><td style="text-align:right" class="yoy-neg">-103.0%</td></tr><tr class="row-margin"><td>Net Margin</td><td style="text-align:right">-7.0%</td><td style="text-align:right">-3.4%</td><td style="text-align:right" class="yoy-neg">-103.9%</td></tr></tbody></table></div>
+<script>
+function switchQtr(id) {
+  document.querySelectorAll('[id^="panel_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.querySelectorAll('[id^="btn_qtr"]').forEach(function(el) {
+    el.classList.remove('active');
+  });
+  document.getElementById('panel_' + id).classList.add('active');
+  document.getElementById('btn_' + id).classList.add('active');
+}
+</script></div>
+  <script>
+  function switchIS(mode) {
+    document.getElementById('is-panel-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-panel-quarterly').classList.toggle('active', mode === 'quarterly');
+    document.getElementById('is-btn-annual').classList.toggle('active', mode === 'annual');
+    document.getElementById('is-btn-quarterly').classList.toggle('active', mode === 'quarterly');
+  }
+  </script>
+</div>
+
+<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;"><div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Partial Data</strong> — 9/12 quarterly reports<ul style='margin:4px 0 0 0;padding-left:18px'><li>SEC 10-Q quarterly filings cover only the first three fiscal quarters; the fourth fiscal quarter (fiscal year-end) is not filed as a standalone quarterly report and must be sourced from Yahoo Finance. Yahoo Finance's quarterly income history is limited to approximately the most recent five quarters, so fiscal year-end quarter data for periods beyond that window is unavailable.</li></ul></span></div>
+<div style="display:flex;align-items:flex-start;gap:0;background:#fff8e1;border-left:4px solid #ffc107;padding:10px 14px;border-radius:4px;font-size:13px;color:#555;"><span style="display:inline-flex;align-items:center;justify-content:center;width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">i</span><span><strong>Segment Data:</strong> The business segment breakdown for Intel Corporation is missing for the period "2025Q4" due to the company's disclosure practice of not providing quarterly segment data through Yahoo's extraction method, which resulted in zero segments reported for that quarter. In contrast, segment data is available for other periods as they were reported using the XBRL method, which captures more comprehensive financial details.</span></div></div>
+
+<div class="section">
+  <h3>Coverage</h3>
+  <h4 style="margin:6px 0 8px 0;font-size:13px;color:#555">Period Summary</h4>
+<table>
+<thead><tr>
+  <th>Period</th><th>Type</th><th>Source</th>
+  <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
+  <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
+</tr></thead>
+<tbody><tr><td><strong>FY2025</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$52.85B</td><td>-$267.0M</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2024</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$53.10B</td><td>-$19.23B</td><td>100%</td><td>6</td><td>100%</td><td>100%</td></tr><tr><td><strong>FY2023</strong></td><td>Annual</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$54.23B</td><td>$1.69B</td><td>100%</td><td>6</td><td>100%</td><td>100%</td></tr><tr><td><strong>2026Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$13.58B</td><td>-$4.28B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q4</strong></td><td>Quarterly</td><td><span style="background:#fd7e14;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">Yahoo</span></td><td>$13.67B</td><td>-$591.0M</td><td>100%</td><td>0</td><td>—</td><td>55%</td></tr><tr><td><strong>2025Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$13.65B</td><td>$4.27B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$12.86B</td><td>-$3.02B</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2025Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$12.67B</td><td>-$887.0M</td><td>100%</td><td>5</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$13.28B</td><td>-$16.99B</td><td>100%</td><td>9</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q2</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$12.83B</td><td>-$1.65B</td><td>100%</td><td>9</td><td>100%</td><td>100%</td></tr><tr><td><strong>2024Q1</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$12.72B</td><td>-$437.0M</td><td>100%</td><td>9</td><td>100%</td><td>100%</td></tr><tr><td><strong>2023Q3</strong></td><td>Quarterly</td><td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td><td>$12.95B</td><td>$1.48B</td><td>100%</td><td>6</td><td>100%</td><td>100%</td></tr></tbody>
+</table><h4 style="margin:18px 0 4px 0;font-size:13px;color:#555">Segment Breakdown by Period</h4>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2025 — $52.85B revenue across 5 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Total Intel Products</td><td style='text-align:right'>$21.70B</td><td style='text-align:right'>41.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:41.1%'></div>  </div></td></tr><tr><td>Client Computing</td><td style='text-align:right'>$14.23B</td><td style='text-align:right'>26.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:26.9%'></div>  </div></td></tr><tr><td>Intel Foundry</td><td style='text-align:right'>$7.87B</td><td style='text-align:right'>14.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:14.9%'></div>  </div></td></tr><tr><td>Data Center and AI</td><td style='text-align:right'>$7.47B</td><td style='text-align:right'>14.1%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:14.1%'></div>  </div></td></tr><tr><td>All Other</td><td style='text-align:right'>$1.57B</td><td style='text-align:right'>3.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:3.0%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2024 — $53.10B revenue across 6 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Total Intel Products</td><td style='text-align:right'>$21.79B</td><td style='text-align:right'>41.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:41.0%'></div>  </div></td></tr><tr><td>CCG</td><td style='text-align:right'>$13.49B</td><td style='text-align:right'>25.4%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:25.4%'></div>  </div></td></tr><tr><td>Intel Foundry</td><td style='text-align:right'>$7.81B</td><td style='text-align:right'>14.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:14.7%'></div>  </div></td></tr><tr><td>DCAI</td><td style='text-align:right'>$5.71B</td><td style='text-align:right'>10.7%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:10.7%'></div>  </div></td></tr><tr><td>NEX</td><td style='text-align:right'>$2.60B</td><td style='text-align:right'>4.9%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:4.9%'></div>  </div></td></tr><tr><td>All Other</td><td style='text-align:right'>$1.70B</td><td style='text-align:right'>3.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:3.2%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<details open style="margin-top:10px">
+  <summary style="cursor:pointer;font-weight:600;font-size:13px;color:#1a1a2e">
+    FY2023 — $54.23B revenue across 6 segments
+    &nbsp;<span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span>
+  </summary>
+  <table style="margin-top:6px">
+  <thead><tr>
+    <th>Segment</th><th style='text-align:right'>Revenue</th>
+    <th style='text-align:right'>% of Total</th><th></th>
+  </tr></thead>
+  <tbody><tr><td>Client Computing</td><td style='text-align:right'>$29.26B</td><td style='text-align:right'>54.0%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:54.0%'></div>  </div></td></tr><tr><td>Datacenter and AI</td><td style='text-align:right'>$15.52B</td><td style='text-align:right'>28.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:28.6%'></div>  </div></td></tr><tr><td>Network and Edge</td><td style='text-align:right'>$5.77B</td><td style='text-align:right'>10.6%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:10.6%'></div>  </div></td></tr><tr><td>Mobileye</td><td style='text-align:right'>$2.08B</td><td style='text-align:right'>3.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:3.8%'></div>  </div></td></tr><tr><td>Intel Foundry Services</td><td style='text-align:right'>$952.0M</td><td style='text-align:right'>1.8%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.8%'></div>  </div></td></tr><tr><td>All other</td><td style='text-align:right'>$644.0M</td><td style='text-align:right'>1.2%</td><td style='width:180px'>  <div style='background:#e9ecef;border-radius:3px;height:10px;overflow:hidden'>    <div style='background:#1f77b4;height:100%;width:1.2%'></div>  </div></td></tr></tbody>
+  </table>
+</details>
+<h4 style="margin:20px 0 6px 0;font-size:13px;color:#555">Segment Revenue Trend (Annual)</h4>
+<table>
+<thead><tr><th>Segment</th><th style='text-align:right'>FY2025</th><th style='text-align:right'>FY2024</th><th style='text-align:right'>FY2023</th><th style='text-align:right'>YoY (latest)</th></tr></thead>
+<tbody><tr><td>Total Intel Products</td><td style='text-align:right'>$21.70B</td><td style='text-align:right'>$21.79B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#dc3545;font-weight:600'>-0.4%</td></tr><tr><td>Client Computing</td><td style='text-align:right'>$14.23B</td><td style='text-align:right'>—</td><td style='text-align:right'>$29.26B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Intel Foundry</td><td style='text-align:right'>$7.87B</td><td style='text-align:right'>$7.81B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#28a745;font-weight:600'>+0.8%</td></tr><tr><td>Datacenter and AI</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$15.52B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>CCG</td><td style='text-align:right'>—</td><td style='text-align:right'>$13.49B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Data Center and AI</td><td style='text-align:right'>$7.47B</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Network and Edge</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$5.77B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>DCAI</td><td style='text-align:right'>—</td><td style='text-align:right'>$5.71B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>All Other</td><td style='text-align:right'>$1.57B</td><td style='text-align:right'>$1.70B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#dc3545;font-weight:600'>-7.6%</td></tr><tr><td>NEX</td><td style='text-align:right'>—</td><td style='text-align:right'>$2.60B</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Mobileye</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$2.08B</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Intel Foundry Services</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$952.0M</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>All other</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>$644.0M</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Client Computing Group</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Intel Products</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Altera</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr><tr><td>Other</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right'>—</td><td style='text-align:right;color:#aaa'>—</td></tr></tbody>
+</table>
+</div>
+
+<div class="section" style="font-size:12px;color:#666;">
+  <strong>Data Sources:</strong>
+  SEC EDGAR (10-K Annual Reports, 10-Q Quarterly Reports, 20-F/6-K for international filers) +
+  Yahoo Finance (supplemental financial data and segment context).
+  Segment data extracted via XBRL parsing and Claude AI where XBRL is incomplete.
+  Coverage: 3 annual periods, 9 quarterly periods.
+</div>
+
+<div class="footer">
+  Generated by Financial Analysis System | Data: SEC EDGAR + Yahoo Finance |
+  3 annual reports, 9 quarterly reports
+</div>
+</body>
+</html>
