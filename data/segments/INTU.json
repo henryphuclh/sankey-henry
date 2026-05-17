@@ -10,19 +10,35 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Service",
-        "value": 16400000000.0,
-        "unit": "USD",
-        "period": "2025-07-31 (FY)",
-        "concept": "xbrl_dimension",
+        "segment_name": "Global Business Solutions",
+        "value": 11077000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       },
       {
-        "segment_name": "Product and other",
-        "value": 2431000000.0,
-        "unit": "USD",
-        "period": "2025-07-31 (FY)",
-        "concept": "xbrl_dimension",
+        "segment_name": "Consumer",
+        "value": 4870000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Credit Karma",
+        "value": 2263000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "ProTax",
+        "value": 621000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       }
     ],
@@ -36,7 +52,7 @@
     "interest_expense": null,
     "income_tax": 965000000.0,
     "currency": "USD",
-    "extraction_method": "xbrl",
+    "extraction_method": "edgar+llm",
     "confidence": 1.0,
     "notes": []
   },
@@ -49,19 +65,35 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Service",
-          "value": 16400000000.0,
-          "unit": "USD",
-          "period": "2025-07-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Global Business Solutions",
+          "value": 11077000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Product and other",
-          "value": 2431000000.0,
-          "unit": "USD",
-          "period": "2025-07-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Consumer",
+          "value": 4870000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Credit Karma",
+          "value": 2263000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ProTax",
+          "value": 621000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
@@ -75,7 +107,7 @@
       "interest_expense": null,
       "income_tax": 965000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": []
     },
@@ -87,19 +119,35 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Service",
-          "value": 13861000000.0,
-          "unit": "USD",
-          "period": "2024-07-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Small Business & Self-Employed",
+          "value": 9533000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Product and other",
-          "value": 2424000000.0,
-          "unit": "USD",
-          "period": "2024-07-31 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Consumer",
+          "value": 4445000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Credit Karma",
+          "value": 1708000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ProTax",
+          "value": 599000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
@@ -113,7 +161,7 @@
       "interest_expense": null,
       "income_tax": 587000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": []
     },
@@ -123,7 +171,40 @@
       "is_annual": true,
       "fiscal_year": 2023,
       "fiscal_quarter": null,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "Small Business & Self-Employed",
+          "value": 8038000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Consumer",
+          "value": 4135000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Credit Karma",
+          "value": 1634000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "ProTax",
+          "value": 561000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 14368000000.0,
       "gross_profit": 11388000000.0,
       "operating_income": 3141000000.0,
@@ -134,8 +215,8 @@
       "interest_expense": null,
       "income_tax": 605000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.55,
+      "extraction_method": "edgar+llm",
+      "confidence": 1.0,
       "notes": []
     }
   ],
@@ -148,20 +229,20 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Service",
-          "value": 3872000000.0,
-          "unit": "USD",
-          "period": "2026-01-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Global Business Solutions",
+          "value": 3164000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Product and other",
-          "value": 779000000.0,
-          "unit": "USD",
-          "period": "2026-01-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Consumer",
+          "value": 1487000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 4651000000.0,
@@ -174,7 +255,7 @@
       "interest_expense": null,
       "income_tax": 176000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": []
     },
@@ -186,20 +267,20 @@
       "fiscal_quarter": 4,
       "segments": [
         {
-          "segment_name": "Service",
-          "value": 3497000000.0,
-          "unit": "USD",
-          "period": "2025-10-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Global Business Solutions",
+          "value": 2991000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Product and other",
-          "value": 388000000.0,
-          "unit": "USD",
-          "period": "2025-10-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Consumer",
+          "value": 894000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 3885000000.0,
@@ -212,8 +293,29 @@
       "interest_expense": null,
       "income_tax": 115000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "INTU",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": 3831000000.0,
+      "gross_profit": 2937000000.0,
+      "operating_income": 340000000.0,
+      "net_income": 381000000.0,
+      "rd_expense": 801000000.0,
+      "sga_expense": 1675000000.0,
+      "cogs": 894000000.0,
+      "interest_expense": 59000000.0,
+      "income_tax": -15000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
       "notes": []
     },
     {
@@ -224,20 +326,36 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Service",
-          "value": 6971000000.0,
-          "unit": "USD",
-          "period": "2025-04-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Global Business Solutions",
+          "value": 2849000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Product and other",
-          "value": 783000000.0,
-          "unit": "USD",
-          "period": "2025-04-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Consumer",
+          "value": 4048000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Credit Karma",
+          "value": 579000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "ProTax",
+          "value": 278000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 7754000000.0,
@@ -250,7 +368,7 @@
       "interest_expense": null,
       "income_tax": 864000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": []
     },
@@ -262,20 +380,36 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Service",
-          "value": 3249000000.0,
-          "unit": "USD",
-          "period": "2025-01-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Global Business Solutions",
+          "value": 2671000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Product and other",
-          "value": 714000000.0,
-          "unit": "USD",
-          "period": "2025-01-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Consumer",
+          "value": 509000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Credit Karma",
+          "value": 511000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "ProTax",
+          "value": 272000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 3963000000.0,
@@ -288,7 +422,7 @@
       "interest_expense": null,
       "income_tax": 100000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": []
     },
@@ -300,20 +434,36 @@
       "fiscal_quarter": 4,
       "segments": [
         {
-          "segment_name": "Service",
-          "value": 2889000000.0,
-          "unit": "USD",
-          "period": "2024-10-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Global Business Solutions",
+          "value": 2544000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Product and other",
-          "value": 394000000.0,
-          "unit": "USD",
-          "period": "2024-10-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Consumer",
+          "value": 176000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Credit Karma",
+          "value": 524000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "ProTax",
+          "value": 39000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 3283000000.0,
@@ -326,7 +476,7 @@
       "interest_expense": null,
       "income_tax": 16000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (3283000000) differs from Yahoo (16285000000) by 79.8%"
@@ -549,9 +699,9 @@
       ]
     }
   ],
-  "ttm_revenue": 20253000000.0,
-  "ttm_operating_income": 5702000000.0,
-  "ttm_net_income": 4430000000.0,
+  "ttm_revenue": 20121000000.0,
+  "ttm_operating_income": 5449000000.0,
+  "ttm_net_income": 4340000000.0,
   "segment_trend": {
     "Small Business & Self-Employed": [
       {
@@ -573,6 +723,16 @@
         "period": "2024Q2",
         "value": 2387000000.0,
         "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 8038000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 9533000000.0,
+        "is_annual": true
       }
     ],
     "Consumer": [
@@ -595,6 +755,46 @@
         "period": "2024Q2",
         "value": 3653000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 176000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 509000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4048000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 894000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 1487000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 4135000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 4445000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4870000000.0,
+        "is_annual": true
       }
     ],
     "Credit Karma": [
@@ -617,6 +817,36 @@
         "period": "2024Q2",
         "value": 443000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2024Q4",
+        "value": 524000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 511000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 579000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1634000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1708000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2263000000.0,
+        "is_annual": true
       }
     ],
     "ProTax": [
@@ -634,85 +864,74 @@
         "period": "2024Q2",
         "value": 254000000.0,
         "is_annual": false
-      }
-    ],
-    "Service": [
+      },
       {
         "period": "2024Q4",
-        "value": 2889000000.0,
+        "value": 39000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 3249000000.0,
+        "value": 272000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 6971000000.0,
+        "value": 278000000.0,
         "is_annual": false
       },
       {
-        "period": "2025Q4",
-        "value": 3497000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 3872000000.0,
-        "is_annual": false
+        "period": "FY2023",
+        "value": 561000000.0,
+        "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 13861000000.0,
+        "value": 599000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 16400000000.0,
+        "value": 621000000.0,
         "is_annual": true
       }
     ],
-    "Product and other": [
+    "Global Business Solutions": [
       {
         "period": "2024Q4",
-        "value": 394000000.0,
+        "value": 2544000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 714000000.0,
+        "value": 2671000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 783000000.0,
+        "value": 2849000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q4",
-        "value": 388000000.0,
+        "value": 2991000000.0,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 779000000.0,
+        "value": 3164000000.0,
         "is_annual": false
       },
       {
-        "period": "FY2024",
-        "value": 2424000000.0,
-        "is_annual": true
-      },
-      {
         "period": "FY2025",
-        "value": 2431000000.0,
+        "value": 11077000000.0,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

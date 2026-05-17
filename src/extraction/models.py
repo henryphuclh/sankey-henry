@@ -1,8 +1,4 @@
-"""Shared data models for financial segment extraction.
-
-These classes were originally defined in `xbrl_parser.py` (now removed).
-All consumers import from here.
-"""
+"""Shared data models for financial segment extraction."""
 from __future__ import annotations
 
 from dataclasses import dataclass, field
@@ -11,38 +7,35 @@ from typing import Dict, List, Optional
 
 @dataclass
 class SegmentValue:
-    segment_name:  str
-    value:         float          # in absolute USD
-    unit:          str            # "USD", "EUR", etc.
-    period:        str            # "FY2024", "2024Q3"
-    concept:       str            # XBRL concept name OR "llm_extracted" / "edgar_parsed"
-    is_annual:     bool
+    segment_name: str
+    value:        float   # absolute USD
+    unit:         str     # "USD", "EUR", …
+    period:       str     # "FY2024", "2024Q3"
+    concept:      str     # XBRL concept or "llm_extracted"
+    is_annual:    bool
 
 
 @dataclass
 class SegmentData:
-    ticker:          str
-    period:          str
-    is_annual:       bool
-    fiscal_year:     int
-    fiscal_quarter:  Optional[int]
-    segments:        List[SegmentValue] = field(default_factory=list)
-    total_revenue:   Optional[float] = None
-    gross_profit:    Optional[float] = None
-    operating_income:Optional[float] = None
-    net_income:      Optional[float] = None
-    rd_expense:      Optional[float] = None
-    sga_expense:     Optional[float] = None
-    cogs:            Optional[float] = None
-    interest_expense:Optional[float] = None
-    income_tax:      Optional[float] = None
-    currency:        str = "USD"
+    ticker:           str
+    period:           str
+    is_annual:        bool
+    fiscal_year:      int
+    fiscal_quarter:   Optional[int]
+    segments:         List[SegmentValue] = field(default_factory=list)
+    total_revenue:    Optional[float] = None
+    gross_profit:     Optional[float] = None
+    operating_income: Optional[float] = None
+    net_income:       Optional[float] = None
+    rd_expense:       Optional[float] = None
+    sga_expense:      Optional[float] = None
+    cogs:             Optional[float] = None
+    interest_expense: Optional[float] = None
+    income_tax:       Optional[float] = None
+    currency:         str = "USD"
     extraction_method: str = "edgar"
-    confidence:      float = 0.0
-    notes:           List[str] = field(default_factory=list)
-
-    def confidence_score(self) -> float:
-        return self.confidence
+    confidence:       float = 0.0
+    notes:            List[str] = field(default_factory=list)
 
     def to_dict(self) -> Dict:
         return {
@@ -76,15 +69,12 @@ class SegmentData:
         return obj
 
 
-# ── FilingRecord (from edgar client) ──────────────────────────────────────────
-
 @dataclass
 class FilingRecord:
-    """Metadata for one filing, produced by edgar_client.get_filings()."""
     ticker:           str
-    form_type:        str          # "10-K", "10-Q", "20-F", "6-K"
-    period:           str          # "FY2024", "2024Q3"
-    filing_date:      str          # ISO date
+    form_type:        str   # "10-K", "10-Q", "20-F", "6-K"
+    period:           str   # "FY2024", "2024Q3"
+    filing_date:      str   # ISO date
     accession_number: str
     cik:              str
     is_annual:        bool
@@ -93,21 +83,20 @@ class FilingRecord:
 
 
 def compute_confidence(sd: SegmentData) -> float:
-    """0.0–1.0 score of data completeness (used to decide whether segments are usable)."""
+    """0–1 score of data completeness."""
     score = 0.0
-    if sd.total_revenue is not None and sd.total_revenue != 0:
+    if sd.total_revenue:
         score += 0.4
     if sd.gross_profit is not None:     score += 0.1
     if sd.operating_income is not None: score += 0.15
     if sd.net_income is not None:       score += 0.15
     pnl_count = sum(1 for f in (sd.rd_expense, sd.sga_expense, sd.cogs,
-                                sd.interest_expense, sd.income_tax)
-                    if f is not None)
+                                sd.interest_expense, sd.income_tax) if f is not None)
     score += min(pnl_count * 0.04, 0.20)
     if len(sd.segments) == 0:
         score = min(score, 0.55)
     elif len(sd.segments) >= 2:
         score = min(1.0, score + 0.30)
-    elif len(sd.segments) == 1:
+    else:
         score = min(1.0, score + 0.10)
     return round(score, 3)

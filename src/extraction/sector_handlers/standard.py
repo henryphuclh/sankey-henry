@@ -6,124 +6,151 @@ from typing import Any, Dict, Optional
 
 
 # ---------------------------------------------------------------------------
-# Comprehensive XBRL concept map for non-financial, non-pharma companies.
+# US GAAP concept map  — applies to US_SEC filers (10-K / 10-Q)
 #
 # Design principles:
-#   • "total_revenue", "gross_profit", "operating_income", "net_income",
-#     "cogs", "rd_expense", "sga_expense", "interest_expense", "income_tax"
-#     map directly to SegmentData fields.
-#   • "_ga", "_selling", "_marketing" are component accumulator keys —
-#     they are summed into sga_expense only when no combined SG&A tag is found.
+#   • Only us-gaap namespace concepts belong here.
+#   • "_ga", "_selling", "_marketing" are component accumulator keys summed
+#     into sga_expense when no combined SG&A tag is found.
 #   • "_pretax" holds pre-tax income for downstream derivation.
-#   • Priority: most-specific / most-common tag first in iteration, but the
-#     parser keeps the largest-magnitude value per field to handle duplicates.
+#   • Priority: most-specific tag first; parser keeps the largest-magnitude
+#     value per field to handle duplicates.
 # ---------------------------------------------------------------------------
-_STD: Dict[str, str] = {
+_STD_USGAAP: Dict[str, str] = {
 
     # ── Revenue ───────────────────────────────────────────────────────────────
-    # ASC 606 (post-2018 US GAAP) — tech, consumer services, aerospace
-    "RevenueFromContractWithCustomerExcludingAssessedTax":   "total_revenue",
+    "RevenueFromContractWithCustomerExcludingAssessedTax":   "total_revenue",  # ASC 606 primary
     "RevenueFromContractWithCustomerIncludingAssessedTax":   "total_revenue",
-    # Broad catch-all — energy, telecom, consumer staples, utilities
-    "Revenues":                                              "total_revenue",
-    # Pre-ASC 606 legacy (still seen in older 10-K filings)
-    "SalesRevenueNet":                                       "total_revenue",
-    # Explicit total label (some industrials, conglomerates)
+    "Revenues":                                              "total_revenue",  # broad catch-all
+    "SalesRevenueNet":                                       "total_revenue",  # pre-ASC 606 legacy
     "TotalRevenues":                                         "total_revenue",
-    # Retail & industrial style
-    "NetSales":                                              "total_revenue",
-    # Goods-only / services-only (older disaggregation, non-dimensional)
+    "NetSales":                                              "total_revenue",  # retail / industrial
     "SalesRevenueGoodsNet":                                  "total_revenue",
     "SalesRevenueServicesNet":                               "total_revenue",
-    # Miscellaneous
     "RevenueNet":                                            "total_revenue",
-    # IFRS (20-F filers: ASML, SAP, Toyota, TSM, NVS, RHHBY)
-    "Revenue":                                               "total_revenue",
-    "RevenueFromContractsWithCustomers":                     "total_revenue",
-    "RevenueFromSaleOfGoods":                                "total_revenue",   # IFRS pharma/consumer (NVS, Roche)
-    "RevenueFromRenderingOfServices":                        "total_revenue",   # IFRS services
-    "RevenueFromSaleOfGoodsAndRenderingOfServices":          "total_revenue",   # IFRS combined
-    # Utilities (NEE, DUK, SO, AEP — regulated + unregulated operating revenue)
-    "RegulatedAndUnregulatedOperatingRevenue":               "total_revenue",
+    "RegulatedAndUnregulatedOperatingRevenue":               "total_revenue",  # utilities (NEE, DUK)
     "RegulatedOperatingRevenue":                             "total_revenue",
     "UnregulatedOperatingRevenue":                           "total_revenue",
     "ElectricUtilityRevenue":                                "total_revenue",
-    "OperatingRevenues":                                     "total_revenue",
+    "OperatingRevenues":                                     "total_revenue",  # telecom / utilities
 
     # ── COGS ──────────────────────────────────────────────────────────────────
-    # Standard ASC 606 cost tag (tech, services)
     "CostOfRevenue":                                         "cogs",
-    # Plural variant — Netflix, some media/streaming
     "CostOfRevenues":                                        "cogs",
-    # Classic goods tag
     "CostOfGoodsSold":                                       "cogs",
-    # Mixed goods + services
     "CostOfGoodsAndServicesSold":                            "cogs",
-    # Boeing / aerospace style
-    "CostOfGoodsSoldAndServicesSold":                        "cogs",
-    # Pure-service companies
+    "CostOfGoodsSoldAndServicesSold":                        "cogs",  # Boeing / aerospace
     "CostOfServices":                                        "cogs",
-    # Retail (Walmart, Costco, Home Depot, TJX)
-    "CostOfSales":                                           "cogs",
-    # When D&A is separated out (capital-intensive industrials, utilities)
+    "CostOfSales":                                           "cogs",  # retail (Walmart, Costco)
     "CostOfGoodsAndServiceExcludingDepreciationDepletionAndAmortization": "cogs",
-    # Telecom (AT&T, Verizon)
-    "CostOfServicesAndProducts":                             "cogs",
-    # Media / direct production costs
-    "DirectOperatingCosts":                                  "cogs",
+    "CostOfServicesAndProducts":                             "cogs",  # telecom
+    "DirectOperatingCosts":                                  "cogs",  # media
 
     # ── Gross Profit ──────────────────────────────────────────────────────────
     "GrossProfit":                                           "gross_profit",
-    "GrossProfitLoss":                                       "gross_profit",    # IFRS
 
     # ── R&D ───────────────────────────────────────────────────────────────────
     "ResearchAndDevelopmentExpense":                         "rd_expense",
-    # Without acquired in-process R&D (biotech/pharma overlap companies)
     "ResearchAndDevelopmentExpenseExcludingAcquiredInProcessCost": "rd_expense",
-    # GE Aerospace, RTX, some industrials
-    "ResearchDevelopmentAndRelatedExpenses":                 "rd_expense",
+    "ResearchDevelopmentAndRelatedExpenses":                 "rd_expense",  # GE, RTX
 
     # ── SG&A — combined line (preferred) ──────────────────────────────────────
     "SellingGeneralAndAdministrativeExpense":                "sga_expense",
     "SellingGeneralAdministrativeAndOtherExpense":           "sga_expense",
 
     # ── SG&A — components (accumulated only when combined line is absent) ─────
-    # G&A component (e.g. Uber, Palantir, many SaaS companies)
     "GeneralAndAdministrativeExpense":                       "_ga",
-    # IFRS G&A
-    "AdministrativeExpenses":                                "_ga",
-    # Selling / marketing components
     "SellingAndMarketingExpense":                            "_selling",
     "SellingExpense":                                        "_selling",
     "MarketingExpense":                                      "_marketing",
     "MarketingAndAdvertisingExpense":                        "_marketing",
-    # IFRS selling / distribution
-    "DistributionCosts":                                     "_selling",
-    "SellingDistributionAndAdministrativeExpenses":          "sga_expense",  # IFRS combined
 
-    # ── Operating Income ──────────────────────────────────────────────────────
+    # ── Operating Income — US GAAP ────────────────────────────────────────────
     "OperatingIncomeLoss":                                   "operating_income",
 
-    # ── Pre-tax income (derivation aid — NOT assigned to operating_income) ────
+    # ── Pre-tax Income — US GAAP ──────────────────────────────────────────────
     "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": "_pretax",
     "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments": "_pretax",
     "IncomeLossFromContinuingOperationsBeforeIncomeTaxes":   "_pretax",
 
-    # ── Interest Expense ──────────────────────────────────────────────────────
+    # ── Interest Expense — US GAAP ────────────────────────────────────────────
     "InterestExpense":                                       "interest_expense",
     "InterestExpenseNonoperating":                           "interest_expense",
     "InterestAndDebtExpense":                                "interest_expense",
-    "FinanceCosts":                                          "interest_expense",  # IFRS
 
-    # ── Income Tax ────────────────────────────────────────────────────────────
+    # ── Income Tax — US GAAP ──────────────────────────────────────────────────
     "IncomeTaxExpenseBenefit":                               "income_tax",
 
-    # ── Net Income ────────────────────────────────────────────────────────────
+    # ── Net Income — US GAAP ──────────────────────────────────────────────────
     "NetIncomeLoss":                                         "net_income",
     "NetIncomeLossAvailableToCommonStockholdersBasic":       "net_income",
-    "ProfitLoss":                                            "net_income",        # IFRS
-    "NetIncomeLossAttributableToParent":                     "net_income",        # consolidated
+    "NetIncomeLossAttributableToParent":                     "net_income",
+    "ProfitLoss":                                            "net_income",  # GAAP consolidated
 }
+
+
+# ---------------------------------------------------------------------------
+# IFRS concept map  — applies to INTL_SEC filers (20-F, using ifrs-full)
+#
+# Design principles:
+#   • Only ifrs-full / ifrs15-full / company-specific IFRS concepts belong here.
+#   • Deliberately excludes us-gaap concepts to prevent cross-standard conflicts.
+# ---------------------------------------------------------------------------
+_STD_IFRS: Dict[str, str] = {
+
+    # ── Revenue — IFRS ────────────────────────────────────────────────────────
+    "Revenue":                                               "total_revenue",  # ifrs-full primary
+    "RevenueFromContractsWithCustomers":                     "total_revenue",  # IFRS 15
+    "RevenueFromSaleOfGoods":                                "total_revenue",
+    "RevenueFromRenderingOfServices":                        "total_revenue",
+    "RevenueFromSaleOfGoodsAndRenderingOfServices":          "total_revenue",
+
+    # ── COGS — IFRS ───────────────────────────────────────────────────────────
+    "CostOfSales":                                           "cogs",           # ifrs-full:CostOfSales
+    "CostOfRevenue":                                         "cogs",           # some IFRS filers
+
+    # ── Gross Profit — IFRS ───────────────────────────────────────────────────
+    "GrossProfit":                                           "gross_profit",
+    "GrossProfitLoss":                                       "gross_profit",
+
+    # ── R&D — IFRS ────────────────────────────────────────────────────────────
+    "ResearchAndDevelopmentExpense":                         "rd_expense",     # ifrs-full variant
+
+    # ── SG&A — IFRS combined ──────────────────────────────────────────────────
+    "SellingGeneralAndAdministrativeExpense":                "sga_expense",    # some IFRS filers
+    "SellingDistributionAndAdministrativeExpenses":          "sga_expense",    # SAP, ASML
+
+    # ── SG&A — IFRS components ────────────────────────────────────────────────
+    "AdministrativeExpenses":                                "_ga",            # ifrs-full G&A
+    "DistributionCosts":                                     "_selling",       # ifrs-full selling
+    "SellingAndMarketingExpense":                            "_selling",
+
+    # ── Operating Income — IFRS ───────────────────────────────────────────────
+    "OperatingProfit":                                       "operating_income",
+    "OperatingProfitLoss":                                   "operating_income",
+    "ProfitLossFromOperatingActivities":                     "operating_income",
+    "ProfitFromOperations":                                  "operating_income",
+    "ResultFromOperatingActivities":                         "operating_income",
+
+    # ── Pre-tax Income — IFRS ─────────────────────────────────────────────────
+    "ProfitLossBeforeTax":                                   "_pretax",
+    "ProfitBeforeTax":                                       "_pretax",
+    "ProfitBeforeIncomeTax":                                 "_pretax",
+
+    # ── Interest Expense — IFRS ───────────────────────────────────────────────
+    "FinanceCosts":                                          "interest_expense",
+
+    # ── Income Tax — IFRS ─────────────────────────────────────────────────────
+    "IncomeTaxes":                                           "income_tax",
+    "TaxExpenseIncome":                                      "income_tax",
+    "IncomeTaxExpenseBenefit":                               "income_tax",     # some IFRS filers use GAAP tag
+
+    # ── Net Income — IFRS ─────────────────────────────────────────────────────
+    "ProfitLoss":                                            "net_income",     # ifrs-full primary
+    "ProfitAttributableToOwnersOfParent":                    "net_income",     # consolidated parent
+    "NetIncomeLoss":                                         "net_income",     # some IFRS filers
+}
+
 
 # ── Direct-field keys (written straight to result dict) ─────────────────────
 _DIRECT_FIELDS = frozenset((
@@ -132,47 +159,14 @@ _DIRECT_FIELDS = frozenset((
 ))
 
 
-# ---------------------------------------------------------------------------
-# LLM prompt hints
-# ---------------------------------------------------------------------------
-STANDARD_SEGMENT_HINTS = """
-For this company, extract revenue and operating income for EACH distinct business segment
-as reported in the filing's segment footnotes or Note on Segment Information.
 
-Common segment types to look for:
-- Product lines / Business units (e.g. Cloud, Consumer, Enterprise)
-- Industry verticals (e.g. Aerospace, Defense, Industrial, Healthcare)
-- Geographic regions (only if no product-level breakdown is available)
-- Service vs Product split (e.g. Software vs Hardware, Services vs Equipment)
+def pnl_from_standard_filing(
+    filing_obj,
+    data_source: str = "US_SEC",
+) -> Dict[str, Any]:
+    """XBRL P&L extraction for standard companies.
 
-IMPORTANT NOTES:
-- Use the MOST GRANULAR segment breakdown available in the filing.
-- If the company reports both product segments AND geographic segments, prefer product/business unit.
-- Do NOT include elimination entries or inter-segment adjustments as segments.
-- For diversified companies, each major business division should be a separate segment node.
-- If only one segment is reported (no breakdown), return that single segment as the total.
-
-Always extract segment revenue figures that sum close to total reported revenue.
-"""
-
-
-# ---------------------------------------------------------------------------
-# Public API
-# ---------------------------------------------------------------------------
-
-def get_prompt_hints() -> str:
-    return STANDARD_SEGMENT_HINTS
-
-
-def normalize_segment_name(raw: str) -> str:
-    return raw.strip().title()
-
-
-def pnl_from_standard_filing(filing_obj) -> Dict[str, Any]:
-    """Comprehensive XBRL P&L extraction for standard (non-financial, non-pharma) companies.
-
-    Covers technology, energy, consumer, industrial, telecom, media, and utility sectors.
-    Derives missing fields (gross profit, operating income, net income) when possible.
+    US_SEC → US GAAP map. INTL_SEC → auto-detects IFRS vs US GAAP from namespace prefix counts.
     """
     empty: Dict[str, Any] = {
         "total_revenue": None, "gross_profit": None, "operating_income": None,
@@ -182,33 +176,32 @@ def pnl_from_standard_filing(filing_obj) -> Dict[str, Any]:
     if filing_obj is None:
         return empty
 
-    raw = _parse_concepts(filing_obj)
+    if data_source == "INTL_SEC":
+        concept_map = _STD_IFRS if _detect_xbrl_standard(filing_obj) == "IFRS" else _STD_USGAAP
+    else:
+        concept_map = _STD_USGAAP
+    raw = _parse_concepts(filing_obj, concept_map)
 
     result = dict(empty)
 
-    # ── Direct assignments ────────────────────────────────────────────────────
+    # Expenses stored as positive; XBRL filers sometimes report them negative.
+    _EXPENSE_FIELDS = frozenset(("cogs", "rd_expense", "sga_expense", "interest_expense", "income_tax"))
     for field in _DIRECT_FIELDS:
         v = raw.get(field)
         if v is not None:
-            result[field] = v
+            result[field] = abs(v) if field in _EXPENSE_FIELDS else v
 
-    # ── SG&A: sum components when no combined line was found ──────────────────
+    # SG&A: sum components when no combined line was found
     if result["sga_expense"] is None:
-        ga      = raw.get("_ga")       or 0.0
-        selling = raw.get("_selling")  or 0.0
-        mktg    = raw.get("_marketing") or 0.0
-        total_comp = ga + selling + mktg
+        total_comp = abs(raw.get("_ga") or 0.0) + abs(raw.get("_selling") or 0.0) + abs(raw.get("_marketing") or 0.0)
         if total_comp > 0:
             result["sga_expense"] = total_comp
 
-    # ── Derive gross_profit = revenue − cogs ──────────────────────────────────
     if result["gross_profit"] is None:
-        rev  = result["total_revenue"]
-        cogs = result["cogs"]
+        rev, cogs = result["total_revenue"], result["cogs"]
         if rev is not None and cogs is not None and cogs > 0:
             result["gross_profit"] = rev - cogs
 
-    # ── Derive operating_income = gross_profit − R&D − SG&A ──────────────────
     if result["operating_income"] is None:
         gp  = result["gross_profit"]
         rd  = result["rd_expense"]  or 0.0
@@ -216,15 +209,12 @@ def pnl_from_standard_filing(filing_obj) -> Dict[str, Any]:
         if gp is not None and (rd > 0 or sga > 0):
             result["operating_income"] = gp - rd - sga
 
-    # ── Operating income fallback: pre-tax + interest (approximate) ───────────
-    # operating income ≈ pre-tax income + interest expense
+    # Fallback: operating_income ≈ pretax + interest
     if result["operating_income"] is None:
         pretax = raw.get("_pretax")
         if pretax is not None:
-            ie = result["interest_expense"] or 0.0
-            result["operating_income"] = pretax + ie
+            result["operating_income"] = pretax + (result["interest_expense"] or 0.0)
 
-    # ── Net income fallback: pre-tax − tax ───────────────────────────────────
     if result["net_income"] is None:
         pretax = raw.get("_pretax")
         tax    = result["income_tax"]
@@ -236,12 +226,22 @@ def pnl_from_standard_filing(filing_obj) -> Dict[str, Any]:
     return result
 
 
-# ---------------------------------------------------------------------------
-# Private helpers
-# ---------------------------------------------------------------------------
+def _detect_xbrl_standard(filing_obj) -> str:
+    """Infer GAAP vs IFRS from namespace prefix counts. Some 20-F filers use us-gaap (e.g. ASML)."""
+    try:
+        stmt = filing_obj.income_statement
+        df   = stmt.to_dataframe() if stmt is not None else None
+    except Exception:
+        return "IFRS"
+    if df is None or df.empty or "concept" not in df.columns:
+        return "IFRS"
+    usgaap = sum(1 for c in df["concept"].fillna("") if str(c).startswith("us-gaap"))
+    ifrs   = sum(1 for c in df["concept"].fillna("") if str(c).startswith("ifrs"))
+    return "US_GAAP" if usgaap >= ifrs else "IFRS"
 
-def _parse_concepts(filing_obj) -> Dict[str, float]:
-    """Walk the income_statement DataFrame; return {field_name: best_value}."""
+
+def _parse_concepts(filing_obj, concept_map: Dict[str, str]) -> Dict[str, float]:
+    """Walk income_statement DataFrame → {field_name: best_value}."""
     result: Dict[str, float] = {}
     if filing_obj is None:
         return result
@@ -272,7 +272,7 @@ def _parse_concepts(filing_obj) -> Dict[str, float]:
 
     for _, row in totals.iterrows():
         concept_short = _strip_prefix(str(row.get("concept", "") or ""))
-        field = _STD.get(concept_short)
+        field = concept_map.get(concept_short)
         if not field:
             continue
         try:

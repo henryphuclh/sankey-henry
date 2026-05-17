@@ -10,48 +10,8 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Wireless service",
-        "value": 67384000000.0,
-        "unit": "MILLIONS",
-        "period": "FY2025",
-        "concept": "llm_extracted",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Fiber and advanced connectivity",
-        "value": 7333000000.0,
-        "unit": "MILLIONS",
-        "period": "FY2025",
-        "concept": "llm_extracted",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Non-fiber consumer broadband",
-        "value": 3542000000.0,
-        "unit": "MILLIONS",
-        "period": "FY2025",
-        "concept": "llm_extracted",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Legacy and other transitional",
-        "value": 9170000000.0,
-        "unit": "MILLIONS",
-        "period": "FY2025",
-        "concept": "llm_extracted",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Other",
-        "value": 194000000.0,
-        "unit": "MILLIONS",
-        "period": "FY2025",
-        "concept": "llm_extracted",
-        "is_annual": true
-      },
-      {
-        "segment_name": "Equipment",
-        "value": 22098000000.0,
+        "segment_name": "Communications",
+        "value": 120896000000.0,
         "unit": "MILLIONS",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -81,48 +41,8 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Wireless service",
-          "value": 67384000000.0,
-          "unit": "MILLIONS",
-          "period": "FY2025",
-          "concept": "llm_extracted",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Fiber and advanced connectivity",
-          "value": 7333000000.0,
-          "unit": "MILLIONS",
-          "period": "FY2025",
-          "concept": "llm_extracted",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Non-fiber consumer broadband",
-          "value": 3542000000.0,
-          "unit": "MILLIONS",
-          "period": "FY2025",
-          "concept": "llm_extracted",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Legacy and other transitional",
-          "value": 9170000000.0,
-          "unit": "MILLIONS",
-          "period": "FY2025",
-          "concept": "llm_extracted",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Other",
-          "value": 194000000.0,
-          "unit": "MILLIONS",
-          "period": "FY2025",
-          "concept": "llm_extracted",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment",
-          "value": 22098000000.0,
+          "segment_name": "Communications",
+          "value": 120896000000.0,
           "unit": "MILLIONS",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -151,48 +71,8 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Wireless service",
-          "value": 65373000000.0,
-          "unit": "MILLIONS",
-          "period": "FY2024",
-          "concept": "llm_extracted",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Business service",
-          "value": 18064000000.0,
-          "unit": "MILLIONS",
-          "period": "FY2024",
-          "concept": "llm_extracted",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Broadband",
-          "value": 11212000000.0,
-          "unit": "MILLIONS",
-          "period": "FY2024",
-          "concept": "llm_extracted",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Legacy voice and data",
-          "value": 1518000000.0,
-          "unit": "MILLIONS",
-          "period": "FY2024",
-          "concept": "llm_extracted",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Other",
-          "value": 1300000000.0,
-          "unit": "MILLIONS",
-          "period": "FY2024",
-          "concept": "llm_extracted",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Equipment",
-          "value": 19882000000.0,
+          "segment_name": "Communications",
+          "value": 117652000000.0,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -301,22 +181,67 @@
     },
     {
       "ticker": "T",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 33466000000.0,
+      "gross_profit": 18648000000.0,
+      "operating_income": 6122000000.0,
+      "net_income": 3788000000.0,
+      "rd_expense": null,
+      "sga_expense": 7398000000.0,
+      "cogs": 14818000000.0,
+      "interest_expense": 1791000000.0,
+      "income_tax": 109000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "T",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Communications",
-          "value": 29516000000.0,
+          "segment_name": "Wireless",
+          "value": 16926000000.0,
           "unit": "MILLIONS",
           "period": "2025Q3",
           "concept": "llm_extracted",
           "is_annual": false
         },
         {
-          "segment_name": "Latin America",
-          "value": 1095000000.0,
+          "segment_name": "Fiber and advanced connectivity",
+          "value": 1853000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Non-fiber consumer broadband",
+          "value": 872000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Legacy and other transitional",
+          "value": 2208000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Equipment",
+          "value": 4787000000.0,
           "unit": "MILLIONS",
           "period": "2025Q3",
           "concept": "llm_extracted",
@@ -345,16 +270,40 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Communications",
-          "value": 29699000000.0,
+          "segment_name": "Wireless",
+          "value": 16853000000.0,
           "unit": "MILLIONS",
           "period": "2025Q2",
           "concept": "llm_extracted",
           "is_annual": false
         },
         {
-          "segment_name": "Latin America",
-          "value": 1054000000.0,
+          "segment_name": "Fiber and advanced connectivity",
+          "value": 1793000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Non-fiber consumer broadband",
+          "value": 892000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Legacy and other transitional",
+          "value": 2349000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Equipment",
+          "value": 4992000000.0,
           "unit": "MILLIONS",
           "period": "2025Q2",
           "concept": "llm_extracted",
@@ -383,16 +332,40 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Communications",
-          "value": 29560000000.0,
+          "segment_name": "Wireless",
+          "value": 16651000000.0,
           "unit": "MILLIONS",
           "period": "2025Q1",
           "concept": "llm_extracted",
           "is_annual": false
         },
         {
-          "segment_name": "Latin America",
-          "value": 971000000.0,
+          "segment_name": "Fiber and advanced connectivity",
+          "value": 1780000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Non-fiber consumer broadband",
+          "value": 918000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Legacy and other transitional",
+          "value": 2475000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Equipment",
+          "value": 4919000000.0,
           "unit": "MILLIONS",
           "period": "2025Q1",
           "concept": "llm_extracted",
@@ -415,22 +388,35 @@
     },
     {
       "ticker": "T",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 32298000000.0,
+      "gross_profit": 18103000000.0,
+      "operating_income": 5340000000.0,
+      "net_income": 4080000000.0,
+      "rd_expense": null,
+      "sga_expense": 7389000000.0,
+      "cogs": 14195000000.0,
+      "interest_expense": 1661000000.0,
+      "income_tax": 900000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "T",
       "period": "2024Q3",
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Communications",
-          "value": 29074000000.0,
-          "unit": "MILLIONS",
-          "period": "2024Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "Latin America",
-          "value": 1022000000.0,
+          "segment_name": "Consumer Wireline",
+          "value": 30212999999.999996,
           "unit": "MILLIONS",
           "period": "2024Q3",
           "concept": "llm_extracted",
@@ -461,16 +447,40 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Communications",
-          "value": 29685000000.0,
+          "segment_name": "Consumer Wireless",
+          "value": 16277000000.0,
           "unit": "MILLIONS",
           "period": "2024Q2",
           "concept": "llm_extracted",
           "is_annual": false
         },
         {
-          "segment_name": "Latin America",
-          "value": 1112000000.0,
+          "segment_name": "Business Service",
+          "value": 4571000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Broadband",
+          "value": 699000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Legacy Voice and Data",
+          "value": 385000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Equipment",
+          "value": 4791000000.0,
           "unit": "MILLIONS",
           "period": "2024Q2",
           "concept": "llm_extracted",
@@ -501,16 +511,32 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Communications",
-          "value": 28920000000.0,
+          "segment_name": "Consumer Wireless",
+          "value": 15994000000.0,
           "unit": "MILLIONS",
           "period": "2024Q1",
           "concept": "llm_extracted",
           "is_annual": false
         },
         {
-          "segment_name": "Latin America",
-          "value": 1108000000.0,
+          "segment_name": "Business Service",
+          "value": 4700000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Legacy Voice and Data",
+          "value": 404000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Equipment",
+          "value": 5186000000.0,
           "unit": "MILLIONS",
           "period": "2024Q1",
           "concept": "llm_extracted",
@@ -541,16 +567,8 @@
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Communications",
-          "value": 28732463869.338634,
-          "unit": "MILLIONS",
-          "period": "2023Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "Latin America",
-          "value": 1617536130.6613657,
+          "segment_name": "Consumer Wireline",
+          "value": 30350000000.0,
           "unit": "MILLIONS",
           "period": "2023Q3",
           "concept": "llm_extracted",
@@ -587,14 +605,6 @@
           "period": "2023Q2",
           "concept": "llm_extracted",
           "is_annual": false
-        },
-        {
-          "segment_name": "Latin America",
-          "value": 967000000.0,
-          "unit": "MILLIONS",
-          "period": "2023Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
         }
       ],
       "total_revenue": 29917000000.0,
@@ -614,9 +624,9 @@
       ]
     }
   ],
-  "ttm_revenue": 123688000000.0,
-  "ttm_operating_income": 25032000000.0,
-  "ttm_net_income": 23411000000.0,
+  "ttm_revenue": 126528000000.0,
+  "ttm_operating_income": 25400000000.0,
+  "ttm_net_income": 22507000000.0,
   "segment_trend": {
     "Communications": [
       {
@@ -625,90 +635,168 @@
         "is_annual": false
       },
       {
-        "period": "2023Q3",
-        "value": 28732463869.338634,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 28920000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 29685000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 29074000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 29560000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 29699000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 29516000000.0,
-        "is_annual": false
-      },
-      {
         "period": "FY2023",
         "value": 118038000000.0,
         "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 117652000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 120896000000.0,
+        "is_annual": true
       }
     ],
-    "Latin America": [
-      {
-        "period": "2023Q2",
-        "value": 967000000.0,
-        "is_annual": false
-      },
+    "Consumer Wireline": [
       {
         "period": "2023Q3",
-        "value": 1617536130.6613657,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 1108000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 1112000000.0,
+        "value": 30350000000.0,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 1022000000.0,
+        "value": 30212999999.999996,
+        "is_annual": false
+      }
+    ],
+    "Consumer Wireless": [
+      {
+        "period": "2024Q1",
+        "value": 15994000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 16277000000.0,
+        "is_annual": false
+      }
+    ],
+    "Business Service": [
+      {
+        "period": "2024Q1",
+        "value": 4700000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4571000000.0,
+        "is_annual": false
+      }
+    ],
+    "Legacy Voice and Data": [
+      {
+        "period": "2024Q1",
+        "value": 404000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 385000000.0,
+        "is_annual": false
+      }
+    ],
+    "Equipment": [
+      {
+        "period": "2024Q1",
+        "value": 5186000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4791000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 971000000.0,
+        "value": 4919000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 1054000000.0,
+        "value": 4992000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 1095000000.0,
+        "value": 4787000000.0,
+        "is_annual": false
+      }
+    ],
+    "Broadband": [
+      {
+        "period": "2024Q2",
+        "value": 699000000.0,
+        "is_annual": false
+      }
+    ],
+    "Wireless": [
+      {
+        "period": "2025Q1",
+        "value": 16651000000.0,
         "is_annual": false
       },
       {
-        "period": "2026Q1",
-        "value": 1173000000.0,
+        "period": "2025Q2",
+        "value": 16853000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 16926000000.0,
+        "is_annual": false
+      }
+    ],
+    "Fiber and advanced connectivity": [
+      {
+        "period": "2025Q1",
+        "value": 1780000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1793000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1853000000.0,
+        "is_annual": false
+      }
+    ],
+    "Non-fiber consumer broadband": [
+      {
+        "period": "2025Q1",
+        "value": 918000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 892000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 872000000.0,
+        "is_annual": false
+      }
+    ],
+    "Legacy and other transitional": [
+      {
+        "period": "2025Q1",
+        "value": 2475000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 2349000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2208000000.0,
         "is_annual": false
       }
     ],
@@ -726,94 +814,24 @@
         "is_annual": false
       }
     ],
+    "Latin America": [
+      {
+        "period": "2026Q1",
+        "value": 1173000000.0,
+        "is_annual": false
+      }
+    ],
     "Latin America Business Segment": [
       {
         "period": "FY2023",
         "value": 3932000000.0,
         "is_annual": true
       }
-    ],
-    "Wireless service": [
-      {
-        "period": "FY2024",
-        "value": 65373000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 67384000000.0,
-        "is_annual": true
-      }
-    ],
-    "Business service": [
-      {
-        "period": "FY2024",
-        "value": 18064000000.0,
-        "is_annual": true
-      }
-    ],
-    "Broadband": [
-      {
-        "period": "FY2024",
-        "value": 11212000000.0,
-        "is_annual": true
-      }
-    ],
-    "Legacy voice and data": [
-      {
-        "period": "FY2024",
-        "value": 1518000000.0,
-        "is_annual": true
-      }
-    ],
-    "Other": [
-      {
-        "period": "FY2024",
-        "value": 1300000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 194000000.0,
-        "is_annual": true
-      }
-    ],
-    "Equipment": [
-      {
-        "period": "FY2024",
-        "value": 19882000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 22098000000.0,
-        "is_annual": true
-      }
-    ],
-    "Fiber and advanced connectivity": [
-      {
-        "period": "FY2025",
-        "value": 7333000000.0,
-        "is_annual": true
-      }
-    ],
-    "Non-fiber consumer broadband": [
-      {
-        "period": "FY2025",
-        "value": 3542000000.0,
-        "is_annual": true
-      }
-    ],
-    "Legacy and other transitional": [
-      {
-        "period": "FY2025",
-        "value": 9170000000.0,
-        "is_annual": true
-      }
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 11,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

@@ -10,8 +10,8 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Operating Segments Excluding Intersegment Elimination",
-        "value": 101567600669.18295,
+        "segment_name": "Consumer",
+        "value": 106807000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +19,7 @@
       },
       {
         "segment_name": "Business",
-        "value": 36623399330.81706,
+        "value": 29069000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -49,8 +49,8 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Operating Segments Excluding Intersegment Elimination",
-          "value": 101567600669.18295,
+          "segment_name": "Consumer",
+          "value": 106807000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -58,7 +58,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 36623399330.81706,
+          "value": 29069000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -87,8 +87,8 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Operating Segments Excluding Intersegment Elimination",
-          "value": 97381863153.24544,
+          "segment_name": "Consumer",
+          "value": 102904000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -96,7 +96,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 37406136846.75456,
+          "value": 29531000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -125,8 +125,8 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Operating Segments Excluding Intersegment Elimination",
-          "value": 95538585050.85909,
+          "segment_name": "Consumer",
+          "value": 101626000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -134,7 +134,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 38435414949.14092,
+          "value": 30122000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -165,8 +165,8 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Operating Segments Excluding Intersegment Elimination",
-          "value": 22789000000.0,
+          "segment_name": "Consumer",
+          "value": 26453000000.0,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -197,14 +197,35 @@
     },
     {
       "ticker": "VZ",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 36381000000.0,
+      "gross_profit": 19903000000.0,
+      "operating_income": 5004000000.0,
+      "net_income": 2342000000.0,
+      "rd_expense": null,
+      "sga_expense": 10380000000.0,
+      "cogs": 16478000000.0,
+      "interest_expense": 1759000000.0,
+      "income_tax": 615000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "VZ",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Operating Segments Excluding Intersegment Elimination",
-          "value": 20260000000.0,
+          "segment_name": "Consumer",
+          "value": 26105000000.0,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -241,8 +262,8 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Operating Segments Excluding Intersegment Elimination",
-          "value": 25363160263.646626,
+          "segment_name": "Consumer",
+          "value": 26648000000.0,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -250,7 +271,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 9140839736.353374,
+          "value": 7275000000.0,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -279,8 +300,8 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Operating Segments Excluding Intersegment Elimination",
-          "value": 19993000000.0,
+          "segment_name": "Consumer",
+          "value": 25618000000.0,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -510,9 +531,9 @@
       ]
     }
   ],
-  "ttm_revenue": 136250000000.0,
-  "ttm_operating_income": 32497000000.0,
-  "ttm_net_income": 20306000000.0,
+  "ttm_revenue": 139146000000.0,
+  "ttm_operating_income": 29523000000.0,
+  "ttm_net_income": 17665000000.0,
   "segment_trend": {
     "Consumer": [
       {
@@ -539,6 +560,41 @@
         "period": "2024Q3",
         "value": 25360000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 25618000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 26648000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 26105000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 26453000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 101626000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 102904000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 106807000000.0,
+        "is_annual": true
       }
     ],
     "Business": [
@@ -574,7 +630,7 @@
       },
       {
         "period": "2025Q2",
-        "value": 9140839736.353374,
+        "value": 7275000000.0,
         "is_annual": false
       },
       {
@@ -589,60 +645,24 @@
       },
       {
         "period": "FY2023",
-        "value": 38435414949.14092,
+        "value": 30122000000.0,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 37406136846.75456,
+        "value": 29531000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 36623399330.81706,
-        "is_annual": true
-      }
-    ],
-    "Operating Segments Excluding Intersegment Elimination": [
-      {
-        "period": "2025Q1",
-        "value": 19993000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 25363160263.646626,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 20260000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 22789000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 95538585050.85909,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 97381863153.24544,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 101567600669.18295,
+        "value": 29069000000.0,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

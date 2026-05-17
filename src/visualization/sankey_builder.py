@@ -122,8 +122,13 @@ def _build_standard_sankey(sd: SegmentData, total_rev: float) -> Optional[Sankey
         _add_segment_nodes(sd.segments, total_rev, rev_idx, add_node, add_link, rich)
 
     # Layer 2: Gross Profit ←→ COGS
-    gp = sd.gross_profit; cogs = sd.cogs
-    op = sd.operating_income; rd = sd.rd_expense; sga = sd.sga_expense
+    # Expense fields (cogs, rd, sga) are stored as positive magnitudes; guard with
+    # abs() in case a legacy segment file still contains negative XBRL values.
+    gp   = sd.gross_profit
+    cogs = abs(sd.cogs)  if sd.cogs  is not None else None
+    op   = sd.operating_income
+    rd   = abs(sd.rd_expense)  if sd.rd_expense  is not None else None
+    sga  = abs(sd.sga_expense) if sd.sga_expense is not None else None
     if gp is not None and cogs is None:   cogs = total_rev - gp
     elif cogs is not None and gp is None: gp   = total_rev - cogs
     elif gp is None and cogs is None and op is not None:
@@ -136,7 +141,7 @@ def _build_standard_sankey(sd: SegmentData, total_rev: float) -> Optional[Sankey
     # where SEC/Yahoo provides COGS + NI but no explicit operating income line.
     if op is None and gp is not None:
         _ni = sd.net_income; _tax = sd.income_tax; _ie = sd.interest_expense
-        if _ni is not None and _tax is not None and _tax > 0:
+        if _ni is not None and _tax is not None and abs(_tax) > 0:
             _inferred = abs(_ni) + abs(_tax) + abs(_ie or 0)
             if 0 < _inferred < gp:
                 op = _inferred if (_ni >= 0) else -_inferred
@@ -176,7 +181,9 @@ def _build_standard_sankey(sd: SegmentData, total_rev: float) -> Optional[Sankey
 
     # Layer 5: Below-the-line — with balance enforcement so op node stays balanced.
     final_src = oi_idx if oi_idx is not None else gp_src
-    ie = sd.interest_expense; tax = sd.income_tax; ni = sd.net_income
+    ie  = abs(sd.interest_expense) if sd.interest_expense is not None else None
+    tax = abs(sd.income_tax)       if sd.income_tax       is not None else None
+    ni  = sd.net_income
 
     # Implied tax when tax is absent but op and ni are known
     if (tax is None or tax <= 0) and op is not None and ni is not None and op > 0 and ni > 0 and op > ni:
@@ -184,8 +191,8 @@ def _build_standard_sankey(sd: SegmentData, total_rev: float) -> Optional[Sankey
         if _implied_tax > total_rev * 0.005:
             tax = _implied_tax
 
-    ie_w  = abs(ie)  if (ie  and ie  > 0) else 0.0
-    tax_w = abs(tax) if (tax and tax > 0) else 0.0
+    ie_w  = ie  if ie  else 0.0
+    tax_w = tax if tax else 0.0
     ni_w  = abs(ni)  if ni is not None    else 0.0
     op_abs = abs(op) if op is not None and op > 0 else 0.0
 

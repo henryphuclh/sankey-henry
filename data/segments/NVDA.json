@@ -231,6 +231,27 @@
   "quarterly_periods": [
     {
       "ticker": "NVDA",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": 68127000000.0,
+      "gross_profit": 51093000000.0,
+      "operating_income": 44299000000.0,
+      "net_income": 42960000000.0,
+      "rd_expense": 5512000000.0,
+      "sga_expense": 1282000000.0,
+      "cogs": 17034000000.0,
+      "interest_expense": 73000000.0,
+      "income_tax": 7438000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "NVDA",
       "period": "2025Q4",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -413,6 +434,27 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "NVDA",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": 39331000000.0,
+      "gross_profit": 28723000000.0,
+      "operating_income": 24034000000.0,
+      "net_income": 22091000000.0,
+      "rd_expense": 3714000000.0,
+      "sga_expense": 975000000.0,
+      "cogs": 10608000000.0,
+      "interest_expense": 61000000.0,
+      "income_tax": 3126000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
       "notes": []
     },
     {
@@ -680,9 +722,9 @@
       ]
     }
   ],
-  "ttm_revenue": 182893000000.0,
-  "ttm_operating_income": 107957000000.0,
-  "ttm_net_income": 96416000000.0,
+  "ttm_revenue": 215938000000.0,
+  "ttm_operating_income": 130387000000.0,
+  "ttm_net_income": 120067000000.0,
   "segment_trend": {
     "Compute & Networking": [
       {
@@ -910,7 +952,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 11,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

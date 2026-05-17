@@ -110,5 +110,6 @@
   "has_partial_data": true,
   "data_notes": [
     "Partial data: 3/3 annual, 0/12 quarterly"
-  ]
+  ],
+  "classification": "INTL_YAHOO"
 }

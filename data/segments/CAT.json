@@ -11,7 +11,7 @@
     "segments": [
       {
         "segment_name": "Construction Industries",
-        "value": 25060000000.0,
+        "value": 22933861485.342903,
         "unit": "MILLIONS",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -19,7 +19,7 @@
       },
       {
         "segment_name": "Resource Industries",
-        "value": 12474000000.0,
+        "value": 11415681890.190237,
         "unit": "MILLIONS",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -27,7 +27,7 @@
       },
       {
         "segment_name": "Power & Energy",
-        "value": 32101000000.0,
+        "value": 29377489526.77544,
         "unit": "MILLIONS",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -35,7 +35,7 @@
       },
       {
         "segment_name": "Financial Products Segment",
-        "value": 4220000000.0,
+        "value": 3861967097.6914225,
         "unit": "MILLIONS",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -66,7 +66,7 @@
       "segments": [
         {
           "segment_name": "Construction Industries",
-          "value": 25060000000.0,
+          "value": 22933861485.342903,
           "unit": "MILLIONS",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -74,7 +74,7 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 12474000000.0,
+          "value": 11415681890.190237,
           "unit": "MILLIONS",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -82,7 +82,7 @@
         },
         {
           "segment_name": "Power & Energy",
-          "value": 32101000000.0,
+          "value": 29377489526.77544,
           "unit": "MILLIONS",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -90,7 +90,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 4220000000.0,
+          "value": 3861967097.6914225,
           "unit": "MILLIONS",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -120,7 +120,7 @@
       "segments": [
         {
           "segment_name": "Construction Industries",
-          "value": 25455000000.0,
+          "value": 23317170004.664246,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -128,7 +128,7 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 12389000000.0,
+          "value": 11348513816.059137,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -136,7 +136,7 @@
         },
         {
           "segment_name": "Energy & Transportation",
-          "value": 28854000000.0,
+          "value": 26430706081.892834,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -144,7 +144,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 4053000000.0,
+          "value": 3712610097.3837824,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -173,16 +173,8 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Energy & Transportation",
-          "value": 28001000000.0,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Construction Industries",
-          "value": 27418000000.0,
+          "value": 22512889999.45382,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -190,7 +182,15 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 13583000000.0,
+          "value": 11152986536.675951,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 22991590665.792778,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -198,7 +198,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 3785000000.0,
+          "value": 3107859386.09427,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -206,7 +206,7 @@
         },
         {
           "segment_name": "All Other Segment",
-          "value": 449000000.0,
+          "value": 368673411.98317766,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -293,22 +293,35 @@
     },
     {
       "ticker": "CAT",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 19133000000.0,
+      "gross_profit": 5475000000.0,
+      "operating_income": 2660000000.0,
+      "net_income": 2402000000.0,
+      "rd_expense": 562000000.0,
+      "sga_expense": 1876000000.0,
+      "cogs": 13658000000.0,
+      "interest_expense": 127000000.0,
+      "income_tax": 712000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "CAT",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Energy & Transportation",
-          "value": 8397000000.0,
-          "unit": "USD",
-          "period": "2025-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Construction Industries",
-          "value": 6760000000.0,
+          "value": 6164135863.102931,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -316,7 +329,15 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 3110000000.0,
+          "value": 2835867238.794396,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 7656841544.744869,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -324,7 +345,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 1076000000.0,
+          "value": 981155353.3578038,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -353,8 +374,8 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Energy & Transportation",
-          "value": 7836000000.0,
+          "segment_name": "All Other Segment",
+          "value": 94374062.10635851,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -362,7 +383,7 @@
         },
         {
           "segment_name": "Construction Industries",
-          "value": 6190000000.0,
+          "value": 5617071581.138069,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -370,7 +391,15 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 3087000000.0,
+          "value": 2801276247.330084,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 7110722602.552166,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -378,15 +407,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 1042000000.0,
-          "unit": "USD",
-          "period": "2025-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other Segment",
-          "value": 104000000.0,
+          "value": 945555506.8733227,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -415,8 +436,8 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Energy & Transportation",
-          "value": 6568000000.0,
+          "segment_name": "All Other Segment",
+          "value": 82411274.94597687,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -424,7 +445,7 @@
         },
         {
           "segment_name": "Construction Industries",
-          "value": 5184000000.0,
+          "value": 4694725816.702682,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -432,7 +453,15 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 2884000000.0,
+          "value": 2611803482.903267,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 5948101690.60633,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -440,15 +469,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 1007000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other Segment",
-          "value": 91000000.0,
+          "value": 911957734.841744,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -471,22 +492,35 @@
     },
     {
       "ticker": "CAT",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 16215000000.0,
+      "gross_profit": 5556000000.0,
+      "operating_income": 2924000000.0,
+      "net_income": 2791000000.0,
+      "rd_expense": 519000000.0,
+      "sga_expense": 1769000000.0,
+      "cogs": 10659000000.0,
+      "interest_expense": 107000000.0,
+      "income_tax": 463000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "CAT",
       "period": "2024Q3",
       "is_annual": false,
       "fiscal_year": 2024,
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Energy & Transportation",
-          "value": 7187000000.0,
-          "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Construction Industries",
-          "value": 6345000000.0,
+          "value": 5778161822.910777,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -494,7 +528,15 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 3028000000.0,
+          "value": 2757489992.084134,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 6544940744.091372,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -502,7 +544,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 1034000000.0,
+          "value": 941626371.1410155,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -510,7 +552,7 @@
         },
         {
           "segment_name": "All Other Segment",
-          "value": 92000000.0,
+          "value": 83781069.77270158,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -541,16 +583,8 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Energy & Transportation",
-          "value": 7337000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Construction Industries",
-          "value": 6683000000.0,
+          "value": 6082047497.000764,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -558,7 +592,15 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 3206000000.0,
+          "value": 2917708256.0802703,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 6677238139.382703,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -566,7 +608,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 1004000000.0,
+          "value": 913717744.5741084,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -574,7 +616,7 @@
         },
         {
           "segment_name": "All Other Segment",
-          "value": 108000000.0,
+          "value": 98288362.96215509,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -605,16 +647,8 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Energy & Transportation",
-          "value": 6681000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Construction Industries",
-          "value": 6424000000.0,
+          "value": 5833588688.354983,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -622,7 +656,15 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 3193000000.0,
+          "value": 2899540579.37694,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 6066968559.604552,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -630,7 +672,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 991000000.0,
+          "value": 899920048.2814116,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -638,7 +680,7 @@
         },
         {
           "segment_name": "All Other Segment",
-          "value": 109000000.0,
+          "value": 98982124.38211289,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -670,15 +712,7 @@
       "segments": [
         {
           "segment_name": "Construction Industries",
-          "value": 6999000000.0,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Energy & Transportation",
-          "value": 6859000000.0,
+          "value": 6431244670.383733,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -686,7 +720,15 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 3351000000.0,
+          "value": 3079168579.86225,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 6302601399.365912,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -694,7 +736,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 979000000.0,
+          "value": 899584016.6174703,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -702,7 +744,7 @@
         },
         {
           "segment_name": "All Other Segment",
-          "value": 106000000.0,
+          "value": 97401333.77063519,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -733,16 +775,8 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Energy & Transportation",
-          "value": 7219000000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Construction Industries",
-          "value": 7154000000.0,
+          "value": 6529273886.693017,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -750,7 +784,15 @@
         },
         {
           "segment_name": "Resource Industries",
-          "value": 3563000000.0,
+          "value": 3251859499.3412385,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Energy & Transportation",
+          "value": 6588597733.860342,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -758,7 +800,7 @@
         },
         {
           "segment_name": "Financial Products Segment",
-          "value": 923000000.0,
+          "value": 842398629.776021,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -766,7 +808,7 @@
         },
         {
           "segment_name": "All Other Segment",
-          "value": 116000000.0,
+          "value": 105870250.32938077,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -790,101 +832,49 @@
       ]
     }
   ],
-  "ttm_revenue": 65871000000.0,
-  "ttm_operating_income": 11576000000.0,
-  "ttm_net_income": 9031000000.0,
+  "ttm_revenue": 70755000000.0,
+  "ttm_operating_income": 11657000000.0,
+  "ttm_net_income": 9430000000.0,
   "segment_trend": {
-    "Energy & Transportation": [
-      {
-        "period": "2023Q2",
-        "value": 7219000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q3",
-        "value": 6859000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 6681000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 7337000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 7187000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 6568000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 7836000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 8397000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 28001000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 28854000000.0,
-        "is_annual": true
-      }
-    ],
     "Construction Industries": [
       {
         "period": "2023Q2",
-        "value": 7154000000.0,
+        "value": 6529273886.693017,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 6999000000.0,
+        "value": 6431244670.383733,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 6424000000.0,
+        "value": 5833588688.354983,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 6683000000.0,
+        "value": 6082047497.000764,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 6345000000.0,
+        "value": 5778161822.910777,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 5184000000.0,
+        "value": 4694725816.702682,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 6190000000.0,
+        "value": 5617071581.138069,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 6760000000.0,
+        "value": 6164135863.102931,
         "is_annual": false
       },
       {
@@ -894,59 +884,59 @@
       },
       {
         "period": "FY2023",
-        "value": 27418000000.0,
+        "value": 22512889999.45382,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 25455000000.0,
+        "value": 23317170004.664246,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 25060000000.0,
+        "value": 22933861485.342903,
         "is_annual": true
       }
     ],
     "Resource Industries": [
       {
         "period": "2023Q2",
-        "value": 3563000000.0,
+        "value": 3251859499.3412385,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 3351000000.0,
+        "value": 3079168579.86225,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 3193000000.0,
+        "value": 2899540579.37694,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 3206000000.0,
+        "value": 2917708256.0802703,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 3028000000.0,
+        "value": 2757489992.084134,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 2884000000.0,
+        "value": 2611803482.903267,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 3087000000.0,
+        "value": 2801276247.330084,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 3110000000.0,
+        "value": 2835867238.794396,
         "is_annual": false
       },
       {
@@ -956,59 +946,111 @@
       },
       {
         "period": "FY2023",
-        "value": 13583000000.0,
+        "value": 11152986536.675951,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 12389000000.0,
+        "value": 11348513816.059137,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 12474000000.0,
+        "value": 11415681890.190237,
+        "is_annual": true
+      }
+    ],
+    "Energy & Transportation": [
+      {
+        "period": "2023Q2",
+        "value": 6588597733.860342,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 6302601399.365912,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 6066968559.604552,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 6677238139.382703,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 6544940744.091372,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 5948101690.60633,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 7110722602.552166,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 7656841544.744869,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 22991590665.792778,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 26430706081.892834,
         "is_annual": true
       }
     ],
     "Financial Products Segment": [
       {
         "period": "2023Q2",
-        "value": 923000000.0,
+        "value": 842398629.776021,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 979000000.0,
+        "value": 899584016.6174703,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 991000000.0,
+        "value": 899920048.2814116,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 1004000000.0,
+        "value": 913717744.5741084,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 1034000000.0,
+        "value": 941626371.1410155,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 1007000000.0,
+        "value": 911957734.841744,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 1042000000.0,
+        "value": 945555506.8733227,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 1076000000.0,
+        "value": 981155353.3578038,
         "is_annual": false
       },
       {
@@ -1018,54 +1060,54 @@
       },
       {
         "period": "FY2023",
-        "value": 3785000000.0,
+        "value": 3107859386.09427,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 4053000000.0,
+        "value": 3712610097.3837824,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 4220000000.0,
+        "value": 3861967097.6914225,
         "is_annual": true
       }
     ],
     "All Other Segment": [
       {
         "period": "2023Q2",
-        "value": 116000000.0,
+        "value": 105870250.32938077,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 106000000.0,
+        "value": 97401333.77063519,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 109000000.0,
+        "value": 98982124.38211289,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 108000000.0,
+        "value": 98288362.96215509,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 92000000.0,
+        "value": 83781069.77270158,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 91000000.0,
+        "value": 82411274.94597687,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 104000000.0,
+        "value": 94374062.10635851,
         "is_annual": false
       },
       {
@@ -1075,7 +1117,7 @@
       },
       {
         "period": "FY2023",
-        "value": 449000000.0,
+        "value": 368673411.98317766,
         "is_annual": true
       }
     ],
@@ -1087,13 +1129,14 @@
       },
       {
         "period": "FY2025",
-        "value": 32101000000.0,
+        "value": 29377489526.77544,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 11,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

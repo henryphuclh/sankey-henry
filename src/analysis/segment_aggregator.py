@@ -36,6 +36,9 @@ class AggregatedCompanyData:
     # Segment name → [{period, value, is_annual}, ...] sorted by period
     segment_trend: Dict[str, List[Dict]] = field(default_factory=dict)
 
+    # Data source classification (US_SEC | INTL_SEC | INTL_YAHOO)
+    classification: str = ""
+
     # Coverage flags
     annual_count:    int  = 0
     quarterly_count: int  = 0
@@ -59,6 +62,7 @@ class AggregatedCompanyData:
             "ticker":           self.ticker,
             "name":             self.name,
             "sector":           self.sector,
+            "classification":   self.classification,
             "latest_annual":    self.latest_annual.to_dict() if self.latest_annual else None,
             "annual_periods":   [sd.to_dict() for sd in self.annual_periods],
             "quarterly_periods": [sd.to_dict() for sd in self.quarterly_periods],
@@ -101,12 +105,12 @@ def aggregate(
         quarterly_periods = quarterlys,
         annual_count      = len(annuals),
         quarterly_count   = len(quarterlys),
-        has_partial_data  = len(annuals) < 3 or len(quarterlys) < 8,
+        has_partial_data  = len(annuals) < 3 or len(quarterlys) < 12,
     )
 
     if agg.has_partial_data:
         agg.data_notes.append(
-            f"Partial data: {len(annuals)}/3 annual, {len(quarterlys)}/12 quarterly"
+            f"Only {len(annuals)}/3 annual report{'s' if len(annuals) != 1 else ''} available"
         )
 
     # TTM from last 4 quarters
@@ -184,13 +188,14 @@ def load_cached(ticker: str) -> Optional[AggregatedCompanyData]:
             ticker            = d["ticker"],
             name              = d["name"],
             sector            = d.get("sector", ""),
+            classification    = d.get("classification", ""),
             ttm_revenue       = d.get("ttm_revenue"),
             ttm_operating_income = d.get("ttm_operating_income"),
             ttm_net_income    = d.get("ttm_net_income"),
             segment_trend     = d.get("segment_trend", {}),
             annual_count      = d.get("annual_count", 0),
             quarterly_count   = d.get("quarterly_count", 0),
-            has_partial_data  = d.get("has_partial_data", False),
+            has_partial_data  = d.get("annual_count", 0) < 3 or d.get("quarterly_count", 0) < 12,
             data_notes        = d.get("data_notes", []),
         )
         if d.get("latest_annual"):

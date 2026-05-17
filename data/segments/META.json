@@ -197,6 +197,27 @@
     },
     {
       "ticker": "META",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 59893000000.0,
+      "gross_profit": 48987000000.0,
+      "operating_income": 24745000000.0,
+      "net_income": 22768000000.0,
+      "rd_expense": 17135000000.0,
+      "sga_expense": 7107000000.0,
+      "cogs": 10906000000.0,
+      "interest_expense": 456000000.0,
+      "income_tax": 2586000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "META",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -510,9 +531,9 @@
       ]
     }
   ],
-  "ttm_revenue": 197383000000.0,
-  "ttm_operating_income": 81403000000.0,
-  "ttm_net_income": 64463000000.0,
+  "ttm_revenue": 214962000000.0,
+  "ttm_operating_income": 88593000000.0,
+  "ttm_net_income": 70587000000.0,
   "segment_trend": {
     "Family of Apps": [
       {
@@ -640,7 +661,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

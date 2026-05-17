@@ -251,6 +251,27 @@
     },
     {
       "ticker": "QCOM",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": 11271000000.0,
+      "gross_profit": 6237000000.0,
+      "operating_income": 2957000000.0,
+      "net_income": -3117000000.0,
+      "rd_expense": 2370000000.0,
+      "sga_expense": 910000000.0,
+      "cogs": 5034000000.0,
+      "interest_expense": 171000000.0,
+      "income_tax": 6088000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "QCOM",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -534,9 +555,9 @@
       ]
     }
   ],
-  "ttm_revenue": 44195000000.0,
-  "ttm_operating_income": 11557000000.0,
-  "ttm_net_income": 15852000000.0,
+  "ttm_revenue": 44487000000.0,
+  "ttm_operating_income": 11394000000.0,
+  "ttm_net_income": 9923000000.0,
   "segment_trend": {
     "QCT": [
       {
@@ -678,7 +699,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

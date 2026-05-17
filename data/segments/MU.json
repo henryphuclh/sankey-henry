@@ -331,6 +331,27 @@
     },
     {
       "ticker": "MU",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": 11315000000.0,
+      "gross_profit": 5054000000.0,
+      "operating_income": 3693000000.0,
+      "net_income": 3201000000.0,
+      "rd_expense": 1047000000.0,
+      "sga_expense": 314000000.0,
+      "cogs": 6261000000.0,
+      "interest_expense": 124000000.0,
+      "income_tax": 429000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "MU",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -718,9 +739,9 @@
       ]
     }
   ],
-  "ttm_revenue": 54857000000.0,
-  "ttm_operating_income": 26213000000.0,
-  "ttm_net_income": 22493000000.0,
+  "ttm_revenue": 58119000000.0,
+  "ttm_operating_income": 28133000000.0,
+  "ttm_net_income": 24111000000.0,
   "segment_trend": {
     "CNBU": [
       {
@@ -976,7 +997,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

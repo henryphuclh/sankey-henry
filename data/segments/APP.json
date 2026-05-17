@@ -161,16 +161,8 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "United States",
-          "value": 907219000.0,
-          "unit": "MILLIONS",
-          "period": "2026Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
           "segment_name": "Rest of the world",
-          "value": 935230000.0,
+          "value": 1842449000.0,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -193,22 +185,35 @@
     },
     {
       "ticker": "APP",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 1657944000.0,
+      "gross_profit": 1474415000.0,
+      "operating_income": 1275243000.0,
+      "net_income": 1102269000.0,
+      "rd_expense": 82220000.0,
+      "sga_expense": 116952000.0,
+      "cogs": 183529000.0,
+      "interest_expense": 51290000.0,
+      "income_tax": 151098000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "APP",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "United States",
-          "value": 687927000.0,
-          "unit": "MILLIONS",
-          "period": "2025Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
           "segment_name": "Rest of the World",
-          "value": 717118000.0,
+          "value": 1405045000.0,
           "unit": "MILLIONS",
           "period": "2025Q3",
           "concept": "llm_extracted",
@@ -237,16 +242,8 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "United States",
-          "value": 658321000.0,
-          "unit": "MILLIONS",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
           "segment_name": "Rest of the World",
-          "value": 600433000.0,
+          "value": 1258753999.9999998,
           "unit": "MILLIONS",
           "period": "2025Q2",
           "concept": "llm_extracted",
@@ -277,18 +274,18 @@
         {
           "segment_name": "Advertising",
           "value": 1158974000.0,
-          "unit": "MILLIONS",
-          "period": "2025Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
-          "segment_name": "Apps",
-          "value": 325047000.0,
-          "unit": "MILLIONS",
-          "period": "2025Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "In-App Purchases Revenue",
+          "value": 227541000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 1484021000.0,
@@ -301,7 +298,7 @@
       "interest_expense": -52888000.0,
       "income_tax": 41975000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (1484021000) differs from Yahoo (1158974000) by 28.0%"
@@ -315,32 +312,16 @@
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Software Platform Revenue",
-          "value": 640978256.8129821,
+          "segment_name": "Software Platform",
+          "value": 835186000.0,
           "unit": "MILLIONS",
           "period": "2024Q3",
           "concept": "llm_extracted",
           "is_annual": false
         },
         {
-          "segment_name": "In-App Purchases Revenue",
-          "value": 189061056.6943618,
-          "unit": "MILLIONS",
-          "period": "2024Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "In-App Advertising Revenue",
-          "value": 89567314.89914711,
-          "unit": "MILLIONS",
-          "period": "2024Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "Total Apps Revenue",
-          "value": 278628371.5935089,
+          "segment_name": "Apps",
+          "value": 363049000.0,
           "unit": "MILLIONS",
           "period": "2024Q3",
           "concept": "llm_extracted",
@@ -371,32 +352,16 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Software Platform Revenue",
-          "value": 529630764.82758623,
+          "segment_name": "Software Platform",
+          "value": 711015000.0,
           "unit": "MILLIONS",
           "period": "2024Q2",
           "concept": "llm_extracted",
           "is_annual": false
         },
         {
-          "segment_name": "In-App Purchases Revenue",
-          "value": 186972323.44827586,
-          "unit": "MILLIONS",
-          "period": "2024Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "In-App Advertising Revenue",
-          "value": 88644248.96551724,
-          "unit": "MILLIONS",
-          "period": "2024Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "Total Apps Revenue",
-          "value": 274871662.7586207,
+          "segment_name": "Apps",
+          "value": 369104000.0,
           "unit": "MILLIONS",
           "period": "2024Q2",
           "concept": "llm_extracted",
@@ -427,32 +392,16 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Software Platform Revenue",
-          "value": 499209570.15982085,
+          "segment_name": "Software Platform",
+          "value": 678370000.0,
           "unit": "MILLIONS",
           "period": "2024Q1",
           "concept": "llm_extracted",
           "is_annual": false
         },
         {
-          "segment_name": "In-App Purchases Revenue",
-          "value": 190741223.4431725,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "In-App Advertising Revenue",
-          "value": 88711491.47691709,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "Total Apps Revenue",
-          "value": 279452714.9200896,
+          "segment_name": "Apps",
+          "value": 379740000.0,
           "unit": "MILLIONS",
           "period": "2024Q1",
           "concept": "llm_extracted",
@@ -483,32 +432,16 @@
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Software Platform Revenue",
-          "value": 356171811.60400635,
+          "segment_name": "Software Platform",
+          "value": 504452000.0,
           "unit": "MILLIONS",
           "period": "2023Q3",
           "concept": "llm_extracted",
           "is_annual": false
         },
         {
-          "segment_name": "In-App Purchases Revenue",
-          "value": 174614224.06091204,
-          "unit": "MILLIONS",
-          "period": "2023Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "In-App Advertising Revenue",
-          "value": 79427870.13708478,
-          "unit": "MILLIONS",
-          "period": "2023Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "Total Apps Revenue",
-          "value": 254042094.19799685,
+          "segment_name": "Apps",
+          "value": 359804000.0,
           "unit": "MILLIONS",
           "period": "2023Q3",
           "concept": "llm_extracted",
@@ -539,28 +472,20 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Total Apps Revenue",
+          "segment_name": "Software Platform",
+          "value": 406063000.0,
+          "unit": "MILLIONS",
+          "period": "2023Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Apps",
           "value": 344102000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "In-App Purchases Revenue",
-          "value": 233625000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "In-App Advertising Revenue",
-          "value": 110477000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2023Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 750165000.0,
@@ -573,18 +498,45 @@
       "interest_expense": -50987000.0,
       "income_tax": 15445000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (750165000) differs from Yahoo (1841762000) by 59.3%"
       ]
     }
   ],
-  "ttm_revenue": 5990269000.0,
-  "ttm_operating_income": 4140093000.0,
-  "ttm_net_income": 3437108000.0,
+  "ttm_revenue": 6164192000.0,
+  "ttm_operating_income": 4751865000.0,
+  "ttm_net_income": 3962958000.0,
   "segment_trend": {
-    "Total Apps Revenue": [
+    "Software Platform": [
+      {
+        "period": "2023Q2",
+        "value": 406063000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 504452000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 678370000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 711015000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 835186000.0,
+        "is_annual": false
+      }
+    ],
+    "Apps": [
       {
         "period": "2023Q2",
         "value": 344102000.0,
@@ -592,109 +544,33 @@
       },
       {
         "period": "2023Q3",
-        "value": 254042094.19799685,
+        "value": 359804000.0,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 279452714.9200896,
+        "value": 379740000.0,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 274871662.7586207,
+        "value": 369104000.0,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 278628371.5935089,
-        "is_annual": false
-      }
-    ],
-    "In-App Purchases Revenue": [
-      {
-        "period": "2023Q2",
-        "value": 233625000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q3",
-        "value": 174614224.06091204,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 190741223.4431725,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 186972323.44827586,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 189061056.6943618,
+        "value": 363049000.0,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 989007000.0,
+        "value": 1441325000.0,
         "is_annual": true
-      }
-    ],
-    "In-App Advertising Revenue": [
-      {
-        "period": "2023Q2",
-        "value": 110477000.0,
-        "is_annual": false
       },
       {
-        "period": "2023Q3",
-        "value": 79427870.13708478,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 88711491.47691709,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 88644248.96551724,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 89567314.89914711,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 452318000.0,
+        "period": "FY2024",
+        "value": 1485190000.0,
         "is_annual": true
-      }
-    ],
-    "Software Platform Revenue": [
-      {
-        "period": "2023Q3",
-        "value": 356171811.60400635,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 499209570.15982085,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 529630764.82758623,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 640978256.8129821,
-        "is_annual": false
       }
     ],
     "Advertising": [
@@ -709,57 +585,42 @@
         "is_annual": true
       }
     ],
-    "Apps": [
+    "In-App Purchases Revenue": [
       {
         "period": "2025Q1",
-        "value": 325047000.0,
+        "value": 227541000.0,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 1441325000.0,
+        "value": 989007000.0,
         "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1485190000.0,
-        "is_annual": true
-      }
-    ],
-    "United States": [
-      {
-        "period": "2025Q2",
-        "value": 658321000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 687927000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 907219000.0,
-        "is_annual": false
       }
     ],
     "Rest of the World": [
       {
         "period": "2025Q2",
-        "value": 600433000.0,
+        "value": 1258753999.9999998,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 717118000.0,
+        "value": 1405045000.0,
         "is_annual": false
       }
     ],
     "Rest of the world": [
       {
         "period": "2026Q1",
-        "value": 935230000.0,
+        "value": 1842449000.0,
         "is_annual": false
+      }
+    ],
+    "In-App Advertising Revenue": [
+      {
+        "period": "FY2023",
+        "value": 452318000.0,
+        "is_annual": true
       }
     ],
     "Advertising Solutions": [
@@ -771,7 +632,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

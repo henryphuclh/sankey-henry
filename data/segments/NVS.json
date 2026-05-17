@@ -10,16 +10,208 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Top 20 products",
-        "value": 44513000000.0,
+        "segment_name": "Entresto",
+        "value": 7748000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
-        "segment_name": "Rest of portfolio",
-        "value": 10019000000.0,
+        "segment_name": "Leqvio",
+        "value": 1198000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Cosentyx",
+        "value": 6668000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Ilaris",
+        "value": 1883000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Xolair",
+        "value": 1723000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Kesimpta",
+        "value": 4426000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Zolgensma",
+        "value": 1232000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Aimovig",
+        "value": 335000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Kisqali",
+        "value": 4783000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Tafinlar + Mekinist",
+        "value": 2215000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Jakavi",
+        "value": 2110000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Pluvicto",
+        "value": 1994000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Promacta/Revolade",
+        "value": 1636000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Scemblix",
+        "value": 1285000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Tasigna",
+        "value": 1104000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Lutathera",
+        "value": 816000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Fabhalta",
+        "value": 505000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Piqray/Vijoice",
+        "value": 382000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Sandostatin Group",
+        "value": 1213000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Exforge Group",
+        "value": 727000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Lucentis",
+        "value": 643000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Diovan Group",
+        "value": 604000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Galvus Group",
+        "value": 487000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Kymriah",
+        "value": 381000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Contract manufacturing",
+        "value": 1419000000.0,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Other",
+        "value": 6983000000.0,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -28,12 +220,12 @@
     ],
     "total_revenue": 54532000000.0,
     "gross_profit": 42975000000.0,
-    "operating_income": null,
+    "operating_income": 17644000000.0,
     "net_income": 13967000000.0,
-    "rd_expense": -11200000000.0,
-    "sga_expense": -13248000000.0,
-    "cogs": -13699000000.0,
-    "interest_expense": -1144000000.0,
+    "rd_expense": 11200000000.0,
+    "sga_expense": 13248000000.0,
+    "cogs": 13699000000.0,
+    "interest_expense": null,
     "income_tax": null,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -49,16 +241,208 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Top 20 products",
-          "value": 44513000000.0,
+          "segment_name": "Entresto",
+          "value": 7748000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Rest of portfolio",
-          "value": 10019000000.0,
+          "segment_name": "Leqvio",
+          "value": 1198000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cosentyx",
+          "value": 6668000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ilaris",
+          "value": 1883000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Xolair",
+          "value": 1723000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Kesimpta",
+          "value": 4426000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Zolgensma",
+          "value": 1232000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aimovig",
+          "value": 335000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Kisqali",
+          "value": 4783000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Tafinlar + Mekinist",
+          "value": 2215000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jakavi",
+          "value": 2110000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pluvicto",
+          "value": 1994000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Promacta/Revolade",
+          "value": 1636000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Scemblix",
+          "value": 1285000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Tasigna",
+          "value": 1104000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Lutathera",
+          "value": 816000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Fabhalta",
+          "value": 505000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Piqray/Vijoice",
+          "value": 382000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sandostatin Group",
+          "value": 1213000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Exforge Group",
+          "value": 727000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Lucentis",
+          "value": 643000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Diovan Group",
+          "value": 604000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Galvus Group",
+          "value": 487000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Kymriah",
+          "value": 381000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Contract manufacturing",
+          "value": 1419000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 6983000000.0,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -67,12 +451,12 @@
       ],
       "total_revenue": 54532000000.0,
       "gross_profit": 42975000000.0,
-      "operating_income": null,
+      "operating_income": 17644000000.0,
       "net_income": 13967000000.0,
-      "rd_expense": -11200000000.0,
-      "sga_expense": -13248000000.0,
-      "cogs": -13699000000.0,
-      "interest_expense": -1144000000.0,
+      "rd_expense": 11200000000.0,
+      "sga_expense": 13248000000.0,
+      "cogs": 13699000000.0,
+      "interest_expense": null,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -87,16 +471,208 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Top 20 products",
-          "value": 40244000000.0,
+          "segment_name": "Entresto",
+          "value": 7822000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Rest of portfolio",
-          "value": 10073000000.0,
+          "segment_name": "Leqvio",
+          "value": 754000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Cosentyx",
+          "value": 6141000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Xolair",
+          "value": 1643000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Ilaris",
+          "value": 1509000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Kesimpta",
+          "value": 3224000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Zolgensma",
+          "value": 1214000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aimovig",
+          "value": 312000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Kisqali",
+          "value": 3033000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Promacta/Revolade",
+          "value": 2216000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Tafinlar + Mekinist",
+          "value": 2058000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jakavi",
+          "value": 1936000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Tasigna",
+          "value": 1671000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pluvicto",
+          "value": 1392000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Lutathera",
+          "value": 724000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Scemblix",
+          "value": 689000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Piqray/Vijoice",
+          "value": 449000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Kymriah",
+          "value": 443000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sandostatin Group",
+          "value": 1279000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Lucentis",
+          "value": 1044000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Exforge Group",
+          "value": 703000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Galvus Group",
+          "value": 602000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Diovan Group",
+          "value": 590000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gilenya",
+          "value": 552000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Contract manufacturing",
+          "value": 1152000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 7036000000.0,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -105,12 +681,12 @@
       ],
       "total_revenue": 50317000000.0,
       "gross_profit": 38895000000.0,
-      "operating_income": null,
+      "operating_income": 14544000000.0,
       "net_income": 11939000000.0,
-      "rd_expense": -10022000000.0,
-      "sga_expense": -12566000000.0,
-      "cogs": -12827000000.0,
-      "interest_expense": -1006000000.0,
+      "rd_expense": 10022000000.0,
+      "sga_expense": 12566000000.0,
+      "cogs": 12827000000.0,
+      "interest_expense": null,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -125,64 +701,240 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Europe",
-          "value": 14997000000.0,
+          "segment_name": "Entresto",
+          "value": 6035000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Emerging Growth Markets",
-          "value": 11715000000.0,
+          "segment_name": "Leqvio",
+          "value": 355000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Germany",
-          "value": 3367000000.0,
+          "segment_name": "Other",
+          "value": 5427000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "China",
-          "value": 3267000000.0,
+          "segment_name": "Cosentyx",
+          "value": 4980000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Canada and Latin America",
-          "value": 3176000000.0,
+          "segment_name": "Xolair",
+          "value": 1463000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Japan",
-          "value": 1924000000.0,
+          "segment_name": "Ilaris",
+          "value": 1355000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "France",
-          "value": 1749000000.0,
+          "segment_name": "Kesimpta",
+          "value": 2171000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Switzerland",
-          "value": 1308000000.0,
+          "segment_name": "Zolgensma",
+          "value": 1214000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Mayzent",
+          "value": 392000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Aimovig",
+          "value": 266000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Promacta/Revolade",
+          "value": 2269000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Kisqali",
+          "value": 2080000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Tafinlar + Mekinist",
+          "value": 1922000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Tasigna",
+          "value": 1848000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Jakavi",
+          "value": 1720000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Pluvicto",
+          "value": 980000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Lutathera",
+          "value": 605000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Kymriah",
+          "value": 508000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Piqray/Vijoice",
+          "value": 505000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Scemblix",
+          "value": 413000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Votrient",
+          "value": 390000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Lucentis",
+          "value": 1475000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Sandostatin",
+          "value": 1314000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gilenya",
+          "value": 925000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Exforge Group",
+          "value": 713000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Galvus Group",
+          "value": 692000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Diovan Group",
+          "value": 613000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gleevec/Glivec",
+          "value": 561000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Afinitor/Votubia",
+          "value": 408000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Contract manufacturing",
+          "value": 1490000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -191,65 +943,17 @@
       ],
       "total_revenue": 45440000000.0,
       "gross_profit": 34188000000.0,
-      "operating_income": null,
+      "operating_income": 9769000000.0,
       "net_income": 14854000000.0,
-      "rd_expense": -11371000000.0,
-      "sga_expense": -12517000000.0,
-      "cogs": -12472000000.0,
-      "interest_expense": -855000000.0,
+      "rd_expense": 11371000000.0,
+      "sga_expense": 12517000000.0,
+      "cogs": 12472000000.0,
+      "interest_expense": null,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": []
-    },
-    {
-      "ticker": "NVS",
-      "period": "FY2022",
-      "is_annual": true,
-      "fiscal_year": 2022,
-      "fiscal_quarter": null,
-      "segments": [
-        {
-          "segment_name": "Innovative Medicines",
-          "value": 42121000000.0,
-          "unit": "USD",
-          "period": "2022-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Sandoz",
-          "value": 9454000000.0,
-          "unit": "USD",
-          "period": "2022-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Corporate",
-          "value": 1061000000.0,
-          "unit": "USD",
-          "period": "2022-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        }
-      ],
-      "total_revenue": 50545000000.0,
-      "gross_profit": 36342000000.0,
-      "operating_income": null,
-      "net_income": 6955000000.0,
-      "rd_expense": -9996000000.0,
-      "sga_expense": -14253000000.0,
-      "cogs": -15486000000.0,
-      "interest_expense": -837000000.0,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "xbrl",
-      "confidence": 1.0,
-      "notes": [
-        "Warning: total_revenue (50545000000) differs from Yahoo (43461000000) by 16.3%"
-      ]
     }
   ],
   "quarterly_periods": [
@@ -258,362 +962,606 @@
       "period": "2026Q1",
       "is_annual": false,
       "fiscal_year": 2026,
-      "fiscal_quarter": 1,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "total_revenue": 13524000000.0,
+      "gross_profit": 10065000000.0,
+      "operating_income": 4235000000.0,
+      "net_income": 3156000000.0,
+      "rd_expense": 2740000000.0,
+      "sga_expense": 3140000000.0,
+      "cogs": 3459000000.0,
+      "interest_expense": 343000000.0,
+      "income_tax": 683000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
     },
     {
       "ticker": "NVS",
       "period": "2025Q4",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 4,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "total_revenue": 13860000000.0,
+      "gross_profit": 10249000000.0,
+      "operating_income": 3616000000.0,
+      "net_income": 2409000000.0,
+      "rd_expense": 3163000000.0,
+      "sga_expense": 3440000000.0,
+      "cogs": 3611000000.0,
+      "interest_expense": 304000000.0,
+      "income_tax": 814000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
     },
     {
       "ticker": "NVS",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 3,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "total_revenue": 14358000000.0,
+      "gross_profit": 10819000000.0,
+      "operating_income": 4501000000.0,
+      "net_income": 3928000000.0,
+      "rd_expense": 2944000000.0,
+      "sga_expense": 3308000000.0,
+      "cogs": 3539000000.0,
+      "interest_expense": 281000000.0,
+      "income_tax": 266000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
     },
     {
       "ticker": "NVS",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 2,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "total_revenue": 14836000000.0,
+      "gross_profit": 11514000000.0,
+      "operating_income": 4864000000.0,
+      "net_income": 4041000000.0,
+      "rd_expense": 2727000000.0,
+      "sga_expense": 3442000000.0,
+      "cogs": 3322000000.0,
+      "interest_expense": 289000000.0,
+      "income_tax": 507000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
     },
     {
       "ticker": "NVS",
       "period": "2025Q1",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 1,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
+      "total_revenue": 13620000000.0,
+      "gross_profit": 10393000000.0,
+      "operating_income": 4663000000.0,
+      "net_income": 3606000000.0,
+      "rd_expense": 2366000000.0,
+      "sga_expense": 3058000000.0,
+      "cogs": 3227000000.0,
+      "interest_expense": 270000000.0,
+      "income_tax": 798000000.0,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "NVS",
-      "period": "2024Q4",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "NVS",
-      "period": "2024Q3",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "NVS",
-      "period": "2024Q2",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "NVS",
-      "period": "2024Q1",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "NVS",
-      "period": "2023Q4",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "NVS",
-      "period": "2023Q3",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "NVS",
-      "period": "2023Q2",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
     }
   ],
-  "ttm_revenue": null,
-  "ttm_operating_income": null,
-  "ttm_net_income": null,
+  "ttm_revenue": 56578000000.0,
+  "ttm_operating_income": 17216000000.0,
+  "ttm_net_income": 13534000000.0,
   "segment_trend": {
-    "Innovative Medicines": [
-      {
-        "period": "FY2022",
-        "value": 42121000000.0,
-        "is_annual": true
-      }
-    ],
-    "Sandoz": [
-      {
-        "period": "FY2022",
-        "value": 9454000000.0,
-        "is_annual": true
-      }
-    ],
-    "Corporate": [
-      {
-        "period": "FY2022",
-        "value": 1061000000.0,
-        "is_annual": true
-      }
-    ],
-    "Europe": [
+    "Entresto": [
       {
         "period": "FY2023",
-        "value": 14997000000.0,
+        "value": 6035000000.0,
         "is_annual": true
-      }
-    ],
-    "Emerging Growth Markets": [
-      {
-        "period": "FY2023",
-        "value": 11715000000.0,
-        "is_annual": true
-      }
-    ],
-    "Germany": [
-      {
-        "period": "FY2023",
-        "value": 3367000000.0,
-        "is_annual": true
-      }
-    ],
-    "China": [
-      {
-        "period": "FY2023",
-        "value": 3267000000.0,
-        "is_annual": true
-      }
-    ],
-    "Canada and Latin America": [
-      {
-        "period": "FY2023",
-        "value": 3176000000.0,
-        "is_annual": true
-      }
-    ],
-    "Japan": [
-      {
-        "period": "FY2023",
-        "value": 1924000000.0,
-        "is_annual": true
-      }
-    ],
-    "France": [
-      {
-        "period": "FY2023",
-        "value": 1749000000.0,
-        "is_annual": true
-      }
-    ],
-    "Switzerland": [
-      {
-        "period": "FY2023",
-        "value": 1308000000.0,
-        "is_annual": true
-      }
-    ],
-    "Top 20 products": [
+      },
       {
         "period": "FY2024",
-        "value": 40244000000.0,
+        "value": 7822000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 44513000000.0,
+        "value": 7748000000.0,
         "is_annual": true
       }
     ],
-    "Rest of portfolio": [
+    "Leqvio": [
+      {
+        "period": "FY2023",
+        "value": 355000000.0,
+        "is_annual": true
+      },
       {
         "period": "FY2024",
-        "value": 10073000000.0,
+        "value": 754000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 10019000000.0,
+        "value": 1198000000.0,
+        "is_annual": true
+      }
+    ],
+    "Other": [
+      {
+        "period": "FY2023",
+        "value": 5427000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 7036000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 6983000000.0,
+        "is_annual": true
+      }
+    ],
+    "Cosentyx": [
+      {
+        "period": "FY2023",
+        "value": 4980000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 6141000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 6668000000.0,
+        "is_annual": true
+      }
+    ],
+    "Xolair": [
+      {
+        "period": "FY2023",
+        "value": 1463000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1643000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1723000000.0,
+        "is_annual": true
+      }
+    ],
+    "Ilaris": [
+      {
+        "period": "FY2023",
+        "value": 1355000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1509000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1883000000.0,
+        "is_annual": true
+      }
+    ],
+    "Kesimpta": [
+      {
+        "period": "FY2023",
+        "value": 2171000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 3224000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4426000000.0,
+        "is_annual": true
+      }
+    ],
+    "Zolgensma": [
+      {
+        "period": "FY2023",
+        "value": 1214000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1214000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1232000000.0,
+        "is_annual": true
+      }
+    ],
+    "Mayzent": [
+      {
+        "period": "FY2023",
+        "value": 392000000.0,
+        "is_annual": true
+      }
+    ],
+    "Aimovig": [
+      {
+        "period": "FY2023",
+        "value": 266000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 312000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 335000000.0,
+        "is_annual": true
+      }
+    ],
+    "Promacta/Revolade": [
+      {
+        "period": "FY2023",
+        "value": 2269000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2216000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1636000000.0,
+        "is_annual": true
+      }
+    ],
+    "Kisqali": [
+      {
+        "period": "FY2023",
+        "value": 2080000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 3033000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 4783000000.0,
+        "is_annual": true
+      }
+    ],
+    "Tafinlar + Mekinist": [
+      {
+        "period": "FY2023",
+        "value": 1922000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 2058000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2215000000.0,
+        "is_annual": true
+      }
+    ],
+    "Tasigna": [
+      {
+        "period": "FY2023",
+        "value": 1848000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1671000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1104000000.0,
+        "is_annual": true
+      }
+    ],
+    "Jakavi": [
+      {
+        "period": "FY2023",
+        "value": 1720000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1936000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 2110000000.0,
+        "is_annual": true
+      }
+    ],
+    "Pluvicto": [
+      {
+        "period": "FY2023",
+        "value": 980000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1392000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1994000000.0,
+        "is_annual": true
+      }
+    ],
+    "Lutathera": [
+      {
+        "period": "FY2023",
+        "value": 605000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 724000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 816000000.0,
+        "is_annual": true
+      }
+    ],
+    "Kymriah": [
+      {
+        "period": "FY2023",
+        "value": 508000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 443000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 381000000.0,
+        "is_annual": true
+      }
+    ],
+    "Piqray/Vijoice": [
+      {
+        "period": "FY2023",
+        "value": 505000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 449000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 382000000.0,
+        "is_annual": true
+      }
+    ],
+    "Scemblix": [
+      {
+        "period": "FY2023",
+        "value": 413000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 689000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1285000000.0,
+        "is_annual": true
+      }
+    ],
+    "Votrient": [
+      {
+        "period": "FY2023",
+        "value": 390000000.0,
+        "is_annual": true
+      }
+    ],
+    "Lucentis": [
+      {
+        "period": "FY2023",
+        "value": 1475000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1044000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 643000000.0,
+        "is_annual": true
+      }
+    ],
+    "Sandostatin": [
+      {
+        "period": "FY2023",
+        "value": 1314000000.0,
+        "is_annual": true
+      }
+    ],
+    "Gilenya": [
+      {
+        "period": "FY2023",
+        "value": 925000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 552000000.0,
+        "is_annual": true
+      }
+    ],
+    "Exforge Group": [
+      {
+        "period": "FY2023",
+        "value": 713000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 703000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 727000000.0,
+        "is_annual": true
+      }
+    ],
+    "Galvus Group": [
+      {
+        "period": "FY2023",
+        "value": 692000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 602000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 487000000.0,
+        "is_annual": true
+      }
+    ],
+    "Diovan Group": [
+      {
+        "period": "FY2023",
+        "value": 613000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 590000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 604000000.0,
+        "is_annual": true
+      }
+    ],
+    "Gleevec/Glivec": [
+      {
+        "period": "FY2023",
+        "value": 561000000.0,
+        "is_annual": true
+      }
+    ],
+    "Afinitor/Votubia": [
+      {
+        "period": "FY2023",
+        "value": 408000000.0,
+        "is_annual": true
+      }
+    ],
+    "Contract manufacturing": [
+      {
+        "period": "FY2023",
+        "value": 1490000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1152000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1419000000.0,
+        "is_annual": true
+      }
+    ],
+    "Sandostatin Group": [
+      {
+        "period": "FY2024",
+        "value": 1279000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1213000000.0,
+        "is_annual": true
+      }
+    ],
+    "Fabhalta": [
+      {
+        "period": "FY2025",
+        "value": 505000000.0,
         "is_annual": true
       }
     ]
   },
-  "annual_count": 4,
-  "quarterly_count": 12,
-  "has_partial_data": false,
-  "data_notes": []
+  "annual_count": 3,
+  "quarterly_count": 5,
+  "has_partial_data": true,
+  "data_notes": [
+    "Partial data: 3/3 annual, 5/12 quarterly"
+  ],
+  "classification": "INTL_SEC"
 }

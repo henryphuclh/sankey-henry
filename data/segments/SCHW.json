@@ -207,6 +207,27 @@
     },
     {
       "ticker": "SCHW",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 6336000000.0,
+      "gross_profit": null,
+      "operating_income": 3180000000.0,
+      "net_income": 2459000000.0,
+      "rd_expense": null,
+      "sga_expense": 1745000000.0,
+      "cogs": null,
+      "interest_expense": 832000000.0,
+      "income_tax": 721000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "SCHW",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -324,6 +345,27 @@
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 1672000000.0, \"Occupancy\": 274000000.0, \"Professional Services\": 269000000.0, \"Marketing\": 96000000.0, \"Other Non-Interest Expense\": 244000000.0}"
       ]
+    },
+    {
+      "ticker": "SCHW",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 5329000000.0,
+      "gross_profit": null,
+      "operating_income": 2305000000.0,
+      "net_income": 1840000000.0,
+      "rd_expense": null,
+      "sga_expense": 1634000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 465000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
     },
     {
       "ticker": "SCHW",
@@ -499,9 +541,9 @@
       ]
     }
   ],
-  "ttm_revenue": 24067000000.0,
-  "ttm_operating_income": 11467000000.0,
-  "ttm_net_income": 8872000000.0,
+  "ttm_revenue": 24804000000.0,
+  "ttm_operating_income": 12192000000.0,
+  "ttm_net_income": 9422000000.0,
   "segment_trend": {
     "Investor Services": [
       {
@@ -611,7 +653,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 11,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

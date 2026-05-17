@@ -295,6 +295,27 @@
     },
     {
       "ticker": "V",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": 10724000000.0,
+      "gross_profit": 8743000000.0,
+      "operating_income": 7051000000.0,
+      "net_income": 5090000000.0,
+      "rd_expense": null,
+      "sga_expense": 1376000000.0,
+      "cogs": 1981000000.0,
+      "interest_expense": 210000000.0,
+      "income_tax": 1133000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "V",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -635,9 +656,9 @@
       ]
     }
   ],
-  "ttm_revenue": 41897000000.0,
-  "ttm_operating_income": 25583000000.0,
-  "ttm_net_income": 21723000000.0,
+  "ttm_revenue": 43027000000.0,
+  "ttm_operating_income": 27199000000.0,
+  "ttm_net_income": 22236000000.0,
   "segment_trend": {
     "Service revenues": [
       {
@@ -829,7 +850,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

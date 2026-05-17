@@ -10,8 +10,40 @@
     "fiscal_quarter": null,
     "segments": [
       {
+        "segment_name": "Digital Consumer Bank",
+        "value": 10098737113.007246,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Brazil",
+        "value": 8583377502.719098,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Spain",
+        "value": 6684602628.71674,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "United States",
+        "value": 5387945281.024526,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
         "segment_name": "United Kingdom",
-        "value": 2749418882.2229238,
+        "value": 4582681720.001839,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +51,7 @@
       },
       {
         "segment_name": "DCB Europe",
-        "value": 2572090148.4054313,
+        "value": 4287113390.217375,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -27,7 +59,7 @@
       },
       {
         "segment_name": "Mexico",
-        "value": 2500170445.216293,
+        "value": 4167238928.2924066,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -35,7 +67,7 @@
       },
       {
         "segment_name": "Corporate & Investment Banking",
-        "value": 2221824723.7132936,
+        "value": 3703297308.4759264,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -43,7 +75,7 @@
       },
       {
         "segment_name": "Poland",
-        "value": 1621212851.278813,
+        "value": 2702208290.5681767,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -51,7 +83,7 @@
       },
       {
         "segment_name": "Payments",
-        "value": 1595958604.3574362,
+        "value": 2660114968.0601726,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -59,7 +91,7 @@
       },
       {
         "segment_name": "Chile",
-        "value": 1052443290.1799811,
+        "value": 1754193461.9096494,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -67,7 +99,7 @@
       },
       {
         "segment_name": "Argentina",
-        "value": 948132270.2873383,
+        "value": 1580329738.5070238,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -75,7 +107,7 @@
       },
       {
         "segment_name": "Wealth Management & Insurance",
-        "value": 793312756.5519419,
+        "value": 1322279370.0883899,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -83,7 +115,7 @@
       },
       {
         "segment_name": "Portugal",
-        "value": 738961225.1341964,
+        "value": 1231687219.4733377,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -91,28 +123,26 @@
       },
       {
         "segment_name": "Rest of the Group",
-        "value": 593474802.6523525,
+        "value": 989193078.9380965,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       }
     ],
-    "total_revenue": 17387000000.0,
-    "gross_profit": 17387000000.0,
-    "operating_income": null,
+    "total_revenue": 59735000000.0,
+    "gross_profit": 59735000000.0,
+    "operating_income": 18681000000.0,
     "net_income": 15500000000.0,
     "rd_expense": null,
     "sga_expense": null,
     "cogs": null,
     "interest_expense": null,
-    "income_tax": null,
+    "income_tax": -4723000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
-    "confidence": 0.95,
-    "notes": [
-      "Warning: total_revenue (17387000000) differs from Yahoo (70268086171) by 75.3%"
-    ]
+    "confidence": 1.0,
+    "notes": []
   },
   "annual_periods": [
     {
@@ -123,8 +153,40 @@
       "fiscal_quarter": null,
       "segments": [
         {
+          "segment_name": "Digital Consumer Bank",
+          "value": 10098737113.007246,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Brazil",
+          "value": 8583377502.719098,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Spain",
+          "value": 6684602628.71674,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "United States",
+          "value": 5387945281.024526,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
           "segment_name": "United Kingdom",
-          "value": 2749418882.2229238,
+          "value": 4582681720.001839,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -132,7 +194,7 @@
         },
         {
           "segment_name": "DCB Europe",
-          "value": 2572090148.4054313,
+          "value": 4287113390.217375,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -140,7 +202,7 @@
         },
         {
           "segment_name": "Mexico",
-          "value": 2500170445.216293,
+          "value": 4167238928.2924066,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -148,7 +210,7 @@
         },
         {
           "segment_name": "Corporate & Investment Banking",
-          "value": 2221824723.7132936,
+          "value": 3703297308.4759264,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -156,7 +218,7 @@
         },
         {
           "segment_name": "Poland",
-          "value": 1621212851.278813,
+          "value": 2702208290.5681767,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -164,7 +226,7 @@
         },
         {
           "segment_name": "Payments",
-          "value": 1595958604.3574362,
+          "value": 2660114968.0601726,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -172,7 +234,7 @@
         },
         {
           "segment_name": "Chile",
-          "value": 1052443290.1799811,
+          "value": 1754193461.9096494,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -180,7 +242,7 @@
         },
         {
           "segment_name": "Argentina",
-          "value": 948132270.2873383,
+          "value": 1580329738.5070238,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -188,7 +250,7 @@
         },
         {
           "segment_name": "Wealth Management & Insurance",
-          "value": 793312756.5519419,
+          "value": 1322279370.0883899,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -196,7 +258,7 @@
         },
         {
           "segment_name": "Portugal",
-          "value": 738961225.1341964,
+          "value": 1231687219.4733377,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -204,28 +266,26 @@
         },
         {
           "segment_name": "Rest of the Group",
-          "value": 593474802.6523525,
+          "value": 989193078.9380965,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 17387000000.0,
-      "gross_profit": 17387000000.0,
-      "operating_income": null,
+      "total_revenue": 59735000000.0,
+      "gross_profit": 59735000000.0,
+      "operating_income": 18681000000.0,
       "net_income": 15500000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -4723000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.95,
-      "notes": [
-        "Warning: total_revenue (17387000000) differs from Yahoo (70268086171) by 75.3%"
-      ]
+      "confidence": 1.0,
+      "notes": []
     },
     {
       "ticker": "SAN.MC",
@@ -234,6 +294,30 @@
       "fiscal_year": 2024,
       "fiscal_quarter": null,
       "segments": [
+        {
+          "segment_name": "Europe",
+          "value": 16720000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "South America",
+          "value": 15566000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Digital Consumer Bank",
+          "value": 10777000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
         {
           "segment_name": "North America",
           "value": 10330000000.0,
@@ -267,21 +351,19 @@
           "is_annual": true
         }
       ],
-      "total_revenue": 17602000000.0,
-      "gross_profit": 17602000000.0,
-      "operating_income": null,
+      "total_revenue": 64270000000.0,
+      "gross_profit": 64270000000.0,
+      "operating_income": 19027000000.0,
       "net_income": 13744000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -5283000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.95,
-      "notes": [
-        "Warning: total_revenue (17602000000) differs from Yahoo (70598219625) by 75.1%"
-      ]
+      "confidence": 1.0,
+      "notes": []
     },
     {
       "ticker": "SAN.MC",
@@ -291,335 +373,195 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Non-bank subsidiaries",
-          "value": 16321000000.000002,
+          "segment_name": "Statutory results",
+          "value": 59582000000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 16321000000.0,
-      "gross_profit": 16321000000.0,
-      "operating_income": null,
+      "total_revenue": 59582000000.0,
+      "gross_profit": 59582000000.0,
+      "operating_income": 16459000000.0,
       "net_income": 12183000000.0,
       "rd_expense": null,
       "sga_expense": null,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": -4276000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.95,
-      "notes": [
-        "Warning: total_revenue (16321000000) differs from Yahoo (66362677653) by 75.4%"
-      ]
+      "confidence": 0.94,
+      "notes": []
     }
   ],
   "quarterly_periods": [
     {
       "ticker": "SAN.MC",
-      "period": "2026Q2",
-      "is_annual": false,
-      "fiscal_year": 2026,
-      "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "SAN.MC",
       "period": "2026Q1",
       "is_annual": false,
       "fiscal_year": 2026,
-      "fiscal_quarter": 1,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
+      "total_revenue": 18080074685.09674,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 5887379926.919937,
+      "net_income": 6386092165.708542,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 5853430032.730103,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1463357508.1825256,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only",
+        "BANK_NII:12899789106.1306",
+        "BANK_NONINT:5180285578.966141"
+      ]
     },
     {
       "ticker": "SAN.MC",
       "period": "2025Q4",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 4,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
+      "total_revenue": 17534535006.046295,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 5759775152.206421,
+      "net_income": 4406462128.639221,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 6527745172.50061,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1361507825.6130219,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only",
+        "BANK_NII:12630531324.625015",
+        "BANK_NONINT:4904003681.42128"
+      ]
     },
     {
       "ticker": "SAN.MC",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 3,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
+      "total_revenue": 16596815514.802933,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 5451884732.4848175,
+      "net_income": 4102083766.937256,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 6109810268.163681,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1396628405.8094025,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only",
+        "BANK_NII:12114258795.73822",
+        "BANK_NONINT:4482556719.064713"
+      ]
     },
     {
       "ticker": "SAN.MC",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 2,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
+      "total_revenue": 16778271845.817566,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 5168578718.900681,
+      "net_income": 4016623688.4593964,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 6209318578.720093,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1221025504.8274994,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only",
+        "BANK_NII:12397564809.322357",
+        "BANK_NONINT:4380707036.495209"
+      ]
     },
     {
       "ticker": "SAN.MC",
       "period": "2025Q1",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 1,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
+      "total_revenue": 17562631470.2034,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 5489346684.69429,
+      "net_income": 3982673794.269562,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 5947084913.253784,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1549988272.6669312,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "SAN.MC",
-      "period": "2024Q4",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "SAN.MC",
-      "period": "2024Q3",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "SAN.MC",
-      "period": "2024Q2",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "SAN.MC",
-      "period": "2024Q1",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "SAN.MC",
-      "period": "2023Q4",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "SAN.MC",
-      "period": "2023Q3",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "SAN.MC",
-      "period": "2023Q2",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "SAN.MC",
-      "period": "2023Q1",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only",
+        "BANK_NII:12433856075.525284",
+        "BANK_NONINT:5128775394.678116"
+      ]
     }
   ],
-  "ttm_revenue": null,
-  "ttm_operating_income": null,
-  "ttm_net_income": null,
+  "ttm_revenue": 68989697051.76353,
+  "ttm_operating_income": 22267618530.511856,
+  "ttm_net_income": 18911261749.744415,
   "segment_trend": {
-    "Non-bank subsidiaries": [
+    "Statutory results": [
       {
         "period": "FY2023",
-        "value": 16321000000.000002,
+        "value": 59582000000.0,
+        "is_annual": true
+      }
+    ],
+    "Europe": [
+      {
+        "period": "FY2024",
+        "value": 16720000000.0,
+        "is_annual": true
+      }
+    ],
+    "South America": [
+      {
+        "period": "FY2024",
+        "value": 15566000000.0,
+        "is_annual": true
+      }
+    ],
+    "Digital Consumer Bank": [
+      {
+        "period": "FY2024",
+        "value": 10777000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 10098737113.007246,
         "is_annual": true
       }
     ],
@@ -638,7 +580,7 @@
       },
       {
         "period": "FY2025",
-        "value": 2221824723.7132936,
+        "value": 3703297308.4759264,
         "is_annual": true
       }
     ],
@@ -650,7 +592,7 @@
       },
       {
         "period": "FY2025",
-        "value": 1595958604.3574362,
+        "value": 2660114968.0601726,
         "is_annual": true
       }
     ],
@@ -662,69 +604,93 @@
       },
       {
         "period": "FY2025",
-        "value": 793312756.5519419,
+        "value": 1322279370.0883899,
+        "is_annual": true
+      }
+    ],
+    "Brazil": [
+      {
+        "period": "FY2025",
+        "value": 8583377502.719098,
+        "is_annual": true
+      }
+    ],
+    "Spain": [
+      {
+        "period": "FY2025",
+        "value": 6684602628.71674,
+        "is_annual": true
+      }
+    ],
+    "United States": [
+      {
+        "period": "FY2025",
+        "value": 5387945281.024526,
         "is_annual": true
       }
     ],
     "United Kingdom": [
       {
         "period": "FY2025",
-        "value": 2749418882.2229238,
+        "value": 4582681720.001839,
         "is_annual": true
       }
     ],
     "DCB Europe": [
       {
         "period": "FY2025",
-        "value": 2572090148.4054313,
+        "value": 4287113390.217375,
         "is_annual": true
       }
     ],
     "Mexico": [
       {
         "period": "FY2025",
-        "value": 2500170445.216293,
+        "value": 4167238928.2924066,
         "is_annual": true
       }
     ],
     "Poland": [
       {
         "period": "FY2025",
-        "value": 1621212851.278813,
+        "value": 2702208290.5681767,
         "is_annual": true
       }
     ],
     "Chile": [
       {
         "period": "FY2025",
-        "value": 1052443290.1799811,
+        "value": 1754193461.9096494,
         "is_annual": true
       }
     ],
     "Argentina": [
       {
         "period": "FY2025",
-        "value": 948132270.2873383,
+        "value": 1580329738.5070238,
         "is_annual": true
       }
     ],
     "Portugal": [
       {
         "period": "FY2025",
-        "value": 738961225.1341964,
+        "value": 1231687219.4733377,
         "is_annual": true
       }
     ],
     "Rest of the Group": [
       {
         "period": "FY2025",
-        "value": 593474802.6523525,
+        "value": 989193078.9380965,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 14,
-  "has_partial_data": false,
-  "data_notes": []
+  "quarterly_count": 5,
+  "has_partial_data": true,
+  "data_notes": [
+    "Partial data: 3/3 annual, 5/12 quarterly"
+  ],
+  "classification": "INTL_SEC"
 }

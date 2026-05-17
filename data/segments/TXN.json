@@ -237,6 +237,27 @@
     },
     {
       "ticker": "TXN",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 4423000000.0,
+      "gross_profit": 2472000000.0,
+      "operating_income": 1505000000.0,
+      "net_income": 1163000000.0,
+      "rd_expense": 521000000.0,
+      "sga_expense": 446000000.0,
+      "cogs": 1951000000.0,
+      "interest_expense": 141000000.0,
+      "income_tax": 209000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "TXN",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -614,9 +635,9 @@
       ]
     }
   ],
-  "ttm_revenue": 18084000000.0,
-  "ttm_operating_income": 6358000000.0,
-  "ttm_net_income": 5383000000.0,
+  "ttm_revenue": 18438000000.0,
+  "ttm_operating_income": 6539000000.0,
+  "ttm_net_income": 5367000000.0,
   "segment_trend": {
     "Analog": [
       {
@@ -806,7 +827,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

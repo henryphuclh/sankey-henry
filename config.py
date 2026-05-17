@@ -55,7 +55,7 @@ XBRL_SEGMENT_AXIS = "StatementBusinessSegmentsAxis"
 XBRL_COVERAGE_MIN      = 0.70          # Below this → fall back to LLM extraction
 SEGMENT_MIN_PCT        = 0.005         # Drop segments < 0.5% of total revenue
 SEGMENT_MIN_VALUE      = 50_000_000    # Drop segments < $50 M regardless of pct
-SEGMENT_RESCALE_MIN    = 0.80          # Don't rescale when scale ∈ [0.80, 1.25]
+SEGMENT_RESCALE_MIN    = 0.97          # Rescale down when segments >3% over total_revenue (eliminations)
 SEGMENT_RESCALE_MAX    = 1.25
 REVENUE_WARN_DIFF      = 0.15          # Warn when SEC vs Yahoo revenue differs > 15%
 

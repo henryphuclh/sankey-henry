@@ -277,6 +277,27 @@
     },
     {
       "ticker": "IBM",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 19687000000.0,
+      "gross_profit": 11928000000.0,
+      "operating_income": 4849000000.0,
+      "net_income": 5600000000.0,
+      "rd_expense": 2187000000.0,
+      "sga_expense": 4832000000.0,
+      "cogs": 7758000000.0,
+      "interest_expense": 6000000.0,
+      "income_tax": -1435000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "IBM",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -718,9 +739,9 @@
       ]
     }
   ],
-  "ttm_revenue": 63766000000.0,
-  "ttm_operating_income": 8266000000.0,
-  "ttm_net_income": 6209000000.0,
+  "ttm_revenue": 68912000000.0,
+  "ttm_operating_income": 11920000000.0,
+  "ttm_net_income": 10754000000.0,
   "segment_trend": {
     "Software": [
       {
@@ -972,7 +993,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

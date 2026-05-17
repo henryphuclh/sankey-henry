@@ -149,16 +149,16 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Operating Segment",
-          "value": 12554700000.0,
+          "segment_name": "End customers and contract manufacturers",
+          "value": 10462200000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Inter-Segment",
-          "value": 159200000.0,
+          "segment_name": "Distributors and resellers",
+          "value": 2092500000.0,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -225,6 +225,27 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "APH",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 6439000000.0,
+      "gross_profit": 2461100000.0,
+      "operating_income": 1770100000.0,
+      "net_income": 1195500000.0,
+      "rd_expense": null,
+      "sga_expense": 691000000.0,
+      "cogs": 3977900000.0,
+      "interest_expense": 129700000.0,
+      "income_tax": 443600000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
       "notes": []
     },
     {
@@ -606,9 +627,9 @@
       ]
     }
   ],
-  "ttm_revenue": 24275800000.0,
-  "ttm_operating_income": 5977700000.0,
-  "ttm_net_income": 4043400000.0,
+  "ttm_revenue": 25903800000.0,
+  "ttm_operating_income": 6723000000.0,
+  "ttm_net_income": 4494700000.0,
   "segment_trend": {
     "Harsh Environment Solutions": [
       {
@@ -781,23 +802,24 @@
         "is_annual": true
       }
     ],
-    "Operating Segment": [
+    "End customers and contract manufacturers": [
       {
         "period": "FY2023",
-        "value": 12554700000.0,
+        "value": 10462200000.0,
         "is_annual": true
       }
     ],
-    "Inter-Segment": [
+    "Distributors and resellers": [
       {
         "period": "FY2023",
-        "value": 159200000.0,
+        "value": 2092500000.0,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

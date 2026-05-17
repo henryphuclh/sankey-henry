@@ -329,6 +329,27 @@
     },
     {
       "ticker": "MSFT",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": 76441000000.0,
+      "gross_profit": 52427000000.0,
+      "operating_income": 34323000000.0,
+      "net_income": 27233000000.0,
+      "rd_expense": 8829000000.0,
+      "sga_expense": 9275000000.0,
+      "cogs": 24014000000.0,
+      "interest_expense": 615000000.0,
+      "income_tax": 5383000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "MSFT",
       "period": "2025Q1",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -614,9 +635,9 @@
       ]
     }
   ],
-  "ttm_revenue": 311898000000.0,
-  "ttm_operating_income": 146634000000.0,
-  "ttm_net_income": 123807000000.0,
+  "ttm_revenue": 318273000000.0,
+  "ttm_operating_income": 148957000000.0,
+  "ttm_net_income": 125216000000.0,
   "segment_trend": {
     "Productivity and Business Processes": [
       {
@@ -806,7 +827,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

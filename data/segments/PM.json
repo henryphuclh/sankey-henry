@@ -251,7 +251,32 @@
       "is_annual": false,
       "fiscal_year": 2026,
       "fiscal_quarter": 1,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "International Smoke-Free",
+          "value": 3836000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Combustibles",
+          "value": 5688000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "U.S.",
+          "value": 622000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 10146000000.0,
       "gross_profit": 6905000000.0,
       "operating_income": 3893000000.0,
@@ -263,6 +288,27 @@
       "income_tax": 676000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "PM",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 10362000000.0,
+      "gross_profit": 6802000000.0,
+      "operating_income": 3373000000.0,
+      "net_income": 2141000000.0,
+      "rd_expense": null,
+      "sga_expense": 3429000000.0,
+      "cogs": 3560000000.0,
+      "interest_expense": 839000000.0,
+      "income_tax": 675000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
       "confidence": 0.55,
       "notes": []
     },
@@ -765,9 +811,9 @@
       ]
     }
   ],
-  "ttm_revenue": 40432000000.0,
-  "ttm_operating_income": 15412000000.0,
-  "ttm_net_income": 12180000000.0,
+  "ttm_revenue": 41493000000.0,
+  "ttm_operating_income": 15241000000.0,
+  "ttm_net_income": 11484000000.0,
   "segment_trend": {
     "Europe": [
       {
@@ -1048,6 +1094,27 @@
         "is_annual": true
       }
     ],
+    "International Smoke-Free": [
+      {
+        "period": "2026Q1",
+        "value": 3836000000.0,
+        "is_annual": false
+      }
+    ],
+    "International Combustibles": [
+      {
+        "period": "2026Q1",
+        "value": 5688000000.0,
+        "is_annual": false
+      }
+    ],
+    "U.S.": [
+      {
+        "period": "2026Q1",
+        "value": 622000000.0,
+        "is_annual": false
+      }
+    ],
     "Smoke-Free Products": [
       {
         "period": "FY2023",
@@ -1057,7 +1124,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

@@ -1,11 +1,7 @@
-"""LLM-based segment extraction from a SHORT segment-note text.
+"""LLM-based segment extraction from filing note text.
 
-P&L is extracted separately from edgartools (structured DataFrame) — this
-module only extracts segment BREAKDOWN (segment_name + revenue) which is
-what XBRL companyfacts cannot provide.
-
-Input to the LLM: ~5-20 KB of clean segment-note text (not 120KB of raw filing).
-Output: segment list. No P&L fields in schema → smaller prompt + output.
+P&L comes from edgartools XBRL; this module only extracts segment breakdowns
+(name + revenue). Input: ~5–20 KB of segment-note text. Output: SegmentValue list.
 """
 from __future__ import annotations
 
@@ -16,12 +12,10 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from src.cache.cache_manager import cache
-from src.cache.hash_utils import sha256_short
-from src.extraction.models import SegmentData, SegmentValue
+from src.cache.cache_keys import sha256_short
+from src.extraction.models import SegmentValue
 from src.llm.provider import complete_json, get_active_provider
 
-
-# ── JSON schema (segments only) ──────────────────────────────────────────────
 
 _SEGMENT_ITEM_SCHEMA = {
     "type": "object",
@@ -48,9 +42,6 @@ SEGMENTS_SCHEMA: Dict[str, Any] = {
     "required": ["currency", "segments", "notes"],
 }
 
-
-# ── System prompts ────────────────────────────────────────────────────────────
-
 _SYSTEM_STANDARD = """You extract reportable business segments from SEC filing note text.
 Rules:
 - All monetary values in MILLIONS of reporting currency.
@@ -76,8 +67,6 @@ def _get_system_prompt(sector: str) -> str:
     return _SYSTEM_STANDARD
 
 
-# ── Core extraction ───────────────────────────────────────────────────────────
-
 def extract_segments(
     note_text:       str,
     ticker:          str,
@@ -85,10 +74,7 @@ def extract_segments(
     sector:          str = "standard",
     known_total_rev: Optional[float] = None,
 ) -> List[SegmentValue]:
-    """
-    LLM-extract segment breakdown from a short note text.
-    Returns a list of SegmentValue (may be empty).
-    """
+    """LLM-extract segment breakdown from note text. Returns [] on failure."""
     if not note_text or len(note_text.strip()) < 100:
         return []
 
@@ -99,8 +85,6 @@ def extract_segments(
     cached = cache.get("llm", cache_key)
     if cached is not None:
         return [SegmentValue(**s) for s in cached]
-
-    system_prompt = _get_system_prompt(sector)
 
     rev_hint = ""
     if known_total_rev:
@@ -114,7 +98,7 @@ def extract_segments(
 
     try:
         data = complete_json(
-            system = system_prompt,
+            system = _get_system_prompt(sector),
             user   = user_prompt,
             schema = SEGMENTS_SCHEMA,
         )
@@ -124,9 +108,7 @@ def extract_segments(
     currency = data.get("currency", "USD")
     segments: List[SegmentValue] = []
     for seg in data.get("segments", []) or []:
-        rev = seg.get("revenue")
-        if rev is None:
-            rev = seg.get("net_interest_income")
+        rev = seg.get("revenue") or seg.get("net_interest_income")
         if rev is None:
             continue
         value_usd = _scale_to_usd(rev)
@@ -141,53 +123,20 @@ def extract_segments(
             is_annual    = period.startswith("FY"),
         ))
 
-    # Cache
     cache.set("llm", cache_key, [vars(s) for s in segments])
     return segments
 
 
-def extract_segments_from_yahoo_summary(
-    ticker:    str,
-    period:    str,
-    yahoo_data: Dict,
-    sector:    str = "standard",
-) -> List[SegmentValue]:
-    """
-    For INTL_YAHOO tickers with no SEC filing — use business summary + income
-    statement as 'note text' for the LLM. Quality is limited.
-    """
-    info     = yahoo_data.get("info", {})
-    summary  = info.get("longBusinessSummary", "")
-    currency = yahoo_data.get("currency", "USD")
-    income_data = _select_period_income(yahoo_data, period)
-    note_text = (
-        f"Company: {ticker}  Period: {period}  Currency: {currency}\n\n"
-        f"Business Description:\n{summary}\n\n"
-        f"Income Statement ({period}):\n{json.dumps(income_data, indent=2, default=str)}"
-    )
-    return extract_segments(note_text, ticker, period, sector)
-
-
-def _select_period_income(yahoo_data: Dict, period: str) -> Dict:
-    is_annual = period.startswith("FY")
-    src = yahoo_data.get("annual_income" if is_annual else "quarterly_income", {}) or {}
-    if not src:
-        return {}
-    return src[sorted(src.keys(), reverse=True)[0]]
-
-
-# ── Scaling ───────────────────────────────────────────────────────────────────
-
 def _scale_to_usd(v: Optional[float]) -> Optional[float]:
-    """Input in MILLIONS; return absolute units."""
+    """Input in MILLIONS; return absolute units. Corrects common mis-reporting."""
     if v is None:
         return None
     try:
         v = float(v)
     except (TypeError, ValueError):
         return None
-    if abs(v) > 1e12:          # mis-reported full units
+    if abs(v) > 1e12:       # accidentally in full units
         v = v / 1e6
-    elif abs(v) < 1 and v != 0:
-        v = v * 1e3            # mis-reported billions
+    elif abs(v) < 1 and v != 0:  # accidentally in billions
+        v = v * 1e3
     return v * 1e6

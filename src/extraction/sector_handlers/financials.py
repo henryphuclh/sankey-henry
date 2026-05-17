@@ -1,47 +1,36 @@
-"""Sector handler: banks, insurance, and financial services companies.
-
-Provides:
-  pnl_from_financial_filing(filing_obj)  -- auto-detect bank vs insurance, return P&L dict
-  pnl_from_bank_filing(filing_obj)       -- bank-specific P&L with expense sub-components
-  get_prompt_hints()                     -- LLM system-prompt additions for financial filings
-  normalize_segment_name(raw)            -- canonicalize segment label variations
-"""
+"""Sector handler: banks, insurance, and financial services companies."""
 from __future__ import annotations
 
-import json
 import re
 import sys
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent))
-from config import INSURANCE_COGS_MIN_PCT, INSURANCE_BENEFITS_MIN_PCT
+from config import (
+    INSURANCE_COGS_MIN_PCT, INSURANCE_BENEFITS_MIN_PCT,
+    BANK_NII_MIN_PCT, BANK_PROVISION_MAX_PCT, INSURANCE_CLAIMS_MAX_PCT,
+)
 
 
 # ---------------------------------------------------------------------------
-# XBRL concept → internal field mapping
-# Order within each group: most-specific / most-direct first.
+# US GAAP bank concept map  — applies to US_SEC filers (10-K / 10-Q)
+# Covers JPM, BAC, WFC, C, GS, MS, AXP, SCHW, BLK, and US insurance companies.
 # ---------------------------------------------------------------------------
-_BANK_CONCEPTS: Dict[str, str] = {
+_BANK_USGAAP: Dict[str, str] = {
+
     # ── Net revenue (direct single-line — preferred, avoids double-count) ──
     "RevenuesNetOfInterestExpense":                              "net_revenue_direct",
     "BankingRevenues":                                          "net_revenue_direct",
     "NetRevenues":                                              "net_revenue_direct",
     "TotalNetRevenues":                                         "net_revenue_direct",
     "TotalRevenues":                                            "net_revenue_direct",
-    # SCHW-specific
-    "NetRevenue":                                               "net_revenue_direct",
+    "NetRevenue":                                               "net_revenue_direct",  # SCHW
     "TotalNetRevenue":                                          "net_revenue_direct",
-    # Standard US-GAAP revenue: used as total net revenue by C, SCHW, AXP
-    "Revenues":                                                 "net_revenue_direct",
+    "Revenues":                                                 "net_revenue_direct",  # C, SCHW, AXP
     "SalesRevenueNet":                                          "net_revenue_direct",
-    # Aggregate of NII + NoninterestIncome (used by some regional banks)
     "NetInterestAndNoninterestIncome":                          "net_revenue_direct",
     "TotalBankingRevenues":                                     "net_revenue_direct",
-    # IFRS equivalents (HSBC, SAN.MC): total operating income
-    "RevenueAndOperatingIncome":                                "net_revenue_direct",
-    # Singular "Revenue" used by IFRS 9 filers (TD.TO, RY.TO via ifrs-full:Revenue)
-    "Revenue":                                                  "net_revenue_direct",
 
     # ── Net interest income (direct) ──
     "InterestIncomeExpenseNet":                                 "nii_direct",
@@ -49,8 +38,6 @@ _BANK_CONCEPTS: Dict[str, str] = {
     "InterestAndDividendIncomeOperatingNet":                    "nii_direct",
     "InterestIncomeExpenseNetOperating":                        "nii_direct",
     "InterestAndFeeIncomeOperatingAndNonoperating":             "nii_direct",
-    # IFRS NII concept (HSBC, SAN.MC)
-    "InterestRevenueExpense":                                   "nii_direct",
     # Components used to compute NII when direct tag absent
     "InterestAndDividendIncomeOperating":                       "interest_income_gross",
     "InterestIncomeOperating":                                  "interest_income_gross",
@@ -64,94 +51,79 @@ _BANK_CONCEPTS: Dict[str, str] = {
     "NonInterestIncome":                                        "noninterest_income",
     "TotalNoninterestIncome":                                   "noninterest_income",
     "OtherNoninterestIncome":                                   "noninterest_income",
-    # Fee income sub-categories (captured only when aggregate NoninterestIncome is absent)
     "FeeAndCommissionIncome":                                   "noninterest_income",
     "ServiceChargesOnDepositAccounts":                          "noninterest_income",
     "TrustFees":                                                "noninterest_income",
     "InvestmentAdvisoryFees":                                   "noninterest_income",
-    # Card-company revenue (AXP, V, MA)
-    "RevenueFromContractWithCustomerExcludingAssessedTax":      "noninterest_income",
+    "RevenueFromContractWithCustomerExcludingAssessedTax":      "noninterest_income",  # AXP, V, MA
     "RevenueFromContractWithCustomerIncludingAssessedTax":      "noninterest_income",
 
-    # ── Provision for credit losses ──
+    # ── Provision for credit losses — US GAAP (CECL and pre-CECL) ──
     "ProvisionForLoanLeaseAndOtherLosses":                      "provision_credit_loss",
     "ProvisionForLoanAndLeaseLosses":                           "provision_credit_loss",
     "CreditLossExpenseReversal":                                "provision_credit_loss",
     "ProvisionForCreditLoss":                                   "provision_credit_loss",
     "ProvisionForCreditLosses":                                 "provision_credit_loss",
     "ProvisionForDoubtfulAccounts":                             "provision_credit_loss",
-    # CECL standard (ASU 2016-13, adopted 2020+) — primary tag for most major banks post-2020
     "ProvisionForCreditLossesOnFinancingReceivables":           "provision_credit_loss",
     "FinancingReceivableCreditLossExpenseReversal":              "provision_credit_loss",
     "AllowanceForCreditLossesOnFinancingReceivablesExpense":     "provision_credit_loss",
-    # AXP uses this us-gaap tag (card-company variant of provision)
-    "ProvisionForLoanLossesExpensed":                           "provision_credit_loss",
-    # Citi-specific provision concepts
+    "ProvisionForLoanLossesExpensed":                           "provision_credit_loss",  # AXP
     "FinancingReceivableExcludingAccruedInterestCreditLossExpenseReversal": "provision_credit_loss",
     "ProvisionForCreditLossBenefitsAndClaimsExpenseReversal":   "provision_credit_loss",
     "OffBalanceSheetCreditLossLiabilityCreditLossExpenseReversal": "provision_credit_loss",
     "FinancingReceivableAllowanceForCreditLossesWriteOffs":     "provision_credit_loss",
-    # BAC extension: combined on-balance-sheet + off-balance-sheet credit loss provision
     "FinancingReceivableExcludingAccruedInterestAndOffBalanceSheetLiabilityCreditLossProvisionReversal": "provision_credit_loss",
 
-    # ── Non-interest expense (total operating costs for banks) ──
+    # ── Non-interest expense ──
     "NoninterestExpense":                                       "noninterest_expense",
     "NonInterestExpense":                                       "noninterest_expense",
     "TotalNoninterestExpense":                                  "noninterest_expense",
     "OperatingExpenses":                                        "noninterest_expense",
 
     # ── Expense sub-components ──
-    # Personnel / compensation
     "LaborAndRelatedExpense":                                   "expense_personnel",
     "CompensationExpenseExcludingCostOfGoodAndServiceSold":     "expense_personnel",
     "EmployeeBenefitsAndShareBasedCompensation":                "expense_personnel",
     "CompensationAndBenefits":                                  "expense_personnel",  # GS
     "SalariesAndEmployeeBenefits":                              "expense_personnel",
-    # Technology
     "InformationTechnologyAndDataProcessing":                   "expense_technology",
     "EquipmentExpense":                                         "expense_technology",
     "TechnologyCommunicationsAndEquipmentExpense":              "expense_technology",  # Citi
     "CommunicationsAndTechnology":                              "expense_technology",
     "CommunicationsAndInformationTechnology":                   "expense_technology",  # JPM
-    # Occupancy
     "OccupancyNet":                                             "expense_occupancy",
     "PremisesAndEquipmentExpense":                              "expense_occupancy",
     "OccupancyAndEquipmentExpense":                             "expense_occupancy",
-    # Professional services
     "ProfessionalAndContractServicesExpense":                   "expense_professional",
     "ProfessionalFees":                                         "expense_professional",
     "BrokerageClearanceExchangeAndDistributionFees":            "expense_professional",  # GS/MS
-    # Marketing
     "MarketingAndAdvertisingExpense":                           "expense_marketing",
     "MarketingExpense":                                         "expense_marketing",
-    # Residual "other" expense line — present in almost all banks
     "OtherNoninterestExpense":                                  "expense_other",
     "OtherExpenses":                                            "expense_other",
     "BusinessDevelopmentExpense":                               "expense_other",
-    # Post-acquisition amortization and restructuring (BAC/JPM after major M&A)
     "AmortizationOfIntangibleAssets":                           "expense_other",
     "BusinessAcquisitionCostOfAcquiredEntityTransactionCosts":  "expense_other",
     "RestructuringChargesAndRelatedCosts":                      "expense_other",
-    # Regulatory and legal (FDIC, litigation — present in most large banks)
     "FDICPremiumExpense":                                       "expense_other",
     "LitigationSettlementExpense":                              "expense_other",
-    # AXP-specific
-    "CardMemberServicesExpense":                                "expense_card_services",
+    "CardMemberServicesExpense":                                "expense_card_services",  # AXP
     "RewardsExpense":                                           "expense_card_services",
 
-    # ── Operating / pre-tax income ──
+    # ── Operating / pre-tax income — US GAAP ──
     "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": "pretax_income",
     "IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments": "pretax_income",
     "OperatingIncomeLoss":                                      "operating_income",
     "IncomeLossFromContinuingOperations":                       "operating_income",
 
-    # ── Net income / tax ──
+    # ── Net income / tax — US GAAP ──
     "NetIncomeLoss":                                            "net_income",
     "NetIncomeLossAvailableToCommonStockholdersBasic":          "net_income",
     "ProfitLoss":                                               "net_income",
     "IncomeTaxExpenseBenefit":                                  "income_tax",
 
-    # ── Insurance-specific ──
+    # ── Insurance — US GAAP ──
     "PremiumsEarnedNet":                                        "insurance_premiums",
     "NetPremiumsEarned":                                        "insurance_premiums",
     "PolicyholderBenefitsAndClaimsIncurredNet":                 "insurance_benefits",
@@ -159,112 +131,104 @@ _BANK_CONCEPTS: Dict[str, str] = {
     "InsuranceLossesAndLossAdjustmentExpenses":                 "insurance_benefits",
 }
 
-# ---------------------------------------------------------------------------
-# LLM prompt hints
-# ---------------------------------------------------------------------------
-FINANCIAL_SEGMENT_HINTS = """
-For this financial company, identify the main business segments and their net revenues.
-
-Revenue structure for banks:
-  Net Revenue = Net Interest Income (NII) + Non-Interest Income
-  NII = Interest Income − Interest Expense
-  Non-Interest Income: service charges, card fees, advisory, underwriting, trading, asset management
-
-Key P&L items to capture:
-  1. Net Interest Income
-  2. Non-Interest Income (fee income)
-  3. Provision for Credit Losses (subtracted from revenue)
-  4. Non-Interest Expense (total operating costs)
-  5. Pre-tax Income = Net Revenue − Provision − Non-Interest Expense
-  6. Income Tax
-  7. Net Income
-
-Typical bank segment names:
-  Consumer Banking / Retail Banking / Personal Banking
-  Commercial Banking / Corporate Banking / Middle Market
-  Corporate & Investment Banking / Capital Markets / Global Banking & Markets
-  Wealth & Asset Management / Private Banking
-  Corporate / Treasury / Other
-
-For insurance companies:
-  Property & Casualty Insurance
-  Life & Health Insurance
-  Asset Management
-  Corporate / Other
-
-IMPORTANT:
-- Report segment revenues in millions USD.
-- For banks, segment revenue = NII + Non-Interest Income allocated to that segment.
-- Do NOT include Provision for Credit Losses in revenue.
-- Do NOT double-count interest income gross and NII.
-"""
 
 # ---------------------------------------------------------------------------
-# Canonical segment name mapping
+# IFRS bank concept map  — applies to INTL_SEC filers (20-F, ifrs-full / IFRS 9)
 # ---------------------------------------------------------------------------
-CANONICAL_SEGMENT_NAMES: Dict[str, str] = {
-    "consumer banking":                    "Consumer Banking",
-    "retail banking":                      "Consumer Banking",
-    "personal banking":                    "Consumer Banking",
-    "consumer & community banking":        "Consumer Banking",
-    "consumer and community banking":      "Consumer Banking",
-    "consumer & small business banking":   "Consumer Banking",
-    "commercial banking":                  "Commercial Banking",
-    "corporate banking":                   "Commercial Banking",
-    "wholesale banking":                   "Commercial Banking",
-    "middle market banking":               "Commercial Banking",
-    "corporate & investment bank":         "Corporate & Investment Banking",
-    "corporate and investment banking":    "Corporate & Investment Banking",
-    "institutional securities":            "Corporate & Investment Banking",
-    "global banking & markets":            "Corporate & Investment Banking",
-    "global banking and markets":          "Corporate & Investment Banking",
-    "corporate & institutional banking":   "Corporate & Investment Banking",
-    "investment banking":                  "Investment Banking & Markets",
-    "capital markets":                     "Investment Banking & Markets",
-    "global markets":                      "Investment Banking & Markets",
-    "markets":                             "Investment Banking & Markets",
-    "trading":                             "Investment Banking & Markets",
-    "wealth management":                   "Wealth & Asset Management",
-    "asset management":                    "Wealth & Asset Management",
-    "private banking":                     "Wealth & Asset Management",
-    "global wealth & investment management": "Wealth & Asset Management",
-    "investment management":               "Wealth & Asset Management",
-    "wealth & investment management":      "Wealth & Asset Management",
-    "property & casualty":                 "Property & Casualty Insurance",
-    "life & health":                       "Life & Health Insurance",
-    "treasury":                            "Corporate & Other",
-    "corporate":                           "Corporate & Other",
-    "other":                               "Corporate & Other",
-    "corporate center":                    "Corporate & Other",
-    "corporate and other":                 "Corporate & Other",
+_BANK_IFRS: Dict[str, str] = {
+
+    # ── Net revenue — IFRS banks (total operating income) ──
+    "Revenue":                                               "net_revenue_direct",  # ifrs-full:Revenue
+    "RevenueAndOperatingIncome":                             "net_revenue_direct",  # HSBC custom extension
+    "TotalIncome":                                           "net_revenue_direct",
+    "TotalOperatingIncome":                                  "net_revenue_direct",
+    "NetOperatingIncome":                                    "net_revenue_direct",
+    "NetRevenues":                                           "net_revenue_direct",
+    "NetInterestAndNoninterestIncome":                       "net_revenue_direct",  # IFRS variant
+
+    # ── Net interest income — IFRS 9 ──
+    "InterestRevenueExpense":                                "nii_direct",   # IFRS 9 primary (Santander, HSBC)
+    "InterestRevenueExpenseNet":                             "nii_direct",   # RY.TO variant
+    "InterestIncomeExpenseNet1":                             "nii_direct",   # TD Bank extension
+    "NetInterestIncome":                                     "nii_direct",   # common in IFRS and GAAP
+    # Gross components when direct NII tag absent
+    "InterestIncome":                                        "interest_income_gross",
+    "InterestExpense":                                       "interest_expense_gross",
+    "InterestAndSimilarIncome":                              "interest_income_gross",
+    "InterestAndSimilarExpense":                             "interest_expense_gross",
+    "InterestIncomeOnFinancialAssets":                       "interest_income_gross",
+    "InterestExpenseOnFinancialLiabilities":                 "interest_expense_gross",
+
+    # ── Non-interest / fee income — IFRS ──
+    "NonInterestIncome":                                     "noninterest_income",   # RY.TO, capital-I variant
+    "NonInterestIncome1":                                    "noninterest_income",   # TD Bank extension
+    "FeeAndCommissionIncome":                                "noninterest_income",
+    "NetFeeAndCommissionIncome":                             "noninterest_income",
+    "OtherOperatingIncome":                                  "noninterest_income",
+    "NetTradingIncome":                                      "noninterest_income",
+    "GainsLossesOnFinancialInstrumentsAtFairValueThroughProfitOrLoss": "noninterest_income",
+    "NetGainsOnFinancialInstruments":                        "noninterest_income",
+    "DividendIncome":                                        "noninterest_income",
+
+    # ── Provision for credit losses — IFRS 9 ──
+    "ImpairmentLossesOnFinancialAssets":                     "provision_credit_loss",  # IFRS 9 primary
+    "ImpairmentLossOnFinancialAssets":                       "provision_credit_loss",
+    "CreditLossExpenseReversal":                             "provision_credit_loss",
+    "AllowanceForCreditLossesExpense":                       "provision_credit_loss",
+    "ImpairmentOnFinancialAssets":                           "provision_credit_loss",
+    "IncreaseDecreaseInAllowanceAccountForCreditLossesOfFinancialAssets": "provision_credit_loss",  # TD Bank
+
+    # ── Non-interest expense — IFRS ──
+    "NonInterestExpense":                                    "noninterest_expense",   # RY.TO capital-I variant
+    "NonInterestExpense1":                                   "noninterest_expense",   # TD Bank extension
+    "OperatingExpenses":                                     "noninterest_expense",
+    "TotalOperatingExpenses":                                "noninterest_expense",
+    "AdministrativeExpenses":                                "noninterest_expense",  # IFRS total admin
+
+    # ── Expense sub-components — IFRS ──
+    "EmployeeBenefitsExpense":                               "expense_personnel",
+    "PersonnelExpense":                                      "expense_personnel",
+    "SalariesAndEmployeeBenefits":                           "expense_personnel",
+    "DepreciationAmortisationAndImpairmentLoss":             "expense_other",
+    "OtherExpenses":                                         "expense_other",
+
+    # ── Operating / pre-tax income — IFRS ──
+    "ProfitBeforeTax":                                       "pretax_income",
+    "ProfitLossBeforeTax":                                   "pretax_income",
+    "ProfitLossBeforeTaxAndEquityInNetIncomeOfInvestmentInAssociates": "pretax_income",  # TD Bank
+    "ProfitFromOperations":                                  "operating_income",
+    "OperatingProfitLoss":                                   "operating_income",
+
+    # ── Income tax — IFRS ──
+    "IncomeTaxes":                                           "income_tax",
+    "TaxExpenseIncome":                                      "income_tax",
+    "IncomeTaxExpenseBenefit":                               "income_tax",  # some IFRS filers use GAAP tag
+    "IncomeTaxExpenseContinuingOperations":                  "income_tax",  # TD Bank, RY.TO
+
+    # ── Net income — IFRS ──
+    "ProfitLoss":                                            "net_income",  # ifrs-full primary
+    "ProfitAttributableToOwnersOfParent":                    "net_income",
+    "NetIncomeLoss":                                         "net_income",  # some IFRS filers use GAAP tag
+
+    # ── Insurance — IFRS 17 ──
+    "PremiumsEarned":                                        "insurance_premiums",
+    "InsuranceContractRevenue":                              "insurance_premiums",  # IFRS 17
+    "PolicyholderBenefitsAndClaimsIncurredNet":              "insurance_benefits",
+    "InsuranceBenefitsAndClaimsAndAdjustmentExpenses":       "insurance_benefits",
 }
 
 
-# ---------------------------------------------------------------------------
-# Public API
-# ---------------------------------------------------------------------------
-
-def get_prompt_hints() -> str:
-    return FINANCIAL_SEGMENT_HINTS
-
-
 def has_bank_indicators(pnl: Dict[str, Any], total_rev: float) -> bool:
-    """Return True if extracted P&L shows bank or insurance income structure.
-
-    Called after sector-specific extraction to validate that bank/insurance
-    concepts were actually found.  If False, caller should fall back to the
-    standard handler and store sector as "standard".
-    """
+    """Return True if extracted P&L shows bank or insurance income structure."""
     if not total_rev or total_rev <= 0:
         return False
-    # --- SEC bank P&L fields (set by pnl_from_bank_filing) ---
+    if pnl.get("bank_raw_signal"):
+        return True
     nii        = pnl.get("nii")
     provision  = pnl.get("provision_credit_loss")
     nonint_inc = pnl.get("noninterest_income")
-    # --- Yahoo bank P&L fields (set by _pnl_from_yahoo) ---
     bank_nii    = pnl.get("bank_nii")
     bank_nonint = pnl.get("bank_nonint")
-    # --- Insurance indicator: cogs = policyholder benefits (both paths) ---
     cogs = pnl.get("cogs")
     ins_signal = cogs is not None and cogs > 0 and cogs / total_rev > 0.10
 
@@ -278,33 +242,30 @@ def has_bank_indicators(pnl: Dict[str, Any], total_rev: float) -> bool:
     )
 
 
-def normalize_segment_name(raw: str) -> str:
-    lower = raw.lower().strip()
-    for key, canonical in CANONICAL_SEGMENT_NAMES.items():
-        if key in lower:
-            return canonical
-    return raw.title()
+def pnl_from_financial_filing(
+    filing_obj,
+    data_source: str = "US_SEC",
+) -> Dict[str, Any]:
+    """Auto-detect bank vs insurance and dispatch to the right handler.
 
-
-def pnl_from_financial_filing(filing_obj) -> Dict[str, Any]:
-    """Auto-detect bank vs insurance, dispatch to the right handler."""
-    company_type = _detect_financial_type(filing_obj)
-    if company_type == "insurance":
-        return _pnl_from_insurance_filing(filing_obj)
-    return pnl_from_bank_filing(filing_obj)
-
-
-def pnl_from_bank_filing(filing_obj) -> Dict[str, Any]:
+    For INTL_SEC, auto-detects US GAAP vs IFRS from XBRL namespace prefixes.
     """
-    Extract bank P&L from a TenK / TenQ filing object.
+    effective = _effective_standard(filing_obj, data_source)
+    company_type = _detect_financial_type(filing_obj, effective)
+    if company_type == "insurance":
+        return _pnl_from_insurance_filing(filing_obj, effective)
+    return pnl_from_bank_filing(filing_obj, effective)
 
-    Returns a dict whose keys match SegmentData fields, plus bank-specific
-    extras ('nii', 'noninterest_income', 'provision_credit_loss',
-    'noninterest_expense', 'expense_detail').
 
-    expense_detail is a JSON-serialisable dict {label: value} stored as
-    'EXPENSE_DETAIL:{...}' in sd.notes so sankey_builder can render
-    expense sub-components as individual nodes.
+def pnl_from_bank_filing(
+    filing_obj,
+    data_source: str = "US_SEC",
+) -> Dict[str, Any]:
+    """
+    Extract bank P&L from a TenK / TenQ / TwentyF filing object.
+
+    Routes to _BANK_USGAAP for US GAAP filers and _BANK_IFRS for IFRS filers.
+    For INTL_SEC, auto-detects the actual accounting standard from XBRL namespaces.
     """
     empty: Dict[str, Any] = {
         "total_revenue": None,
@@ -317,18 +278,20 @@ def pnl_from_bank_filing(filing_obj) -> Dict[str, Any]:
         "interest_expense": None,
         "income_tax": None,
         "currency": "USD",
-        # bank extras
         "nii": None,
         "noninterest_income": None,
         "provision_credit_loss": None,
         "noninterest_expense": None,
         "expense_detail": None,
+        "bank_raw_signal": False,
     }
 
     if filing_obj is None:
         return empty
 
-    raw = _parse_bank_concepts(filing_obj)
+    effective   = _effective_standard(filing_obj, data_source)
+    concept_map = _BANK_IFRS if effective == "INTL_SEC" else _BANK_USGAAP
+    raw = _parse_bank_concepts(filing_obj, concept_map)
 
     # ── Resolve total (net) revenue ────────────────────────────────────────
     net_rev_direct = raw.get("net_revenue_direct")
@@ -356,7 +319,7 @@ def pnl_from_bank_filing(filing_obj) -> Dict[str, Any]:
     # ── Provision ─────────────────────────────────────────────────────────
     provision = raw.get("provision_credit_loss")
     if provision is not None:
-        provision = abs(provision)  # always positive
+        provision = abs(provision)
 
     # ── Revenue after provision (bank's gross-profit analog) ──────────────
     rev_after_provision: Optional[float] = None
@@ -368,15 +331,12 @@ def pnl_from_bank_filing(filing_obj) -> Dict[str, Any]:
     # ── Non-interest expense ──────────────────────────────────────────────
     nie = raw.get("noninterest_expense")
 
-    # Sanity check: NIE should not exceed total revenue (would indicate
-    # a wrong concept is being captured, e.g. gross instead of net).
     if nie is not None and total_revenue and nie > total_revenue * 0.99:
-        # Try to reconstruct from operating income if available
         oi = raw.get("operating_income") or raw.get("pretax_income")
         if oi is not None and rev_after_provision is not None:
             nie = rev_after_provision - oi
         else:
-            nie = None  # discard unreliable value
+            nie = None
 
     # ── Operating income ──────────────────────────────────────────────────
     operating_income = raw.get("operating_income") or raw.get("pretax_income")
@@ -398,11 +358,19 @@ def pnl_from_bank_filing(filing_obj) -> Dict[str, Any]:
         if v and v > 0:
             expense_detail[label] = v
 
-    # Discard sub-components if they exceed NIE (would double-count)
     if expense_detail and nie:
         sub_sum = sum(expense_detail.values())
         if sub_sum > nie * 1.05:
             expense_detail = {}
+
+    bank_raw_signal = bool(
+        raw.get("net_revenue_direct") or
+        raw.get("nii_direct") or
+        raw.get("interest_income_gross") or
+        raw.get("interest_expense_gross") or
+        raw.get("provision_credit_loss") or
+        raw.get("noninterest_income")
+    )
 
     result = dict(empty)
     result.update({
@@ -410,16 +378,15 @@ def pnl_from_bank_filing(filing_obj) -> Dict[str, Any]:
         "operating_income":    operating_income,
         "net_income":          raw.get("net_income"),
         "income_tax":          raw.get("income_tax"),
-        # Bank-extra fields
         "nii":                 nii,
         "noninterest_income":  noninterest,
         "provision_credit_loss": provision,
         "noninterest_expense": nie,
-        # Map to SegmentData fields for downstream use
         "gross_profit":        rev_after_provision,
-        "sga_expense":         nie,                        # NIE ↔ opex analog
-        "interest_expense":    provision,                  # provision ↔ interest analog
+        "sga_expense":         nie,
+        "interest_expense":    provision,
         "expense_detail":      expense_detail or None,
+        "bank_raw_signal":     bank_raw_signal,
     })
     return result
 
@@ -428,35 +395,61 @@ def pnl_from_bank_filing(filing_obj) -> Dict[str, Any]:
 # Private helpers
 # ---------------------------------------------------------------------------
 
-def _detect_financial_type(filing_obj) -> str:
+def _detect_xbrl_standard(filing_obj) -> str:
+    """Infer US GAAP vs IFRS from XBRL concept namespace prefixes.
+
+    Some 20-F filers (e.g. ASML, Alibaba) use us-gaap concepts rather than ifrs-full.
+    Returns 'US_GAAP' or 'IFRS'.
     """
-    Classify as 'insurance' only when insurance premiums are a significant
-    portion of revenue. Many banks (Citi, JPM) carry tiny insurance-related
-    XBRL entries that must not trigger the insurance path.
+    try:
+        stmt = filing_obj.income_statement
+        df   = stmt.to_dataframe() if stmt is not None else None
+    except Exception:
+        return "IFRS"
+    if df is None or df.empty or "concept" not in df.columns:
+        return "IFRS"
+    usgaap = sum(1 for c in df["concept"].fillna("") if str(c).startswith("us-gaap"))
+    ifrs   = sum(1 for c in df["concept"].fillna("") if str(c).startswith("ifrs"))
+    return "US_GAAP" if usgaap >= ifrs else "IFRS"
+
+
+def _effective_standard(filing_obj, data_source: str) -> str:
+    """Return the data_source string to use for concept map selection.
+
+    For INTL_SEC: auto-detects the actual XBRL accounting standard and returns
+    'US_SEC' when the filing uses us-gaap concepts, or 'INTL_SEC' for IFRS.
     """
+    if data_source != "INTL_SEC":
+        return data_source
+    detected = _detect_xbrl_standard(filing_obj)
+    return "US_SEC" if detected == "US_GAAP" else "INTL_SEC"
+
+
+def _detect_financial_type(filing_obj, data_source: str) -> str:
+    """Classify as 'insurance' only when insurance premiums are a significant
+    portion of revenue."""
     if filing_obj is None:
         return "bank"
-    raw = _parse_bank_concepts(filing_obj)
+    concept_map = _BANK_IFRS if data_source == "INTL_SEC" else _BANK_USGAAP
+    raw = _parse_bank_concepts(filing_obj, concept_map)
     premiums = raw.get("insurance_premiums") or 0.0
     benefits = raw.get("insurance_benefits") or 0.0
 
-    # Approximate total revenue for threshold comparison
     net_rev = raw.get("net_revenue_direct") or 0.0
     nii     = raw.get("nii_direct") or 0.0
     nonint  = raw.get("noninterest_income") or 0.0
-    total   = net_rev or (nii + nonint) or 1.0  # avoid division by zero
+    total   = net_rev or (nii + nonint) or 1.0
 
-    # Only classify as insurance when premiums are material (>20% of revenue)
     if premiums and premiums > total * INSURANCE_COGS_MIN_PCT:
         return "insurance"
-    # Or when insurance benefits dominate expenses (>30% of revenue)
     if benefits and benefits > total * INSURANCE_BENEFITS_MIN_PCT:
         return "insurance"
     return "bank"
 
 
-def _pnl_from_insurance_filing(filing_obj) -> Dict[str, Any]:
-    raw = _parse_bank_concepts(filing_obj)
+def _pnl_from_insurance_filing(filing_obj, data_source: str) -> Dict[str, Any]:
+    concept_map = _BANK_IFRS if data_source == "INTL_SEC" else _BANK_USGAAP
+    raw = _parse_bank_concepts(filing_obj, concept_map)
     premiums = raw.get("insurance_premiums") or 0.0
     fee_income = raw.get("noninterest_income") or 0.0
     total_revenue = (premiums + fee_income) if premiums else (fee_income or None)
@@ -483,8 +476,6 @@ def _strip_prefix(concept: str) -> str:
     """Remove namespace prefix: 'us-gaap:ConceptName', 'us-gaap_ConceptName', or 'jpm_Concept'."""
     if ":" in concept:
         return concept.split(":", 1)[-1]
-    # edgartools v5 uses underscore: "us-gaap_ConceptName", "jpm_ConceptName"
-    # Namespace = all-lowercase (may contain hyphens); concept starts with uppercase
     m = re.match(r'^[a-z][a-z0-9\-]*_(.+)$', concept)
     if m:
         return m.group(1)
@@ -494,18 +485,19 @@ def _strip_prefix(concept: str) -> str:
 def _looks_like_period_col(col: str) -> bool:
     s = str(col)
     return bool(
-        re.match(r"^\d{4}-\d{2}-\d{2}", s)   # also matches "2025-12-31 (FY)"
+        re.match(r"^\d{4}-\d{2}-\d{2}", s)
         or re.match(r"^\d{4}$", s)
         or re.match(r"^FY\d{4}$", s)
         or re.match(r"^\d{4}Q\d$", s)
     )
 
 
-def _parse_bank_concepts(filing_obj) -> Dict[str, float]:
-    """
-    Walk the income_statement dataframe and collect all recognised bank concepts.
-    Uses only consolidated (non-dimensioned) rows. Returns {field_name: value}.
-    """
+def _parse_bank_concepts(
+    filing_obj,
+    concept_map: Dict[str, str],
+) -> Dict[str, float]:
+    """Walk the income_statement dataframe and collect all recognised concepts.
+    Uses only consolidated (non-dimensioned) rows."""
     result: Dict[str, float] = {}
     if filing_obj is None:
         return result
@@ -524,7 +516,6 @@ def _parse_bank_concepts(filing_obj) -> Dict[str, float]:
         return result
     latest_col = period_cols[0]
 
-    # Filter to consolidated (non-dimensioned) rows only
     if "dimension" in df.columns:
         totals = df[~df["dimension"].fillna(False)]
     else:
@@ -533,7 +524,7 @@ def _parse_bank_concepts(filing_obj) -> Dict[str, float]:
     for _, row in totals.iterrows():
         concept_raw = str(row.get("concept", "") or "")
         concept_short = _strip_prefix(concept_raw)
-        field_name = _BANK_CONCEPTS.get(concept_short)
+        field_name = concept_map.get(concept_short)
         if not field_name:
             continue
         raw_val = row.get(latest_col)
@@ -541,9 +532,84 @@ def _parse_bank_concepts(filing_obj) -> Dict[str, float]:
             fval = float(raw_val)
         except (TypeError, ValueError):
             continue
-        # Keep largest-magnitude value if concept appears in multiple rows
         existing = result.get(field_name)
         if existing is None or abs(fval) > abs(existing):
             result[field_name] = fval
 
-    return result
+
+# ── Yahoo Finance field resolution for bank / insurance ───────────────────────
+
+def pnl_fields_for_yahoo_financial(m, total_revenue: Optional[float]) -> Dict[str, Any]:
+    """Resolve bank/insurance-specific fields from a Yahoo Finance income row.
+
+    m: callable(field_name) -> float | None  (already scaled to USD)
+
+    Returns financial-sector P&L slots. Standard fields (rd_expense, net_income,
+    income_tax) are excluded so the caller can fill them generically.
+    """
+    # Insurance: policyholder benefits map to cogs / gross_profit
+    insurance_claims = (
+        m("Net Policyholder Benefits And Claims") or
+        m("Policyholder Benefits And Claims") or
+        m("Total Policy Holder Benefits") or
+        m("Policy Holder Benefits")
+    )
+    ins_cogs_slot = None
+    ins_gp_slot   = None
+    if insurance_claims and total_revenue and 0 < insurance_claims < total_revenue * INSURANCE_CLAIMS_MAX_PCT:
+        ins_cogs_slot = insurance_claims
+        ins_gp_slot   = total_revenue - insurance_claims
+
+    # Bank: NII / NIE / provision
+    bank_provision = (
+        m("Provision For Loan Losses") or
+        m("Provision For Credit Losses") or
+        m("Provision For Doubtful Accounts") or
+        m("Credit Loss Provision")
+    )
+    bank_nii = m("Net Interest Income")
+    _nii_is_bank = (
+        bank_nii is not None and bank_nii > 0
+        and total_revenue and bank_nii > total_revenue * BANK_NII_MIN_PCT
+    )
+    bank_nonint = m("Non Interest Income") or m("Net Non Interest Income")
+    bank_nie = (
+        m("Non Interest Expense") or
+        m("Total Non Interest Expense") or
+        m("Non-Interest Expense") or
+        (m("Operating Expense") if _nii_is_bank else None)
+    )
+
+    # Infer non-interest income when only NII is explicit
+    if _nii_is_bank and bank_nonint is None and total_revenue is not None:
+        implied = total_revenue - bank_nii
+        if 0 < implied < total_revenue:
+            bank_nonint = implied
+
+    # interest_expense slot: prefer provision; fall back to raw IE; else None
+    raw_ie = m("Interest Expense")
+    if bank_provision is not None and total_revenue and 0 < bank_provision < total_revenue * BANK_PROVISION_MAX_PCT:
+        ie_slot = bank_provision
+    elif raw_ie is not None and total_revenue and raw_ie < total_revenue * BANK_PROVISION_MAX_PCT:
+        ie_slot = raw_ie
+    else:
+        ie_slot = None
+
+    # sga_expense: prefer NIE over generic SG&A
+    sga_raw = m("Selling General And Administration")
+    sga_slot = bank_nie if (bank_nie is not None and total_revenue and 0 < bank_nie < total_revenue) else sga_raw
+
+    # operating_income: banks use Pretax Income when Operating Income absent
+    raw_op = m("Operating Income")
+    bank_pretax = m("Pretax Income") if _nii_is_bank else None
+    op_slot = raw_op or bank_pretax or m("Pretax Income") or m("EBIT")
+
+    return {
+        "gross_profit":     ins_gp_slot or m("Gross Profit"),
+        "cogs":             ins_cogs_slot or m("Cost Of Revenue"),
+        "sga_expense":      sga_slot,
+        "interest_expense": ie_slot,
+        "operating_income": op_slot,
+        "bank_nii":         bank_nii if _nii_is_bank else None,
+        "bank_nonint":      bank_nonint,
+    }

@@ -197,6 +197,27 @@
     },
     {
       "ticker": "PLTR",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 1406802000.0,
+      "gross_profit": 1190836000.0,
+      "operating_income": 575394000.0,
+      "net_income": 608676000.0,
+      "rd_expense": 143554000.0,
+      "sga_expense": 471888000.0,
+      "cogs": 215966000.0,
+      "interest_expense": null,
+      "income_tax": 9776000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "PLTR",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -510,9 +531,9 @@
       ]
     }
   ],
-  "ttm_revenue": 4701227000.0,
-  "ttm_operating_income": 1592619000.0,
-  "ttm_net_income": 1899439000.0,
+  "ttm_revenue": 5224174000.0,
+  "ttm_operating_income": 1991965000.0,
+  "ttm_net_income": 2290398000.0,
   "segment_trend": {
     "Government": [
       {
@@ -642,7 +663,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

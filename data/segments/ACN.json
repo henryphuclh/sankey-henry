@@ -133,32 +133,16 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Communications, Media & Technology",
-          "value": 16314181924.539478,
+          "segment_name": "Consulting",
+          "value": 33613008000.0,
           "unit": "USD",
           "period": "2023-08-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Financial Services",
-          "value": 17280842566.109406,
-          "unit": "USD",
-          "period": "2023-08-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Health & Public Service",
-          "value": 17891830574.08248,
-          "unit": "USD",
-          "period": "2023-08-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Resources",
-          "value": 12624889935.26863,
+          "segment_name": "Managed Services",
+          "value": 30498737000.0,
           "unit": "USD",
           "period": "2023-08-31 (FY)",
           "concept": "xbrl_dimension",
@@ -255,6 +239,27 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ACN",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": 17596260000.0,
+      "gross_profit": 5610934000.0,
+      "operating_income": 2665015000.0,
+      "net_income": 1413963000.0,
+      "rd_expense": null,
+      "sga_expense": 2945919000.0,
+      "cogs": 11985326000.0,
+      "interest_expense": 66243000.0,
+      "income_tax": 625429000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
       "notes": []
     },
     {
@@ -381,32 +386,16 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Communications, Media & Technology",
-          "value": 3962160463.796891,
+          "segment_name": "Consulting",
+          "value": 8457169000.0,
           "unit": "USD",
           "period": "2024-05-31 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Financial Services",
-          "value": 4150980967.971001,
-          "unit": "USD",
-          "period": "2024-05-31 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Health & Public Service",
-          "value": 5040773413.618921,
-          "unit": "USD",
-          "period": "2024-05-31 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Resources",
-          "value": 3312913154.6131873,
+          "segment_name": "Managed Services",
+          "value": 8009659000.0,
           "unit": "USD",
           "period": "2024-05-31 (Q3)",
           "concept": "xbrl_dimension",
@@ -437,32 +426,16 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Communications, Media & Technology",
-          "value": 3799176084.659307,
+          "segment_name": "Consulting",
+          "value": 8021034000.0,
           "unit": "USD",
           "period": "2024-02-29 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Financial Services",
-          "value": 4020749373.330038,
-          "unit": "USD",
-          "period": "2024-02-29 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Health & Public Service",
-          "value": 4772399176.877995,
-          "unit": "USD",
-          "period": "2024-02-29 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Resources",
-          "value": 3207189365.13266,
+          "segment_name": "Managed Services",
+          "value": 7778480000.0,
           "unit": "USD",
           "period": "2024-02-29 (Q2)",
           "concept": "xbrl_dimension",
@@ -493,32 +466,16 @@
       "fiscal_quarter": 4,
       "segments": [
         {
-          "segment_name": "Communications, Media & Technology",
-          "value": 3811046190.086935,
+          "segment_name": "Consulting",
+          "value": 8456506000.0,
           "unit": "USD",
           "period": "2023-11-30 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Financial Services",
-          "value": 4330897578.537415,
-          "unit": "USD",
-          "period": "2023-11-30 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Health & Public Service",
-          "value": 4821850409.316144,
-          "unit": "USD",
-          "period": "2023-11-30 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Resources",
-          "value": 3260508822.0595064,
+          "segment_name": "Managed Services",
+          "value": 7767797000.0,
           "unit": "USD",
           "period": "2023-11-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -549,32 +506,16 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Communications, Media & Technology",
-          "value": 4114206375.9062676,
+          "segment_name": "Consulting",
+          "value": 8693030000.0,
           "unit": "USD",
           "period": "2023-05-31 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Financial Services",
-          "value": 4482738196.842048,
-          "unit": "USD",
-          "period": "2023-05-31 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Health & Public Service",
-          "value": 4665817064.420577,
-          "unit": "USD",
-          "period": "2023-05-31 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Resources",
-          "value": 3301823362.8311067,
+          "segment_name": "Managed Services",
+          "value": 7871555000.0,
           "unit": "USD",
           "period": "2023-05-31 (Q3)",
           "concept": "xbrl_dimension",
@@ -598,109 +539,31 @@
       ]
     }
   ],
-  "ttm_revenue": 71173363000.0,
-  "ttm_operating_income": 10594741000.0,
-  "ttm_net_income": 8022376000.0,
+  "ttm_revenue": 72110322000.0,
+  "ttm_operating_income": 11015042000.0,
+  "ttm_net_income": 7648264000.0,
   "segment_trend": {
-    "Communications, Media & Technology": [
-      {
-        "period": "2023Q2",
-        "value": 4114206375.9062676,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q4",
-        "value": 3811046190.086935,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 3799176084.659307,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 3962160463.796891,
-        "is_annual": false
-      }
-    ],
-    "Financial Services": [
-      {
-        "period": "2023Q2",
-        "value": 4482738196.842048,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q4",
-        "value": 4330897578.537415,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 4020749373.330038,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 4150980967.971001,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 17280842566.109406,
-        "is_annual": true
-      }
-    ],
-    "Health & Public Service": [
-      {
-        "period": "2023Q2",
-        "value": 4665817064.420577,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q4",
-        "value": 4821850409.316144,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 4772399176.877995,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 5040773413.618921,
-        "is_annual": false
-      }
-    ],
-    "Resources": [
-      {
-        "period": "2023Q2",
-        "value": 3301823362.8311067,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q4",
-        "value": 3260508822.0595064,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 3207189365.13266,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 3312913154.6131873,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 12624889935.26863,
-        "is_annual": true
-      }
-    ],
     "Consulting": [
+      {
+        "period": "2023Q2",
+        "value": 8693030000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 8456506000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 8021034000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 8457169000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q4",
         "value": 9045228000.0,
@@ -727,12 +590,37 @@
         "is_annual": false
       },
       {
+        "period": "FY2023",
+        "value": 33613008000.0,
+        "is_annual": true
+      },
+      {
         "period": "FY2025",
         "value": 35106786000.0,
         "is_annual": true
       }
     ],
     "Managed Services": [
+      {
+        "period": "2023Q2",
+        "value": 7871555000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 7767797000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 7778480000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 8009659000.0,
+        "is_annual": false
+      },
       {
         "period": "2024Q4",
         "value": 8644317000.0,
@@ -759,22 +647,13 @@
         "is_annual": false
       },
       {
+        "period": "FY2023",
+        "value": 30498737000.0,
+        "is_annual": true
+      },
+      {
         "period": "FY2025",
         "value": 34566191000.0,
-        "is_annual": true
-      }
-    ],
-    "Communications, Media & Technology": [
-      {
-        "period": "FY2023",
-        "value": 16314181924.539478,
-        "is_annual": true
-      }
-    ],
-    "Health & Public Service": [
-      {
-        "period": "FY2023",
-        "value": 17891830574.08248,
         "is_annual": true
       }
     ],
@@ -801,7 +680,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

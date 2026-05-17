@@ -287,6 +287,27 @@
     },
     {
       "ticker": "UNH",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 113215000000.0,
+      "gross_profit": 18494000000.0,
+      "operating_income": 380000000.0,
+      "net_income": 10000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 94721000000.0,
+      "interest_expense": 974000000.0,
+      "income_tax": -938000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "UNH",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -739,9 +760,9 @@
       ]
     }
   ],
-  "ttm_revenue": 446073000000.0,
-  "ttm_operating_income": 27574000000.0,
-  "ttm_net_income": 19070000000.0,
+  "ttm_revenue": 449713000000.0,
+  "ttm_operating_income": 18835000000.0,
+  "ttm_net_income": 12606000000.0,
   "segment_trend": {
     "UnitedHealthcare": [
       {
@@ -993,7 +1014,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

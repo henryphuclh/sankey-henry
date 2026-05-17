@@ -157,6 +157,27 @@
     },
     {
       "ticker": "NFLX",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 12050762000.0,
+      "gross_profit": 5528141000.0,
+      "operating_income": 2956663000.0,
+      "net_income": 2418521000.0,
+      "rd_expense": 890300000.0,
+      "sga_expense": 1681178000.0,
+      "cogs": 6522621000.0,
+      "interest_expense": 234395000.0,
+      "income_tax": 349220000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "NFLX",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -406,9 +427,9 @@
       ]
     }
   ],
-  "ttm_revenue": 45382031000.0,
-  "ttm_operating_income": 14326937000.0,
-  "ttm_net_income": 13845471000.0,
+  "ttm_revenue": 46889992000.0,
+  "ttm_operating_income": 13936601000.0,
+  "ttm_net_income": 13373641000.0,
   "segment_trend": {
     "Streaming": [
       {
@@ -480,7 +501,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

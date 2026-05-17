@@ -237,11 +237,57 @@
     },
     {
       "ticker": "UBER",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 14366000000.0,
+      "gross_profit": 5685000000.0,
+      "operating_income": 1774000000.0,
+      "net_income": 296000000.0,
+      "rd_expense": 885000000.0,
+      "sga_expense": 2086000000.0,
+      "cogs": 8681000000.0,
+      "interest_expense": 115000000.0,
+      "income_tax": -40000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "UBER",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 3,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "Mobility",
+          "value": 7682000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Delivery",
+          "value": 4477000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Freight",
+          "value": 1308000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 13467000000.0,
       "gross_profit": 5358000000.0,
       "operating_income": 1113000000.0,
@@ -253,7 +299,7 @@
       "income_tax": -4046000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.55,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -262,7 +308,32 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 2,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "Mobility",
+          "value": 7288000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Delivery",
+          "value": 4102000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Freight",
+          "value": 1261000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 12651000000.0,
       "gross_profit": 5040000000.0,
       "operating_income": 1450000000.0,
@@ -274,7 +345,7 @@
       "income_tax": 142000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.55,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -283,7 +354,32 @@
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": 1,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "Mobility",
+          "value": 6496000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Delivery",
+          "value": 3777000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Freight",
+          "value": 1260000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 11533000000.0,
       "gross_profit": 4596000000.0,
       "operating_income": 1228000000.0,
@@ -295,7 +391,7 @@
       "income_tax": -402000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.55,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -539,9 +635,9 @@
       ]
     }
   ],
-  "ttm_revenue": 50854000000.0,
-  "ttm_operating_income": 5714000000.0,
-  "ttm_net_income": 10065000000.0,
+  "ttm_revenue": 53687000000.0,
+  "ttm_operating_income": 6260000000.0,
+  "ttm_net_income": 8585000000.0,
   "segment_trend": {
     "Mobility": [
       {
@@ -567,6 +663,21 @@
       {
         "period": "2024Q3",
         "value": 6409000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 6496000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 7288000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 7682000000.0,
         "is_annual": false
       },
       {
@@ -617,6 +728,21 @@
         "is_annual": false
       },
       {
+        "period": "2025Q1",
+        "value": 3777000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4102000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 4477000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 5068000000.0,
         "is_annual": false
@@ -664,6 +790,21 @@
         "is_annual": false
       },
       {
+        "period": "2025Q1",
+        "value": 1260000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 1261000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1308000000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 1337000000.0,
         "is_annual": false
@@ -686,7 +827,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

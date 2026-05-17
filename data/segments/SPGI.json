@@ -287,6 +287,27 @@
     },
     {
       "ticker": "SPGI",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 3916000000.0,
+      "gross_profit": 2746000000.0,
+      "operating_income": 1404000000.0,
+      "net_income": 1134000000.0,
+      "rd_expense": null,
+      "sga_expense": 1045000000.0,
+      "cogs": 1170000000.0,
+      "interest_expense": 54000000.0,
+      "income_tax": 407000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "SPGI",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -787,9 +808,9 @@
       ]
     }
   ],
-  "ttm_revenue": 15591000000.0,
-  "ttm_operating_income": 6806000000.0,
-  "ttm_net_income": 5100000000.0,
+  "ttm_revenue": 15730000000.0,
+  "ttm_operating_income": 6632000000.0,
+  "ttm_net_income": 5063000000.0,
   "segment_trend": {
     "Market Intelligence": [
       {
@@ -1077,7 +1098,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

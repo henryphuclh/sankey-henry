@@ -379,6 +379,27 @@
     },
     {
       "ticker": "AAPL",
+      "period": "2025Q3",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 3,
+      "segments": [],
+      "total_revenue": 102466000000.0,
+      "gross_profit": 48341000000.0,
+      "operating_income": 32427000000.0,
+      "net_income": 27466000000.0,
+      "rd_expense": 8866000000.0,
+      "sga_expense": 7048000000.0,
+      "cogs": 54125000000.0,
+      "interest_expense": null,
+      "income_tax": 5338000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "AAPL",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -822,9 +843,9 @@
       ]
     }
   ],
-  "ttm_revenue": 444335000000.0,
-  "ttm_operating_income": 144528000000.0,
-  "ttm_net_income": 119889000000.0,
+  "ttm_revenue": 451442000000.0,
+  "ttm_operating_income": 147366000000.0,
+  "ttm_net_income": 122575000000.0,
   "segment_trend": {
     "iPhone": [
       {
@@ -1138,7 +1159,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

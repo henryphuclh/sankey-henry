@@ -408,6 +408,27 @@
     },
     {
       "ticker": "BRK-B",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 111442000000.0,
+      "gross_profit": 95526000000.0,
+      "operating_income": 24456000000.0,
+      "net_income": 19199000000.0,
+      "rd_expense": null,
+      "sga_expense": 9872000000.0,
+      "cogs": 15916000000.0,
+      "interest_expense": 1298000000.0,
+      "income_tax": 5189000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "BRK-B",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -646,6 +667,27 @@
       "notes": [
         "SECTOR_FALLBACK:standard"
       ]
+    },
+    {
+      "ticker": "BRK-B",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 101468000000.0,
+      "gross_profit": 86966000000.0,
+      "operating_income": 24025000000.0,
+      "net_income": 19694000000.0,
+      "rd_expense": null,
+      "sga_expense": 10215000000.0,
+      "cogs": 14502000000.0,
+      "interest_expense": 1440000000.0,
+      "income_tax": 4274000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
     },
     {
       "ticker": "BRK-B",
@@ -1053,9 +1095,9 @@
       ]
     }
   ],
-  "ttm_revenue": 370887000000.0,
-  "ttm_operating_income": 182185000000.0,
-  "ttm_net_income": 58172000000.0,
+  "ttm_revenue": 392604000000.0,
+  "ttm_operating_income": 163148000000.0,
+  "ttm_net_income": 72699000000.0,
   "segment_trend": {
     "Manufacturing Businesses": [
       {
@@ -1497,7 +1539,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 11,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

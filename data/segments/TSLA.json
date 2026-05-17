@@ -213,6 +213,27 @@
     },
     {
       "ticker": "TSLA",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 24901000000.0,
+      "gross_profit": 5009000000.0,
+      "operating_income": 1571000000.0,
+      "net_income": 840000000.0,
+      "rd_expense": 1783000000.0,
+      "sga_expense": 1655000000.0,
+      "cogs": 19892000000.0,
+      "interest_expense": 85000000.0,
+      "income_tax": 325000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "TSLA",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -590,9 +611,9 @@
       ]
     }
   ],
-  "ttm_revenue": 92313000000.0,
-  "ttm_operating_income": 3887000000.0,
-  "ttm_net_income": 3490000000.0,
+  "ttm_revenue": 97879000000.0,
+  "ttm_operating_income": 5059000000.0,
+  "ttm_net_income": 3910000000.0,
   "segment_trend": {
     "Automotive Segment": [
       {
@@ -780,7 +801,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

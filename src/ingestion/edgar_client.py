@@ -12,7 +12,6 @@ Key entry points:
     get_segment_note_text(obj)     -- short clean text of segment note (~5-20KB)
     pnl_from_filing_obj(obj)       -- dict of P&L metrics in absolute USD
 """
-#Trong Python, import nghĩa là mượn công cụ có sẵn.
 from __future__ import annotations
 
 import os
@@ -29,63 +28,60 @@ from src.cache.cache_manager import cache
 from src.extraction.models import FilingRecord
 
 
-_IDENTITY_SET = False #từ đầu mặc định là chưa đăng ksy danh tính với sec, Dấu gạch dưới ở đầu tên, Biến này chỉ nên dùng nội bộ trong file này.
+_IDENTITY_SET = False
 
-#def dùng để tạo function. Function là một khối code có tên, khi cần thì gọi.
-def set_identity_from_env() -> None: #none nghĩa là function này không trả về dữ liệu gì.
+
+def set_identity_from_env() -> None:
     """Register identity with SEC EDGAR (required by edgartools)."""
-    global _IDENTITY_SET #Tôi muốn chỉnh sửa biến _IDENTITY_SET ở bên ngoài function. Nếu không có dòng này, Python sẽ nghĩ _IDENTITY_SET là biến riêng bên trong function.
+    global _IDENTITY_SET
     if _IDENTITY_SET:
-        return #return dùng để kết thúc function.
+        return
     import edgar
-    edgar.set_identity(os.getenv("SEC_USER_AGENT") or SEC_USER_AGENT) #Thử lấy biến môi trường SEC_USER_AGENT, Gửi identity đó cho thư viện edgar.
-    _IDENTITY_SET = True #Sau khi set xong, đánh dấu là: Đã set identity rồi.
+    edgar.set_identity(os.getenv("SEC_USER_AGENT") or SEC_USER_AGENT)
+    _IDENTITY_SET = True
 
 
 # ── Company lookup (cached in-process) ────────────────────────────────────────
 
-@lru_cache(maxsize=128) #decorator, Nó giúp function nhớ lại kết quả cũ để lần sau chạy nhanh hơn.
-def get_company(ticker: str): #nghĩa là ticker nên là chuỗi.
+@lru_cache(maxsize=128)
+def get_company(ticker: str):
     """Return a cached edgar.Company object for a ticker."""
-    set_identity_from_env() #Trước khi lấy dữ liệu SEC, function đảm bảo đã set identity.
+    set_identity_from_env()
     from edgar import Company
-    return Company(ticker) #Tạo đối tượng đại diện cho công ty Apple trên SEC.
+    return Company(ticker)
 
 
 # ── Period helper ─────────────────────────────────────────────────────────────
 
-def _period_from_report_date(report_date_str: str, form: str) -> Tuple[str, bool, int, Optional[int]]: #Tuple giống list, nhưng thường dùng để gom nhiều giá trị cố định.
+def _period_from_report_date(report_date_str: str, form: str) -> Tuple[str, bool, int, Optional[int]]:
     """Return (period, is_annual, fiscal_year, fiscal_quarter) from an ISO date."""
-    is_annual = form in ("10-K", "20-F", "40-F") #Nếu form là 10-K hoặc 20-F thì đây là báo cáo năm, giá trị báo true, báo cáo quý giá trị báo false
-    try: #Đây là try / except: Thử chạy đoạn code này. Nếu lỗi thì xử lý ở phần except.
-        d  = date.fromisoformat(report_date_str[:10]) #sẽ biến chuỗi thành ngày tháng,lấy 10 ký tự đầu, 
-        fy = d.year #Nếu d là ngày 2025-09-27, thì: fy = 2025
-        m  = d.month#m=9
-        fq = (m - 1) // 3 + 1#(9-1)/3+1=2+1=3. fq là fiscal quarter
+    is_annual = form in ("10-K", "20-F", "40-F")
+    try:
+        d  = date.fromisoformat(report_date_str[:10])
+        fy = d.year
+        m  = d.month
+        fq = (m - 1) // 3 + 1
     except (ValueError, TypeError):
         return (f"FY{date.today().year}", is_annual, date.today().year, None)
 
     if is_annual:
-        return (f"FY{fy}", True, fy, None) #Nếu là báo cáo năm: ("FY2025", True, 2025, None)
-    return (f"{fy}Q{fq}", False, fy, fq) #Nếu là báo cáo quý: ("2025Q3", False, 2025, 3)
+        return (f"FY{fy}", True, fy, None)
+    return (f"{fy}Q{fq}", False, fy, fq)
 
 
 # ── Filings list ──────────────────────────────────────────────────────────────
 
-def get_filings( #Lấy danh sách báo cáo của một công ty trong vài năm gần đây.
-    ticker:     str, #Mã công ty.
-    form_types: List[str], #Danh sách loại báo cáo.["10-K", "10-Q"]
-    years_back: int = YEARS_BACK, #Nếu người dùng không truyền years_back, Python sẽ dùng giá trị mặc định YEARS_BACK.
+def get_filings(
+    ticker:     str,
+    form_types: List[str],
+    years_back: int = YEARS_BACK,
     cik:        Optional[str] = None,  # CIK fallback for tickers edgartools can't resolve by name
 ) -> List[FilingRecord]:
     """Return FilingRecord list for a ticker covering the last N years."""
-    cache_key = f"filings_list_{ticker}_{'_'.join(sorted(form_types))}" #Tạo tên cache
-    """form_types = ["10-Q", "10-K"] -> sorted(form_types) sẽ thành: ["10-K", "10-Q"]
-    '_'.join(["10-K", "10-Q"]) sẽ thành: '10-K_10-Q'
-    cache key có thể là: "filings_list_AAPL_10-K_10-Q"  """
+    cache_key = f"filings_list_{ticker}_{'_'.join(sorted(form_types))}"
     cached = cache.get("filings", cache_key)
     if cached:
-        return [FilingRecord(**r) for r in cached] #r là dictionary,Dấu ** dùng để bung dictionary thành các tham số.
+        return [FilingRecord(**r) for r in cached]
 
     # Prefer CIK when explicitly provided — avoids edgartools resolving the
     # wrong entity (e.g. BLK ticker → subsidiary CIK, suffixed tickers that
@@ -104,31 +100,30 @@ def get_filings( #Lấy danh sách báo cáo của một công ty trong vài nă
         except Exception:
             return []
 
-    start_date = date.today() - timedelta(days=years_back * 366) #Lấy ngày hôm nay trừ đi số năm cần lấy. 366 vì phòng năm nhuận
-    cik = str(company.cik).zfill(10) #CIK là mã định danh công ty trong SEC.
-    #zfill(10) nghĩa là thêm số 0 phía trước cho đủ 10 ký tự. "320193".zfill(10) -> "0000320193"
+    start_date = date.today() - timedelta(days=years_back * 366)
+    cik = str(company.cik).zfill(10)
 
-    records: List[FilingRecord] = [] #tạo danh sách rỗng để chứa kết quả.
-    for form in form_types: #nghĩa là chạy qua từng loại form. có form 10k và 10q thì sẽ chạy qua cả 2
+    records: List[FilingRecord] = []
+    for form in form_types:
         try:
             # amendments=False skips 10-K/A and 10-Q/A which often lack full XBRL data
             filings = company.get_filings(form=form, amendments=False)
         except Exception:
             try:
                 filings = company.get_filings(form=form)
-            except Exception: #Thử lấy danh sách báo cáo theo form. Nếu lỗi thì bỏ qua form này và chạy tiếp.
-                continue    #continue nghĩa là bỏ qua vòng hiện tại và sang vòng tiếp theo.
-        for f in filings: #Mỗi f là một báo cáo. kiểu cùng là 10k nhưng có 2025, 2024...
-            try:
-                fd = date.fromisoformat(str(f.filing_date)[:10]) #Lấy ngày nộp báo cáo. Nếu ngày lỗi thì bỏ qua filing đó.
             except Exception:
                 continue
-            if fd < start_date: #Nếu báo cáo quá cũ thì dừng vòng lặp, startdate mình set là 3 năm trước, fd mà còn trước cả 3 năm thì dừng
-                break  # filings list is newest-first, break nghĩa là thoát hẳn khỏi vòng lặp.
+        for f in filings:
+            try:
+                fd = date.fromisoformat(str(f.filing_date)[:10])
+            except Exception:
+                continue
+            if fd < start_date:
+                break  # filings list is newest-first
             period, is_annual, fy, fq = _period_from_report_date(
                 str(f.period_of_report or f.filing_date)[:10], form
             )
-            records.append(FilingRecord( #Nó tạo một object FilingRecord, chứa thông tin của một báo cáo.
+            records.append(FilingRecord(
                 ticker           = ticker,
                 form_type        = form,
                 period           = period,
@@ -643,13 +638,19 @@ def _clean_axis_members(
     """
     import math as _math
     members: List[Tuple[str, float]] = []
+    elimination_sum = 0.0
     for _, row in sub_df.iterrows():
         raw = row.get(latest_col)
         try:
             v = float(raw)
         except (TypeError, ValueError):
             continue
-        if v <= 0 or _math.isnan(v):
+        if _math.isnan(v):
+            continue
+        if v < 0:
+            elimination_sum += v
+            continue
+        if v == 0:
             continue
         name = _segment_display_name(row)
         if not name:
@@ -684,6 +685,17 @@ def _clean_axis_members(
     if total_revenue and total_revenue > 0:
         tol_hi = total_revenue * 1.15
         tol_lo = total_revenue * 0.85
+
+        # If inter-segment eliminations (negative rows) were present and their
+        # total explains the overage, apply proportional rescaling rather than
+        # dropping the largest member (which would be a real segment).
+        if elimination_sum < 0:
+            raw_sum = sum(v for _, v in members)
+            adjusted = raw_sum + elimination_sum
+            if tol_lo <= adjusted <= tol_hi and adjusted > 0:
+                scale = adjusted / raw_sum
+                return [(n, v * scale) for n, v in members]
+
         # Drop obvious subtotals (largest) until within tolerance
         guard = 0
         while len(members) > 2 and guard < 5:
@@ -813,172 +825,3 @@ def _segment_display_name(row) -> str:
     return ""
 
 
-def products_services_from_income_statement(
-    filing_obj,
-    total_revenue: Optional[float] = None,
-) -> List[Any]:
-    """Extract Products / Services split from the top-level income statement.
-
-    AAPL and similar companies report this split as top-level line items
-    (not as XBRL dimensions), so segments_from_xbrl_dimensions misses them.
-    Returns a list of SegmentValue, or [] if not found.
-    """
-    from src.extraction.models import SegmentValue
-
-    if filing_obj is None:
-        return []
-    try:
-        stmt = filing_obj.income_statement
-        df   = stmt.to_dataframe() if stmt is not None else None
-    except Exception:
-        return []
-    if df is None or df.empty:
-        return []
-
-    period_cols = [c for c in df.columns if _looks_like_period_col(c)]
-    if not period_cols:
-        return []
-    latest_col = period_cols[0]
-
-    # Look for rows labelled "Products" and "Services" (non-dimensional)
-    _PRODUCT_LABELS  = {"products", "product", "net product sales", "hardware"}
-    _SERVICE_LABELS  = {"services", "service", "net service sales", "software and services"}
-
-    label_col = "label" if "label" in df.columns else None
-    if label_col is None:
-        return []
-
-    result = []
-    is_dimensional = df.get("dimension", None)
-    for _, row in df.iterrows():
-        # Skip dimensioned rows (those belong to segment axes)
-        if is_dimensional is not None and row.get("dimension"):
-            continue
-        label = str(row.get(label_col) or "").strip().lower()
-        matched = None
-        if label in _PRODUCT_LABELS:
-            matched = "Products"
-        elif label in _SERVICE_LABELS:
-            matched = "Services"
-        if matched is None:
-            continue
-        raw = row.get(latest_col)
-        try:
-            v = float(raw)
-        except (TypeError, ValueError):
-            continue
-        if v <= 0:
-            continue
-        result.append(SegmentValue(
-            segment_name = matched,
-            value        = v,
-            unit         = "USD",
-            period       = str(latest_col),
-            concept      = "income_statement_line",
-            is_annual    = True,
-        ))
-
-    # Only return if we got both Products and Services
-    names = {s.segment_name for s in result}
-    if "Products" in names and "Services" in names:
-        return result
-    return []
-
-
-def product_segments_from_mda(
-    filing_obj,
-    period: str = "",
-    is_annual: bool = True,
-) -> List[Any]:
-    """Parse product revenue table from MD&A text (e.g. AAPL iPhone/Mac/iPad).
-
-    Finds the revenue table where iPhone appears at start of line followed by
-    a dollar amount, e.g.:
-        iPhone$209,586 4 %$201,183...
-        Mac33,708 12 %...
-    Returns [] if pattern not found or fewer than 3 products found.
-    """
-    import re as _re2
-    from src.extraction.models import SegmentValue
-
-    if filing_obj is None:
-        return []
-    mda = getattr(filing_obj, 'management_discussion', None)
-    if mda is None:
-        return []
-    mda_text = getattr(mda, 'text', None) or str(mda)
-    if not mda_text:
-        return []
-
-    mda_text = mda_text.replace('\xa0', ' ')
-
-    table_match = _re2.search(r'iPhone\s*(?:\(\d+\)\s*)?\$\s*\d{2,3},\d{3}', mda_text)
-    if not table_match:
-        table_match = _re2.search(r'iPhone\s+\d{2,3},\d{3}', mda_text)
-    if not table_match:
-        return []
-
-    block_start = max(0, table_match.start() - 10)
-    block = mda_text[block_start:block_start + 800]
-    block_norm = _re2.sub(r'\s*\(\d+\)\s*', ' ', block)
-    block_norm = _re2.sub(r'\n+', ' ', block_norm)
-
-    chunks = _re2.split(r'  +', block_norm)
-
-    _SKIP_WORDS = {'total', 'net sales', 'total net', '2025', '2024', '2023', '2022', '2021', 'change'}
-
-    results = []
-    for chunk in chunks:
-        chunk = chunk.strip()
-        nm = _re2.search(r'(\d{2,3},\d{3})', chunk)
-        if not nm:
-            continue
-        try:
-            val = float(nm.group(1).replace(',', '')) * 1_000_000
-        except ValueError:
-            continue
-        if val < 1_000_000_000:
-            continue
-        name = chunk[:nm.start()].rstrip('$ ').strip()
-        name = _re2.sub(r'\s*\(\d+\)\s*$', '', name).strip()
-        name = _re2.sub(r'^[\w]*\d{4}\s*', '', name).strip()
-        # Strip "Category: " or similar prefix before the actual name
-        if ':' in name:
-            name = name.split(':')[-1].strip()
-        if not name or any(s in name.lower() for s in _SKIP_WORDS):
-            continue
-        results.append(SegmentValue(
-            segment_name = name,
-            value        = val,
-            unit         = "USD",
-            period       = period,
-            concept      = "mda_table",
-            is_annual    = is_annual,
-        ))
-
-    if len(results) < 3:
-        return []
-    return results
-
-
-# ── Companyfacts (for TTM / cross-check) ──────────────────────────────────────
-
-def get_company_facts(ticker: str) -> Optional[Dict]:
-    """Return raw companyfacts dict via edgar.Company.facts. Cached 7 days."""
-    cached = cache.get("xbrl", f"facts_{ticker}")
-    if cached:
-        return cached
-    try:
-        company = get_company(ticker)
-        facts   = company.facts
-        # .facts is an EntityFacts object — convert to dict by attribute
-        # edgartools usually exposes .to_dict() or similar
-        if hasattr(facts, "to_dict"):
-            d = facts.to_dict()
-        else:
-            d = None
-        if d:
-            cache.set("xbrl", f"facts_{ticker}", d)
-        return d
-    except Exception:
-        return None

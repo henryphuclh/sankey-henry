@@ -3,7 +3,7 @@
 Flow:
 1. Parse filing with edgartools (TenK / TenQ / TwentyF).
 2a. Financial sector  → sector_handlers.financials.pnl_from_financial_filing()
-2b. Pharma sector     → sector_handlers.pharma.pnl_from_pharma_filing()
+2b. Pharma sector     → sector_handlers.standard.pnl_from_standard_filing() + has_pharma_indicators() check
 2c. Standard sector   → sector_handlers.standard.pnl_from_standard_filing()
 3. Detect geo-only XBRL → bypass XBRL, use LLM from Revenue/MD&A note.
 4. Find Segment note; feed to LLM if XBRL coverage < 70%.
@@ -12,6 +12,7 @@ Flow:
 """
 from __future__ import annotations
 
+import json
 from typing import Dict, List, Optional
 from pathlib import Path
 import sys
@@ -20,12 +21,9 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from config import (
     XBRL_COVERAGE_MIN, SEGMENT_MIN_PCT, SEGMENT_MIN_VALUE,
     SEGMENT_RESCALE_MIN, SEGMENT_RESCALE_MAX, REVENUE_WARN_DIFF,
-    BANK_NII_MIN_PCT, BANK_PROVISION_MAX_PCT, INSURANCE_CLAIMS_MAX_PCT,
 )
 from src.extraction.models import SegmentData, SegmentValue, FilingRecord, compute_confidence
-from src.extraction.llm_extractor import (
-    extract_segments, extract_segments_from_yahoo_summary,
-)
+from src.extraction.llm_extractor import extract_segments
 from src.ingestion.ticker_loader import TickerInfo
 from src.ingestion.edgar_client import (
     get_filing_obj, get_segment_note_text,
@@ -98,12 +96,14 @@ def extract_for_filing(
     filing:      FilingRecord,
     ticker_info: TickerInfo,
     revenue_map: Optional[Dict[str, Optional[float]]] = None,
+    yahoo_data:  Optional[Dict] = None,
     **_ignored,
 ) -> SegmentData:
     """Extract SegmentData for one filing using edgartools + LLM."""
-    ticker = ticker_info.ticker
-    period = filing.period
-    sector = ticker_info.sector
+    ticker      = ticker_info.ticker
+    period      = filing.period
+    sector      = ticker_info.sector
+    data_source = ticker_info.classification  # "US_SEC" | "INTL_SEC" | "INTL_YAHOO"
 
     known_rev = None
     if revenue_map:
@@ -121,38 +121,23 @@ def extract_for_filing(
         from src.extraction.sector_handlers.financials import (
             pnl_from_financial_filing, has_bank_indicators,
         )
-        pnl = pnl_from_financial_filing(obj)
+        pnl = pnl_from_financial_filing(obj, data_source=data_source)
         _check_rev = pnl.get("total_revenue")
         if _check_rev and not has_bank_indicators(pnl, _check_rev):
             from src.extraction.sector_handlers.standard import pnl_from_standard_filing
-            pnl = pnl_from_standard_filing(obj)
+            pnl = pnl_from_standard_filing(obj, data_source=data_source)
             _effective_sector = "standard"
             _is_financial = False
     elif _sector_lower == "pharma":
-        from src.extraction.sector_handlers.pharma import (
-            pnl_from_pharma_filing, has_pharma_indicators,
-        )
-        pnl = pnl_from_pharma_filing(obj)
+        from src.extraction.sector_handlers.standard import pnl_from_standard_filing
+        from src.extraction.sector_handlers.pharma import has_pharma_indicators, is_too_granular, strip_product_level_from_llm
+        pnl = pnl_from_standard_filing(obj, data_source=data_source)
         _check_rev = pnl.get("total_revenue")
         if _check_rev and not has_pharma_indicators(pnl, _check_rev):
-            from src.extraction.sector_handlers.standard import pnl_from_standard_filing
-            pnl = pnl_from_standard_filing(obj)
             _effective_sector = "standard"
     else:
         from src.extraction.sector_handlers.standard import pnl_from_standard_filing
-        pnl = pnl_from_standard_filing(obj)
-
-    # Companyfacts fallback when edgartools returns no total_revenue
-    if pnl.get("total_revenue") is None and obj is not None:
-        try:
-            from src.ingestion.edgar_client import pnl_from_companyfacts
-            cf_pnl = pnl_from_companyfacts(ticker)
-            if cf_pnl.get("total_revenue"):
-                for k, v in cf_pnl.items():
-                    if v is not None and pnl.get(k) is None:
-                        pnl[k] = v
-        except Exception:
-            pass
+        pnl = pnl_from_standard_filing(obj, data_source=data_source)
 
     total_rev = pnl.get("total_revenue") or known_rev
 
@@ -177,7 +162,9 @@ def extract_for_filing(
     if segments and total_rev and not geo_only:
         xbrl_coverage = sum(s.value for s in segments if s.value) / total_rev
 
-    use_llm = geo_only or (not segments) or (xbrl_coverage < XBRL_COVERAGE_MIN)
+    _pharma_too_granular = _sector_lower == "pharma" and not geo_only and is_too_granular(segments)
+
+    use_llm = geo_only or (not segments) or (xbrl_coverage < XBRL_COVERAGE_MIN) or _pharma_too_granular
 
     if use_llm:
         if geo_only:
@@ -196,6 +183,8 @@ def extract_for_filing(
             )
             if llm_segs:
                 llm_segs = _strip_geo_from_llm(llm_segs)
+                if _sector_lower == "pharma":
+                    llm_segs = strip_product_level_from_llm(llm_segs)
                 llm_sum = sum(s.value for s in llm_segs)
                 llm_cov = llm_sum / total_rev if total_rev else 0
                 if geo_only or not segments or llm_cov > xbrl_coverage:
@@ -241,6 +230,19 @@ def extract_for_filing(
         if geo_only and segments and _is_geo_only(segments):
             segments = []
 
+    # Currency scaling: INTL_SEC companies that file in a non-USD currency
+    # (e.g. TSM=TWD, TM/6758.T/8306.T=JPY, NOVO-B.CO=DKK, 9988.HK=CNY/HKD).
+    # Scale factor = yahoo_revenue_usd / xbrl_revenue_native, which implicitly
+    # captures the period-average FX rate without a separate API call.
+    if data_source == "INTL_SEC" and total_rev and known_rev:
+        _fx_scale = _detect_currency_scale(total_rev, known_rev)
+        if _fx_scale is not None:
+            pnl      = _scale_pnl_to_usd(pnl, _fx_scale)
+            for s in segments:
+                if s.value:
+                    s.value *= _fx_scale
+            total_rev = pnl.get("total_revenue")
+
     sd = _build_segment_data(
         ticker    = ticker,
         period    = period,
@@ -276,11 +278,12 @@ def extract_for_filing(
 
 
 def extract_for_yahoo_only(
-    ticker_info: TickerInfo,
-    period:      str,
-    yahoo_data:  Dict,
-    is_annual:   bool = True,
-    fiscal_year: Optional[int] = None,
+    ticker_info:    TickerInfo,
+    period:         str,
+    yahoo_data:     Dict,
+    is_annual:      bool = True,
+    fiscal_year:    Optional[int] = None,
+    yahoo_date_key: Optional[str] = None,
 ) -> SegmentData:
     """INTL_YAHOO path: no SEC filing — use Yahoo data + LLM for segments."""
     ticker   = ticker_info.ticker
@@ -288,7 +291,7 @@ def extract_for_yahoo_only(
     fy       = fiscal_year or (int(period[2:6]) if period.startswith("FY") else int(period[:4]))
     usd_rate = yahoo_data.get("usd_rate", 1.0)
 
-    pnl      = _pnl_from_yahoo(yahoo_data, period, is_annual, usd_rate)
+    pnl      = _pnl_from_yahoo(yahoo_data, period, is_annual, usd_rate, date_key=yahoo_date_key)
     _sector_lower_y  = (sector or "").lower()
     _effective_sector_y = _sector_lower_y
 
@@ -335,8 +338,6 @@ def extract_for_yahoo_only(
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
-
-import json  # noqa: E402 (needed here for expense_detail serialisation)
 
 
 def _get_product_note_text(filing_obj) -> Optional[str]:
@@ -419,6 +420,31 @@ def _build_segment_data(
     )
 
 
+def _detect_currency_scale(xbrl_rev: float, yahoo_rev_usd: float) -> Optional[float]:
+    """Return USD scale factor when XBRL values are in a non-USD currency.
+
+    Triggered when xbrl/yahoo ratio > 2 (JPY ~150x, TWD ~32x, DKK ~7x, CNY ~7x).
+    Scale = yahoo_rev_usd / xbrl_rev_native, which equals 1/fx_rate implicitly.
+    """
+    if xbrl_rev <= 0 or yahoo_rev_usd <= 0:
+        return None
+    if xbrl_rev / yahoo_rev_usd < 2.0:
+        return None
+    return yahoo_rev_usd / xbrl_rev
+
+
+def _scale_pnl_to_usd(pnl: Dict, scale: float) -> Dict:
+    """Multiply all monetary P&L fields by scale (native currency → USD)."""
+    _MONETARY = frozenset({
+        "total_revenue", "gross_profit", "operating_income", "net_income",
+        "cogs", "rd_expense", "sga_expense", "interest_expense", "income_tax",
+    })
+    return {
+        k: (v * scale if k in _MONETARY and isinstance(v, (int, float)) else v)
+        for k, v in pnl.items()
+    }
+
+
 def _rescale_segments_if_needed(sd: SegmentData) -> None:
     """Rescale segment values to match total_revenue if off by more than 25%."""
     if not sd.total_revenue or abs(sd.total_revenue) < 1e6 or not sd.segments:
@@ -436,102 +462,103 @@ def _rescale_segments_if_needed(sd: SegmentData) -> None:
 
 def _pnl_from_yahoo(
     yahoo_data: Dict, period: str, is_annual: bool, usd_rate: float,
+    date_key: Optional[str] = None,
 ) -> Dict:
-    key    = "annual_income" if is_annual else "quarterly_income"
-    src    = yahoo_data.get(key, {}) or {}
+    from src.extraction.sector_handlers.financials import pnl_fields_for_yahoo_financial
+
+    key = "annual_income" if is_annual else "quarterly_income"
+    src = yahoo_data.get(key, {}) or {}
     if not src:
         return {"currency": yahoo_data.get("currency", "USD")}
-    latest = src[sorted(src.keys(), reverse=True)[0]]
+    row = src[date_key] if (date_key and date_key in src) else src[sorted(src.keys(), reverse=True)[0]]
 
     def _m(k):
-        v = latest.get(k)
+        v = row.get(k)
         return v * usd_rate if v is not None else None
 
     total_revenue = _m("Total Revenue")
-
-    # ── Insurance-specific Yahoo Finance line items ───────────────────────────
-    # Insurance companies (Allianz, AIG, Zurich) expose policyholder benefits
-    # as COGS.  Map them to cogs/gross_profit before bank logic overrides.
-    insurance_claims = (
-        _m("Net Policyholder Benefits And Claims") or
-        _m("Policyholder Benefits And Claims") or
-        _m("Total Policy Holder Benefits") or
-        _m("Policy Holder Benefits")
-    )
-    ins_cogs_slot = None
-    ins_gp_slot   = None
-    if insurance_claims and total_revenue and 0 < insurance_claims < total_revenue * INSURANCE_CLAIMS_MAX_PCT:
-        ins_cogs_slot = insurance_claims
-        ins_gp_slot   = total_revenue - insurance_claims
-
-    # ── Bank-specific Yahoo Finance line items ────────────────────────────────
-    # yfinance exposes dedicated bank income statement fields that map directly
-    # to the bank P&L structure when present.
-    bank_provision = (
-        _m("Provision For Loan Losses") or
-        _m("Provision For Credit Losses") or
-        _m("Provision For Doubtful Accounts") or
-        _m("Credit Loss Provision")
-    )
-    bank_nii    = _m("Net Interest Income")
-    # Only treat as a bank (NII-driven) when NII is a significant positive value
-    # (> 5% of revenue).  Insurance companies often have small/negative "Net
-    # Interest Income" from investment portfolios — don't confuse them with banks.
-    _nii_is_bank = (
-        bank_nii is not None and bank_nii > 0
-        and total_revenue and bank_nii > total_revenue * BANK_NII_MIN_PCT
-    )
-    bank_nonint = _m("Non Interest Income") or _m("Net Non Interest Income")
-    bank_nie = (
-        _m("Non Interest Expense") or
-        _m("Total Non Interest Expense") or
-        _m("Non-Interest Expense") or
-        # HSBC and some European banks report total NIE as "Operating Expense"
-        (_m("Operating Expense") if _nii_is_bank else None)
-    )
-
-    # Derive Non-Interest Income when NII is known but the split isn't explicit
-    if _nii_is_bank and bank_nonint is None and total_revenue is not None:
-        implied_nonint = total_revenue - bank_nii
-        if 0 < implied_nonint < total_revenue:
-            bank_nonint = implied_nonint
-
-    # interest_expense slot: prefer bank provision when it's reasonable (< 15%),
-    # otherwise discard the gross interest expense which banks report separately.
-    raw_ie = _m("Interest Expense")
-    if bank_provision is not None and total_revenue and 0 < bank_provision < total_revenue * BANK_PROVISION_MAX_PCT:
-        ie_slot = bank_provision
-    elif raw_ie is not None and total_revenue and raw_ie < total_revenue * BANK_PROVISION_MAX_PCT:
-        ie_slot = raw_ie
-    else:
-        ie_slot = None   # gross interest expense >> provision; don't misuse as provision
-
-    # sga_expense slot: prefer bank NIE field over generic SG&A
-    sga_raw = _m("Selling General And Administration")
-    if bank_nie is not None and total_revenue and 0 < bank_nie < total_revenue:
-        sga_slot = bank_nie
-    else:
-        sga_slot = sga_raw
-
-    # operating_income: banks expose "Pretax Income" rather than "Operating Income"
-    raw_op      = _m("Operating Income")
-    bank_pretax = _m("Pretax Income") if _nii_is_bank else None
-    # Fallback: use Pretax Income or EBIT when Operating Income is not available
-    op_slot = raw_op or bank_pretax or _m("Pretax Income") or _m("EBIT")
+    fin = pnl_fields_for_yahoo_financial(_m, total_revenue)
 
     return {
         "total_revenue":    total_revenue,
-        # Insurance cogs/gp override standard "Cost Of Revenue" / "Gross Profit"
-        "gross_profit":     ins_gp_slot   or _m("Gross Profit"),
-        "operating_income": op_slot,
+        "gross_profit":     fin["gross_profit"],
+        "operating_income": fin["operating_income"],
         "net_income":       _m("Net Income"),
-        "cogs":             ins_cogs_slot or _m("Cost Of Revenue"),
+        "cogs":             fin["cogs"],
         "rd_expense":       _m("Research And Development"),
-        "sga_expense":      sga_slot,
-        "interest_expense": ie_slot,
+        "sga_expense":      fin["sga_expense"],
+        "interest_expense": fin["interest_expense"],
         "income_tax":       _m("Tax Provision"),
         "currency":         "USD",
-        # Bank extras — stored in notes by extract_for_yahoo_only for Sankey
-        "bank_nii":         bank_nii if _nii_is_bank else None,
-        "bank_nonint":      bank_nonint,
+        "bank_nii":         fin["bank_nii"],
+        "bank_nonint":      fin["bank_nonint"],
     }
+
+
+# ---------------------------------------------------------------------------
+# Quarterly gap-filling (US_SEC only)
+# ---------------------------------------------------------------------------
+
+def fill_quarterly_gaps_from_yahoo(
+    all_sds:     "List[SegmentData]",
+    yahoo_data:  Dict,
+    ticker_info: "TickerInfo",
+) -> "List[SegmentData]":
+    """Fill missing quarterly P&L periods for US_SEC companies from Yahoo Finance.
+
+    edgartools labels 10-Q periods by the calendar quarter of the period-end
+    date ({year}Q{cal_quarter}).  For companies whose fiscal year does not end
+    in December, the standalone fiscal-year-end quarter has no 10-Q filing
+    (it lives inside the 10-K).  Yahoo Finance provides all four calendar
+    quarters as standalone rows, so we use it to fill the gap.
+
+    Logic: for every Yahoo quarterly date not already covered by a period
+    label in all_sds, create a P&L-only SegmentData (segments=[]) using the
+    same {year}Q{cal_quarter} convention as edgartools.
+    """
+    import pandas as pd
+    from config import QUARTERS_BACK
+
+    qtr_income = (yahoo_data or {}).get("quarterly_income") or {}
+    if not qtr_income:
+        return []
+
+    usd_rate = yahoo_data.get("usd_rate", 1.0)
+    existing_periods = {sd.period for sd in all_sds}
+
+    gap_fills: List[SegmentData] = []
+
+    for date_str in sorted(qtr_income.keys(), reverse=True)[:QUARTERS_BACK]:
+        try:
+            d    = pd.Timestamp(date_str)
+            cal_q = (d.month - 1) // 3 + 1
+            period = f"{d.year}Q{cal_q}"
+        except Exception:
+            continue
+
+        if period in existing_periods:
+            continue
+
+        pnl = _pnl_from_yahoo(
+            yahoo_data, period, is_annual=False,
+            usd_rate=usd_rate, date_key=date_str,
+        )
+        if not pnl.get("total_revenue"):
+            continue
+
+        sd = _build_segment_data(
+            ticker    = ticker_info.ticker,
+            period    = period,
+            is_annual = False,
+            fy        = d.year,
+            fq        = cal_q,
+            pnl       = pnl,
+            segments  = [],
+            method    = "yahoo_quarterly",
+        )
+        sd.confidence = compute_confidence(sd)
+        gap_fills.append(sd)
+
+    return gap_fills
+
+

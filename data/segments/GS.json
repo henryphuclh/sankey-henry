@@ -247,6 +247,27 @@
     },
     {
       "ticker": "GS",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 13454000000.0,
+      "gross_profit": null,
+      "operating_income": 5855000000.0,
+      "net_income": 4617000000.0,
+      "rd_expense": null,
+      "sga_expense": 4881000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1238000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "GS",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -635,9 +656,9 @@
       ]
     }
   ],
-  "ttm_revenue": 62056000000.0,
-  "ttm_operating_income": 22483000000.0,
-  "ttm_net_income": 18189000000.0,
+  "ttm_revenue": 60448000000.0,
+  "ttm_operating_income": 22691000000.0,
+  "ttm_net_income": 18068000000.0,
   "segment_trend": {
     "Global Banking & Markets": [
       {
@@ -827,7 +848,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

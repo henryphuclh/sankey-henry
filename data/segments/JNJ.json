@@ -197,6 +197,27 @@
     },
     {
       "ticker": "JNJ",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 24564000000.0,
+      "gross_profit": 16596000000.0,
+      "operating_income": 5591000000.0,
+      "net_income": 5116000000.0,
+      "rd_expense": 4252000000.0,
+      "sga_expense": 6753000000.0,
+      "cogs": 7968000000.0,
+      "interest_expense": 214000000.0,
+      "income_tax": -150000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "JNJ",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -518,9 +539,9 @@
       ]
     }
   ],
-  "ttm_revenue": 93691000000.0,
-  "ttm_operating_income": 26400000000.0,
-  "ttm_net_income": 26923000000.0,
+  "ttm_revenue": 96362000000.0,
+  "ttm_operating_income": 25792000000.0,
+  "ttm_net_income": 21040000000.0,
   "segment_trend": {
     "CONSUMER HEALTH": [
       {
@@ -657,7 +678,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

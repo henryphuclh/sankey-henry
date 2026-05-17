@@ -269,6 +269,27 @@
     },
     {
       "ticker": "XOM",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 80039000000.0,
+      "gross_profit": 15974000000.0,
+      "operating_income": 6003000000.0,
+      "net_income": 6501000000.0,
+      "rd_expense": null,
+      "sga_expense": 3028000000.0,
+      "cogs": 64065000000.0,
+      "interest_expense": 163000000.0,
+      "income_tax": 1422000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "XOM",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -870,9 +891,9 @@
       ]
     }
   ],
-  "ttm_revenue": 335068000000.0,
-  "ttm_operating_income": 40939000000.0,
-  "ttm_net_income": 27627000000.0,
+  "ttm_revenue": 331977000000.0,
+  "ttm_operating_income": 35137000000.0,
+  "ttm_net_income": 26095000000.0,
   "segment_trend": {
     "Upstream - United States": [
       {
@@ -1257,7 +1278,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

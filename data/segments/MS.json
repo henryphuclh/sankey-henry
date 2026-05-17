@@ -247,6 +247,27 @@
     },
     {
       "ticker": "MS",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 16762000000.0,
+      "gross_profit": null,
+      "operating_income": 5760000000.0,
+      "net_income": 4397000000.0,
+      "rd_expense": null,
+      "sga_expense": 7277000000.0,
+      "cogs": null,
+      "interest_expense": null,
+      "income_tax": 1336000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "MS",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -635,9 +656,9 @@
       ]
     }
   ],
-  "ttm_revenue": 73335000000.0,
-  "ttm_operating_income": 23205000000.0,
-  "ttm_net_income": 18239000000.0,
+  "ttm_revenue": 72358000000.0,
+  "ttm_operating_income": 23421000000.0,
+  "ttm_net_income": 18265000000.0,
   "segment_trend": {
     "IS": [
       {
@@ -839,7 +860,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

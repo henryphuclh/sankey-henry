@@ -168,7 +168,7 @@
       "segments": [
         {
           "segment_name": "Immunology",
-          "value": 30962000000.0,
+          "value": 26783368518.035103,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -176,7 +176,7 @@
         },
         {
           "segment_name": "Oncology",
-          "value": 10309000000.0,
+          "value": 8917697372.664036,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -184,7 +184,7 @@
         },
         {
           "segment_name": "Aesthetics",
-          "value": 5176000000.0,
+          "value": 4477447046.358429,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -192,7 +192,7 @@
         },
         {
           "segment_name": "Neuroscience",
-          "value": 10361000000.0,
+          "value": 8962679452.727915,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -200,7 +200,7 @@
         },
         {
           "segment_name": "Eye Care",
-          "value": 2018000000.0,
+          "value": 1745650722.4790013,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -208,7 +208,7 @@
         },
         {
           "segment_name": "Other Key Products",
-          "value": 3265000000.0,
+          "value": 2824355604.0108714,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -216,7 +216,7 @@
         },
         {
           "segment_name": "All other",
-          "value": 3032000000.0,
+          "value": 2622801283.724644,
           "unit": "MILLIONS",
           "period": "FY2024",
           "concept": "llm_extracted",
@@ -231,7 +231,7 @@
       "sga_expense": 14752000000.0,
       "cogs": 16904000000.0,
       "interest_expense": null,
-      "income_tax": -570000000.0,
+      "income_tax": 570000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
       "confidence": 1.0,
@@ -326,7 +326,7 @@
       "segments": [
         {
           "segment_name": "Immunology",
-          "value": 10490000000.0,
+          "value": 8578412646.497683,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -334,7 +334,7 @@
         },
         {
           "segment_name": "Neuroscience",
-          "value": 3070000000.0,
+          "value": 2510555464.704279,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -342,7 +342,7 @@
         },
         {
           "segment_name": "Oncology",
-          "value": 1940000000.0,
+          "value": 1586474788.7707822,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -350,7 +350,7 @@
         },
         {
           "segment_name": "Aesthetics",
-          "value": 1186000000.0,
+          "value": 969875824.4753338,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -358,7 +358,7 @@
         },
         {
           "segment_name": "Other Key Products",
-          "value": 634000000.0,
+          "value": 518466503.134369,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -366,7 +366,7 @@
         },
         {
           "segment_name": "All other",
-          "value": 1025000000.0,
+          "value": 838214772.4175525,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -385,6 +385,27 @@
       "currency": "USD",
       "extraction_method": "edgar+llm",
       "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "ABBV",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 16618000000.0,
+      "gross_profit": 12066000000.0,
+      "operating_income": 5809000000.0,
+      "net_income": 1816000000.0,
+      "rd_expense": 2579000000.0,
+      "sga_expense": 3895000000.0,
+      "cogs": 4552000000.0,
+      "interest_expense": 714000000.0,
+      "income_tax": 853000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
       "notes": []
     },
     {
@@ -559,6 +580,27 @@
     },
     {
       "ticker": "ABBV",
+      "period": "2024Q4",
+      "is_annual": false,
+      "fiscal_year": 2024,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 15102000000.0,
+      "gross_profit": 10706000000.0,
+      "operating_income": 84000000.0,
+      "net_income": -22000000.0,
+      "rd_expense": 6774000000.0,
+      "sga_expense": 3855000000.0,
+      "cogs": 4396000000.0,
+      "interest_expense": 702000000.0,
+      "income_tax": -2246000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "ABBV",
       "period": "2024Q3",
       "is_annual": false,
       "fiscal_year": 2024,
@@ -638,7 +680,7 @@
       "segments": [
         {
           "segment_name": "Immunology",
-          "value": 5814000000.0,
+          "value": 5073742939.898623,
           "unit": "MILLIONS",
           "period": "2024Q2",
           "concept": "llm_extracted",
@@ -646,7 +688,7 @@
         },
         {
           "segment_name": "Oncology",
-          "value": 1954000000.0,
+          "value": 1705210475.5008447,
           "unit": "MILLIONS",
           "period": "2024Q2",
           "concept": "llm_extracted",
@@ -654,7 +696,7 @@
         },
         {
           "segment_name": "Aesthetics",
-          "value": 2638000000.0,
+          "value": 2302121409.606565,
           "unit": "MILLIONS",
           "period": "2024Q2",
           "concept": "llm_extracted",
@@ -662,7 +704,7 @@
         },
         {
           "segment_name": "Neuroscience",
-          "value": 3070000000.0,
+          "value": 2679117789.041757,
           "unit": "MILLIONS",
           "period": "2024Q2",
           "concept": "llm_extracted",
@@ -670,7 +712,7 @@
         },
         {
           "segment_name": "Eye Care",
-          "value": 1080000000.0,
+          "value": 942490948.5879797,
           "unit": "MILLIONS",
           "period": "2024Q2",
           "concept": "llm_extracted",
@@ -678,7 +720,7 @@
         },
         {
           "segment_name": "Other Key Products",
-          "value": 1206000000.0,
+          "value": 1052448225.923244,
           "unit": "MILLIONS",
           "period": "2024Q2",
           "concept": "llm_extracted",
@@ -686,7 +728,7 @@
         },
         {
           "segment_name": "All other",
-          "value": 810000000.0,
+          "value": 706868211.4409847,
           "unit": "MILLIONS",
           "period": "2024Q2",
           "concept": "llm_extracted",
@@ -812,24 +854,8 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "United States",
-          "value": 9550362653.608057,
-          "unit": "MILLIONS",
-          "period": "2023Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "International",
-          "value": 819883581.2621269,
-          "unit": "MILLIONS",
-          "period": "2023Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
           "segment_name": "Qulipta",
-          "value": 207533031.50697586,
+          "value": 823361436.9501466,
           "unit": "MILLIONS",
           "period": "2023Q2",
           "concept": "llm_extracted",
@@ -837,7 +863,7 @@
         },
         {
           "segment_name": "Other Neuroscience",
-          "value": 190879146.26258892,
+          "value": 757289222.8739002,
           "unit": "MILLIONS",
           "period": "2023Q2",
           "concept": "llm_extracted",
@@ -845,7 +871,7 @@
         },
         {
           "segment_name": "Eye Care",
-          "value": 299769934.3989651,
+          "value": 1189299853.372434,
           "unit": "MILLIONS",
           "period": "2023Q2",
           "concept": "llm_extracted",
@@ -853,7 +879,7 @@
         },
         {
           "segment_name": "Other Key Products",
-          "value": 962082139.887277,
+          "value": 3816940982.4046917,
           "unit": "MILLIONS",
           "period": "2023Q2",
           "concept": "llm_extracted",
@@ -861,7 +887,7 @@
         },
         {
           "segment_name": "All other",
-          "value": 1834489513.074009,
+          "value": 7278108504.398827,
           "unit": "MILLIONS",
           "period": "2023Q2",
           "concept": "llm_extracted",
@@ -885,42 +911,28 @@
       ]
     }
   ],
-  "ttm_revenue": 59544000000.0,
-  "ttm_operating_income": 14521000000.0,
-  "ttm_net_income": 3115000000.0,
+  "ttm_revenue": 62819000000.0,
+  "ttm_operating_income": 16597000000.0,
+  "ttm_net_income": 3642000000.0,
   "segment_trend": {
-    "United States": [
-      {
-        "period": "2023Q2",
-        "value": 9550362653.608057,
-        "is_annual": false
-      }
-    ],
-    "International": [
-      {
-        "period": "2023Q2",
-        "value": 819883581.2621269,
-        "is_annual": false
-      }
-    ],
     "Qulipta": [
       {
         "period": "2023Q2",
-        "value": 207533031.50697586,
+        "value": 823361436.9501466,
         "is_annual": false
       }
     ],
     "Other Neuroscience": [
       {
         "period": "2023Q2",
-        "value": 190879146.26258892,
+        "value": 757289222.8739002,
         "is_annual": false
       }
     ],
     "Eye Care": [
       {
         "period": "2023Q2",
-        "value": 299769934.3989651,
+        "value": 1189299853.372434,
         "is_annual": false
       },
       {
@@ -930,7 +942,7 @@
       },
       {
         "period": "2024Q2",
-        "value": 1080000000.0,
+        "value": 942490948.5879797,
         "is_annual": false
       },
       {
@@ -955,7 +967,7 @@
       },
       {
         "period": "FY2024",
-        "value": 2018000000.0,
+        "value": 1745650722.4790013,
         "is_annual": true
       },
       {
@@ -967,7 +979,7 @@
     "Other Key Products": [
       {
         "period": "2023Q2",
-        "value": 962082139.887277,
+        "value": 3816940982.4046917,
         "is_annual": false
       },
       {
@@ -977,7 +989,7 @@
       },
       {
         "period": "2024Q2",
-        "value": 1206000000.0,
+        "value": 1052448225.923244,
         "is_annual": false
       },
       {
@@ -997,7 +1009,7 @@
       },
       {
         "period": "2026Q1",
-        "value": 634000000.0,
+        "value": 518466503.134369,
         "is_annual": false
       },
       {
@@ -1007,7 +1019,7 @@
       },
       {
         "period": "FY2024",
-        "value": 3265000000.0,
+        "value": 2824355604.0108714,
         "is_annual": true
       },
       {
@@ -1019,12 +1031,12 @@
     "All other": [
       {
         "period": "2023Q2",
-        "value": 1834489513.074009,
+        "value": 7278108504.398827,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 810000000.0,
+        "value": 706868211.4409847,
         "is_annual": false
       },
       {
@@ -1044,7 +1056,7 @@
       },
       {
         "period": "2026Q1",
-        "value": 1025000000.0,
+        "value": 838214772.4175525,
         "is_annual": false
       },
       {
@@ -1054,7 +1066,7 @@
       },
       {
         "period": "FY2024",
-        "value": 3032000000.0,
+        "value": 2622801283.724644,
         "is_annual": true
       },
       {
@@ -1071,7 +1083,7 @@
       },
       {
         "period": "2024Q2",
-        "value": 5814000000.0,
+        "value": 5073742939.898623,
         "is_annual": false
       },
       {
@@ -1086,7 +1098,7 @@
       },
       {
         "period": "2026Q1",
-        "value": 10490000000.0,
+        "value": 8578412646.497683,
         "is_annual": false
       },
       {
@@ -1096,7 +1108,7 @@
       },
       {
         "period": "FY2024",
-        "value": 30962000000.0,
+        "value": 26783368518.035103,
         "is_annual": true
       },
       {
@@ -1113,7 +1125,7 @@
       },
       {
         "period": "2024Q2",
-        "value": 1954000000.0,
+        "value": 1705210475.5008447,
         "is_annual": false
       },
       {
@@ -1133,7 +1145,7 @@
       },
       {
         "period": "2026Q1",
-        "value": 1940000000.0,
+        "value": 1586474788.7707822,
         "is_annual": false
       },
       {
@@ -1143,7 +1155,7 @@
       },
       {
         "period": "FY2024",
-        "value": 10309000000.0,
+        "value": 8917697372.664036,
         "is_annual": true
       },
       {
@@ -1160,7 +1172,7 @@
       },
       {
         "period": "2024Q2",
-        "value": 2638000000.0,
+        "value": 2302121409.606565,
         "is_annual": false
       },
       {
@@ -1180,7 +1192,7 @@
       },
       {
         "period": "2026Q1",
-        "value": 1186000000.0,
+        "value": 969875824.4753338,
         "is_annual": false
       },
       {
@@ -1190,7 +1202,7 @@
       },
       {
         "period": "FY2024",
-        "value": 5176000000.0,
+        "value": 4477447046.358429,
         "is_annual": true
       },
       {
@@ -1207,7 +1219,7 @@
       },
       {
         "period": "2024Q2",
-        "value": 3070000000.0,
+        "value": 2679117789.041757,
         "is_annual": false
       },
       {
@@ -1222,7 +1234,7 @@
       },
       {
         "period": "2026Q1",
-        "value": 3070000000.0,
+        "value": 2510555464.704279,
         "is_annual": false
       },
       {
@@ -1232,7 +1244,7 @@
       },
       {
         "period": "FY2024",
-        "value": 10361000000.0,
+        "value": 8962679452.727915,
         "is_annual": true
       },
       {
@@ -1243,7 +1255,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 11,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

@@ -765,6 +765,27 @@
     },
     {
       "ticker": "AMGN",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 9866000000.0,
+      "gross_profit": 6890000000.0,
+      "operating_income": 2720000000.0,
+      "net_income": 1333000000.0,
+      "rd_expense": 2142000000.0,
+      "sga_expense": 1952000000.0,
+      "cogs": 2976000000.0,
+      "interest_expense": 653000000.0,
+      "income_tax": 181000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "AMGN",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -1918,9 +1939,9 @@
       ]
     }
   ],
-  "ttm_revenue": 35503000000.0,
-  "ttm_operating_income": 9026000000.0,
-  "ttm_net_income": 8197000000.0,
+  "ttm_revenue": 37220000000.0,
+  "ttm_operating_income": 10568000000.0,
+  "ttm_net_income": 7800000000.0,
   "segment_trend": {
     "Prolia": [
       {
@@ -2894,7 +2915,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

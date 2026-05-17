@@ -165,12 +165,20 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "FPL",
-          "value": 6582000000.0,
-          "unit": "MILLIONS",
-          "period": "2026Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Florida Power & Light Company",
+          "value": 4271000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "NEER Segment",
+          "value": 2311000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 6701000000.0,
@@ -183,8 +191,29 @@
       "interest_expense": null,
       "income_tax": -489000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
-      "confidence": 0.84,
+      "extraction_method": "xbrl",
+      "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "NEE",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 6500000000.0,
+      "gross_profit": 3731000000.0,
+      "operating_income": 1523000000.0,
+      "net_income": 1535000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 2769000000.0,
+      "interest_expense": 585000000.0,
+      "income_tax": 225000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
       "notes": []
     },
     {
@@ -271,20 +300,20 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "FPL",
+          "segment_name": "Florida Power & Light Company",
           "value": 3997000000.0,
-          "unit": "MILLIONS",
-          "period": "2025Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
-          "segment_name": "NEER",
+          "segment_name": "NEER Segment",
           "value": 2163000000.0,
-          "unit": "MILLIONS",
-          "period": "2025Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 6247000000.0,
@@ -297,7 +326,7 @@
       "interest_expense": null,
       "income_tax": -521000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": []
     },
@@ -389,12 +418,12 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "NEER Segment",
+          "segment_name": "FPL",
           "value": 5731000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 5731000000.0,
@@ -407,7 +436,7 @@
       "interest_expense": null,
       "income_tax": 227000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 0.84,
       "notes": [
         "Warning: total_revenue (5731000000) differs from Yahoo (24753000000) by 76.8%"
@@ -494,9 +523,9 @@
       ]
     }
   ],
-  "ttm_revenue": 27614000000.0,
-  "ttm_operating_income": 8902000000.0,
-  "ttm_net_income": 7481000000.0,
+  "ttm_revenue": 27867000000.0,
+  "ttm_operating_income": 8169000000.0,
+  "ttm_net_income": 8183000000.0,
   "segment_trend": {
     "FPL Segment": [
       {
@@ -532,11 +561,6 @@
         "is_annual": false
       },
       {
-        "period": "2024Q1",
-        "value": 5731000000.0,
-        "is_annual": false
-      },
-      {
         "period": "2024Q2",
         "value": 1645000000.0,
         "is_annual": false
@@ -544,6 +568,11 @@
       {
         "period": "2024Q3",
         "value": 2585000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 2163000000.0,
         "is_annual": false
       },
       {
@@ -555,17 +584,17 @@
         "period": "2025Q3",
         "value": 2566000000.0,
         "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 2311000000.0,
+        "is_annual": false
       }
     ],
     "FPL": [
       {
-        "period": "2025Q1",
-        "value": 3997000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 6582000000.0,
+        "period": "2024Q1",
+        "value": 5731000000.0,
         "is_annual": false
       },
       {
@@ -584,12 +613,29 @@
         "is_annual": true
       }
     ],
-    "NEER": [
+    "Florida Power & Light Company": [
       {
         "period": "2025Q1",
-        "value": 2163000000.0,
+        "value": 3997000000.0,
         "is_annual": false
       },
+      {
+        "period": "2025Q2",
+        "value": 4708000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 5285000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 4271000000.0,
+        "is_annual": false
+      }
+    ],
+    "NEER": [
       {
         "period": "FY2023",
         "value": 9672000000.0,
@@ -605,22 +651,11 @@
         "value": 8760000000.0,
         "is_annual": true
       }
-    ],
-    "Florida Power & Light Company": [
-      {
-        "period": "2025Q2",
-        "value": 4708000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 5285000000.0,
-        "is_annual": false
-      }
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

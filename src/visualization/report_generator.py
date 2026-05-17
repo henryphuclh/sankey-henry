@@ -41,6 +41,16 @@ def generate_report(
     # Convert analysis Markdown to HTML
     analysis_html = _markdown_to_html(analysis_text)
 
+    # Build data notes section (partial data + segment gap + quarterly limitation)
+    from src.analysis.coverage_explainer import (
+        generate_partial_data_note, generate_coverage_note,
+        generate_quarterly_note, generate_us_sec_quarterly_note,
+    )
+    partial_note   = generate_partial_data_note(agg)
+    coverage_note  = generate_coverage_note(agg)
+    quarterly_note = generate_quarterly_note(agg) or generate_us_sec_quarterly_note(agg)
+    notes_html     = _build_data_notes_section(agg, partial_note, coverage_note, quarterly_note)
+
     # Build segment coverage table
     coverage_html = _build_coverage_table(agg)
 
@@ -50,14 +60,6 @@ def generate_report(
     # Build data sources section
     sources_html = _build_sources_section(agg)
 
-    # Partial data warning
-    warning_html = ""
-    if agg.has_partial_data:
-        warning_html = f"""
-<div style="background:#fff3cd;border:1px solid #ffc107;padding:10px 16px;
-            border-radius:6px;margin:12px 0;font-size:13px;">
-  ⚠ <strong>Partial Data:</strong> {" | ".join(agg.data_notes)}
-</div>"""
 
     full_html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -100,8 +102,6 @@ def generate_report(
 
 {sankey_html}
 
-{warning_html}
-
 <div class="section">
   <h3>Business Model Analysis</h3>
   <div class="analysis-text">{analysis_html}</div>
@@ -109,8 +109,10 @@ def generate_report(
 
 {income_stmt_html}
 
+{notes_html}
+
 <div class="section">
-  <h3>Segment Coverage</h3>
+  <h3>Coverage</h3>
   {coverage_html}
 </div>
 
@@ -155,11 +157,13 @@ def _fmt_money(v):
 
 def _method_badge(m: str) -> str:
     colors = {
-        "xbrl":      ("#28a745", "XBRL"),
-        "edgar":     ("#17a2b8", "EDGAR"),
-        "edgar+llm": ("#6f42c1", "EDGAR+LLM"),
-        "yahoo+llm": ("#fd7e14", "Yahoo+LLM"),
-        "llm":       ("#007bff", "LLM"),
+        "xbrl":            ("#28a745", "XBRL"),
+        "edgar":           ("#17a2b8", "EDGAR"),
+        "edgar+llm":       ("#6f42c1", "EDGAR+LLM"),
+        "yahoo+llm":       ("#fd7e14", "Yahoo+LLM"),
+        "llm":             ("#007bff", "LLM"),
+        "yahoo_quarterly": ("#fd7e14", "Yahoo"),
+        "yahoo_only":      ("#fd7e14", "Yahoo"),
     }
     bg, txt = colors.get(m or "", ("#6c757d", (m or "?").upper()))
     return (f'<span style="background:{bg};color:white;padding:1px 7px;'
@@ -420,6 +424,66 @@ function switchQtr(id) {{
 </div>"""
 
 
+_CIRCLE_I = (
+    '<span style="display:inline-flex;align-items:center;justify-content:center;'
+    'width:15px;height:15px;border-radius:50%;border:1.5px solid #7a6000;'
+    'font-size:10px;font-weight:700;line-height:1;flex-shrink:0;margin-right:6px;">'
+    'i</span>'
+)
+
+
+def _build_data_notes_section(
+    agg:            "AggregatedCompanyData",
+    partial_note:   str,
+    coverage_note:  str,
+    quarterly_note: str,
+) -> str:
+    """Yellow note boxes placed between Income Statement and Segment Coverage."""
+    boxes = []
+
+    # Merge annual shortage + quarterly limitation into one Partial Data box
+    lines = []
+    if partial_note:
+        lines.append(partial_note)
+    if quarterly_note:
+        lines.append(quarterly_note)
+    if lines:
+        status_parts = []
+        if agg.annual_count < 3:
+            status_parts.append(f"{agg.annual_count}/3 annual reports")
+        if agg.quarterly_count < 12:
+            status_parts.append(f"{agg.quarterly_count}/12 quarterly reports")
+        status_str = " · ".join(status_parts)
+        body = (
+            "<ul style='margin:4px 0 0 0;padding-left:18px'>"
+            + "".join(f"<li>{l}</li>" for l in lines)
+            + "</ul>"
+        )
+        boxes.append(
+            f'<div style="display:flex;align-items:flex-start;gap:0;'
+            f'background:#fff8e1;border-left:4px solid #ffc107;'
+            f'padding:10px 14px;border-radius:4px;font-size:13px;color:#555;">'
+            f'{_CIRCLE_I}'
+            f'<span><strong>Partial Data</strong> — {status_str}{body}</span>'
+            f'</div>'
+        )
+
+    if coverage_note:
+        boxes.append(
+            f'<div style="display:flex;align-items:flex-start;gap:0;'
+            f'background:#fff8e1;border-left:4px solid #ffc107;'
+            f'padding:10px 14px;border-radius:4px;font-size:13px;color:#555;">'
+            f'{_CIRCLE_I}'
+            f'<span><strong>Segment Data:</strong> {coverage_note}</span>'
+            f'</div>'
+        )
+
+    if not boxes:
+        return ""
+    inner = '\n'.join(boxes)
+    return f'<div class="section" style="padding:12px 24px;display:flex;flex-direction:column;gap:8px;">{inner}</div>'
+
+
 def _build_coverage_table(agg: AggregatedCompanyData) -> str:
     """Rich coverage section:
 
@@ -437,6 +501,9 @@ def _build_coverage_table(agg: AggregatedCompanyData) -> str:
         cov_pct = min(100.0, (seg_sum / sd.total_revenue * 100) if sd.total_revenue else 0)
         cov_cell = f"{cov_pct:.0f}%" if sd.segments else "—"
         type_badge = "Annual" if sd.is_annual else "Quarterly"
+        pnl_fields = [sd.total_revenue, sd.operating_income, sd.net_income]
+        pnl_filled = sum(1 for f in pnl_fields if f is not None)
+        pnl_cell = f"{pnl_filled * 100 // 3}%"
         summary_rows += (
             f"<tr>"
             f"<td><strong>{sd.period}</strong></td>"
@@ -444,6 +511,7 @@ def _build_coverage_table(agg: AggregatedCompanyData) -> str:
             f"<td>{_method_badge(sd.extraction_method)}</td>"
             f"<td>{_fmt_money(sd.total_revenue)}</td>"
             f"<td>{_fmt_money(sd.net_income)}</td>"
+            f"<td>{pnl_cell}</td>"
             f"<td>{len(sd.segments)}</td>"
             f"<td>{cov_cell}</td>"
             f"<td>{sd.confidence*100:.0f}%</td>"
@@ -454,6 +522,7 @@ def _build_coverage_table(agg: AggregatedCompanyData) -> str:
 <thead><tr>
   <th>Period</th><th>Type</th><th>Source</th>
   <th>Revenue</th><th>Net Income</th>
+  <th>P&amp;L&nbsp;Coverage</th>
   <th>#&nbsp;Segs</th><th>Segment&nbsp;Coverage</th><th>Confidence</th>
 </tr></thead>
 <tbody>{summary_rows}</tbody>

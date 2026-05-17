@@ -149,24 +149,24 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Commercial Airplanes",
-          "value": 33901000000.0,
+          "segment_name": "BCA",
+          "value": 33828380780.133656,
           "unit": "MILLIONS",
           "period": "FY2023",
           "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Defense, Space & Security",
-          "value": 24933000000.0,
+          "segment_name": "BDS",
+          "value": 24879591103.24393,
           "unit": "MILLIONS",
           "period": "FY2023",
           "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Global Services",
-          "value": 19127000000.0,
+          "segment_name": "BGS",
+          "value": 19086028116.622414,
           "unit": "MILLIONS",
           "period": "FY2023",
           "concept": "llm_extracted",
@@ -233,6 +233,27 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "BA",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 23948000000.0,
+      "gross_profit": 1812000000.0,
+      "operating_income": -815000000.0,
+      "net_income": 8220000000.0,
+      "rd_expense": 964000000.0,
+      "sga_expense": 1663000000.0,
+      "cogs": 22136000000.0,
+      "interest_expense": 659000000.0,
+      "income_tax": 99000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
       "notes": []
     },
     {
@@ -614,9 +635,9 @@
       ]
     }
   ],
-  "ttm_revenue": 87732000000.0,
-  "ttm_operating_income": -4048000000.0,
-  "ttm_net_income": -6334000000.0,
+  "ttm_revenue": 92184000000.0,
+  "ttm_operating_income": -5324000000.0,
+  "ttm_net_income": 2009000000.0,
   "segment_trend": {
     "Commercial Airplanes": [
       {
@@ -663,11 +684,6 @@
         "period": "2026Q1",
         "value": 9203000000.0,
         "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 33901000000.0,
-        "is_annual": true
       }
     ],
     "Defense, Space & Security": [
@@ -715,11 +731,6 @@
         "period": "2026Q1",
         "value": 7599000000.0,
         "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 24933000000.0,
-        "is_annual": true
       }
     ],
     "Global Services": [
@@ -767,14 +778,14 @@
         "period": "2026Q1",
         "value": 5370000000.0,
         "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 19127000000.0,
-        "is_annual": true
       }
     ],
     "BCA": [
+      {
+        "period": "FY2023",
+        "value": 33828380780.133656,
+        "is_annual": true
+      },
       {
         "period": "FY2024",
         "value": 22861000000.0,
@@ -788,6 +799,11 @@
     ],
     "BDS": [
       {
+        "period": "FY2023",
+        "value": 24879591103.24393,
+        "is_annual": true
+      },
+      {
         "period": "FY2024",
         "value": 23918000000.0,
         "is_annual": true
@@ -799,6 +815,11 @@
       }
     ],
     "BGS": [
+      {
+        "period": "FY2023",
+        "value": 19086028116.622414,
+        "is_annual": true
+      },
       {
         "period": "FY2024",
         "value": 19954000000.0,
@@ -812,7 +833,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

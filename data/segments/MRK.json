@@ -180,6 +180,27 @@
     },
     {
       "ticker": "MRK",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 16400000000.0,
+      "gross_profit": 10849000000.0,
+      "operating_income": 4065000000.0,
+      "net_income": 2963000000.0,
+      "rd_expense": 3886000000.0,
+      "sga_expense": 2898000000.0,
+      "cogs": 5551000000.0,
+      "interest_expense": 411000000.0,
+      "income_tax": 458000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "MRK",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -573,9 +594,9 @@
       ]
     }
   ],
-  "ttm_revenue": 64897000000.0,
-  "ttm_operating_income": 14842000000.0,
-  "ttm_net_income": 11057000000.0,
+  "ttm_revenue": 65768000000.0,
+  "ttm_operating_income": 12970000000.0,
+  "ttm_net_income": 8935000000.0,
   "segment_trend": {
     "Int’l": [
       {
@@ -755,7 +776,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

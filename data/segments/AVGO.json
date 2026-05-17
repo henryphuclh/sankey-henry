@@ -197,6 +197,27 @@
     },
     {
       "ticker": "AVGO",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 18015000000.0,
+      "gross_profit": 12249000000.0,
+      "operating_income": 7654000000.0,
+      "net_income": 8518000000.0,
+      "rd_expense": 2981000000.0,
+      "sga_expense": 1107000000.0,
+      "cogs": 5766000000.0,
+      "interest_expense": 761000000.0,
+      "income_tax": -1649000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "AVGO",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -510,9 +531,9 @@
       ]
     }
   ],
-  "ttm_revenue": 65183000000.0,
-  "ttm_operating_income": 26539000000.0,
-  "ttm_net_income": 21957000000.0,
+  "ttm_revenue": 68282000000.0,
+  "ttm_operating_income": 27933000000.0,
+  "ttm_net_income": 24972000000.0,
   "segment_trend": {
     "semiconductor solutions": [
       {
@@ -640,7 +661,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

@@ -11,7 +11,7 @@
     "segments": [
       {
         "segment_name": "Personal Banking",
-        "value": 19854000000.0,
+        "value": 19582337514.253136,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +19,7 @@
       },
       {
         "segment_name": "Commercial Banking",
-        "value": 8562000000.0,
+        "value": 8444846066.134549,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
@@ -27,7 +27,7 @@
       },
       {
         "segment_name": "Wealth Management",
-        "value": 22378000000.0,
+        "value": 22071801596.351196,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
@@ -35,7 +35,7 @@
       },
       {
         "segment_name": "Capital Markets",
-        "value": 14426000000.0,
+        "value": 14228608893.95667,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
@@ -43,7 +43,7 @@
       },
       {
         "segment_name": "Unallocated amounts",
-        "value": 988000000.0,
+        "value": 974481185.8608894,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
@@ -51,7 +51,7 @@
       },
       {
         "segment_name": "Insurance",
-        "value": 1321000000.0,
+        "value": 1302924743.4435575,
         "unit": "USD",
         "period": "2025-10-31 (FY)",
         "concept": "xbrl_dimension",
@@ -60,17 +60,18 @@
     ],
     "total_revenue": 66605000000.0,
     "gross_profit": 66605000000.0,
-    "operating_income": 30013000000.0,
+    "operating_income": 25651000000.0,
     "net_income": 20369000000.0,
     "rd_expense": null,
     "sga_expense": 36592000000.0,
     "cogs": null,
     "interest_expense": null,
-    "income_tax": null,
+    "income_tax": 5282000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
     "notes": [
+      "EXPENSE_DETAIL:{\"Personnel\": 23122000000.0}",
       "Warning: total_revenue (66605000000) differs from Yahoo (48581233659) by 37.1%"
     ]
   },
@@ -84,7 +85,7 @@
       "segments": [
         {
           "segment_name": "Personal Banking",
-          "value": 19854000000.0,
+          "value": 19582337514.253136,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -92,7 +93,7 @@
         },
         {
           "segment_name": "Commercial Banking",
-          "value": 8562000000.0,
+          "value": 8444846066.134549,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -100,7 +101,7 @@
         },
         {
           "segment_name": "Wealth Management",
-          "value": 22378000000.0,
+          "value": 22071801596.351196,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -108,7 +109,7 @@
         },
         {
           "segment_name": "Capital Markets",
-          "value": 14426000000.0,
+          "value": 14228608893.95667,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -116,7 +117,7 @@
         },
         {
           "segment_name": "Unallocated amounts",
-          "value": 988000000.0,
+          "value": 974481185.8608894,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -124,7 +125,7 @@
         },
         {
           "segment_name": "Insurance",
-          "value": 1321000000.0,
+          "value": 1302924743.4435575,
           "unit": "USD",
           "period": "2025-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -133,17 +134,18 @@
       ],
       "total_revenue": 66605000000.0,
       "gross_profit": 66605000000.0,
-      "operating_income": 30013000000.0,
+      "operating_income": 25651000000.0,
       "net_income": 20369000000.0,
       "rd_expense": null,
       "sga_expense": 36592000000.0,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 5282000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 23122000000.0}",
         "Warning: total_revenue (66605000000) differs from Yahoo (48581233659) by 37.1%"
       ]
     },
@@ -156,7 +158,7 @@
       "segments": [
         {
           "segment_name": "Operating segments [member] - Personal Banking",
-          "value": 17342000000.0,
+          "value": 16821968392.260157,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -164,7 +166,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Commercial Banking",
-          "value": 7382000000.0,
+          "value": 7160637220.139804,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -172,7 +174,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Wealth Management",
-          "value": 19626000000.0,
+          "value": 19037478472.292576,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -180,7 +182,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Capital Markets",
-          "value": 12012000000.0,
+          "value": 11651798196.737919,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -188,7 +190,7 @@
         },
         {
           "segment_name": "Unallocated amounts",
-          "value": 1640000000.0,
+          "value": 1590821598.6222267,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -196,7 +198,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Insurance",
-          "value": 1224000000.0,
+          "value": 1187296119.9473205,
           "unit": "USD",
           "period": "2024-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -205,17 +207,18 @@
       ],
       "total_revenue": 57344000000.0,
       "gross_profit": 57344000000.0,
-      "operating_income": 23094000000.0,
+      "operating_income": 19862000000.0,
       "net_income": 16240000000.0,
       "rd_expense": null,
       "sga_expense": 34250000000.0,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 3622000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
+        "EXPENSE_DETAIL:{\"Personnel\": 21083000000.0}",
         "Warning: total_revenue (57344000000) differs from Yahoo (41979554264) by 36.6%"
       ]
     },
@@ -228,7 +231,7 @@
       "segments": [
         {
           "segment_name": "Operating segments [member] - Personal & Commercial Banking",
-          "value": 22120000000.0,
+          "value": 21465671258.098698,
           "unit": "USD",
           "period": "2023-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -236,7 +239,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Wealth Management",
-          "value": 17544000000.0,
+          "value": 17025033298.014626,
           "unit": "USD",
           "period": "2023-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -244,7 +247,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Capital Markets",
-          "value": 11051000000.0,
+          "value": 10724101856.837645,
           "unit": "USD",
           "period": "2023-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -252,7 +255,7 @@
         },
         {
           "segment_name": "Unallocated amounts",
-          "value": 1181000000.0,
+          "value": 1146064998.0024667,
           "unit": "USD",
           "period": "2023-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -260,7 +263,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Insurance",
-          "value": 5675000000.0,
+          "value": 5507128589.046569,
           "unit": "USD",
           "period": "2023-10-31 (FY)",
           "concept": "xbrl_dimension",
@@ -268,19 +271,19 @@
         }
       ],
       "total_revenue": 56129000000.0,
-      "gross_profit": null,
-      "operating_income": null,
+      "gross_profit": 53661000000.0,
+      "operating_income": 18466000000.0,
       "net_income": 14866000000.0,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 31173000000.0,
       "cogs": null,
-      "interest_expense": 61862000000.0,
-      "income_tax": null,
+      "interest_expense": 2468000000.0,
+      "income_tax": 3600000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.89,
+      "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard",
+        "EXPENSE_DETAIL:{\"Personnel\": 18971000000.0}",
         "Warning: total_revenue (56129000000) differs from Yahoo (37671412639) by 49.0%"
       ]
     }
@@ -288,394 +291,254 @@
   "quarterly_periods": [
     {
       "ticker": "RY.TO",
-      "period": "2026Q2",
-      "is_annual": false,
-      "fiscal_year": 2026,
-      "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "RY.TO",
       "period": "2026Q1",
       "is_annual": false,
       "fiscal_year": 2026,
-      "fiscal_quarter": 1,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
+      "total_revenue": 13087258024.334908,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 5408543223.023415,
+      "net_income": 4223439179.420471,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 4592186894.774437,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1184373850.107193,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only",
+        "BANK_NII:6268711161.017418",
+        "BANK_NONINT:6818546863.31749"
+      ]
     },
     {
       "ticker": "RY.TO",
       "period": "2025Q4",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 4,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
+      "total_revenue": 12556407352.924347,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 4985761188.983917,
+      "net_income": 3966411068.916321,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 4226359953.403473,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1017889733.0760956,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only",
+        "BANK_NII:6312522770.762444",
+        "BANK_NONINT:6243884582.161903"
+      ]
     },
     {
       "ticker": "RY.TO",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 3,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
+      "total_revenue": 12384081687.927246,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 5017889702.796936,
+      "net_income": 3953997779.4885635,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 4285505626.5592575,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 1064622116.8041229,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only",
+        "BANK_NII:6097845883.011818",
+        "BANK_NONINT:6286235804.915428"
+      ]
     },
     {
       "ticker": "RY.TO",
       "period": "2025Q2",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 2,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
+      "total_revenue": 11431909369.468689,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 4029207709.5508575,
+      "net_income": 3202628672.361374,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 3999999969.7208405,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 823658263.2064819,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only",
+        "BANK_NII:5882438801.765442",
+        "BANK_NONINT:5549470567.703247"
+      ]
     },
     {
       "ticker": "RY.TO",
       "period": "2025Q1",
       "is_annual": false,
       "fiscal_year": 2025,
-      "fiscal_quarter": 1,
+      "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": null,
+      "total_revenue": 12208835248.947144,
       "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
+      "operating_income": 4697334758.162498,
+      "net_income": 3745162439.7039413,
       "rd_expense": null,
-      "sga_expense": null,
+      "sga_expense": 4371668459.057808,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": null,
+      "income_tax": 950711931.4670563,
       "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "RY.TO",
-      "period": "2024Q4",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "RY.TO",
-      "period": "2024Q3",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "RY.TO",
-      "period": "2024Q2",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "RY.TO",
-      "period": "2024Q1",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 1,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "RY.TO",
-      "period": "2023Q4",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "RY.TO",
-      "period": "2023Q3",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 3,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
-    },
-    {
-      "ticker": "RY.TO",
-      "period": "2023Q2",
-      "is_annual": false,
-      "fiscal_year": 2023,
-      "fiscal_quarter": 2,
-      "segments": [],
-      "total_revenue": null,
-      "gross_profit": null,
-      "operating_income": null,
-      "net_income": null,
-      "rd_expense": null,
-      "sga_expense": null,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": null,
-      "currency": "USD",
-      "extraction_method": "edgar",
-      "confidence": 0.0,
-      "notes": []
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only",
+        "BANK_NII:5803577904.224396",
+        "BANK_NONINT:6405257344.722748"
+      ]
     }
   ],
-  "ttm_revenue": null,
-  "ttm_operating_income": null,
-  "ttm_net_income": null,
+  "ttm_revenue": 49459656434.65519,
+  "ttm_operating_income": 19441401824.355125,
+  "ttm_net_income": 15346476700.18673,
   "segment_trend": {
     "Operating segments [member] - Personal & Commercial Banking": [
       {
         "period": "FY2023",
-        "value": 22120000000.0,
+        "value": 21465671258.098698,
         "is_annual": true
       }
     ],
     "Operating segments [member] - Wealth Management": [
       {
         "period": "FY2023",
-        "value": 17544000000.0,
+        "value": 17025033298.014626,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 19626000000.0,
+        "value": 19037478472.292576,
         "is_annual": true
       }
     ],
     "Operating segments [member] - Capital Markets": [
       {
         "period": "FY2023",
-        "value": 11051000000.0,
+        "value": 10724101856.837645,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 12012000000.0,
+        "value": 11651798196.737919,
         "is_annual": true
       }
     ],
     "Unallocated amounts": [
       {
         "period": "FY2023",
-        "value": 1181000000.0,
+        "value": 1146064998.0024667,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 1640000000.0,
+        "value": 1590821598.6222267,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 988000000.0,
+        "value": 974481185.8608894,
         "is_annual": true
       }
     ],
     "Operating segments [member] - Insurance": [
       {
         "period": "FY2023",
-        "value": 5675000000.0,
+        "value": 5507128589.046569,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 1224000000.0,
+        "value": 1187296119.9473205,
         "is_annual": true
       }
     ],
     "Operating segments [member] - Personal Banking": [
       {
         "period": "FY2024",
-        "value": 17342000000.0,
+        "value": 16821968392.260157,
         "is_annual": true
       }
     ],
     "Operating segments [member] - Commercial Banking": [
       {
         "period": "FY2024",
-        "value": 7382000000.0,
+        "value": 7160637220.139804,
         "is_annual": true
       }
     ],
     "Personal Banking": [
       {
         "period": "FY2025",
-        "value": 19854000000.0,
+        "value": 19582337514.253136,
         "is_annual": true
       }
     ],
     "Commercial Banking": [
       {
         "period": "FY2025",
-        "value": 8562000000.0,
+        "value": 8444846066.134549,
         "is_annual": true
       }
     ],
     "Wealth Management": [
       {
         "period": "FY2025",
-        "value": 22378000000.0,
+        "value": 22071801596.351196,
         "is_annual": true
       }
     ],
     "Capital Markets": [
       {
         "period": "FY2025",
-        "value": 14426000000.0,
+        "value": 14228608893.95667,
         "is_annual": true
       }
     ],
     "Insurance": [
       {
         "period": "FY2025",
-        "value": 1321000000.0,
+        "value": 1302924743.4435575,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 13,
-  "has_partial_data": false,
-  "data_notes": []
+  "quarterly_count": 5,
+  "has_partial_data": true,
+  "data_notes": [
+    "Partial data: 3/3 annual, 5/12 quarterly"
+  ],
+  "classification": "INTL_SEC"
 }

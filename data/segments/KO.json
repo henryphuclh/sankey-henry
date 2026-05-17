@@ -333,6 +333,48 @@
     },
     {
       "ticker": "KO",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": 12472000000.0,
+      "gross_profit": 7852000000.0,
+      "operating_income": 4372000000.0,
+      "net_income": 3924000000.0,
+      "rd_expense": null,
+      "sga_expense": 3472000000.0,
+      "cogs": 4620000000.0,
+      "interest_expense": 375000000.0,
+      "income_tax": 645000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "KO",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 11822000000.0,
+      "gross_profit": 7099000000.0,
+      "operating_income": 2862000000.0,
+      "net_income": 2271000000.0,
+      "rd_expense": null,
+      "sga_expense": 4199000000.0,
+      "cogs": 4723000000.0,
+      "interest_expense": 431000000.0,
+      "income_tax": 646000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "KO",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -878,9 +920,9 @@
       ]
     }
   ],
-  "ttm_revenue": 48591000000.0,
-  "ttm_operating_income": 16280000000.0,
-  "ttm_net_income": 14807000000.0,
+  "ttm_revenue": 49221000000.0,
+  "ttm_operating_income": 15575000000.0,
+  "ttm_net_income": 13857000000.0,
   "segment_trend": {
     "Europe, Middle East & Africa": [
       {
@@ -1235,7 +1277,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 11,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

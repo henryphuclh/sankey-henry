@@ -191,6 +191,27 @@
   "quarterly_periods": [
     {
       "ticker": "WMT",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": 190656000000.0,
+      "gross_profit": 47041000000.0,
+      "operating_income": 8708000000.0,
+      "net_income": 4237000000.0,
+      "rd_expense": null,
+      "sga_expense": null,
+      "cogs": 143615000000.0,
+      "interest_expense": 709000000.0,
+      "income_tax": 1578000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "WMT",
       "period": "2025Q4",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -325,6 +346,27 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
+      "notes": []
+    },
+    {
+      "ticker": "WMT",
+      "period": "2025Q1",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 1,
+      "segments": [],
+      "total_revenue": 180554000000.0,
+      "gross_profit": 44382000000.0,
+      "operating_income": 7859000000.0,
+      "net_income": 5254000000.0,
+      "rd_expense": null,
+      "sga_expense": 36523000000.0,
+      "cogs": 136172000000.0,
+      "interest_expense": 717000000.0,
+      "income_tax": 1538000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
       "notes": []
     },
     {
@@ -616,9 +658,9 @@
       ]
     }
   ],
-  "ttm_revenue": 692095000000.0,
-  "ttm_operating_income": 27825000000.0,
-  "ttm_net_income": 22647000000.0,
+  "ttm_revenue": 713163000000.0,
+  "ttm_operating_income": 29825000000.0,
+  "ttm_net_income": 22170000000.0,
   "segment_trend": {
     "Walmart U.S.": [
       {
@@ -812,7 +854,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 11,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

@@ -237,6 +237,27 @@
     },
     {
       "ticker": "ISRG",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 2866200000.0,
+      "gross_profit": 1904300000.0,
+      "operating_income": 864300000.0,
+      "net_income": 794800000.0,
+      "rd_expense": 352900000.0,
+      "sga_expense": 687100000.0,
+      "cogs": 961900000.0,
+      "interest_expense": null,
+      "income_tax": 156100000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "ISRG",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -614,9 +635,9 @@
       ]
     }
   ],
-  "ttm_revenue": 9969300000.0,
-  "ttm_operating_income": 2936500000.0,
-  "ttm_net_income": 2903100000.0,
+  "ttm_revenue": 10582100000.0,
+  "ttm_operating_income": 3222700000.0,
+  "ttm_net_income": 2994200000.0,
   "segment_trend": {
     "Services": [
       {
@@ -806,7 +827,8 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 9,
+  "quarterly_count": 10,
   "has_partial_data": false,
-  "data_notes": []
+  "data_notes": [],
+  "classification": "US_SEC"
 }

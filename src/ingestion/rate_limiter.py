@@ -5,7 +5,7 @@ import sys
 from typing import Optional
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from config import SEC_RATE_LIMIT, YAHOO_RATE_LIMIT
+from config import YAHOO_RATE_LIMIT
 
 
 class RateLimiter:
@@ -37,5 +37,4 @@ class RateLimiter:
         self.acquire(tokens)
 
 
-sec_limiter   = RateLimiter(rate=float(SEC_RATE_LIMIT),   per=1.0)
 yahoo_limiter = RateLimiter(rate=float(YAHOO_RATE_LIMIT), per=1.0)

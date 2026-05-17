@@ -100,15 +100,41 @@
       ]
     }
   ],
-  "quarterly_periods": [],
+  "quarterly_periods": [
+    {
+      "ticker": "TCEHY",
+      "period": "2025Q2",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 184504000000.0,
+      "gross_profit": 105013000000.0,
+      "operating_income": 64942000000.0,
+      "net_income": 55628000000.0,
+      "rd_expense": null,
+      "sga_expense": 41331000000.0,
+      "cogs": 79491000000.0,
+      "interest_expense": 3541000000.0,
+      "income_tax": 11351000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only"
+      ]
+    }
+  ],
   "ttm_revenue": 751766000000.0,
   "ttm_operating_income": 248767000000.0,
   "ttm_net_income": 224842000000.0,
   "segment_trend": {},
   "annual_count": 3,
-  "quarterly_count": 0,
+  "quarterly_count": 1,
   "has_partial_data": true,
   "data_notes": [
-    "Partial data: 3/3 annual, 0/12 quarterly"
-  ]
+    "Partial data: 3/3 annual, 1/12 quarterly"
+  ],
+  "classification": "INTL_YAHOO"
 }

@@ -1,4 +1,4 @@
-"""
+“””
 Financial Analysis System — Task 1
 Generates interactive Sankey charts + business model analysis for 98 stocks.
 
@@ -7,88 +7,97 @@ Usage:
   python main.py --tickers-file stocks.txt
   python main.py --all
   python main.py --tickers NVDA --no-cache --verbose
-
-  #mô tả mục tiêu và cách dùng của coding này
-"""
-#core setup: import chỉ là mang hàm vào main.py để chạy
+“””
 from __future__ import annotations
-#tránh lỗi vòng phụ thuộc giữa các file khiến Python không thể load module theo thứ tự tuyến tính
-import argparse #đọc CLI arguments
-import sys #điều khiển runtime Python
-import time #đo thời gian chạy, benchmark từng ticker
-from concurrent.futures import ThreadPoolExecutor, as_completed #chạy nhiều ticker song song
-from pathlib import Path #xử lý đường dẫn file, cross-platform (Windows/Linux/Mac)
-from typing import Dict, List, Optional, Tuple #type hint, IDE autocomplete
 
-# Add project root to path: kết nối toàn bộ hệ thống
-#khởi tạo toàn bộ pipeline system + import tất cả modules theo đúng kiến trúc config→ ingestion → extraction → analysis → visualization
-sys.path.insert(0, str(Path(__file__).parent)) #cho phép import module nội bộ, tránh lỗi ModuleNotFoundError: src
+import argparse
+import sys
+import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
+
+sys.path.insert(0, str(Path(__file__).parent))
 
 from config import (
     OPENAI_API_KEY, MAX_TICKER_WORKERS, YEARS_BACK, QUARTERS_BACK,
     FILING_TYPES_US, FILING_TYPES_INTL,
-) #lấy cấu hình hệ thống, vì tách config khỏi code logic nên dễ đổi cấu hình môi trường
-from src.llm.provider import provider_status #kiểm tra OpenAI API, verify key trước khi chạy pipeline
-from src.ingestion.ticker_loader import TickerInfo, load_tickers, print_classification_table #load danh sách cổ phiếu, đầu vào file excel
+)
+from src.llm.provider import provider_status
+from src.ingestion.ticker_loader import TickerInfo, load_tickers, print_classification_table
 from src.ingestion.filing_router import (
     get_filings_for_ticker,
     get_yahoo_data, get_revenue_validation, summarize_coverage,
-) #lấy data từ SEC + Yahoo, đây là “data ingestion core”
-from src.ingestion.edgar_client import set_identity_from_env #khai báo user khi gọi SEC API, lấy từ .env
-from src.extraction.extraction_router import extract_for_filing, extract_for_yahoo_only #chuyển raw data → SegmentData, vì SEC/Yahoo data không dùng trực tiếp được
-from src.extraction.normalizer import normalize_segments #chuẩn hóa tên segment
-from src.analysis.segment_aggregator import aggregate, load_cached, AggregatedCompanyData #tổng hợp dữ liệu nhiều kỳ
-from src.analysis.business_model_writer import write_business_model #AI viết phân tích công ty
-from src.visualization.report_generator import generate_report #tạo HTML + Sankey chart
+)
+from src.ingestion.edgar_client import set_identity_from_env
+from src.extraction.extraction_router import extract_for_filing, extract_for_yahoo_only, fill_quarterly_gaps_from_yahoo
+from src.extraction.normalizer import normalize_segments
+from src.analysis.segment_aggregator import aggregate, load_cached, AggregatedCompanyData
+from src.analysis.business_model_writer import write_business_model
+from src.visualization.report_generator import generate_report
 
 
 # ── Result tracking ───────────────────────────────────────────────────────────
-#tracking trạng thái xử lý từng ticker/ "report card cho từng ticker"
-class ProcessResult: #chạy song song nhiều ticker → phải có “report riêng từng cái”
+
+class ProcessResult:
 
     def __init__(self, ticker: str):
-        self.ticker   = ticker #lưu mã cp, biết kết quả thuộc công ty nào
-        self.success  = False #trạng thái chạy có thành công không, 80 success / 98 failed 18
-        self.output   = None #đường dẫn file HTML output, đường dẫn file HTML output
-        self.error    = "" #lưu lỗi nếu pipeline fail, biết fail ở step nào
-        self.method   = ""   # "xbrl-lấy từ SEC", "llm-AI extraction", "yahoo", "mixed", ghi lại cách dữ liệu được tạo ra để đánh giá chất lượng data
-        self.coverage = {} #thống kê mức độ dữ liệu đầy đủ, kiểu "annual": 3,"quarterl": 8
-        self.elapsed  = 0.0 #t0=0 để t1 trừ đi đo thời gian xử lý 1 ticker, để xem so với benchmark, detect ticker nào “nặng”
+        self.ticker   = ticker
+        self.success  = False
+        self.output   = None
+        self.error    = “”
+        self.method   = “”
+        self.coverage = {}
+        self.elapsed  = 0.0
 
 
 # ── Per-ticker pipeline ───────────────────────────────────────────────────────
 
-#khung điều phối cho toàn bộ pipeline xử lý 1 cổ phiếu
-def process_ticker( #định nghĩa “job xử lý 1 công ty”
-    ticker_info: TickerInfo,  #thông tin công ty (NVDA, AAPL...)
-    force_refetch: bool = False,  #có bỏ cache không
-    verbose:       bool = False,  #có in chi tiết log ra màn hình hay không, false: chạy im lặng, true: hiện thi từng bước chạy ra màn hình, này là mặc định false
-) -> ProcessResult:  #kết quả của 1 ticker
-    result = ProcessResult(ticker_info.ticker) #tạo object lưu kết quả xử lý, mỗi ticker có output riêng
-    t0 = time.time() #bắt đầu đo thời gian chạy, detect ticker nào chậm
+def process_ticker(
+    ticker_info: TickerInfo,
+    force_refetch: bool = False,
+    verbose:       bool = False,
+) -> ProcessResult:
+    result = ProcessResult(ticker_info.ticker)
+    t0 = time.time()
 
-    def log(msg: str): #hàm helper để in log(ghi lại trạng thái chạy chương trình) có format đẹp
+    def log(msg: str):
         if verbose:
-            print(f"  [{ticker_info.ticker}] {msg}") #msg là message, f-string/formattedstring cho phép nhét biến vào chuỗi
+            print(f”  [{ticker_info.ticker}] {msg}”)
 
-    try: #bắt lỗi toàn bộ pipeline bên trong, tránh crash toàn bộ system khi 1 ticker lỗi
-        # Step 1 — Check if already processed and cached, kiểm tra xem ticker đã xử lý trước đó chưa → nếu có cache thì dùng luôn, không cần chạy toàn pipeline
-        #fast path optimization (đường tắt để tăng tốc hệ thống)”
-        if not force_refetch: #nếu KHÔNG ép chạy lại → mới dùng cache, ép chạy lại, k dùng cache
-            cached_agg = load_cached(ticker_info.ticker) #đọc dữ liệu đã xử lý trước đó, tránh gọi API + LLM lại nhiều lần
-            if cached_agg and cached_agg.annual_count > 0: #kiểm tra cache có hợp lệ không, cached_agg tồn tại
-                log("Using cached aggregated data") #báo đang dùng cache vào log, dùng cho verbose
-                analysis = write_business_model(cached_agg) #dùng LLM (dùng code từ src) viết phân tích từ dữ liệu cache,không cần ingestion/extraction lại
-                out_path = generate_report(cached_agg, analysis) #tạo file HTML Sankey + report từ hai thứ trong ngoặc
-                result.success  = True #đổi trạng thái ticker sang true để hệ thống ghi nhận
-                result.output   = out_path #đổi đường dẫn file từ none sang đường dẫn file vào path chung trong config
-                result.coverage = {"annual": cached_agg.annual_count, "quarterly": cached_agg.quarterly_count} #thống kê dữ liệu có bao nhiêu kỳ
-                result.elapsed  = time.time() - t0 #đo thời gian chạy
-                return result #thoát luôn function, KHÔNG chạy ingestion/extraction nữa
+    try:
+        # Step 1 — Check if already processed and cached
+        if not force_refetch:
+            cached_agg = load_cached(ticker_info.ticker)
+            if cached_agg and cached_agg.annual_count > 0:
+                log(“Using cached aggregated data”)
+                cached_agg.classification = ticker_info.classification
+                # Apply quarterly gap-fills from Yahoo even on the cached path
+                # (yfinance data is locally cached so this is fast)
+                if ticker_info.classification == "US_SEC":
+                    _yahoo_data = get_yahoo_data(ticker_info)
+                    _all_sds    = cached_agg.annual_periods + cached_agg.quarterly_periods
+                    _gap_fills  = fill_quarterly_gaps_from_yahoo(_all_sds, _yahoo_data, ticker_info)
+                    if _gap_fills:
+                        _all_sds = normalize_segments(_all_sds + _gap_fills, ticker_info.ticker)
+                        cached_agg = aggregate(
+                            ticker      = cached_agg.ticker,
+                            name        = cached_agg.name,
+                            all_periods = _all_sds,
+                            sector      = cached_agg.sector,
+                        )
+                        cached_agg.classification = ticker_info.classification
+                analysis = write_business_model(cached_agg)
+                out_path = generate_report(cached_agg, analysis)
+                result.success  = True
+                result.output   = out_path
+                result.coverage = {“annual”: cached_agg.annual_count, “quarterly”: cached_agg.quarterly_count}
+                result.elapsed  = time.time() - t0
+                return result
 
-        # Step 2 — Fetch data: “INGESTION PHASE” thật sự trong pipeline”
-        log("Fetching filings...") #báo đang lấy data vào log
-        filings = get_filings_for_ticker(ticker_info) #Gọi function ingestion, Lấy data từ SEC, Trả kết quả về main.py dưới biến tạm fillings, sau khi chuyển ticker thì biến tạm sẽ lưu gtri mới
+        # Step 2 — Fetch data
+        log(“Fetching filings...”)
+        filings = get_filings_for_ticker(ticker_info)
 
         log("Fetching Yahoo Finance data...")
         yahoo_data  = get_yahoo_data(ticker_info)
@@ -99,13 +108,30 @@ def process_ticker( #định nghĩa “job xử lý 1 công ty”
 
         if filings:
             log(f"Extracting from {len(filings)} filings...")
-            for filing in filings:
+            # For INTL_SEC: 6-K quarterly filings have no structured income statement —
+            # process only annual filings from EDGAR and synthesize quarterly from Yahoo.
+            _intl_sec = ticker_info.classification == "INTL_SEC"
+            annual_filings    = [f for f in filings if f.is_annual]
+            quarterly_filings = [f for f in filings if not f.is_annual]
+            process_filings   = annual_filings if _intl_sec else filings
+            for filing in process_filings:
                 sd = extract_for_filing(
                     filing      = filing,
                     ticker_info = ticker_info,
                     revenue_map = revenue_map,
+                    yahoo_data  = yahoo_data,
                 )
                 all_segment_data.append(sd)
+            if _intl_sec:
+                # Quarterly: use Yahoo Finance dates directly (6-K period labels are
+                # unreliable — filing date ≠ financial period end date).
+                yahoo_quarters = _extract_yahoo_quarters(ticker_info, yahoo_data)
+                all_segment_data.extend(yahoo_quarters)
+            else:
+                # US_SEC: 10-Q covers Q1-Q3 only; fill Q4 (and any other gaps)
+                # from Yahoo Finance quarterly P&L data.
+                gap_fills = fill_quarterly_gaps_from_yahoo(all_segment_data, yahoo_data, ticker_info)
+                all_segment_data.extend(gap_fills)
         else:
             # INTL_YAHOO — synthesize periods from Yahoo data
             log("No SEC filings — using Yahoo Finance for all periods")
@@ -142,6 +168,7 @@ def process_ticker( #định nghĩa “job xử lý 1 công ty”
             all_periods = all_segment_data,
             sector      = effective_sector,
         )
+        agg.classification = ticker_info.classification
 
         # Step 6 — Business model narrative
         log("Writing business model analysis...")
@@ -201,17 +228,54 @@ def _extract_from_yahoo_all_periods(
             q = (d.month - 1) // 3 + 1
             period = f"{d.year}Q{q}"
             sd = extract_for_yahoo_only(
-                ticker_info = ticker_info,
-                period      = period,
-                yahoo_data  = yahoo_data,
-                is_annual   = False,
-                fiscal_year = d.year,
+                ticker_info    = ticker_info,
+                period         = period,
+                yahoo_data     = yahoo_data,
+                is_annual      = False,
+                fiscal_year    = d.year,
+                yahoo_date_key = date_str,
             )
             if sd.total_revenue:
                 periods_data.append(sd)
         except Exception:
             continue
 
+    return periods_data
+
+
+def _extract_yahoo_quarters(
+    ticker_info: TickerInfo,
+    yahoo_data:  Dict,
+) -> list:
+    """Return quarterly SegmentData from Yahoo Finance for INTL_SEC tickers.
+
+    INTL_SEC companies file 6-K for quarterly reports, but the 6-K period_of_report
+    date is typically the filing date (e.g. April), not the quarter-end date (March 31).
+    This mismatch makes period labels unreliable.  Instead, drive quarterly periods
+    directly from the Yahoo quarterly income dates — same approach as INTL_YAHOO.
+    """
+    from src.extraction.extraction_router import extract_for_yahoo_only
+
+    qtr_income = yahoo_data.get("quarterly_income", {})
+    periods_data = []
+    for date_str in sorted(qtr_income.keys(), reverse=True)[:QUARTERS_BACK]:
+        try:
+            import pandas as pd
+            d = pd.Timestamp(date_str)
+            q = (d.month - 1) // 3 + 1
+            period = f"{d.year}Q{q}"
+            sd = extract_for_yahoo_only(
+                ticker_info    = ticker_info,
+                period         = period,
+                yahoo_data     = yahoo_data,
+                is_annual      = False,
+                fiscal_year    = d.year,
+                yahoo_date_key = date_str,
+            )
+            if sd.total_revenue:
+                periods_data.append(sd)
+        except Exception:
+            continue
     return periods_data
 
 

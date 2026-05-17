@@ -69,12 +69,10 @@ def render_sankey_html(
             ),
         )],
         layout = go.Layout(
-            title_text = f"{company_name} ({ticker}) — Financial Flow {default_period}",
-            title_font_size = 16,
             autosize = True,
             height = 780,
-            margin = dict(l=20, r=20, t=60, b=20),
-            paper_bgcolor = "#fafafa",
+            margin = dict(l=20, r=20, t=20, b=20),
+            paper_bgcolor = "rgba(0,0,0,0)",
             font = dict(size=12),
         ),
     )
@@ -87,9 +85,8 @@ def render_sankey_html(
         default_height = "780px",
         config      = {
             "responsive":     True,
-            "scrollZoom":     True,
-            "displayModeBar": True,
-            "modeBarButtonsToAdd": ["zoom2d", "pan2d", "resetScale2d"],
+            "scrollZoom":     False,
+            "displayModeBar": False,
         },
     )
 
@@ -115,6 +112,15 @@ def render_sankey_html(
   .badge {{ background: #ff9800; color: white; font-size: 11px; padding: 2px 8px;
             border-radius: 10px; }}
   .source-note {{ font-size: 11px; color: #888; margin-top: 8px; }}
+  .zoom-controls {{ display:flex; align-items:center; gap:6px; margin-left:auto; }}
+  .zoom-btn {{ background:white; border:1px solid #ccc; border-radius:5px; padding:4px 10px;
+               font-size:15px; font-weight:700; cursor:pointer; color:#333; line-height:1; }}
+  .zoom-btn:hover {{ background:#f0f0f0; }}
+  .zoom-pct {{ font-size:12px; color:#666; min-width:40px; text-align:center; }}
+  .zoom-hint {{ font-size:11px; color:#999; }}
+  #zoom-wrapper {{ overflow:hidden; border-radius:0 0 8px 8px; background:white;
+                   height:780px; position:relative; }}
+  #zoom-target {{ transform-origin:0 0; width:100%; height:100%; }}
 </style>
 </head>
 <body>
@@ -125,16 +131,29 @@ def render_sankey_html(
   </div>
 </div>
 
-<div class="controls">
-  <label for="period-select">Fiscal Year:</label>
-  <select id="period-select" onchange="switchPeriod(this.value)">
-    {options_html}
-  </select>
-  <span id="data-badge" style="margin-left:12px; font-size:12px; color:#666;"></span>
+<div class="controls" style="display:flex; align-items:center; flex-wrap:wrap; gap:10px;">
+  <div>
+    <label for="period-select">Fiscal Year:</label>
+    <select id="period-select" onchange="switchPeriod(this.value)">
+      {options_html}
+    </select>
+  </div>
+  <span id="data-badge" style="font-size:12px; color:#666;"></span>
+  <div class="zoom-controls">
+    <span class="zoom-hint">Scroll to zoom · Right-drag to pan</span>
+    <button class="zoom-btn" onclick="zoomOut()" title="Zoom out (-)">−</button>
+    <span class="zoom-pct" id="zoom-pct">100%</span>
+    <button class="zoom-btn" onclick="zoomIn()" title="Zoom in (+)">+</button>
+    <button class="zoom-btn" onclick="resetZoom()" title="Reset view (R)" style="font-size:12px; padding:4px 8px;">Reset</button>
+  </div>
 </div>
 
-<div class="chart-container">
-  {fig_html}
+<div class="chart-container" style="padding:0; overflow:hidden;">
+  <div id="zoom-wrapper">
+    <div id="zoom-target">
+      {fig_html}
+    </div>
+  </div>
 </div>
 
 <script>
@@ -154,11 +173,7 @@ function switchPeriod(period) {{
     "link.label":  [data.link_labels],
   }};
 
-  var layoutUpdate = {{
-    "title.text": data.title,
-  }};
-
-  Plotly.update("sankey-chart", update, layoutUpdate);
+  Plotly.update("sankey-chart", update, {{}});
 
   var badge = document.getElementById("data-badge");
   if (data.has_partial) {{
@@ -170,6 +185,75 @@ function switchPeriod(period) {{
 
 // Set initial badge
 switchPeriod(document.getElementById("period-select").value);
+
+// ── Zoom + Pan ───────────────────────────────────────────────────────────────
+(function() {{
+  var wrapper = document.getElementById('zoom-wrapper');
+  var target  = document.getElementById('zoom-target');
+  var scale = 1.0, tx = 0, ty = 0;
+  var dragging = false;
+  var dragStartX, dragStartY, dragStartTx, dragStartTy;
+
+  function applyXform() {{
+    target.style.transform = 'translate(' + tx + 'px,' + ty + 'px) scale(' + scale + ')';
+    document.getElementById('zoom-pct').textContent = Math.round(scale * 100) + '%';
+  }}
+
+  // Mouse-wheel zoom centred on cursor
+  wrapper.addEventListener('wheel', function(e) {{
+    e.preventDefault();
+    var rect = wrapper.getBoundingClientRect();
+    var mx = e.clientX - rect.left - tx;
+    var my = e.clientY - rect.top  - ty;
+    var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+    var ns = Math.min(6, Math.max(0.2, scale * factor));
+    tx -= mx * (ns / scale - 1);
+    ty -= my * (ns / scale - 1);
+    scale = ns;
+    applyXform();
+  }}, {{passive: false}});
+
+  // Right-click drag to pan (avoids conflict with Plotly left-click node drag)
+  wrapper.addEventListener('mousedown', function(e) {{
+    if (e.button !== 2) return;
+    e.preventDefault();
+    dragging = true;
+    dragStartX = e.clientX; dragStartY = e.clientY;
+    dragStartTx = tx;       dragStartTy = ty;
+    wrapper.style.cursor = 'grabbing';
+  }});
+  document.addEventListener('mousemove', function(e) {{
+    if (!dragging) return;
+    tx = dragStartTx + (e.clientX - dragStartX);
+    ty = dragStartTy + (e.clientY - dragStartY);
+    applyXform();
+  }});
+  document.addEventListener('mouseup', function(e) {{
+    if (e.button === 2 && dragging) {{
+      dragging = false;
+      wrapper.style.cursor = '';
+    }}
+  }});
+  wrapper.addEventListener('contextmenu', function(e) {{ e.preventDefault(); }});
+
+  // Keyboard shortcuts
+  document.addEventListener('keydown', function(e) {{
+    var tag = (e.target.tagName || '').toLowerCase();
+    if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+    if (e.key === '=' || e.key === '+') {{ scale = Math.min(6, scale * 1.15); applyXform(); }}
+    if (e.key === '-' || e.key === '_') {{ scale = Math.max(0.2, scale / 1.15); applyXform(); }}
+    if (e.key === '0' || e.key.toLowerCase() === 'r') {{ scale=1; tx=0; ty=0; applyXform(); }}
+    if (e.key === 'ArrowLeft')  {{ tx += 40; applyXform(); }}
+    if (e.key === 'ArrowRight') {{ tx -= 40; applyXform(); }}
+    if (e.key === 'ArrowUp')    {{ ty += 40; applyXform(); }}
+    if (e.key === 'ArrowDown')  {{ ty -= 40; applyXform(); }}
+  }});
+
+  // Exposed to button onclick handlers
+  window.zoomIn    = function() {{ scale = Math.min(6, scale * 1.2); applyXform(); }};
+  window.zoomOut   = function() {{ scale = Math.max(0.2, scale / 1.2); applyXform(); }};
+  window.resetZoom = function() {{ scale=1; tx=0; ty=0; applyXform(); }};
+}})();
 </script>
 </body>
 </html>"""

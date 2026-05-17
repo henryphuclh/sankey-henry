@@ -191,6 +191,27 @@
     },
     {
       "ticker": "GEV",
+      "period": "2025Q4",
+      "is_annual": false,
+      "fiscal_year": 2025,
+      "fiscal_quarter": 4,
+      "segments": [],
+      "total_revenue": 10956000000.0,
+      "gross_profit": 2322000000.0,
+      "operating_income": 602000000.0,
+      "net_income": 3664000000.0,
+      "rd_expense": 365000000.0,
+      "sga_expense": 1355000000.0,
+      "cogs": 8634000000.0,
+      "interest_expense": null,
+      "income_tax": -2565000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "GEV",
       "period": "2025Q3",
       "is_annual": false,
       "fiscal_year": 2025,
@@ -472,9 +493,9 @@
       ]
     }
   ],
-  "ttm_revenue": 36451000000.0,
-  "ttm_operating_income": 966000000.0,
-  "ttm_net_income": 5981000000.0,
+  "ttm_revenue": 39375000000.0,
+  "ttm_operating_income": 1525000000.0,
+  "ttm_net_income": 9381000000.0,
   "segment_trend": {
     "Power": [
       {
@@ -619,9 +640,10 @@
     ]
   },
   "annual_count": 2,
-  "quarterly_count": 7,
+  "quarterly_count": 8,
   "has_partial_data": true,
   "data_notes": [
-    "Partial data: 2/3 annual, 7/12 quarterly"
-  ]
+    "Only 2/3 annual reports available"
+  ],
+  "classification": "US_SEC"
 }
