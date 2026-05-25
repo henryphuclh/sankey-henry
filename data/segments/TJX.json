@@ -2,6 +2,7 @@
   "ticker": "TJX",
   "name": "TJX Companies Inc.",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "TJX",
     "period": "FY2026",
@@ -11,7 +12,7 @@
     "segments": [
       {
         "segment_name": "Marmaxx",
-        "value": 36585000000.0,
+        "value": 36511674865.83184,
         "unit": "USD",
         "period": "2026-01-31 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +20,7 @@
       },
       {
         "segment_name": "HomeGoods",
-        "value": 10172000000.0,
+        "value": 10151612866.891937,
         "unit": "USD",
         "period": "2026-01-31 (FY)",
         "concept": "xbrl_dimension",
@@ -27,7 +28,7 @@
       },
       {
         "segment_name": "TJX Canada",
-        "value": 5629000000.0,
+        "value": 5617718130.921619,
         "unit": "USD",
         "period": "2026-01-31 (FY)",
         "concept": "xbrl_dimension",
@@ -35,7 +36,7 @@
       },
       {
         "segment_name": "TJX International",
-        "value": 7986000000.0,
+        "value": 7969994136.354602,
         "unit": "USD",
         "period": "2026-01-31 (FY)",
         "concept": "xbrl_dimension",
@@ -66,7 +67,7 @@
       "segments": [
         {
           "segment_name": "Marmaxx",
-          "value": 36585000000.0,
+          "value": 36511674865.83184,
           "unit": "USD",
           "period": "2026-01-31 (FY)",
           "concept": "xbrl_dimension",
@@ -74,7 +75,7 @@
         },
         {
           "segment_name": "HomeGoods",
-          "value": 10172000000.0,
+          "value": 10151612866.891937,
           "unit": "USD",
           "period": "2026-01-31 (FY)",
           "concept": "xbrl_dimension",
@@ -82,7 +83,7 @@
         },
         {
           "segment_name": "TJX Canada",
-          "value": 5629000000.0,
+          "value": 5617718130.921619,
           "unit": "USD",
           "period": "2026-01-31 (FY)",
           "concept": "xbrl_dimension",
@@ -90,7 +91,7 @@
         },
         {
           "segment_name": "TJX International",
-          "value": 7986000000.0,
+          "value": 7969994136.354602,
           "unit": "USD",
           "period": "2026-01-31 (FY)",
           "concept": "xbrl_dimension",
@@ -120,7 +121,7 @@
       "segments": [
         {
           "segment_name": "Marmaxx",
-          "value": 34604000000.0,
+          "value": 34492869339.95742,
           "unit": "USD",
           "period": "2025-02-01 (FY)",
           "concept": "xbrl_dimension",
@@ -128,7 +129,7 @@
         },
         {
           "segment_name": "HomeGoods",
-          "value": 9386000000.0,
+          "value": 9355856884.315117,
           "unit": "USD",
           "period": "2025-02-01 (FY)",
           "concept": "xbrl_dimension",
@@ -136,7 +137,7 @@
         },
         {
           "segment_name": "TJX Canada",
-          "value": 5189000000.0,
+          "value": 5172335539.389638,
           "unit": "USD",
           "period": "2025-02-01 (FY)",
           "concept": "xbrl_dimension",
@@ -144,7 +145,7 @@
         },
         {
           "segment_name": "TJX International",
-          "value": 7181000000.0,
+          "value": 7157938236.337829,
           "unit": "USD",
           "period": "2025-02-01 (FY)",
           "concept": "xbrl_dimension",
@@ -251,7 +252,7 @@
       "segments": [
         {
           "segment_name": "Marmaxx",
-          "value": 9037000000.0,
+          "value": 9020261493.68261,
           "unit": "USD",
           "period": "2025-11-01 (Q4)",
           "concept": "xbrl_dimension",
@@ -259,7 +260,7 @@
         },
         {
           "segment_name": "HomeGoods",
-          "value": 2539000000.0,
+          "value": 2534297215.055897,
           "unit": "USD",
           "period": "2025-11-01 (Q4)",
           "concept": "xbrl_dimension",
@@ -267,7 +268,7 @@
         },
         {
           "segment_name": "TJX Canada",
-          "value": 1492000000.0,
+          "value": 1489236488.7213073,
           "unit": "USD",
           "period": "2025-11-01 (Q4)",
           "concept": "xbrl_dimension",
@@ -275,7 +276,7 @@
         },
         {
           "segment_name": "Net sales",
-          "value": 2049000000.0,
+          "value": 2045204802.5401866,
           "unit": "USD",
           "period": "2025-11-01 (Q4)",
           "concept": "xbrl_dimension",
@@ -305,7 +306,7 @@
       "segments": [
         {
           "segment_name": "Marmaxx",
-          "value": 8841000000.0,
+          "value": 8824424276.091938,
           "unit": "USD",
           "period": "2025-08-02 (Q3)",
           "concept": "xbrl_dimension",
@@ -313,7 +314,7 @@
         },
         {
           "segment_name": "HomeGoods",
-          "value": 2286000000.0,
+          "value": 2281714047.635581,
           "unit": "USD",
           "period": "2025-08-02 (Q3)",
           "concept": "xbrl_dimension",
@@ -321,7 +322,7 @@
         },
         {
           "segment_name": "TJX Canada",
-          "value": 1381000000.0,
+          "value": 1378410804.8052218,
           "unit": "USD",
           "period": "2025-08-02 (Q3)",
           "concept": "xbrl_dimension",
@@ -329,7 +330,7 @@
         },
         {
           "segment_name": "Net sales",
-          "value": 1893000000.0,
+          "value": 1889450871.4672592,
           "unit": "USD",
           "period": "2025-08-02 (Q3)",
           "concept": "xbrl_dimension",
@@ -359,7 +360,7 @@
       "segments": [
         {
           "segment_name": "Marmaxx",
-          "value": 8052000000.0,
+          "value": 8033575776.065899,
           "unit": "USD",
           "period": "2025-05-03 (Q2)",
           "concept": "xbrl_dimension",
@@ -367,7 +368,7 @@
         },
         {
           "segment_name": "HomeGoods",
-          "value": 2254000000.0,
+          "value": 2248842498.6652427,
           "unit": "USD",
           "period": "2025-05-03 (Q2)",
           "concept": "xbrl_dimension",
@@ -375,7 +376,7 @@
         },
         {
           "segment_name": "TJX Canada",
-          "value": 1144000000.0,
+          "value": 1141382350.6978872,
           "unit": "USD",
           "period": "2025-05-03 (Q2)",
           "concept": "xbrl_dimension",
@@ -383,7 +384,7 @@
         },
         {
           "segment_name": "Net sales",
-          "value": 1661000000.0,
+          "value": 1657199374.570971,
           "unit": "USD",
           "period": "2025-05-03 (Q2)",
           "concept": "xbrl_dimension",
@@ -799,17 +800,17 @@
       },
       {
         "period": "2025Q2",
-        "value": 8052000000.0,
+        "value": 8033575776.065899,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 8841000000.0,
+        "value": 8824424276.091938,
         "is_annual": false
       },
       {
         "period": "2025Q4",
-        "value": 9037000000.0,
+        "value": 9020261493.68261,
         "is_annual": false
       },
       {
@@ -819,12 +820,12 @@
       },
       {
         "period": "FY2025",
-        "value": 34604000000.0,
+        "value": 34492869339.95742,
         "is_annual": true
       },
       {
         "period": "FY2026",
-        "value": 36585000000.0,
+        "value": 36511674865.83184,
         "is_annual": true
       }
     ],
@@ -861,17 +862,17 @@
       },
       {
         "period": "2025Q2",
-        "value": 2254000000.0,
+        "value": 2248842498.6652427,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 2286000000.0,
+        "value": 2281714047.635581,
         "is_annual": false
       },
       {
         "period": "2025Q4",
-        "value": 2539000000.0,
+        "value": 2534297215.055897,
         "is_annual": false
       },
       {
@@ -881,12 +882,12 @@
       },
       {
         "period": "FY2025",
-        "value": 9386000000.0,
+        "value": 9355856884.315117,
         "is_annual": true
       },
       {
         "period": "FY2026",
-        "value": 10172000000.0,
+        "value": 10151612866.891937,
         "is_annual": true
       }
     ],
@@ -923,17 +924,17 @@
       },
       {
         "period": "2025Q2",
-        "value": 1144000000.0,
+        "value": 1141382350.6978872,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 1381000000.0,
+        "value": 1378410804.8052218,
         "is_annual": false
       },
       {
         "period": "2025Q4",
-        "value": 1492000000.0,
+        "value": 1489236488.7213073,
         "is_annual": false
       },
       {
@@ -943,12 +944,12 @@
       },
       {
         "period": "FY2025",
-        "value": 5189000000.0,
+        "value": 5172335539.389638,
         "is_annual": true
       },
       {
         "period": "FY2026",
-        "value": 5629000000.0,
+        "value": 5617718130.921619,
         "is_annual": true
       }
     ],
@@ -990,36 +991,37 @@
       },
       {
         "period": "FY2025",
-        "value": 7181000000.0,
+        "value": 7157938236.337829,
         "is_annual": true
       },
       {
         "period": "FY2026",
-        "value": 7986000000.0,
+        "value": 7969994136.354602,
         "is_annual": true
       }
     ],
     "Net sales": [
       {
         "period": "2025Q2",
-        "value": 1661000000.0,
+        "value": 1657199374.570971,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 1893000000.0,
+        "value": 1889450871.4672592,
         "is_annual": false
       },
       {
         "period": "2025Q4",
-        "value": 2049000000.0,
+        "value": 2045204802.5401866,
         "is_annual": false
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 11,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

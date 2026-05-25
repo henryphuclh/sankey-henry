@@ -2,6 +2,7 @@
   "ticker": "UNH",
   "name": "UnitedHealth Group Inc.",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "UNH",
     "period": "FY2025",
@@ -11,34 +12,42 @@
     "segments": [
       {
         "segment_name": "UnitedHealthcare",
-        "value": 248577222655.92917,
-        "unit": "MILLIONS",
-        "period": "FY2025",
-        "concept": "llm_extracted",
+        "value": 173130573124.51566,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
         "segment_name": "Optum Health",
-        "value": 73482074352.2978,
-        "unit": "MILLIONS",
-        "period": "FY2025",
-        "concept": "llm_extracted",
+        "value": 51179241247.702225,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
         "segment_name": "Optum Insight",
-        "value": 13994148883.338728,
-        "unit": "MILLIONS",
-        "period": "FY2025",
-        "concept": "llm_extracted",
+        "value": 9746729771.439274,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
         "is_annual": true
       },
       {
         "segment_name": "Optum Rx",
-        "value": 111513554108.43425,
-        "unit": "MILLIONS",
-        "period": "FY2025",
-        "concept": "llm_extracted",
+        "value": 77667637153.8195,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Optum",
+        "value": 135842818702.52338,
+        "unit": "USD",
+        "period": "2025-12-31 (FY)",
+        "concept": "xbrl_dimension",
         "is_annual": true
       }
     ],
@@ -49,10 +58,10 @@
     "rd_expense": null,
     "sga_expense": 59592000000.0,
     "cogs": 50655000000.0,
-    "interest_expense": -4002000000.0,
-    "income_tax": -1890000000.0,
+    "interest_expense": 4002000000.0,
+    "income_tax": 1890000000.0,
     "currency": "USD",
-    "extraction_method": "edgar+llm",
+    "extraction_method": "xbrl",
     "confidence": 1.0,
     "notes": [
       "SECTOR_FALLBACK:standard"
@@ -68,34 +77,42 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 248577222655.92917,
-          "unit": "MILLIONS",
-          "period": "FY2025",
-          "concept": "llm_extracted",
+          "value": 173130573124.51566,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 73482074352.2978,
-          "unit": "MILLIONS",
-          "period": "FY2025",
-          "concept": "llm_extracted",
+          "value": 51179241247.702225,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 13994148883.338728,
-          "unit": "MILLIONS",
-          "period": "FY2025",
-          "concept": "llm_extracted",
+          "value": 9746729771.439274,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 111513554108.43425,
-          "unit": "MILLIONS",
-          "period": "FY2025",
-          "concept": "llm_extracted",
+          "value": 77667637153.8195,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 135842818702.52338,
+          "unit": "USD",
+          "period": "2025-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
@@ -106,10 +123,10 @@
       "rd_expense": null,
       "sga_expense": 59592000000.0,
       "cogs": 50655000000.0,
-      "interest_expense": -4002000000.0,
-      "income_tax": -1890000000.0,
+      "interest_expense": 4002000000.0,
+      "income_tax": 1890000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard"
@@ -124,34 +141,42 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 214859584890.03772,
-          "unit": "MILLIONS",
-          "period": "FY2024",
-          "concept": "llm_extracted",
+          "value": 147636954628.94135,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 75910693693.14235,
-          "unit": "MILLIONS",
-          "period": "FY2024",
-          "concept": "llm_extracted",
+          "value": 52160687392.00827,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 13514463843.298761,
-          "unit": "MILLIONS",
-          "period": "FY2024",
-          "concept": "llm_extracted",
+          "value": 9286224239.373365,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 95993257573.52121,
-          "unit": "MILLIONS",
-          "period": "FY2024",
-          "concept": "llm_extracted",
+          "value": 65960065129.60244,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 125234068610.07457,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
@@ -162,10 +187,10 @@
       "rd_expense": null,
       "sga_expense": 53013000000.0,
       "cogs": 46694000000.0,
-      "interest_expense": -3906000000.0,
-      "income_tax": -4829000000.0,
+      "interest_expense": 3906000000.0,
+      "income_tax": 4829000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard"
@@ -180,34 +205,42 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 221463458972.65662,
-          "unit": "MILLIONS",
-          "period": "FY2023",
-          "concept": "llm_extracted",
+          "value": 141615728837.8008,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 28092331403.068752,
-          "unit": "MILLIONS",
-          "period": "FY2023",
-          "concept": "llm_extracted",
+          "value": 47976505747.406654,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 88399730980.13179,
-          "unit": "MILLIONS",
-          "period": "FY2023",
-          "concept": "llm_extracted",
+          "value": 9528962817.590437,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 33666478644.142815,
-          "unit": "MILLIONS",
-          "period": "FY2023",
-          "concept": "llm_extracted",
+          "value": 58429574614.70637,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 114071227982.4957,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
@@ -218,10 +251,10 @@
       "rd_expense": null,
       "sga_expense": 54628000000.0,
       "cogs": 38770000000.0,
-      "interest_expense": -3246000000.0,
-      "income_tax": -5968000000.0,
+      "interest_expense": 3246000000.0,
+      "income_tax": 5968000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard"
@@ -238,35 +271,43 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 63726069130.82289,
-          "unit": "MILLIONS",
-          "period": "2026Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 44829438772.1877,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 17809909009.157932,
-          "unit": "MILLIONS",
-          "period": "2026Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 12528753716.55565,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 3785963070.717757,
-          "unit": "MILLIONS",
-          "period": "2026Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 2663315060.6556764,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 26399058789.30142,
-          "unit": "MILLIONS",
-          "period": "2026Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 18570971123.43244,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 33128521327.168533,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 111721000000.0,
@@ -276,10 +317,10 @@
       "rd_expense": null,
       "sga_expense": 15390000000.0,
       "cogs": 12823000000.0,
-      "interest_expense": -955000000.0,
-      "income_tax": -1482000000.0,
+      "interest_expense": 955000000.0,
+      "income_tax": 1482000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard"
@@ -315,35 +356,43 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 19799314133.74392,
-          "unit": "MILLIONS",
-          "period": "2025Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 43454550654.71176,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 68957051265.00333,
-          "unit": "MILLIONS",
-          "period": "2025Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 12926069391.949406,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 20512089442.5587,
-          "unit": "MILLIONS",
-          "period": "2025Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 2452958728.2405915,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 3892545158.6940546,
-          "unit": "MILLIONS",
-          "period": "2025Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 19802838123.67415,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 34524583101.424095,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 113161000000.0,
@@ -353,10 +402,10 @@
       "rd_expense": null,
       "sga_expense": 15223000000.0,
       "cogs": 12566000000.0,
-      "interest_expense": -1003000000.0,
-      "income_tax": -686000000.0,
+      "interest_expense": 1003000000.0,
+      "income_tax": 686000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard"
@@ -371,35 +420,43 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 18076738754.493343,
-          "unit": "MILLIONS",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 43325545252.90776,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 62246008277.47012,
-          "unit": "MILLIONS",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 12682721485.88946,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 3490281731.9213705,
-          "unit": "MILLIONS",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 2429366369.128122,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 27802971236.115158,
-          "unit": "MILLIONS",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 19351905797.49346,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 33826461094.58119,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 111616000000.0,
@@ -409,10 +466,10 @@
       "rd_expense": null,
       "sga_expense": 13778000000.0,
       "cogs": 13019000000.0,
-      "interest_expense": -1027000000.0,
-      "income_tax": -510000000.0,
+      "interest_expense": 1027000000.0,
+      "income_tax": 510000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard"
@@ -427,35 +484,43 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 18708871209.696777,
-          "unit": "MILLIONS",
-          "period": "2025Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 43413295571.069374,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 61817663913.11305,
-          "unit": "MILLIONS",
-          "period": "2025Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 12984945077.32719,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 3382485598.847908,
-          "unit": "MILLIONS",
-          "period": "2025Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 2375451250.8603616,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 25665979278.34227,
-          "unit": "MILLIONS",
-          "period": "2025Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 18024698346.701126,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 32776609754.041943,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 109575000000.0,
@@ -465,10 +530,10 @@
       "rd_expense": null,
       "sga_expense": 13594000000.0,
       "cogs": 12390000000.0,
-      "interest_expense": -998000000.0,
-      "income_tax": -1632000000.0,
+      "interest_expense": 998000000.0,
+      "income_tax": 1632000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard"
@@ -483,35 +548,43 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 53940299768.41925,
-          "unit": "MILLIONS",
-          "period": "2024Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 37023835492.78085,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 18676215370.100353,
-          "unit": "MILLIONS",
-          "period": "2024Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 12819081993.592794,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 3553359493.3813653,
-          "unit": "MILLIONS",
-          "period": "2024Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 2438974160.219395,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 24650125368.099037,
-          "unit": "MILLIONS",
-          "period": "2024Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 16919486736.69131,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 31618621616.715645,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 100820000000.0,
@@ -521,10 +594,10 @@
       "rd_expense": null,
       "sga_expense": 13280000000.0,
       "cogs": 11834000000.0,
-      "interest_expense": -1074000000.0,
-      "income_tax": -1356000000.0,
+      "interest_expense": 1074000000.0,
+      "income_tax": 1356000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard",
@@ -540,35 +613,43 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 16979275504.56265,
-          "unit": "MILLIONS",
-          "period": "2024Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 36373172156.82954,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 45359535783.72603,
-          "unit": "MILLIONS",
-          "period": "2024Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 13319988991.447203,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 16610828296.507042,
-          "unit": "MILLIONS",
-          "period": "2024Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 2237068761.114404,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 19905360415.204277,
-          "unit": "MILLIONS",
-          "period": "2024Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 15961827843.170464,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 30962942247.438396,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 98855000000.0,
@@ -578,10 +659,10 @@
       "rd_expense": null,
       "sga_expense": 13162000000.0,
       "cogs": 11340000000.0,
-      "interest_expense": -985000000.0,
-      "income_tax": -1244000000.0,
+      "interest_expense": 985000000.0,
+      "income_tax": 1244000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard",
@@ -597,35 +678,43 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 54723137507.73149,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 37890169500.7482,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 19411656365.290157,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 13440584430.437784,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 3269285734.0367475,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 2263645621.407015,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 22391920392.941605,
-          "unit": "MILLIONS",
-          "period": "2024Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 15504112113.746178,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 30697488333.66083,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 99796000000.0,
@@ -635,10 +724,10 @@
       "rd_expense": null,
       "sga_expense": 14077000000.0,
       "cogs": 11056000000.0,
-      "interest_expense": -844000000.0,
-      "income_tax": -1222000000.0,
+      "interest_expense": 844000000.0,
+      "income_tax": 1222000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard",
@@ -654,35 +743,43 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 50581280687.72491,
-          "unit": "MILLIONS",
-          "period": "2023Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 35008752241.05747,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 17280169532.187126,
-          "unit": "MILLIONS",
-          "period": "2023Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 11960099973.953812,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 3603897241.1035585,
-          "unit": "MILLIONS",
-          "period": "2023Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 2494360441.265845,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 20895652538.984406,
-          "unit": "MILLIONS",
-          "period": "2023Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 14462479255.296059,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 28435308088.42681,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 92361000000.0,
@@ -692,10 +789,10 @@
       "rd_expense": null,
       "sga_expense": 13855000000.0,
       "cogs": 9423000000.0,
-      "interest_expense": -834000000.0,
-      "income_tax": -1654000000.0,
+      "interest_expense": 834000000.0,
+      "income_tax": 1654000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard",
@@ -711,35 +808,43 @@
       "segments": [
         {
           "segment_name": "UnitedHealthcare",
-          "value": 51186733870.4616,
-          "unit": "MILLIONS",
-          "period": "2023Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 35496434362.2832,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Health",
-          "value": 17431520467.882133,
-          "unit": "MILLIONS",
-          "period": "2023Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 12088226290.99297,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Insight",
-          "value": 3406569664.5432577,
-          "unit": "MILLIONS",
-          "period": "2023Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 2362351870.389311,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Optum Rx",
-          "value": 20878175997.113,
-          "unit": "MILLIONS",
-          "period": "2023Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 14478376482.492981,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Optum",
+          "value": 28477610993.841534,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 92903000000.0,
@@ -749,10 +854,10 @@
       "rd_expense": null,
       "sga_expense": 13809000000.0,
       "cogs": 9748000000.0,
-      "interest_expense": -828000000.0,
-      "income_tax": -1572000000.0,
+      "interest_expense": 828000000.0,
+      "income_tax": 1572000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
         "SECTOR_FALLBACK:standard",
@@ -767,255 +872,318 @@
     "UnitedHealthcare": [
       {
         "period": "2023Q2",
-        "value": 51186733870.4616,
+        "value": 35496434362.2832,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 50581280687.72491,
+        "value": 35008752241.05747,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 54723137507.73149,
+        "value": 37890169500.7482,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 16979275504.56265,
+        "value": 36373172156.82954,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 53940299768.41925,
+        "value": 37023835492.78085,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 18708871209.696777,
+        "value": 43413295571.069374,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 18076738754.493343,
+        "value": 43325545252.90776,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 19799314133.74392,
+        "value": 43454550654.71176,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 63726069130.82289,
+        "value": 44829438772.1877,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 221463458972.65662,
+        "value": 141615728837.8008,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 214859584890.03772,
+        "value": 147636954628.94135,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 248577222655.92917,
+        "value": 173130573124.51566,
         "is_annual": true
       }
     ],
     "Optum Health": [
       {
         "period": "2023Q2",
-        "value": 17431520467.882133,
+        "value": 12088226290.99297,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 17280169532.187126,
+        "value": 11960099973.953812,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 19411656365.290157,
+        "value": 13440584430.437784,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 45359535783.72603,
+        "value": 13319988991.447203,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 18676215370.100353,
+        "value": 12819081993.592794,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 61817663913.11305,
+        "value": 12984945077.32719,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 62246008277.47012,
+        "value": 12682721485.88946,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 68957051265.00333,
+        "value": 12926069391.949406,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 17809909009.157932,
+        "value": 12528753716.55565,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 28092331403.068752,
+        "value": 47976505747.406654,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 75910693693.14235,
+        "value": 52160687392.00827,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 73482074352.2978,
+        "value": 51179241247.702225,
         "is_annual": true
       }
     ],
     "Optum Insight": [
       {
         "period": "2023Q2",
-        "value": 3406569664.5432577,
+        "value": 2362351870.389311,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 3603897241.1035585,
+        "value": 2494360441.265845,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 3269285734.0367475,
+        "value": 2263645621.407015,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 16610828296.507042,
+        "value": 2237068761.114404,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 3553359493.3813653,
+        "value": 2438974160.219395,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 3382485598.847908,
+        "value": 2375451250.8603616,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 3490281731.9213705,
+        "value": 2429366369.128122,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 20512089442.5587,
+        "value": 2452958728.2405915,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 3785963070.717757,
+        "value": 2663315060.6556764,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 88399730980.13179,
+        "value": 9528962817.590437,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 13514463843.298761,
+        "value": 9286224239.373365,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 13994148883.338728,
+        "value": 9746729771.439274,
         "is_annual": true
       }
     ],
     "Optum Rx": [
       {
         "period": "2023Q2",
-        "value": 20878175997.113,
+        "value": 14478376482.492981,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 20895652538.984406,
+        "value": 14462479255.296059,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 22391920392.941605,
+        "value": 15504112113.746178,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 19905360415.204277,
+        "value": 15961827843.170464,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 24650125368.099037,
+        "value": 16919486736.69131,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 25665979278.34227,
+        "value": 18024698346.701126,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 27802971236.115158,
+        "value": 19351905797.49346,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 3892545158.6940546,
+        "value": 19802838123.67415,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 26399058789.30142,
+        "value": 18570971123.43244,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 33666478644.142815,
+        "value": 58429574614.70637,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 95993257573.52121,
+        "value": 65960065129.60244,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 111513554108.43425,
+        "value": 77667637153.8195,
+        "is_annual": true
+      }
+    ],
+    "Optum": [
+      {
+        "period": "2023Q2",
+        "value": 28477610993.841534,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 28435308088.42681,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 30697488333.66083,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 30962942247.438396,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 31618621616.715645,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 32776609754.041943,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 33826461094.58119,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 34524583101.424095,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 33128521327.168533,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 114071227982.4957,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 125234068610.07457,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 135842818702.52338,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

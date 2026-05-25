@@ -2,6 +2,7 @@
   "ticker": "SHOP.TO",
   "name": "Shopify Inc.",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "SHOP.TO",
     "period": "FY2025",
@@ -34,7 +35,7 @@
     "sga_expense": 2134000000.0,
     "cogs": 6001000000.0,
     "interest_expense": null,
-    "income_tax": -278000000.0,
+    "income_tax": 278000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
@@ -73,7 +74,7 @@
       "sga_expense": 2134000000.0,
       "cogs": 6001000000.0,
       "interest_expense": null,
-      "income_tax": -278000000.0,
+      "income_tax": 278000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -111,7 +112,7 @@
       "sga_expense": 1803000000.0,
       "cogs": 4408000000.0,
       "interest_expense": null,
-      "income_tax": -209000000.0,
+      "income_tax": 209000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -210,7 +211,7 @@
       "sga_expense": 525000000.0,
       "cogs": 1453000000.0,
       "interest_expense": null,
-      "income_tax": -44000000.0,
+      "income_tax": 44000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -248,7 +249,7 @@
       "sga_expense": 537000000.0,
       "cogs": 1378000000.0,
       "interest_expense": null,
-      "income_tax": -173000000.0,
+      "income_tax": 173000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -367,6 +368,5 @@
   "has_partial_data": true,
   "data_notes": [
     "Only 2/3 annual reports available"
-  ],
-  "classification": "US_SEC"
+  ]
 }

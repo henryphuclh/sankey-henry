@@ -2,6 +2,7 @@
   "ticker": "9988.HK",
   "name": "Alibaba Group Holding",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "9988.HK",
     "period": "FY2025",
@@ -11,7 +12,7 @@
     "segments": [
       {
         "segment_name": "Taobao and Tmall Group",
-        "value": 60002570927.38523,
+        "value": 56298252246.599495,
         "unit": "RMB",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -19,7 +20,7 @@
       },
       {
         "segment_name": "Alibaba International Digital Commerce Group",
-        "value": 17647540351.4975,
+        "value": 16558051811.53002,
         "unit": "RMB",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -27,7 +28,7 @@
       },
       {
         "segment_name": "Cloud Intelligence Group",
-        "value": 15743793594.909653,
+        "value": 14771834763.501625,
         "unit": "RMB",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -35,7 +36,7 @@
       },
       {
         "segment_name": "Cainiao Smart Logistics Network Limited",
-        "value": 13508705264.37532,
+        "value": 12674731844.72614,
         "unit": "RMB",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -43,7 +44,7 @@
       },
       {
         "segment_name": "Local Services Group",
-        "value": 8947289619.176466,
+        "value": 8394919752.91147,
         "unit": "RMB",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -51,7 +52,7 @@
       },
       {
         "segment_name": "Hujing Digital Media and Entertainment Group",
-        "value": 2970202426.355214,
+        "value": 2786834011.242169,
         "unit": "RMB",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -59,22 +60,22 @@
       },
       {
         "segment_name": "All others",
-        "value": 27514289499.34269,
+        "value": 25815667340.230427,
         "unit": "RMB",
         "period": "FY2025",
         "concept": "llm_extracted",
         "is_annual": true
       }
     ],
-    "total_revenue": 146334391683.04205,
-    "gross_profit": 58463728622.79415,
-    "operating_income": 20694845731.556416,
-    "net_income": 19109227375.090122,
-    "rd_expense": 8393819441.497326,
-    "sga_expense": 27649917727.708817,
-    "cogs": 87870663060.2479,
-    "interest_expense": 1409373263.1206512,
-    "income_tax": 5205839444.696903,
+    "total_revenue": 137300291770.74135,
+    "gross_profit": 54854411909.55043,
+    "operating_income": 19417228748.574852,
+    "net_income": 17929500125.959515,
+    "rd_expense": 7875618609.771132,
+    "sga_expense": 25942922424.37601,
+    "cogs": 82445879861.19092,
+    "interest_expense": 1322364196.240902,
+    "income_tax": 4884451744.034886,
     "currency": "USD",
     "extraction_method": "edgar+llm",
     "confidence": 1.0,
@@ -90,7 +91,7 @@
       "segments": [
         {
           "segment_name": "Taobao and Tmall Group",
-          "value": 60002570927.38523,
+          "value": 56298252246.599495,
           "unit": "RMB",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -98,7 +99,7 @@
         },
         {
           "segment_name": "Alibaba International Digital Commerce Group",
-          "value": 17647540351.4975,
+          "value": 16558051811.53002,
           "unit": "RMB",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -106,7 +107,7 @@
         },
         {
           "segment_name": "Cloud Intelligence Group",
-          "value": 15743793594.909653,
+          "value": 14771834763.501625,
           "unit": "RMB",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -114,7 +115,7 @@
         },
         {
           "segment_name": "Cainiao Smart Logistics Network Limited",
-          "value": 13508705264.37532,
+          "value": 12674731844.72614,
           "unit": "RMB",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -122,7 +123,7 @@
         },
         {
           "segment_name": "Local Services Group",
-          "value": 8947289619.176466,
+          "value": 8394919752.91147,
           "unit": "RMB",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -130,7 +131,7 @@
         },
         {
           "segment_name": "Hujing Digital Media and Entertainment Group",
-          "value": 2970202426.355214,
+          "value": 2786834011.242169,
           "unit": "RMB",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -138,22 +139,22 @@
         },
         {
           "segment_name": "All others",
-          "value": 27514289499.34269,
+          "value": 25815667340.230427,
           "unit": "RMB",
           "period": "FY2025",
           "concept": "llm_extracted",
           "is_annual": true
         }
       ],
-      "total_revenue": 146334391683.04205,
-      "gross_profit": 58463728622.79415,
-      "operating_income": 20694845731.556416,
-      "net_income": 19109227375.090122,
-      "rd_expense": 8393819441.497326,
-      "sga_expense": 27649917727.708817,
-      "cogs": 87870663060.2479,
-      "interest_expense": 1409373263.1206512,
-      "income_tax": 5205839444.696903,
+      "total_revenue": 137300291770.74135,
+      "gross_profit": 54854411909.55043,
+      "operating_income": 19417228748.574852,
+      "net_income": 17929500125.959515,
+      "rd_expense": 7875618609.771132,
+      "sga_expense": 25942922424.37601,
+      "cogs": 82445879861.19092,
+      "interest_expense": 1322364196.240902,
+      "income_tax": 4884451744.034886,
       "currency": "USD",
       "extraction_method": "edgar+llm",
       "confidence": 1.0,
@@ -168,7 +169,7 @@
       "segments": [
         {
           "segment_name": "Taobao and Tmall Group",
-          "value": 59159157633.638016,
+          "value": 55786733802.924774,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -176,7 +177,7 @@
         },
         {
           "segment_name": "Cloud intelligence group",
-          "value": 14470217350.292166,
+          "value": 13645328900.562483,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -184,7 +185,7 @@
         },
         {
           "segment_name": "International Digital Commerce Group",
-          "value": 13956562315.088984,
+          "value": 13160955257.298866,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -192,7 +193,7 @@
         },
         {
           "segment_name": "Cainiao Smart Logistics Network Limited",
-          "value": 13469841521.668173,
+          "value": 12701980443.846212,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -200,7 +201,7 @@
         },
         {
           "segment_name": "Local Services Group",
-          "value": 8134957207.420724,
+          "value": 7671216264.420231,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -208,7 +209,7 @@
         },
         {
           "segment_name": "Hujing Digital Media and Entertainment Group",
-          "value": 2876386578.223324,
+          "value": 2712415436.12531,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -216,22 +217,22 @@
         },
         {
           "segment_name": "All others",
-          "value": 26163079071.94467,
+          "value": 24671627961.476326,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 138230201678.27606,
-      "gross_profit": 52116408456.86197,
-      "operating_income": 16647817775.60711,
-      "net_income": 11750994727.909565,
-      "rd_expense": 7674886331.558228,
-      "sga_expense": 23077238780.856133,
-      "cogs": 86113793221.4141,
-      "interest_expense": 1167183130.6815147,
-      "income_tax": 3308854756.653309,
+      "total_revenue": 130350258066.6542,
+      "gross_profit": 49145463215.55972,
+      "operating_income": 15698793150.484562,
+      "net_income": 11081118140.07163,
+      "rd_expense": 7237372164.726257,
+      "sga_expense": 21761698919.832706,
+      "cogs": 81204794851.09448,
+      "interest_expense": 1100646750.4799366,
+      "income_tax": 3120230356.3058376,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -246,7 +247,7 @@
       "segments": [
         {
           "segment_name": "China commerce",
-          "value": 85586232908.66614,
+          "value": 84817624540.25447,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -254,7 +255,7 @@
         },
         {
           "segment_name": "International commerce",
-          "value": 10164054533.24318,
+          "value": 10072776098.549366,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -262,7 +263,7 @@
         },
         {
           "segment_name": "Local consumer services",
-          "value": 7359995098.114014,
+          "value": 7293898558.616638,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -270,7 +271,7 @@
         },
         {
           "segment_name": "Cainiao",
-          "value": 8177919202.148914,
+          "value": 8104477283.731103,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -278,7 +279,7 @@
         },
         {
           "segment_name": "Cloud",
-          "value": 11338874951.303005,
+          "value": 11237046025.320889,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -286,22 +287,22 @@
         },
         {
           "segment_name": "Digital media and entertainment",
-          "value": 4623790023.92292,
+          "value": 4582266012.579203,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 127584851169.28816,
-      "gross_profit": 46850645680.42755,
-      "operating_income": 14738642801.940441,
-      "net_income": 10689705524.146557,
-      "rd_expense": 8334042980.670929,
-      "sga_expense": 21396007461.24983,
-      "cogs": 80734205488.86061,
-      "interest_expense": 869182052.0162582,
-      "income_tax": 2283695797.0261574,
+      "total_revenue": 126439073618.87395,
+      "gross_profit": 46429902797.93739,
+      "operating_income": 14606282212.95774,
+      "net_income": 10593706473.335625,
+      "rd_expense": 8259198990.4642105,
+      "sga_expense": 21203860315.307976,
+      "cogs": 80009170820.93655,
+      "interest_expense": 861376350.3730297,
+      "income_tax": 2263187034.8006487,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -311,20 +312,46 @@
   "quarterly_periods": [
     {
       "ticker": "9988.HK",
+      "period": "2026Q1",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": null,
+      "segments": [],
+      "total_revenue": 35302139444.649216,
+      "gross_profit": 12182414691.746235,
+      "operating_income": -123001948.595047,
+      "net_income": 3704708454.0873766,
+      "rd_expense": 2749702758.8635683,
+      "sga_expense": 12305416640.341282,
+      "cogs": 23119724752.902985,
+      "interest_expense": 325055857.07724094,
+      "income_tax": 1040004683.2859516,
+      "currency": "USD",
+      "extraction_method": "yahoo_only",
+      "confidence": 0.55,
+      "notes": [
+        "Source: Yahoo Finance (no SEC filing available)",
+        "⚠ Limited Segment Detail — aggregate data only",
+        "BANK_NII:4580952288.359404",
+        "BANK_NONINT:30721187156.28981"
+      ]
+    },
+    {
+      "ticker": "9988.HK",
       "period": "2025Q4",
       "is_annual": false,
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 41835150936.543945,
-      "gross_profit": 16935537890.49387,
-      "operating_income": 2960917568.206787,
-      "net_income": 2406186136.9013786,
-      "rd_expense": 2273561704.158783,
-      "sga_expense": 11792118583.023548,
-      "cogs": 24899613046.05007,
-      "interest_expense": 375548919.737339,
-      "income_tax": 1242527908.0867767,
+      "total_revenue": 40714541524.27614,
+      "gross_profit": 16481897285.953163,
+      "operating_income": 2881605505.9432983,
+      "net_income": 2341733283.922076,
+      "rd_expense": 2212661370.6350327,
+      "sga_expense": 11476251213.625072,
+      "cogs": 24232644238.322975,
+      "interest_expense": 365489349.14171696,
+      "income_tax": 1209245167.6726341,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
@@ -340,23 +367,23 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 36393877421.31949,
-      "gross_profit": 14248534571.528435,
-      "operating_income": 787962438.1661415,
-      "net_income": 3087079680.8600426,
-      "rd_expense": 2510758225.619793,
-      "sga_expense": 13460572133.362293,
-      "cogs": 22145342849.79105,
-      "interest_expense": 369674083.2924843,
-      "income_tax": 815133556.7235947,
+      "total_revenue": 34807556408.196686,
+      "gross_profit": 13627475442.945957,
+      "operating_income": 753617063.0156994,
+      "net_income": 2952521350.890398,
+      "rd_expense": 2401320352.703333,
+      "sga_expense": 12873858379.930258,
+      "cogs": 21180080965.250732,
+      "interest_expense": 353560884.92274284,
+      "income_tax": 779603858.2921028,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:2581256262.95805",
-        "BANK_NONINT:33812621158.36144"
+        "BANK_NII:2468745551.2583256",
+        "BANK_NONINT:32338810856.938362"
       ]
     },
     {
@@ -366,23 +393,23 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 36372874881.02913,
-      "gross_profit": 16335423347.651958,
-      "operating_income": 5138719438.314438,
-      "net_income": 5970155666.172504,
-      "rd_expense": 2203210537.7316475,
-      "sga_expense": 11196703909.33752,
-      "cogs": 20037451533.37717,
-      "interest_expense": 363946117.7587509,
-      "income_tax": 1302010627.090931,
+      "total_revenue": 34570885471.58241,
+      "gross_profit": 15526131809.175014,
+      "operating_income": 4884136372.327805,
+      "net_income": 5674381485.044956,
+      "rd_expense": 2094058812.201023,
+      "sga_expense": 10641995436.84721,
+      "cogs": 19044753662.4074,
+      "interest_expense": 345915454.74529266,
+      "income_tax": 1237506257.5936317,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:2188082833.8861465",
-        "BANK_NONINT:34184792047.142982"
+        "BANK_NII:2079680566.906929",
+        "BANK_NONINT:32491204904.675484"
       ]
     },
     {
@@ -392,39 +419,15 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 34728214418.292046,
-      "gross_profit": 13339991115.33165,
-      "operating_income": 4180680485.0697517,
-      "net_income": 1844551772.7732658,
-      "rd_expense": 2193370186.686516,
-      "sga_expense": 6830966076.254845,
-      "cogs": 21388223302.960396,
-      "interest_expense": 366589794.15893555,
-      "income_tax": 1006653224.8258591,
-      "currency": "USD",
-      "extraction_method": "yahoo_only",
-      "confidence": 0.55,
-      "notes": [
-        "Source: Yahoo Finance (no SEC filing available)",
-        "⚠ Limited Segment Detail — aggregate data only"
-      ]
-    },
-    {
-      "ticker": "9988.HK",
-      "period": "2024Q4",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": null,
-      "segments": [],
-      "total_revenue": 41146473234.295845,
-      "gross_profit": 17276425275.206566,
-      "operating_income": 6958156285.28595,
-      "net_income": 7215327250.659466,
-      "rd_expense": 2153421298.8615036,
-      "sga_expense": 7861412388.682365,
-      "cogs": 23870047959.08928,
-      "interest_expense": 364974214.1366005,
-      "income_tax": 1637463788.0921364,
+      "total_revenue": 32584233394.95063,
+      "gross_profit": 12516433432.281017,
+      "operating_income": 3922581997.2902536,
+      "net_income": 1730676525.697112,
+      "rd_expense": 2057960286.2298489,
+      "sga_expense": 6409249558.895826,
+      "cogs": 20067799962.66961,
+      "interest_expense": 343958006.8588257,
+      "income_tax": 944506481.975317,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
@@ -434,137 +437,137 @@
       ]
     }
   ],
-  "ttm_revenue": 149330117657.1846,
-  "ttm_operating_income": 13068279929.757118,
-  "ttm_net_income": 13307973256.707191,
+  "ttm_revenue": 145395122848.70447,
+  "ttm_operating_income": 8396356992.691755,
+  "ttm_net_income": 14673344573.944807,
   "segment_trend": {
     "China commerce": [
       {
         "period": "FY2023",
-        "value": 85586232908.66614,
+        "value": 84817624540.25447,
         "is_annual": true
       }
     ],
     "International commerce": [
       {
         "period": "FY2023",
-        "value": 10164054533.24318,
+        "value": 10072776098.549366,
         "is_annual": true
       }
     ],
     "Local consumer services": [
       {
         "period": "FY2023",
-        "value": 7359995098.114014,
+        "value": 7293898558.616638,
         "is_annual": true
       }
     ],
     "Cainiao": [
       {
         "period": "FY2023",
-        "value": 8177919202.148914,
+        "value": 8104477283.731103,
         "is_annual": true
       }
     ],
     "Cloud": [
       {
         "period": "FY2023",
-        "value": 11338874951.303005,
+        "value": 11237046025.320889,
         "is_annual": true
       }
     ],
     "Digital media and entertainment": [
       {
         "period": "FY2023",
-        "value": 4623790023.92292,
+        "value": 4582266012.579203,
         "is_annual": true
       }
     ],
     "Taobao and Tmall Group": [
       {
         "period": "FY2024",
-        "value": 59159157633.638016,
+        "value": 55786733802.924774,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 60002570927.38523,
+        "value": 56298252246.599495,
         "is_annual": true
       }
     ],
     "Cloud intelligence group": [
       {
         "period": "FY2024",
-        "value": 14470217350.292166,
+        "value": 13645328900.562483,
         "is_annual": true
       }
     ],
     "International Digital Commerce Group": [
       {
         "period": "FY2024",
-        "value": 13956562315.088984,
+        "value": 13160955257.298866,
         "is_annual": true
       }
     ],
     "Cainiao Smart Logistics Network Limited": [
       {
         "period": "FY2024",
-        "value": 13469841521.668173,
+        "value": 12701980443.846212,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 13508705264.37532,
+        "value": 12674731844.72614,
         "is_annual": true
       }
     ],
     "Local Services Group": [
       {
         "period": "FY2024",
-        "value": 8134957207.420724,
+        "value": 7671216264.420231,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 8947289619.176466,
+        "value": 8394919752.91147,
         "is_annual": true
       }
     ],
     "Hujing Digital Media and Entertainment Group": [
       {
         "period": "FY2024",
-        "value": 2876386578.223324,
+        "value": 2712415436.12531,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 2970202426.355214,
+        "value": 2786834011.242169,
         "is_annual": true
       }
     ],
     "All others": [
       {
         "period": "FY2024",
-        "value": 26163079071.94467,
+        "value": 24671627961.476326,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 27514289499.34269,
+        "value": 25815667340.230427,
         "is_annual": true
       }
     ],
     "Alibaba International Digital Commerce Group": [
       {
         "period": "FY2025",
-        "value": 17647540351.4975,
+        "value": 16558051811.53002,
         "is_annual": true
       }
     ],
     "Cloud Intelligence Group": [
       {
         "period": "FY2025",
-        "value": 15743793594.909653,
+        "value": 14771834763.501625,
         "is_annual": true
       }
     ]
@@ -573,7 +576,6 @@
   "quarterly_count": 5,
   "has_partial_data": true,
   "data_notes": [
-    "Partial data: 3/3 annual, 5/12 quarterly"
-  ],
-  "classification": "INTL_SEC"
+    "Only 3/3 annual reports available"
+  ]
 }

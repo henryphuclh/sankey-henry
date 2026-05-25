@@ -2,6 +2,7 @@
   "ticker": "V",
   "name": "Visa Inc.",
   "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "V",
     "period": "FY2025",
@@ -10,27 +11,35 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "International transaction revenues",
-        "value": 19459459459.45946,
-        "unit": "USD",
-        "period": "2025-09-30 (FY)",
-        "concept": "xbrl_dimension",
+        "segment_name": "Service Revenue",
+        "value": 17539000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       },
       {
-        "segment_name": "Value-Added Services",
-        "value": 14973041656.650297,
-        "unit": "USD",
-        "period": "2025-09-30 (FY)",
-        "concept": "xbrl_dimension",
+        "segment_name": "Data Processing Revenue",
+        "value": 19993000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       },
       {
-        "segment_name": "Other revenues",
-        "value": 5567498883.890244,
-        "unit": "USD",
-        "period": "2025-09-30 (FY)",
-        "concept": "xbrl_dimension",
+        "segment_name": "International Transaction Revenue",
+        "value": 14166000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Client Incentives",
+        "value": -15751000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       }
     ],
@@ -44,7 +53,7 @@
     "interest_expense": null,
     "income_tax": 4136000000.0,
     "currency": "USD",
-    "extraction_method": "xbrl",
+    "extraction_method": "edgar+llm",
     "confidence": 1.0,
     "notes": [
       "EXPENSE_DETAIL:{\"Personnel\": 6961000000.0, \"Technology & Equipment\": 894000000.0, \"Professional Services\": 759000000.0, \"Marketing\": 1684000000.0}"
@@ -59,27 +68,35 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "International transaction revenues",
-          "value": 19459459459.45946,
-          "unit": "USD",
-          "period": "2025-09-30 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Service Revenue",
+          "value": 17539000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Value-Added Services",
-          "value": 14973041656.650297,
-          "unit": "USD",
-          "period": "2025-09-30 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Data Processing Revenue",
+          "value": 19993000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Other revenues",
-          "value": 5567498883.890244,
-          "unit": "USD",
-          "period": "2025-09-30 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "International Transaction Revenue",
+          "value": 14166000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Client Incentives",
+          "value": -15751000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
@@ -93,7 +110,7 @@
       "interest_expense": null,
       "income_tax": 4136000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 6961000000.0, \"Technology & Equipment\": 894000000.0, \"Professional Services\": 759000000.0, \"Marketing\": 1684000000.0}"
@@ -107,27 +124,35 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Service revenues",
+          "segment_name": "Service Revenue",
           "value": 16114000000.0,
-          "unit": "USD",
-          "period": "2024-09-30 (FY)",
-          "concept": "xbrl_dimension",
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "International transaction revenues",
+          "segment_name": "Data Processing Revenue",
+          "value": 17714000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Transaction Revenue",
           "value": 12665000000.0,
-          "unit": "USD",
-          "period": "2024-09-30 (FY)",
-          "concept": "xbrl_dimension",
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Other revenues",
-          "value": 3197000000.0,
-          "unit": "USD",
-          "period": "2024-09-30 (FY)",
-          "concept": "xbrl_dimension",
+          "segment_name": "Client Incentives",
+          "value": -13764000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
@@ -141,7 +166,7 @@
       "interest_expense": null,
       "income_tax": 4173000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 6264000000.0, \"Technology & Equipment\": 778000000.0, \"Professional Services\": 635000000.0, \"Marketing\": 1560000000.0}"
@@ -155,27 +180,35 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Service revenues",
+          "segment_name": "Service Revenues",
           "value": 14826000000.0,
           "unit": "USD",
-          "period": "2023-09-30 (FY)",
-          "concept": "xbrl_dimension",
+          "period": "FY2023",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "International transaction revenues",
+          "segment_name": "Data Processing Revenues",
+          "value": 16007000000.0,
+          "unit": "USD",
+          "period": "FY2023",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "International Transaction Revenues",
           "value": 11638000000.0,
           "unit": "USD",
-          "period": "2023-09-30 (FY)",
-          "concept": "xbrl_dimension",
+          "period": "FY2023",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
-          "segment_name": "Other revenues",
-          "value": 2479000000.0,
+          "segment_name": "Client Incentives",
+          "value": -12297000000.0,
           "unit": "USD",
-          "period": "2023-09-30 (FY)",
-          "concept": "xbrl_dimension",
+          "period": "FY2023",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
@@ -189,7 +222,7 @@
       "interest_expense": null,
       "income_tax": 3764000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 5831000000.0, \"Technology & Equipment\": 736000000.0, \"Professional Services\": 545000000.0, \"Marketing\": 1341000000.0}"
@@ -205,28 +238,36 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "International transaction revenues",
-          "value": 4941962186.4016485,
-          "unit": "USD",
-          "period": "2026-03-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Service Revenue",
+          "value": 4981000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Value-Added Services",
-          "value": 4491455581.14168,
-          "unit": "USD",
-          "period": "2026-03-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Data Processing Revenue",
+          "value": 5543000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Other revenues",
-          "value": 1796582232.456672,
-          "unit": "USD",
-          "period": "2026-03-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "International Transaction Revenue",
+          "value": 3631000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Client Incentives",
+          "value": -4245000000.0,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 11230000000.0,
@@ -239,7 +280,7 @@
       "interest_expense": null,
       "income_tax": 1153000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 1841000000.0, \"Technology & Equipment\": 260000000.0, \"Professional Services\": 238000000.0, \"Marketing\": 545000000.0}"
@@ -253,28 +294,36 @@
       "fiscal_quarter": 4,
       "segments": [
         {
-          "segment_name": "International transaction revenues",
-          "value": 4935587899.826431,
-          "unit": "USD",
-          "period": "2025-12-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Service Revenue",
+          "value": 4760000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Value-Added Services",
-          "value": 4324721051.326555,
-          "unit": "USD",
-          "period": "2025-12-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Data Processing Revenue",
+          "value": 5544000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Other revenues",
-          "value": 1640691048.847012,
-          "unit": "USD",
-          "period": "2025-12-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "International Transaction Revenue",
+          "value": 3652000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Client Incentives",
+          "value": -4269000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 10901000000.0,
@@ -287,7 +336,7 @@
       "interest_expense": null,
       "income_tax": 873000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 1764000000.0, \"Technology & Equipment\": 233000000.0, \"Professional Services\": 208000000.0, \"Marketing\": 410000000.0}"
@@ -322,28 +371,36 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "International transaction revenues",
-          "value": 4953072778.447929,
-          "unit": "USD",
-          "period": "2025-06-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Service Revenue",
+          "value": 4330000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Value-Added Services",
-          "value": 3817397131.751776,
-          "unit": "USD",
-          "period": "2025-06-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Data Processing Revenue",
+          "value": 5153000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Other revenues",
-          "value": 1401530089.8002949,
-          "unit": "USD",
-          "period": "2025-06-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "International Transaction Revenue",
+          "value": 3633000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Client Incentives",
+          "value": -3972000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 10172000000.0,
@@ -356,7 +413,7 @@
       "interest_expense": null,
       "income_tax": 1061000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 1749000000.0, \"Technology & Equipment\": 224000000.0, \"Professional Services\": 187000000.0, \"Marketing\": 421000000.0}"
@@ -370,28 +427,36 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "International transaction revenues",
-          "value": 4624173110.720562,
-          "unit": "USD",
-          "period": "2025-03-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Service Revenue",
+          "value": 4399000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Value-Added Services",
-          "value": 3653251318.1019335,
-          "unit": "USD",
-          "period": "2025-03-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Data Processing Revenue",
+          "value": 4701000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Other revenues",
-          "value": 1316575571.1775043,
-          "unit": "USD",
-          "period": "2025-03-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "International Transaction Revenue",
+          "value": 3291000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Client Incentives",
+          "value": -3734000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 9594000000.0,
@@ -404,7 +469,7 @@
       "interest_expense": null,
       "income_tax": 861000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 1657000000.0, \"Technology & Equipment\": 224000000.0, \"Professional Services\": 173000000.0, \"Marketing\": 381000000.0}"
@@ -418,28 +483,28 @@
       "fiscal_quarter": 4,
       "segments": [
         {
-          "segment_name": "International transaction revenues",
-          "value": 4846523541.604975,
-          "unit": "USD",
-          "period": "2024-12-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Service Revenue",
+          "value": 3228566357.4021783,
+          "unit": "MILLIONS",
+          "period": "2024Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Value-Added Services",
-          "value": 3379330766.952917,
-          "unit": "USD",
-          "period": "2024-12-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Data Processing Revenue",
+          "value": 3640576845.5022187,
+          "unit": "MILLIONS",
+          "period": "2024Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Other revenues",
-          "value": 1284145691.4421084,
-          "unit": "USD",
-          "period": "2024-12-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "International Transaction Revenue",
+          "value": 2640856797.095603,
+          "unit": "MILLIONS",
+          "period": "2024Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 9510000000.0,
@@ -452,7 +517,7 @@
       "interest_expense": null,
       "income_tax": 1081000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 1813000000.0, \"Technology & Equipment\": 207000000.0, \"Professional Services\": 143000000.0, \"Marketing\": 306000000.0}",
@@ -467,28 +532,36 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Service revenues",
+          "segment_name": "Service Revenue",
           "value": 3967000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "International transaction revenues",
+          "segment_name": "Data Processing Revenue",
+          "value": 4489000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "International Transaction Revenue",
           "value": 3194000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Other revenues",
-          "value": 780000000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Client Incentives",
+          "value": -3530000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 8900000000.0,
@@ -501,7 +574,7 @@
       "interest_expense": null,
       "income_tax": 1117000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 1573000000.0, \"Technology & Equipment\": 200000000.0, \"Professional Services\": 152000000.0, \"Marketing\": 378000000.0}",
@@ -516,28 +589,36 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Service revenues",
+          "segment_name": "Service Revenue",
           "value": 4033000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "International transaction revenues",
+          "segment_name": "Data Processing Revenue",
+          "value": 4259000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "International Transaction Revenue",
           "value": 2984000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Other revenues",
-          "value": 756000000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Client Incentives",
+          "value": -3257000000.0,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 8693000000.0,
@@ -550,7 +631,7 @@
       "interest_expense": null,
       "income_tax": 850000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 1603000000.0, \"Technology & Equipment\": 189000000.0, \"Professional Services\": 160000000.0, \"Marketing\": 338000000.0}",
@@ -565,28 +646,28 @@
       "fiscal_quarter": 4,
       "segments": [
         {
-          "segment_name": "Service revenues",
-          "value": 3915000000.0,
+          "segment_name": "Service Revenues",
+          "value": 2929141275.4650135,
           "unit": "USD",
-          "period": "2023-12-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "period": "2023Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "International transaction revenues",
-          "value": 3019000000.0,
+          "segment_name": "Data Processing Revenues",
+          "value": 3259090522.5863595,
           "unit": "USD",
-          "period": "2023-12-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "period": "2023Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Other revenues",
-          "value": 692000000.0,
+          "segment_name": "International Transaction Revenues",
+          "value": 2258768201.948627,
           "unit": "USD",
-          "period": "2023-12-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "period": "2023Q4",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 8447000000.0,
@@ -599,7 +680,7 @@
       "interest_expense": null,
       "income_tax": 1152000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 1479000000.0, \"Technology & Equipment\": 181000000.0, \"Professional Services\": 131000000.0, \"Marketing\": 293000000.0}",
@@ -614,28 +695,36 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Service revenues",
+          "segment_name": "Service Revenues",
           "value": 3668000000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2023Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "International transaction revenues",
+          "segment_name": "Data Processing Revenues",
+          "value": 4105000000.0,
+          "unit": "MILLIONS",
+          "period": "2023Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "International Transaction Revenues",
           "value": 2920000000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "unit": "MILLIONS",
+          "period": "2023Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Other revenues",
-          "value": 597000000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Client Incentives",
+          "value": -3167000000.0,
+          "unit": "MILLIONS",
+          "period": "2023Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 7941000000.0,
@@ -648,7 +737,7 @@
       "interest_expense": null,
       "income_tax": 990000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 1481000000.0, \"Technology & Equipment\": 182000000.0, \"Professional Services\": 133000000.0, \"Marketing\": 297000000.0}",
@@ -660,7 +749,7 @@
   "ttm_operating_income": 27199000000.0,
   "ttm_net_income": 22236000000.0,
   "segment_trend": {
-    "Service revenues": [
+    "Service Revenues": [
       {
         "period": "2023Q2",
         "value": 3668000000.0,
@@ -668,9 +757,102 @@
       },
       {
         "period": "2023Q4",
-        "value": 3915000000.0,
+        "value": 2929141275.4650135,
         "is_annual": false
       },
+      {
+        "period": "FY2023",
+        "value": 14826000000.0,
+        "is_annual": true
+      }
+    ],
+    "Data Processing Revenues": [
+      {
+        "period": "2023Q2",
+        "value": 4105000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 3259090522.5863595,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 16007000000.0,
+        "is_annual": true
+      }
+    ],
+    "International Transaction Revenues": [
+      {
+        "period": "2023Q2",
+        "value": 2920000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q4",
+        "value": 2258768201.948627,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 11638000000.0,
+        "is_annual": true
+      }
+    ],
+    "Client Incentives": [
+      {
+        "period": "2023Q2",
+        "value": -3167000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": -3257000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": -3530000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": -3734000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": -3972000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": -4269000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": -4245000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": -12297000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": -13764000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": -15751000000.0,
+        "is_annual": true
+      }
+    ],
+    "Service Revenue": [
       {
         "period": "2024Q1",
         "value": 4033000000.0,
@@ -682,27 +864,89 @@
         "is_annual": false
       },
       {
-        "period": "FY2023",
-        "value": 14826000000.0,
-        "is_annual": true
+        "period": "2024Q4",
+        "value": 3228566357.4021783,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4399000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4330000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 4760000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 4981000000.0,
+        "is_annual": false
       },
       {
         "period": "FY2024",
         "value": 16114000000.0,
         "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 17539000000.0,
+        "is_annual": true
       }
     ],
-    "International transaction revenues": [
+    "Data Processing Revenue": [
       {
-        "period": "2023Q2",
-        "value": 2920000000.0,
+        "period": "2024Q1",
+        "value": 4259000000.0,
         "is_annual": false
       },
       {
-        "period": "2023Q4",
-        "value": 3019000000.0,
+        "period": "2024Q2",
+        "value": 4489000000.0,
         "is_annual": false
       },
+      {
+        "period": "2024Q4",
+        "value": 3640576845.5022187,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 4701000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 5153000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q4",
+        "value": 5544000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 5543000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2024",
+        "value": 17714000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 19993000000.0,
+        "is_annual": true
+      }
+    ],
+    "International Transaction Revenue": [
       {
         "period": "2024Q1",
         "value": 2984000000.0,
@@ -715,33 +959,28 @@
       },
       {
         "period": "2024Q4",
-        "value": 4846523541.604975,
+        "value": 2640856797.095603,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 4624173110.720562,
+        "value": 3291000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 4953072778.447929,
+        "value": 3633000000.0,
         "is_annual": false
       },
       {
         "period": "2025Q4",
-        "value": 4935587899.826431,
+        "value": 3652000000.0,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 4941962186.4016485,
+        "value": 3631000000.0,
         "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 11638000000.0,
-        "is_annual": true
       },
       {
         "period": "FY2024",
@@ -750,108 +989,15 @@
       },
       {
         "period": "FY2025",
-        "value": 19459459459.45946,
-        "is_annual": true
-      }
-    ],
-    "Other revenues": [
-      {
-        "period": "2023Q2",
-        "value": 597000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q4",
-        "value": 692000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 756000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 780000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q4",
-        "value": 1284145691.4421084,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 1316575571.1775043,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 1401530089.8002949,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q4",
-        "value": 1640691048.847012,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 1796582232.456672,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 2479000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 3197000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 5567498883.890244,
-        "is_annual": true
-      }
-    ],
-    "Value-Added Services": [
-      {
-        "period": "2024Q4",
-        "value": 3379330766.952917,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 3653251318.1019335,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 3817397131.751776,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q4",
-        "value": 4324721051.326555,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 4491455581.14168,
-        "is_annual": false
-      },
-      {
-        "period": "FY2025",
-        "value": 14973041656.650297,
+        "value": 14166000000.0,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

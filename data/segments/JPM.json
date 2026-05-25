@@ -2,6 +2,7 @@
   "ticker": "JPM",
   "name": "JPMorgan Chase & Co.",
   "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "JPM",
     "period": "FY2025",
@@ -11,7 +12,7 @@
     "segments": [
       {
         "segment_name": "CCB",
-        "value": 76029000000.0,
+        "value": 72177179727.45055,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +20,7 @@
       },
       {
         "segment_name": "CIB",
-        "value": 78454000000.0,
+        "value": 74479323131.13951,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -27,7 +28,7 @@
       },
       {
         "segment_name": "Asset & Wealth Management",
-        "value": 24073000000.0,
+        "value": 22853401301.85741,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -35,7 +36,7 @@
       },
       {
         "segment_name": "Corporate",
-        "value": 7025000000.0,
+        "value": 6669095839.552541,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -68,7 +69,7 @@
       "segments": [
         {
           "segment_name": "CCB",
-          "value": 76029000000.0,
+          "value": 72177179727.45055,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -76,7 +77,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 78454000000.0,
+          "value": 74479323131.13951,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -84,7 +85,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 24073000000.0,
+          "value": 22853401301.85741,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -92,7 +93,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 7025000000.0,
+          "value": 6669095839.552541,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -124,7 +125,7 @@
       "segments": [
         {
           "segment_name": "CCB",
-          "value": 71507000000.0,
+          "value": 67899438926.20423,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -132,7 +133,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 70114000000.0,
+          "value": 66576716417.579865,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -140,7 +141,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 21578000000.0,
+          "value": 20489379964.893436,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -148,7 +149,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 17394000000.0,
+          "value": 16516464691.322477,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -180,7 +181,7 @@
       "segments": [
         {
           "segment_name": "Consumer & Community Banking",
-          "value": 70148000000.0,
+          "value": 64623984331.69506,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -188,7 +189,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 48807000000.0,
+          "value": 44963545693.06382,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -196,7 +197,7 @@
         },
         {
           "segment_name": "Commercial Banking",
-          "value": 15546000000.0,
+          "value": 14321783378.293486,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -204,7 +205,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 19827000000.0,
+          "value": 18265663131.443775,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -212,7 +213,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 8038000000.0,
+          "value": 7405023465.503861,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -246,7 +247,7 @@
       "segments": [
         {
           "segment_name": "CCB",
-          "value": 19568000000.0,
+          "value": 18754860851.670097,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -254,7 +255,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 23379000000.0,
+          "value": 22407496517.334175,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -262,7 +263,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 6374000000.0,
+          "value": 6109131391.483298,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -270,7 +271,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 1215000000.0,
+          "value": 1164511239.5124266,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -323,7 +324,7 @@
       "segments": [
         {
           "segment_name": "CCB",
-          "value": 19473000000.0,
+          "value": 18613824129.881157,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -331,7 +332,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 19878000000.0,
+          "value": 19000954966.044144,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -339,7 +340,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 6066000000.0,
+          "value": 5798359634.974533,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -347,7 +348,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 1703000000.0,
+          "value": 1627861269.10017,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -379,7 +380,7 @@
       "segments": [
         {
           "segment_name": "CCB",
-          "value": 18847000000.0,
+          "value": 17896398248.686516,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -387,7 +388,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 19535000000.0,
+          "value": 18549697022.767075,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -395,7 +396,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 5760000000.0,
+          "value": 5469478108.581436,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -403,7 +404,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 1538000000.0,
+          "value": 1460426619.9649737,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -435,7 +436,7 @@
       "segments": [
         {
           "segment_name": "CCB",
-          "value": 18313000000.0,
+          "value": 17472450254.27044,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -443,7 +444,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 19666000000.0,
+          "value": 18763348806.88486,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -451,7 +452,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 5731000000.0,
+          "value": 5467952405.789542,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -459,7 +460,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 2304000000.0,
+          "value": 2198248533.055157,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -491,7 +492,7 @@
       "segments": [
         {
           "segment_name": "Consumer & Community Banking",
-          "value": 17791000000.0,
+          "value": 16976511878.102274,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -499,7 +500,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 17015000000.0,
+          "value": 16236037862.172459,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -507,7 +508,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 5439000000.0,
+          "value": 5189997645.157567,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -515,7 +516,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 3070000000.0,
+          "value": 2929452614.567702,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -548,7 +549,7 @@
       "segments": [
         {
           "segment_name": "Consumer & Community Banking",
-          "value": 17701000000.0,
+          "value": 16876212268.591152,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -556,7 +557,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 17917000000.0,
+          "value": 17082147631.000942,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -564,7 +565,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 5252000000.0,
+          "value": 5007280200.815814,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -572,7 +573,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 10122000000.0,
+          "value": 9650359899.592093,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -605,7 +606,7 @@
       "segments": [
         {
           "segment_name": "Consumer & Community Banking",
-          "value": 17653000000.0,
+          "value": 16780305396.63265,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -613,7 +614,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 13633000000.0,
+          "value": 12959038320.528688,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -621,7 +622,7 @@
         },
         {
           "segment_name": "Commercial Banking",
-          "value": 3951000000.0,
+          "value": 3755678163.603671,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -629,7 +630,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 5109000000.0,
+          "value": 4856431216.869439,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -637,7 +638,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 2202000000.0,
+          "value": 2354546902.3655515,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -670,7 +671,7 @@
       "segments": [
         {
           "segment_name": "Consumer & Community Banking",
-          "value": 18362000000.0,
+          "value": 17084150227.433048,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -678,7 +679,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 11730000000.0,
+          "value": 10913684901.851086,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -686,7 +687,7 @@
         },
         {
           "segment_name": "Commercial Banking",
-          "value": 4031000000.0,
+          "value": 3750474325.6062856,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -694,7 +695,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 5005000000.0,
+          "value": 4656691639.707134,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -702,7 +703,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 1558000000.0,
+          "value": 1844998905.402447,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -735,7 +736,7 @@
       "segments": [
         {
           "segment_name": "Consumer & Community Banking",
-          "value": 17233000000.0,
+          "value": 15899099714.629372,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -743,7 +744,7 @@
         },
         {
           "segment_name": "CIB",
-          "value": 12519000000.0,
+          "value": 11549981391.948303,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -751,7 +752,7 @@
         },
         {
           "segment_name": "Commercial Banking",
-          "value": 3988000000.0,
+          "value": 3679313506.756916,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -759,7 +760,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 4943000000.0,
+          "value": 4560392844.508385,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -767,7 +768,7 @@
         },
         {
           "segment_name": "Corporate",
-          "value": 3718000000.0,
+          "value": 3430212542.1570244,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -799,279 +800,280 @@
     "Consumer & Community Banking": [
       {
         "period": "2023Q2",
-        "value": 17233000000.0,
+        "value": 15899099714.629372,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 18362000000.0,
+        "value": 17084150227.433048,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 17653000000.0,
+        "value": 16780305396.63265,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 17701000000.0,
+        "value": 16876212268.591152,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 17791000000.0,
+        "value": 16976511878.102274,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 70148000000.0,
+        "value": 64623984331.69506,
         "is_annual": true
       }
     ],
     "CIB": [
       {
         "period": "2023Q2",
-        "value": 12519000000.0,
+        "value": 11549981391.948303,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 11730000000.0,
+        "value": 10913684901.851086,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 13633000000.0,
+        "value": 12959038320.528688,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 17917000000.0,
+        "value": 17082147631.000942,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 17015000000.0,
+        "value": 16236037862.172459,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 19666000000.0,
+        "value": 18763348806.88486,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 19535000000.0,
+        "value": 18549697022.767075,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 19878000000.0,
+        "value": 19000954966.044144,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 23379000000.0,
+        "value": 22407496517.334175,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 48807000000.0,
+        "value": 44963545693.06382,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 70114000000.0,
+        "value": 66576716417.579865,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 78454000000.0,
+        "value": 74479323131.13951,
         "is_annual": true
       }
     ],
     "Commercial Banking": [
       {
         "period": "2023Q2",
-        "value": 3988000000.0,
+        "value": 3679313506.756916,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 4031000000.0,
+        "value": 3750474325.6062856,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 3951000000.0,
+        "value": 3755678163.603671,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 15546000000.0,
+        "value": 14321783378.293486,
         "is_annual": true
       }
     ],
     "Asset & Wealth Management": [
       {
         "period": "2023Q2",
-        "value": 4943000000.0,
+        "value": 4560392844.508385,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 5005000000.0,
+        "value": 4656691639.707134,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 5109000000.0,
+        "value": 4856431216.869439,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 5252000000.0,
+        "value": 5007280200.815814,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 5439000000.0,
+        "value": 5189997645.157567,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 5731000000.0,
+        "value": 5467952405.789542,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 5760000000.0,
+        "value": 5469478108.581436,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 6066000000.0,
+        "value": 5798359634.974533,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 6374000000.0,
+        "value": 6109131391.483298,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 19827000000.0,
+        "value": 18265663131.443775,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 21578000000.0,
+        "value": 20489379964.893436,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 24073000000.0,
+        "value": 22853401301.85741,
         "is_annual": true
       }
     ],
     "Corporate": [
       {
         "period": "2023Q2",
-        "value": 3718000000.0,
+        "value": 3430212542.1570244,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 1558000000.0,
+        "value": 1844998905.402447,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 2202000000.0,
+        "value": 2354546902.3655515,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 10122000000.0,
+        "value": 9650359899.592093,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 3070000000.0,
+        "value": 2929452614.567702,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 2304000000.0,
+        "value": 2198248533.055157,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 1538000000.0,
+        "value": 1460426619.9649737,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 1703000000.0,
+        "value": 1627861269.10017,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 1215000000.0,
+        "value": 1164511239.5124266,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 8038000000.0,
+        "value": 7405023465.503861,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 17394000000.0,
+        "value": 16516464691.322477,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 7025000000.0,
+        "value": 6669095839.552541,
         "is_annual": true
       }
     ],
     "CCB": [
       {
         "period": "2025Q1",
-        "value": 18313000000.0,
+        "value": 17472450254.27044,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 18847000000.0,
+        "value": 17896398248.686516,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 19473000000.0,
+        "value": 18613824129.881157,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 19568000000.0,
+        "value": 18754860851.670097,
         "is_annual": false
       },
       {
         "period": "FY2024",
-        "value": 71507000000.0,
+        "value": 67899438926.20423,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 76029000000.0,
+        "value": 72177179727.45055,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

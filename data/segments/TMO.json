@@ -2,6 +2,7 @@
   "ticker": "TMO",
   "name": "Thermo Fisher Scientific",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "TMO",
     "period": "FY2025",
@@ -11,7 +12,7 @@
     "segments": [
       {
         "segment_name": "Life Sciences Solutions",
-        "value": 8781000000.0,
+        "value": 8545491987.611096,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +20,7 @@
       },
       {
         "segment_name": "Analytical Instruments",
-        "value": 7353000000.0,
+        "value": 7155791206.571506,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -27,7 +28,7 @@
       },
       {
         "segment_name": "Specialty Diagnostics",
-        "value": 4604000000.0,
+        "value": 4480519885.0884285,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -35,7 +36,7 @@
       },
       {
         "segment_name": "Laboratory Products and Biopharma Services",
-        "value": 23818000000.0,
+        "value": 23179196920.72897,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -49,8 +50,8 @@
     "rd_expense": 1397000000.0,
     "sga_expense": 8732000000.0,
     "cogs": 26318000000.0,
-    "interest_expense": -1419000000.0,
-    "income_tax": -547000000.0,
+    "interest_expense": 1419000000.0,
+    "income_tax": 547000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
@@ -68,7 +69,7 @@
       "segments": [
         {
           "segment_name": "Life Sciences Solutions",
-          "value": 8781000000.0,
+          "value": 8545491987.611096,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -76,7 +77,7 @@
         },
         {
           "segment_name": "Analytical Instruments",
-          "value": 7353000000.0,
+          "value": 7155791206.571506,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -84,7 +85,7 @@
         },
         {
           "segment_name": "Specialty Diagnostics",
-          "value": 4604000000.0,
+          "value": 4480519885.0884285,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -92,7 +93,7 @@
         },
         {
           "segment_name": "Laboratory Products and Biopharma Services",
-          "value": 23818000000.0,
+          "value": 23179196920.72897,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -106,8 +107,8 @@
       "rd_expense": 1397000000.0,
       "sga_expense": 8732000000.0,
       "cogs": 26318000000.0,
-      "interest_expense": -1419000000.0,
-      "income_tax": -547000000.0,
+      "interest_expense": 1419000000.0,
+      "income_tax": 547000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -162,8 +163,8 @@
       "rd_expense": 1390000000.0,
       "sga_expense": 8595000000.0,
       "cogs": 25177000000.0,
-      "interest_expense": -1390000000.0,
-      "income_tax": -657000000.0,
+      "interest_expense": 1390000000.0,
+      "income_tax": 657000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -179,14 +180,6 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Service revenues",
-          "value": 17614000000.0,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Consumables",
           "value": 17597000000.0,
           "unit": "USD",
@@ -201,6 +194,14 @@
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Service revenues",
+          "value": 17614000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 42857000000.0,
@@ -210,8 +211,8 @@
       "rd_expense": 1337000000.0,
       "sga_expense": 8445000000.0,
       "cogs": 25757000000.0,
-      "interest_expense": -1375000000.0,
-      "income_tax": -284000000.0,
+      "interest_expense": 1375000000.0,
+      "income_tax": 284000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -230,7 +231,7 @@
       "segments": [
         {
           "segment_name": "Life Sciences Solutions",
-          "value": 2219000000.0,
+          "value": 2158710949.568378,
           "unit": "USD",
           "period": "2026-03-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -238,7 +239,7 @@
         },
         {
           "segment_name": "Analytical Instruments",
-          "value": 1667000000.0,
+          "value": 1621708496.138119,
           "unit": "USD",
           "period": "2026-03-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -246,7 +247,7 @@
         },
         {
           "segment_name": "Specialty Diagnostics",
-          "value": 1124000000.0,
+          "value": 1093461517.492049,
           "unit": "USD",
           "period": "2026-03-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -254,7 +255,7 @@
         },
         {
           "segment_name": "Laboratory Products and Biopharma Services",
-          "value": 5995000000.0,
+          "value": 5832119036.801454,
           "unit": "USD",
           "period": "2026-03-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -268,8 +269,8 @@
       "rd_expense": 336000000.0,
       "sga_expense": 2181000000.0,
       "cogs": 6575000000.0,
-      "interest_expense": -354000000.0,
-      "income_tax": -70000000.0,
+      "interest_expense": 354000000.0,
+      "income_tax": 70000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -307,7 +308,7 @@
       "segments": [
         {
           "segment_name": "Life Sciences Solutions",
-          "value": 2194000000.0,
+          "value": 2135609063.1181443,
           "unit": "USD",
           "period": "2025-09-27 (Q3)",
           "concept": "xbrl_dimension",
@@ -315,7 +316,7 @@
         },
         {
           "segment_name": "Analytical Instruments",
-          "value": 1847000000.0,
+          "value": 1797844092.7890668,
           "unit": "USD",
           "period": "2025-09-27 (Q3)",
           "concept": "xbrl_dimension",
@@ -323,7 +324,7 @@
         },
         {
           "segment_name": "Specialty Diagnostics",
-          "value": 1154000000.0,
+          "value": 1123287538.2125518,
           "unit": "USD",
           "period": "2025-09-27 (Q3)",
           "concept": "xbrl_dimension",
@@ -331,7 +332,7 @@
         },
         {
           "segment_name": "Laboratory Products and Biopharma Services",
-          "value": 5927000000.0,
+          "value": 5769259305.880238,
           "unit": "USD",
           "period": "2025-09-27 (Q3)",
           "concept": "xbrl_dimension",
@@ -345,8 +346,8 @@
       "rd_expense": 346000000.0,
       "sga_expense": 2162000000.0,
       "cogs": 6539000000.0,
-      "interest_expense": -347000000.0,
-      "income_tax": -207000000.0,
+      "interest_expense": 347000000.0,
+      "income_tax": 207000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -401,8 +402,8 @@
       "rd_expense": 352000000.0,
       "sga_expense": 2140000000.0,
       "cogs": 6446000000.0,
-      "interest_expense": -404000000.0,
-      "income_tax": -92000000.0,
+      "interest_expense": 404000000.0,
+      "income_tax": 92000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -457,8 +458,8 @@
       "rd_expense": 342000000.0,
       "sga_expense": 2078000000.0,
       "cogs": 6129000000.0,
-      "interest_expense": -303000000.0,
-      "income_tax": -95000000.0,
+      "interest_expense": 303000000.0,
+      "income_tax": 95000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -474,14 +475,6 @@
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Services",
-          "value": 4450000000.0,
-          "unit": "USD",
-          "period": "2024-09-28 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Consumables",
           "value": 4379000000.0,
           "unit": "USD",
@@ -496,6 +489,14 @@
           "period": "2024-09-28 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 4450000000.0,
+          "unit": "USD",
+          "period": "2024-09-28 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 10598000000.0,
@@ -505,8 +506,8 @@
       "rd_expense": 346000000.0,
       "sga_expense": 2098000000.0,
       "cogs": 6270000000.0,
-      "interest_expense": -356000000.0,
-      "income_tax": -99000000.0,
+      "interest_expense": 356000000.0,
+      "income_tax": 99000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -523,14 +524,6 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Service revenues",
-          "value": 4378000000.0,
-          "unit": "USD",
-          "period": "2024-06-29 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Consumables",
           "value": 4363000000.0,
           "unit": "USD",
@@ -545,6 +538,14 @@
           "period": "2024-06-29 (Q2)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Service revenues",
+          "value": 4378000000.0,
+          "unit": "USD",
+          "period": "2024-06-29 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 10541000000.0,
@@ -554,8 +555,8 @@
       "rd_expense": 339000000.0,
       "sga_expense": 2111000000.0,
       "cogs": 6194000000.0,
-      "interest_expense": -354000000.0,
-      "income_tax": -128000000.0,
+      "interest_expense": 354000000.0,
+      "income_tax": 128000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -572,14 +573,6 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Service revenues",
-          "value": 4390000000.0,
-          "unit": "USD",
-          "period": "2024-03-30 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Consumables",
           "value": 4328000000.0,
           "unit": "USD",
@@ -594,6 +587,14 @@
           "period": "2024-03-30 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Service revenues",
+          "value": 4390000000.0,
+          "unit": "USD",
+          "period": "2024-03-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 10345000000.0,
@@ -603,8 +604,8 @@
       "rd_expense": 331000000.0,
       "sga_expense": 2183000000.0,
       "cogs": 6140000000.0,
-      "interest_expense": -363000000.0,
-      "income_tax": -281000000.0,
+      "interest_expense": 363000000.0,
+      "income_tax": 281000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -629,16 +630,16 @@
           "is_annual": true
         },
         {
-          "segment_name": "Service revenues",
-          "value": 4416000000.0,
+          "segment_name": "Instruments",
+          "value": 1838000000.0,
           "unit": "USD",
           "period": "2023-07-01 (Q3)",
           "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
-          "segment_name": "Instruments",
-          "value": 1838000000.0,
+          "segment_name": "Service revenues",
+          "value": 4416000000.0,
           "unit": "USD",
           "period": "2023-07-01 (Q3)",
           "concept": "xbrl_dimension",
@@ -652,8 +653,8 @@
       "rd_expense": 345000000.0,
       "sga_expense": 2145000000.0,
       "cogs": 6436000000.0,
-      "interest_expense": -326000000.0,
-      "income_tax": -52000000.0,
+      "interest_expense": 326000000.0,
+      "income_tax": 52000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -694,28 +695,6 @@
         "is_annual": true
       }
     ],
-    "Service revenues": [
-      {
-        "period": "2023Q3",
-        "value": 4416000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 4390000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 4378000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 17614000000.0,
-        "is_annual": true
-      }
-    ],
     "Instruments": [
       {
         "period": "2023Q3",
@@ -743,6 +722,28 @@
         "is_annual": true
       }
     ],
+    "Service revenues": [
+      {
+        "period": "2023Q3",
+        "value": 4416000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 4390000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4378000000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 17614000000.0,
+        "is_annual": true
+      }
+    ],
     "Services": [
       {
         "period": "2024Q3",
@@ -763,12 +764,12 @@
       },
       {
         "period": "2025Q3",
-        "value": 2194000000.0,
+        "value": 2135609063.1181443,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 2219000000.0,
+        "value": 2158710949.568378,
         "is_annual": false
       },
       {
@@ -778,7 +779,7 @@
       },
       {
         "period": "FY2025",
-        "value": 8781000000.0,
+        "value": 8545491987.611096,
         "is_annual": true
       }
     ],
@@ -795,12 +796,12 @@
       },
       {
         "period": "2025Q3",
-        "value": 1847000000.0,
+        "value": 1797844092.7890668,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 1667000000.0,
+        "value": 1621708496.138119,
         "is_annual": false
       },
       {
@@ -810,7 +811,7 @@
       },
       {
         "period": "FY2025",
-        "value": 7353000000.0,
+        "value": 7155791206.571506,
         "is_annual": true
       }
     ],
@@ -827,12 +828,12 @@
       },
       {
         "period": "2025Q3",
-        "value": 1154000000.0,
+        "value": 1123287538.2125518,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 1124000000.0,
+        "value": 1093461517.492049,
         "is_annual": false
       },
       {
@@ -842,7 +843,7 @@
       },
       {
         "period": "FY2025",
-        "value": 4604000000.0,
+        "value": 4480519885.0884285,
         "is_annual": true
       }
     ],
@@ -859,12 +860,12 @@
       },
       {
         "period": "2025Q3",
-        "value": 5927000000.0,
+        "value": 5769259305.880238,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 5995000000.0,
+        "value": 5832119036.801454,
         "is_annual": false
       },
       {
@@ -874,14 +875,15 @@
       },
       {
         "period": "FY2025",
-        "value": 23818000000.0,
+        "value": 23179196920.72897,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 9,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

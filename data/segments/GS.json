@@ -2,6 +2,7 @@
   "ticker": "GS",
   "name": "Goldman Sachs Group Inc.",
   "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "GS",
     "period": "FY2025",
@@ -11,7 +12,7 @@
     "segments": [
       {
         "segment_name": "Global Banking & Markets",
-        "value": 41453000000.0,
+        "value": 39607941227.58123,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +20,7 @@
       },
       {
         "segment_name": "Asset & Wealth Management",
-        "value": 16679000000.0,
+        "value": 15936623446.670382,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -27,7 +28,7 @@
       },
       {
         "segment_name": "Platform Solutions",
-        "value": 1380000000.0,
+        "value": 2738435325.748385,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -60,7 +61,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 41453000000.0,
+          "value": 39607941227.58123,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -68,7 +69,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 16679000000.0,
+          "value": 15936623446.670382,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -76,7 +77,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 1380000000.0,
+          "value": 2738435325.748385,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -108,7 +109,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 34943000000.0,
+          "value": 33969337986.651833,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -116,7 +117,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 16142000000.0,
+          "value": 15692214571.746384,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -124,7 +125,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 2427000000.0,
+          "value": 2775447441.6017795,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -156,7 +157,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 29996000000.0,
+          "value": 28527087748.9745,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -164,7 +165,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 13880000000.0,
+          "value": 13200292637.543875,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -172,7 +173,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 3418000000.0,
+          "value": 3250619613.4816256,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -206,7 +207,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 12738000000.0,
+          "value": 12552198032.261755,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -214,7 +215,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 4078000000.0,
+          "value": 4018516531.289326,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -222,7 +223,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 411000000.0,
+          "value": 656285436.4489189,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -275,7 +276,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 10115000000.0,
+          "value": 9999456592.689295,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -283,7 +284,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 4399000000.0,
+          "value": 4348750326.370757,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -291,7 +292,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 670000000.0,
+          "value": 796793080.9399477,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -323,7 +324,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 10120000000.0,
+          "value": 10014518700.183937,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -331,7 +332,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 3778000000.0,
+          "value": 3738621704.475782,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -339,7 +340,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 685000000.0,
+          "value": 772859595.3402821,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -371,7 +372,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 10707000000.0,
+          "value": 10641997756.367956,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -379,7 +380,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 3679000000.0,
+          "value": 3656664774.976904,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -387,7 +388,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 676000000.0,
+          "value": 763337468.6551405,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -419,7 +420,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 8554000000.0,
+          "value": 7956294820.717132,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -427,7 +428,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 3754000000.0,
+          "value": 3491691694.7594237,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -435,7 +436,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 498000000.0,
+          "value": 692013484.5234447,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -468,7 +469,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 8184000000.0,
+          "value": 8067323828.92057,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -476,7 +477,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 3878000000.0,
+          "value": 3822712830.95723,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -484,7 +485,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 669000000.0,
+          "value": 693963340.1221995,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -517,7 +518,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 9726000000.0,
+          "value": 9645936536.973194,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -525,7 +526,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 3789000000.0,
+          "value": 3757809329.4870896,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -533,7 +534,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 698000000.0,
+          "value": 692254133.5397172,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -566,7 +567,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 8009000000.0,
+          "value": 7548211730.815395,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -574,7 +575,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 3230000000.0,
+          "value": 3044165799.79195,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -582,7 +583,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 1258000000.0,
+          "value": 1185622469.3926542,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -615,7 +616,7 @@
       "segments": [
         {
           "segment_name": "Global Banking & Markets",
-          "value": 7189000000.0,
+          "value": 6487741332.634705,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -623,7 +624,7 @@
         },
         {
           "segment_name": "Asset & Wealth Management",
-          "value": 3275000000.0,
+          "value": 2955536634.355078,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -631,7 +632,7 @@
         },
         {
           "segment_name": "Platform Solutions",
-          "value": 987000000.0,
+          "value": 890722033.0102174,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -663,193 +664,194 @@
     "Global Banking & Markets": [
       {
         "period": "2023Q2",
-        "value": 7189000000.0,
+        "value": 6487741332.634705,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 8009000000.0,
+        "value": 7548211730.815395,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 9726000000.0,
+        "value": 9645936536.973194,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 8184000000.0,
+        "value": 8067323828.92057,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 8554000000.0,
+        "value": 7956294820.717132,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 10707000000.0,
+        "value": 10641997756.367956,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 10120000000.0,
+        "value": 10014518700.183937,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 10115000000.0,
+        "value": 9999456592.689295,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 12738000000.0,
+        "value": 12552198032.261755,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 29996000000.0,
+        "value": 28527087748.9745,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 34943000000.0,
+        "value": 33969337986.651833,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 41453000000.0,
+        "value": 39607941227.58123,
         "is_annual": true
       }
     ],
     "Asset & Wealth Management": [
       {
         "period": "2023Q2",
-        "value": 3275000000.0,
+        "value": 2955536634.355078,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 3230000000.0,
+        "value": 3044165799.79195,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 3789000000.0,
+        "value": 3757809329.4870896,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 3878000000.0,
+        "value": 3822712830.95723,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 3754000000.0,
+        "value": 3491691694.7594237,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 3679000000.0,
+        "value": 3656664774.976904,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 3778000000.0,
+        "value": 3738621704.475782,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 4399000000.0,
+        "value": 4348750326.370757,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 4078000000.0,
+        "value": 4018516531.289326,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 13880000000.0,
+        "value": 13200292637.543875,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 16142000000.0,
+        "value": 15692214571.746384,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 16679000000.0,
+        "value": 15936623446.670382,
         "is_annual": true
       }
     ],
     "Platform Solutions": [
       {
         "period": "2023Q2",
-        "value": 987000000.0,
+        "value": 890722033.0102174,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 1258000000.0,
+        "value": 1185622469.3926542,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 698000000.0,
+        "value": 692254133.5397172,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 669000000.0,
+        "value": 693963340.1221995,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 498000000.0,
+        "value": 692013484.5234447,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 676000000.0,
+        "value": 763337468.6551405,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 685000000.0,
+        "value": 772859595.3402821,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 670000000.0,
+        "value": 796793080.9399477,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 411000000.0,
+        "value": 656285436.4489189,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 3418000000.0,
+        "value": 3250619613.4816256,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 2427000000.0,
+        "value": 2775447441.6017795,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 1380000000.0,
+        "value": 2738435325.748385,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

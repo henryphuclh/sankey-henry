@@ -536,6 +536,8 @@ def _parse_bank_concepts(
         if existing is None or abs(fval) > abs(existing):
             result[field_name] = fval
 
+    return result
+
 
 # ── Yahoo Finance field resolution for bank / insurance ───────────────────────
 

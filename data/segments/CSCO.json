@@ -2,6 +2,7 @@
   "ticker": "CSCO",
   "name": "Cisco Systems Inc.",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "CSCO",
     "period": "FY2025",
@@ -57,7 +58,7 @@
     "rd_expense": 9300000000.0,
     "sga_expense": 13958000000.0,
     "cogs": 19864000000.0,
-    "interest_expense": -1593000000.0,
+    "interest_expense": 1593000000.0,
     "income_tax": 920000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -120,7 +121,7 @@
       "rd_expense": 9300000000.0,
       "sga_expense": 13958000000.0,
       "cogs": 19864000000.0,
-      "interest_expense": -1593000000.0,
+      "interest_expense": 1593000000.0,
       "income_tax": 920000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -182,7 +183,7 @@
       "rd_expense": 7983000000.0,
       "sga_expense": 13177000000.0,
       "cogs": 18975000000.0,
-      "interest_expense": -1006000000.0,
+      "interest_expense": 1006000000.0,
       "income_tax": 1914000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -212,7 +213,7 @@
       "rd_expense": 7551000000.0,
       "sga_expense": 12358000000.0,
       "cogs": 21245000000.0,
-      "interest_expense": -427000000.0,
+      "interest_expense": 427000000.0,
       "income_tax": 2705000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -221,6 +222,27 @@
     }
   ],
   "quarterly_periods": [
+    {
+      "ticker": "CSCO",
+      "period": "2026Q2",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": 15841000000.0,
+      "gross_profit": 10080000000.0,
+      "operating_income": 3959000000.0,
+      "net_income": 3373000000.0,
+      "rd_expense": 2377000000.0,
+      "sga_expense": 3516000000.0,
+      "cogs": 5761000000.0,
+      "interest_expense": 377000000.0,
+      "income_tax": 666000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
     {
       "ticker": "CSCO",
       "period": "2026Q1",
@@ -276,7 +298,7 @@
       "rd_expense": 2355000000.0,
       "sga_expense": 3569000000.0,
       "cogs": 5377000000.0,
-      "interest_expense": -370000000.0,
+      "interest_expense": 370000000.0,
       "income_tax": 471000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -338,7 +360,7 @@
       "rd_expense": 2400000000.0,
       "sga_expense": 3604000000.0,
       "cogs": 5138000000.0,
-      "interest_expense": -350000000.0,
+      "interest_expense": 350000000.0,
       "income_tax": 531000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -421,7 +443,7 @@
       "rd_expense": 2335000000.0,
       "sga_expense": 3463000000.0,
       "cogs": 4871000000.0,
-      "interest_expense": -403000000.0,
+      "interest_expense": 403000000.0,
       "income_tax": 456000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -483,12 +505,14 @@
       "rd_expense": 2299000000.0,
       "sga_expense": 3424000000.0,
       "cogs": 4880000000.0,
-      "interest_expense": -404000000.0,
+      "interest_expense": 404000000.0,
       "income_tax": 459000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "Warning: total_revenue (13991000000) differs from Yahoo (56654000000) by 75.3%"
+      ]
     },
     {
       "ticker": "CSCO",
@@ -545,8 +569,8 @@
       "rd_expense": 2286000000.0,
       "sga_expense": 3547000000.0,
       "cogs": 4720000000.0,
-      "interest_expense": -418000000.0,
-      "income_tax": -444000000.0,
+      "interest_expense": 418000000.0,
+      "income_tax": 444000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -577,7 +601,7 @@
       "rd_expense": 1948000000.0,
       "sga_expense": 3295000000.0,
       "cogs": 4429000000.0,
-      "interest_expense": -357000000.0,
+      "interest_expense": 357000000.0,
       "income_tax": 349000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -609,7 +633,7 @@
       "rd_expense": 1943000000.0,
       "sga_expense": 3100000000.0,
       "cogs": 4574000000.0,
-      "interest_expense": -120000000.0,
+      "interest_expense": 120000000.0,
       "income_tax": 527000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -641,7 +665,7 @@
       "rd_expense": 1913000000.0,
       "sga_expense": 3178000000.0,
       "cogs": 5111000000.0,
-      "interest_expense": -111000000.0,
+      "interest_expense": 111000000.0,
       "income_tax": 804000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -673,7 +697,7 @@
       "rd_expense": 1962000000.0,
       "sga_expense": 3167000000.0,
       "cogs": 5339000000.0,
-      "interest_expense": -109000000.0,
+      "interest_expense": 109000000.0,
       "income_tax": 745000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -683,9 +707,9 @@
       ]
     }
   ],
-  "ttm_revenue": 59054000000.0,
-  "ttm_operating_income": 13468000000.0,
-  "ttm_net_income": 11076000000.0,
+  "ttm_revenue": 60746000000.0,
+  "ttm_operating_income": 14225000000.0,
+  "ttm_net_income": 11958000000.0,
   "segment_trend": {
     "APJC": [
       {
@@ -903,8 +927,9 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "quarterly_count": 11,
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

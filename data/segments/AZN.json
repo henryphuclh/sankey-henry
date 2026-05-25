@@ -2,6 +2,7 @@
   "ticker": "AZN",
   "name": "AstraZeneca PLC",
   "sector": "pharma",
+  "classification": "",
   "latest_annual": {
     "ticker": "AZN",
     "period": "FY2025",
@@ -1612,7 +1613,6 @@
   "quarterly_count": 5,
   "has_partial_data": true,
   "data_notes": [
-    "Partial data: 3/3 annual, 5/12 quarterly"
-  ],
-  "classification": "INTL_SEC"
+    "Only 3/3 annual reports available"
+  ]
 }

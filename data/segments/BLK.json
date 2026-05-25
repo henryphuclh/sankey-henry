@@ -2,6 +2,7 @@
   "ticker": "BLK",
   "name": "BlackRock Inc.",
   "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "BLK",
     "period": "FY2025",
@@ -476,27 +477,6 @@
     },
     {
       "ticker": "BLK",
-      "period": "2024Q4",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": 5677000000.0,
-      "gross_profit": 2796000000.0,
-      "operating_income": 2040000000.0,
-      "net_income": 1670000000.0,
-      "rd_expense": null,
-      "sga_expense": 631000000.0,
-      "cogs": 2881000000.0,
-      "interest_expense": 166000000.0,
-      "income_tax": 442000000.0,
-      "currency": "USD",
-      "extraction_method": "yahoo_quarterly",
-      "confidence": 0.55,
-      "notes": []
-    },
-    {
-      "ticker": "BLK",
       "period": "2024Q3",
       "is_annual": false,
       "fiscal_year": 2024,
@@ -756,10 +736,9 @@
     ]
   },
   "annual_count": 2,
-  "quarterly_count": 7,
+  "quarterly_count": 6,
   "has_partial_data": true,
   "data_notes": [
     "Only 2/3 annual reports available"
-  ],
-  "classification": "US_SEC"
+  ]
 }

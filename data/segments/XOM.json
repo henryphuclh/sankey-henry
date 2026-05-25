@@ -2,6 +2,7 @@
   "ticker": "XOM",
   "name": "Exxon Mobil Corporation",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "XOM",
     "period": "FY2025",
@@ -222,7 +223,7 @@
       "segments": [
         {
           "segment_name": "Upstream",
-          "value": 15043000000.0,
+          "value": 12071434681.797617,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -230,7 +231,7 @@
         },
         {
           "segment_name": "Energy Products",
-          "value": 13781000000.0,
+          "value": 11058727737.143719,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -238,7 +239,7 @@
         },
         {
           "segment_name": "Chemical Products",
-          "value": 32474000000.0,
+          "value": 26059148431.609108,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -246,7 +247,7 @@
         },
         {
           "segment_name": "Specialty Products",
-          "value": 44798000000.0,
+          "value": 35948689149.449554,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -1162,7 +1163,7 @@
       },
       {
         "period": "2026Q1",
-        "value": 13781000000.0,
+        "value": 11058727737.143719,
         "is_annual": false
       },
       {
@@ -1194,7 +1195,7 @@
       },
       {
         "period": "2026Q1",
-        "value": 32474000000.0,
+        "value": 26059148431.609108,
         "is_annual": false
       },
       {
@@ -1226,7 +1227,7 @@
       },
       {
         "period": "2026Q1",
-        "value": 44798000000.0,
+        "value": 35948689149.449554,
         "is_annual": false
       },
       {
@@ -1257,7 +1258,7 @@
     "Upstream": [
       {
         "period": "2026Q1",
-        "value": 15043000000.0,
+        "value": 12071434681.797617,
         "is_annual": false
       },
       {
@@ -1279,7 +1280,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

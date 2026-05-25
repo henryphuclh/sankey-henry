@@ -2,6 +2,7 @@
   "ticker": "KO",
   "name": "Coca-Cola Company",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "KO",
     "period": "FY2025",
@@ -11,7 +12,7 @@
     "segments": [
       {
         "segment_name": "EMEA",
-        "value": 11513000000.0,
+        "value": 11274983833.954842,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +20,7 @@
       },
       {
         "segment_name": "Latin America",
-        "value": 6334000000.0,
+        "value": 6203052862.352989,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -27,7 +28,7 @@
       },
       {
         "segment_name": "North America",
-        "value": 19586000000.0,
+        "value": 19181085153.464737,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -35,7 +36,7 @@
       },
       {
         "segment_name": "Asia Pacific",
-        "value": 5638000000.0,
+        "value": 5521441748.965291,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -43,7 +44,7 @@
       },
       {
         "segment_name": "Bottling Investments",
-        "value": 5735000000.0,
+        "value": 5616436401.262139,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -74,7 +75,7 @@
       "segments": [
         {
           "segment_name": "EMEA",
-          "value": 11513000000.0,
+          "value": 11274983833.954842,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -82,7 +83,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 6334000000.0,
+          "value": 6203052862.352989,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -90,7 +91,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 19586000000.0,
+          "value": 19181085153.464737,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -98,7 +99,7 @@
         },
         {
           "segment_name": "Asia Pacific",
-          "value": 5638000000.0,
+          "value": 5521441748.965291,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -106,7 +107,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 5735000000.0,
+          "value": 5616436401.262139,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -136,7 +137,7 @@
       "segments": [
         {
           "segment_name": "EMEA",
-          "value": 8122000000.0,
+          "value": 7925960435.458787,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -144,7 +145,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 6459000000.0,
+          "value": 6303100031.104199,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -152,7 +153,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 18649000000.0,
+          "value": 18198871726.28305,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -160,7 +161,7 @@
         },
         {
           "segment_name": "Asia Pacific",
-          "value": 5546000000.0,
+          "value": 5412136982.892691,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -168,7 +169,7 @@
         },
         {
           "segment_name": "Global Ventures",
-          "value": 3129000000.0,
+          "value": 3053475769.828927,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -176,7 +177,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 6223000000.0,
+          "value": 6072796329.704511,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -206,7 +207,7 @@
       "segments": [
         {
           "segment_name": "EMEA",
-          "value": 8078000000.0,
+          "value": 7832682984.720367,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -214,7 +215,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 5830000000.0,
+          "value": 5652951448.492169,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -222,7 +223,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 16774000000.0,
+          "value": 16264598215.610231,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -230,7 +231,7 @@
         },
         {
           "segment_name": "Asia Pacific",
-          "value": 5455000000.0,
+          "value": 5289339648.632038,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -238,7 +239,7 @@
         },
         {
           "segment_name": "Global Ventures",
-          "value": 3064000000.0,
+          "value": 2970950812.7238436,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -246,7 +247,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 7860000000.0,
+          "value": 7621303325.068345,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -278,7 +279,7 @@
       "segments": [
         {
           "segment_name": "EMEA",
-          "value": 3012000000.0,
+          "value": 2943152933.7836776,
           "unit": "USD",
           "period": "2026-04-03 (Q2)",
           "concept": "xbrl_dimension",
@@ -286,7 +287,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 1678000000.0,
+          "value": 1639644961.1185296,
           "unit": "USD",
           "period": "2026-04-03 (Q2)",
           "concept": "xbrl_dimension",
@@ -294,7 +295,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 4893000000.0,
+          "value": 4781157803.786034,
           "unit": "USD",
           "period": "2026-04-03 (Q2)",
           "concept": "xbrl_dimension",
@@ -302,7 +303,7 @@
         },
         {
           "segment_name": "A. Pacific",
-          "value": 1508000000.0,
+          "value": 1473530751.7084281,
           "unit": "USD",
           "period": "2026-04-03 (Q2)",
           "concept": "xbrl_dimension",
@@ -310,7 +311,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 1640000000.0,
+          "value": 1602513549.6033304,
           "unit": "USD",
           "period": "2026-04-03 (Q2)",
           "concept": "xbrl_dimension",
@@ -382,7 +383,7 @@
       "segments": [
         {
           "segment_name": "Europe, Middle East & Africa",
-          "value": 2996000000.0,
+          "value": 2936353478.1240163,
           "unit": "USD",
           "period": "2025-09-26 (Q3)",
           "concept": "xbrl_dimension",
@@ -390,7 +391,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 1573000000.0,
+          "value": 1541683585.1432168,
           "unit": "USD",
           "period": "2025-09-26 (Q3)",
           "concept": "xbrl_dimension",
@@ -398,7 +399,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 5253000000.0,
+          "value": 5148419499.527857,
           "unit": "USD",
           "period": "2025-09-26 (Q3)",
           "concept": "xbrl_dimension",
@@ -406,7 +407,7 @@
         },
         {
           "segment_name": "Asia Pacific",
-          "value": 1506000000.0,
+          "value": 1476017469.3106706,
           "unit": "USD",
           "period": "2025-09-26 (Q3)",
           "concept": "xbrl_dimension",
@@ -414,7 +415,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 1346000000.0,
+          "value": 1319202864.3374252,
           "unit": "USD",
           "period": "2025-09-26 (Q3)",
           "concept": "xbrl_dimension",
@@ -444,7 +445,7 @@
       "segments": [
         {
           "segment_name": "Europe, Middle East & Africa",
-          "value": 3176000000.0,
+          "value": 3106848759.169658,
           "unit": "USD",
           "period": "2025-06-27 (Q2)",
           "concept": "xbrl_dimension",
@@ -452,7 +453,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 1587000000.0,
+          "value": 1552446152.6455438,
           "unit": "USD",
           "period": "2025-06-27 (Q2)",
           "concept": "xbrl_dimension",
@@ -460,7 +461,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 5029000000.0,
+          "value": 4919503277.665053,
           "unit": "USD",
           "period": "2025-06-27 (Q2)",
           "concept": "xbrl_dimension",
@@ -468,7 +469,7 @@
         },
         {
           "segment_name": "Asia Pacific",
-          "value": 1572000000.0,
+          "value": 1537772748.5562665,
           "unit": "USD",
           "period": "2025-06-27 (Q2)",
           "concept": "xbrl_dimension",
@@ -476,7 +477,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 1411000000.0,
+          "value": 1380278211.3313563,
           "unit": "USD",
           "period": "2025-06-27 (Q2)",
           "concept": "xbrl_dimension",
@@ -506,7 +507,7 @@
       "segments": [
         {
           "segment_name": "Europe, Middle East & Africa",
-          "value": 2657000000.0,
+          "value": 2592700832.9679966,
           "unit": "USD",
           "period": "2025-03-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -514,7 +515,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 1477000000.0,
+          "value": 1441256729.5046031,
           "unit": "USD",
           "period": "2025-03-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -522,7 +523,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 4361000000.0,
+          "value": 4255464182.3761506,
           "unit": "USD",
           "period": "2025-03-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -530,7 +531,7 @@
         },
         {
           "segment_name": "Asia Pacific",
-          "value": 1421000000.0,
+          "value": 1386611924.594476,
           "unit": "USD",
           "period": "2025-03-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -538,7 +539,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 1463000000.0,
+          "value": 1427595528.2770715,
           "unit": "USD",
           "period": "2025-03-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -568,7 +569,7 @@
       "segments": [
         {
           "segment_name": "Europe, Middle East & Africa",
-          "value": 2019000000.0,
+          "value": 1976972245.1676855,
           "unit": "USD",
           "period": "2024-09-27 (Q3)",
           "concept": "xbrl_dimension",
@@ -576,7 +577,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 1639000000.0,
+          "value": 1604882372.3773336,
           "unit": "USD",
           "period": "2024-09-27 (Q3)",
           "concept": "xbrl_dimension",
@@ -584,7 +585,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 4984000000.0,
+          "value": 4880252436.808194,
           "unit": "USD",
           "period": "2024-09-27 (Q3)",
           "concept": "xbrl_dimension",
@@ -592,7 +593,7 @@
         },
         {
           "segment_name": "Asia Pacific",
-          "value": 1349000000.0,
+          "value": 1320919048.4057493,
           "unit": "USD",
           "period": "2024-09-27 (Q3)",
           "concept": "xbrl_dimension",
@@ -600,7 +601,7 @@
         },
         {
           "segment_name": "Global Ventures",
-          "value": 781000000.0,
+          "value": 764742606.9717495,
           "unit": "USD",
           "period": "2024-09-27 (Q3)",
           "concept": "xbrl_dimension",
@@ -608,7 +609,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 1316000000.0,
+          "value": 1288605980.5055344,
           "unit": "USD",
           "period": "2024-09-27 (Q3)",
           "concept": "xbrl_dimension",
@@ -640,7 +641,7 @@
       "segments": [
         {
           "segment_name": "Europe, Middle East & Africa",
-          "value": 2339000000.0,
+          "value": 2285933359.6837945,
           "unit": "USD",
           "period": "2024-06-28 (Q2)",
           "concept": "xbrl_dimension",
@@ -648,7 +649,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 1650000000.0,
+          "value": 1612565217.3913045,
           "unit": "USD",
           "period": "2024-06-28 (Q2)",
           "concept": "xbrl_dimension",
@@ -656,7 +657,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 4812000000.0,
+          "value": 4702826561.264822,
           "unit": "USD",
           "period": "2024-06-28 (Q2)",
           "concept": "xbrl_dimension",
@@ -664,7 +665,7 @@
         },
         {
           "segment_name": "Asia Pacific",
-          "value": 1512000000.0,
+          "value": 1477696126.4822135,
           "unit": "USD",
           "period": "2024-06-28 (Q2)",
           "concept": "xbrl_dimension",
@@ -672,7 +673,7 @@
         },
         {
           "segment_name": "Global Ventures",
-          "value": 768000000.0,
+          "value": 750575810.2766799,
           "unit": "USD",
           "period": "2024-06-28 (Q2)",
           "concept": "xbrl_dimension",
@@ -680,7 +681,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 1539000000.0,
+          "value": 1504083557.312253,
           "unit": "USD",
           "period": "2024-06-28 (Q2)",
           "concept": "xbrl_dimension",
@@ -712,7 +713,7 @@
       "segments": [
         {
           "segment_name": "Europe, Middle East & Africa",
-          "value": 1973000000.0,
+          "value": 1902782282.154135,
           "unit": "USD",
           "period": "2024-03-29 (Q1)",
           "concept": "xbrl_dimension",
@@ -720,7 +721,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 1527000000.0,
+          "value": 1472655116.497397,
           "unit": "USD",
           "period": "2024-03-29 (Q1)",
           "concept": "xbrl_dimension",
@@ -728,7 +729,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 4174000000.0,
+          "value": 4025450200.563284,
           "unit": "USD",
           "period": "2024-03-29 (Q1)",
           "concept": "xbrl_dimension",
@@ -736,7 +737,7 @@
         },
         {
           "segment_name": "Asia Pacific",
-          "value": 1469000000.0,
+          "value": 1416719296.7483144,
           "unit": "USD",
           "period": "2024-03-29 (Q1)",
           "concept": "xbrl_dimension",
@@ -744,7 +745,7 @@
         },
         {
           "segment_name": "Global Ventures",
-          "value": 730000000.0,
+          "value": 704019800.2901766,
           "unit": "USD",
           "period": "2024-03-29 (Q1)",
           "concept": "xbrl_dimension",
@@ -752,7 +753,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 1817000000.0,
+          "value": 1752334215.2428095,
           "unit": "USD",
           "period": "2024-03-29 (Q1)",
           "concept": "xbrl_dimension",
@@ -784,7 +785,7 @@
       "segments": [
         {
           "segment_name": "Europe, Middle East & Africa",
-          "value": 2176000000.0,
+          "value": 2115816155.5356708,
           "unit": "USD",
           "period": "2023-09-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -792,7 +793,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 1574000000.0,
+          "value": 1530466281.6236882,
           "unit": "USD",
           "period": "2023-09-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -800,7 +801,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 4463000000.0,
+          "value": 4339562271.211259,
           "unit": "USD",
           "period": "2023-09-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -808,7 +809,7 @@
         },
         {
           "segment_name": "Asia Pacific",
-          "value": 1402000000.0,
+          "value": 1363223460.505979,
           "unit": "USD",
           "period": "2023-09-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -816,7 +817,7 @@
         },
         {
           "segment_name": "Global Ventures",
-          "value": 779000000.0,
+          "value": 757454404.9459043,
           "unit": "USD",
           "period": "2023-09-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -824,7 +825,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 1859000000.0,
+          "value": 1807583746.8477995,
           "unit": "USD",
           "period": "2023-09-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -856,7 +857,7 @@
       "segments": [
         {
           "segment_name": "Europe, Middle East & Africa",
-          "value": 2188000000.0,
+          "value": 2123266272.189349,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -864,7 +865,7 @@
         },
         {
           "segment_name": "Latin America",
-          "value": 1378000000.0,
+          "value": 1337230769.2307692,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -872,7 +873,7 @@
         },
         {
           "segment_name": "North America",
-          "value": 4367000000.0,
+          "value": 4237798816.568047,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -880,7 +881,7 @@
         },
         {
           "segment_name": "Asia Pacific",
-          "value": 1567000000.0,
+          "value": 1520639053.254438,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -888,7 +889,7 @@
         },
         {
           "segment_name": "Global Ventures",
-          "value": 765000000.0,
+          "value": 742366863.9053254,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -896,7 +897,7 @@
         },
         {
           "segment_name": "Bottling Investments",
-          "value": 2042000000.0,
+          "value": 1981585798.816568,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -927,358 +928,359 @@
     "Europe, Middle East & Africa": [
       {
         "period": "2023Q2",
-        "value": 2188000000.0,
+        "value": 2123266272.189349,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 2176000000.0,
+        "value": 2115816155.5356708,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 1973000000.0,
+        "value": 1902782282.154135,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 2339000000.0,
+        "value": 2285933359.6837945,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 2019000000.0,
+        "value": 1976972245.1676855,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 2657000000.0,
+        "value": 2592700832.9679966,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 3176000000.0,
+        "value": 3106848759.169658,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 2996000000.0,
+        "value": 2936353478.1240163,
         "is_annual": false
       }
     ],
     "Latin America": [
       {
         "period": "2023Q2",
-        "value": 1378000000.0,
+        "value": 1337230769.2307692,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 1574000000.0,
+        "value": 1530466281.6236882,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 1527000000.0,
+        "value": 1472655116.497397,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 1650000000.0,
+        "value": 1612565217.3913045,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 1639000000.0,
+        "value": 1604882372.3773336,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 1477000000.0,
+        "value": 1441256729.5046031,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 1587000000.0,
+        "value": 1552446152.6455438,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 1573000000.0,
+        "value": 1541683585.1432168,
         "is_annual": false
       },
       {
         "period": "2026Q2",
-        "value": 1678000000.0,
+        "value": 1639644961.1185296,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 5830000000.0,
+        "value": 5652951448.492169,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 6459000000.0,
+        "value": 6303100031.104199,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 6334000000.0,
+        "value": 6203052862.352989,
         "is_annual": true
       }
     ],
     "North America": [
       {
         "period": "2023Q2",
-        "value": 4367000000.0,
+        "value": 4237798816.568047,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 4463000000.0,
+        "value": 4339562271.211259,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 4174000000.0,
+        "value": 4025450200.563284,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 4812000000.0,
+        "value": 4702826561.264822,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 4984000000.0,
+        "value": 4880252436.808194,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 4361000000.0,
+        "value": 4255464182.3761506,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 5029000000.0,
+        "value": 4919503277.665053,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 5253000000.0,
+        "value": 5148419499.527857,
         "is_annual": false
       },
       {
         "period": "2026Q2",
-        "value": 4893000000.0,
+        "value": 4781157803.786034,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 16774000000.0,
+        "value": 16264598215.610231,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 18649000000.0,
+        "value": 18198871726.28305,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 19586000000.0,
+        "value": 19181085153.464737,
         "is_annual": true
       }
     ],
     "Asia Pacific": [
       {
         "period": "2023Q2",
-        "value": 1567000000.0,
+        "value": 1520639053.254438,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 1402000000.0,
+        "value": 1363223460.505979,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 1469000000.0,
+        "value": 1416719296.7483144,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 1512000000.0,
+        "value": 1477696126.4822135,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 1349000000.0,
+        "value": 1320919048.4057493,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 1421000000.0,
+        "value": 1386611924.594476,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 1572000000.0,
+        "value": 1537772748.5562665,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 1506000000.0,
+        "value": 1476017469.3106706,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 5455000000.0,
+        "value": 5289339648.632038,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 5546000000.0,
+        "value": 5412136982.892691,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 5638000000.0,
+        "value": 5521441748.965291,
         "is_annual": true
       }
     ],
     "Global Ventures": [
       {
         "period": "2023Q2",
-        "value": 765000000.0,
+        "value": 742366863.9053254,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 779000000.0,
+        "value": 757454404.9459043,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 730000000.0,
+        "value": 704019800.2901766,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 768000000.0,
+        "value": 750575810.2766799,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 781000000.0,
+        "value": 764742606.9717495,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 3064000000.0,
+        "value": 2970950812.7238436,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 3129000000.0,
+        "value": 3053475769.828927,
         "is_annual": true
       }
     ],
     "Bottling Investments": [
       {
         "period": "2023Q2",
-        "value": 2042000000.0,
+        "value": 1981585798.816568,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 1859000000.0,
+        "value": 1807583746.8477995,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 1817000000.0,
+        "value": 1752334215.2428095,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 1539000000.0,
+        "value": 1504083557.312253,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 1316000000.0,
+        "value": 1288605980.5055344,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 1463000000.0,
+        "value": 1427595528.2770715,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 1411000000.0,
+        "value": 1380278211.3313563,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 1346000000.0,
+        "value": 1319202864.3374252,
         "is_annual": false
       },
       {
         "period": "2026Q2",
-        "value": 1640000000.0,
+        "value": 1602513549.6033304,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 7860000000.0,
+        "value": 7621303325.068345,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 6223000000.0,
+        "value": 6072796329.704511,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 5735000000.0,
+        "value": 5616436401.262139,
         "is_annual": true
       }
     ],
     "EMEA": [
       {
         "period": "2026Q2",
-        "value": 3012000000.0,
+        "value": 2943152933.7836776,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 8078000000.0,
+        "value": 7832682984.720367,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 8122000000.0,
+        "value": 7925960435.458787,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 11513000000.0,
+        "value": 11274983833.954842,
         "is_annual": true
       }
     ],
     "A. Pacific": [
       {
         "period": "2026Q2",
-        "value": 1508000000.0,
+        "value": 1473530751.7084281,
         "is_annual": false
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 11,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

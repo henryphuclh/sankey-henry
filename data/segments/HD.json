@@ -2,6 +2,7 @@
   "ticker": "HD",
   "name": "Home Depot Inc.",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "HD",
     "period": "FY2026",
@@ -882,7 +883,7 @@
       "segments": [
         {
           "segment_name": "Services",
-          "value": 1340000000.0,
+          "value": 1292444515.069654,
           "unit": "USD",
           "period": "2024-04-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -890,7 +891,7 @@
         },
         {
           "segment_name": "Building Materials",
-          "value": 12614000000.0,
+          "value": 12166339636.633295,
           "unit": "USD",
           "period": "2024-04-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -898,7 +899,7 @@
         },
         {
           "segment_name": "Décor",
-          "value": 12344000000.0,
+          "value": 11905921711.955082,
           "unit": "USD",
           "period": "2024-04-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -906,7 +907,7 @@
         },
         {
           "segment_name": "Hardlines",
-          "value": 11460000000.0,
+          "value": 11053294136.341967,
           "unit": "USD",
           "period": "2024-04-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -938,7 +939,7 @@
       "segments": [
         {
           "segment_name": "Services",
-          "value": 1554000000.0,
+          "value": 1492495415.6479218,
           "unit": "USD",
           "period": "2023-10-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -946,7 +947,7 @@
         },
         {
           "segment_name": "Building Materials",
-          "value": 14744000000.0,
+          "value": 14160458435.207825,
           "unit": "USD",
           "period": "2023-10-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -954,7 +955,7 @@
         },
         {
           "segment_name": "Décor",
-          "value": 12653000000.0,
+          "value": 12152216534.22983,
           "unit": "USD",
           "period": "2023-10-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -962,7 +963,7 @@
         },
         {
           "segment_name": "Hardlines",
-          "value": 10313000000.0,
+          "value": 9904829614.914427,
           "unit": "USD",
           "period": "2023-10-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -994,7 +995,7 @@
       "segments": [
         {
           "segment_name": "Services",
-          "value": 1555000000.0,
+          "value": 1500626925.4120662,
           "unit": "USD",
           "period": "2023-07-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1002,7 +1003,7 @@
         },
         {
           "segment_name": "Building Materials",
-          "value": 15391000000.0,
+          "value": 14852828944.705538,
           "unit": "USD",
           "period": "2023-07-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1010,7 +1011,7 @@
         },
         {
           "segment_name": "Décor",
-          "value": 13411000000.0,
+          "value": 12942062827.460592,
           "unit": "USD",
           "period": "2023-07-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1018,7 +1019,7 @@
         },
         {
           "segment_name": "Hardlines",
-          "value": 14114000000.0,
+          "value": 13620481302.421803,
           "unit": "USD",
           "period": "2023-07-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1050,7 +1051,7 @@
       "segments": [
         {
           "segment_name": "Services",
-          "value": 1369000000.0,
+          "value": 1320479288.5621085,
           "unit": "USD",
           "period": "2023-04-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -1058,7 +1059,7 @@
         },
         {
           "segment_name": "Building Materials",
-          "value": 14079000000.0,
+          "value": 13580005773.313313,
           "unit": "USD",
           "period": "2023-04-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -1066,7 +1067,7 @@
         },
         {
           "segment_name": "Décor",
-          "value": 12251000000.0,
+          "value": 11816794568.425413,
           "unit": "USD",
           "period": "2023-04-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -1074,7 +1075,7 @@
         },
         {
           "segment_name": "Hardlines",
-          "value": 10927000000.0,
+          "value": 10539720369.699167,
           "unit": "USD",
           "period": "2023-04-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -1105,22 +1106,22 @@
     "Services": [
       {
         "period": "2023Q2",
-        "value": 1369000000.0,
+        "value": 1320479288.5621085,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 1555000000.0,
+        "value": 1500626925.4120662,
         "is_annual": false
       },
       {
         "period": "2023Q4",
-        "value": 1554000000.0,
+        "value": 1492495415.6479218,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 1340000000.0,
+        "value": 1292444515.069654,
         "is_annual": false
       },
       {
@@ -1142,22 +1143,22 @@
     "Building Materials": [
       {
         "period": "2023Q2",
-        "value": 14079000000.0,
+        "value": 13580005773.313313,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 15391000000.0,
+        "value": 14852828944.705538,
         "is_annual": false
       },
       {
         "period": "2023Q4",
-        "value": 14744000000.0,
+        "value": 14160458435.207825,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 12614000000.0,
+        "value": 12166339636.633295,
         "is_annual": false
       },
       {
@@ -1194,22 +1195,22 @@
     "Décor": [
       {
         "period": "2023Q2",
-        "value": 12251000000.0,
+        "value": 11816794568.425413,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 13411000000.0,
+        "value": 12942062827.460592,
         "is_annual": false
       },
       {
         "period": "2023Q4",
-        "value": 12653000000.0,
+        "value": 12152216534.22983,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 12344000000.0,
+        "value": 11905921711.955082,
         "is_annual": false
       },
       {
@@ -1231,22 +1232,22 @@
     "Hardlines": [
       {
         "period": "2023Q2",
-        "value": 10927000000.0,
+        "value": 10539720369.699167,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 14114000000.0,
+        "value": 13620481302.421803,
         "is_annual": false
       },
       {
         "period": "2023Q4",
-        "value": 10313000000.0,
+        "value": 9904829614.914427,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 11460000000.0,
+        "value": 11053294136.341967,
         "is_annual": false
       },
       {
@@ -1549,7 +1550,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 11,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

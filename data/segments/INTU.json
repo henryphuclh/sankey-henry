@@ -2,6 +2,7 @@
   "ticker": "INTU",
   "name": "Intuit Inc.",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "INTU",
     "period": "FY2025",
@@ -223,6 +224,27 @@
   "quarterly_periods": [
     {
       "ticker": "INTU",
+      "period": "2026Q2",
+      "is_annual": false,
+      "fiscal_year": 2026,
+      "fiscal_quarter": 2,
+      "segments": [],
+      "total_revenue": 8558000000.0,
+      "gross_profit": 7184000000.0,
+      "operating_income": 4020000000.0,
+      "net_income": 3064000000.0,
+      "rd_expense": 840000000.0,
+      "sga_expense": 2202000000.0,
+      "cogs": 1374000000.0,
+      "interest_expense": 70000000.0,
+      "income_tax": 983000000.0,
+      "currency": "USD",
+      "extraction_method": "yahoo_quarterly",
+      "confidence": 0.55,
+      "notes": []
+    },
+    {
+      "ticker": "INTU",
       "period": "2026Q1",
       "is_annual": false,
       "fiscal_year": 2026,
@@ -424,7 +446,9 @@
       "currency": "USD",
       "extraction_method": "edgar+llm",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "Warning: total_revenue (3963000000) differs from Yahoo (18831000000) by 79.0%"
+      ]
     },
     {
       "ticker": "INTU",
@@ -699,9 +723,9 @@
       ]
     }
   ],
-  "ttm_revenue": 20121000000.0,
-  "ttm_operating_income": 5449000000.0,
-  "ttm_net_income": 4340000000.0,
+  "ttm_revenue": 20925000000.0,
+  "ttm_operating_income": 5749000000.0,
+  "ttm_net_income": 4584000000.0,
   "segment_trend": {
     "Small Business & Self-Employed": [
       {
@@ -930,8 +954,9 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "quarterly_count": 11,
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

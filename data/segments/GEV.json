@@ -2,6 +2,7 @@
   "ticker": "GEV",
   "name": "GE Vernova Inc.",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "GEV",
     "period": "FY2025",
@@ -42,7 +43,7 @@
     "sga_expense": 4949000000.0,
     "cogs": 30533000000.0,
     "interest_expense": null,
-    "income_tax": -2051000000.0,
+    "income_tax": 2051000000.0,
     "currency": "USD",
     "extraction_method": "edgar+llm",
     "confidence": 1.0,
@@ -89,7 +90,7 @@
       "sga_expense": 4949000000.0,
       "cogs": 30533000000.0,
       "interest_expense": null,
-      "income_tax": -2051000000.0,
+      "income_tax": 2051000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
       "confidence": 1.0,
@@ -388,7 +389,7 @@
       "sga_expense": 1226000000.0,
       "cogs": 7804000000.0,
       "interest_expense": null,
-      "income_tax": -23000000.0,
+      "income_tax": 23000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -644,6 +645,5 @@
   "has_partial_data": true,
   "data_notes": [
     "Only 2/3 annual reports available"
-  ],
-  "classification": "US_SEC"
+  ]
 }

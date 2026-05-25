@@ -2,6 +2,7 @@
   "ticker": "ABT",
   "name": "Abbott Laboratories",
   "sector": "pharma",
+  "classification": "",
   "latest_annual": {
     "ticker": "ABT",
     "period": "FY2025",
@@ -159,7 +160,7 @@
       "sga_expense": 11697000000.0,
       "cogs": 18706000000.0,
       "interest_expense": 559000000.0,
-      "income_tax": -6389000000.0,
+      "income_tax": 6389000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -1000,7 +1001,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

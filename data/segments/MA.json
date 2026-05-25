@@ -1,7 +1,8 @@
 {
   "ticker": "MA",
   "name": "Mastercard Incorporated",
-  "sector": "standard",
+  "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "MA",
     "period": "FY2025",
@@ -27,19 +28,19 @@
       }
     ],
     "total_revenue": 32791000000.0,
-    "gross_profit": null,
+    "gross_profit": 32791000000.0,
     "operating_income": 18897000000.0,
     "net_income": 14968000000.0,
     "rd_expense": null,
-    "sga_expense": 12247000000.0,
+    "sga_expense": 13894000000.0,
     "cogs": null,
-    "interest_expense": -722000000.0,
+    "interest_expense": null,
     "income_tax": 3610000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
     "notes": [
-      "SECTOR_FALLBACK:standard"
+      "EXPENSE_DETAIL:{\"Marketing\": 929000000.0, \"Other Non-Interest Expense\": 504000000.0}"
     ]
   },
   "annual_periods": [
@@ -68,19 +69,19 @@
         }
       ],
       "total_revenue": 32791000000.0,
-      "gross_profit": null,
+      "gross_profit": 32791000000.0,
       "operating_income": 18897000000.0,
       "net_income": 14968000000.0,
       "rd_expense": null,
-      "sga_expense": 12247000000.0,
+      "sga_expense": 13894000000.0,
       "cogs": null,
-      "interest_expense": -722000000.0,
+      "interest_expense": null,
       "income_tax": 3610000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard"
+        "EXPENSE_DETAIL:{\"Marketing\": 929000000.0, \"Other Non-Interest Expense\": 504000000.0}"
       ]
     },
     {
@@ -108,19 +109,19 @@
         }
       ],
       "total_revenue": 28167000000.0,
-      "gross_profit": null,
+      "gross_profit": 28167000000.0,
       "operating_income": 15582000000.0,
       "net_income": 12874000000.0,
       "rd_expense": null,
-      "sga_expense": 11008000000.0,
+      "sga_expense": 12585000000.0,
       "cogs": null,
-      "interest_expense": -646000000.0,
+      "interest_expense": null,
       "income_tax": 2380000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard"
+        "EXPENSE_DETAIL:{\"Marketing\": 815000000.0, \"Other Non-Interest Expense\": 680000000.0}"
       ]
     },
     {
@@ -148,19 +149,19 @@
         }
       ],
       "total_revenue": 25098000000.0,
-      "gross_profit": null,
+      "gross_profit": 25098000000.0,
       "operating_income": 14008000000.0,
       "net_income": 11195000000.0,
       "rd_expense": null,
-      "sga_expense": 9752000000.0,
+      "sga_expense": 11090000000.0,
       "cogs": null,
-      "interest_expense": -575000000.0,
+      "interest_expense": null,
       "income_tax": 2444000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard"
+        "EXPENSE_DETAIL:{\"Marketing\": 825000000.0, \"Other Non-Interest Expense\": 539000000.0}"
       ]
     }
   ],
@@ -190,19 +191,19 @@
         }
       ],
       "total_revenue": 8398000000.0,
-      "gross_profit": null,
+      "gross_profit": 8398000000.0,
       "operating_income": 4907000000.0,
       "net_income": 3882000000.0,
       "rd_expense": null,
-      "sga_expense": 3192000000.0,
+      "sga_expense": 3491000000.0,
       "cogs": null,
-      "interest_expense": -185000000.0,
+      "interest_expense": null,
       "income_tax": 930000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard"
+        "EXPENSE_DETAIL:{\"Marketing\": 153000000.0}"
       ]
     },
     {
@@ -251,19 +252,19 @@
         }
       ],
       "total_revenue": 8602000000.0,
-      "gross_profit": null,
+      "gross_profit": 8602000000.0,
       "operating_income": 5061000000.0,
       "net_income": 3927000000.0,
       "rd_expense": null,
-      "sga_expense": 3168000000.0,
+      "sga_expense": 3541000000.0,
       "cogs": null,
-      "interest_expense": -186000000.0,
+      "interest_expense": null,
       "income_tax": 1072000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard"
+        "EXPENSE_DETAIL:{\"Marketing\": 245000000.0, \"Other Non-Interest Expense\": 83000000.0}"
       ]
     },
     {
@@ -291,19 +292,19 @@
         }
       ],
       "total_revenue": 8133000000.0,
-      "gross_profit": null,
+      "gross_profit": 8133000000.0,
       "operating_income": 4777000000.0,
       "net_income": 3701000000.0,
       "rd_expense": null,
-      "sga_expense": 2979000000.0,
+      "sga_expense": 3356000000.0,
       "cogs": null,
-      "interest_expense": -195000000.0,
+      "interest_expense": null,
       "income_tax": 971000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard"
+        "EXPENSE_DETAIL:{\"Marketing\": 213000000.0, \"Other Non-Interest Expense\": 96000000.0}"
       ]
     },
     {
@@ -331,19 +332,19 @@
         }
       ],
       "total_revenue": 7250000000.0,
-      "gross_profit": null,
+      "gross_profit": 7250000000.0,
       "operating_income": 4149000000.0,
       "net_income": 3280000000.0,
       "rd_expense": null,
-      "sga_expense": 2675000000.0,
+      "sga_expense": 3101000000.0,
       "cogs": null,
-      "interest_expense": -182000000.0,
+      "interest_expense": null,
       "income_tax": 751000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard"
+        "EXPENSE_DETAIL:{\"Marketing\": 152000000.0, \"Other Non-Interest Expense\": 151000000.0}"
       ]
     },
     {
@@ -371,19 +372,19 @@
         }
       ],
       "total_revenue": 7369000000.0,
-      "gross_profit": null,
+      "gross_profit": 7369000000.0,
       "operating_income": 4004000000.0,
       "net_income": 3263000000.0,
       "rd_expense": null,
-      "sga_expense": 2964000000.0,
+      "sga_expense": 3365000000.0,
       "cogs": null,
-      "interest_expense": -159000000.0,
+      "interest_expense": null,
       "income_tax": 603000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard",
+        "EXPENSE_DETAIL:{\"Marketing\": 220000000.0, \"Other Non-Interest Expense\": 176000000.0}",
         "Warning: total_revenue (7369000000) differs from Yahoo (28167000000) by 73.8%"
       ]
     },
@@ -412,19 +413,19 @@
         }
       ],
       "total_revenue": 6961000000.0,
-      "gross_profit": null,
+      "gross_profit": 6961000000.0,
       "operating_income": 4036000000.0,
       "net_income": 3258000000.0,
       "rd_expense": null,
-      "sga_expense": 2602000000.0,
+      "sga_expense": 2925000000.0,
       "cogs": null,
-      "interest_expense": -153000000.0,
+      "interest_expense": null,
       "income_tax": 681000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard",
+        "EXPENSE_DETAIL:{\"Marketing\": 184000000.0, \"Other Non-Interest Expense\": 98000000.0}",
         "Warning: total_revenue (6961000000) differs from Yahoo (28167000000) by 75.3%"
       ]
     },
@@ -453,19 +454,19 @@
         }
       ],
       "total_revenue": 6348000000.0,
-      "gross_profit": null,
+      "gross_profit": 6348000000.0,
       "operating_income": 3604000000.0,
       "net_income": 3011000000.0,
       "rd_expense": null,
-      "sga_expense": 2402000000.0,
+      "sga_expense": 2744000000.0,
       "cogs": null,
-      "interest_expense": -150000000.0,
+      "interest_expense": null,
       "income_tax": 547000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard",
+        "EXPENSE_DETAIL:{\"Marketing\": 116000000.0, \"Other Non-Interest Expense\": 126000000.0}",
         "Warning: total_revenue (6348000000) differs from Yahoo (28167000000) by 77.5%"
       ]
     },
@@ -494,19 +495,19 @@
         }
       ],
       "total_revenue": 6533000000.0,
-      "gross_profit": null,
+      "gross_profit": 6533000000.0,
       "operating_income": 3844000000.0,
       "net_income": 3198000000.0,
       "rd_expense": null,
-      "sga_expense": 2478000000.0,
+      "sga_expense": 2689000000.0,
       "cogs": null,
-      "interest_expense": -151000000.0,
+      "interest_expense": null,
       "income_tax": 563000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard",
+        "EXPENSE_DETAIL:{\"Marketing\": 193000000.0}",
         "Warning: total_revenue (6533000000) differs from Yahoo (25098000000) by 74.0%"
       ]
     },
@@ -535,19 +536,19 @@
         }
       ],
       "total_revenue": 6269000000.0,
-      "gross_profit": null,
+      "gross_profit": 6269000000.0,
       "operating_income": 3656000000.0,
       "net_income": 2845000000.0,
       "rd_expense": null,
-      "sga_expense": 2401000000.0,
+      "sga_expense": 2613000000.0,
       "cogs": null,
-      "interest_expense": -144000000.0,
+      "interest_expense": null,
       "income_tax": 859000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": [
-        "SECTOR_FALLBACK:standard",
+        "EXPENSE_DETAIL:{\"Marketing\": 201000000.0, \"Other Non-Interest Expense\": 20000000.0}",
         "Warning: total_revenue (6269000000) differs from Yahoo (25098000000) by 75.0%"
       ]
     }
@@ -683,7 +684,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

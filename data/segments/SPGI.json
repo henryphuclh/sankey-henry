@@ -2,6 +2,7 @@
   "ticker": "SPGI",
   "name": "S&P Global Inc.",
   "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "SPGI",
     "period": "FY2025",
@@ -172,7 +173,7 @@
       "segments": [
         {
           "segment_name": "Market Intelligence",
-          "value": 4376000000.0,
+          "value": 4192659618.1158276,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -180,7 +181,7 @@
         },
         {
           "segment_name": "Ratings",
-          "value": 3332000000.0,
+          "value": 3192399873.7572985,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -188,7 +189,7 @@
         },
         {
           "segment_name": "Commodity Insights",
-          "value": 1946000000.0,
+          "value": 1864468833.833044,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -196,7 +197,7 @@
         },
         {
           "segment_name": "Mobility",
-          "value": 1484000000.0,
+          "value": 1421825153.8582926,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -204,7 +205,7 @@
         },
         {
           "segment_name": "Indices",
-          "value": 1403000000.0,
+          "value": 1344218794.3821998,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -212,7 +213,7 @@
         },
         {
           "segment_name": "Engineering Solutions",
-          "value": 133000000.0,
+          "value": 127427726.05333754,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -491,7 +492,7 @@
       "segments": [
         {
           "segment_name": "Market Intelligence",
-          "value": 1162000000.0,
+          "value": 1116764770.8448372,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -499,7 +500,7 @@
         },
         {
           "segment_name": "Ratings",
-          "value": 1110000000.0,
+          "value": 1066789066.813915,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -507,7 +508,7 @@
         },
         {
           "segment_name": "Commodity Insights",
-          "value": 522000000.0,
+          "value": 501679182.77194923,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -515,7 +516,7 @@
         },
         {
           "segment_name": "Mobility",
-          "value": 412000000.0,
+          "value": 395961347.3219216,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -523,7 +524,7 @@
         },
         {
           "segment_name": "Indices",
-          "value": 416000000.0,
+          "value": 399805632.24737716,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -556,7 +557,7 @@
       "segments": [
         {
           "segment_name": "Market Intelligence",
-          "value": 1155000000.0,
+          "value": 1110663421.418637,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -564,7 +565,7 @@
         },
         {
           "segment_name": "Ratings",
-          "value": 1135000000.0,
+          "value": 1091431154.381085,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -572,7 +573,7 @@
         },
         {
           "segment_name": "Commodity Insights",
-          "value": 516000000.0,
+          "value": 496192489.5688456,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -580,7 +581,7 @@
         },
         {
           "segment_name": "Mobility",
-          "value": 400000000.0,
+          "value": 384645340.7510431,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -588,7 +589,7 @@
         },
         {
           "segment_name": "Indices",
-          "value": 389000000.0,
+          "value": 374067593.88038945,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -621,7 +622,7 @@
       "segments": [
         {
           "segment_name": "Market Intelligence",
-          "value": 1142000000.0,
+          "value": 1098399886.8778281,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -629,7 +630,7 @@
         },
         {
           "segment_name": "Ratings",
-          "value": 1062000000.0,
+          "value": 1021454185.520362,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -637,7 +638,7 @@
         },
         {
           "segment_name": "Commodity Insights",
-          "value": 559000000.0,
+          "value": 537658088.2352941,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -645,7 +646,7 @@
         },
         {
           "segment_name": "Mobility",
-          "value": 386000000.0,
+          "value": 371263009.04977375,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -653,7 +654,7 @@
         },
         {
           "segment_name": "Indices",
-          "value": 387000000.0,
+          "value": 372224830.31674206,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -686,7 +687,7 @@
       "segments": [
         {
           "segment_name": "Market Intelligence",
-          "value": 1099000000.0,
+          "value": 1050545686.9009585,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -694,7 +695,7 @@
         },
         {
           "segment_name": "Ratings",
-          "value": 819000000.0,
+          "value": 782890734.8242812,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -702,7 +703,7 @@
         },
         {
           "segment_name": "Commodity Insights",
-          "value": 479000000.0,
+          "value": 457881150.15974444,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -710,7 +711,7 @@
         },
         {
           "segment_name": "Mobility",
-          "value": 379000000.0,
+          "value": 362290095.84664536,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -718,7 +719,7 @@
         },
         {
           "segment_name": "Indices",
-          "value": 354000000.0,
+          "value": 338392332.2683706,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -751,7 +752,7 @@
       "segments": [
         {
           "segment_name": "Market Intelligence",
-          "value": 1079000000.0,
+          "value": 1036760343.7301081,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -759,7 +760,7 @@
         },
         {
           "segment_name": "Ratings",
-          "value": 851000000.0,
+          "value": 817685868.873329,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -767,7 +768,7 @@
         },
         {
           "segment_name": "Commodity Insights",
-          "value": 462000000.0,
+          "value": 443914067.4729471,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -775,7 +776,7 @@
         },
         {
           "segment_name": "Mobility",
-          "value": 369000000.0,
+          "value": 354554742.2024188,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -783,7 +784,7 @@
         },
         {
           "segment_name": "Indices",
-          "value": 348000000.0,
+          "value": 334376830.0445576,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -815,27 +816,27 @@
     "Market Intelligence": [
       {
         "period": "2023Q2",
-        "value": 1079000000.0,
+        "value": 1036760343.7301081,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 1099000000.0,
+        "value": 1050545686.9009585,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 1142000000.0,
+        "value": 1098399886.8778281,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 1155000000.0,
+        "value": 1110663421.418637,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 1162000000.0,
+        "value": 1116764770.8448372,
         "is_annual": false
       },
       {
@@ -860,7 +861,7 @@
       },
       {
         "period": "FY2023",
-        "value": 4376000000.0,
+        "value": 4192659618.1158276,
         "is_annual": true
       },
       {
@@ -877,27 +878,27 @@
     "Ratings": [
       {
         "period": "2023Q2",
-        "value": 851000000.0,
+        "value": 817685868.873329,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 819000000.0,
+        "value": 782890734.8242812,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 1062000000.0,
+        "value": 1021454185.520362,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 1135000000.0,
+        "value": 1091431154.381085,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 1110000000.0,
+        "value": 1066789066.813915,
         "is_annual": false
       },
       {
@@ -922,7 +923,7 @@
       },
       {
         "period": "FY2023",
-        "value": 3332000000.0,
+        "value": 3192399873.7572985,
         "is_annual": true
       },
       {
@@ -939,27 +940,27 @@
     "Commodity Insights": [
       {
         "period": "2023Q2",
-        "value": 462000000.0,
+        "value": 443914067.4729471,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 479000000.0,
+        "value": 457881150.15974444,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 559000000.0,
+        "value": 537658088.2352941,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 516000000.0,
+        "value": 496192489.5688456,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 522000000.0,
+        "value": 501679182.77194923,
         "is_annual": false
       },
       {
@@ -979,7 +980,7 @@
       },
       {
         "period": "FY2023",
-        "value": 1946000000.0,
+        "value": 1864468833.833044,
         "is_annual": true
       },
       {
@@ -991,27 +992,27 @@
     "Mobility": [
       {
         "period": "2023Q2",
-        "value": 369000000.0,
+        "value": 354554742.2024188,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 379000000.0,
+        "value": 362290095.84664536,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 386000000.0,
+        "value": 371263009.04977375,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 400000000.0,
+        "value": 384645340.7510431,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 412000000.0,
+        "value": 395961347.3219216,
         "is_annual": false
       },
       {
@@ -1026,7 +1027,7 @@
       },
       {
         "period": "FY2023",
-        "value": 1484000000.0,
+        "value": 1421825153.8582926,
         "is_annual": true
       },
       {
@@ -1038,27 +1039,27 @@
     "Indices": [
       {
         "period": "2023Q2",
-        "value": 348000000.0,
+        "value": 334376830.0445576,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 354000000.0,
+        "value": 338392332.2683706,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 387000000.0,
+        "value": 372224830.31674206,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 389000000.0,
+        "value": 374067593.88038945,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 416000000.0,
+        "value": 399805632.24737716,
         "is_annual": false
       },
       {
@@ -1073,7 +1074,7 @@
       },
       {
         "period": "FY2023",
-        "value": 1403000000.0,
+        "value": 1344218794.3821998,
         "is_annual": true
       }
     ],
@@ -1092,14 +1093,15 @@
     "Engineering Solutions": [
       {
         "period": "FY2023",
-        "value": 133000000.0,
+        "value": 127427726.05333754,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

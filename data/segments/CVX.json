@@ -2,6 +2,7 @@
   "ticker": "CVX",
   "name": "Chevron Corporation",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "CVX",
     "period": "FY2025",
@@ -292,27 +293,6 @@
     },
     {
       "ticker": "CVX",
-      "period": "2024Q4",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": 48334000000.0,
-      "gross_profit": 13213000000.0,
-      "operating_income": 2416000000.0,
-      "net_income": 3239000000.0,
-      "rd_expense": null,
-      "sga_expense": 1585000000.0,
-      "cogs": 35121000000.0,
-      "interest_expense": 199000000.0,
-      "income_tax": 2800000000.0,
-      "currency": "USD",
-      "extraction_method": "yahoo_quarterly",
-      "confidence": 0.55,
-      "notes": []
-    },
-    {
-      "ticker": "CVX",
       "period": "2024Q3",
       "is_annual": false,
       "fiscal_year": 2024,
@@ -565,8 +545,9 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 11,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "quarterly_count": 10,
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

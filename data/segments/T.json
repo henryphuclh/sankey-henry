@@ -2,6 +2,7 @@
   "ticker": "T",
   "name": "AT&T Inc.",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "T",
     "period": "FY2025",
@@ -25,7 +26,7 @@
     "rd_expense": null,
     "sga_expense": 28942000000.0,
     "cogs": 25396000000.0,
-    "interest_expense": -6804000000.0,
+    "interest_expense": 6804000000.0,
     "income_tax": 3621000000.0,
     "currency": "USD",
     "extraction_method": "edgar+llm",
@@ -56,7 +57,7 @@
       "rd_expense": null,
       "sga_expense": 28942000000.0,
       "cogs": 25396000000.0,
-      "interest_expense": -6804000000.0,
+      "interest_expense": 6804000000.0,
       "income_tax": 3621000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -86,7 +87,7 @@
       "rd_expense": null,
       "sga_expense": 28411000000.0,
       "cogs": 22249000000.0,
-      "interest_expense": -6759000000.0,
+      "interest_expense": 6759000000.0,
       "income_tax": 4445000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -102,7 +103,7 @@
       "segments": [
         {
           "segment_name": "Communications",
-          "value": 118038000000.0,
+          "value": 118031276541.38153,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -110,7 +111,7 @@
         },
         {
           "segment_name": "Latin America Business Segment",
-          "value": 3932000000.0,
+          "value": 3931776032.809029,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -124,7 +125,7 @@
       "rd_expense": null,
       "sga_expense": 28874000000.0,
       "cogs": 23136000000.0,
-      "interest_expense": -6704000000.0,
+      "interest_expense": 6704000000.0,
       "income_tax": 4225000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -172,7 +173,7 @@
       "rd_expense": null,
       "sga_expense": 7316000000.0,
       "cogs": 6305000000.0,
-      "interest_expense": -1813000000.0,
+      "interest_expense": 1813000000.0,
       "income_tax": 1179000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -255,7 +256,7 @@
       "rd_expense": null,
       "sga_expense": 7454000000.0,
       "cogs": 5468000000.0,
-      "interest_expense": -1700000000.0,
+      "interest_expense": 1700000000.0,
       "income_tax": 976000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -317,7 +318,7 @@
       "rd_expense": null,
       "sga_expense": 6945000000.0,
       "cogs": 5738000000.0,
-      "interest_expense": -1655000000.0,
+      "interest_expense": 1655000000.0,
       "income_tax": 1237000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -379,7 +380,7 @@
       "rd_expense": null,
       "sga_expense": 7145000000.0,
       "cogs": 5694000000.0,
-      "interest_expense": -1658000000.0,
+      "interest_expense": 1658000000.0,
       "income_tax": 1299000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -430,7 +431,7 @@
       "rd_expense": null,
       "sga_expense": 6958000000.0,
       "cogs": 4933000000.0,
-      "interest_expense": -1675000000.0,
+      "interest_expense": 1675000000.0,
       "income_tax": 1285000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -494,7 +495,7 @@
       "rd_expense": null,
       "sga_expense": 7043000000.0,
       "cogs": 4815000000.0,
-      "interest_expense": -1699000000.0,
+      "interest_expense": 1699000000.0,
       "income_tax": 1142000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -550,7 +551,7 @@
       "rd_expense": null,
       "sga_expense": 7021000000.0,
       "cogs": 5143000000.0,
-      "interest_expense": -1724000000.0,
+      "interest_expense": 1724000000.0,
       "income_tax": 1118000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -582,7 +583,7 @@
       "rd_expense": null,
       "sga_expense": 7205000000.0,
       "cogs": 5219000000.0,
-      "interest_expense": -1662000000.0,
+      "interest_expense": 1662000000.0,
       "income_tax": 1154000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -614,7 +615,7 @@
       "rd_expense": null,
       "sga_expense": 7009000000.0,
       "cogs": 5056000000.0,
-      "interest_expense": -1608000000.0,
+      "interest_expense": 1608000000.0,
       "income_tax": 1403000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -636,7 +637,7 @@
       },
       {
         "period": "FY2023",
-        "value": 118038000000.0,
+        "value": 118031276541.38153,
         "is_annual": true
       },
       {
@@ -824,14 +825,15 @@
     "Latin America Business Segment": [
       {
         "period": "FY2023",
-        "value": 3932000000.0,
+        "value": 3931776032.809029,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 11,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

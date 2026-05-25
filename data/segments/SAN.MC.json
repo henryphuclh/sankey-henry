@@ -2,6 +2,7 @@
   "ticker": "SAN.MC",
   "name": "Banco Santander",
   "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "SAN.MC",
     "period": "FY2025",
@@ -142,7 +143,9 @@
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
-    "notes": []
+    "notes": [
+      "Warning: total_revenue (59735000000) differs from Yahoo (70510772453) by 15.3%"
+    ]
   },
   "annual_periods": [
     {
@@ -285,7 +288,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "Warning: total_revenue (59735000000) differs from Yahoo (70510772453) by 15.3%"
+      ]
     },
     {
       "ticker": "SAN.MC",
@@ -404,23 +409,23 @@
       "fiscal_year": 2026,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 18080074685.09674,
+      "total_revenue": 17875206131.458282,
       "gross_profit": null,
-      "operating_income": 5887379926.919937,
-      "net_income": 6386092165.708542,
+      "operating_income": 5820668974.041939,
+      "net_income": 6313730215.43026,
       "rd_expense": null,
-      "sga_expense": 5853430032.730103,
+      "sga_expense": 5787103772.163391,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 1463357508.1825256,
+      "income_tax": 1446775943.0408478,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:12899789106.1306",
-        "BANK_NONINT:5180285578.966141"
+        "BANK_NII:12753619293.093681",
+        "BANK_NONINT:5121586838.364601"
       ]
     },
     {
@@ -430,23 +435,23 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 17534535006.046295,
+      "total_revenue": 17595094377.27928,
       "gross_profit": null,
-      "operating_income": 5759775152.206421,
-      "net_income": 4406462128.639221,
+      "operating_income": 5779667801.856995,
+      "net_income": 4421680814.266205,
       "rd_expense": null,
-      "sga_expense": 6527745172.50061,
+      "sga_expense": 6550290175.437927,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 1361507825.6130219,
+      "income_tax": 1366210092.1869278,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:12630531324.625015",
-        "BANK_NONINT:4904003681.42128"
+        "BANK_NII:12674153641.104698",
+        "BANK_NONINT:4920940736.174583"
       ]
     },
     {
@@ -456,23 +461,23 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 16596815514.802933,
+      "total_revenue": 16637913666.725159,
       "gross_profit": null,
-      "operating_income": 5451884732.4848175,
-      "net_income": 4102083766.937256,
+      "operating_income": 5465385056.4956665,
+      "net_income": 4112241622.9248047,
       "rd_expense": null,
-      "sga_expense": 6109810268.163681,
+      "sga_expense": 6124939791.679382,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 1396628405.8094025,
+      "income_tax": 1400086831.0928345,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:12114258795.73822",
-        "BANK_NONINT:4482556719.064713"
+        "BANK_NII:12144256938.934326",
+        "BANK_NONINT:4493656727.7908325"
       ]
     },
     {
@@ -482,23 +487,23 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 16778271845.817566,
+      "total_revenue": 16893372290.13443,
       "gross_profit": null,
-      "operating_income": 5168578718.900681,
-      "net_income": 4016623688.4593964,
+      "operating_income": 5204035630.822182,
+      "net_income": 4044178085.923195,
       "rd_expense": null,
-      "sga_expense": 6209318578.720093,
+      "sga_expense": 6251915059.089661,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 1221025504.8274994,
+      "income_tax": 1229401848.912239,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:12397564809.322357",
-        "BANK_NONINT:4380707036.495209"
+        "BANK_NII:12482613211.870193",
+        "BANK_NONINT:4410759078.264236"
       ]
     },
     {
@@ -508,29 +513,29 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 17562631470.2034,
+      "total_revenue": 16230484970.80803,
       "gross_profit": null,
-      "operating_income": 5489346684.69429,
-      "net_income": 3982673794.269562,
+      "operating_income": 5072973205.447197,
+      "net_income": 3680583246.946335,
       "rd_expense": null,
-      "sga_expense": 5947084913.253784,
+      "sga_expense": 5495991444.5877075,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 1549988272.6669312,
+      "income_tax": 1432419817.4476624,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:12433856075.525284",
-        "BANK_NONINT:5128775394.678116"
+        "BANK_NII:11490733293.890953",
+        "BANK_NONINT:4739751676.917076"
       ]
     }
   ],
-  "ttm_revenue": 68989697051.76353,
-  "ttm_operating_income": 22267618530.511856,
-  "ttm_net_income": 18911261749.744415,
+  "ttm_revenue": 69001586465.59715,
+  "ttm_operating_income": 22269757463.21678,
+  "ttm_net_income": 18891830738.544464,
   "segment_trend": {
     "Statutory results": [
       {
@@ -690,7 +695,6 @@
   "quarterly_count": 5,
   "has_partial_data": true,
   "data_notes": [
-    "Partial data: 3/3 annual, 5/12 quarterly"
-  ],
-  "classification": "INTL_SEC"
+    "Only 3/3 annual reports available"
+  ]
 }

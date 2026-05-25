@@ -2,6 +2,7 @@
   "ticker": "BKNG",
   "name": "Booking Holdings Inc.",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "BKNG",
     "period": "FY2025",
@@ -25,7 +26,7 @@
     "rd_expense": null,
     "sga_expense": 9043000000.0,
     "cogs": null,
-    "interest_expense": -1617000000.0,
+    "interest_expense": 1617000000.0,
     "income_tax": 1428000000.0,
     "currency": "USD",
     "extraction_method": "edgar+llm",
@@ -56,7 +57,7 @@
       "rd_expense": null,
       "sga_expense": 9043000000.0,
       "cogs": null,
-      "interest_expense": -1617000000.0,
+      "interest_expense": 1617000000.0,
       "income_tax": 1428000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -86,7 +87,7 @@
       "rd_expense": null,
       "sga_expense": 8314000000.0,
       "cogs": null,
-      "interest_expense": -1295000000.0,
+      "interest_expense": 1295000000.0,
       "income_tax": 1410000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -124,7 +125,7 @@
       "rd_expense": null,
       "sga_expense": 8328000000.0,
       "cogs": null,
-      "interest_expense": -897000000.0,
+      "interest_expense": 897000000.0,
       "income_tax": 1192000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -156,7 +157,7 @@
       "rd_expense": null,
       "sga_expense": 2168000000.0,
       "cogs": null,
-      "interest_expense": -253000000.0,
+      "interest_expense": 253000000.0,
       "income_tax": 316000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -207,7 +208,7 @@
       "rd_expense": null,
       "sga_expense": 2594000000.0,
       "cogs": null,
-      "interest_expense": -301000000.0,
+      "interest_expense": 301000000.0,
       "income_tax": 721000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -237,7 +238,7 @@
       "rd_expense": null,
       "sga_expense": 2338000000.0,
       "cogs": null,
-      "interest_expense": -418000000.0,
+      "interest_expense": 418000000.0,
       "income_tax": 209000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -267,7 +268,7 @@
       "rd_expense": null,
       "sga_expense": 1919000000.0,
       "cogs": null,
-      "interest_expense": -649000000.0,
+      "interest_expense": 649000000.0,
       "income_tax": 63000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -305,7 +306,7 @@
       "rd_expense": null,
       "sga_expense": 2726000000.0,
       "cogs": null,
-      "interest_expense": -305000000.0,
+      "interest_expense": 305000000.0,
       "income_tax": 352000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -345,7 +346,7 @@
       "rd_expense": null,
       "sga_expense": 2051000000.0,
       "cogs": null,
-      "interest_expense": -264000000.0,
+      "interest_expense": 264000000.0,
       "income_tax": 401000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -385,7 +386,7 @@
       "rd_expense": null,
       "sga_expense": 1796000000.0,
       "cogs": null,
-      "interest_expense": -219000000.0,
+      "interest_expense": 219000000.0,
       "income_tax": 161000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -403,7 +404,7 @@
       "segments": [
         {
           "segment_name": "Outside of the U.S.",
-          "value": 633000000.0,
+          "value": 582750564.3340857,
           "unit": "MILLIONS",
           "period": "2023Q3",
           "concept": "llm_extracted",
@@ -411,7 +412,7 @@
         },
         {
           "segment_name": "Total",
-          "value": 7341000000.0,
+          "value": 6758249435.665914,
           "unit": "MILLIONS",
           "period": "2023Q3",
           "concept": "llm_extracted",
@@ -425,7 +426,7 @@
       "rd_expense": null,
       "sga_expense": 2409000000.0,
       "cogs": null,
-      "interest_expense": -254000000.0,
+      "interest_expense": 254000000.0,
       "income_tax": 638000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -465,7 +466,7 @@
       "rd_expense": null,
       "sga_expense": 2105000000.0,
       "cogs": null,
-      "interest_expense": -241000000.0,
+      "interest_expense": 241000000.0,
       "income_tax": 328000000.0,
       "currency": "USD",
       "extraction_method": "edgar+llm",
@@ -487,7 +488,7 @@
       },
       {
         "period": "2023Q3",
-        "value": 633000000.0,
+        "value": 582750564.3340857,
         "is_annual": false
       },
       {
@@ -531,7 +532,7 @@
     "Total": [
       {
         "period": "2023Q3",
-        "value": 7341000000.0,
+        "value": 6758249435.665914,
         "is_annual": false
       }
     ],
@@ -586,7 +587,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

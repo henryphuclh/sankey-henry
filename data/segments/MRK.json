@@ -2,6 +2,7 @@
   "ticker": "MRK",
   "name": "Merck & Co. Inc.",
   "sector": "pharma",
+  "classification": "",
   "latest_annual": {
     "ticker": "MRK",
     "period": "FY2025",
@@ -85,7 +86,24 @@
       "is_annual": true,
       "fiscal_year": 2024,
       "fiscal_quarter": null,
-      "segments": [],
+      "segments": [
+        {
+          "segment_name": "Pharmaceutical",
+          "value": 57400000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Animal Health",
+          "value": 5877000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
       "total_revenue": 64168000000.0,
       "gross_profit": 48975000000.0,
       "operating_income": 20221000000.0,
@@ -97,7 +115,7 @@
       "income_tax": 2803000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
-      "confidence": 0.55,
+      "confidence": 1.0,
       "notes": []
     },
     {
@@ -109,18 +127,18 @@
       "segments": [
         {
           "segment_name": "Pharmaceutical",
-          "value": 57544161311.766014,
-          "unit": "MILLIONS",
-          "period": "FY2023",
-          "concept": "llm_extracted",
+          "value": 53583000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         },
         {
           "segment_name": "Animal Health",
-          "value": 2570838688.2339907,
-          "unit": "MILLIONS",
-          "period": "FY2023",
-          "concept": "llm_extracted",
+          "value": 5625000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (FY)",
+          "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
@@ -134,7 +152,7 @@
       "interest_expense": null,
       "income_tax": 1512000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": []
     }
@@ -285,18 +303,18 @@
         {
           "segment_name": "Pharmaceutical",
           "value": 13638000000.0,
-          "unit": "MILLIONS",
-          "period": "2025Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Animal Health",
-          "value": 5026000000.0,
-          "unit": "MILLIONS",
-          "period": "2025Q1",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 1588000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 15529000000.0,
@@ -309,7 +327,7 @@
       "interest_expense": null,
       "income_tax": 818000000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": []
     },
@@ -322,7 +340,7 @@
       "segments": [
         {
           "segment_name": "United States",
-          "value": 8714000000.0,
+          "value": 7999840057.319224,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -330,7 +348,7 @@
         },
         {
           "segment_name": "Non-US",
-          "value": 7716000000.0,
+          "value": 7083631613.756614,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -338,7 +356,7 @@
         },
         {
           "segment_name": "Non-US - Animal Health segment",
-          "value": 1487000000.0,
+          "value": 1365132220.0176368,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -346,7 +364,7 @@
         },
         {
           "segment_name": "Corporate, Non-Segment",
-          "value": 227000000.0,
+          "value": 208396108.90652558,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -378,7 +396,7 @@
       "segments": [
         {
           "segment_name": "Non-US",
-          "value": 8036000000.0,
+          "value": 7359101511.879049,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -386,7 +404,7 @@
         },
         {
           "segment_name": "United States",
-          "value": 7854000000.0,
+          "value": 7192431965.442764,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -394,7 +412,7 @@
         },
         {
           "segment_name": "Non-US - Animal Health segment",
-          "value": 1482000000.0,
+          "value": 1357166306.6954644,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -402,7 +420,7 @@
         },
         {
           "segment_name": "Corporate, Non-Segment",
-          "value": 222000000.0,
+          "value": 203300215.98272136,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -434,7 +452,7 @@
       "segments": [
         {
           "segment_name": "Int’l",
-          "value": 8107000000.0,
+          "value": 7398352713.178295,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -442,7 +460,7 @@
         },
         {
           "segment_name": "United States",
-          "value": 7410000000.0,
+          "value": 6762278722.665741,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -450,7 +468,7 @@
         },
         {
           "segment_name": "Non-US - Animal Health segment",
-          "value": 1511000000.0,
+          "value": 1378920802.9619346,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -458,7 +476,7 @@
         },
         {
           "segment_name": "Corporate, Non-Segment",
-          "value": 258000000.0,
+          "value": 235447761.19402987,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -490,7 +508,7 @@
       "segments": [
         {
           "segment_name": "Int’l",
-          "value": 8048000000.0,
+          "value": 7399042506.623661,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -498,7 +516,7 @@
         },
         {
           "segment_name": "United States",
-          "value": 7615000000.0,
+          "value": 7000957838.958645,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -506,7 +524,7 @@
         },
         {
           "segment_name": "Non-US - Animal Health segment",
-          "value": 1400000000.0,
+          "value": 1287109779.979265,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -514,7 +532,7 @@
         },
         {
           "segment_name": "Corporate, Non-Segment",
-          "value": 299000000.0,
+          "value": 274889874.43842876,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -546,7 +564,7 @@
       "segments": [
         {
           "segment_name": "Int’l",
-          "value": 7869000000.0,
+          "value": 7162080937.10273,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -554,7 +572,7 @@
         },
         {
           "segment_name": "United States",
-          "value": 7045000000.0,
+          "value": 6412105757.007083,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -562,7 +580,7 @@
         },
         {
           "segment_name": "Non-US - Animal Health segment",
-          "value": 1456000000.0,
+          "value": 1325198861.916581,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -570,7 +588,7 @@
         },
         {
           "segment_name": "Corporate, Non-Segment",
-          "value": 149000000.0,
+          "value": 135614443.97360614,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -601,110 +619,110 @@
     "Int’l": [
       {
         "period": "2023Q2",
-        "value": 7869000000.0,
+        "value": 7162080937.10273,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 8048000000.0,
+        "value": 7399042506.623661,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 8107000000.0,
+        "value": 7398352713.178295,
         "is_annual": false
       }
     ],
     "United States": [
       {
         "period": "2023Q2",
-        "value": 7045000000.0,
+        "value": 6412105757.007083,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 7615000000.0,
+        "value": 7000957838.958645,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 7410000000.0,
+        "value": 6762278722.665741,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 7854000000.0,
+        "value": 7192431965.442764,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 8714000000.0,
+        "value": 7999840057.319224,
         "is_annual": false
       }
     ],
     "Non-US - Animal Health segment": [
       {
         "period": "2023Q2",
-        "value": 1456000000.0,
+        "value": 1325198861.916581,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 1400000000.0,
+        "value": 1287109779.979265,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 1511000000.0,
+        "value": 1378920802.9619346,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 1482000000.0,
+        "value": 1357166306.6954644,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 1487000000.0,
+        "value": 1365132220.0176368,
         "is_annual": false
       }
     ],
     "Corporate, Non-Segment": [
       {
         "period": "2023Q2",
-        "value": 149000000.0,
+        "value": 135614443.97360614,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 299000000.0,
+        "value": 274889874.43842876,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 258000000.0,
+        "value": 235447761.19402987,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 222000000.0,
+        "value": 203300215.98272136,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 227000000.0,
+        "value": 208396108.90652558,
         "is_annual": false
       }
     ],
     "Non-US": [
       {
         "period": "2024Q2",
-        "value": 8036000000.0,
+        "value": 7359101511.879049,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 7716000000.0,
+        "value": 7083631613.756614,
         "is_annual": false
       }
     ],
@@ -716,7 +734,12 @@
       },
       {
         "period": "FY2023",
-        "value": 57544161311.766014,
+        "value": 53583000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 57400000000.0,
         "is_annual": true
       },
       {
@@ -728,7 +751,7 @@
     "Animal Health": [
       {
         "period": "2025Q1",
-        "value": 5026000000.0,
+        "value": 1588000000.0,
         "is_annual": false
       },
       {
@@ -748,7 +771,12 @@
       },
       {
         "period": "FY2023",
-        "value": 2570838688.2339907,
+        "value": 5625000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 5877000000.0,
         "is_annual": true
       },
       {
@@ -777,7 +805,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

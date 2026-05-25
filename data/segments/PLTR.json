@@ -2,6 +2,7 @@
   "ticker": "PLTR",
   "name": "Palantir Technologies",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "PLTR",
     "period": "FY2025",
@@ -148,7 +149,7 @@
       "rd_expense": 404624000.0,
       "sga_expense": 1269317000.0,
       "cogs": 431105000.0,
-      "interest_expense": -3470000.0,
+      "interest_expense": 3470000.0,
       "income_tax": 19716000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -481,7 +482,7 @@
       "rd_expense": 105708000.0,
       "sga_expense": 304546000.0,
       "cogs": 107922000.0,
-      "interest_expense": -742000.0,
+      "interest_expense": 742000.0,
       "income_tax": 6530000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -521,7 +522,7 @@
       "rd_expense": 99533000.0,
       "sga_expense": 316811000.0,
       "cogs": 106899000.0,
-      "interest_expense": -1317000.0,
+      "interest_expense": 1317000.0,
       "income_tax": 2171000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -664,7 +665,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

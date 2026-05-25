@@ -2,6 +2,7 @@
   "ticker": "WMT",
   "name": "Walmart Inc.",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "WMT",
     "period": "FY2026",
@@ -855,7 +856,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 11,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

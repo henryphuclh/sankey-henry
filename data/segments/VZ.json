@@ -2,6 +2,7 @@
   "ticker": "VZ",
   "name": "Verizon Communications",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "VZ",
     "period": "FY2025",
@@ -11,7 +12,7 @@
     "segments": [
       {
         "segment_name": "Consumer",
-        "value": 106807000000.0,
+        "value": 106549957630.48663,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +20,7 @@
       },
       {
         "segment_name": "Business",
-        "value": 29069000000.0,
+        "value": 28999042369.513382,
         "unit": "USD",
         "period": "2025-12-31 (FY)",
         "concept": "xbrl_dimension",
@@ -33,8 +34,8 @@
     "rd_expense": null,
     "sga_expense": 33818000000.0,
     "cogs": 56765000000.0,
-    "interest_expense": -6694000000.0,
-    "income_tax": -5064000000.0,
+    "interest_expense": 6694000000.0,
+    "income_tax": 5064000000.0,
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
@@ -50,7 +51,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 106807000000.0,
+          "value": 106549957630.48663,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -58,7 +59,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 29069000000.0,
+          "value": 28999042369.513382,
           "unit": "USD",
           "period": "2025-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -72,8 +73,8 @@
       "rd_expense": null,
       "sga_expense": 33818000000.0,
       "cogs": 56765000000.0,
-      "interest_expense": -6694000000.0,
-      "income_tax": -5064000000.0,
+      "interest_expense": 6694000000.0,
+      "income_tax": 5064000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -88,7 +89,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 102904000000.0,
+          "value": 102705084124.28738,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -96,7 +97,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 29531000000.0,
+          "value": 29473915875.712612,
           "unit": "USD",
           "period": "2024-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -110,8 +111,8 @@
       "rd_expense": null,
       "sga_expense": 34113000000.0,
       "cogs": 54097000000.0,
-      "interest_expense": -6649000000.0,
-      "income_tax": -5030000000.0,
+      "interest_expense": 6649000000.0,
+      "income_tax": 5030000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -126,7 +127,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 101626000000.0,
+          "value": 101430844263.29053,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -134,7 +135,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 30122000000.0,
+          "value": 30064155736.709473,
           "unit": "USD",
           "period": "2023-12-31 (FY)",
           "concept": "xbrl_dimension",
@@ -148,8 +149,8 @@
       "rd_expense": null,
       "sga_expense": 32745000000.0,
       "cogs": 54887000000.0,
-      "interest_expense": -5524000000.0,
-      "income_tax": -4892000000.0,
+      "interest_expense": 5524000000.0,
+      "income_tax": 4892000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -166,7 +167,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 26453000000.0,
+          "value": 26391303406.943787,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -174,7 +175,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 7419000000.0,
+          "value": 7401696593.056211,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -188,8 +189,8 @@
       "rd_expense": null,
       "sga_expense": 7633000000.0,
       "cogs": 13673000000.0,
-      "interest_expense": -1940000000.0,
-      "income_tax": -1638000000.0,
+      "interest_expense": 1940000000.0,
+      "income_tax": 1638000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -225,7 +226,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 26105000000.0,
+          "value": 26038259391.82483,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -233,7 +234,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 7142000000.0,
+          "value": 7123740608.175174,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -247,8 +248,8 @@
       "rd_expense": null,
       "sga_expense": 7752000000.0,
       "cogs": 13346000000.0,
-      "interest_expense": -1664000000.0,
-      "income_tax": -1471000000.0,
+      "interest_expense": 1664000000.0,
+      "income_tax": 1471000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -263,7 +264,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 26648000000.0,
+          "value": 26583585414.025883,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -271,7 +272,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 7275000000.0,
+          "value": 7257414585.974118,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -285,8 +286,8 @@
       "rd_expense": null,
       "sga_expense": 7812000000.0,
       "cogs": 13885000000.0,
-      "interest_expense": -1639000000.0,
-      "income_tax": -1488000000.0,
+      "interest_expense": 1639000000.0,
+      "income_tax": 1488000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -301,7 +302,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 25618000000.0,
+          "value": 25556493131.53416,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -309,7 +310,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 7286000000.0,
+          "value": 7268506868.46584,
           "unit": "USD",
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -323,8 +324,8 @@
       "rd_expense": null,
       "sga_expense": 7874000000.0,
       "cogs": 13056000000.0,
-      "interest_expense": -1632000000.0,
-      "income_tax": -1490000000.0,
+      "interest_expense": 1632000000.0,
+      "income_tax": 1490000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -339,7 +340,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 25360000000.0,
+          "value": 25308831891.412674,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -347,7 +348,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 7351000000.0,
+          "value": 7336168108.587325,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -361,8 +362,8 @@
       "rd_expense": null,
       "sga_expense": 9706000000.0,
       "cogs": 13240000000.0,
-      "interest_expense": -1672000000.0,
-      "income_tax": -891000000.0,
+      "interest_expense": 1672000000.0,
+      "income_tax": 891000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -379,7 +380,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 24927000000.0,
+          "value": 24877497160.765816,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -387,7 +388,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 7300000000.0,
+          "value": 7285502839.234182,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -401,8 +402,8 @@
       "rd_expense": null,
       "sga_expense": 8024000000.0,
       "cogs": 12471000000.0,
-      "interest_expense": -1698000000.0,
-      "income_tax": -1332000000.0,
+      "interest_expense": 1698000000.0,
+      "income_tax": 1332000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -419,7 +420,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 25057000000.0,
+          "value": 25008327629.266487,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -427,7 +428,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 7376000000.0,
+          "value": 7361672370.733512,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -441,8 +442,8 @@
       "rd_expense": null,
       "sga_expense": 8143000000.0,
       "cogs": 12872000000.0,
-      "interest_expense": -1635000000.0,
-      "income_tax": -1353000000.0,
+      "interest_expense": 1635000000.0,
+      "income_tax": 1353000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -459,7 +460,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 25257000000.0,
+          "value": 25206153184.480236,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -467,7 +468,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 7527000000.0,
+          "value": 7511846815.519766,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -481,8 +482,8 @@
       "rd_expense": null,
       "sga_expense": 7995000000.0,
       "cogs": 13437000000.0,
-      "interest_expense": -1433000000.0,
-      "income_tax": -1308000000.0,
+      "interest_expense": 1433000000.0,
+      "income_tax": 1308000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -499,7 +500,7 @@
       "segments": [
         {
           "segment_name": "Consumer",
-          "value": 24558000000.0,
+          "value": 24507413938.391434,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -507,7 +508,7 @@
         },
         {
           "segment_name": "Business",
-          "value": 7483000000.0,
+          "value": 7467586061.608563,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -521,8 +522,8 @@
       "rd_expense": null,
       "sga_expense": 8253000000.0,
       "cogs": 12764000000.0,
-      "interest_expense": -1285000000.0,
-      "income_tax": -1346000000.0,
+      "interest_expense": 1285000000.0,
+      "income_tax": 1346000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -538,131 +539,132 @@
     "Consumer": [
       {
         "period": "2023Q2",
-        "value": 24558000000.0,
+        "value": 24507413938.391434,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 25257000000.0,
+        "value": 25206153184.480236,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 25057000000.0,
+        "value": 25008327629.266487,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 24927000000.0,
+        "value": 24877497160.765816,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 25360000000.0,
+        "value": 25308831891.412674,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 25618000000.0,
+        "value": 25556493131.53416,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 26648000000.0,
+        "value": 26583585414.025883,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 26105000000.0,
+        "value": 26038259391.82483,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 26453000000.0,
+        "value": 26391303406.943787,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 101626000000.0,
+        "value": 101430844263.29053,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 102904000000.0,
+        "value": 102705084124.28738,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 106807000000.0,
+        "value": 106549957630.48663,
         "is_annual": true
       }
     ],
     "Business": [
       {
         "period": "2023Q2",
-        "value": 7483000000.0,
+        "value": 7467586061.608563,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 7527000000.0,
+        "value": 7511846815.519766,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 7376000000.0,
+        "value": 7361672370.733512,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 7300000000.0,
+        "value": 7285502839.234182,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 7351000000.0,
+        "value": 7336168108.587325,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 7286000000.0,
+        "value": 7268506868.46584,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 7275000000.0,
+        "value": 7257414585.974118,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 7142000000.0,
+        "value": 7123740608.175174,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 7419000000.0,
+        "value": 7401696593.056211,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 30122000000.0,
+        "value": 30064155736.709473,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 29531000000.0,
+        "value": 29473915875.712612,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 29069000000.0,
+        "value": 28999042369.513382,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

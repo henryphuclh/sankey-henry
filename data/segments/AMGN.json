@@ -2,6 +2,7 @@
   "ticker": "AMGN",
   "name": "Amgen Inc.",
   "sector": "pharma",
+  "classification": "",
   "latest_annual": {
     "ticker": "AMGN",
     "period": "FY2025",
@@ -793,7 +794,7 @@
       "segments": [
         {
           "segment_name": "Prolia",
-          "value": 1139000000.0,
+          "value": 1135662969.5511143,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -801,7 +802,7 @@
         },
         {
           "segment_name": "Repatha",
-          "value": 794000000.0,
+          "value": 791673746.9917338,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -809,7 +810,7 @@
         },
         {
           "segment_name": "ENBREL",
-          "value": 580000000.0,
+          "value": 578300721.9838861,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -817,7 +818,7 @@
         },
         {
           "segment_name": "Otezla",
-          "value": 585000000.0,
+          "value": 583286073.0354714,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -825,7 +826,7 @@
         },
         {
           "segment_name": "XGEVA",
-          "value": 539000000.0,
+          "value": 537420843.3608873,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -833,7 +834,7 @@
         },
         {
           "segment_name": "EVENITY",
-          "value": 541000000.0,
+          "value": 539414983.7815214,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -841,7 +842,7 @@
         },
         {
           "segment_name": "TEPEZZA",
-          "value": 560000000.0,
+          "value": 558359317.7775452,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -849,7 +850,7 @@
         },
         {
           "segment_name": "BLINCYTO",
-          "value": 392000000.0,
+          "value": 390851522.4442817,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -857,7 +858,7 @@
         },
         {
           "segment_name": "Nplate",
-          "value": 457000000.0,
+          "value": 455661086.1148896,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -865,7 +866,7 @@
         },
         {
           "segment_name": "KYPROLIS",
-          "value": 359000000.0,
+          "value": 357948205.5038192,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -873,7 +874,7 @@
         },
         {
           "segment_name": "Aranesp",
-          "value": 357000000.0,
+          "value": 355954065.08318514,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -881,7 +882,7 @@
         },
         {
           "segment_name": "TEZSPIRE",
-          "value": 377000000.0,
+          "value": 375895469.289526,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -889,7 +890,7 @@
         },
         {
           "segment_name": "KRYSTEXXA",
-          "value": 320000000.0,
+          "value": 319062467.3014544,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -897,7 +898,7 @@
         },
         {
           "segment_name": "Vectibix",
-          "value": 284000000.0,
+          "value": 283167939.7300408,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -905,7 +906,7 @@
         },
         {
           "segment_name": "Other products",
-          "value": 1853000000.0,
+          "value": 1847571099.7174847,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -913,7 +914,7 @@
         },
         {
           "segment_name": "Other revenues",
-          "value": 420000000.0,
+          "value": 418769488.33315897,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1981,7 +1982,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 1139000000.0,
+        "value": 1135662969.5511143,
         "is_annual": false
       },
       {
@@ -2043,7 +2044,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 580000000.0,
+        "value": 578300721.9838861,
         "is_annual": false
       },
       {
@@ -2105,7 +2106,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 539000000.0,
+        "value": 537420843.3608873,
         "is_annual": false
       },
       {
@@ -2167,7 +2168,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 585000000.0,
+        "value": 583286073.0354714,
         "is_annual": false
       },
       {
@@ -2229,7 +2230,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 794000000.0,
+        "value": 791673746.9917338,
         "is_annual": false
       },
       {
@@ -2291,7 +2292,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 357000000.0,
+        "value": 355954065.08318514,
         "is_annual": false
       },
       {
@@ -2353,7 +2354,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 359000000.0,
+        "value": 357948205.5038192,
         "is_annual": false
       },
       {
@@ -2415,7 +2416,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 457000000.0,
+        "value": 455661086.1148896,
         "is_annual": false
       },
       {
@@ -2477,7 +2478,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 541000000.0,
+        "value": 539414983.7815214,
         "is_annual": false
       },
       {
@@ -2539,7 +2540,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 1853000000.0,
+        "value": 1847571099.7174847,
         "is_annual": false
       },
       {
@@ -2601,7 +2602,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 420000000.0,
+        "value": 418769488.33315897,
         "is_annual": false
       },
       {
@@ -2665,7 +2666,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 560000000.0,
+        "value": 558359317.7775452,
         "is_annual": false
       },
       {
@@ -2717,7 +2718,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 284000000.0,
+        "value": 283167939.7300408,
         "is_annual": false
       },
       {
@@ -2769,7 +2770,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 392000000.0,
+        "value": 390851522.4442817,
         "is_annual": false
       },
       {
@@ -2821,7 +2822,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 320000000.0,
+        "value": 319062467.3014544,
         "is_annual": false
       },
       {
@@ -2873,7 +2874,7 @@
       },
       {
         "period": "2025Q3",
-        "value": 377000000.0,
+        "value": 375895469.289526,
         "is_annual": false
       },
       {
@@ -2916,7 +2917,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

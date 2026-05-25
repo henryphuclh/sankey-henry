@@ -2,6 +2,7 @@
   "ticker": "ISRG",
   "name": "Intuitive Surgical Inc.",
   "sector": "pharma",
+  "classification": "",
   "latest_annual": {
     "ticker": "ISRG",
     "period": "FY2025",
@@ -213,8 +214,16 @@
           "is_annual": true
         },
         {
-          "segment_name": "Services",
-          "value": 433700000.0,
+          "segment_name": "Service - U.S.",
+          "value": 281700000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service - Outside of the U.S. (“OUS”)",
+          "value": 152000000.0,
           "unit": "USD",
           "period": "2026-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -264,14 +273,6 @@
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Services",
-          "value": 395900000.0,
-          "unit": "USD",
-          "period": "2025-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Instruments and accessories",
           "value": 1518800000.0,
           "unit": "USD",
@@ -282,6 +283,22 @@
         {
           "segment_name": "Systems",
           "value": 590400000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service - U.S.",
+          "value": 258100000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service - Outside of the U.S. (“OUS”)",
+          "value": 137800000.0,
           "unit": "USD",
           "period": "2025-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -310,14 +327,6 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Services",
-          "value": 391200000.0,
-          "unit": "USD",
-          "period": "2025-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Instruments and accessories",
           "value": 1474100000.0,
           "unit": "USD",
@@ -328,6 +337,22 @@
         {
           "segment_name": "Systems",
           "value": 574700000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service - U.S.",
+          "value": 258100000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service - Outside of the U.S. (“OUS”)",
+          "value": 133100000.0,
           "unit": "USD",
           "period": "2025-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -356,14 +381,6 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Services",
-          "value": 363000000.0,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Instruments and accessories",
           "value": 1367700000.0,
           "unit": "USD",
@@ -378,6 +395,22 @@
           "period": "2025-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Service - U.S.",
+          "value": 238500000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service - Outside of the U.S. (“OUS”)",
+          "value": 124500000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 2253400000.0,
@@ -388,7 +421,7 @@
       "sga_expense": 563400000.0,
       "cogs": 795700000.0,
       "interest_expense": null,
-      "income_tax": -35200000.0,
+      "income_tax": 35200000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -402,14 +435,6 @@
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Services",
-          "value": 328900000.0,
-          "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Instruments and accessories",
           "value": 1264200000.0,
           "unit": "USD",
@@ -420,6 +445,22 @@
         {
           "segment_name": "Systems",
           "value": 445000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service - U.S.",
+          "value": 209200000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Service - Outside of the U.S. (“OUS”)",
+          "value": 119700000.0,
           "unit": "USD",
           "period": "2024-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -450,14 +491,6 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Services",
-          "value": 317300000.0,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Instruments and accessories",
           "value": 1244400000.0,
           "unit": "USD",
@@ -468,6 +501,14 @@
         {
           "segment_name": "Systems",
           "value": 448200000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 317300000.0,
           "unit": "USD",
           "period": "2024-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -498,14 +539,6 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Services",
-          "value": 313500000.0,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Instruments and accessories",
           "value": 1158900000.0,
           "unit": "USD",
@@ -520,6 +553,14 @@
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
           "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 313500000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 1890600000.0,
@@ -530,7 +571,7 @@
       "sga_expense": 491500000.0,
       "cogs": 645200000.0,
       "interest_expense": null,
-      "income_tax": -8900000.0,
+      "income_tax": 8900000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -546,14 +587,6 @@
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Services",
-          "value": 292900000.0,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Instruments and accessories",
           "value": 1071400000.0,
           "unit": "USD",
@@ -564,6 +597,14 @@
         {
           "segment_name": "Systems",
           "value": 379400000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 292900000.0,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -594,14 +635,6 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Services",
-          "value": 287300000.0,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Instruments and accessories",
           "value": 1075900000.0,
           "unit": "USD",
@@ -612,6 +645,14 @@
         {
           "segment_name": "Systems",
           "value": 392700000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Services",
+          "value": 287300000.0,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -639,68 +680,6 @@
   "ttm_operating_income": 3222700000.0,
   "ttm_net_income": 2994200000.0,
   "segment_trend": {
-    "Services": [
-      {
-        "period": "2023Q2",
-        "value": 287300000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q3",
-        "value": 292900000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 313500000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 317300000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 328900000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 363000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 391200000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 395900000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 433700000.0,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 1167800000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 1307100000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 1572100000.0,
-        "is_annual": true
-      }
-    ],
     "Instruments and accessories": [
       {
         "period": "2023Q2",
@@ -824,11 +803,103 @@
         "value": 2473700000.0,
         "is_annual": true
       }
+    ],
+    "Services": [
+      {
+        "period": "2023Q2",
+        "value": 287300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2023Q3",
+        "value": 292900000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q1",
+        "value": 313500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 317300000.0,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 1167800000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 1307100000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 1572100000.0,
+        "is_annual": true
+      }
+    ],
+    "Service - U.S.": [
+      {
+        "period": "2024Q3",
+        "value": 209200000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 238500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 258100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 258100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 281700000.0,
+        "is_annual": false
+      }
+    ],
+    "Service - Outside of the U.S. (“OUS”)": [
+      {
+        "period": "2024Q3",
+        "value": 119700000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 124500000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 133100000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 137800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 152000000.0,
+        "is_annual": false
+      }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

@@ -2,6 +2,7 @@
   "ticker": "HSBC",
   "name": "HSBC Holdings plc",
   "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "HSBC",
     "period": "FY2025",
@@ -400,7 +401,6 @@
   "quarterly_count": 5,
   "has_partial_data": true,
   "data_notes": [
-    "Partial data: 3/3 annual, 5/12 quarterly"
-  ],
-  "classification": "INTL_SEC"
+    "Only 3/3 annual reports available"
+  ]
 }

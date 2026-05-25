@@ -2,6 +2,7 @@
   "ticker": "KLAC",
   "name": "KLA Corporation",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "KLAC",
     "period": "FY2025",
@@ -11,7 +12,7 @@
     "segments": [
       {
         "segment_name": "Semiconductor Process Control",
-        "value": 10947359000.0,
+        "value": 10947336486.034477,
         "unit": "USD",
         "period": "2025-06-30 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +20,7 @@
       },
       {
         "segment_name": "Specialty Semiconductor Process",
-        "value": 587107000.0,
+        "value": 587105792.5757476,
         "unit": "USD",
         "period": "2025-06-30 (FY)",
         "concept": "xbrl_dimension",
@@ -27,7 +28,7 @@
       },
       {
         "segment_name": "PCB, Display and Component Inspection",
-        "value": 621721000.0,
+        "value": 621719721.3897746,
         "unit": "USD",
         "period": "2025-06-30 (FY)",
         "concept": "xbrl_dimension",
@@ -58,7 +59,7 @@
       "segments": [
         {
           "segment_name": "Semiconductor Process Control",
-          "value": 10947359000.0,
+          "value": 10947336486.034477,
           "unit": "USD",
           "period": "2025-06-30 (FY)",
           "concept": "xbrl_dimension",
@@ -66,7 +67,7 @@
         },
         {
           "segment_name": "Specialty Semiconductor Process",
-          "value": 587107000.0,
+          "value": 587105792.5757476,
           "unit": "USD",
           "period": "2025-06-30 (FY)",
           "concept": "xbrl_dimension",
@@ -74,7 +75,7 @@
         },
         {
           "segment_name": "PCB, Display and Component Inspection",
-          "value": 621721000.0,
+          "value": 621719721.3897746,
           "unit": "USD",
           "period": "2025-06-30 (FY)",
           "concept": "xbrl_dimension",
@@ -716,7 +717,7 @@
       },
       {
         "period": "FY2025",
-        "value": 10947359000.0,
+        "value": 10947336486.034477,
         "is_annual": true
       }
     ],
@@ -778,7 +779,7 @@
       },
       {
         "period": "FY2025",
-        "value": 587107000.0,
+        "value": 587105792.5757476,
         "is_annual": true
       }
     ],
@@ -844,7 +845,7 @@
       },
       {
         "period": "FY2025",
-        "value": 621721000.0,
+        "value": 621719721.3897746,
         "is_annual": true
       }
     ],
@@ -879,7 +880,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

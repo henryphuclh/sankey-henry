@@ -2,6 +2,7 @@
   "ticker": "TD.TO",
   "name": "Toronto Dominion Bank",
   "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "TD.TO",
     "period": "FY2025",
@@ -64,7 +65,7 @@
     "confidence": 1.0,
     "notes": [
       "EXPENSE_DETAIL:{\"Personnel\": 18227000000.0}",
-      "Warning: total_revenue (67777000000) differs from Yahoo (44746987613) by 51.5%"
+      "Warning: total_revenue (67777000000) differs from Yahoo (43831312890) by 54.6%"
     ]
   },
   "annual_periods": [
@@ -130,7 +131,7 @@
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 18227000000.0}",
-        "Warning: total_revenue (67777000000) differs from Yahoo (44746987613) by 51.5%"
+        "Warning: total_revenue (67777000000) differs from Yahoo (43831312890) by 54.6%"
       ]
     },
     {
@@ -195,7 +196,7 @@
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 16733000000.0}",
-        "Warning: total_revenue (57223000000) differs from Yahoo (41077765297) by 39.3%"
+        "Warning: total_revenue (57223000000) differs from Yahoo (40369710651) by 41.7%"
       ]
     },
     {
@@ -260,7 +261,7 @@
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 15753000000.0}",
-        "Warning: total_revenue (50492000000) differs from Yahoo (37622489675) by 34.2%"
+        "Warning: total_revenue (50492000000) differs from Yahoo (37130132707) by 36.0%"
       ]
     }
   ],
@@ -272,23 +273,23 @@
       "fiscal_year": 2026,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 12048922873.3778,
+      "total_revenue": 12230210240.840912,
       "gross_profit": null,
-      "operating_income": 3775830566.5254593,
-      "net_income": 2952172303.3189774,
+      "operating_income": 3832641485.6910706,
+      "net_income": 2996590509.89151,
       "rd_expense": null,
-      "sga_expense": 5063161699.533463,
+      "sga_expense": 5139341725.349426,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 823658263.2064819,
+      "income_tax": 836050975.7995605,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:6417670634.150505",
-        "BANK_NONINT:5631252239.227295"
+        "BANK_NII:6514230519.771576",
+        "BANK_NONINT:5715979721.069336"
       ]
     },
     {
@@ -298,23 +299,23 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 11605695421.45729,
+      "total_revenue": 11368203637.003899,
       "gross_profit": null,
-      "operating_income": 2995253719.5682526,
-      "net_income": 2395034666.0614014,
+      "operating_income": 2933960697.054863,
+      "net_income": 2346024155.6167603,
       "rd_expense": null,
-      "sga_expense": 4879152938.604355,
+      "sga_expense": 4779308965.802193,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 600219053.5068512,
+      "income_tax": 587936541.4381027,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:6239503421.187401",
-        "BANK_NONINT:5366192000.26989"
+        "BANK_NII:6111822076.141834",
+        "BANK_NONINT:5256381560.862064"
       ]
     },
     {
@@ -324,23 +325,23 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 11304855701.208115,
+      "total_revenue": 11172692412.614822,
       "gross_profit": null,
-      "operating_income": 3096750615.477562,
-      "net_income": 2435925501.8234253,
+      "operating_income": 3060546991.467476,
+      "net_income": 2407447480.201721,
       "rd_expense": null,
-      "sga_expense": 4709748047.590256,
+      "sga_expense": 4654687124.490738,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 660825113.6541367,
+      "income_tax": 653099511.2657547,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:6225629744.768143",
-        "BANK_NONINT:5079225956.439972"
+        "BANK_NII:6152846887.350082",
+        "BANK_NONINT:5019845525.26474"
       ]
     },
     {
@@ -350,23 +351,23 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 10955823210.23941,
+      "total_revenue": 10880663769.721985,
       "gross_profit": null,
-      "operating_income": 8791529688.835144,
-      "net_income": 8126323414.206505,
+      "operating_income": 8731217794.418335,
+      "net_income": 8070574986.219406,
       "rd_expense": null,
-      "sga_expense": 4621394634.604454,
+      "sga_expense": 4589690815.68718,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 719240593.3141708,
+      "income_tax": 714306439.1613007,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:5932822152.972221",
-        "BANK_NONINT:5023001057.267189"
+        "BANK_NII:5892121642.827988",
+        "BANK_NONINT:4988542126.893997"
       ]
     },
     {
@@ -376,29 +377,29 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 10880613280.177116,
+      "total_revenue": 10281514995.217323,
       "gross_profit": null,
-      "operating_income": 2380430796.146393,
-      "net_income": 2039430433.6309433,
+      "operating_income": 2249361712.9325867,
+      "net_income": 1927137197.6137161,
       "rd_expense": null,
-      "sga_expense": 4744797335.386276,
+      "sga_expense": 4483543684.244156,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 509675060.0337982,
+      "income_tax": 481611802.33955383,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:5743702037.572861",
-        "BANK_NONINT:5136911242.604256"
+        "BANK_NII:5427447617.769241",
+        "BANK_NONINT:4854067377.448082"
       ]
     }
   ],
-  "ttm_revenue": 45915297206.282616,
-  "ttm_operating_income": 18659364590.406418,
-  "ttm_net_income": 15909455885.410309,
+  "ttm_revenue": 45651770060.18162,
+  "ttm_operating_income": 18558366968.631744,
+  "ttm_net_income": 15820637131.929398,
   "segment_trend": {
     "Canadian Personal and Commercial Banking": [
       {
@@ -496,7 +497,6 @@
   "quarterly_count": 5,
   "has_partial_data": true,
   "data_notes": [
-    "Partial data: 3/3 annual, 5/12 quarterly"
-  ],
-  "classification": "INTL_SEC"
+    "Only 3/3 annual reports available"
+  ]
 }

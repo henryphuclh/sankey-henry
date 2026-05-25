@@ -2,6 +2,7 @@
   "ticker": "NOW",
   "name": "ServiceNow Inc.",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "NOW",
     "period": "FY2025",
@@ -165,7 +166,7 @@
       "sga_expense": 4164000000.0,
       "cogs": 1921000000.0,
       "interest_expense": null,
-      "income_tax": -723000000.0,
+      "income_tax": 723000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -578,7 +579,7 @@
       "sga_expense": 1041000000.0,
       "cogs": 471000000.0,
       "interest_expense": null,
-      "income_tax": -870000000.0,
+      "income_tax": 870000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -757,7 +758,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

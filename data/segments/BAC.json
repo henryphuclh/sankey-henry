@@ -2,6 +2,7 @@
   "ticker": "BAC",
   "name": "Bank of America Corp.",
   "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "BAC",
     "period": "FY2025",
@@ -11,42 +12,34 @@
     "segments": [
       {
         "segment_name": "Consumer Banking",
-        "value": 35301693034.44956,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
+        "value": 27395499103.122597,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       },
       {
         "segment_name": "Global Wealth & Investment Management",
-        "value": 28962101863.439457,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
+        "value": 25386827049.09031,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       },
       {
         "segment_name": "Global Banking",
-        "value": 19311178601.388985,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
+        "value": 30135601035.984917,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       },
       {
         "segment_name": "Global Markets",
-        "value": 28627702427.284607,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
-        "is_annual": true
-      },
-      {
-        "segment_name": "All Other",
-        "value": 894324073.4373926,
-        "unit": "USD",
-        "period": "2025-12-31 (FY)",
-        "concept": "xbrl_dimension",
+        "value": 30179072811.802174,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
         "is_annual": true
       }
     ],
@@ -60,7 +53,7 @@
     "interest_expense": 5675000000.0,
     "income_tax": 7186000000.0,
     "currency": "USD",
-    "extraction_method": "xbrl",
+    "extraction_method": "edgar+llm",
     "confidence": 1.0,
     "notes": [
       "EXPENSE_DETAIL:{\"Personnel\": 42346000000.0, \"Technology & Equipment\": 7453000000.0, \"Occupancy\": 7448000000.0, \"Professional Services\": 2580000000.0, \"Marketing\": 2204000000.0}"
@@ -76,42 +69,34 @@
       "segments": [
         {
           "segment_name": "Consumer Banking",
-          "value": 35301693034.44956,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 27395499103.122597,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
           "segment_name": "Global Wealth & Investment Management",
-          "value": 28962101863.439457,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 25386827049.09031,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
           "segment_name": "Global Banking",
-          "value": 19311178601.388985,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 30135601035.984917,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
           "segment_name": "Global Markets",
-          "value": 28627702427.284607,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 894324073.4373926,
-          "unit": "USD",
-          "period": "2025-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 30179072811.802174,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
@@ -125,7 +110,7 @@
       "interest_expense": 5675000000.0,
       "income_tax": 7186000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 42346000000.0, \"Technology & Equipment\": 7453000000.0, \"Occupancy\": 7448000000.0, \"Professional Services\": 2580000000.0, \"Marketing\": 2204000000.0}"
@@ -140,42 +125,34 @@
       "segments": [
         {
           "segment_name": "Consumer Banking",
-          "value": 31576213114.983944,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 36991000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
           "segment_name": "Global Wealth & Investment Management",
-          "value": 24629274806.16351,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 17866000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
           "segment_name": "Global Banking",
-          "value": 16932358579.98121,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 18400000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
           "segment_name": "Global Markets",
-          "value": 26337795928.38215,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 2411357570.489183,
-          "unit": "USD",
-          "period": "2024-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 27449000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2024",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
@@ -189,7 +166,7 @@
       "interest_expense": 5821000000.0,
       "income_tax": 2122000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 40182000000.0, \"Technology & Equipment\": 7231000000.0, \"Occupancy\": 7289000000.0, \"Professional Services\": 2669000000.0, \"Marketing\": 1956000000.0}"
@@ -204,42 +181,34 @@
       "segments": [
         {
           "segment_name": "Consumer Banking",
-          "value": 29951349109.06821,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 34906212052.91161,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
           "segment_name": "Global Wealth & Investment Management",
-          "value": 22147439507.43389,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 25285118299.832493,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
           "segment_name": "Global Banking",
-          "value": 15865152423.107481,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 12812543138.48655,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
           "is_annual": true
         },
         {
           "segment_name": "Global Markets",
-          "value": 24962720874.47509,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 5654338085.915334,
-          "unit": "USD",
-          "period": "2023-12-31 (FY)",
-          "concept": "xbrl_dimension",
+          "value": 25577126508.769337,
+          "unit": "MILLIONS",
+          "period": "FY2023",
+          "concept": "llm_extracted",
           "is_annual": true
         }
       ],
@@ -253,7 +222,7 @@
       "interest_expense": 4394000000.0,
       "income_tax": 1827000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 38330000000.0, \"Technology & Equipment\": 6707000000.0, \"Occupancy\": 7164000000.0, \"Professional Services\": 2159000000.0, \"Marketing\": 1927000000.0, \"Other Non-Interest Expense\": 5950000000.0}"
@@ -270,43 +239,19 @@
       "segments": [
         {
           "segment_name": "Consumer Banking",
-          "value": 9103903549.899532,
-          "unit": "USD",
-          "period": "2026-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 23357887088.856163,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Wealth & Investment Management",
-          "value": 7701743314.956979,
-          "unit": "USD",
-          "period": "2026-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Global Banking",
-          "value": 5026877015.817405,
-          "unit": "USD",
-          "period": "2026-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Global Markets",
-          "value": 8185246844.247515,
-          "unit": "USD",
-          "period": "2026-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 254229275.07857183,
-          "unit": "USD",
-          "period": "2026-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 6914112911.143839,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 30272000000.0,
@@ -319,7 +264,7 @@
       "interest_expense": 1337000000.0,
       "income_tax": 1820000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 11334000000.0, \"Technology & Equipment\": 2018000000.0, \"Occupancy\": 1900000000.0, \"Professional Services\": 583000000.0, \"Marketing\": 533000000.0}"
@@ -355,43 +300,11 @@
       "segments": [
         {
           "segment_name": "Consumer Banking",
-          "value": 8584069729.19636,
-          "unit": "USD",
-          "period": "2025-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Global Wealth & Investment Management",
-          "value": 7116694222.124767,
-          "unit": "USD",
-          "period": "2025-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Global Banking",
-          "value": 4779363666.264664,
-          "unit": "USD",
-          "period": "2025-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Global Markets",
-          "value": 7298383949.128386,
-          "unit": "USD",
-          "period": "2025-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 309488433.28582394,
-          "unit": "USD",
-          "period": "2025-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 28242000000.0,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 28088000000.0,
@@ -404,7 +317,7 @@
       "interest_expense": 1295000000.0,
       "income_tax": 987000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 10523000000.0, \"Technology & Equipment\": 1827000000.0, \"Occupancy\": 1872000000.0, \"Professional Services\": 606000000.0, \"Marketing\": 572000000.0}"
@@ -419,43 +332,43 @@
       "segments": [
         {
           "segment_name": "Consumer Banking",
-          "value": 8143699336.650084,
-          "unit": "USD",
-          "period": "2025-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 9088303030.30303,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Wealth & Investment Management",
-          "value": 6718881094.527364,
-          "unit": "USD",
-          "period": "2025-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 9126856351.981352,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Banking",
-          "value": 4490956882.25539,
-          "unit": "USD",
-          "period": "2025-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 5123308080.808081,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Markets",
-          "value": 6894423383.084578,
-          "unit": "USD",
-          "period": "2025-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 4676946289.82129,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "All Other",
-          "value": 215039303.48258707,
-          "unit": "USD",
-          "period": "2025-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": -1552413752.913753,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 26463000000.0,
@@ -468,7 +381,7 @@
       "interest_expense": 1592000000.0,
       "income_tax": 572000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 10332000000.0, \"Technology & Equipment\": 1819000000.0, \"Occupancy\": 1836000000.0, \"Professional Services\": 640000000.0, \"Marketing\": 563000000.0}"
@@ -483,43 +396,35 @@
       "segments": [
         {
           "segment_name": "Consumer Banking",
-          "value": 8237796631.187351,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 9751597263.883827,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Global Wealth and Investment Management Segment",
-          "value": 6587692156.660122,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Global Wealth & Investment Management",
+          "value": 8049996860.194556,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
-          "segment_name": "Global Banking Segment",
-          "value": 4502084530.329648,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "segment_name": "Global Banking",
+          "value": 5051098763.701607,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Markets",
-          "value": 7628375012.917227,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 410051668.9056526,
-          "unit": "USD",
-          "period": "2025-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 4513307112.220011,
+          "unit": "MILLIONS",
+          "period": "2025Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 27366000000.0,
@@ -532,7 +437,7 @@
       "interest_expense": 1480000000.0,
       "income_tax": 720000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 10889000000.0, \"Technology & Equipment\": 1894000000.0, \"Occupancy\": 1856000000.0, \"Professional Services\": 652000000.0, \"Marketing\": 506000000.0}"
@@ -547,43 +452,19 @@
       "segments": [
         {
           "segment_name": "Consumer Banking",
-          "value": 7893923345.339937,
+          "value": 12672500000.000002,
           "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "period": "2024Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Wealth & Investment Management",
-          "value": 6190753039.171545,
+          "value": 12672500000.000002,
           "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Global Banking",
-          "value": 4266484410.1755967,
-          "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Global Markets",
-          "value": 6749917829.806394,
-          "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 243921375.5065286,
-          "unit": "USD",
-          "period": "2024-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "period": "2024Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 25345000000.0,
@@ -596,7 +477,7 @@
       "interest_expense": 1542000000.0,
       "income_tax": 428000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 9916000000.0, \"Technology & Equipment\": 1784000000.0, \"Occupancy\": 1836000000.0, \"Professional Services\": 723000000.0, \"Marketing\": 504000000.0, \"Other Non-Interest Expense\": 867000000.0}",
@@ -612,43 +493,35 @@
       "segments": [
         {
           "segment_name": "Consumer Banking",
-          "value": 7917994974.874372,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 8210158562.099791,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Wealth & Investment Management",
-          "value": 6084857412.060302,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 8465971850.630825,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Banking",
-          "value": 4201000628.1407037,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 4483972548.025106,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Markets",
-          "value": 6794926507.537688,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 378220477.3869347,
-          "unit": "USD",
-          "period": "2024-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 4216897039.244278,
+          "unit": "MILLIONS",
+          "period": "2024Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 25377000000.0,
@@ -661,7 +534,7 @@
       "interest_expense": 1508000000.0,
       "income_tax": 663000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 9826000000.0, \"Technology & Equipment\": 1763000000.0, \"Occupancy\": 1818000000.0, \"Professional Services\": 654000000.0, \"Marketing\": 487000000.0, \"Other Non-Interest Expense\": 870000000.0}",
@@ -677,43 +550,35 @@
       "segments": [
         {
           "segment_name": "Consumer Banking",
-          "value": 7460471314.720009,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 9586565662.837627,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Wealth & Investment Management",
-          "value": 5810310444.925318,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 9431064514.126047,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Banking",
-          "value": 4104281205.467884,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 9435873828.003725,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "Global Markets",
-          "value": 7088469731.355887,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "All Other",
-          "value": 1354467303.530902,
-          "unit": "USD",
-          "period": "2024-03-31 (Q1)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": -2635504004.9674015,
+          "unit": "MILLIONS",
+          "period": "2024Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 25818000000.0,
@@ -726,7 +591,7 @@
       "interest_expense": 1319000000.0,
       "income_tax": 588000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 10195000000.0, \"Technology & Equipment\": 1800000000.0, \"Occupancy\": 1811000000.0, \"Professional Services\": 548000000.0, \"Marketing\": 455000000.0, \"Other Non-Interest Expense\": 1577000000.0}",
@@ -741,44 +606,20 @@
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Consumer Banking",
-          "value": 7840540098.393693,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Global Wealth & Investment Management",
-          "value": 5892338924.78217,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Global Banking",
-          "value": 4182814770.9086595,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Global Markets",
-          "value": 6366709501.511469,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 22024278159.886635,
+          "unit": "MILLIONS",
+          "period": "2023Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "All Other",
-          "value": 884596704.4040068,
-          "unit": "USD",
-          "period": "2023-09-30 (Q3)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 3142721840.1133657,
+          "unit": "MILLIONS",
+          "period": "2023Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 25167000000.0,
@@ -791,7 +632,7 @@
       "interest_expense": 1234000000.0,
       "income_tax": 293000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 9551000000.0, \"Technology & Equipment\": 1676000000.0, \"Occupancy\": 1795000000.0, \"Professional Services\": 545000000.0, \"Marketing\": 501000000.0, \"Other Non-Interest Expense\": 890000000.0}",
@@ -806,44 +647,20 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Consumer Banking",
-          "value": 7959175172.333893,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
           "segment_name": "Global Wealth & Investment Management",
-          "value": 5728912993.106645,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Global Banking",
-          "value": 4114600185.367549,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
-        },
-        {
-          "segment_name": "Global Markets",
-          "value": 6676190581.011412,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 21993329336.365517,
+          "unit": "MILLIONS",
+          "period": "2023Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         },
         {
           "segment_name": "All Other",
-          "value": 718121068.1805017,
-          "unit": "USD",
-          "period": "2023-06-30 (Q2)",
-          "concept": "xbrl_dimension",
-          "is_annual": true
+          "value": 3203670663.634484,
+          "unit": "MILLIONS",
+          "period": "2023Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
         }
       ],
       "total_revenue": 25197000000.0,
@@ -856,7 +673,7 @@
       "interest_expense": 1125000000.0,
       "income_tax": 626000000.0,
       "currency": "USD",
-      "extraction_method": "xbrl",
+      "extraction_method": "edgar+llm",
       "confidence": 1.0,
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 9401000000.0, \"Technology & Equipment\": 1644000000.0, \"Occupancy\": 1776000000.0, \"Professional Services\": 527000000.0, \"Marketing\": 513000000.0, \"Other Non-Interest Expense\": 1221000000.0}",
@@ -868,324 +685,211 @@
   "ttm_operating_income": 39983000000.0,
   "ttm_net_income": 31697000000.0,
   "segment_trend": {
-    "Consumer Banking": [
-      {
-        "period": "2023Q2",
-        "value": 7959175172.333893,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q3",
-        "value": 7840540098.393693,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 7460471314.720009,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 7917994974.874372,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 7893923345.339937,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 8237796631.187351,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 8143699336.650084,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 8584069729.19636,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 9103903549.899532,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 29951349109.06821,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 31576213114.983944,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 35301693034.44956,
-        "is_annual": true
-      }
-    ],
     "Global Wealth & Investment Management": [
       {
         "period": "2023Q2",
-        "value": 5728912993.106645,
+        "value": 21993329336.365517,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 5892338924.78217,
+        "value": 22024278159.886635,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 5810310444.925318,
+        "value": 9431064514.126047,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 6084857412.060302,
+        "value": 8465971850.630825,
         "is_annual": false
       },
       {
         "period": "2024Q3",
-        "value": 6190753039.171545,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 6718881094.527364,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 7116694222.124767,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 7701743314.956979,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 22147439507.43389,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 24629274806.16351,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 28962101863.439457,
-        "is_annual": true
-      }
-    ],
-    "Global Banking": [
-      {
-        "period": "2023Q2",
-        "value": 4114600185.367549,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q3",
-        "value": 4182814770.9086595,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 4104281205.467884,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 4201000628.1407037,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 4266484410.1755967,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q2",
-        "value": 4490956882.25539,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 4779363666.264664,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 5026877015.817405,
-        "is_annual": false
-      },
-      {
-        "period": "FY2023",
-        "value": 15865152423.107481,
-        "is_annual": true
-      },
-      {
-        "period": "FY2024",
-        "value": 16932358579.98121,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 19311178601.388985,
-        "is_annual": true
-      }
-    ],
-    "Global Markets": [
-      {
-        "period": "2023Q2",
-        "value": 6676190581.011412,
-        "is_annual": false
-      },
-      {
-        "period": "2023Q3",
-        "value": 6366709501.511469,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 7088469731.355887,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 6794926507.537688,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 6749917829.806394,
+        "value": 12672500000.000002,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 7628375012.917227,
+        "value": 8049996860.194556,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 6894423383.084578,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 7298383949.128386,
+        "value": 9126856351.981352,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 8185246844.247515,
+        "value": 6914112911.143839,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 24962720874.47509,
+        "value": 25285118299.832493,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 26337795928.38215,
+        "value": 17866000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 28627702427.284607,
+        "value": 25386827049.09031,
         "is_annual": true
       }
     ],
     "All Other": [
       {
         "period": "2023Q2",
-        "value": 718121068.1805017,
+        "value": 3203670663.634484,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 884596704.4040068,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q1",
-        "value": 1354467303.530902,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q2",
-        "value": 378220477.3869347,
-        "is_annual": false
-      },
-      {
-        "period": "2024Q3",
-        "value": 243921375.5065286,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q1",
-        "value": 410051668.9056526,
+        "value": 3142721840.1133657,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 215039303.48258707,
+        "value": -1552413752.913753,
+        "is_annual": false
+      }
+    ],
+    "Consumer Banking": [
+      {
+        "period": "2024Q1",
+        "value": 9586565662.837627,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 8210158562.099791,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q3",
+        "value": 12672500000.000002,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q1",
+        "value": 9751597263.883827,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 9088303030.30303,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 309488433.28582394,
+        "value": 28242000000.0,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 254229275.07857183,
+        "value": 23357887088.856163,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 5654338085.915334,
+        "value": 34906212052.91161,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 2411357570.489183,
+        "value": 36991000000.0,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 894324073.4373926,
+        "value": 27395499103.122597,
         "is_annual": true
       }
     ],
-    "Global Wealth and Investment Management Segment": [
+    "Global Banking": [
+      {
+        "period": "2024Q1",
+        "value": 9435873828.003725,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4483972548.025106,
+        "is_annual": false
+      },
       {
         "period": "2025Q1",
-        "value": 6587692156.660122,
+        "value": 5051098763.701607,
         "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 5123308080.808081,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 12812543138.48655,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 18400000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 30135601035.984917,
+        "is_annual": true
       }
     ],
-    "Global Banking Segment": [
+    "Global Markets": [
+      {
+        "period": "2024Q1",
+        "value": -2635504004.9674015,
+        "is_annual": false
+      },
+      {
+        "period": "2024Q2",
+        "value": 4216897039.244278,
+        "is_annual": false
+      },
       {
         "period": "2025Q1",
-        "value": 4502084530.329648,
+        "value": 4513307112.220011,
         "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4676946289.82129,
+        "is_annual": false
+      },
+      {
+        "period": "FY2023",
+        "value": 25577126508.769337,
+        "is_annual": true
+      },
+      {
+        "period": "FY2024",
+        "value": 27449000000.0,
+        "is_annual": true
+      },
+      {
+        "period": "FY2025",
+        "value": 30179072811.802174,
+        "is_annual": true
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

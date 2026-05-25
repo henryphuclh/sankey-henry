@@ -2,6 +2,7 @@
   "ticker": "C",
   "name": "Citigroup Inc.",
   "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "C",
     "period": "FY2025",
@@ -633,27 +634,6 @@
       "notes": [
         "EXPENSE_DETAIL:{\"Personnel\": 7464000000.0, \"Technology & Equipment\": 2379000000.0, \"Occupancy\": 574000000.0, \"Professional Services\": 476000000.0, \"Marketing\": 250000000.0, \"Other Non-Interest Expense\": 1349000000.0}"
       ]
-    },
-    {
-      "ticker": "C",
-      "period": "2024Q4",
-      "is_annual": false,
-      "fiscal_year": 2024,
-      "fiscal_quarter": 4,
-      "segments": [],
-      "total_revenue": 19586000000.0,
-      "gross_profit": null,
-      "operating_income": 3802000000.0,
-      "net_income": 2856000000.0,
-      "rd_expense": null,
-      "sga_expense": 7263000000.0,
-      "cogs": null,
-      "interest_expense": null,
-      "income_tax": 912000000.0,
-      "currency": "USD",
-      "extraction_method": "yahoo_quarterly",
-      "confidence": 0.55,
-      "notes": []
     },
     {
       "ticker": "C",
@@ -1387,8 +1367,9 @@
     ]
   },
   "annual_count": 3,
-  "quarterly_count": 11,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "quarterly_count": 10,
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

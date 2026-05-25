@@ -2,6 +2,7 @@
   "ticker": "LLY",
   "name": "Eli Lilly and Company",
   "sector": "pharma",
+  "classification": "",
   "latest_annual": {
     "ticker": "LLY",
     "period": "FY2025",
@@ -288,20 +289,76 @@
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Net Product Revenue",
-          "value": 16330500000.0,
-          "unit": "MILLIONS",
-          "period": "2025Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Mounjaro®",
+          "value": 6515100000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
-          "segment_name": "Collaboration and Other Revenue",
-          "value": 1270300000.0,
-          "unit": "MILLIONS",
-          "period": "2025Q3",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Zepbound®",
+          "value": 3588100000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Oncology",
+          "value": 2407600000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": 1470200000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Immunology",
+          "value": 1362400000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trulicity®",
+          "value": 1051800000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": 901500000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 337200000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Neuroscience",
+          "value": 315700000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 17600800000.0,
@@ -314,7 +371,7 @@
       "interest_expense": null,
       "income_tax": 1649900000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": []
     },
@@ -326,52 +383,76 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Net Product Revenue",
-          "value": 7645701811.11901,
-          "unit": "MILLIONS",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Mounjaro®",
+          "value": 4985356755.074242,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
-          "segment_name": "Collaboration and Other Revenue",
-          "value": 431816528.3381557,
-          "unit": "MILLIONS",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
-        },
-        {
-          "segment_name": "Other cardiometabolic health",
-          "value": 5889204880.710432,
-          "unit": "MILLIONS",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "segment_name": "Zepbound®",
+          "value": 3242510017.8130064,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Oncology",
-          "value": 1253134991.9405706,
-          "unit": "MILLIONS",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 2314462110.0708203,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Verzenio®",
+          "value": 1428127452.9866064,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Immunology",
-          "value": 287946911.8869077,
-          "unit": "MILLIONS",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 1204026609.7965372,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Trulicity®",
+          "value": 1047338215.3709605,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Taltz®",
+          "value": 812785086.3838364,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         },
         {
           "segment_name": "Neuroscience",
-          "value": 49894876.004925765,
-          "unit": "MILLIONS",
-          "period": "2025Q2",
-          "concept": "llm_extracted",
-          "is_annual": false
+          "value": 329870304.0538458,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 193223448.45014516,
+          "unit": "USD",
+          "period": "2025-06-30 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
         }
       ],
       "total_revenue": 15557700000.0,
@@ -384,7 +465,7 @@
       "interest_expense": null,
       "income_tax": 1115900000.0,
       "currency": "USD",
-      "extraction_method": "edgar+llm",
+      "extraction_method": "xbrl",
       "confidence": 1.0,
       "notes": []
     },
@@ -867,7 +948,7 @@
       "segments": [
         {
           "segment_name": "Mounjaro®",
-          "value": 1806500000.0,
+          "value": 1630842222.3137434,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -875,7 +956,7 @@
         },
         {
           "segment_name": "Trulicity®",
-          "value": 1456300000.0,
+          "value": 1314694452.452535,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -883,7 +964,7 @@
         },
         {
           "segment_name": "Verzenio®",
-          "value": 1050300000.0,
+          "value": 948172480.5403402,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -891,7 +972,7 @@
         },
         {
           "segment_name": "Immunology",
-          "value": 834000000.0,
+          "value": 752904740.3319468,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -899,7 +980,7 @@
         },
         {
           "segment_name": "Jardiance",
-          "value": 686500000.0,
+          "value": 619747127.383551,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -907,7 +988,7 @@
         },
         {
           "segment_name": "Taltz®",
-          "value": 604100000.0,
+          "value": 545359416.8279725,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -915,7 +996,7 @@
         },
         {
           "segment_name": "Humalog®",
-          "value": 538700000.0,
+          "value": 486318685.3918702,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -923,7 +1004,7 @@
         },
         {
           "segment_name": "Zepbound®",
-          "value": 517400000.0,
+          "value": 467089823.3186442,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -931,7 +1012,7 @@
         },
         {
           "segment_name": "Neuroscience",
-          "value": 389100000.0,
+          "value": 351265269.1404802,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -939,7 +1020,7 @@
         },
         {
           "segment_name": "Other",
-          "value": 241900000.0,
+          "value": 218378485.23536924,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -947,7 +1028,7 @@
         },
         {
           "segment_name": "Cyramza®",
-          "value": 229900000.0,
+          "value": 207545323.50397432,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -955,7 +1036,7 @@
         },
         {
           "segment_name": "Emgality®",
-          "value": 225700000.0,
+          "value": 203753716.89798608,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -963,7 +1044,7 @@
         },
         {
           "segment_name": "Olumiant®",
-          "value": 217400000.0,
+          "value": 196260780.03377128,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -971,7 +1052,7 @@
         },
         {
           "segment_name": "Humulin®",
-          "value": 206200000.0,
+          "value": 186149829.08446935,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -979,7 +1060,7 @@
         },
         {
           "segment_name": "Basaglar®",
-          "value": 157600000.0,
+          "value": 142275524.07231992,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -987,7 +1068,7 @@
         },
         {
           "segment_name": "Erbitux®",
-          "value": 144600000.0,
+          "value": 130539598.86330877,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -995,7 +1076,7 @@
         },
         {
           "segment_name": "Cialis®",
-          "value": 139300000.0,
+          "value": 125754952.43194267,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -1003,7 +1084,7 @@
         },
         {
           "segment_name": "Tyvyt®",
-          "value": 116700000.0,
+          "value": 105352497.83781558,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -1011,7 +1092,7 @@
         },
         {
           "segment_name": "Trajenta",
-          "value": 88900000.0,
+          "value": 80255673.16008402,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -1019,7 +1100,7 @@
         },
         {
           "segment_name": "Forteo®",
-          "value": 61300000.0,
+          "value": 55339401.177875705,
           "unit": "USD",
           "period": "2024-03-31 (Q1)",
           "concept": "xbrl_dimension",
@@ -1051,7 +1132,7 @@
       "segments": [
         {
           "segment_name": "Trulicity®",
-          "value": 1673600000.0,
+          "value": 1550307875.9508483,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1059,7 +1140,7 @@
         },
         {
           "segment_name": "Zyprexa®",
-          "value": 1481400000.0,
+          "value": 1372267021.6500878,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1067,7 +1148,7 @@
         },
         {
           "segment_name": "Mounjaro®",
-          "value": 1409300000.0,
+          "value": 1305478543.0076067,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1075,7 +1156,7 @@
         },
         {
           "segment_name": "Verzenio®",
-          "value": 1040200000.0,
+          "value": 963569701.5798712,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1083,7 +1164,7 @@
         },
         {
           "segment_name": "Immunology",
-          "value": 986900000.0,
+          "value": 914196249.268578,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1091,7 +1172,7 @@
         },
         {
           "segment_name": "Taltz®",
-          "value": 744200000.0,
+          "value": 689375669.9824458,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1099,7 +1180,7 @@
         },
         {
           "segment_name": "Jardiance",
-          "value": 700800000.0,
+          "value": 649172896.4306612,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1107,7 +1188,7 @@
         },
         {
           "segment_name": "Humalog®",
-          "value": 395400000.0,
+          "value": 366271351.6676419,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1115,7 +1196,7 @@
         },
         {
           "segment_name": "Other",
-          "value": 276100000.0,
+          "value": 255760040.9596255,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1123,7 +1204,7 @@
         },
         {
           "segment_name": "Olumiant®",
-          "value": 231400000.0,
+          "value": 214353036.86366296,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1131,7 +1212,7 @@
         },
         {
           "segment_name": "Cyramza®",
-          "value": 224100000.0,
+          "value": 207590819.19251022,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1139,7 +1220,7 @@
         },
         {
           "segment_name": "Humulin®",
-          "value": 206700000.0,
+          "value": 191472656.5242832,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1147,7 +1228,7 @@
         },
         {
           "segment_name": "Basaglar®",
-          "value": 179600000.0,
+          "value": 166369081.3341135,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1155,7 +1236,7 @@
         },
         {
           "segment_name": "Emgality®",
-          "value": 168500000.0,
+          "value": 156086805.14921007,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1163,7 +1244,7 @@
         },
         {
           "segment_name": "Erbitux®",
-          "value": 153900000.0,
+          "value": 142562369.8069046,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1171,7 +1252,7 @@
         },
         {
           "segment_name": "Forteo®",
-          "value": 146400000.0,
+          "value": 135614885.89818606,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1179,7 +1260,7 @@
         },
         {
           "segment_name": "Trajenta",
-          "value": 95200000.0,
+          "value": 88186729.08133411,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1187,7 +1268,7 @@
         },
         {
           "segment_name": "Cialis®",
-          "value": 86800000.0,
+          "value": 80405547.10356933,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1195,7 +1276,7 @@
         },
         {
           "segment_name": "Alimta®",
-          "value": 53500000.0,
+          "value": 49558718.54885898,
           "unit": "USD",
           "period": "2023-09-30 (Q3)",
           "concept": "xbrl_dimension",
@@ -1227,7 +1308,7 @@
       "segments": [
         {
           "segment_name": "Oncology",
-          "value": 1671000000.0,
+          "value": 1504350648.225368,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1235,7 +1316,7 @@
         },
         {
           "segment_name": "Mounjaro®",
-          "value": 979700000.0,
+          "value": 881994213.0858127,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1243,7 +1324,7 @@
         },
         {
           "segment_name": "Immunology",
-          "value": 928500000.0,
+          "value": 835900405.0731623,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1251,7 +1332,7 @@
         },
         {
           "segment_name": "Verzenio®",
-          "value": 926800000.0,
+          "value": 834369946.6039922,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1259,7 +1340,7 @@
         },
         {
           "segment_name": "Taltz®",
-          "value": 703900000.0,
+          "value": 633699833.2051685,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1267,7 +1348,7 @@
         },
         {
           "segment_name": "Jardiance",
-          "value": 668300000.0,
+          "value": 601650232.3213725,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1275,7 +1356,7 @@
         },
         {
           "segment_name": "Baqsimi",
-          "value": 613900000.0,
+          "value": 552675561.3079314,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1283,7 +1364,7 @@
         },
         {
           "segment_name": "Humalog®",
-          "value": 440400000.0,
+          "value": 396478770.48381335,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1291,7 +1372,7 @@
         },
         {
           "segment_name": "Neuroscience",
-          "value": 387200000.0,
+          "value": 348584423.09566873,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1299,7 +1380,7 @@
         },
         {
           "segment_name": "Other",
-          "value": 314600000.0,
+          "value": 283224843.76523083,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1307,7 +1388,7 @@
         },
         {
           "segment_name": "Cyramza®",
-          "value": 260300000.0,
+          "value": 234340199.7205645,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1315,7 +1396,7 @@
         },
         {
           "segment_name": "Olumiant®",
-          "value": 218900000.0,
+          "value": 197069034.64783546,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1323,7 +1404,7 @@
         },
         {
           "segment_name": "Humulin®",
-          "value": 205300000.0,
+          "value": 184825366.8944752,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1331,7 +1412,7 @@
         },
         {
           "segment_name": "Emgality®",
-          "value": 169300000.0,
+          "value": 152415658.13558036,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1339,7 +1420,7 @@
         },
         {
           "segment_name": "Erbitux®",
-          "value": 162500000.0,
+          "value": 146293824.25890023,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1347,7 +1428,7 @@
         },
         {
           "segment_name": "Basaglar®",
-          "value": 154200000.0,
+          "value": 138821585.8505995,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1355,7 +1436,7 @@
         },
         {
           "segment_name": "Forteo®",
-          "value": 148000000.0,
+          "value": 133239913.7865676,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1363,7 +1444,7 @@
         },
         {
           "segment_name": "Cialis®",
-          "value": 115600000.0,
+          "value": 104071175.90356226,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1371,7 +1452,7 @@
         },
         {
           "segment_name": "Trajenta",
-          "value": 103600000.0,
+          "value": 93267939.65059732,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1379,7 +1460,7 @@
         },
         {
           "segment_name": "Alimta®",
-          "value": 60900000.0,
+          "value": 54826423.98379707,
           "unit": "USD",
           "period": "2023-06-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -1410,7 +1491,7 @@
     "Oncology": [
       {
         "period": "2023Q2",
-        "value": 1671000000.0,
+        "value": 1504350648.225368,
         "is_annual": false
       },
       {
@@ -1430,7 +1511,12 @@
       },
       {
         "period": "2025Q2",
-        "value": 1253134991.9405706,
+        "value": 2314462110.0708203,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 2407600000.0,
         "is_annual": false
       },
       {
@@ -1442,22 +1528,32 @@
     "Mounjaro®": [
       {
         "period": "2023Q2",
-        "value": 979700000.0,
+        "value": 881994213.0858127,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 1409300000.0,
+        "value": 1305478543.0076067,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 1806500000.0,
+        "value": 1630842222.3137434,
         "is_annual": false
       },
       {
         "period": "2025Q1",
         "value": 3841800000.0,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q2",
+        "value": 4985356755.074242,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 6515100000.0,
         "is_annual": false
       },
       {
@@ -1469,17 +1565,17 @@
     "Immunology": [
       {
         "period": "2023Q2",
-        "value": 928500000.0,
+        "value": 835900405.0731623,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 986900000.0,
+        "value": 914196249.268578,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 834000000.0,
+        "value": 752904740.3319468,
         "is_annual": false
       },
       {
@@ -1499,7 +1595,12 @@
       },
       {
         "period": "2025Q2",
-        "value": 287946911.8869077,
+        "value": 1204026609.7965372,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1362400000.0,
         "is_annual": false
       },
       {
@@ -1511,17 +1612,17 @@
     "Verzenio®": [
       {
         "period": "2023Q2",
-        "value": 926800000.0,
+        "value": 834369946.6039922,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 1040200000.0,
+        "value": 963569701.5798712,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 1050300000.0,
+        "value": 948172480.5403402,
         "is_annual": false
       },
       {
@@ -1540,6 +1641,16 @@
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 1428127452.9866064,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1470200000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 1302000000.0,
         "is_annual": false
@@ -1548,17 +1659,17 @@
     "Taltz®": [
       {
         "period": "2023Q2",
-        "value": 703900000.0,
+        "value": 633699833.2051685,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 744200000.0,
+        "value": 689375669.9824458,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 604100000.0,
+        "value": 545359416.8279725,
         "is_annual": false
       },
       {
@@ -1577,6 +1688,16 @@
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 812785086.3838364,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 901500000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 733000000.0,
         "is_annual": false
@@ -1585,17 +1706,17 @@
     "Jardiance": [
       {
         "period": "2023Q2",
-        "value": 668300000.0,
+        "value": 601650232.3213725,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 700800000.0,
+        "value": 649172896.4306612,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 686500000.0,
+        "value": 619747127.383551,
         "is_annual": false
       },
       {
@@ -1622,24 +1743,24 @@
     "Baqsimi": [
       {
         "period": "2023Q2",
-        "value": 613900000.0,
+        "value": 552675561.3079314,
         "is_annual": false
       }
     ],
     "Humalog®": [
       {
         "period": "2023Q2",
-        "value": 440400000.0,
+        "value": 396478770.48381335,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 395400000.0,
+        "value": 366271351.6676419,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 538700000.0,
+        "value": 486318685.3918702,
         "is_annual": false
       },
       {
@@ -1656,12 +1777,12 @@
     "Neuroscience": [
       {
         "period": "2023Q2",
-        "value": 387200000.0,
+        "value": 348584423.09566873,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 389100000.0,
+        "value": 351265269.1404802,
         "is_annual": false
       },
       {
@@ -1681,7 +1802,12 @@
       },
       {
         "period": "2025Q2",
-        "value": 49894876.004925765,
+        "value": 329870304.0538458,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 315700000.0,
         "is_annual": false
       },
       {
@@ -1693,17 +1819,17 @@
     "Other": [
       {
         "period": "2023Q2",
-        "value": 314600000.0,
+        "value": 283224843.76523083,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 276100000.0,
+        "value": 255760040.9596255,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 241900000.0,
+        "value": 218378485.23536924,
         "is_annual": false
       },
       {
@@ -1722,6 +1848,16 @@
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 193223448.45014516,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 337200000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 187000000.0,
         "is_annual": false
@@ -1730,17 +1866,17 @@
     "Cyramza®": [
       {
         "period": "2023Q2",
-        "value": 260300000.0,
+        "value": 234340199.7205645,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 224100000.0,
+        "value": 207590819.19251022,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 229900000.0,
+        "value": 207545323.50397432,
         "is_annual": false
       },
       {
@@ -1757,17 +1893,17 @@
     "Olumiant®": [
       {
         "period": "2023Q2",
-        "value": 218900000.0,
+        "value": 197069034.64783546,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 231400000.0,
+        "value": 214353036.86366296,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 217400000.0,
+        "value": 196260780.03377128,
         "is_annual": false
       },
       {
@@ -1784,17 +1920,17 @@
     "Humulin®": [
       {
         "period": "2023Q2",
-        "value": 205300000.0,
+        "value": 184825366.8944752,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 206700000.0,
+        "value": 191472656.5242832,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 206200000.0,
+        "value": 186149829.08446935,
         "is_annual": false
       },
       {
@@ -1811,17 +1947,17 @@
     "Emgality®": [
       {
         "period": "2023Q2",
-        "value": 169300000.0,
+        "value": 152415658.13558036,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 168500000.0,
+        "value": 156086805.14921007,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 225700000.0,
+        "value": 203753716.89798608,
         "is_annual": false
       },
       {
@@ -1838,17 +1974,17 @@
     "Erbitux®": [
       {
         "period": "2023Q2",
-        "value": 162500000.0,
+        "value": 146293824.25890023,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 153900000.0,
+        "value": 142562369.8069046,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 144600000.0,
+        "value": 130539598.86330877,
         "is_annual": false
       },
       {
@@ -1865,17 +2001,17 @@
     "Basaglar®": [
       {
         "period": "2023Q2",
-        "value": 154200000.0,
+        "value": 138821585.8505995,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 179600000.0,
+        "value": 166369081.3341135,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 157600000.0,
+        "value": 142275524.07231992,
         "is_annual": false
       },
       {
@@ -1892,17 +2028,17 @@
     "Forteo®": [
       {
         "period": "2023Q2",
-        "value": 148000000.0,
+        "value": 133239913.7865676,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 146400000.0,
+        "value": 135614885.89818606,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 61300000.0,
+        "value": 55339401.177875705,
         "is_annual": false
       },
       {
@@ -1919,17 +2055,17 @@
     "Cialis®": [
       {
         "period": "2023Q2",
-        "value": 115600000.0,
+        "value": 104071175.90356226,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 86800000.0,
+        "value": 80405547.10356933,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 139300000.0,
+        "value": 125754952.43194267,
         "is_annual": false
       },
       {
@@ -1946,17 +2082,17 @@
     "Trajenta": [
       {
         "period": "2023Q2",
-        "value": 103600000.0,
+        "value": 93267939.65059732,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 95200000.0,
+        "value": 88186729.08133411,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 88900000.0,
+        "value": 80255673.16008402,
         "is_annual": false
       },
       {
@@ -1973,24 +2109,24 @@
     "Alimta®": [
       {
         "period": "2023Q2",
-        "value": 60900000.0,
+        "value": 54826423.98379707,
         "is_annual": false
       },
       {
         "period": "2023Q3",
-        "value": 53500000.0,
+        "value": 49558718.54885898,
         "is_annual": false
       }
     ],
     "Trulicity®": [
       {
         "period": "2023Q3",
-        "value": 1673600000.0,
+        "value": 1550307875.9508483,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 1456300000.0,
+        "value": 1314694452.452535,
         "is_annual": false
       },
       {
@@ -2009,6 +2145,16 @@
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 1047338215.3709605,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 1051800000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 919000000.0,
         "is_annual": false
@@ -2017,14 +2163,14 @@
     "Zyprexa®": [
       {
         "period": "2023Q3",
-        "value": 1481400000.0,
+        "value": 1372267021.6500878,
         "is_annual": false
       }
     ],
     "Zepbound®": [
       {
         "period": "2024Q1",
-        "value": 517400000.0,
+        "value": 467089823.3186442,
         "is_annual": false
       },
       {
@@ -2043,6 +2189,16 @@
         "is_annual": false
       },
       {
+        "period": "2025Q2",
+        "value": 3242510017.8130064,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 3588100000.0,
+        "is_annual": false
+      },
+      {
         "period": "2026Q1",
         "value": 4160000000.0,
         "is_annual": false
@@ -2051,7 +2207,7 @@
     "Tyvyt®": [
       {
         "period": "2024Q1",
-        "value": 116700000.0,
+        "value": 105352497.83781558,
         "is_annual": false
       },
       {
@@ -2066,16 +2222,6 @@
       }
     ],
     "Net Product Revenue": [
-      {
-        "period": "2025Q2",
-        "value": 7645701811.11901,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 16330500000.0,
-        "is_annual": false
-      },
       {
         "period": "FY2023",
         "value": 28813900000.0,
@@ -2094,16 +2240,6 @@
     ],
     "Collaboration and Other Revenue": [
       {
-        "period": "2025Q2",
-        "value": 431816528.3381557,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 1270300000.0,
-        "is_annual": false
-      },
-      {
         "period": "FY2023",
         "value": 5310200000.0,
         "is_annual": true
@@ -2118,18 +2254,12 @@
         "value": 4221000000.0,
         "is_annual": true
       }
-    ],
-    "Other cardiometabolic health": [
-      {
-        "period": "2025Q2",
-        "value": 5889204880.710432,
-        "is_annual": false
-      }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

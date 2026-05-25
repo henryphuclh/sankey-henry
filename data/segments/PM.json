@@ -2,6 +2,7 @@
   "ticker": "PM",
   "name": "Philip Morris International",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "PM",
     "period": "FY2025",
@@ -1125,7 +1126,8 @@
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

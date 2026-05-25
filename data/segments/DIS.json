@@ -2,6 +2,7 @@
   "ticker": "DIS",
   "name": "Walt Disney Company",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "DIS",
     "period": "FY2025",
@@ -11,7 +12,7 @@
     "segments": [
       {
         "segment_name": "Entertainment Segment",
-        "value": 42466000000.0,
+        "value": 40817528568.75818,
         "unit": "USD",
         "period": "2025-09-27 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +20,7 @@
       },
       {
         "segment_name": "Sports Segment",
-        "value": 17672000000.0,
+        "value": 16985997383.014519,
         "unit": "USD",
         "period": "2025-09-27 (FY)",
         "concept": "xbrl_dimension",
@@ -27,7 +28,7 @@
       },
       {
         "segment_name": "Experiences Segment",
-        "value": 36156000000.0,
+        "value": 34752474048.2273,
         "unit": "USD",
         "period": "2025-09-27 (FY)",
         "concept": "xbrl_dimension",
@@ -35,12 +36,12 @@
       }
     ],
     "total_revenue": 94425000000.0,
-    "gross_profit": null,
-    "operating_income": 12003000000.0,
+    "gross_profit": 35659000000.0,
+    "operating_income": 19158000000.0,
     "net_income": 13431000000.0,
     "rd_expense": null,
-    "sga_expense": -16501000000.0,
-    "cogs": -58766000000.0,
+    "sga_expense": 16501000000.0,
+    "cogs": 58766000000.0,
     "interest_expense": null,
     "income_tax": 1428000000.0,
     "currency": "USD",
@@ -58,7 +59,7 @@
       "segments": [
         {
           "segment_name": "Entertainment Segment",
-          "value": 42466000000.0,
+          "value": 40817528568.75818,
           "unit": "USD",
           "period": "2025-09-27 (FY)",
           "concept": "xbrl_dimension",
@@ -66,7 +67,7 @@
         },
         {
           "segment_name": "Sports Segment",
-          "value": 17672000000.0,
+          "value": 16985997383.014519,
           "unit": "USD",
           "period": "2025-09-27 (FY)",
           "concept": "xbrl_dimension",
@@ -74,7 +75,7 @@
         },
         {
           "segment_name": "Experiences Segment",
-          "value": 36156000000.0,
+          "value": 34752474048.2273,
           "unit": "USD",
           "period": "2025-09-27 (FY)",
           "concept": "xbrl_dimension",
@@ -82,12 +83,12 @@
         }
       ],
       "total_revenue": 94425000000.0,
-      "gross_profit": null,
-      "operating_income": 12003000000.0,
+      "gross_profit": 35659000000.0,
+      "operating_income": 19158000000.0,
       "net_income": 13431000000.0,
       "rd_expense": null,
-      "sga_expense": -16501000000.0,
-      "cogs": -58766000000.0,
+      "sga_expense": 16501000000.0,
+      "cogs": 58766000000.0,
       "interest_expense": null,
       "income_tax": 1428000000.0,
       "currency": "USD",
@@ -104,7 +105,7 @@
       "segments": [
         {
           "segment_name": "Entertainment Segment",
-          "value": 41186000000.0,
+          "value": 39772607212.01428,
           "unit": "USD",
           "period": "2024-09-28 (FY)",
           "concept": "xbrl_dimension",
@@ -112,7 +113,7 @@
         },
         {
           "segment_name": "Sports Segment",
-          "value": 17619000000.0,
+          "value": 17014363290.158785,
           "unit": "USD",
           "period": "2024-09-28 (FY)",
           "concept": "xbrl_dimension",
@@ -120,7 +121,7 @@
         },
         {
           "segment_name": "Experiences Segment",
-          "value": 34151000000.0,
+          "value": 32979029497.826927,
           "unit": "USD",
           "period": "2024-09-28 (FY)",
           "concept": "xbrl_dimension",
@@ -128,14 +129,14 @@
         }
       ],
       "total_revenue": 91361000000.0,
-      "gross_profit": null,
-      "operating_income": 7569000000.0,
+      "gross_profit": 32663000000.0,
+      "operating_income": 16904000000.0,
       "net_income": 5773000000.0,
       "rd_expense": null,
-      "sga_expense": -15759000000.0,
-      "cogs": -58698000000.0,
+      "sga_expense": 15759000000.0,
+      "cogs": 58698000000.0,
       "interest_expense": null,
-      "income_tax": -1796000000.0,
+      "income_tax": 1796000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -150,7 +151,7 @@
       "segments": [
         {
           "segment_name": "Entertainment Segment",
-          "value": 40635000000.0,
+          "value": 39377630378.20477,
           "unit": "USD",
           "period": "2023-09-30 (FY)",
           "concept": "xbrl_dimension",
@@ -158,7 +159,7 @@
         },
         {
           "segment_name": "Sports Segment",
-          "value": 17111000000.0,
+          "value": 16581533983.05554,
           "unit": "USD",
           "period": "2023-09-30 (FY)",
           "concept": "xbrl_dimension",
@@ -166,7 +167,7 @@
         },
         {
           "segment_name": "Experiences Segment",
-          "value": 32549000000.0,
+          "value": 31541835638.73969,
           "unit": "USD",
           "period": "2023-09-30 (FY)",
           "concept": "xbrl_dimension",
@@ -174,14 +175,14 @@
         }
       ],
       "total_revenue": 88898000000.0,
-      "gross_profit": null,
-      "operating_income": 4769000000.0,
+      "gross_profit": 29697000000.0,
+      "operating_income": 14361000000.0,
       "net_income": 3390000000.0,
       "rd_expense": null,
-      "sga_expense": -15336000000.0,
-      "cogs": -59201000000.0,
+      "sga_expense": 15336000000.0,
+      "cogs": 59201000000.0,
       "interest_expense": null,
-      "income_tax": -1379000000.0,
+      "income_tax": 1379000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -198,7 +199,7 @@
       "segments": [
         {
           "segment_name": "Entertainment Segment",
-          "value": 11715000000.0,
+          "value": 11423157568.478556,
           "unit": "USD",
           "period": "2026-03-28 (Q2)",
           "concept": "xbrl_dimension",
@@ -206,7 +207,7 @@
         },
         {
           "segment_name": "Sports Segment",
-          "value": 4609000000.0,
+          "value": 4494181240.556352,
           "unit": "USD",
           "period": "2026-03-28 (Q2)",
           "concept": "xbrl_dimension",
@@ -214,7 +215,7 @@
         },
         {
           "segment_name": "Experiences Segment",
-          "value": 9487000000.0,
+          "value": 9250661190.965092,
           "unit": "USD",
           "period": "2026-03-28 (Q2)",
           "concept": "xbrl_dimension",
@@ -222,14 +223,14 @@
         }
       ],
       "total_revenue": 25168000000.0,
-      "gross_profit": null,
-      "operating_income": 3367000000.0,
+      "gross_profit": 9267000000.0,
+      "operating_income": 5194000000.0,
       "net_income": 2465000000.0,
       "rd_expense": null,
-      "sga_expense": -4073000000.0,
-      "cogs": -15901000000.0,
+      "sga_expense": 4073000000.0,
+      "cogs": 15901000000.0,
       "interest_expense": null,
-      "income_tax": -902000000.0,
+      "income_tax": 902000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -244,7 +245,7 @@
       "segments": [
         {
           "segment_name": "Entertainment Segment",
-          "value": 11609000000.0,
+          "value": 11371340257.879656,
           "unit": "USD",
           "period": "2025-12-27 (Q1)",
           "concept": "xbrl_dimension",
@@ -252,7 +253,7 @@
         },
         {
           "segment_name": "Sports Segment",
-          "value": 4909000000.0,
+          "value": 4808502827.627809,
           "unit": "USD",
           "period": "2025-12-27 (Q1)",
           "concept": "xbrl_dimension",
@@ -260,7 +261,7 @@
         },
         {
           "segment_name": "Experiences Segment",
-          "value": 10006000000.0,
+          "value": 9801156914.492535,
           "unit": "USD",
           "period": "2025-12-27 (Q1)",
           "concept": "xbrl_dimension",
@@ -268,14 +269,14 @@
         }
       ],
       "total_revenue": 25981000000.0,
-      "gross_profit": null,
-      "operating_income": 3693000000.0,
+      "gross_profit": 9312000000.0,
+      "operating_income": 5191000000.0,
       "net_income": 2484000000.0,
       "rd_expense": null,
-      "sga_expense": -4121000000.0,
-      "cogs": -16669000000.0,
+      "sga_expense": 4121000000.0,
+      "cogs": 16669000000.0,
       "interest_expense": null,
-      "income_tax": -1209000000.0,
+      "income_tax": 1209000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -311,7 +312,7 @@
       "segments": [
         {
           "segment_name": "Entertainment Segment",
-          "value": 10704000000.0,
+          "value": 10505004564.694166,
           "unit": "USD",
           "period": "2025-06-28 (Q3)",
           "concept": "xbrl_dimension",
@@ -319,7 +320,7 @@
         },
         {
           "segment_name": "Sports Segment",
-          "value": 4308000000.0,
+          "value": 4227911029.960993,
           "unit": "USD",
           "period": "2025-06-28 (Q3)",
           "concept": "xbrl_dimension",
@@ -327,7 +328,7 @@
         },
         {
           "segment_name": "Experiences Segment",
-          "value": 9086000000.0,
+          "value": 8917084405.344841,
           "unit": "USD",
           "period": "2025-06-28 (Q3)",
           "concept": "xbrl_dimension",
@@ -335,12 +336,12 @@
         }
       ],
       "total_revenue": 23650000000.0,
-      "gross_profit": null,
-      "operating_income": 3211000000.0,
+      "gross_profit": 9118000000.0,
+      "operating_income": 4977000000.0,
       "net_income": 5943000000.0,
       "rd_expense": null,
-      "sga_expense": -4141000000.0,
-      "cogs": -14532000000.0,
+      "sga_expense": 4141000000.0,
+      "cogs": 14532000000.0,
       "interest_expense": null,
       "income_tax": 2732000000.0,
       "currency": "USD",
@@ -357,7 +358,7 @@
       "segments": [
         {
           "segment_name": "Entertainment Segment",
-          "value": 10682000000.0,
+          "value": 10467518025.305954,
           "unit": "USD",
           "period": "2025-03-29 (Q2)",
           "concept": "xbrl_dimension",
@@ -365,7 +366,7 @@
         },
         {
           "segment_name": "Sports Segment",
-          "value": 4534000000.0,
+          "value": 4442962621.862684,
           "unit": "USD",
           "period": "2025-03-29 (Q2)",
           "concept": "xbrl_dimension",
@@ -373,7 +374,7 @@
         },
         {
           "segment_name": "Experiences Segment",
-          "value": 8889000000.0,
+          "value": 8710519352.831364,
           "unit": "USD",
           "period": "2025-03-29 (Q2)",
           "concept": "xbrl_dimension",
@@ -381,12 +382,12 @@
         }
       ],
       "total_revenue": 23621000000.0,
-      "gross_profit": null,
-      "operating_income": 3087000000.0,
+      "gross_profit": 8811000000.0,
+      "operating_income": 4830000000.0,
       "net_income": 3401000000.0,
       "rd_expense": null,
-      "sga_expense": -3981000000.0,
-      "cogs": -14810000000.0,
+      "sga_expense": 3981000000.0,
+      "cogs": 14810000000.0,
       "interest_expense": null,
       "income_tax": 314000000.0,
       "currency": "USD",
@@ -403,7 +404,7 @@
       "segments": [
         {
           "segment_name": "Entertainment Segment",
-          "value": 10872000000.0,
+          "value": 10678668098.818476,
           "unit": "USD",
           "period": "2024-12-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -411,7 +412,7 @@
         },
         {
           "segment_name": "Sports Segment",
-          "value": 4850000000.0,
+          "value": 4763754624.65688,
           "unit": "USD",
           "period": "2024-12-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -419,7 +420,7 @@
         },
         {
           "segment_name": "Experiences Segment",
-          "value": 9415000000.0,
+          "value": 9247577276.524645,
           "unit": "USD",
           "period": "2024-12-28 (Q1)",
           "concept": "xbrl_dimension",
@@ -427,18 +428,20 @@
         }
       ],
       "total_revenue": 24690000000.0,
-      "gross_profit": null,
-      "operating_income": 3660000000.0,
+      "gross_profit": 9284000000.0,
+      "operating_income": 5354000000.0,
       "net_income": 2644000000.0,
       "rd_expense": null,
-      "sga_expense": -3930000000.0,
-      "cogs": -15406000000.0,
+      "sga_expense": 3930000000.0,
+      "cogs": 15406000000.0,
       "interest_expense": null,
-      "income_tax": -1016000000.0,
+      "income_tax": 1016000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [
+        "Warning: total_revenue (24690000000) differs from Yahoo (91361000000) by 73.0%"
+      ]
     },
     {
       "ticker": "DIS",
@@ -449,7 +452,7 @@
       "segments": [
         {
           "segment_name": "Entertainment Segment",
-          "value": 10580000000.0,
+          "value": 10414040979.425268,
           "unit": "USD",
           "period": "2024-06-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -457,7 +460,7 @@
         },
         {
           "segment_name": "Sports Segment",
-          "value": 4558000000.0,
+          "value": 4486502720.625744,
           "unit": "USD",
           "period": "2024-06-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -465,7 +468,7 @@
         },
         {
           "segment_name": "Experiences Segment",
-          "value": 8386000000.0,
+          "value": 8254456299.948989,
           "unit": "USD",
           "period": "2024-06-29 (Q3)",
           "concept": "xbrl_dimension",
@@ -473,14 +476,14 @@
         }
       ],
       "total_revenue": 23155000000.0,
-      "gross_profit": null,
-      "operating_income": 3093000000.0,
+      "gross_profit": 8446000000.0,
+      "operating_income": 4574000000.0,
       "net_income": 2842000000.0,
       "rd_expense": null,
-      "sga_expense": -3872000000.0,
-      "cogs": -14709000000.0,
+      "sga_expense": 3872000000.0,
+      "cogs": 14709000000.0,
       "interest_expense": null,
-      "income_tax": -251000000.0,
+      "income_tax": 251000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -497,7 +500,7 @@
       "segments": [
         {
           "segment_name": "Entertainment Segment",
-          "value": 9796000000.0,
+          "value": 9614020176.881027,
           "unit": "USD",
           "period": "2024-03-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -505,7 +508,7 @@
         },
         {
           "segment_name": "Sports Segment",
-          "value": 4312000000.0,
+          "value": 4231896182.391894,
           "unit": "USD",
           "period": "2024-03-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -513,7 +516,7 @@
         },
         {
           "segment_name": "Experiences Segment",
-          "value": 8393000000.0,
+          "value": 8237083640.727079,
           "unit": "USD",
           "period": "2024-03-30 (Q2)",
           "concept": "xbrl_dimension",
@@ -521,14 +524,14 @@
         }
       ],
       "total_revenue": 22083000000.0,
-      "gross_profit": null,
-      "operating_income": 657000000.0,
+      "gross_profit": 7911000000.0,
+      "operating_income": 4121000000.0,
       "net_income": 216000000.0,
       "rd_expense": null,
-      "sga_expense": -3790000000.0,
-      "cogs": -14172000000.0,
+      "sga_expense": 3790000000.0,
+      "cogs": 14172000000.0,
       "interest_expense": null,
-      "income_tax": -441000000.0,
+      "income_tax": 441000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -545,7 +548,7 @@
       "segments": [
         {
           "segment_name": "Entertainment Segment",
-          "value": 9981000000.0,
+          "value": 9814705570.402538,
           "unit": "USD",
           "period": "2023-12-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -553,7 +556,7 @@
         },
         {
           "segment_name": "Sports Segment",
-          "value": 4835000000.0,
+          "value": 4754443586.103224,
           "unit": "USD",
           "period": "2023-12-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -561,7 +564,7 @@
         },
         {
           "segment_name": "Experiences Segment",
-          "value": 9132000000.0,
+          "value": 8979850843.494238,
           "unit": "USD",
           "period": "2023-12-30 (Q1)",
           "concept": "xbrl_dimension",
@@ -569,14 +572,14 @@
         }
       ],
       "total_revenue": 23549000000.0,
-      "gross_profit": null,
-      "operating_income": 2871000000.0,
+      "gross_profit": 7962000000.0,
+      "operating_income": 4179000000.0,
       "net_income": 2151000000.0,
       "rd_expense": null,
-      "sga_expense": -3783000000.0,
-      "cogs": -15587000000.0,
+      "sga_expense": 3783000000.0,
+      "cogs": 15587000000.0,
       "interest_expense": null,
-      "income_tax": -720000000.0,
+      "income_tax": 720000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -609,14 +612,14 @@
         }
       ],
       "total_revenue": 22330000000.0,
-      "gross_profit": null,
-      "operating_income": -134000000.0,
+      "gross_profit": 7859000000.0,
+      "operating_income": 3985000000.0,
       "net_income": -460000000.0,
       "rd_expense": null,
-      "sga_expense": -3874000000.0,
-      "cogs": -14471000000.0,
+      "sga_expense": 3874000000.0,
+      "cogs": 14471000000.0,
       "interest_expense": null,
-      "income_tax": -19000000.0,
+      "income_tax": 19000000.0,
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
@@ -626,7 +629,7 @@
     }
   ],
   "ttm_revenue": 97263000000.0,
-  "ttm_operating_income": 12874000000.0,
+  "ttm_operating_income": 17965000000.0,
   "ttm_net_income": 12205000000.0,
   "segment_trend": {
     "Disney Media and Entertainment Distribution": [
@@ -646,178 +649,179 @@
     "Entertainment Segment": [
       {
         "period": "2023Q4",
-        "value": 9981000000.0,
+        "value": 9814705570.402538,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 9796000000.0,
+        "value": 9614020176.881027,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 10580000000.0,
+        "value": 10414040979.425268,
         "is_annual": false
       },
       {
         "period": "2024Q4",
-        "value": 10872000000.0,
+        "value": 10678668098.818476,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 10682000000.0,
+        "value": 10467518025.305954,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 10704000000.0,
+        "value": 10505004564.694166,
         "is_annual": false
       },
       {
         "period": "2025Q4",
-        "value": 11609000000.0,
+        "value": 11371340257.879656,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 11715000000.0,
+        "value": 11423157568.478556,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 40635000000.0,
+        "value": 39377630378.20477,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 41186000000.0,
+        "value": 39772607212.01428,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 42466000000.0,
+        "value": 40817528568.75818,
         "is_annual": true
       }
     ],
     "Sports Segment": [
       {
         "period": "2023Q4",
-        "value": 4835000000.0,
+        "value": 4754443586.103224,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 4312000000.0,
+        "value": 4231896182.391894,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 4558000000.0,
+        "value": 4486502720.625744,
         "is_annual": false
       },
       {
         "period": "2024Q4",
-        "value": 4850000000.0,
+        "value": 4763754624.65688,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 4534000000.0,
+        "value": 4442962621.862684,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 4308000000.0,
+        "value": 4227911029.960993,
         "is_annual": false
       },
       {
         "period": "2025Q4",
-        "value": 4909000000.0,
+        "value": 4808502827.627809,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 4609000000.0,
+        "value": 4494181240.556352,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 17111000000.0,
+        "value": 16581533983.05554,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 17619000000.0,
+        "value": 17014363290.158785,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 17672000000.0,
+        "value": 16985997383.014519,
         "is_annual": true
       }
     ],
     "Experiences Segment": [
       {
         "period": "2023Q4",
-        "value": 9132000000.0,
+        "value": 8979850843.494238,
         "is_annual": false
       },
       {
         "period": "2024Q1",
-        "value": 8393000000.0,
+        "value": 8237083640.727079,
         "is_annual": false
       },
       {
         "period": "2024Q2",
-        "value": 8386000000.0,
+        "value": 8254456299.948989,
         "is_annual": false
       },
       {
         "period": "2024Q4",
-        "value": 9415000000.0,
+        "value": 9247577276.524645,
         "is_annual": false
       },
       {
         "period": "2025Q1",
-        "value": 8889000000.0,
+        "value": 8710519352.831364,
         "is_annual": false
       },
       {
         "period": "2025Q2",
-        "value": 9086000000.0,
+        "value": 8917084405.344841,
         "is_annual": false
       },
       {
         "period": "2025Q4",
-        "value": 10006000000.0,
+        "value": 9801156914.492535,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 9487000000.0,
+        "value": 9250661190.965092,
         "is_annual": false
       },
       {
         "period": "FY2023",
-        "value": 32549000000.0,
+        "value": 31541835638.73969,
         "is_annual": true
       },
       {
         "period": "FY2024",
-        "value": 34151000000.0,
+        "value": 32979029497.826927,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 36156000000.0,
+        "value": 34752474048.2273,
         "is_annual": true
       }
     ]
   },
   "annual_count": 3,
   "quarterly_count": 10,
-  "has_partial_data": false,
-  "data_notes": [],
-  "classification": "US_SEC"
+  "has_partial_data": true,
+  "data_notes": [
+    "Only 3/3 annual reports available"
+  ]
 }

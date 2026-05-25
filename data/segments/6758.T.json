@@ -2,6 +2,7 @@
   "ticker": "6758.T",
   "name": "Sony Group Corporation",
   "sector": "standard",
+  "classification": "",
   "latest_annual": {
     "ticker": "6758.T",
     "period": "FY2025",
@@ -11,7 +12,7 @@
     "segments": [
       {
         "segment_name": "Operating segments [member] - Game & Network Services",
-        "value": 29593012210.536747,
+        "value": 31151696659.693493,
         "unit": "USD",
         "period": "2025-03-31 (FY)",
         "concept": "xbrl_dimension",
@@ -19,7 +20,7 @@
       },
       {
         "segment_name": "Operating segments [member] - Music",
-        "value": 11676164650.95058,
+        "value": 12291156329.991297,
         "unit": "USD",
         "period": "2025-03-31 (FY)",
         "concept": "xbrl_dimension",
@@ -27,7 +28,7 @@
       },
       {
         "segment_name": "Operating segments [member] - Pictures",
-        "value": 9542826401.71796,
+        "value": 10045453677.62819,
         "unit": "USD",
         "period": "2025-03-31 (FY)",
         "concept": "xbrl_dimension",
@@ -35,7 +36,7 @@
       },
       {
         "segment_name": "Operating segments [member] - Entertainment, Technology & Services",
-        "value": 15267030566.208996,
+        "value": 16071155640.028883,
         "unit": "USD",
         "period": "2025-03-31 (FY)",
         "concept": "xbrl_dimension",
@@ -43,7 +44,7 @@
       },
       {
         "segment_name": "Operating segments [member] - Imaging & Sensing Solutions",
-        "value": 11399887652.411125,
+        "value": 12000327630.590181,
         "unit": "USD",
         "period": "2025-03-31 (FY)",
         "concept": "xbrl_dimension",
@@ -51,21 +52,21 @@
       },
       {
         "segment_name": "Operating segments [member] - Financial Services",
-        "value": 5902071066.759527,
+        "value": 6212937237.6017275,
         "unit": "USD",
         "period": "2025-03-31 (FY)",
         "concept": "xbrl_dimension",
         "is_annual": true
       }
     ],
-    "total_revenue": 82105982976.75699,
-    "gross_profit": 28212926256.457344,
-    "operating_income": 8916873554.342426,
-    "net_income": 7349941489.596851,
+    "total_revenue": 86430561966.49,
+    "gross_profit": 29698920622.569508,
+    "operating_income": 9386531460.2484,
+    "net_income": 7737067998.400424,
     "rd_expense": null,
-    "sga_expense": 14301014755.769632,
-    "cogs": 53893056720.299644,
-    "interest_expense": 459168962.3882994,
+    "sga_expense": 15054259107.794147,
+    "cogs": 56731641343.920494,
+    "interest_expense": 483353709.65627956,
     "income_tax": null,
     "currency": "USD",
     "extraction_method": "xbrl",
@@ -82,7 +83,7 @@
       "segments": [
         {
           "segment_name": "Operating segments [member] - Game & Network Services",
-          "value": 29593012210.536747,
+          "value": 31151696659.693493,
           "unit": "USD",
           "period": "2025-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -90,7 +91,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Music",
-          "value": 11676164650.95058,
+          "value": 12291156329.991297,
           "unit": "USD",
           "period": "2025-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -98,7 +99,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Pictures",
-          "value": 9542826401.71796,
+          "value": 10045453677.62819,
           "unit": "USD",
           "period": "2025-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -106,7 +107,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Entertainment, Technology & Services",
-          "value": 15267030566.208996,
+          "value": 16071155640.028883,
           "unit": "USD",
           "period": "2025-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -114,7 +115,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Imaging & Sensing Solutions",
-          "value": 11399887652.411125,
+          "value": 12000327630.590181,
           "unit": "USD",
           "period": "2025-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -122,21 +123,21 @@
         },
         {
           "segment_name": "Operating segments [member] - Financial Services",
-          "value": 5902071066.759527,
+          "value": 6212937237.6017275,
           "unit": "USD",
           "period": "2025-03-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 82105982976.75699,
-      "gross_profit": 28212926256.457344,
-      "operating_income": 8916873554.342426,
-      "net_income": 7349941489.596851,
+      "total_revenue": 86430561966.49,
+      "gross_profit": 29698920622.569508,
+      "operating_income": 9386531460.2484,
+      "net_income": 7737067998.400424,
       "rd_expense": null,
-      "sga_expense": 14301014755.769632,
-      "cogs": 53893056720.299644,
-      "interest_expense": 459168962.3882994,
+      "sga_expense": 15054259107.794147,
+      "cogs": 56731641343.920494,
+      "interest_expense": 483353709.65627956,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -152,7 +153,7 @@
       "segments": [
         {
           "segment_name": "Operating segments [member] - Game & Network Services",
-          "value": 27043664764.8979,
+          "value": 28188841156.773273,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -160,7 +161,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Music",
-          "value": 10258970549.816265,
+          "value": 10693391364.477575,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -168,7 +169,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Pictures",
-          "value": 9461120041.040703,
+          "value": 9861755509.860815,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -176,7 +177,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Entertainment, Technology & Services",
-          "value": 15548655801.789835,
+          "value": 16207070765.309038,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -184,7 +185,7 @@
         },
         {
           "segment_name": "Operating segments [member] - Imaging & Sensing Solutions",
-          "value": 10156188079.660759,
+          "value": 10586256523.467602,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -192,21 +193,21 @@
         },
         {
           "segment_name": "Operating segments [member] - Financial Services",
-          "value": 11215798038.32434,
+          "value": 11690736151.970924,
           "unit": "USD",
           "period": "2024-03-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 82509660811.45406,
-      "gross_profit": 31249489225.08303,
-      "operating_income": 7660088543.807157,
-      "net_income": 6213168637.03169,
+      "total_revenue": 86003570253.25299,
+      "gross_profit": 32572763183.321808,
+      "operating_income": 7984458507.578821,
+      "net_income": 6476268113.516272,
       "rd_expense": null,
-      "sga_expense": 13663072732.467205,
-      "cogs": 51260171586.371025,
-      "interest_expense": 416744262.16073334,
+      "sga_expense": 14241641815.826298,
+      "cogs": 53430807069.93118,
+      "interest_expense": 434391489.14068943,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -222,7 +223,7 @@
       "segments": [
         {
           "segment_name": "Game & Network Services",
-          "value": 21963314277.090836,
+          "value": 26020891653.018143,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -230,7 +231,7 @@
         },
         {
           "segment_name": "Music",
-          "value": 8320054644.437734,
+          "value": 9857129835.633379,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -238,7 +239,7 @@
         },
         {
           "segment_name": "Pictures",
-          "value": 8252500210.98686,
+          "value": 9777095166.39679,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -246,7 +247,7 @@
         },
         {
           "segment_name": "Entertainment, Technology & Services",
-          "value": 14921183415.272093,
+          "value": 17677773585.77386,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -254,7 +255,7 @@
         },
         {
           "segment_name": "Imaging & Sensing Solutions",
-          "value": 8449950791.898357,
+          "value": 10011023439.147623,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
@@ -262,21 +263,21 @@
         },
         {
           "segment_name": "Financial Services",
-          "value": 8765480014.115513,
+          "value": 10384844602.979786,
           "unit": "USD",
           "period": "2023-03-31 (FY)",
           "concept": "xbrl_dimension",
           "is_annual": true
         }
       ],
-      "total_revenue": 69542118702.09035,
-      "gross_profit": 26305334809.855324,
-      "operating_income": 7280969832.466245,
-      "net_income": 5686516467.598624,
+      "total_revenue": 82389566221.15523,
+      "gross_profit": 31165071826.048477,
+      "operating_income": 8626080961.61125,
+      "net_income": 6737062859.44411,
       "rd_expense": null,
-      "sga_expense": 11866740742.056864,
-      "cogs": 43236783892.23503,
-      "interest_expense": 355254362.7441989,
+      "sga_expense": 14059042785.068129,
+      "cogs": 51224494395.10675,
+      "interest_expense": 420885261.9238315,
       "income_tax": null,
       "currency": "USD",
       "extraction_method": "xbrl",
@@ -292,15 +293,15 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 23532756260.762924,
-      "gross_profit": 6691911893.520504,
-      "operating_income": 3232413634.7845197,
-      "net_income": -6391346041.213721,
+      "total_revenue": 23742790514.702442,
+      "gross_profit": 6751638459.606096,
+      "operating_income": 3261263531.442732,
+      "net_income": -6448390000.814572,
       "rd_expense": null,
-      "sga_expense": 3698559385.066852,
-      "cogs": 16840844367.242418,
-      "interest_expense": 199190145.92282474,
-      "income_tax": 758860339.9181738,
+      "sga_expense": 3731569719.7886186,
+      "cogs": 16991152055.096348,
+      "interest_expense": 200967955.25494963,
+      "income_tax": 765633310.477715,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
@@ -316,15 +317,15 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 19694103481.72579,
-      "gross_profit": 6384514999.11584,
-      "operating_income": 2728747847.1538053,
-      "net_income": 2293709319.189191,
+      "total_revenue": 20999797616.30902,
+      "gross_profit": 6807800262.861885,
+      "operating_income": 2909660375.72315,
+      "net_income": 2445779343.97012,
       "rd_expense": null,
-      "sga_expense": 3503912705.9197054,
-      "cogs": 13309588482.60995,
-      "interest_expense": 118282218.73752773,
-      "income_tax": 781666388.6290044,
+      "sga_expense": 3736217683.521565,
+      "cogs": 14191997353.447136,
+      "interest_expense": 126124180.1334545,
+      "income_tax": 833489880.8626459,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
@@ -340,15 +341,15 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 16612581103.37425,
-      "gross_profit": 5364383140.888065,
-      "operating_income": 2165060138.6036725,
-      "net_income": 1501238731.3237414,
+      "total_revenue": 18230980151.579716,
+      "gross_profit": 5886981797.616929,
+      "operating_income": 2375980479.3875666,
+      "net_income": 1647489534.7831771,
       "rd_expense": null,
-      "sga_expense": 3262183797.841892,
-      "cogs": 11248197962.486185,
-      "interest_expense": 221837775.29001236,
-      "income_tax": 594268978.6469564,
+      "sga_expense": 3579986017.7766533,
+      "cogs": 12343998353.962786,
+      "interest_expense": 243449230.01527786,
+      "income_tax": 652162712.5246451,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
@@ -364,15 +365,15 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 16667261124.02603,
-      "gross_profit": 5164084059.55974,
-      "operating_income": 1293044029.9082546,
-      "net_income": 1252951262.419112,
+      "total_revenue": 17545137311.12145,
+      "gross_profit": 5436079943.605233,
+      "operating_income": 1361149554.5217767,
+      "net_income": 1318945073.2008555,
       "rd_expense": null,
-      "sga_expense": 3797146911.0026956,
-      "cogs": 11503177064.46629,
-      "interest_expense": -59115762.273781,
-      "income_tax": 24694407.287053764,
+      "sga_expense": 3997145268.6972914,
+      "cogs": 12109057367.516216,
+      "interest_expense": -62229430.416133255,
+      "income_tax": 25995078.8221322,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
@@ -388,15 +389,15 @@
       "fiscal_year": 2024,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 23404202131.78359,
-      "gross_profit": 6323022946.687415,
-      "operating_income": 2706461413.8901234,
-      "net_income": 2368299482.9500093,
+      "total_revenue": 23525552761.90117,
+      "gross_profit": 6355807777.997107,
+      "operating_income": 2720494398.057461,
+      "net_income": 2380579099.7873993,
       "rd_expense": null,
-      "sga_expense": 3654759604.9364657,
-      "cogs": 17081179185.096174,
-      "interest_expense": 109119243.90122294,
-      "income_tax": 663954479.528591,
+      "sga_expense": 3673709508.8250933,
+      "cogs": 17169744983.904064,
+      "interest_expense": 109685026.44449472,
+      "income_tax": 667397079.0244639,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
@@ -406,121 +407,121 @@
       ]
     }
   ],
-  "ttm_revenue": 76506701969.88899,
-  "ttm_operating_income": 9419265650.450253,
-  "ttm_net_income": -1343446728.281677,
+  "ttm_revenue": 80518705593.71263,
+  "ttm_operating_income": 9908053941.075226,
+  "ttm_net_income": -1036176048.8604198,
   "segment_trend": {
     "Game & Network Services": [
       {
         "period": "FY2023",
-        "value": 21963314277.090836,
+        "value": 26020891653.018143,
         "is_annual": true
       }
     ],
     "Music": [
       {
         "period": "FY2023",
-        "value": 8320054644.437734,
+        "value": 9857129835.633379,
         "is_annual": true
       }
     ],
     "Pictures": [
       {
         "period": "FY2023",
-        "value": 8252500210.98686,
+        "value": 9777095166.39679,
         "is_annual": true
       }
     ],
     "Entertainment, Technology & Services": [
       {
         "period": "FY2023",
-        "value": 14921183415.272093,
+        "value": 17677773585.77386,
         "is_annual": true
       }
     ],
     "Imaging & Sensing Solutions": [
       {
         "period": "FY2023",
-        "value": 8449950791.898357,
+        "value": 10011023439.147623,
         "is_annual": true
       }
     ],
     "Financial Services": [
       {
         "period": "FY2023",
-        "value": 8765480014.115513,
+        "value": 10384844602.979786,
         "is_annual": true
       }
     ],
     "Operating segments [member] - Game & Network Services": [
       {
         "period": "FY2024",
-        "value": 27043664764.8979,
+        "value": 28188841156.773273,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 29593012210.536747,
+        "value": 31151696659.693493,
         "is_annual": true
       }
     ],
     "Operating segments [member] - Music": [
       {
         "period": "FY2024",
-        "value": 10258970549.816265,
+        "value": 10693391364.477575,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 11676164650.95058,
+        "value": 12291156329.991297,
         "is_annual": true
       }
     ],
     "Operating segments [member] - Pictures": [
       {
         "period": "FY2024",
-        "value": 9461120041.040703,
+        "value": 9861755509.860815,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 9542826401.71796,
+        "value": 10045453677.62819,
         "is_annual": true
       }
     ],
     "Operating segments [member] - Entertainment, Technology & Services": [
       {
         "period": "FY2024",
-        "value": 15548655801.789835,
+        "value": 16207070765.309038,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 15267030566.208996,
+        "value": 16071155640.028883,
         "is_annual": true
       }
     ],
     "Operating segments [member] - Imaging & Sensing Solutions": [
       {
         "period": "FY2024",
-        "value": 10156188079.660759,
+        "value": 10586256523.467602,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 11399887652.411125,
+        "value": 12000327630.590181,
         "is_annual": true
       }
     ],
     "Operating segments [member] - Financial Services": [
       {
         "period": "FY2024",
-        "value": 11215798038.32434,
+        "value": 11690736151.970924,
         "is_annual": true
       },
       {
         "period": "FY2025",
-        "value": 5902071066.759527,
+        "value": 6212937237.6017275,
         "is_annual": true
       }
     ]
@@ -529,7 +530,6 @@
   "quarterly_count": 5,
   "has_partial_data": true,
   "data_notes": [
-    "Partial data: 3/3 annual, 5/12 quarterly"
-  ],
-  "classification": "INTL_SEC"
+    "Only 3/3 annual reports available"
+  ]
 }
