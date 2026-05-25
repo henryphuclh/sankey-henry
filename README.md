@@ -23,7 +23,6 @@ Automated pipeline that fetches financial data for **98 global stocks**, extract
 7. [Cache system](#cache-system)
 8. [Configuration](#configuration)
 9. [Known limitations](#known-limitations)
-10. [Q&A — Presentation preparation](#qa--presentation-preparation)
 
 ---
 
@@ -454,53 +453,3 @@ Samsung, SK Hynix, Tencent, Roche, LVMH, Nestlé, Siemens, CBA, and Allianz do n
 ### Do not increase `MAX_TICKER_WORKERS` above 5
 
 SEC EDGAR enforces a global limit of 10 requests per second across all concurrent connections. Exceeding this causes HTTP 429 errors and a temporary IP ban that affects all threads.
-
----
-
-## Q&A — Presentation preparation
-
-**Q: Why don't you have 12 quarterly reports for every company?**
-
-> "SEC only requires companies to file quarterly reports — called 10-Q — for the first three quarters of their fiscal year. The fourth quarter is never filed separately; it only appears inside the annual report. We retrieve that missing quarter from Yahoo Finance instead. But Yahoo Finance only keeps about five recent quarters in its database, so older Q4 data — anything older than roughly 15 months — is simply not available from either source. Rather than hiding this gap, the program generates a short note for each affected company explaining exactly why data is limited."
-
----
-
-**Q: Why do international companies have even fewer quarters?**
-
-> "International companies file a report called a 6-K with the SEC. Unlike the US 10-Q, the 6-K has no standardised income statement format — each company structures it differently. We cannot reliably extract quarterly P&L from 6-K filings, so we rely entirely on Yahoo Finance for international quarterly data. That gives us at most five quarters per company."
-
----
-
-**Q: How do you extract business segments?**
-
-> "We use three layers. First, we read the XBRL data directly from SEC filings — this is a structured machine-readable format embedded in every modern filing. The segment values are stored along a 'dimension axis' that we can read without parsing any text. If that data is missing or covers less than 70% of total revenue, we extract the Segment Information note from the filing text and send it to an LLM, asking it to return the segment names and values as JSON. As a last resort, for companies with no SEC filings at all, we use Yahoo Finance. In the end, 67 companies use pure XBRL, 22 use the LLM fallback, and 9 use Yahoo Finance."
-
----
-
-**Q: What is the 2-layer Sankey for MSFT?**
-
-> "Microsoft reports business segments at two levels in its annual report: three top-level operating segments under ASC 280 — Productivity and Business Processes, Intelligent Cloud, and More Personal Computing — and ten finer-grained product lines under ASC 606 disaggregation: M365 Commercial, LinkedIn, Dynamics, Server Products, Azure, Gaming, Windows, and so on. The XBRL file contains both levels as separate dimension axes. Our pipeline detects this, reads which products belong to which segment from the bullet-point structure in Note 18 of the 10-K, and renders a two-layer Sankey: sub-products flow into their parent segment, which then flows into total revenue. No LLM is needed for this mapping."
-
----
-
-**Q: How do you handle companies where segment data is incomplete?**
-
-> "The program never silently skips a company or leaves a blank chart. If XBRL gives us nothing, we use the LLM. If the LLM returns fewer segments than expected, the pipeline also checks the Revenue note section — which sometimes has finer detail than the Segment note. If neither source gives usable data, the Sankey is generated without a segment layer and a coverage note is added explaining why. Every gap is documented."
-
----
-
-**Q: What data sources did you use?**
-
-> "Only SEC EDGAR and Yahoo Finance, exactly as required. SEC EDGAR provides annual and quarterly filings for US and internationally-listed companies. Yahoo Finance fills in the gaps — mainly the fiscal year-end quarter and international quarterly data — and provides exchange rates for non-USD companies. No other sources were used."
-
----
-
-**Q: How does the LLM fit into the pipeline?**
-
-> "The LLM is used in three specific places. First, when XBRL segment data is missing or incomplete, we send the relevant section of the filing to the LLM and ask it to extract the segment breakdown as structured JSON. Second, the LLM writes a 400–600 word business model summary for each company based on the actual numbers we extracted. Third, when data coverage is limited, the LLM writes a short note explaining why — for example, explaining that Yahoo Finance does not maintain a full three-year quarterly history for a given ticker. All LLM outputs are cached for 90 days."
-
----
-
-**Q: How do you make sure you are not using forward-looking data?**
-
-> "All data comes from SEC filings and Yahoo Finance using the dates embedded in those filings. The pipeline fetches data by filing date, not by calendar date. We never use forecasts, analyst estimates, or any data that was not publicly available at the time the filing was submitted."
