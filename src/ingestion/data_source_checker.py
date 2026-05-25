@@ -31,7 +31,7 @@ import requests
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(_PROJECT_ROOT))
 
-from config import SEC_USER_AGENT, TICKER_TO_CIK, YEARS_BACK
+from config import SEC_USER_AGENT, YEARS_BACK
 from src.cache.cache_manager import cache
 
 # ---------------------------------------------------------------------------
@@ -126,13 +126,7 @@ def _run_checks(ticker: str, hint_name: str = "") -> CheckResult:
 # ---------------------------------------------------------------------------
 
 def _resolve_cik(ticker: str, hint_name: str, notes: list) -> Optional[str]:
-    # 1. Seed map
-    if ticker in TICKER_TO_CIK:
-        cik = TICKER_TO_CIK[ticker]
-        notes.append(f"CIK from seed map: {cik}")
-        return cik
-
-    # 2. edgartools Company(ticker) — fast path
+    # 1. edgartools Company(ticker) — fast path
     try:
         import edgar
         edgar.set_identity(os.getenv("SEC_USER_AGENT") or SEC_USER_AGENT)

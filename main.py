@@ -1,4 +1,4 @@
-“””
+"""
 Financial Analysis System — Task 1
 Generates interactive Sankey charts + business model analysis for 98 stocks.
 
@@ -7,7 +7,7 @@ Usage:
   python main.py --tickers-file stocks.txt
   python main.py --all
   python main.py --tickers NVDA --no-cache --verbose
-“””
+"""
 from __future__ import annotations
 
 import argparse
@@ -45,8 +45,8 @@ class ProcessResult:
         self.ticker   = ticker
         self.success  = False
         self.output   = None
-        self.error    = “”
-        self.method   = “”
+        self.error    = ""
+        self.method   = ""
         self.coverage = {}
         self.elapsed  = 0.0
 
@@ -63,14 +63,14 @@ def process_ticker(
 
     def log(msg: str):
         if verbose:
-            print(f”  [{ticker_info.ticker}] {msg}”)
+            print(f"  [{ticker_info.ticker}] {msg}")
 
     try:
         # Step 1 — Check if already processed and cached
         if not force_refetch:
             cached_agg = load_cached(ticker_info.ticker)
             if cached_agg and cached_agg.annual_count > 0:
-                log(“Using cached aggregated data”)
+                log("Using cached aggregated data")
                 cached_agg.classification = ticker_info.classification
                 # Apply quarterly gap-fills from Yahoo even on the cached path
                 # (yfinance data is locally cached so this is fast)
@@ -91,12 +91,12 @@ def process_ticker(
                 out_path = generate_report(cached_agg, analysis)
                 result.success  = True
                 result.output   = out_path
-                result.coverage = {“annual”: cached_agg.annual_count, “quarterly”: cached_agg.quarterly_count}
+                result.coverage = {"annual": cached_agg.annual_count, "quarterly": cached_agg.quarterly_count}
                 result.elapsed  = time.time() - t0
                 return result
 
         # Step 2 — Fetch data
-        log(“Fetching filings...”)
+        log("Fetching filings...")
         filings = get_filings_for_ticker(ticker_info)
 
         log("Fetching Yahoo Finance data...")
@@ -205,16 +205,23 @@ def _extract_from_yahoo_all_periods(
     import datetime
 
     periods_data = []
+    annual_income = yahoo_data.get("annual_income", {})
     # Annual periods (last 3 years)
     for year_offset in range(YEARS_BACK):
         fy = datetime.date.today().year - year_offset
         period = f"FY{fy}"
+        # Match fiscal year to the income date key so per-date forex rate is used
+        date_key = next((d for d in sorted(annual_income, reverse=True) if d.startswith(str(fy))), None)
+        if date_key is None:
+            # Non-calendar fiscal year: try year-1 (e.g. FY ending Jan of fy)
+            date_key = next((d for d in sorted(annual_income, reverse=True) if d.startswith(str(fy - 1))), None)
         sd = extract_for_yahoo_only(
-            ticker_info = ticker_info,
-            period      = period,
-            yahoo_data  = yahoo_data,
-            is_annual   = True,
-            fiscal_year = fy,
+            ticker_info    = ticker_info,
+            period         = period,
+            yahoo_data     = yahoo_data,
+            is_annual      = True,
+            fiscal_year    = fy,
+            yahoo_date_key = date_key,
         )
         if sd.total_revenue:
             periods_data.append(sd)

@@ -1,6 +1,8 @@
 """Yahoo Finance client — income statements, segment data, currency conversion."""
 from __future__ import annotations
 
+import logging
+from datetime import date, timedelta
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 import sys
@@ -11,6 +13,8 @@ import yfinance as yf
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from src.cache.cache_manager import cache
 from src.ingestion.rate_limiter import yahoo_limiter
+
+logger = logging.getLogger(__name__)
 
 
 def _safe_float(val) -> Optional[float]:
@@ -39,7 +43,7 @@ def get_financials(ticker: str) -> Dict[str, Any]:
         quarterly_income : {date_str: {metric: value}}
         info             : yf .info dict (subset)
         currency         : reporting currency
-        usd_rate         : latest USD conversion rate (1 unit of currency = X USD)
+        usd_rates        : {date_str: float} — exchange rate at period end date
     """
     cached = cache.get("yfinance", ticker)
     if cached:
@@ -53,22 +57,26 @@ def get_financials(ticker: str) -> Dict[str, Any]:
         "quarterly_income": {},
         "info":             {},
         "currency":         "USD",
-        "usd_rate":         1.0,
+        "usd_rates":        {},  # {date_str: float} — rate at period end date
     }
 
     try:
         ann = tkr.income_stmt
         if ann is not None and not ann.empty:
             result["annual_income"] = _df_to_dict(ann)
-    except Exception:
-        pass
+        else:
+            logger.warning("get_financials(%s): annual income_stmt empty or None", ticker)
+    except Exception as e:
+        logger.warning("get_financials(%s): failed to fetch annual income_stmt: %s", ticker, e)
 
     try:
         qtr = tkr.quarterly_income_stmt
         if qtr is not None and not qtr.empty:
             result["quarterly_income"] = _df_to_dict(qtr)
-    except Exception:
-        pass
+        else:
+            logger.warning("get_financials(%s): quarterly income_stmt empty or None", ticker)
+    except Exception as e:
+        logger.warning("get_financials(%s): failed to fetch quarterly income_stmt: %s", ticker, e)
 
     # Collect key info fields
     try:
@@ -85,59 +93,67 @@ def get_financials(ticker: str) -> Dict[str, Any]:
     except Exception:
         currency = "USD"
 
-    # Currency conversion to USD
+    # Per-period exchange rates at period end date
     if currency != "USD":
-        result["usd_rate"] = _get_usd_rate(currency)
+        all_dates = list(result["annual_income"]) + list(result["quarterly_income"])
+        usd_rates = {}
+        for d in all_dates:
+            rate = _get_usd_rate(currency, as_of_date=d)
+            if rate is not None:
+                usd_rates[d] = rate
+        result["usd_rates"] = usd_rates
 
     cache.set("yfinance", ticker, result)
     return result
 
 
-def _get_usd_rate(currency: str) -> float:
-    """Return the latest exchange rate: 1 unit of `currency` in USD."""
+def _get_usd_rate(currency: str, as_of_date: Optional[str] = None) -> float:
+    """Return exchange rate: 1 unit of `currency` in USD, at `as_of_date` (ISO date) or latest."""
     if currency == "USD":
         return 1.0
     pair = f"{currency}USD=X"
-    cached = cache.get("yfinance", f"fx_{pair}")
+    cache_key = f"fx_{pair}_{as_of_date}" if as_of_date else f"fx_{pair}"
+    cached = cache.get("yfinance", cache_key)
     if cached:
         return cached.get("rate", 1.0)
 
     def _extract_close(df) -> float:
-        """Extract scalar close from yfinance DataFrame (handles multi-index columns)."""
         if df is None or df.empty:
             return 0.0
         close = df["Close"]
-        # newer yfinance: Close is a DataFrame with ticker column
         if hasattr(close, "values"):
             v = close.values[-1]
-            # v might be a numpy array of shape (1,)
             if hasattr(v, "__len__") and len(v) == 1:
                 v = v[0]
             return float(v)
         return 0.0
 
-    try:
-        yahoo_limiter()
-        data = yf.download(pair, period="5d", auto_adjust=True, progress=False)
-        rate = _extract_close(data)
-        if rate > 0:
-            cache.set("yfinance", f"fx_{pair}", {"rate": rate})
-            return rate
-    except Exception:
-        pass
-    # Fallback: try reciprocal pair USDXXX=X → 1/rate
+    if as_of_date:
+        d = date.fromisoformat(as_of_date[:10])
+        kwargs = {"start": str(d - timedelta(days=7)), "end": str(d + timedelta(days=2))}
+    else:
+        kwargs = {"period": "5d"}
+
     pair2 = f"USD{currency}=X"
     try:
         yahoo_limiter()
-        data2 = yf.download(pair2, period="5d", auto_adjust=True, progress=False)
-        rate2 = _extract_close(data2)
-        if rate2 > 0:
-            rate = 1.0 / rate2
-            cache.set("yfinance", f"fx_{pair}", {"rate": rate})
+        rate = _extract_close(yf.download(pair, auto_adjust=True, progress=False, **kwargs))
+        if rate > 0:
+            cache.set("yfinance", cache_key, {"rate": rate})
             return rate
     except Exception:
         pass
-    return 1.0
+    try:
+        yahoo_limiter()
+        rate2 = _extract_close(yf.download(pair2, auto_adjust=True, progress=False, **kwargs))
+        if rate2 > 0:
+            rate = 1.0 / rate2
+            cache.set("yfinance", cache_key, {"rate": rate})
+            return rate
+    except Exception:
+        pass
+    logger.warning("_get_usd_rate: could not fetch %s rate for %s — period will be kept in original currency", currency, as_of_date or "latest")
+    return None
 
 
 def get_total_revenue_by_period(ticker: str) -> Dict[str, Optional[float]]:
@@ -146,23 +162,22 @@ def get_total_revenue_by_period(ticker: str) -> Dict[str, Optional[float]]:
     Period string format: 'FY2024' or '2024Q3'.
     """
     data = get_financials(ticker)
-    usd_rate = data.get("usd_rate", 1.0)
+    usd_rates = data.get("usd_rates", {})
     result: Dict[str, Optional[float]] = {}
 
     for date_str, metrics in data["annual_income"].items():
         rev = metrics.get("Total Revenue")
         if rev is not None:
             fy = date_str[:4]
-            result[f"FY{fy}"] = rev * usd_rate
+            result[f"FY{fy}"] = rev * usd_rates.get(date_str, 1.0)
 
     for date_str, metrics in data["quarterly_income"].items():
         rev = metrics.get("Total Revenue")
         if rev is not None:
             try:
                 d = pd.Timestamp(date_str)
-                month = d.month
-                q = (month - 1) // 3 + 1
-                result[f"{d.year}Q{q}"] = rev * usd_rate
+                q = (d.month - 1) // 3 + 1
+                result[f"{d.year}Q{q}"] = rev * usd_rates.get(date_str, 1.0)
             except Exception:
                 pass
 
@@ -178,13 +193,13 @@ def get_business_summary(ticker: str) -> str:
 def get_key_metrics(ticker: str) -> Dict[str, Optional[float]]:
     """Return key P&L metrics from the most recent annual report."""
     data = get_financials(ticker)
-    usd = data.get("usd_rate", 1.0)
+    usd_rates = data.get("usd_rates", {})
 
     def latest_val(income_dict: Dict, metric: str) -> Optional[float]:
         for date_str in sorted(income_dict.keys(), reverse=True):
             val = income_dict[date_str].get(metric)
             if val is not None:
-                return val * usd
+                return val * usd_rates.get(date_str, 1.0)
         return None
 
     ann = data["annual_income"]

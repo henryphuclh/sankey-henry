@@ -87,10 +87,6 @@ MAX_LLM_WORKERS    = 20
 # Tickers whose StatementBusinessSegmentsAxis returns geographic/mixed breakdowns
 # but whose ProductOrServiceAxis is more investor-relevant.
 # ── CIK seed map ──────────────────────────────────────────────────────────────
-# Fallback CIKs for international filers whose ADR tickers are not directly
-# resolvable via edgartools.  data_source_checker tries edgartools first and
-# falls back to this map.  Classification logic does NOT use this map.
-TICKER_TO_CIK: dict = {}  # CIK resolution is fully automatic via data_source_checker
 
 # ── Sankey Visual Config ──────────────────────────────────────────────────────
 SANKEY_COLORS = {

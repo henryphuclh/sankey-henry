@@ -16,13 +16,12 @@ from src.extraction.models import FilingRecord
 def get_filings_for_ticker(info: TickerInfo) -> List[FilingRecord]:
     """Return FilingRecord list based on ticker classification."""
     if info.classification == "US_SEC":
-        return _edgar_get_filings(info.ticker, FILING_TYPES_US, YEARS_BACK, cik=info.cik)
+        return _edgar_get_filings(info.ticker, FILING_TYPES_US, YEARS_BACK, info.cik)
 
     if info.classification == "INTL_SEC":
-        filings = _edgar_get_filings(info.ticker, FILING_TYPES_INTL, YEARS_BACK, cik=info.cik)
+        filings = _edgar_get_filings(info.ticker, FILING_TYPES_INTL, YEARS_BACK, info.cik)
         if not filings:
-            # Some INTL_SEC tickers also file 10-K / 10-Q under their ADR ticker
-            filings = _edgar_get_filings(info.ticker, ["20-F", "40-F", "6-K", "10-K"], YEARS_BACK, cik=info.cik)
+            filings = _edgar_get_filings(info.ticker, ["20-F", "40-F", "6-K", "10-K", "10-Q"], YEARS_BACK, info.cik)
         return filings
 
     # INTL_YAHOO — no SEC filings

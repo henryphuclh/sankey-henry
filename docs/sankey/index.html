@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Financial Analysis Dashboard — 98 Companies</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+          margin: 0; padding: 20px; background: #f5f5f5; color: #222; }
+  .container { max-width: 1800px; margin: 0 auto; }
+  .header { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+             color: white; padding: 24px 28px; border-radius: 10px;
+             margin-bottom: 20px; }
+  .header h1 { margin: 0 0 8px 0; font-size: 1.6rem; }
+  .header .subtitle { opacity: 0.75; font-size: 13px; }
+  .stats { display: flex; gap: 14px; margin-bottom: 20px; flex-wrap: wrap; }
+  .stat-card { flex: 1; min-width: 180px; background: white; padding: 14px 18px;
+                border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .stat-card .lbl { font-size: 11px; color: #888; text-transform: uppercase;
+                     letter-spacing: 0.5px; }
+  .stat-card .val { font-size: 1.5rem; font-weight: 700; color: #1a1a2e;
+                     margin-top: 4px; }
+  .toolbar { background: white; padding: 12px 18px; border-radius: 8px;
+              margin-bottom: 16px; box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+              display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .toolbar input { flex: 1; min-width: 220px; padding: 8px 12px; border: 1px solid #ccc;
+                    border-radius: 6px; font-size: 14px; }
+  .toolbar .count { color: #666; font-size: 13px; }
+  table { width: 100%; border-collapse: collapse; background: white;
+           border-radius: 8px; overflow: hidden; font-size: 13px;
+           box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  thead { background: #1a1a2e; color: white; }
+  th { padding: 10px 12px; text-align: left; font-weight: 600;
+        cursor: pointer; user-select: none; position: sticky; top: 0; }
+  th:hover { background: #2a2a4e; }
+  th .arrow { font-size: 10px; margin-left: 4px; opacity: 0.5; }
+  td { padding: 9px 12px; border-bottom: 1px solid #eee; }
+  tr:hover td { background: #f7f9fc; }
+  tr.hidden { display: none; }
+  a { color: #1a73e8; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .footer { text-align: center; color: #aaa; font-size: 11px; margin-top: 24px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="header">
+    <h1>📊 Financial Analysis Dashboard</h1>
+    <div class="subtitle">
+      Generated from SEC EDGAR (10-K / 10-Q / 20-F) + Yahoo Finance —
+      XBRL structured extraction with LLM fallback for segment narratives.
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><div class="lbl">Companies</div><div class="val">98</div></div>
+    <div class="stat-card"><div class="lbl">XBRL</div><div class="val" style="color:#28a745">68</div></div>
+    <div class="stat-card"><div class="lbl">EDGAR + LLM</div><div class="val" style="color:#6f42c1">21</div></div>
+    <div class="stat-card"><div class="lbl">Yahoo Only</div><div class="val" style="color:#fd7e14">9</div></div>
+  </div>
+
+  <div class="toolbar">
+    <input id="search" type="search" placeholder="Search by ticker, name or sector…" />
+    <span class="count" id="count">98 companies</span>
+  </div>
+
+  <table id="tbl">
+    <thead><tr>
+      <th onclick="sortBy(0,'s')">Ticker<span class="arrow">▲▼</span></th>
+      <th onclick="sortBy(1,'s')">Company<span class="arrow">▲▼</span></th>
+      <th onclick="sortBy(2,'s')">Sector<span class="arrow">▲▼</span></th>
+      <th onclick="sortBy(3,'s')">Period<span class="arrow">▲▼</span></th>
+      <th onclick="sortBy(4,'n')" style="text-align:right">Revenue<span class="arrow">▲▼</span></th>
+      <th onclick="sortBy(5,'n')" style="text-align:right">Net Income<span class="arrow">▲▼</span></th>
+      <th style="text-align:right">Op&nbsp;Margin</th>
+      <th style="text-align:right">Net&nbsp;Margin</th>
+      <th onclick="sortBy(8,'n')" style="text-align:right">#&nbsp;Segs<span class="arrow">▲▼</span></th>
+      <th onclick="sortBy(9,'s')">Source<span class="arrow">▲▼</span></th>
+      <th onclick="sortBy(10,'n')" style="text-align:right">Conf<span class="arrow">▲▼</span></th>
+      <th style="text-align:center">Periods</th>
+      <th></th>
+    </tr></thead>
+    <tbody>
+<tr data-ticker="NVDA" data-name="nvidia corp" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="NVDA_sankey.html" target="_blank">NVDA</a></strong></td>
+  <td>NVIDIA Corp</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2026</td>
+  <td data-val="215938000000.0" style="text-align:right">$215.94B</td>
+  <td data-val="120067000000.0" style="text-align:right">$120.07B</td>
+  <td style="text-align:right;color:#666">60.4%</td>
+  <td style="text-align:right;color:#666">55.6%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="NVDA_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="AAPL" data-name="apple inc." data-sector="technology" data-method="xbrl">
+  <td><strong><a href="AAPL_sankey.html" target="_blank">AAPL</a></strong></td>
+  <td>Apple Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="416161000000.0" style="text-align:right">$416.16B</td>
+  <td data-val="112010000000.0" style="text-align:right">$112.01B</td>
+  <td style="text-align:right;color:#666">32.0%</td>
+  <td style="text-align:right;color:#666">26.9%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="AAPL_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="MSFT" data-name="microsoft corp" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="MSFT_sankey.html" target="_blank">MSFT</a></strong></td>
+  <td>Microsoft Corp</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="281724000000.0" style="text-align:right">$281.72B</td>
+  <td data-val="101832000000.0" style="text-align:right">$101.83B</td>
+  <td style="text-align:right;color:#666">45.6%</td>
+  <td style="text-align:right;color:#666">36.1%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="MSFT_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="AMZN" data-name="amazon.com inc." data-sector="consumer cyclical" data-method="xbrl">
+  <td><strong><a href="AMZN_sankey.html" target="_blank">AMZN</a></strong></td>
+  <td>Amazon.com Inc.</td>
+  <td style="color:#555;font-size:12px">Consumer Cyclical</td>
+  <td>FY2025</td>
+  <td data-val="716924000000.0" style="text-align:right">$716.92B</td>
+  <td data-val="77670000000.0" style="text-align:right">$77.67B</td>
+  <td style="text-align:right;color:#666">11.2%</td>
+  <td style="text-align:right;color:#666">10.8%</td>
+  <td style="text-align:right">7</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="AMZN_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="GOOGL" data-name="alphabet inc. (class a)" data-sector="communication services" data-method="edgar+llm">
+  <td><strong><a href="GOOGL_sankey.html" target="_blank">GOOGL</a></strong></td>
+  <td>Alphabet Inc. (Class A)</td>
+  <td style="color:#555;font-size:12px">Communication Services</td>
+  <td>FY2025</td>
+  <td data-val="402836000000.0" style="text-align:right">$402.84B</td>
+  <td data-val="132170000000.0" style="text-align:right">$132.17B</td>
+  <td style="text-align:right;color:#666">32.0%</td>
+  <td style="text-align:right;color:#666">32.8%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="GOOGL_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="TSM" data-name="taiwan semiconductor" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="TSM_sankey.html" target="_blank">TSM</a></strong></td>
+  <td>Taiwan Semiconductor</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="120692476227.5368" style="text-align:right">$120.69B</td>
+  <td data-val="53711185397.37165" style="text-align:right">$53.71B</td>
+  <td style="text-align:right;color:#666">50.8%</td>
+  <td style="text-align:right;color:#666">44.5%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="TSM_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="AVGO" data-name="broadcom inc." data-sector="technology" data-method="xbrl">
+  <td><strong><a href="AVGO_sankey.html" target="_blank">AVGO</a></strong></td>
+  <td>Broadcom Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="63887000000.0" style="text-align:right">$63.89B</td>
+  <td data-val="23126000000.0" style="text-align:right">$23.13B</td>
+  <td style="text-align:right;color:#666">39.9%</td>
+  <td style="text-align:right;color:#666">36.2%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="AVGO_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="GOOG" data-name="alphabet inc. (class c)" data-sector="communication services" data-method="edgar+llm">
+  <td><strong><a href="GOOG_sankey.html" target="_blank">GOOG</a></strong></td>
+  <td>Alphabet Inc. (Class C)</td>
+  <td style="color:#555;font-size:12px">Communication Services</td>
+  <td>FY2025</td>
+  <td data-val="402836000000.0" style="text-align:right">$402.84B</td>
+  <td data-val="132170000000.0" style="text-align:right">$132.17B</td>
+  <td style="text-align:right;color:#666">32.0%</td>
+  <td style="text-align:right;color:#666">32.8%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="GOOG_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="TSLA" data-name="tesla inc." data-sector="consumer cyclical" data-method="xbrl">
+  <td><strong><a href="TSLA_sankey.html" target="_blank">TSLA</a></strong></td>
+  <td>Tesla Inc.</td>
+  <td style="color:#555;font-size:12px">Consumer Cyclical</td>
+  <td>FY2025</td>
+  <td data-val="94827000000.0" style="text-align:right">$94.83B</td>
+  <td data-val="3855000000.0" style="text-align:right">$3.85B</td>
+  <td style="text-align:right;color:#666">4.6%</td>
+  <td style="text-align:right;color:#666">4.1%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="TSLA_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="META" data-name="meta platforms inc." data-sector="communication services" data-method="xbrl">
+  <td><strong><a href="META_sankey.html" target="_blank">META</a></strong></td>
+  <td>Meta Platforms Inc.</td>
+  <td style="color:#555;font-size:12px">Communication Services</td>
+  <td>FY2025</td>
+  <td data-val="200966000000.0" style="text-align:right">$200.97B</td>
+  <td data-val="60458000000.0" style="text-align:right">$60.46B</td>
+  <td style="text-align:right;color:#666">41.4%</td>
+  <td style="text-align:right;color:#666">30.1%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="META_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="BRK-B" data-name="berkshire hathaway inc." data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="BRK-B_sankey.html" target="_blank">BRK-B</a></strong></td>
+  <td>Berkshire Hathaway Inc.</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="371444000000.0" style="text-align:right">$371.44B</td>
+  <td data-val="67260000000.0" style="text-align:right">$67.26B</td>
+  <td style="text-align:right;color:#666">48.9%</td>
+  <td style="text-align:right;color:#666">18.1%</td>
+  <td style="text-align:right">7</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="BRK-B_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="WMT" data-name="walmart inc." data-sector="consumer defensive" data-method="xbrl">
+  <td><strong><a href="WMT_sankey.html" target="_blank">WMT</a></strong></td>
+  <td>Walmart Inc.</td>
+  <td style="color:#555;font-size:12px">Consumer Defensive</td>
+  <td>FY2026</td>
+  <td data-val="713163000000.0" style="text-align:right">$713.16B</td>
+  <td data-val="22270000000.0" style="text-align:right">$22.27B</td>
+  <td style="text-align:right;color:#666">4.2%</td>
+  <td style="text-align:right;color:#666">3.1%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="WMT_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="005930.KS" data-name="samsung electronics" data-sector="technology" data-method="yahoo_only">
+  <td><strong><a href="005930.KS_sankey.html" target="_blank">005930.KS</a></strong></td>
+  <td>Samsung Electronics</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2026</td>
+  <td data-val="232007511313.19498" style="text-align:right">$232.01B</td>
+  <td data-val="30781449249.571888" style="text-align:right">$30.78B</td>
+  <td style="text-align:right;color:#666">13.1%</td>
+  <td style="text-align:right;color:#666">13.3%</td>
+  <td style="text-align:right">0</td>
+  <td><span style="background:#6c757d;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">YAHOO_ONLY</span></td>
+  <td style="text-align:right">55%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="005930.KS_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="LLY" data-name="eli lilly and company" data-sector="healthcare" data-method="edgar+llm">
+  <td><strong><a href="LLY_sankey.html" target="_blank">LLY</a></strong></td>
+  <td>Eli Lilly and Company</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="65179000000.0" style="text-align:right">$65.18B</td>
+  <td data-val="20640000000.0" style="text-align:right">$20.64B</td>
+  <td style="text-align:right;color:#666">45.6%</td>
+  <td style="text-align:right;color:#666">31.7%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="LLY_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="JPM" data-name="jpmorgan chase & co." data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="JPM_sankey.html" target="_blank">JPM</a></strong></td>
+  <td>JPMorgan Chase & Co.</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="182447000000.0" style="text-align:right">$182.45B</td>
+  <td data-val="57048000000.0" style="text-align:right">$57.05B</td>
+  <td style="text-align:right;color:#666">39.8%</td>
+  <td style="text-align:right;color:#666">31.3%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="JPM_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="XOM" data-name="exxon mobil corporation" data-sector="energy" data-method="edgar+llm">
+  <td><strong><a href="XOM_sankey.html" target="_blank">XOM</a></strong></td>
+  <td>Exxon Mobil Corporation</td>
+  <td style="color:#555;font-size:12px">Energy</td>
+  <td>FY2025</td>
+  <td data-val="332238000000.0" style="text-align:right">$332.24B</td>
+  <td data-val="29764000000.0" style="text-align:right">$29.76B</td>
+  <td style="text-align:right;color:#666">12.6%</td>
+  <td style="text-align:right;color:#666">9.0%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="XOM_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="TCEHY" data-name="tencent holdings ltd." data-sector="communication services" data-method="yahoo_only">
+  <td><strong><a href="TCEHY_sankey.html" target="_blank">TCEHY</a></strong></td>
+  <td>Tencent Holdings Ltd.</td>
+  <td style="color:#555;font-size:12px">Communication Services</td>
+  <td>FY2026</td>
+  <td data-val="107455012141.91318" style="text-align:right">$107.46B</td>
+  <td data-val="32138191724.568604" style="text-align:right">$32.14B</td>
+  <td style="text-align:right;color:#666">33.1%</td>
+  <td style="text-align:right;color:#666">29.9%</td>
+  <td style="text-align:right">0</td>
+  <td><span style="background:#6c757d;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">YAHOO_ONLY</span></td>
+  <td style="text-align:right">55%</td>
+  <td style="text-align:center">3A / 1Q</td>
+  <td style="text-align:center"><a href="TCEHY_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="ASML" data-name="asml holding nv" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="ASML_sankey.html" target="_blank">ASML</a></strong></td>
+  <td>ASML Holding NV</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="32667300000.0" style="text-align:right">$32.67B</td>
+  <td data-val="9609400000.0" style="text-align:right">$9.61B</td>
+  <td style="text-align:right;color:#666">34.6%</td>
+  <td style="text-align:right;color:#666">29.4%</td>
+  <td style="text-align:right">9</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="ASML_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="JNJ" data-name="johnson & johnson" data-sector="healthcare" data-method="xbrl">
+  <td><strong><a href="JNJ_sankey.html" target="_blank">JNJ</a></strong></td>
+  <td>Johnson & Johnson</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="94193000000.0" style="text-align:right">$94.19B</td>
+  <td data-val="26804000000.0" style="text-align:right">$26.80B</td>
+  <td style="text-align:right;color:#666">27.2%</td>
+  <td style="text-align:right;color:#666">28.5%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="JNJ_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="000660.KS" data-name="sk hynix inc." data-sector="technology" data-method="yahoo_only">
+  <td><strong><a href="000660.KS_sankey.html" target="_blank">000660.KS</a></strong></td>
+  <td>SK Hynix Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2026</td>
+  <td data-val="67561022547.21191" style="text-align:right">$67.56B</td>
+  <td data-val="29848380469.195255" style="text-align:right">$29.85B</td>
+  <td style="text-align:right;color:#666">48.6%</td>
+  <td style="text-align:right;color:#666">44.2%</td>
+  <td style="text-align:right">0</td>
+  <td><span style="background:#6c757d;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">YAHOO_ONLY</span></td>
+  <td style="text-align:right">55%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="000660.KS_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="V" data-name="visa inc." data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="V_sankey.html" target="_blank">V</a></strong></td>
+  <td>Visa Inc.</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="40000000000.0" style="text-align:right">$40.00B</td>
+  <td data-val="20058000000.0" style="text-align:right">$20.06B</td>
+  <td style="text-align:right;color:#666">60.0%</td>
+  <td style="text-align:right;color:#666">50.1%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="V_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="MU" data-name="micron technology" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="MU_sankey.html" target="_blank">MU</a></strong></td>
+  <td>Micron Technology</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="37378000000.0" style="text-align:right">$37.38B</td>
+  <td data-val="8539000000.0" style="text-align:right">$8.54B</td>
+  <td style="text-align:right;color:#666">26.1%</td>
+  <td style="text-align:right;color:#666">22.8%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="MU_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="ORCL" data-name="oracle corporation" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="ORCL_sankey.html" target="_blank">ORCL</a></strong></td>
+  <td>Oracle Corporation</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="57399000000.0" style="text-align:right">$57.40B</td>
+  <td data-val="12443000000.0" style="text-align:right">$12.44B</td>
+  <td style="text-align:right;color:#666">30.8%</td>
+  <td style="text-align:right;color:#666">21.7%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="ORCL_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="MA" data-name="mastercard incorporated" data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="MA_sankey.html" target="_blank">MA</a></strong></td>
+  <td>Mastercard Incorporated</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="32791000000.0" style="text-align:right">$32.79B</td>
+  <td data-val="14968000000.0" style="text-align:right">$14.97B</td>
+  <td style="text-align:right;color:#666">57.6%</td>
+  <td style="text-align:right;color:#666">45.6%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="MA_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="AMD" data-name="amd inc." data-sector="technology" data-method="xbrl">
+  <td><strong><a href="AMD_sankey.html" target="_blank">AMD</a></strong></td>
+  <td>AMD Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="34639000000.0" style="text-align:right">$34.64B</td>
+  <td data-val="4335000000.0" style="text-align:right">$4.33B</td>
+  <td style="text-align:right;color:#666">10.7%</td>
+  <td style="text-align:right;color:#666">12.5%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="AMD_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="COST" data-name="costco wholesale corporation" data-sector="consumer defensive" data-method="xbrl">
+  <td><strong><a href="COST_sankey.html" target="_blank">COST</a></strong></td>
+  <td>Costco Wholesale Corporation</td>
+  <td style="color:#555;font-size:12px">Consumer Defensive</td>
+  <td>FY2025</td>
+  <td data-val="275235000000.0" style="text-align:right">$275.24B</td>
+  <td data-val="8099000000.0" style="text-align:right">$8.10B</td>
+  <td style="text-align:right;color:#666">3.8%</td>
+  <td style="text-align:right;color:#666">2.9%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="COST_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="NFLX" data-name="netflix inc." data-sector="communication services" data-method="edgar+llm">
+  <td><strong><a href="NFLX_sankey.html" target="_blank">NFLX</a></strong></td>
+  <td>Netflix Inc.</td>
+  <td style="color:#555;font-size:12px">Communication Services</td>
+  <td>FY2025</td>
+  <td data-val="45183036000.0" style="text-align:right">$45.18B</td>
+  <td data-val="10981201000.0" style="text-align:right">$10.98B</td>
+  <td style="text-align:right;color:#666">29.5%</td>
+  <td style="text-align:right;color:#666">24.3%</td>
+  <td style="text-align:right">1</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="NFLX_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="BAC" data-name="bank of america corp." data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="BAC_sankey.html" target="_blank">BAC</a></strong></td>
+  <td>Bank of America Corp.</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="113097000000.0" style="text-align:right">$113.10B</td>
+  <td data-val="30509000000.0" style="text-align:right">$30.51B</td>
+  <td style="text-align:right;color:#666">33.3%</td>
+  <td style="text-align:right;color:#666">27.0%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="BAC_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="CAT" data-name="caterpillar inc." data-sector="industrials" data-method="edgar+llm">
+  <td><strong><a href="CAT_sankey.html" target="_blank">CAT</a></strong></td>
+  <td>Caterpillar Inc.</td>
+  <td style="color:#555;font-size:12px">Industrials</td>
+  <td>FY2025</td>
+  <td data-val="67589000000.0" style="text-align:right">$67.59B</td>
+  <td data-val="8884000000.0" style="text-align:right">$8.88B</td>
+  <td style="text-align:right;color:#666">16.5%</td>
+  <td style="text-align:right;color:#666">13.1%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="CAT_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="ABBV" data-name="abbvie inc." data-sector="healthcare" data-method="edgar+llm">
+  <td><strong><a href="ABBV_sankey.html" target="_blank">ABBV</a></strong></td>
+  <td>AbbVie Inc.</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="61160000000.0" style="text-align:right">$61.16B</td>
+  <td data-val="4233000000.0" style="text-align:right">$4.23B</td>
+  <td style="text-align:right;color:#666">24.6%</td>
+  <td style="text-align:right;color:#666">6.9%</td>
+  <td style="text-align:right">7</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="ABBV_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="CVX" data-name="chevron corporation" data-sector="energy" data-method="xbrl">
+  <td><strong><a href="CVX_sankey.html" target="_blank">CVX</a></strong></td>
+  <td>Chevron Corporation</td>
+  <td style="color:#555;font-size:12px">Energy</td>
+  <td>FY2025</td>
+  <td data-val="189031000000.0" style="text-align:right">$189.03B</td>
+  <td data-val="12485000000.0" style="text-align:right">$12.48B</td>
+  <td style="text-align:right;color:#666">40.0%</td>
+  <td style="text-align:right;color:#666">6.6%</td>
+  <td style="text-align:right">1</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="CVX_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="HD" data-name="home depot inc." data-sector="consumer cyclical" data-method="xbrl">
+  <td><strong><a href="HD_sankey.html" target="_blank">HD</a></strong></td>
+  <td>Home Depot Inc.</td>
+  <td style="color:#555;font-size:12px">Consumer Cyclical</td>
+  <td>FY2026</td>
+  <td data-val="164683000000.0" style="text-align:right">$164.68B</td>
+  <td data-val="14156000000.0" style="text-align:right">$14.16B</td>
+  <td style="text-align:right;color:#666">12.7%</td>
+  <td style="text-align:right;color:#666">8.6%</td>
+  <td style="text-align:right">16</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="HD_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="PG" data-name="procter & gamble co." data-sector="consumer defensive" data-method="xbrl">
+  <td><strong><a href="PG_sankey.html" target="_blank">PG</a></strong></td>
+  <td>Procter & Gamble Co.</td>
+  <td style="color:#555;font-size:12px">Consumer Defensive</td>
+  <td>FY2025</td>
+  <td data-val="84284000000.0" style="text-align:right">$84.28B</td>
+  <td data-val="16065000000.0" style="text-align:right">$16.07B</td>
+  <td style="text-align:right;color:#666">24.3%</td>
+  <td style="text-align:right;color:#666">19.1%</td>
+  <td style="text-align:right">6</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="PG_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="CSCO" data-name="cisco systems inc." data-sector="technology" data-method="xbrl">
+  <td><strong><a href="CSCO_sankey.html" target="_blank">CSCO</a></strong></td>
+  <td>Cisco Systems Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="56654000000.0" style="text-align:right">$56.65B</td>
+  <td data-val="10180000000.0" style="text-align:right">$10.18B</td>
+  <td style="text-align:right;color:#666">20.8%</td>
+  <td style="text-align:right;color:#666">18.0%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="CSCO_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="INTC" data-name="intel corporation" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="INTC_sankey.html" target="_blank">INTC</a></strong></td>
+  <td>Intel Corporation</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="52853000000.0" style="text-align:right">$52.85B</td>
+  <td data-val="-267000000.0" style="text-align:right">-$267.0M</td>
+  <td style="text-align:right;color:#666">-4.2%</td>
+  <td style="text-align:right;color:#666">-0.5%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 9Q</td>
+  <td style="text-align:center"><a href="INTC_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="9988.HK" data-name="alibaba group holding" data-sector="consumer cyclical" data-method="edgar+llm">
+  <td><strong><a href="9988.HK_sankey.html" target="_blank">9988.HK</a></strong></td>
+  <td>Alibaba Group Holding</td>
+  <td style="color:#555;font-size:12px">Consumer Cyclical</td>
+  <td>FY2025</td>
+  <td data-val="146334391683.04205" style="text-align:right">$146.33B</td>
+  <td data-val="19109227375.090122" style="text-align:right">$19.11B</td>
+  <td style="text-align:right;color:#666">14.1%</td>
+  <td style="text-align:right;color:#666">13.1%</td>
+  <td style="text-align:right">7</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="9988.HK_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="PLTR" data-name="palantir technologies" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="PLTR_sankey.html" target="_blank">PLTR</a></strong></td>
+  <td>Palantir Technologies</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="4475446000.0" style="text-align:right">$4.48B</td>
+  <td data-val="1634644000.0" style="text-align:right">$1.63B</td>
+  <td style="text-align:right;color:#666">31.6%</td>
+  <td style="text-align:right;color:#666">36.5%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="PLTR_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="LRCX" data-name="lam research corp." data-sector="technology" data-method="xbrl">
+  <td><strong><a href="LRCX_sankey.html" target="_blank">LRCX</a></strong></td>
+  <td>Lam Research Corp.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="18435591000.0" style="text-align:right">$18.44B</td>
+  <td data-val="5358217000.0" style="text-align:right">$5.36B</td>
+  <td style="text-align:right;color:#666">32.0%</td>
+  <td style="text-align:right;color:#666">29.1%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="LRCX_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="RHHBY" data-name="roche holding ag" data-sector="healthcare" data-method="yahoo_only">
+  <td><strong><a href="RHHBY_sankey.html" target="_blank">RHHBY</a></strong></td>
+  <td>Roche Holding AG</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2026</td>
+  <td data-val="80025259928.70331" style="text-align:right">$80.03B</td>
+  <td data-val="16268788242.340088" style="text-align:right">$16.27B</td>
+  <td style="text-align:right;color:#666">29.2%</td>
+  <td style="text-align:right;color:#666">20.3%</td>
+  <td style="text-align:right">0</td>
+  <td><span style="background:#6c757d;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">YAHOO_ONLY</span></td>
+  <td style="text-align:right">55%</td>
+  <td style="text-align:center">3A / 0Q</td>
+  <td style="text-align:center"><a href="RHHBY_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="KO" data-name="coca-cola company" data-sector="consumer defensive" data-method="xbrl">
+  <td><strong><a href="KO_sankey.html" target="_blank">KO</a></strong></td>
+  <td>Coca-Cola Company</td>
+  <td style="color:#555;font-size:12px">Consumer Defensive</td>
+  <td>FY2025</td>
+  <td data-val="47941000000.0" style="text-align:right">$47.94B</td>
+  <td data-val="13137000000.0" style="text-align:right">$13.14B</td>
+  <td style="text-align:right;color:#666">28.7%</td>
+  <td style="text-align:right;color:#666">27.4%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="KO_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="GE" data-name="ge aerospace" data-sector="industrials" data-method="xbrl">
+  <td><strong><a href="GE_sankey.html" target="_blank">GE</a></strong></td>
+  <td>GE Aerospace</td>
+  <td style="color:#555;font-size:12px">Industrials</td>
+  <td>FY2025</td>
+  <td data-val="45855000000.0" style="text-align:right">$45.85B</td>
+  <td data-val="8704000000.0" style="text-align:right">$8.70B</td>
+  <td style="text-align:right;color:#666">24.5%</td>
+  <td style="text-align:right;color:#666">19.0%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="GE_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="HSBC" data-name="hsbc holdings plc" data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="HSBC_sankey.html" target="_blank">HSBC</a></strong></td>
+  <td>HSBC Holdings plc</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="68274000000.0" style="text-align:right">$68.27B</td>
+  <td data-val="23131000000.0" style="text-align:right">$23.13B</td>
+  <td style="text-align:right;color:#666">43.8%</td>
+  <td style="text-align:right;color:#666">33.9%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="HSBC_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="AZN" data-name="astrazeneca plc" data-sector="healthcare" data-method="xbrl">
+  <td><strong><a href="AZN_sankey.html" target="_blank">AZN</a></strong></td>
+  <td>AstraZeneca PLC</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="58739000000.0" style="text-align:right">$58.74B</td>
+  <td data-val="10233000000.0" style="text-align:right">$10.23B</td>
+  <td style="text-align:right;color:#666">23.4%</td>
+  <td style="text-align:right;color:#666">17.4%</td>
+  <td style="text-align:right">27</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="AZN_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="AMAT" data-name="applied materials inc." data-sector="technology" data-method="edgar+llm">
+  <td><strong><a href="AMAT_sankey.html" target="_blank">AMAT</a></strong></td>
+  <td>Applied Materials Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="28368000000.0" style="text-align:right">$28.37B</td>
+  <td data-val="6998000000.0" style="text-align:right">$7.00B</td>
+  <td style="text-align:right;color:#666">29.2%</td>
+  <td style="text-align:right;color:#666">24.7%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="AMAT_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="MS" data-name="morgan stanley" data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="MS_sankey.html" target="_blank">MS</a></strong></td>
+  <td>Morgan Stanley</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="70645000000.0" style="text-align:right">$70.64B</td>
+  <td data-val="17025000000.0" style="text-align:right">$17.02B</td>
+  <td style="text-align:right;color:#666">31.1%</td>
+  <td style="text-align:right;color:#666">24.1%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="MS_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="UNH" data-name="unitedhealth group inc." data-sector="healthcare" data-method="edgar+llm">
+  <td><strong><a href="UNH_sankey.html" target="_blank">UNH</a></strong></td>
+  <td>UnitedHealth Group Inc.</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="447567000000.0" style="text-align:right">$447.57B</td>
+  <td data-val="12807000000.0" style="text-align:right">$12.81B</td>
+  <td style="text-align:right;color:#666">4.2%</td>
+  <td style="text-align:right;color:#666">2.9%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="UNH_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="NVS" data-name="novartis ag" data-sector="healthcare" data-method="xbrl">
+  <td><strong><a href="NVS_sankey.html" target="_blank">NVS</a></strong></td>
+  <td>Novartis AG</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="54532000000.0" style="text-align:right">$54.53B</td>
+  <td data-val="13967000000.0" style="text-align:right">$13.97B</td>
+  <td style="text-align:right;color:#666">32.4%</td>
+  <td style="text-align:right;color:#666">25.6%</td>
+  <td style="text-align:right">26</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="NVS_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="MRK" data-name="merck & co. inc." data-sector="healthcare" data-method="xbrl">
+  <td><strong><a href="MRK_sankey.html" target="_blank">MRK</a></strong></td>
+  <td>Merck & Co. Inc.</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="65011000000.0" style="text-align:right">$65.01B</td>
+  <td data-val="18263000000.0" style="text-align:right">$18.26B</td>
+  <td style="text-align:right;color:#666">34.0%</td>
+  <td style="text-align:right;color:#666">28.1%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="MRK_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="MC.PA" data-name="lvmh moët hennessy" data-sector="consumer cyclical" data-method="yahoo_only">
+  <td><strong><a href="MC.PA_sankey.html" target="_blank">MC.PA</a></strong></td>
+  <td>LVMH Moët Hennessy</td>
+  <td style="color:#555;font-size:12px">Consumer Cyclical</td>
+  <td>FY2026</td>
+  <td data-val="94926344728.58905" style="text-align:right">$94.93B</td>
+  <td data-val="12778704542.398453" style="text-align:right">$12.78B</td>
+  <td style="text-align:right;color:#666">21.9%</td>
+  <td style="text-align:right;color:#666">13.5%</td>
+  <td style="text-align:right">0</td>
+  <td><span style="background:#6c757d;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">YAHOO_ONLY</span></td>
+  <td style="text-align:right">55%</td>
+  <td style="text-align:center">3A / 0Q</td>
+  <td style="text-align:center"><a href="MC.PA_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="TM" data-name="toyota motor corporation" data-sector="consumer cyclical" data-method="xbrl">
+  <td><strong><a href="TM_sankey.html" target="_blank">TM</a></strong></td>
+  <td>Toyota Motor Corporation</td>
+  <td style="color:#555;font-size:12px">Consumer Cyclical</td>
+  <td>FY2025</td>
+  <td data-val="304397724737.9124" style="text-align:right">$304.40B</td>
+  <td data-val="30351593732.41011" style="text-align:right">$30.35B</td>
+  <td style="text-align:right;color:#666">10.0%</td>
+  <td style="text-align:right;color:#666">10.0%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="TM_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="GS" data-name="goldman sachs group inc." data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="GS_sankey.html" target="_blank">GS</a></strong></td>
+  <td>Goldman Sachs Group Inc.</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="58283000000.0" style="text-align:right">$58.28B</td>
+  <td data-val="17176000000.0" style="text-align:right">$17.18B</td>
+  <td style="text-align:right;color:#666">37.5%</td>
+  <td style="text-align:right;color:#666">29.5%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="GS_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="GEV" data-name="ge vernova inc." data-sector="industrials" data-method="edgar+llm">
+  <td><strong><a href="GEV_sankey.html" target="_blank">GEV</a></strong></td>
+  <td>GE Vernova Inc.</td>
+  <td style="color:#555;font-size:12px">Industrials</td>
+  <td>FY2025</td>
+  <td data-val="38068000000.0" style="text-align:right">$38.07B</td>
+  <td data-val="4884000000.0" style="text-align:right">$4.88B</td>
+  <td style="text-align:right;color:#666">3.6%</td>
+  <td style="text-align:right;color:#666">12.8%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">2A / 8Q</td>
+  <td style="text-align:center"><a href="GEV_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="RTX" data-name="rtx corporation" data-sector="industrials" data-method="xbrl">
+  <td><strong><a href="RTX_sankey.html" target="_blank">RTX</a></strong></td>
+  <td>RTX Corporation</td>
+  <td style="color:#555;font-size:12px">Industrials</td>
+  <td>FY2025</td>
+  <td data-val="88603000000.0" style="text-align:right">$88.60B</td>
+  <td data-val="7069000000.0" style="text-align:right">$7.07B</td>
+  <td style="text-align:right;color:#666">10.5%</td>
+  <td style="text-align:right;color:#666">8.0%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="RTX_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="NESN.SW" data-name="nestlé s.a." data-sector="consumer defensive" data-method="yahoo_only">
+  <td><strong><a href="NESN.SW_sankey.html" target="_blank">NESN.SW</a></strong></td>
+  <td>Nestlé S.A.</td>
+  <td style="color:#555;font-size:12px">Consumer Defensive</td>
+  <td>FY2026</td>
+  <td data-val="113534163910.15053" style="text-align:right">$113.53B</td>
+  <td data-val="11409624549.150467" style="text-align:right">$11.41B</td>
+  <td style="text-align:right;color:#666">15.6%</td>
+  <td style="text-align:right;color:#666">10.0%</td>
+  <td style="text-align:right">0</td>
+  <td><span style="background:#6c757d;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">YAHOO_ONLY</span></td>
+  <td style="text-align:right">55%</td>
+  <td style="text-align:center">3A / 0Q</td>
+  <td style="text-align:center"><a href="NESN.SW_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="WFC" data-name="wells fargo & company" data-sector="financial services" data-method="edgar+llm">
+  <td><strong><a href="WFC_sankey.html" target="_blank">WFC</a></strong></td>
+  <td>Wells Fargo & Company</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="83699000000.0" style="text-align:right">$83.70B</td>
+  <td data-val="21338000000.0" style="text-align:right">$21.34B</td>
+  <td style="text-align:right;color:#666">30.1%</td>
+  <td style="text-align:right;color:#666">25.5%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="WFC_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="RY.TO" data-name="royal bank of canada" data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="RY.TO_sankey.html" target="_blank">RY.TO</a></strong></td>
+  <td>Royal Bank of Canada</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="66605000000.0" style="text-align:right">$66.61B</td>
+  <td data-val="20369000000.0" style="text-align:right">$20.37B</td>
+  <td style="text-align:right;color:#666">38.5%</td>
+  <td style="text-align:right;color:#666">30.6%</td>
+  <td style="text-align:right">6</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="RY.TO_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="SHEL.L" data-name="shell plc" data-sector="energy" data-method="xbrl">
+  <td><strong><a href="SHEL.L_sankey.html" target="_blank">SHEL.L</a></strong></td>
+  <td>Shell plc</td>
+  <td style="color:#555;font-size:12px">Energy</td>
+  <td>FY2025</td>
+  <td data-val="266886000000.0" style="text-align:right">$266.89B</td>
+  <td data-val="18119000000.0" style="text-align:right">$18.12B</td>
+  <td style="text-align:right;color:#666">11.1%</td>
+  <td style="text-align:right;color:#666">6.8%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="SHEL.L_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="PM" data-name="philip morris international" data-sector="consumer defensive" data-method="xbrl">
+  <td><strong><a href="PM_sankey.html" target="_blank">PM</a></strong></td>
+  <td>Philip Morris International</td>
+  <td style="color:#555;font-size:12px">Consumer Defensive</td>
+  <td>FY2025</td>
+  <td data-val="40648000000.0" style="text-align:right">$40.65B</td>
+  <td data-val="11848000000.0" style="text-align:right">$11.85B</td>
+  <td style="text-align:right;color:#666">36.6%</td>
+  <td style="text-align:right;color:#666">29.1%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="PM_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="IBM" data-name="international business machines" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="IBM_sankey.html" target="_blank">IBM</a></strong></td>
+  <td>International Business Machines</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="67535000000.0" style="text-align:right">$67.53B</td>
+  <td data-val="10593000000.0" style="text-align:right">$10.59B</td>
+  <td style="text-align:right;color:#666">16.1%</td>
+  <td style="text-align:right;color:#666">15.7%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="IBM_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="KLAC" data-name="kla corporation" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="KLAC_sankey.html" target="_blank">KLAC</a></strong></td>
+  <td>KLA Corporation</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="12156162000.0" style="text-align:right">$12.16B</td>
+  <td data-val="4061643000.0" style="text-align:right">$4.06B</td>
+  <td style="text-align:right;color:#666">41.2%</td>
+  <td style="text-align:right;color:#666">33.4%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="KLAC_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="C" data-name="citigroup inc." data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="C_sankey.html" target="_blank">C</a></strong></td>
+  <td>Citigroup Inc.</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="85225000000.0" style="text-align:right">$85.22B</td>
+  <td data-val="14452000000.0" style="text-align:right">$14.45B</td>
+  <td style="text-align:right;color:#666">23.3%</td>
+  <td style="text-align:right;color:#666">17.0%</td>
+  <td style="text-align:right">7</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="C_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="AXP" data-name="american express" data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="AXP_sankey.html" target="_blank">AXP</a></strong></td>
+  <td>American Express</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="72229000000.0" style="text-align:right">$72.23B</td>
+  <td data-val="10833000000.0" style="text-align:right">$10.83B</td>
+  <td style="text-align:right;color:#666">19.1%</td>
+  <td style="text-align:right;color:#666">15.0%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="AXP_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="LIN" data-name="linde plc" data-sector="basic materials" data-method="xbrl">
+  <td><strong><a href="LIN_sankey.html" target="_blank">LIN</a></strong></td>
+  <td>Linde plc</td>
+  <td style="color:#555;font-size:12px">Basic Materials</td>
+  <td>FY2025</td>
+  <td data-val="33986000000.0" style="text-align:right">$33.99B</td>
+  <td data-val="6898000000.0" style="text-align:right">$6.90B</td>
+  <td style="text-align:right;color:#666">26.3%</td>
+  <td style="text-align:right;color:#666">20.3%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="LIN_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="SIE.DE" data-name="siemens ag" data-sector="industrials" data-method="yahoo_only">
+  <td><strong><a href="SIE.DE_sankey.html" target="_blank">SIE.DE</a></strong></td>
+  <td>Siemens AG</td>
+  <td style="color:#555;font-size:12px">Industrials</td>
+  <td>FY2026</td>
+  <td data-val="92612281801.22375" style="text-align:right">$92.61B</td>
+  <td data-val="11289887104.034424" style="text-align:right">$11.29B</td>
+  <td style="text-align:right;color:#666">11.5%</td>
+  <td style="text-align:right;color:#666">12.2%</td>
+  <td style="text-align:right">0</td>
+  <td><span style="background:#6c757d;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">YAHOO_ONLY</span></td>
+  <td style="text-align:right">55%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="SIE.DE_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="MCD" data-name="mcdonald's corporation" data-sector="consumer cyclical" data-method="xbrl">
+  <td><strong><a href="MCD_sankey.html" target="_blank">MCD</a></strong></td>
+  <td>McDonald's Corporation</td>
+  <td style="color:#555;font-size:12px">Consumer Cyclical</td>
+  <td>FY2025</td>
+  <td data-val="26885000000.0" style="text-align:right">$26.89B</td>
+  <td data-val="8563000000.0" style="text-align:right">$8.56B</td>
+  <td style="text-align:right;color:#666">46.1%</td>
+  <td style="text-align:right;color:#666">31.9%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="MCD_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="CBA.AX" data-name="commonwealth bank of australia" data-sector="financial services" data-method="yahoo_only">
+  <td><strong><a href="CBA.AX_sankey.html" target="_blank">CBA.AX</a></strong></td>
+  <td>Commonwealth Bank of Australia</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2026</td>
+  <td data-val="18850809146.761894" style="text-align:right">$18.85B</td>
+  <td data-val="6654387595.653534" style="text-align:right">$6.65B</td>
+  <td style="text-align:right;color:#666">50.8%</td>
+  <td style="text-align:right;color:#666">35.3%</td>
+  <td style="text-align:right">0</td>
+  <td><span style="background:#6c757d;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">YAHOO_ONLY</span></td>
+  <td style="text-align:right">55%</td>
+  <td style="text-align:center">3A / 0Q</td>
+  <td style="text-align:center"><a href="CBA.AX_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="PEP" data-name="pepsico inc." data-sector="consumer defensive" data-method="xbrl">
+  <td><strong><a href="PEP_sankey.html" target="_blank">PEP</a></strong></td>
+  <td>PepsiCo Inc.</td>
+  <td style="color:#555;font-size:12px">Consumer Defensive</td>
+  <td>FY2025</td>
+  <td data-val="93925000000.0" style="text-align:right">$93.92B</td>
+  <td data-val="8295000000.0" style="text-align:right">$8.29B</td>
+  <td style="text-align:right;color:#666">12.2%</td>
+  <td style="text-align:right;color:#666">8.8%</td>
+  <td style="text-align:right">6</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="PEP_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="SAP.DE" data-name="sap se" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="SAP.DE_sankey.html" target="_blank">SAP.DE</a></strong></td>
+  <td>SAP SE</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="36800000000.0" style="text-align:right">$36.80B</td>
+  <td data-val="7326000000.0" style="text-align:right">$7.33B</td>
+  <td style="text-align:right;color:#666">26.1%</td>
+  <td style="text-align:right;color:#666">19.9%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="SAP.DE_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="8306.T" data-name="mitsubishi ufj financial" data-sector="financial services" data-method="edgar+llm">
+  <td><strong><a href="8306.T_sankey.html" target="_blank">8306.T</a></strong></td>
+  <td>Mitsubishi UFJ Financial</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="43333640716.87777" style="text-align:right">$43.33B</td>
+  <td data-val="9707363708.170223" style="text-align:right">$9.71B</td>
+  <td style="text-align:right;color:#666">31.7%</td>
+  <td style="text-align:right;color:#666">22.4%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="8306.T_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="TXN" data-name="texas instruments inc." data-sector="technology" data-method="xbrl">
+  <td><strong><a href="TXN_sankey.html" target="_blank">TXN</a></strong></td>
+  <td>Texas Instruments Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="17682000000.0" style="text-align:right">$17.68B</td>
+  <td data-val="5001000000.0" style="text-align:right">$5.00B</td>
+  <td style="text-align:right;color:#666">34.1%</td>
+  <td style="text-align:right;color:#666">28.3%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="TXN_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="TMO" data-name="thermo fisher scientific" data-sector="healthcare" data-method="xbrl">
+  <td><strong><a href="TMO_sankey.html" target="_blank">TMO</a></strong></td>
+  <td>Thermo Fisher Scientific</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="44556000000.0" style="text-align:right">$44.56B</td>
+  <td data-val="6721000000.0" style="text-align:right">$6.72B</td>
+  <td style="text-align:right;color:#666">17.4%</td>
+  <td style="text-align:right;color:#666">15.1%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 9Q</td>
+  <td style="text-align:center"><a href="TMO_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="VZ" data-name="verizon communications" data-sector="communication services" data-method="xbrl">
+  <td><strong><a href="VZ_sankey.html" target="_blank">VZ</a></strong></td>
+  <td>Verizon Communications</td>
+  <td style="color:#555;font-size:12px">Communication Services</td>
+  <td>FY2025</td>
+  <td data-val="138191000000.0" style="text-align:right">$138.19B</td>
+  <td data-val="17608000000.0" style="text-align:right">$17.61B</td>
+  <td style="text-align:right;color:#666">21.2%</td>
+  <td style="text-align:right;color:#666">12.7%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="VZ_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="AMGN" data-name="amgen inc." data-sector="healthcare" data-method="xbrl">
+  <td><strong><a href="AMGN_sankey.html" target="_blank">AMGN</a></strong></td>
+  <td>Amgen Inc.</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="36751000000.0" style="text-align:right">$36.75B</td>
+  <td data-val="7711000000.0" style="text-align:right">$7.71B</td>
+  <td style="text-align:right;color:#666">24.7%</td>
+  <td style="text-align:right;color:#666">21.0%</td>
+  <td style="text-align:right">16</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="AMGN_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="NEE" data-name="nextera energy inc." data-sector="utilities" data-method="edgar+llm">
+  <td><strong><a href="NEE_sankey.html" target="_blank">NEE</a></strong></td>
+  <td>NextEra Energy Inc.</td>
+  <td style="color:#555;font-size:12px">Utilities</td>
+  <td>FY2025</td>
+  <td data-val="27412000000.0" style="text-align:right">$27.41B</td>
+  <td data-val="6835000000.0" style="text-align:right">$6.83B</td>
+  <td style="text-align:right;color:#666">30.2%</td>
+  <td style="text-align:right;color:#666">24.9%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="NEE_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="DIS" data-name="walt disney company" data-sector="communication services" data-method="xbrl">
+  <td><strong><a href="DIS_sankey.html" target="_blank">DIS</a></strong></td>
+  <td>Walt Disney Company</td>
+  <td style="color:#555;font-size:12px">Communication Services</td>
+  <td>FY2025</td>
+  <td data-val="94425000000.0" style="text-align:right">$94.42B</td>
+  <td data-val="13431000000.0" style="text-align:right">$13.43B</td>
+  <td style="text-align:right;color:#666">12.7%</td>
+  <td style="text-align:right;color:#666">14.2%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="DIS_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="SAN.MC" data-name="banco santander" data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="SAN.MC_sankey.html" target="_blank">SAN.MC</a></strong></td>
+  <td>Banco Santander</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="59735000000.0" style="text-align:right">$59.73B</td>
+  <td data-val="15500000000.0" style="text-align:right">$15.50B</td>
+  <td style="text-align:right;color:#666">31.3%</td>
+  <td style="text-align:right;color:#666">25.9%</td>
+  <td style="text-align:right">15</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="SAN.MC_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="APH" data-name="amphenol corp." data-sector="technology" data-method="xbrl">
+  <td><strong><a href="APH_sankey.html" target="_blank">APH</a></strong></td>
+  <td>Amphenol Corp.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="23094700000.0" style="text-align:right">$23.09B</td>
+  <td data-val="4305300000.0" style="text-align:right">$4.31B</td>
+  <td style="text-align:right;color:#666">25.4%</td>
+  <td style="text-align:right;color:#666">18.6%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="APH_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="T" data-name="at&t inc." data-sector="communication services" data-method="edgar+llm">
+  <td><strong><a href="T_sankey.html" target="_blank">T</a></strong></td>
+  <td>AT&T Inc.</td>
+  <td style="color:#555;font-size:12px">Communication Services</td>
+  <td>FY2025</td>
+  <td data-val="125648000000.0" style="text-align:right">$125.65B</td>
+  <td data-val="23386000000.0" style="text-align:right">$23.39B</td>
+  <td style="text-align:right;color:#666">19.2%</td>
+  <td style="text-align:right;color:#666">18.6%</td>
+  <td style="text-align:right">1</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="T_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="NOVO-B.CO" data-name="novo nordisk a/s" data-sector="healthcare" data-method="xbrl">
+  <td><strong><a href="NOVO-B.CO_sankey.html" target="_blank">NOVO-B.CO</a></strong></td>
+  <td>Novo Nordisk A/S</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="48300004889.13059" style="text-align:right">$48.30B</td>
+  <td data-val="16008214158.922434" style="text-align:right">$16.01B</td>
+  <td style="text-align:right;color:#666">41.3%</td>
+  <td style="text-align:right;color:#666">33.1%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="NOVO-B.CO_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="TJX" data-name="tjx companies inc." data-sector="consumer cyclical" data-method="xbrl">
+  <td><strong><a href="TJX_sankey.html" target="_blank">TJX</a></strong></td>
+  <td>TJX Companies Inc.</td>
+  <td style="color:#555;font-size:12px">Consumer Cyclical</td>
+  <td>FY2026</td>
+  <td data-val="60372000000.0" style="text-align:right">$60.37B</td>
+  <td data-val="5494000000.0" style="text-align:right">$5.49B</td>
+  <td style="text-align:right;color:#666">11.9%</td>
+  <td style="text-align:right;color:#666">9.1%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="TJX_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="BA" data-name="boeing company" data-sector="industrials" data-method="edgar+llm">
+  <td><strong><a href="BA_sankey.html" target="_blank">BA</a></strong></td>
+  <td>Boeing Company</td>
+  <td style="color:#555;font-size:12px">Industrials</td>
+  <td>FY2025</td>
+  <td data-val="89463000000.0" style="text-align:right">$89.46B</td>
+  <td data-val="2238000000.0" style="text-align:right">$2.24B</td>
+  <td style="text-align:right;color:#666">4.8%</td>
+  <td style="text-align:right;color:#666">2.5%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="BA_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="TD.TO" data-name="toronto dominion bank" data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="TD.TO_sankey.html" target="_blank">TD.TO</a></strong></td>
+  <td>Toronto Dominion Bank</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="67777000000.0" style="text-align:right">$67.78B</td>
+  <td data-val="20538000000.0" style="text-align:right">$20.54B</td>
+  <td style="text-align:right;color:#666">34.9%</td>
+  <td style="text-align:right;color:#666">30.3%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="TD.TO_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="ALV.DE" data-name="allianz se" data-sector="financial services" data-method="yahoo_only">
+  <td><strong><a href="ALV.DE_sankey.html" target="_blank">ALV.DE</a></strong></td>
+  <td>Allianz SE</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2026</td>
+  <td data-val="161466532391.30975" style="text-align:right">$161.47B</td>
+  <td data-val="12657707431.912422" style="text-align:right">$12.66B</td>
+  <td style="text-align:right;color:#666">11.2%</td>
+  <td style="text-align:right;color:#666">7.8%</td>
+  <td style="text-align:right">0</td>
+  <td><span style="background:#6c757d;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">YAHOO_ONLY</span></td>
+  <td style="text-align:right">55%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="ALV.DE_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="BLK" data-name="blackrock inc." data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="BLK_sankey.html" target="_blank">BLK</a></strong></td>
+  <td>BlackRock Inc.</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="24216000000.0" style="text-align:right">$24.22B</td>
+  <td data-val="5942000000.0" style="text-align:right">$5.94B</td>
+  <td style="text-align:right;color:#666">29.1%</td>
+  <td style="text-align:right;color:#666">24.5%</td>
+  <td style="text-align:right">5</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">2A / 7Q</td>
+  <td style="text-align:center"><a href="BLK_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="SHOP.TO" data-name="shopify inc." data-sector="technology" data-method="xbrl">
+  <td><strong><a href="SHOP.TO_sankey.html" target="_blank">SHOP.TO</a></strong></td>
+  <td>Shopify Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="11556000000.0" style="text-align:right">$11.56B</td>
+  <td data-val="1231000000.0" style="text-align:right">$1.23B</td>
+  <td style="text-align:right;color:#666">12.7%</td>
+  <td style="text-align:right;color:#666">10.7%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">2A / 5Q</td>
+  <td style="text-align:center"><a href="SHOP.TO_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="ABT" data-name="abbott laboratories" data-sector="healthcare" data-method="xbrl">
+  <td><strong><a href="ABT_sankey.html" target="_blank">ABT</a></strong></td>
+  <td>Abbott Laboratories</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="44328000000.0" style="text-align:right">$44.33B</td>
+  <td data-val="6524000000.0" style="text-align:right">$6.52B</td>
+  <td style="text-align:right;color:#666">18.2%</td>
+  <td style="text-align:right;color:#666">14.7%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="ABT_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="CRM" data-name="salesforce inc." data-sector="technology" data-method="xbrl">
+  <td><strong><a href="CRM_sankey.html" target="_blank">CRM</a></strong></td>
+  <td>Salesforce Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2026</td>
+  <td data-val="41525000000.0" style="text-align:right">$41.52B</td>
+  <td data-val="7457000000.0" style="text-align:right">$7.46B</td>
+  <td style="text-align:right;color:#666">20.1%</td>
+  <td style="text-align:right;color:#666">18.0%</td>
+  <td style="text-align:right">7</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="CRM_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="ISRG" data-name="intuitive surgical inc." data-sector="healthcare" data-method="xbrl">
+  <td><strong><a href="ISRG_sankey.html" target="_blank">ISRG</a></strong></td>
+  <td>Intuitive Surgical Inc.</td>
+  <td style="color:#555;font-size:12px">Healthcare</td>
+  <td>FY2025</td>
+  <td data-val="10064700000.0" style="text-align:right">$10.06B</td>
+  <td data-val="2876600000.0" style="text-align:right">$2.88B</td>
+  <td style="text-align:right;color:#666">29.3%</td>
+  <td style="text-align:right;color:#666">28.6%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="ISRG_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="APP" data-name="applovin corp." data-sector="communication services" data-method="edgar+llm">
+  <td><strong><a href="APP_sankey.html" target="_blank">APP</a></strong></td>
+  <td>AppLovin Corp.</td>
+  <td style="color:#555;font-size:12px">Communication Services</td>
+  <td>FY2025</td>
+  <td data-val="5480717000.0" style="text-align:right">$5.48B</td>
+  <td data-val="3333751000.0" style="text-align:right">$3.33B</td>
+  <td style="text-align:right;color:#666">75.8%</td>
+  <td style="text-align:right;color:#666">60.8%</td>
+  <td style="text-align:right">1</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="APP_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="SCHW" data-name="charles schwab corp." data-sector="financial services" data-method="xbrl">
+  <td><strong><a href="SCHW_sankey.html" target="_blank">SCHW</a></strong></td>
+  <td>Charles Schwab Corp.</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="23921000000.0" style="text-align:right">$23.92B</td>
+  <td data-val="8852000000.0" style="text-align:right">$8.85B</td>
+  <td style="text-align:right;color:#666">47.9%</td>
+  <td style="text-align:right;color:#666">37.0%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 11Q</td>
+  <td style="text-align:center"><a href="SCHW_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="UBER" data-name="uber technologies inc." data-sector="technology" data-method="xbrl">
+  <td><strong><a href="UBER_sankey.html" target="_blank">UBER</a></strong></td>
+  <td>Uber Technologies Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="52017000000.0" style="text-align:right">$52.02B</td>
+  <td data-val="10093000000.0" style="text-align:right">$10.09B</td>
+  <td style="text-align:right;color:#666">10.7%</td>
+  <td style="text-align:right;color:#666">19.4%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="UBER_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="QCOM" data-name="qualcomm incorporated" data-sector="technology" data-method="edgar+llm">
+  <td><strong><a href="QCOM_sankey.html" target="_blank">QCOM</a></strong></td>
+  <td>Qualcomm Incorporated</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="44284000000.0" style="text-align:right">$44.28B</td>
+  <td data-val="5541000000.0" style="text-align:right">$5.54B</td>
+  <td style="text-align:right;color:#666">27.9%</td>
+  <td style="text-align:right;color:#666">12.5%</td>
+  <td style="text-align:right">3</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="QCOM_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="SPGI" data-name="s&p global inc." data-sector="financial services" data-method="edgar+llm">
+  <td><strong><a href="SPGI_sankey.html" target="_blank">SPGI</a></strong></td>
+  <td>S&P Global Inc.</td>
+  <td style="color:#555;font-size:12px">Financial Services</td>
+  <td>FY2025</td>
+  <td data-val="15336000000.0" style="text-align:right">$15.34B</td>
+  <td data-val="4820000000.0" style="text-align:right">$4.82B</td>
+  <td style="text-align:right;color:#666">42.2%</td>
+  <td style="text-align:right;color:#666">31.4%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="SPGI_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="6758.T" data-name="sony group corporation" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="6758.T_sankey.html" target="_blank">6758.T</a></strong></td>
+  <td>Sony Group Corporation</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="82105982976.75699" style="text-align:right">$82.11B</td>
+  <td data-val="7349941489.596851" style="text-align:right">$7.35B</td>
+  <td style="text-align:right;color:#666">10.9%</td>
+  <td style="text-align:right;color:#666">9.0%</td>
+  <td style="text-align:right">6</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 5Q</td>
+  <td style="text-align:center"><a href="6758.T_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="ACN" data-name="accenture plc" data-sector="technology" data-method="xbrl">
+  <td><strong><a href="ACN_sankey.html" target="_blank">ACN</a></strong></td>
+  <td>Accenture plc</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="69672977000.0" style="text-align:right">$69.67B</td>
+  <td data-val="7678433000.0" style="text-align:right">$7.68B</td>
+  <td style="text-align:right;color:#666">14.7%</td>
+  <td style="text-align:right;color:#666">11.0%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="ACN_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="INTU" data-name="intuit inc." data-sector="technology" data-method="edgar+llm">
+  <td><strong><a href="INTU_sankey.html" target="_blank">INTU</a></strong></td>
+  <td>Intuit Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="18831000000.0" style="text-align:right">$18.83B</td>
+  <td data-val="3869000000.0" style="text-align:right">$3.87B</td>
+  <td style="text-align:right;color:#666">26.1%</td>
+  <td style="text-align:right;color:#666">20.5%</td>
+  <td style="text-align:right">4</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="INTU_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="NOW" data-name="servicenow inc." data-sector="technology" data-method="xbrl">
+  <td><strong><a href="NOW_sankey.html" target="_blank">NOW</a></strong></td>
+  <td>ServiceNow Inc.</td>
+  <td style="color:#555;font-size:12px">Technology</td>
+  <td>FY2025</td>
+  <td data-val="13278000000.0" style="text-align:right">$13.28B</td>
+  <td data-val="1748000000.0" style="text-align:right">$1.75B</td>
+  <td style="text-align:right;color:#666">13.7%</td>
+  <td style="text-align:right;color:#666">13.2%</td>
+  <td style="text-align:right">2</td>
+  <td><span style="background:#28a745;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">XBRL</span></td>
+  <td style="text-align:right">100%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="NOW_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr>
+<tr data-ticker="BKNG" data-name="booking holdings inc." data-sector="consumer cyclical" data-method="edgar+llm">
+  <td><strong><a href="BKNG_sankey.html" target="_blank">BKNG</a></strong></td>
+  <td>Booking Holdings Inc.</td>
+  <td style="color:#555;font-size:12px">Consumer Cyclical</td>
+  <td>FY2025</td>
+  <td data-val="26917000000.0" style="text-align:right">$26.92B</td>
+  <td data-val="5404000000.0" style="text-align:right">$5.40B</td>
+  <td style="text-align:right;color:#666">32.8%</td>
+  <td style="text-align:right;color:#666">20.1%</td>
+  <td style="text-align:right">1</td>
+  <td><span style="background:#6f42c1;color:white;padding:1px 7px;border-radius:8px;font-size:11px;font-weight:600">EDGAR+LLM</span></td>
+  <td style="text-align:right">92%</td>
+  <td style="text-align:center">3A / 10Q</td>
+  <td style="text-align:center"><a href="BKNG_sankey.html" target="_blank"
+         style="background:#1a1a2e;color:white;padding:4px 12px;border-radius:4px;text-decoration:none;font-size:12px">Open →</a></td>
+</tr></tbody>
+  </table>
+
+  <div class="footer">
+    Financial Analysis System — Task 1 &nbsp;•&nbsp; 98 reports generated
+  </div>
+</div>
+
+<script>
+var tbl = document.getElementById('tbl');
+var tbody = tbl.querySelector('tbody');
+var search = document.getElementById('search');
+var countEl = document.getElementById('count');
+var TOTAL = 98;
+
+search.addEventListener('input', function() {
+  var q = this.value.trim().toLowerCase();
+  var shown = 0;
+  Array.from(tbody.rows).forEach(function(r) {
+    var match = !q
+      || (r.dataset.ticker || '').toLowerCase().includes(q)
+      || (r.dataset.name || '').includes(q)
+      || (r.dataset.sector || '').includes(q);
+    r.classList.toggle('hidden', !match);
+    if (match) shown++;
+  });
+  countEl.textContent = shown + ' of ' + TOTAL + ' companies';
+});
+
+var lastSort = { col: -1, dir: 1 };
+function sortBy(col, type) {
+  var rows = Array.from(tbody.rows);
+  var dir  = (lastSort.col === col) ? -lastSort.dir : 1;
+  lastSort = { col: col, dir: dir };
+  rows.sort(function(a, b) {
+    var ca = a.cells[col], cb = b.cells[col];
+    if (type === 'n') {
+      var va = parseFloat(ca.dataset.val || ca.textContent.replace(/[^\d\.\-]/g,'')) || 0;
+      var vb = parseFloat(cb.dataset.val || cb.textContent.replace(/[^\d\.\-]/g,'')) || 0;
+      return (va - vb) * dir;
+    } else {
+      return ca.textContent.localeCompare(cb.textContent) * dir;
+    }
+  });
+  rows.forEach(function(r) { tbody.appendChild(r); });
+}
+</script>
+</body>
+</html>

@@ -9,7 +9,7 @@ import sys
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from config import LLM_MAX_TOKENS
 from src.cache.cache_manager import cache
-from src.cache.hash_utils import dict_hash
+from src.cache.cache_keys import dict_hash
 from src.analysis.segment_aggregator import AggregatedCompanyData
 from src.llm.provider import complete_text, get_active_provider
 

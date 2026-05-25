@@ -8,7 +8,7 @@ import sys
 import pandas as pd
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-from config import EXCEL_PATH, TICKER_TO_CIK
+from config import EXCEL_PATH
 from src.ingestion.data_source_checker import check_ticker, CheckResult
 
 
@@ -62,7 +62,7 @@ def load_tickers(path: Path = EXCEL_PATH) -> Dict[str, TickerInfo]:
             market_cap_b   = mc,
             classification = result.classification,
             sector         = result.sector,
-            cik            = result.cik or TICKER_TO_CIK.get(ticker),
+            cik            = result.cik,
             exchange       = _exchange_from_ticker(ticker),
         )
 

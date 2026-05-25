@@ -14,6 +14,7 @@ Key entry points:
 """
 from __future__ import annotations
 
+import logging
 import os
 import sys
 from dataclasses import asdict
@@ -21,6 +22,8 @@ from datetime import date, timedelta
 from functools import lru_cache
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
+
+logger = logging.getLogger(__name__)
 
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from config import SEC_USER_AGENT, YEARS_BACK, CACHE_TTL
@@ -75,7 +78,7 @@ def get_filings(
     ticker:     str,
     form_types: List[str],
     years_back: int = YEARS_BACK,
-    cik:        Optional[str] = None,  # CIK fallback for tickers edgartools can't resolve by name
+    cik:        str  = "",
 ) -> List[FilingRecord]:
     """Return FilingRecord list for a ticker covering the last N years."""
     cache_key = f"filings_list_{ticker}_{'_'.join(sorted(form_types))}"
@@ -83,22 +86,11 @@ def get_filings(
     if cached:
         return [FilingRecord(**r) for r in cached]
 
-    # Prefer CIK when explicitly provided — avoids edgartools resolving the
-    # wrong entity (e.g. BLK ticker → subsidiary CIK, suffixed tickers that
-    # edgartools can't resolve at all like "9988.HK" or "TD.TO").
-    if cik:
-        try:
-            company = get_company(cik)
-        except Exception:
-            try:
-                company = get_company(ticker)
-            except Exception:
-                return []
-    else:
-        try:
-            company = get_company(ticker)
-        except Exception:
-            return []
+    try:
+        company = get_company(cik)
+    except Exception as e:
+        logger.warning("get_filings: failed to open company CIK=%s ticker=%s: %s", cik, ticker, e)
+        return []
 
     start_date = date.today() - timedelta(days=years_back * 366)
     cik = str(company.cik).zfill(10)

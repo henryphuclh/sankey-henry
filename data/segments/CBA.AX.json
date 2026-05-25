@@ -2,6 +2,7 @@
   "ticker": "CBA.AX",
   "name": "Commonwealth Bank of Australia",
   "sector": "financial",
+  "classification": "",
   "latest_annual": {
     "ticker": "CBA.AX",
     "period": "FY2026",
@@ -9,23 +10,23 @@
     "fiscal_year": 2026,
     "fiscal_quarter": null,
     "segments": [],
-    "total_revenue": 20833879786.07416,
+    "total_revenue": 18850809146.761894,
     "gross_profit": null,
-    "operating_income": 10577245245.754719,
-    "net_income": 7354416998.1479645,
+    "operating_income": 9570451278.090477,
+    "net_income": 6654387595.653534,
     "rd_expense": null,
-    "sga_expense": 9387859499.514103,
+    "sga_expense": 8494277088.046074,
     "cogs": null,
     "interest_expense": null,
-    "income_tax": 3210469104.7668457,
+    "income_tax": 2904880943.29834,
     "currency": "USD",
     "extraction_method": "yahoo_only",
     "confidence": 0.55,
     "notes": [
       "Source: Yahoo Finance (no SEC filing available)",
       "⚠ Limited Segment Detail — aggregate data only",
-      "BANK_NII:17464922849.595547",
-      "BANK_NONINT:3368956936.478615"
+      "BANK_NII:15802526019.215584",
+      "BANK_NONINT:3048283127.5463104"
     ]
   },
   "annual_periods": [
@@ -36,23 +37,23 @@
       "fiscal_year": 2026,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 20833879786.07416,
+      "total_revenue": 18850809146.761894,
       "gross_profit": null,
-      "operating_income": 10577245245.754719,
-      "net_income": 7354416998.1479645,
+      "operating_income": 9570451278.090477,
+      "net_income": 6654387595.653534,
       "rd_expense": null,
-      "sga_expense": 9387859499.514103,
+      "sga_expense": 8494277088.046074,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 3210469104.7668457,
+      "income_tax": 2904880943.29834,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:17464922849.595547",
-        "BANK_NONINT:3368956936.478615"
+        "BANK_NII:15802526019.215584",
+        "BANK_NONINT:3048283127.5463104"
       ]
     },
     {
@@ -62,23 +63,23 @@
       "fiscal_year": 2025,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 20833879786.07416,
+      "total_revenue": 18850809146.761894,
       "gross_profit": null,
-      "operating_income": 10577245245.754719,
-      "net_income": 7354416998.1479645,
+      "operating_income": 9570451278.090477,
+      "net_income": 6654387595.653534,
       "rd_expense": null,
-      "sga_expense": 9387859499.514103,
+      "sga_expense": 8494277088.046074,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 3210469104.7668457,
+      "income_tax": 2904880943.29834,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:17464922849.595547",
-        "BANK_NONINT:3368956936.478615"
+        "BANK_NII:15802526019.215584",
+        "BANK_NONINT:3048283127.5463104"
       ]
     },
     {
@@ -88,36 +89,35 @@
       "fiscal_year": 2024,
       "fiscal_quarter": null,
       "segments": [],
-      "total_revenue": 20833879786.07416,
+      "total_revenue": 18332831952.750683,
       "gross_profit": null,
-      "operating_income": 10577245245.754719,
-      "net_income": 7354416998.1479645,
+      "operating_income": 9198117513.298988,
+      "net_income": 6269562902.331352,
       "rd_expense": null,
-      "sga_expense": 9387859499.514103,
+      "sga_expense": 8131611071.109772,
       "cogs": null,
       "interest_expense": null,
-      "income_tax": 3210469104.7668457,
+      "income_tax": 2870490743.3390617,
       "currency": "USD",
       "extraction_method": "yahoo_only",
       "confidence": 0.55,
       "notes": [
         "Source: Yahoo Finance (no SEC filing available)",
         "⚠ Limited Segment Detail — aggregate data only",
-        "BANK_NII:17464922849.595547",
-        "BANK_NONINT:3368956936.478615"
+        "BANK_NII:15232755342.006683",
+        "BANK_NONINT:3100076610.7439995"
       ]
     }
   ],
   "quarterly_periods": [],
-  "ttm_revenue": 20833879786.07416,
-  "ttm_operating_income": 10577245245.754719,
-  "ttm_net_income": 7354416998.1479645,
+  "ttm_revenue": 18850809146.761894,
+  "ttm_operating_income": 9570451278.090477,
+  "ttm_net_income": 6654387595.653534,
   "segment_trend": {},
   "annual_count": 3,
   "quarterly_count": 0,
   "has_partial_data": true,
   "data_notes": [
-    "Partial data: 3/3 annual, 0/12 quarterly"
-  ],
-  "classification": "INTL_YAHOO"
+    "Only 3/3 annual reports available"
+  ]
 }

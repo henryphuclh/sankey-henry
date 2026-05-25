@@ -192,44 +192,6 @@ def extract_for_filing(
                     method   = "edgar+llm"
                     xbrl_coverage = llm_cov
 
-        # For geo-only: if product note yielded no product segments, also try the
-        # segment note (e.g. CVX/XOM where the "Revenue" policy note has no numbers)
-        if geo_only and (not segments or _is_geo_only(segments)):
-            seg_note = get_segment_note_text(obj)
-            if seg_note:
-                llm_segs = extract_segments(
-                    note_text       = seg_note,
-                    ticker          = ticker,
-                    period          = period,
-                    sector          = sector,
-                    known_total_rev = total_rev,
-                )
-                if llm_segs:
-                    llm_segs = _strip_geo_from_llm(llm_segs)
-                    llm_cov = sum(s.value for s in llm_segs) / total_rev if total_rev else 0
-                    segments = llm_segs
-                    method   = "edgar+llm"
-                    xbrl_coverage = llm_cov
-
-        # If still no segments from any note, try raw filing text as last resort
-        if not segments:
-            raw_text = _get_raw_filing_text(obj)
-            if raw_text:
-                llm_segs = extract_segments(
-                    note_text       = raw_text,
-                    ticker          = ticker,
-                    period          = period,
-                    sector          = sector,
-                    known_total_rev = total_rev,
-                )
-                if llm_segs:
-                    segments = llm_segs
-                    method   = "edgar+llm_raw"
-
-        # If still geo-only XBRL and LLM didn't produce product segments, discard geo
-        if geo_only and segments and _is_geo_only(segments):
-            segments = []
-
     # Currency scaling: INTL_SEC companies that file in a non-USD currency
     # (e.g. TSM=TWD, TM/6758.T/8306.T=JPY, NOVO-B.CO=DKK, 9988.HK=CNY/HKD).
     # Scale factor = yahoo_revenue_usd / xbrl_revenue_native, which implicitly
@@ -288,10 +250,21 @@ def extract_for_yahoo_only(
     """INTL_YAHOO path: no SEC filing — use Yahoo data + LLM for segments."""
     ticker   = ticker_info.ticker
     sector   = ticker_info.sector
-    fy       = fiscal_year or (int(period[2:6]) if period.startswith("FY") else int(period[:4]))
-    usd_rate = yahoo_data.get("usd_rate", 1.0)
+    fy        = fiscal_year or (int(period[2:6]) if period.startswith("FY") else int(period[:4]))
+    usd_rates = yahoo_data.get("usd_rates", {})
+    raw_currency = yahoo_data.get("currency", "USD")
+    if yahoo_date_key and yahoo_date_key in usd_rates:
+        usd_rate     = usd_rates[yahoo_date_key]
+        report_currency = "USD"
+    elif not yahoo_date_key and usd_rates:
+        usd_rate     = 1.0
+        report_currency = "USD"
+    else:
+        # Rate unavailable — keep raw values in original currency
+        usd_rate     = 1.0
+        report_currency = raw_currency
 
-    pnl      = _pnl_from_yahoo(yahoo_data, period, is_annual, usd_rate, date_key=yahoo_date_key)
+    pnl       = _pnl_from_yahoo(yahoo_data, period, is_annual, usd_rate, date_key=yahoo_date_key, currency=report_currency)
     _sector_lower_y  = (sector or "").lower()
     _effective_sector_y = _sector_lower_y
 
@@ -371,23 +344,6 @@ def _get_product_note_text(filing_obj) -> Optional[str]:
     return text.strip() if (text and text.strip()) else None
 
 
-def _get_raw_filing_text(filing_obj) -> Optional[str]:
-    """Smart-slice raw filing text around 'segment' keyword as LLM last resort."""
-    if filing_obj is None:
-        return None
-    try:
-        text = getattr(filing_obj, "text", None) or ""
-        if not text:
-            return None
-        anchor = text.lower().find("segment")
-        if anchor < 0:
-            anchor = 0
-        start = max(0, anchor - 30_000)
-        end   = min(len(text), anchor + 90_000)
-        return text[start:end]
-    except Exception:
-        return None
-
 
 def _build_segment_data(
     ticker:    str,
@@ -463,6 +419,7 @@ def _rescale_segments_if_needed(sd: SegmentData) -> None:
 def _pnl_from_yahoo(
     yahoo_data: Dict, period: str, is_annual: bool, usd_rate: float,
     date_key: Optional[str] = None,
+    currency: str = "USD",
 ) -> Dict:
     from src.extraction.sector_handlers.financials import pnl_fields_for_yahoo_financial
 
@@ -489,7 +446,7 @@ def _pnl_from_yahoo(
         "sga_expense":      fin["sga_expense"],
         "interest_expense": fin["interest_expense"],
         "income_tax":       _m("Tax Provision"),
-        "currency":         "USD",
+        "currency":         currency,
         "bank_nii":         fin["bank_nii"],
         "bank_nonint":      fin["bank_nonint"],
     }
@@ -523,7 +480,8 @@ def fill_quarterly_gaps_from_yahoo(
     if not qtr_income:
         return []
 
-    usd_rate = yahoo_data.get("usd_rate", 1.0)
+    usd_rates    = yahoo_data.get("usd_rates", {})
+    raw_currency = yahoo_data.get("currency", "USD")
     existing_periods = {sd.period for sd in all_sds}
 
     gap_fills: List[SegmentData] = []
@@ -539,9 +497,16 @@ def fill_quarterly_gaps_from_yahoo(
         if period in existing_periods:
             continue
 
+        if date_str in usd_rates:
+            qtr_rate     = usd_rates[date_str]
+            qtr_currency = "USD"
+        else:
+            qtr_rate     = 1.0
+            qtr_currency = raw_currency
+
         pnl = _pnl_from_yahoo(
             yahoo_data, period, is_annual=False,
-            usd_rate=usd_rate, date_key=date_str,
+            usd_rate=qtr_rate, date_key=date_str, currency=qtr_currency,
         )
         if not pnl.get("total_revenue"):
             continue
