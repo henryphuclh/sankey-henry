@@ -47,7 +47,106 @@
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
-    "notes": []
+    "notes": [],
+    "sub_segments": [
+      {
+        "segment_name": "Server Products and Cloud Services",
+        "value": 98435000000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Microsoft 365 Commercial Products and Cloud Services",
+        "value": 87767000000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Gaming",
+        "value": 23455000000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "LinkedIn",
+        "value": 17812000000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Windows and Devices",
+        "value": 17314000000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Search and News Advertising",
+        "value": 13878000000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Dynamics Products and Cloud Services",
+        "value": 7827000000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Enterprise and Partner Services",
+        "value": 7760000000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Microsoft 365 Consumer Products and Cloud Services",
+        "value": 7404000000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Other",
+        "value": 72000000.0,
+        "unit": "USD",
+        "period": "2025-06-30 (FY)",
+        "concept": "xbrl_dimension",
+        "is_annual": true
+      }
+    ],
+    "segment_hierarchy": {
+      "Productivity and Business Processes": [
+        "Microsoft 365 Commercial Products and Cloud Services",
+        "Microsoft 365 Consumer Products and Cloud Services",
+        "LinkedIn",
+        "Dynamics Products and Cloud Services"
+      ],
+      "Intelligent Cloud": [
+        "Server Products and Cloud Services",
+        "Enterprise and Partner Services"
+      ],
+      "More Personal Computing": [
+        "Windows and Devices",
+        "Gaming",
+        "Search and News Advertising"
+      ]
+    }
   },
   "annual_periods": [
     {
@@ -94,7 +193,106 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 98435000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Commercial Products and Cloud Services",
+          "value": 87767000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 23455000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 17812000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows and Devices",
+          "value": 17314000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search and News Advertising",
+          "value": 13878000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics Products and Cloud Services",
+          "value": 7827000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise and Partner Services",
+          "value": 7760000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Consumer Products and Cloud Services",
+          "value": 7404000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 72000000.0,
+          "unit": "USD",
+          "period": "2025-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Microsoft 365 Commercial Products and Cloud Services",
+          "Microsoft 365 Consumer Products and Cloud Services",
+          "LinkedIn",
+          "Dynamics Products and Cloud Services"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise and Partner Services"
+        ],
+        "More Personal Computing": [
+          "Windows and Devices",
+          "Gaming",
+          "Search and News Advertising"
+        ]
+      }
     },
     {
       "ticker": "MSFT",
@@ -140,7 +338,105 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 97726000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Office Products and Cloud Services",
+          "value": 54875000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows",
+          "value": 23244000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 21503000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 16372000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search and News Advertising",
+          "value": 12576000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise and Partner Services",
+          "value": 7594000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics Products and Cloud Services",
+          "value": 6481000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Devices",
+          "value": 4706000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 45000000.0,
+          "unit": "USD",
+          "period": "2024-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Office Products and Cloud Services",
+          "LinkedIn"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise and Partner Services"
+        ],
+        "More Personal Computing": [
+          "Windows",
+          "Devices",
+          "Gaming",
+          "Search and News Advertising"
+        ]
+      }
     },
     {
       "ticker": "MSFT",
@@ -186,7 +482,106 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 79970000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Office Products and Cloud Services",
+          "value": 48728000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows",
+          "value": 21507000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 15466000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 15145000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search and News Advertising",
+          "value": 12208000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise Services",
+          "value": 7722000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Devices",
+          "value": 5521000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics",
+          "value": 5437000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 211000000.0,
+          "unit": "USD",
+          "period": "2023-06-30 (FY)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Office Products and Cloud Services",
+          "LinkedIn",
+          "Dynamics"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise Services"
+        ],
+        "More Personal Computing": [
+          "Windows",
+          "Devices",
+          "Gaming",
+          "Search and News Advertising"
+        ]
+      }
     }
   ],
   "quarterly_periods": [
@@ -234,7 +629,106 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 32592000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Commercial Products and Cloud Services",
+          "value": 25593000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 5341000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 4832000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows and Devices",
+          "value": 4041000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search Advertising",
+          "value": 3808000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Consumer Products and Cloud Services",
+          "value": 2297000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics Products and Cloud Services",
+          "value": 2292000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise and Partner Services",
+          "value": 2087000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 3000000.0,
+          "unit": "USD",
+          "period": "2026-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Microsoft 365 Commercial Products and Cloud Services",
+          "Microsoft 365 Consumer Products and Cloud Services",
+          "LinkedIn",
+          "Dynamics Products and Cloud Services"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise and Partner Services"
+        ],
+        "More Personal Computing": [
+          "Windows and Devices",
+          "Gaming",
+          "Search Advertising"
+        ]
+      }
     },
     {
       "ticker": "MSFT",
@@ -280,7 +774,106 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 30865000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Commercial Products and Cloud Services",
+          "value": 24524000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 5958000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 5082000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows and Devices",
+          "value": 4479000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search and News Advertising",
+          "value": 3812000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Consumer Products and Cloud Services",
+          "value": 2305000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics Products and Cloud Services",
+          "value": 2204000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise and Partner Services",
+          "value": 2038000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 6000000.0,
+          "unit": "USD",
+          "period": "2025-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Microsoft 365 Commercial Products and Cloud Services",
+          "Microsoft 365 Consumer Products and Cloud Services",
+          "LinkedIn",
+          "Dynamics Products and Cloud Services"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise and Partner Services"
+        ],
+        "More Personal Computing": [
+          "Windows and Devices",
+          "Gaming",
+          "Search and News Advertising"
+        ]
+      }
     },
     {
       "ticker": "MSFT",
@@ -326,7 +919,106 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 28872000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Commercial Products and Cloud Services",
+          "value": 23966000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 5508000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 4714000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows and Devices",
+          "value": 4551000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search and News Advertising",
+          "value": 3697000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Consumer Products and Cloud Services",
+          "value": 2204000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics Products and Cloud Services",
+          "value": 2136000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise and Partner Services",
+          "value": 2022000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 3000000.0,
+          "unit": "USD",
+          "period": "2025-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Microsoft 365 Commercial Products and Cloud Services",
+          "Microsoft 365 Consumer Products and Cloud Services",
+          "LinkedIn",
+          "Dynamics Products and Cloud Services"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise and Partner Services"
+        ],
+        "More Personal Computing": [
+          "Windows and Devices",
+          "Gaming",
+          "Search and News Advertising"
+        ]
+      }
     },
     {
       "ticker": "MSFT",
@@ -347,7 +1039,9 @@
       "currency": "USD",
       "extraction_method": "yahoo_quarterly",
       "confidence": 0.55,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "MSFT",
@@ -393,7 +1087,106 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 24761000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Commercial Products and Cloud Services",
+          "value": 21883000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 5721000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 4311000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows and Devices",
+          "value": 4144000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search and News Advertising",
+          "value": 3504000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise and Partner Services",
+          "value": 1946000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics Products and Cloud Services",
+          "value": 1929000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Consumer Products and Cloud Services",
+          "value": 1821000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 46000000.0,
+          "unit": "USD",
+          "period": "2025-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Microsoft 365 Commercial Products and Cloud Services",
+          "Microsoft 365 Consumer Products and Cloud Services",
+          "LinkedIn",
+          "Dynamics Products and Cloud Services"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise and Partner Services"
+        ],
+        "More Personal Computing": [
+          "Windows and Devices",
+          "Gaming",
+          "Search and News Advertising"
+        ]
+      }
     },
     {
       "ticker": "MSFT",
@@ -441,7 +1234,106 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (69632000000) differs from Yahoo (245122000000) by 71.6%"
-      ]
+      ],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 23641000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Commercial Products and Cloud Services",
+          "value": 21117000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 6581000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 4587000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows and Devices",
+          "value": 4512000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search and News Advertising",
+          "value": 3558000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise and Partner Services",
+          "value": 1892000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics Products and Cloud Services",
+          "value": 1913000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Consumer Products and Cloud Services",
+          "value": 1821000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 10000000.0,
+          "unit": "USD",
+          "period": "2024-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Microsoft 365 Commercial Products and Cloud Services",
+          "Microsoft 365 Consumer Products and Cloud Services",
+          "LinkedIn",
+          "Dynamics Products and Cloud Services"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise and Partner Services"
+        ],
+        "More Personal Computing": [
+          "Windows and Devices",
+          "Gaming",
+          "Search and News Advertising"
+        ]
+      }
     },
     {
       "ticker": "MSFT",
@@ -489,7 +1381,106 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (65585000000) differs from Yahoo (245122000000) by 73.2%"
-      ]
+      ],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 22155000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Commercial Products and Cloud Services",
+          "value": 20449000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 5621000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows and Devices",
+          "value": 4329000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 4292000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search and News Advertising",
+          "value": 3225000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise and Partner Services",
+          "value": 1928000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics Products and Cloud Services",
+          "value": 1849000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Microsoft 365 Consumer Products and Cloud Services",
+          "value": 1727000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 10000000.0,
+          "unit": "USD",
+          "period": "2024-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Microsoft 365 Commercial Products and Cloud Services",
+          "Microsoft 365 Consumer Products and Cloud Services",
+          "LinkedIn",
+          "Dynamics Products and Cloud Services"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise and Partner Services"
+        ],
+        "More Personal Computing": [
+          "Windows and Devices",
+          "Gaming",
+          "Search and News Advertising"
+        ]
+      }
     },
     {
       "ticker": "MSFT",
@@ -537,7 +1528,105 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (61858000000) differs from Yahoo (245122000000) by 74.8%"
-      ]
+      ],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 24832000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Office Products and Cloud Services",
+          "value": 13911000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows",
+          "value": 5929000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 5451000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 4013000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search and News Advertising",
+          "value": 3134000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise and Partner Services",
+          "value": 1861000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics Products and Cloud Services",
+          "value": 1646000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Devices",
+          "value": 1067000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 14000000.0,
+          "unit": "USD",
+          "period": "2024-03-31 (Q3)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Office Products and Cloud Services",
+          "LinkedIn"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise and Partner Services"
+        ],
+        "More Personal Computing": [
+          "Windows",
+          "Devices",
+          "Gaming",
+          "Search and News Advertising"
+        ]
+      }
     },
     {
       "ticker": "MSFT",
@@ -585,7 +1674,105 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (62020000000) differs from Yahoo (211915000000) by 70.7%"
-      ]
+      ],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 23953000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Office Products and Cloud Services",
+          "value": 13477000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 7111000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows",
+          "value": 5262000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 4195000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search and News Advertising",
+          "value": 3220000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise and Partner Services",
+          "value": 1917000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics Products and Cloud Services",
+          "value": 1576000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Devices",
+          "value": 1298000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 11000000.0,
+          "unit": "USD",
+          "period": "2023-12-31 (Q2)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Office Products and Cloud Services",
+          "LinkedIn"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise and Partner Services"
+        ],
+        "More Personal Computing": [
+          "Windows",
+          "Devices",
+          "Gaming",
+          "Search and News Advertising"
+        ]
+      }
     },
     {
       "ticker": "MSFT",
@@ -633,7 +1820,106 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (56517000000) differs from Yahoo (211915000000) by 73.3%"
-      ]
+      ],
+      "sub_segments": [
+        {
+          "segment_name": "Server Products and Cloud Services",
+          "value": 22308000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Office Products and Cloud Services",
+          "value": 13140000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Windows",
+          "value": 5567000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Gaming",
+          "value": 3919000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "LinkedIn",
+          "value": 3913000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Search and News Advertising",
+          "value": 3053000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Enterprise and Partner Services",
+          "value": 1944000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Dynamics",
+          "value": 1540000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Devices",
+          "value": 1125000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Other",
+          "value": 8000000.0,
+          "unit": "USD",
+          "period": "2023-09-30 (Q1)",
+          "concept": "xbrl_dimension",
+          "is_annual": true
+        }
+      ],
+      "segment_hierarchy": {
+        "Productivity and Business Processes": [
+          "Office Products and Cloud Services",
+          "LinkedIn",
+          "Dynamics"
+        ],
+        "Intelligent Cloud": [
+          "Server Products and Cloud Services",
+          "Enterprise and Partner Services"
+        ],
+        "More Personal Computing": [
+          "Windows",
+          "Devices",
+          "Gaming",
+          "Search and News Advertising"
+        ]
+      }
     }
   ],
   "ttm_revenue": 318273000000.0,

@@ -79,7 +79,9 @@
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
-    "notes": []
+    "notes": [],
+    "sub_segments": null,
+    "segment_hierarchy": null
   },
   "annual_periods": [
     {
@@ -158,7 +160,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "AMZN",
@@ -236,7 +240,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "AMZN",
@@ -314,7 +320,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     }
   ],
   "quarterly_periods": [
@@ -394,7 +402,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "AMZN",
@@ -415,7 +425,9 @@
       "currency": "USD",
       "extraction_method": "yahoo_quarterly",
       "confidence": 0.55,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "AMZN",
@@ -493,7 +505,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "AMZN",
@@ -571,7 +585,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "AMZN",
@@ -649,7 +665,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "AMZN",
@@ -729,7 +747,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (158877000000) differs from Yahoo (637959000000) by 75.1%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "AMZN",
@@ -809,7 +829,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (147977000000) differs from Yahoo (637959000000) by 76.8%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "AMZN",
@@ -889,7 +911,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (143313000000) differs from Yahoo (637959000000) by 77.5%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "AMZN",
@@ -969,7 +993,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (143083000000) differs from Yahoo (574785000000) by 75.1%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "AMZN",
@@ -1049,7 +1075,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (134383000000) differs from Yahoo (574785000000) by 76.6%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     }
   ],
   "ttm_revenue": 742776000000.0,

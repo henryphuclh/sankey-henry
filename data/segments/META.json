@@ -39,7 +39,9 @@
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
-    "notes": []
+    "notes": [],
+    "sub_segments": null,
+    "segment_hierarchy": null
   },
   "annual_periods": [
     {
@@ -78,7 +80,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "META",
@@ -116,7 +120,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "META",
@@ -154,7 +160,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     }
   ],
   "quarterly_periods": [
@@ -194,7 +202,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "META",
@@ -215,7 +225,9 @@
       "currency": "USD",
       "extraction_method": "yahoo_quarterly",
       "confidence": 0.55,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "META",
@@ -253,7 +265,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "META",
@@ -291,7 +305,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "META",
@@ -329,7 +345,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "META",
@@ -369,7 +387,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (40589000000) differs from Yahoo (164501000000) by 75.3%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "META",
@@ -409,7 +429,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (39071000000) differs from Yahoo (164501000000) by 76.2%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "META",
@@ -449,7 +471,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (36455000000) differs from Yahoo (164501000000) by 77.8%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "META",
@@ -489,7 +513,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (34146000000) differs from Yahoo (134902000000) by 74.7%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "META",
@@ -529,7 +555,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (31999000000) differs from Yahoo (134902000000) by 76.3%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     }
   ],
   "ttm_revenue": 214962000000.0,

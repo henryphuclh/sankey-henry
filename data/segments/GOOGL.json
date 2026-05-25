@@ -11,8 +11,32 @@
     "fiscal_quarter": null,
     "segments": [
       {
-        "segment_name": "Google Services",
-        "value": 342721000000.0,
+        "segment_name": "Google Search & other",
+        "value": 224532000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "YouTube ads",
+        "value": 40367000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Google Network",
+        "value": 29792000000.0,
+        "unit": "MILLIONS",
+        "period": "FY2025",
+        "concept": "llm_extracted",
+        "is_annual": true
+      },
+      {
+        "segment_name": "Google subscriptions, platforms, and devices",
+        "value": 48030000000.0,
         "unit": "MILLIONS",
         "period": "FY2025",
         "concept": "llm_extracted",
@@ -58,8 +82,32 @@
       "fiscal_quarter": null,
       "segments": [
         {
-          "segment_name": "Google Services",
-          "value": 342721000000.0,
+          "segment_name": "Google Search & other",
+          "value": 224532000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "YouTube ads",
+          "value": 40367000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Google Network",
+          "value": 29792000000.0,
+          "unit": "MILLIONS",
+          "period": "FY2025",
+          "concept": "llm_extracted",
+          "is_annual": true
+        },
+        {
+          "segment_name": "Google subscriptions, platforms, and devices",
+          "value": 48030000000.0,
           "unit": "MILLIONS",
           "period": "FY2025",
           "concept": "llm_extracted",
@@ -182,8 +230,48 @@
       "fiscal_quarter": 1,
       "segments": [
         {
-          "segment_name": "Google Services",
-          "value": 89637000000.0,
+          "segment_name": "Google Search & other",
+          "value": 23965427178.78729,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "YouTube ads",
+          "value": 3921427785.359936,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google Network",
+          "value": 2765989384.978662,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google advertising",
+          "value": 30652844349.12589,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google subscriptions, platforms, and devices",
+          "value": 4913787482.940145,
+          "unit": "MILLIONS",
+          "period": "2026Q1",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google Services total",
+          "value": 35566631832.06603,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -191,7 +279,7 @@
         },
         {
           "segment_name": "Google Cloud",
-          "value": 20028000000.0,
+          "value": 7946813283.9409895,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -199,7 +287,7 @@
         },
         {
           "segment_name": "Other Bets",
-          "value": 411000000.0,
+          "value": 163078702.80106583,
           "unit": "MILLIONS",
           "period": "2026Q1",
           "concept": "llm_extracted",
@@ -249,8 +337,48 @@
       "fiscal_quarter": 3,
       "segments": [
         {
-          "segment_name": "Google Services",
-          "value": 87052000000.0,
+          "segment_name": "Google Search & other",
+          "value": 21916862346.3348,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "YouTube ads",
+          "value": 3959103553.541617,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google Network",
+          "value": 3349771732.1076255,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google advertising",
+          "value": 29225737631.984043,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google subscriptions, platforms, and devices",
+          "value": 4729089504.151941,
+          "unit": "MILLIONS",
+          "period": "2025Q3",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google Services total",
+          "value": 33954827136.135986,
           "unit": "MILLIONS",
           "period": "2025Q3",
           "concept": "llm_extracted",
@@ -258,7 +386,7 @@
         },
         {
           "segment_name": "Google Cloud",
-          "value": 15157000000.0,
+          "value": 5038415272.206925,
           "unit": "MILLIONS",
           "period": "2025Q3",
           "concept": "llm_extracted",
@@ -266,7 +394,7 @@
         },
         {
           "segment_name": "Other Bets",
-          "value": 344000000.0,
+          "value": 172192823.53706396,
           "unit": "MILLIONS",
           "period": "2025Q3",
           "concept": "llm_extracted",
@@ -295,8 +423,48 @@
       "fiscal_quarter": 2,
       "segments": [
         {
-          "segment_name": "Google Services",
-          "value": 82543000000.0,
+          "segment_name": "Google Search & other",
+          "value": 20958607480.822998,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "YouTube ads",
+          "value": 3742901659.6171765,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google Network",
+          "value": 3216225320.8115277,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google advertising",
+          "value": 27917734461.2517,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google subscriptions, platforms, and devices",
+          "value": 4023306043.4439745,
+          "unit": "MILLIONS",
+          "period": "2025Q2",
+          "concept": "llm_extracted",
+          "is_annual": false
+        },
+        {
+          "segment_name": "Google Services total",
+          "value": 31941040504.695675,
           "unit": "MILLIONS",
           "period": "2025Q2",
           "concept": "llm_extracted",
@@ -304,7 +472,7 @@
         },
         {
           "segment_name": "Google Cloud",
-          "value": 13624000000.0,
+          "value": 4470484066.958204,
           "unit": "MILLIONS",
           "period": "2025Q2",
           "concept": "llm_extracted",
@@ -312,7 +480,7 @@
         },
         {
           "segment_name": "Other Bets",
-          "value": 373000000.0,
+          "value": 157700462.39873827,
           "unit": "MILLIONS",
           "period": "2025Q2",
           "concept": "llm_extracted",
@@ -616,21 +784,6 @@
         "is_annual": false
       },
       {
-        "period": "2025Q2",
-        "value": 82543000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2025Q3",
-        "value": 87052000000.0,
-        "is_annual": false
-      },
-      {
-        "period": "2026Q1",
-        "value": 89637000000.0,
-        "is_annual": false
-      },
-      {
         "period": "FY2023",
         "value": 272543000000.0,
         "is_annual": true
@@ -638,11 +791,6 @@
       {
         "period": "FY2024",
         "value": 304930000000.0,
-        "is_annual": true
-      },
-      {
-        "period": "FY2025",
-        "value": 342721000000.0,
         "is_annual": true
       }
     ],
@@ -679,17 +827,17 @@
       },
       {
         "period": "2025Q2",
-        "value": 13624000000.0,
+        "value": 4470484066.958204,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 15157000000.0,
+        "value": 5038415272.206925,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 20028000000.0,
+        "value": 7946813283.9409895,
         "is_annual": false
       },
       {
@@ -716,23 +864,145 @@
       },
       {
         "period": "2025Q2",
-        "value": 373000000.0,
+        "value": 157700462.39873827,
         "is_annual": false
       },
       {
         "period": "2025Q3",
-        "value": 344000000.0,
+        "value": 172192823.53706396,
         "is_annual": false
       },
       {
         "period": "2026Q1",
-        "value": 411000000.0,
+        "value": 163078702.80106583,
         "is_annual": false
       },
       {
         "period": "FY2025",
         "value": 1537000000.0,
         "is_annual": true
+      }
+    ],
+    "Google Search & other": [
+      {
+        "period": "2025Q2",
+        "value": 20958607480.822998,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 21916862346.3348,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 23965427178.78729,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 224532000000.0,
+        "is_annual": true
+      }
+    ],
+    "YouTube ads": [
+      {
+        "period": "2025Q2",
+        "value": 3742901659.6171765,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 3959103553.541617,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 3921427785.359936,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 40367000000.0,
+        "is_annual": true
+      }
+    ],
+    "Google Network": [
+      {
+        "period": "2025Q2",
+        "value": 3216225320.8115277,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 3349771732.1076255,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 2765989384.978662,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 29792000000.0,
+        "is_annual": true
+      }
+    ],
+    "Google advertising": [
+      {
+        "period": "2025Q2",
+        "value": 27917734461.2517,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 29225737631.984043,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 30652844349.12589,
+        "is_annual": false
+      }
+    ],
+    "Google subscriptions, platforms, and devices": [
+      {
+        "period": "2025Q2",
+        "value": 4023306043.4439745,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 4729089504.151941,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 4913787482.940145,
+        "is_annual": false
+      },
+      {
+        "period": "FY2025",
+        "value": 48030000000.0,
+        "is_annual": true
+      }
+    ],
+    "Google Services total": [
+      {
+        "period": "2025Q2",
+        "value": 31941040504.695675,
+        "is_annual": false
+      },
+      {
+        "period": "2025Q3",
+        "value": 33954827136.135986,
+        "is_annual": false
+      },
+      {
+        "period": "2026Q1",
+        "value": 35566631832.06603,
+        "is_annual": false
       }
     ]
   },

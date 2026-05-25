@@ -39,7 +39,9 @@
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
-    "notes": []
+    "notes": [],
+    "sub_segments": null,
+    "segment_hierarchy": null
   },
   "annual_periods": [
     {
@@ -78,7 +80,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "TSLA",
@@ -116,7 +120,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "TSLA",
@@ -170,7 +176,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     }
   ],
   "quarterly_periods": [
@@ -210,7 +218,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "TSLA",
@@ -231,7 +241,9 @@
       "currency": "USD",
       "extraction_method": "yahoo_quarterly",
       "confidence": 0.55,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "TSLA",
@@ -269,7 +281,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "TSLA",
@@ -307,7 +321,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "TSLA",
@@ -345,7 +361,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "TSLA",
@@ -401,7 +419,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (25182000000) differs from Yahoo (97690000000) by 74.2%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "TSLA",
@@ -457,7 +477,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (25500000000) differs from Yahoo (97690000000) by 73.9%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "TSLA",
@@ -513,7 +535,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (21301000000) differs from Yahoo (97690000000) by 78.2%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "TSLA",
@@ -569,7 +593,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (23350000000) differs from Yahoo (96773000000) by 75.9%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "TSLA",
@@ -609,7 +635,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (28436000000) differs from Yahoo (96773000000) by 70.6%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     }
   ],
   "ttm_revenue": 97879000000.0,

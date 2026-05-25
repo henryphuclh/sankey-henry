@@ -116,9 +116,15 @@ def _build_standard_sankey(sd: SegmentData, total_rev: float) -> Optional[Sankey
     # Layer 0+1: Revenue segments → Total Revenue.
     # Skip segment layer when no segment data is available.
     has_segments = bool(sd.segments)
-    rev_x = 0.2 if has_segments else 0.05
+    has_hierarchy = bool(getattr(sd, "segment_hierarchy", None) and getattr(sd, "sub_segments", None))
+    rev_x = 0.25 if has_hierarchy else (0.2 if has_segments else 0.05)
     rev_idx = add_node(rich("Total Revenue", total_rev), SANKEY_COLORS["total_revenue"], rev_x, 0.5)
-    if has_segments:
+    if has_hierarchy:
+        _add_two_layer_segment_nodes(
+            sd.segments, sd.sub_segments, sd.segment_hierarchy,
+            total_rev, rev_idx, add_node, add_link, rich,
+        )
+    elif has_segments:
         _add_segment_nodes(sd.segments, total_rev, rev_idx, add_node, add_link, rich)
 
     # Layer 2: Gross Profit ←→ COGS
@@ -704,6 +710,81 @@ def _add_segment_nodes(segments, total_rev, rev_idx, add_node, add_link, rich):
         g_idx = add_node(rich("Unallocated", gap),
                          _segment_color(len(visible) + 1), 0.0, 0.98)
         add_link(g_idx, rev_idx, gap, _segment_color(len(visible) + 1, alpha=0.4))
+
+
+# ---------------------------------------------------------------------------
+# 2-layer segment nodes (sub-products → top segments → revenue)
+# ---------------------------------------------------------------------------
+
+def _add_two_layer_segment_nodes(
+    top_segs, sub_segs, hierarchy, total_rev, rev_idx, add_node, add_link, rich,
+):
+    """Render 2-layer segment Sankey: sub-products flow into top segments → revenue.
+
+    Layout:
+      sub-products  x=0.0
+      top-segments  x=0.13
+      revenue       x=0.25  (set by caller)
+    """
+    if not top_segs or not sub_segs or not hierarchy:
+        _add_segment_nodes(top_segs, total_rev, rev_idx, add_node, add_link, rich)
+        return
+
+    # ── Top-segment layer (x=0.13) ──────────────────────────────────────────
+    sorted_top = sorted(
+        [s for s in top_segs if s.value and s.value > 0],
+        key=lambda s: s.value, reverse=True,
+    )
+    n_top = len(sorted_top)
+    top_idx_map: dict = {}
+    for i, seg in enumerate(sorted_top):
+        y = (i + 0.5) / max(n_top, 1)
+        cidx = add_node(rich(seg.segment_name, seg.value), _segment_color(i), 0.13, y)
+        top_idx_map[seg.segment_name] = (cidx, i)
+        # top-segment → revenue
+        add_link(cidx, rev_idx, seg.value, _segment_color(i, alpha=0.4),
+                 f"{seg.segment_name}{_pct(seg.value, total_rev)}")
+
+    # ── Sub-product layer (x=0.0) ────────────────────────────────────────────
+    sub_map = {s.segment_name: s for s in sub_segs if s.value and s.value > 0}
+
+    # Group sub-products by their parent top-segment (order by top-seg y-position)
+    ordered_groups: List[tuple] = []  # (top_seg_name, [sub_names])
+    for seg in sorted_top:
+        children = [n for n in hierarchy.get(seg.segment_name, []) if n in sub_map]
+        if children:
+            ordered_groups.append((seg.segment_name, children))
+
+    # Assign y-positions: within each group, distribute proportionally
+    all_sub_items: List[tuple] = []  # (sub_name, parent_name)
+    for top_name, children in ordered_groups:
+        for child in children:
+            all_sub_items.append((child, top_name))
+
+    # Any unassigned sub-products go at the bottom
+    assigned = {name for _, children in ordered_groups for name in children}
+    unassigned = [s.segment_name for s in sorted(sub_segs, key=lambda s: s.value or 0, reverse=True)
+                  if s.segment_name not in assigned and s.segment_name in sub_map]
+    if unassigned:
+        all_sub_items.extend((name, None) for name in unassigned)
+
+    n_sub = len(all_sub_items)
+    for j, (sub_name, parent_name) in enumerate(all_sub_items):
+        sv = sub_map.get(sub_name)
+        if sv is None:
+            continue
+        y = (j + 0.5) / max(n_sub, 1)
+        color_i = top_idx_map[parent_name][1] if parent_name and parent_name in top_idx_map else len(sorted_top)
+        s_idx = add_node(rich(sub_name, sv.value), _segment_color(color_i), 0.0, y)
+
+        if parent_name and parent_name in top_idx_map:
+            top_cidx = top_idx_map[parent_name][0]
+            add_link(s_idx, top_cidx, sv.value, _segment_color(color_i, alpha=0.4),
+                     f"{sub_name}{_pct(sv.value, total_rev)}")
+        else:
+            # Unassigned: link directly to revenue
+            add_link(s_idx, rev_idx, sv.value, _segment_color(color_i, alpha=0.4),
+                     f"{sub_name}{_pct(sv.value, total_rev)}")
 
 
 # ---------------------------------------------------------------------------

@@ -817,3 +817,168 @@ def _segment_display_name(row) -> str:
     return ""
 
 
+# ---------------------------------------------------------------------------
+# 2-layer segment hierarchy extraction
+# ---------------------------------------------------------------------------
+
+def extract_segment_hierarchy(
+    note_text: str,
+    top_seg_names: List[str],
+    product_names: List[str],
+) -> Optional[Dict[str, List[str]]]:
+    """Parse the segment note to map product names to their parent segment.
+
+    Looks for the pattern: segment header → description → "• ProductName, ..."
+    Returns {seg_name: [matched_product_names]} or None if < 2 segments matched.
+    """
+    if not note_text or not top_seg_names or not product_names:
+        return None
+
+    lines = note_text.split("\n")
+    # Find FIRST occurrence of each segment name (description section, not the table)
+    seg_positions: Dict[str, int] = {}
+    for seg in top_seg_names:
+        seg_low = seg.lower()
+        for i, line in enumerate(lines):
+            if line.strip().lower() == seg_low:
+                seg_positions[seg] = i
+                break
+
+    if len(seg_positions) < 2:
+        return None
+
+    ordered = sorted(seg_positions.items(), key=lambda x: x[1])
+
+    def _extract_bullets(start: int, end: int) -> List[str]:
+        bullets = []
+        for line in lines[start:end]:
+            s = line.strip()
+            if s.startswith("•") or s.startswith("-"):
+                text = s.lstrip("•- ").strip()
+                # Keep only up to first comma or semicolon (product name without sub-detail)
+                short = _re.split(r"[,;]", text)[0].strip()
+                if short:
+                    bullets.append(short)
+        return bullets
+
+    try:
+        from rapidfuzz import process, fuzz
+        _use_fuzzy = True
+    except ImportError:
+        _use_fuzzy = False
+
+    def _match_to_product(bullet: str) -> Optional[str]:
+        bl = bullet.lower()
+        # Prefix match (first 3 words of bullet vs first 3 words of product)
+        bullet_prefix = " ".join(bl.split()[:3])
+        for prod in product_names:
+            prod_prefix = " ".join(prod.lower().split()[:3])
+            if bullet_prefix and (bullet_prefix in prod.lower() or prod_prefix in bl):
+                return prod
+        # Fuzzy fallback
+        if _use_fuzzy:
+            result = process.extractOne(
+                bl, [p.lower() for p in product_names],
+                scorer=fuzz.WRatio, score_cutoff=72,
+            )
+            if result:
+                idx = [p.lower() for p in product_names].index(result[0])
+                return product_names[idx]
+        return None
+
+    mapping: Dict[str, List[str]] = {}
+    for i, (seg, pos) in enumerate(ordered):
+        end = ordered[i + 1][1] if i + 1 < len(ordered) else pos + 50
+        bullets = _extract_bullets(pos, end)
+        matched: List[str] = []
+        for b in bullets:
+            prod = _match_to_product(b)
+            if prod and prod not in matched:
+                matched.append(prod)
+        if matched:
+            mapping[seg] = matched
+
+    return mapping if len(mapping) >= 2 else None
+
+
+def get_xbrl_product_segments(
+    filing_obj,
+    top_segments: List[Any],
+    total_revenue: Optional[float],
+) -> Tuple[Optional[List[Any]], Optional[Dict[str, List[str]]]]:
+    """Return (sub_segment_list, hierarchy) for 2-layer Sankey when available.
+
+    Conditions:
+    - Filing has both StatementBusinessSegments AND ProductOrService axes.
+    - ProductOrService gives more members than the top-level segments.
+    - The segment note text maps products to segments via bullet points.
+
+    Returns (None, None) if any condition fails.
+    """
+    from src.extraction.models import SegmentValue
+
+    if filing_obj is None or not top_segments:
+        return None, None
+
+    try:
+        stmt = filing_obj.income_statement
+        df = stmt.to_dataframe() if stmt is not None else None
+    except Exception:
+        return None, None
+    if df is None or df.empty or "dimension_axis" not in df.columns:
+        return None, None
+
+    period_cols = [c for c in df.columns if _looks_like_period_col(c)]
+    if not period_cols:
+        return None, None
+    latest_col = period_cols[0]
+
+    _PROD_AXIS = "srt:ProductOrServiceAxis"
+    axis_values = df["dimension_axis"].fillna("").astype(str)
+    if _PROD_AXIS not in axis_values.unique():
+        return None, None
+
+    rev_df = df[
+        df["concept"].fillna("").astype(str).apply(
+            lambda c: any(h.lower() in _strip_concept_prefix(c).lower() for h in _REV_CONCEPT_HINTS)
+        )
+        & (df["dimension"].fillna(False) == True)
+    ]
+    rev_axes = rev_df["dimension_axis"].fillna("").astype(str)
+    sub = rev_df[rev_axes == _PROD_AXIS]
+    prod_members = _clean_axis_members(sub, latest_col, total_revenue)
+
+    if not prod_members or len(prod_members) <= len(top_segments):
+        return None, None
+    if _is_revenue_disaggregation(prod_members):
+        return None, None
+
+    # Validate sum
+    if total_revenue:
+        prod_sum = sum(v for _, v in prod_members)
+        if not (0.80 * total_revenue <= prod_sum <= 1.20 * total_revenue):
+            return None, None
+
+    period_str = str(latest_col)
+    sub_segs = [
+        SegmentValue(
+            segment_name=name,
+            value=float(val),
+            unit="USD",
+            period=period_str,
+            concept="xbrl_dimension",
+            is_annual=True,
+        )
+        for name, val in prod_members
+    ]
+
+    # Build hierarchy from segment note text
+    note_text = get_segment_note_text(filing_obj)
+    if not note_text:
+        return sub_segs, None
+
+    top_names = [s.segment_name for s in top_segments]
+    prod_names = [s.segment_name for s in sub_segs]
+    hierarchy  = extract_segment_hierarchy(note_text, top_names, prod_names)
+
+    return sub_segs, hierarchy

@@ -63,7 +63,9 @@
     "currency": "USD",
     "extraction_method": "xbrl",
     "confidence": 1.0,
-    "notes": []
+    "notes": [],
+    "sub_segments": null,
+    "segment_hierarchy": null
   },
   "annual_periods": [
     {
@@ -126,7 +128,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -188,7 +192,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -226,7 +232,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     }
   ],
   "quarterly_periods": [
@@ -249,7 +257,9 @@
       "currency": "USD",
       "extraction_method": "yahoo_quarterly",
       "confidence": 0.55,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -270,7 +280,9 @@
       "currency": "USD",
       "extraction_method": "yahoo_quarterly",
       "confidence": 0.55,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -332,7 +344,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -394,7 +408,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -456,7 +472,9 @@
       "currency": "USD",
       "extraction_method": "xbrl",
       "confidence": 1.0,
-      "notes": []
+      "notes": [],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -520,7 +538,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (35082000000) differs from Yahoo (60922000000) by 42.4%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -560,7 +580,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (30040000000) differs from Yahoo (60922000000) by 50.7%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -600,7 +622,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (26044000000) differs from Yahoo (60922000000) by 57.3%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -640,7 +664,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (18120000000) differs from Yahoo (26974000000) by 32.8%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -680,7 +706,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (13507000000) differs from Yahoo (26974000000) by 49.9%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     },
     {
       "ticker": "NVDA",
@@ -720,7 +748,9 @@
       "confidence": 1.0,
       "notes": [
         "Warning: total_revenue (7192000000) differs from Yahoo (26974000000) by 73.3%"
-      ]
+      ],
+      "sub_segments": null,
+      "segment_hierarchy": null
     }
   ],
   "ttm_revenue": 253491000000.0,

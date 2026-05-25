@@ -36,6 +36,10 @@ class SegmentData:
     extraction_method: str = "edgar"
     confidence:       float = 0.0
     notes:            List[str] = field(default_factory=list)
+    # Optional 2-layer segment data: top-level segments in `segments`,
+    # product-level breakdown in `sub_segments`, mapping in `segment_hierarchy`.
+    sub_segments:      Optional[List[SegmentValue]] = None
+    segment_hierarchy: Optional[Dict[str, List[str]]] = None  # {top_seg: [product_names]}
 
     def to_dict(self) -> Dict:
         return {
@@ -58,14 +62,22 @@ class SegmentData:
             "extraction_method":self.extraction_method,
             "confidence":       self.confidence,
             "notes":            self.notes,
+            "sub_segments":     [vars(s) for s in self.sub_segments] if self.sub_segments else None,
+            "segment_hierarchy":self.segment_hierarchy,
         }
 
     @classmethod
     def from_dict(cls, d: Dict) -> "SegmentData":
         d = dict(d)
-        segs = [SegmentValue(**s) for s in d.pop("segments", [])]
-        obj  = cls(**{k: v for k, v in d.items() if k != "segments"})
-        obj.segments = segs
+        segs     = [SegmentValue(**s) for s in d.pop("segments", [])]
+        raw_sub  = d.pop("sub_segments", None)
+        sub_segs = [SegmentValue(**s) for s in raw_sub] if raw_sub else None
+        hier     = d.pop("segment_hierarchy", None)
+        known    = {f.name for f in cls.__dataclass_fields__.values()}
+        obj      = cls(**{k: v for k, v in d.items() if k in known})
+        obj.segments         = segs
+        obj.sub_segments     = sub_segs
+        obj.segment_hierarchy = hier
         return obj
 
 

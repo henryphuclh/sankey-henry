@@ -28,6 +28,7 @@ from src.ingestion.ticker_loader import TickerInfo
 from src.ingestion.edgar_client import (
     get_filing_obj, get_segment_note_text,
     segments_from_xbrl_dimensions,
+    get_xbrl_product_segments,
 )
 
 
@@ -74,6 +75,25 @@ def _is_geo_only(segments: "List") -> bool:
     if all(getattr(s, "concept", "") == "xbrl_geo_axis" for s in segments):
         return True
     return all(_is_pure_geo_name(s.segment_name) for s in segments)
+
+
+def _strip_subtotals(segs: "List", total_rev: float) -> "List":
+    """Remove subtotal segments whose value equals the sum of other segments.
+
+    LLMs reading Revenue notes sometimes return both sub-items AND their
+    aggregate (e.g. Google: Search + YouTube + Network + 'Google advertising').
+    When removing one segment makes the remaining sum ≈ total_rev, drop it.
+    """
+    if not segs or not total_rev:
+        return segs
+    seg_sum = sum(s.value for s in segs if s.value)
+    if seg_sum <= total_rev * 1.10:
+        return segs
+    for i, s in enumerate(segs):
+        remainder = seg_sum - (s.value or 0)
+        if 0.85 * total_rev <= remainder <= 1.15 * total_rev:
+            return [seg for j, seg in enumerate(segs) if j != i]
+    return segs
 
 
 def _strip_geo_from_llm(segs: "List") -> "List":
@@ -183,6 +203,7 @@ def extract_for_filing(
             )
             if llm_segs:
                 llm_segs = _strip_geo_from_llm(llm_segs)
+                llm_segs = _strip_subtotals(llm_segs, total_rev)
                 if _sector_lower == "pharma":
                     llm_segs = strip_product_level_from_llm(llm_segs)
                 llm_sum = sum(s.value for s in llm_segs)
@@ -191,6 +212,28 @@ def extract_for_filing(
                     segments = llm_segs
                     method   = "edgar+llm"
                     xbrl_coverage = llm_cov
+
+        # If segment note returned very few segments, also try the revenue note
+        # (e.g. Google: segment note → 3 segments, revenue note → 6 sub-segments)
+        if not geo_only and len(segments) <= 3 and total_rev:
+            rev_note_text = _get_product_note_text(obj)
+            if rev_note_text and rev_note_text != note_text:
+                rev_segs = extract_segments(
+                    note_text       = rev_note_text,
+                    ticker          = ticker,
+                    period          = period,
+                    sector          = sector,
+                    known_total_rev = total_rev,
+                )
+                if rev_segs:
+                    rev_segs = _strip_geo_from_llm(rev_segs)
+                    rev_segs = _strip_subtotals(rev_segs, total_rev)
+                    rev_sum = sum(s.value for s in rev_segs)
+                    rev_cov = rev_sum / total_rev if total_rev else 0
+                    if len(rev_segs) > len(segments) and rev_cov > 0.5:
+                        segments = rev_segs
+                        method   = "edgar+llm"
+                        xbrl_coverage = rev_cov
 
     # Currency scaling: INTL_SEC companies that file in a non-USD currency
     # (e.g. TSM=TWD, TM/6758.T/8306.T=JPY, NOVO-B.CO=DKK, 9988.HK=CNY/HKD).
@@ -215,6 +258,18 @@ def extract_for_filing(
         segments  = segments,
         method    = method,
     )
+
+    # 2-layer hierarchy: try to map product-level XBRL data to top segments
+    if method == "xbrl" and len(segments) >= 2:
+        _fx = _detect_currency_scale(total_rev, known_rev) if (data_source == "INTL_SEC" and total_rev and known_rev) else None
+        sub_segs, hierarchy = get_xbrl_product_segments(obj, segments, total_rev)
+        if sub_segs and hierarchy:
+            if _fx is not None:
+                for s in sub_segs:
+                    if s.value:
+                        s.value *= _fx
+            sd.sub_segments      = sub_segs
+            sd.segment_hierarchy = hierarchy
 
     # Record sector fallback so main.py can use the effective sector for aggregation
     if _effective_sector != _sector_lower:
